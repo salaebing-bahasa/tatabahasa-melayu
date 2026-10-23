@@ -5,13 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>0113131 ไวยากรณ์ภาษามลายู | มหาวิทยาลัยทักษิณ</title>
   <meta name="description" content="เอกสารประกอบการสอนออนไลน์รายวิชา 0113131 ไวยากรณ์ภาษามลายู (Tatabahasa Bahasa Melayu) สาขาวิชาภาษามลายู มหาวิทยาลัยทักษิณ — 13 บทเรียน กรณีศึกษา แบบทดสอบ และเครื่องมือฝึก">
-  <meta name="theme-color" content="#0B2A4E">
+  <meta name="theme-color" content="#4A1220">
   <meta property="og:title" content="0113131 ไวยากรณ์ภาษามลายู">
   <meta property="og:description" content="13 บทเรียน วจีวิภาคถึงวากยสัมพันธ์ พร้อมแบบทดสอบ — สาขาวิชาภาษามลายู มหาวิทยาลัยทักษิณ">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230B2A4E'/%3E%3Cpath d='M4 26 16 6l12 20z' fill='%23FFFFFF'/%3E%3Cpath d='M10 26l6-10 6 10z' fill='%230B2A4E'/%3E%3Cpath d='M14 26l2-3 2 3z' fill='%239CC8F5'/%3E%3C/svg%3E">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%234A1220'/%3E%3Cpath d='M16 4l4 8 8 4-8 4-4 8-4-8-8-4 8-4z' fill='%23E2B857'/%3E%3Ccircle cx='16' cy='16' r='2.6' fill='%234A1220'/%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@400;500;600;700&family=Spectral:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Noto+Serif+Thai:wght@600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
   <script>
     /* ซ่อนหน้าปกทันทีถ้าผู้ใช้เคยเลือก "ไม่ต้องแสดงอีก" หรือเปิดลิงก์ตรงเข้าบทเรียน */
@@ -24,59 +24,52 @@
 </head>
 <body>
 
-  <!-- ================= ปกนอก (เปิด/ปิดได้) ================= -->
+  <!-- ================= ปกนอก (เปิด/ปิดได้) — ลายซองเก็ตทอง บนพื้นแดงเลือดหมู ================= -->
   <div id="cover" role="dialog" aria-modal="true" aria-labelledby="cover-title">
     <svg class="cover-pattern" aria-hidden="true" focusable="false">
       <defs>
-        <!-- ลายพื้น: บุหงาตาบูร (bunga tabur) แบบผ้าซองเก็ต -->
-        <pattern id="songket" width="96" height="96" patternUnits="userSpaceOnUse">
-          <path d="M48 0 96 48 48 96 0 48Z" fill="none" stroke="#2E5584" stroke-width="1"/>
-          <g transform="translate(48 48)" fill="none" stroke="#9CC8F5" stroke-opacity=".45" stroke-width="1.1">
-            <ellipse cy="-8" rx="3" ry="6.5"/><ellipse cy="-8" rx="3" ry="6.5" transform="rotate(60)"/><ellipse cy="-8" rx="3" ry="6.5" transform="rotate(120)"/>
-            <ellipse cy="-8" rx="3" ry="6.5" transform="rotate(180)"/><ellipse cy="-8" rx="3" ry="6.5" transform="rotate(240)"/><ellipse cy="-8" rx="3" ry="6.5" transform="rotate(300)"/>
+        <!-- ลายพื้น: บุหงากันจิก (bunga cengkih) ในตารางเพชร แบบซองเก็ตไหมทอง -->
+        <pattern id="cengkih" width="64" height="64" patternUnits="userSpaceOnUse">
+          <path d="M32 0 64 32 32 64 0 32Z" fill="none" stroke="#8C3A44" stroke-width="1"/>
+          <g transform="translate(32 32)" fill="#E2B857" fill-opacity=".55">
+            <path d="M0-9 3-3 9 0 3 3 0 9-3 3-9 0-3-3Z"/>
           </g>
-          <circle cx="48" cy="48" r="2.4" fill="#FFFFFF" fill-opacity=".6"/>
-          <g fill="#FFFFFF" fill-opacity=".3"><circle cx="0" cy="0" r="2"/><circle cx="96" cy="0" r="2"/><circle cx="0" cy="96" r="2"/><circle cx="96" cy="96" r="2"/></g>
+          <circle cx="32" cy="32" r="1.6" fill="#5A1622"/>
+          <g fill="#E2B857" fill-opacity=".35"><path d="M0-3 3 0 0 3-3 0Z"/><path d="M64-3 67 0 64 3 61 0Z"/><path d="M0 61 3 64 0 67-3 64Z"/><path d="M64 61 67 64 64 67 61 64Z"/></g>
         </pattern>
-        <radialGradient id="cover-glow" cx="50%" cy="45%" r="70%">
-          <stop offset="0" stop-color="#1D4E89" stop-opacity=".9"/>
-          <stop offset=".55" stop-color="#0B2A4E" stop-opacity=".55"/>
-          <stop offset="1" stop-color="#071D38" stop-opacity=".95"/>
+        <radialGradient id="cover-glow" cx="50%" cy="46%" r="72%">
+          <stop offset="0" stop-color="#8E2333" stop-opacity=".88"/>
+          <stop offset=".6" stop-color="#4A1220" stop-opacity=".62"/>
+          <stop offset="1" stop-color="#22070D" stop-opacity=".96"/>
         </radialGradient>
       </defs>
-      <rect width="100%" height="100%" fill="url(#songket)"/>
+      <rect width="100%" height="100%" fill="url(#cengkih)"/>
       <rect width="100%" height="100%" fill="url(#cover-glow)"/>
     </svg>
 
-    <div class="cv-band cv-band--top">
-      <svg class="cv-band__svg" aria-hidden="true" focusable="false">
-        <defs>
-          <!-- pucuk rebung: หน่อไม้ แบบหัวผ้าซองเก็ต -->
-          <pattern id="rebung-big" width="72" height="104" patternUnits="userSpaceOnUse">
-            <rect width="72" height="104" fill="#071D38"/>
-            <path d="M0 6 6 0 12 6 18 0 24 6 30 0 36 6 42 0 48 6 54 0 60 6 66 0 72 6" fill="none" stroke="#DCE6F2" stroke-width="1.3"/>
-            <rect y="10" width="72" height="1.2" fill="#9CC8F5" fill-opacity=".6"/>
-            <path d="M3 104 36 18 69 104Z" fill="#0F335E" stroke="#FFFFFF" stroke-width="2" stroke-linejoin="round"/>
-            <path d="M15 104 36 48 57 104Z" fill="none" stroke="#9CC8F5" stroke-width="1.4"/>
-            <path d="M26 104 36 76 46 104Z" fill="#DCE6F2"/>
-            <path d="M36 56 41 63 36 70 31 63Z" fill="#FFFFFF"/>
-            <circle cx="36" cy="36" r="2.2" fill="#9CC8F5"/>
-            <path d="M0 30 5 38 0 46 -5 38Z M72 30 77 38 72 46 67 38Z" fill="#9CC8F5" fill-opacity=".8"/>
-            <circle cx="0" cy="62" r="1.8" fill="#DCE6F2"/><circle cx="72" cy="62" r="1.8" fill="#DCE6F2"/>
-          </pattern>
-        </defs>
-        <rect width="100%" height="104" fill="url(#rebung-big)"/>
-        <rect y="102" width="100%" height="2" fill="#FFFFFF"/>
-      </svg>
+    <div class="cv-frame" aria-hidden="true">
+      <svg class="cv-corner tl" viewBox="0 0 80 80"><path d="M2 40V2h38" fill="none" stroke="#E2B857" stroke-width="2"/><path d="M10 40V10h30" fill="none" stroke="#E2B857" stroke-width="1"/><path d="M10 10 24 4 30 10 24 16Z M10 10 4 24 10 30 16 24Z" fill="#E2B857"/><circle cx="10" cy="10" r="3" fill="#4A1220" stroke="#E2B857"/></svg>
+      <svg class="cv-corner tr" viewBox="0 0 80 80"><path d="M2 40V2h38" fill="none" stroke="#E2B857" stroke-width="2"/><path d="M10 40V10h30" fill="none" stroke="#E2B857" stroke-width="1"/><path d="M10 10 24 4 30 10 24 16Z M10 10 4 24 10 30 16 24Z" fill="#E2B857"/><circle cx="10" cy="10" r="3" fill="#4A1220" stroke="#E2B857"/></svg>
+      <svg class="cv-corner bl" viewBox="0 0 80 80"><path d="M2 40V2h38" fill="none" stroke="#E2B857" stroke-width="2"/><path d="M10 40V10h30" fill="none" stroke="#E2B857" stroke-width="1"/><path d="M10 10 24 4 30 10 24 16Z M10 10 4 24 10 30 16 24Z" fill="#E2B857"/><circle cx="10" cy="10" r="3" fill="#4A1220" stroke="#E2B857"/></svg>
+      <svg class="cv-corner br" viewBox="0 0 80 80"><path d="M2 40V2h38" fill="none" stroke="#E2B857" stroke-width="2"/><path d="M10 40V10h30" fill="none" stroke="#E2B857" stroke-width="1"/><path d="M10 10 24 4 30 10 24 16Z M10 10 4 24 10 30 16 24Z" fill="#E2B857"/><circle cx="10" cy="10" r="3" fill="#4A1220" stroke="#E2B857"/></svg>
     </div>
 
     <div class="cv-main">
       <div class="cv-text">
-        <p class="cv-code">รายวิชา 0113131</p>
+        <svg class="cv-medal" viewBox="-50 -50 100 100" aria-hidden="true">
+          <circle r="46" fill="none" stroke="#E2B857" stroke-width="1"/>
+          <circle r="40" fill="#4A1220" stroke="#E2B857" stroke-width="2"/>
+          <g fill="#E2B857">
+            <path d="M0-34 7-14 0-6-7-14Z"/><path d="M0-34 7-14 0-6-7-14Z" transform="rotate(90)"/><path d="M0-34 7-14 0-6-7-14Z" transform="rotate(180)"/><path d="M0-34 7-14 0-6-7-14Z" transform="rotate(270)"/>
+          </g>
+          <g fill="none" stroke="#E2B857" stroke-width="1.2"><path d="M0-24 5-17 0-10-5-17Z" transform="rotate(45)"/><path d="M0-24 5-17 0-10-5-17Z" transform="rotate(135)"/><path d="M0-24 5-17 0-10-5-17Z" transform="rotate(225)"/><path d="M0-24 5-17 0-10-5-17Z" transform="rotate(315)"/></g>
+          <circle r="5" fill="#FBF1E6"/>
+        </svg>
+        <p class="cv-code">รายวิชา 0113131 · <span lang="ms">Kod Kursus</span></p>
         <p class="cv-rumi" lang="ms"><span class="cv-rumi-1">Tatabahasa</span><span class="cv-rumi-2">Bahasa Melayu</span></p>
-        <svg class="cv-rule" viewBox="0 0 220 14" aria-hidden="true"><path d="M0 7H92M128 7H220" stroke="#9CC8F5" stroke-width="1"/><path d="M110 0 117 7 110 14 103 7Z" fill="#FFFFFF"/><path d="M96 7 99 4 102 7 99 10Z M118 7 121 4 124 7 121 10Z" fill="#9CC8F5"/></svg>
+        <svg class="cv-rule" viewBox="0 0 260 16" aria-hidden="true"><path d="M0 8H104M156 8H260" stroke="#E2B857" stroke-width="1"/><path d="M130 0 138 8 130 16 122 8Z" fill="#E2B857"/><path d="M112 8 116 4 120 8 116 12Z M140 8 144 4 148 8 144 12Z" fill="#E2B857" fill-opacity=".7"/></svg>
         <h1 class="cv-th" id="cover-title">ไวยากรณ์ภาษามลายู</h1>
-        <p class="cv-en" lang="en">Malay Grammar · Morfologi hingga Sintaksis</p>
+        <p class="cv-en" lang="en">Malay Grammar · <span lang="ms">Morfologi hingga Sintaksis</span></p>
         <p class="cv-org">สาขาวิชาภาษามลายู คณะมนุษยศาสตร์และสังคมศาสตร์<br>มหาวิทยาลัยทักษิณ วิทยาเขตสงขลา · <span id="cover-term">ภาคเรียนที่ 2 ปีการศึกษา 2569</span></p>
         <div class="cover-actions">
           <button type="button" class="btn cover-enter" id="cover-enter">เข้าสู่บทเรียน</button>
@@ -85,35 +78,13 @@
         <label class="cover-skip"><input type="checkbox" id="cover-skip"> ไม่ต้องแสดงหน้าปกเมื่อเปิดเว็บครั้งต่อไป</label>
       </div>
     </div>
-
-    <div class="cv-band cv-band--bottom">
-      <svg class="cv-band__svg" aria-hidden="true" focusable="false">
-        <defs>
-          <!-- pucuk rebung: หน่อไม้ แบบหัวผ้าซองเก็ต -->
-          <pattern id="rebung-big-2" width="72" height="104" patternUnits="userSpaceOnUse">
-            <rect width="72" height="104" fill="#071D38"/>
-            <path d="M0 6 6 0 12 6 18 0 24 6 30 0 36 6 42 0 48 6 54 0 60 6 66 0 72 6" fill="none" stroke="#DCE6F2" stroke-width="1.3"/>
-            <rect y="10" width="72" height="1.2" fill="#9CC8F5" fill-opacity=".6"/>
-            <path d="M3 104 36 18 69 104Z" fill="#0F335E" stroke="#FFFFFF" stroke-width="2" stroke-linejoin="round"/>
-            <path d="M15 104 36 48 57 104Z" fill="none" stroke="#9CC8F5" stroke-width="1.4"/>
-            <path d="M26 104 36 76 46 104Z" fill="#DCE6F2"/>
-            <path d="M36 56 41 63 36 70 31 63Z" fill="#FFFFFF"/>
-            <circle cx="36" cy="36" r="2.2" fill="#9CC8F5"/>
-            <path d="M0 30 5 38 0 46 -5 38Z M72 30 77 38 72 46 67 38Z" fill="#9CC8F5" fill-opacity=".8"/>
-            <circle cx="0" cy="62" r="1.8" fill="#DCE6F2"/><circle cx="72" cy="62" r="1.8" fill="#DCE6F2"/>
-          </pattern>
-        </defs>
-        <rect width="100%" height="104" fill="url(#rebung-big-2)"/>
-        <rect y="102" width="100%" height="2" fill="#FFFFFF"/>
-      </svg>
-    </div>
   </div>
 
   <!-- ================= แถบหัวเว็บ ================= -->
   <header class="topbar">
     <div class="wrap">
       <a class="brand" href="#/">
-        <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#1D4E89"/><path d="M4 26 16 6l12 20z" fill="#FFFFFF"/><path d="M10 26l6-10 6 10z" fill="#1D4E89"/><path d="M14 26l2-3 2 3z" fill="#9CC8F5"/></svg>
+        <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#7A1F2B"/><rect x="2.5" y="2.5" width="27" height="27" rx="5" fill="none" stroke="#E2B857" stroke-opacity=".55"/><path d="M16 5l3.6 7.4L27 16l-7.4 3.6L16 27l-3.6-7.4L5 16l7.4-3.6z" fill="#E2B857"/><circle cx="16" cy="16" r="2.6" fill="#7A1F2B"/></svg>
         <span class="brand-text"><b>0113131 ไวยากรณ์ภาษามลายู</b><span>สาขาวิชาภาษามลายู มหาวิทยาลัยทักษิณ</span></span>
       </a>
       <nav class="mainnav" id="mainnav" aria-label="เมนูหลัก">
@@ -140,7 +111,7 @@
     <noscript><div class="wrap section"><p>เว็บไซต์นี้ต้องเปิดใช้ JavaScript เพื่อแสดงบทเรียน</p></div></noscript>
   </main>
 
-  <div class="rebung" role="presentation"></div>
+  <div class="cengkih-band" role="presentation"></div>
   <footer>
     <div class="wrap">
       <p>รายวิชา 0113131 ไวยากรณ์ภาษามลายู · สาขาวิชาภาษามลายู คณะมนุษยศาสตร์และสังคมศาสตร์ มหาวิทยาลัยทักษิณ วิทยาเขตสงขลา</p>

@@ -146,7 +146,7 @@
           </div>
         </div>
       </div></section>
-      <div class="rebung" role="presentation"></div>
+      <div class="cengkih-band" role="presentation"></div>
       <section class="section"><div class="wrap">
         <div class="section-head"><h2>แผนการเรียน 15 สัปดาห์</h2><p>${doneCount ? `ทำเครื่องหมายเรียนแล้ว ${doneCount} จาก ${CH.length} บท` : `${CH.length} บทเรียน · 3 ชั่วโมงต่อสัปดาห์`}</p></div>
         <ol class="jadual">${weeks.map(w => {
