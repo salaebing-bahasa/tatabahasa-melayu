@@ -724,3 +724,47 @@ thead th > .tr { color: inherit; opacity: .78; }
 
 /* kotak pilihan bab tidak melebihi lebar skrin telefon */
 .gl-tools select, .gl-tools input { max-width: 100%; min-width: 0; }
+
+/* ================= PDF / Cetak bab · รูปแบบสำหรับพิมพ์และ PDF ของแต่ละบท ================= */
+.pdf-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
+.btn-pdf { background: var(--emas); color: var(--band-deep); flex-direction: row; align-items: center; gap: 10px; }
+.btn-pdf > span { display: flex; flex-direction: column; }
+.btn-pdf:hover { filter: brightness(1.06); }
+.lesson-head .btn-ghost { color: #fff; border-color: rgba(255, 255, 255, .55); }
+
+@media print {
+  @page { size: A4; }
+  html, body { background: #fff !important; color: #1d1214; }
+  :root, :root[data-theme="dark"] { --kertas: #fff; --surface: #fff; --dakwat: #1d1214; --muted: #5b4a4d; --line: #d9cdc8; }
+  .topbar, footer, .cengkih-band, .pagenav, #cover, .toast,
+  .pdf-row, .toc, .say-hint, .lesson-foot, .crumb, .fb, .ex-foot, .lead, .say, .note-ans { display: none !important; }
+  .lesson-head { background: #fff !important; color: #1d1214; padding: 0 0 10px; border-bottom: 2px solid #C59A2A; }
+  .lesson-head::after { display: none; }
+  .lesson-head .lesson-title { color: #7A1F2B !important; font-size: 30px; }
+  .lesson-head .lesson-th { color: #5b4a4d !important; }
+  .lesson-head .lesson-no { color: #86650F !important; }
+  .lesson-head .chip { background: #fff; color: #7A1F2B; border: 1px solid #C59A2A; }
+  .lesson-body { display: block; padding: 14px 0 0; }
+  .wrap { max-width: none; padding: 0; }
+  .block { break-inside: auto; margin-bottom: 18px; }
+  .block > h2 { font-size: 21px; break-after: avoid; }
+  .prose h3, .prose h4 { break-after: avoid; }
+  .prose, .isi .prose, .block .prose { max-width: none; font-size: 13.5px; line-height: 1.6; }
+  .prose table td, .prose table th { font-size: 12.5px; }
+  tr, blockquote, .q, li { break-inside: avoid; }
+  .tbl-wrap { overflow: visible; border: 1px solid #d9cdc8; }
+  .ms-say { text-decoration: none; }
+  /* soalan objektif: pilihan sebagai senarai biasa */
+  .ex { border: 0; padding: 0; background: none; box-shadow: none; }
+  .q { padding: 8px 0; border-bottom: 1px dashed #d9cdc8; }
+  .opts { display: block; }
+  .opt { display: block; width: 100%; border: 0 !important; background: none !important; padding: 2px 0 2px 14px; min-height: 0; text-align: left; color: inherit; font-size: 13px; box-shadow: none; }
+  details.hint { border: 0; padding: 0; background: none; }
+  details.hint > summary { list-style: none; font-weight: 600; font-size: 12.5px; }
+  details.hint > summary::-webkit-details-marker { display: none; }
+  details.hint > div { padding: 4px 10px; border-left: 3px solid #C59A2A; background: #FBF5E8; }
+  a { color: inherit; text-decoration: none; }
+  *, *:focus, *:focus-visible, #app { outline: none !important; }
+  h2, h3, h4, .q-text { break-inside: avoid; break-after: avoid; }
+  .q { break-inside: avoid; }
+}
