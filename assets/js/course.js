@@ -8,22 +8,29 @@ window.COURSE = {
   ms: "Tatabahasa Bahasa Melayu",
   credits: "3 (3-0-6)",
   term: "ภาคเรียนที่ 2 ปีการศึกษา 2569",
+  termMs: "Semester 2 Tahun Akademik 2569",
   /* ข้อมูลสำหรับหน้าปกใน */
   docType: "เอกสารประกอบการสอนออนไลน์",
+  docTypeMs: "Dokumen Pengajaran Dalam Talian",
   author: "ผู้ช่วยศาสตราจารย์มูหำหมัด สาแลบิง",
+  authorMs: "Penolong Profesor Muhammad Salaebing",
   authorDegree: "กศ.ม. (ภาษามลายู)",
   faculty: "สาขาวิชาภาษามลายู คณะมนุษยศาสตร์และสังคมศาสตร์",
+  facultyMs: "Program Bahasa Melayu, Fakulti Kemanusiaan dan Sains Sosial",
   university: "มหาวิทยาลัยทักษิณ วิทยาเขตสงขลา",
+  universityMs: "Universiti Thaksin, Kampus Songkhla",
   goal: "เพื่อให้นิสิตมีความรู้ความเข้าใจหลักไวยากรณ์ภาษามลายูตั้งแต่ระดับคำและกระบวนการสร้างคำ (วจีวิภาค) จนถึงการสร้างวลี อนุประโยค และประโยค (วากยสัมพันธ์) สามารถวิเคราะห์โครงสร้างภาษาและนำความรู้ไปใช้สื่อสารด้วยภาษามลายูได้ถูกต้องเหมาะสมกับบริบท",
+  goalMs: "Supaya pelajar memahami prinsip tatabahasa bahasa Melayu daripada peringkat kata dan proses pembentukan kata (morfologi) hingga pembinaan frasa, klausa dan ayat (sintaksis), dapat menganalisis struktur bahasa, dan menggunakan pengetahuan itu untuk berkomunikasi dalam bahasa Melayu dengan betul dan sesuai dengan konteks.",
+  descMs: "Prinsip tatabahasa bahasa Melayu daripada morfologi hingga sintaksis sebagai alat untuk berkomunikasi dalam bahasa Melayu dengan betul.",
   descTh: "หลักไวยากรณ์ภาษามลายูตั้งแต่วจีวิภาคถึงวากยสัมพันธ์ เพื่อเป็นเครื่องมือช่วยให้สามารถใช้ภาษาสื่อสารความหมายภาษามลายูได้อย่างถูกต้อง",
   descEn: "Malay Language grammar, including morphology to syntax, enables to communicate Malay Language correctly",
   clos: [
-    { id: "CLO1", text: "อธิบายแนวคิดและองค์ประกอบสำคัญของวจีวิภาคและวากยสัมพันธ์ภาษามลายูได้อย่างถูกต้อง", weight: 30, how: "สอบกลางภาค (แบบทดสอบข้อเขียน)" },
-    { id: "CLO2", text: "จำแนกชนิดคำและวิเคราะห์โครงสร้างคำ ตลอดจนกระบวนการสร้างคำในภาษามลายูได้", weight: 20, how: "แบบฝึกหัดและใบงานวิเคราะห์โครงสร้างภาษา" },
-    { id: "CLO3", text: "วิเคราะห์โครงสร้างวลี อนุประโยค และประโยคภาษามลายูตามหลักไวยากรณ์ได้", weight: 20, how: "งานมอบหมายและกิจกรรมปฏิบัติ (เกณฑ์รูบริก)" },
-    { id: "CLO4", text: "สร้างและปรับแก้ประโยคหรือข้อความภาษามลายูให้ถูกต้องตามหลักไวยากรณ์และเหมาะสมกับสถานการณ์สื่อสารได้", weight: 30, how: "สอบปลายภาค (ข้อเขียนเชิงวิเคราะห์และประยุกต์ใช้)" }
+    { id: "CLO1", ms: "Menghuraikan konsep dan unsur utama morfologi dan sintaksis bahasa Melayu dengan betul", howMs: "Peperiksaan pertengahan semester (ujian bertulis)", text: "อธิบายแนวคิดและองค์ประกอบสำคัญของวจีวิภาคและวากยสัมพันธ์ภาษามลายูได้อย่างถูกต้อง", weight: 30, how: "สอบกลางภาค (แบบทดสอบข้อเขียน)" },
+    { id: "CLO2", ms: "Mengklasifikasikan golongan kata serta menganalisis struktur kata dan proses pembentukan kata dalam bahasa Melayu", howMs: "Latihan dan lembaran kerja analisis struktur bahasa", text: "จำแนกชนิดคำและวิเคราะห์โครงสร้างคำ ตลอดจนกระบวนการสร้างคำในภาษามลายูได้", weight: 20, how: "แบบฝึกหัดและใบงานวิเคราะห์โครงสร้างภาษา" },
+    { id: "CLO3", ms: "Menganalisis struktur frasa, klausa dan ayat bahasa Melayu berdasarkan prinsip tatabahasa", howMs: "Tugasan dan aktiviti amali (rubrik)", text: "วิเคราะห์โครงสร้างวลี อนุประโยค และประโยคภาษามลายูตามหลักไวยากรณ์ได้", weight: 20, how: "งานมอบหมายและกิจกรรมปฏิบัติ (เกณฑ์รูบริก)" },
+    { id: "CLO4", ms: "Membina dan membetulkan ayat atau teks bahasa Melayu supaya betul dari segi tatabahasa dan sesuai dengan situasi komunikasi", howMs: "Peperiksaan akhir (penulisan analitis dan aplikasi)", text: "สร้างและปรับแก้ประโยคหรือข้อความภาษามลายูให้ถูกต้องตามหลักไวยากรณ์และเหมาะสมกับสถานการณ์สื่อสารได้", weight: 30, how: "สอบปลายภาค (ข้อเขียนเชิงวิเคราะห์และประยุกต์ใช้)" }
   ],
-  grades: [["A","80–100","ดีเยี่ยม"],["B+","75–79","ดีมาก"],["B","70–74","ดี"],["C+","65–69","ค่อนข้างดี"],["C","60–64","พอใช้"],["D+","55–59","อ่อน"],["D","50–54","อ่อนมาก"],["F","ต่ำกว่า 50","ไม่ผ่าน"]],
+  grades: [["A","80–100","ดีเยี่ยม","Cemerlang"],["B+","75–79","ดีมาก","Sangat baik"],["B","70–74","ดี","Baik"],["C+","65–69","ค่อนข้างดี","Agak baik"],["C","60–64","พอใช้","Sederhana"],["D+","55–59","อ่อน","Lemah"],["D","50–54","อ่อนมาก","Sangat lemah"],["F","0–49","ไม่ผ่าน","Gagal"]],
 
   /* บทเรียน: no = เลขบท, file = ไฟล์เนื้อหาใน content/, part = ภาค (morfologi / sintaksis) */
   chapters: [
@@ -43,32 +50,33 @@ window.COURSE = {
   ],
   /* สัปดาห์ที่ไม่ใช่บทเรียน */
   extraWeeks: [
-    { week: 8,  th: "สอบกลางภาค (บทที่ 1–7)", note: "CLO1 · 30%", href: "#/kuiz/morfologi", link: "ฝึกทำข้อสอบภาควจีวิภาค" },
-    { week: 15, th: "ไวยากรณ์เพื่อการสื่อสาร: นำเสนอโครงงานแก้ไขข้อความจริงและทบทวน", note: "นำไปสู่สอบปลายภาค (CLO4 · 30%)", href: "#/bab/13/soalan", link: "ดูโจทย์โครงงาน" }
+    { week: 8,  ms: "Peperiksaan pertengahan semester (Bab 1–7)", th: "สอบกลางภาค (บทที่ 1–7)", note: "CLO1 · 30%", href: "#/kuiz/morfologi", linkMs: "Latihan soalan morfologi", link: "ฝึกทำข้อสอบภาควจีวิภาค" },
+    { week: 15, ms: "Tatabahasa untuk komunikasi: pembentangan projek pembetulan teks sebenar dan ulang kaji", th: "ไวยากรณ์เพื่อการสื่อสาร: นำเสนอโครงงานแก้ไขข้อความจริงและทบทวน", note: "Menuju peperiksaan akhir · นำไปสู่สอบปลายภาค (CLO4 · 30%)", href: "#/bab/13/soalan", linkMs: "Lihat tugasan projek", link: "ดูโจทย์โครงงาน" }
   ],
 
   teachers: [
-    { name: "ผศ.มูหำหมัด สาแลบิง", role: "อาจารย์ผู้รับผิดชอบรายวิชาและผู้สอน", email: "smuhammad@tsu.ac.th" },
-    { name: "อ.ดร.กูซม ยามิรูเด็ง", role: "อาจารย์ผู้รับผิดชอบรายวิชาและผู้สอน", email: "kusom@tsu.ac.th" },
-    { name: "อ.ซัมซียะห์ มะลาเฮง", role: "อาจารย์ผู้รับผิดชอบรายวิชาและผู้สอน", email: "" }
+    { name: "ผศ.มูหำหมัด สาแลบิง", roleMs: "Penyelaras dan pensyarah kursus", role: "อาจารย์ผู้รับผิดชอบรายวิชาและผู้สอน", email: "smuhammad@tsu.ac.th" },
+    { name: "อ.ดร.กูซม ยามิรูเด็ง", roleMs: "Penyelaras dan pensyarah kursus", role: "อาจารย์ผู้รับผิดชอบรายวิชาและผู้สอน", email: "kusom@tsu.ac.th" },
+    { name: "อ.ซัมซียะห์ มะลาเฮง", roleMs: "Penyelaras dan pensyarah kursus", role: "อาจารย์ผู้รับผิดชอบรายวิชาและผู้สอน", email: "" }
   ],
+  officeMs: "Rabu 13.00–16.00, bilik pensyarah 1316 (Penolong Profesor Muhammad Salaebing)",
   office: "วันพุธ 13.00–16.00 น. ห้องพักอาจารย์ 1316 (ผศ.มูหำหมัด สาแลบิง)",
   groups: [
-    ["S101", "วันพฤหัสบดี คาบ 7–9 (14.00–17.10 น.)", "13532"],
-    ["S102", "วันอังคาร คาบ 1–3 (08.00–11.10 น.)", "13507"],
-    ["S103", "วันอังคาร คาบ 7–9 (14.00–17.10 น.)", "13505"],
-    ["S104", "วันพุธ คาบ 1–3 (08.00–11.10 น.)", "15302"]
+    ["S101", "วันพฤหัสบดี คาบ 7–9 (14.00–17.10 น.)", "13532", "Khamis, waktu 7–9 (14.00–17.10)"],
+    ["S102", "วันอังคาร คาบ 1–3 (08.00–11.10 น.)", "13507", "Selasa, waktu 1–3 (08.00–11.10)"],
+    ["S103", "วันอังคาร คาบ 7–9 (14.00–17.10 น.)", "13505", "Selasa, waktu 7–9 (14.00–17.10)"],
+    ["S104", "วันพุธ คาบ 1–3 (08.00–11.10 น.)", "15302", "Rabu, waktu 1–3 (08.00–11.10)"]
   ],
   books: [
-    "มูหำหมัด สาแลบิง. (2569). <i>ไวยากรณ์ภาษามลายู</i>. สงขลา: หลักสูตรภาษามลายู คณะมนุษยศาสตร์และสังคมศาสตร์ มหาวิทยาลัยทักษิณ. (ตำราหลัก)",
+    "มูหำหมัด สาแลบิง. (2569). <i>ไวยากรณ์ภาษามลายู</i>. สงขลา: หลักสูตรภาษามลายู คณะมนุษยศาสตร์และสังคมศาสตร์ มหาวิทยาลัยทักษิณ. (buku teks utama · ตำราหลัก)",
     "Abdullah Hassan. (2003). <i>Tatabahasa Bahasa Melayu</i>. Pahang: PTS Publications &amp; Distributors.",
     "Alias Mohammad Yatim. (1998). <i>Mengenali Bahasa Melayu</i>. Kedah: Percetakan Paavai.",
     "Nik Safiah Karim, Farid M. Onn, Hashim Haji Musa &amp; Abdul Hamid Mahmood. (2015). <i>Tatabahasa Dewan Edisi Ketiga</i>. Kuala Lumpur: Dewan Bahasa dan Pustaka.",
     "Sulaiman Masri &amp; Ahmad Khair Mohd Nor. (2002). <i>Tatabahasa Melayu Mesra Pengguna</i>. Kuala Lumpur: Utusan Publications &amp; Distributors.",
-    "Asmah Haji Omar. (2009). <i>Nahu Melayu Mutakhir</i> (Edisi Kelima). Kuala Lumpur: Dewan Bahasa dan Pustaka. (อ่านเพิ่มเติม)"
+    "Asmah Haji Omar. (2009). <i>Nahu Melayu Mutakhir</i> (Edisi Kelima). Kuala Lumpur: Dewan Bahasa dan Pustaka. (bacaan tambahan · อ่านเพิ่มเติม)"
   ],
   resources: [
-    { th: "Pusat Rujukan Persuratan Melayu (PRPM) — พจนานุกรมและคำถามการใช้ภาษา, Dewan Bahasa dan Pustaka", url: "https://prpm.dbp.gov.my/" },
+    { th: "Pusat Rujukan Persuratan Melayu (PRPM), Dewan Bahasa dan Pustaka — kamus dan khidmat nasihat bahasa · พจนานุกรมและคำถามการใช้ภาษา", url: "https://prpm.dbp.gov.my/" },
     { th: "Dewan Bahasa dan Pustaka (DBP)", url: "https://www.dbp.gov.my/" }
   ]
 };
