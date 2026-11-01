@@ -22,6 +22,7 @@ content/bab-01.md … 13.md  เนื้อหาบทที่ 1–13 (แก
 assets/js/course.js        ข้อมูลรายวิชา ผู้สอน กลุ่มเรียน ตำรา รายชื่อบทและสัปดาห์
 assets/js/istilah.js       อภิธานศัพท์ไวยากรณ์
 assets/js/app.js           โปรแกรมแสดงผล (ไม่ต้องแก้ไข)
+assets/fonts/              ฟอนต์ที่เก็บไว้ในเว็บเอง (IBM Plex Sans Thai, Cormorant Garamond, Noto Serif Thai — SIL OFL)
 assets/css/style.css       สีและรูปแบบ (สีหลักที่ตัวแปร --biru และสีทองที่ --emas บนสุดของไฟล์)
 assets/vendor/marked.min.js ตัวแปลง Markdown (MIT License)
 pdf/bab-01.pdf … 13.pdf     ไฟล์ PDF แต่ละบท (สร้างอัตโนมัติ ไม่ต้องแก้ไข)

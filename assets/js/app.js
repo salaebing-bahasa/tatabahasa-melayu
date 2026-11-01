@@ -118,6 +118,7 @@
   }
   function enhance(root) {
     splitLang(root);
+    $$("h2, h3, h4, p, li, td, th, .opt, blockquote", root).forEach(el => { if (!el.dataset.dw && !el.lang && !el.closest("[lang=th]") && hasThai(el.textContent)) el.lang = "th"; });
     $$("table", root).forEach(t => { if (!t.parentElement.classList.contains("tbl-wrap")) { const w = document.createElement("div"); w.className = "tbl-wrap"; t.replaceWith(w); w.appendChild(t); } });
     $$("li, p, td", root).forEach(el => {
       if (!/\(แนวคำตอบ:/.test(el.innerHTML)) return;
@@ -316,11 +317,11 @@
     const chs = CH.filter(c => sel === "semua" || c.part === sel);
     const N = sel === "semua" ? 20 : 15;
     app.innerHTML = `<section class="section"><div class="wrap">
-      <div class="section-head"><h2>${B("Kuiz", "แบบทดสอบ")}</h2><p>${B(`${N} soalan rawak daripada soalan penilaian`, `สุ่ม ${N} ข้อจากคำถามท้ายบท`)}</p></div>
+      <div class="section-head"><h1>${B("Kuiz", "แบบทดสอบ")}</h1><p>${B(`${N} soalan rawak daripada soalan penilaian`, `สุ่ม ${N} ข้อจากคำถามท้ายบท`)}</p></div>
       <div class="quiz-intro" role="group" aria-label="Pilih skop · เลือกขอบเขตข้อสอบ">
-        <a class="chip-btn" href="#/kuiz/morfologi" aria-pressed="${sel === "morfologi"}">Morfologi, Bab 1–7 · ภาควจีวิภาค</a>
-        <a class="chip-btn" href="#/kuiz/sintaksis" aria-pressed="${sel === "sintaksis"}">Sintaksis, Bab 8–13 · ภาควากยสัมพันธ์</a>
-        <a class="chip-btn" href="#/kuiz/semua" aria-pressed="${sel === "semua"}">Semua bab · ทุกบท</a>
+        <a class="chip-btn" href="#/kuiz/morfologi" ${sel === "morfologi" ? 'aria-current="page"' : ""}>Morfologi, Bab 1–7 · ภาควจีวิภาค</a>
+        <a class="chip-btn" href="#/kuiz/sintaksis" ${sel === "sintaksis" ? 'aria-current="page"' : ""}>Sintaksis, Bab 8–13 · ภาควากยสัมพันธ์</a>
+        <a class="chip-btn" href="#/kuiz/semua" ${sel === "semua" ? 'aria-current="page"' : ""}>Semua bab · ทุกบท</a>
       </div>
       <div class="result" id="kz-res" aria-live="polite"></div>
       <div id="kz"><p class="loading">Menyediakan soalan… · กำลังเตรียมข้อสอบ…</p></div>
@@ -386,10 +387,10 @@
   function alat() {
     setNav("alat"); document.title = `Alat Latihan · เครื่องมือฝึก | ${C.code}`;
     app.innerHTML = `<section class="section"><div class="wrap">
-      <div class="section-head"><h2>${B("Alat Latihan", "เครื่องมือฝึก")}</h2><p>${B("Digunakan bersama Bab 6–7 dan Bab 13", "ใช้คู่กับบทที่ 6–7 และบทที่ 13")}</p></div>
+      <div class="section-head"><h1>${B("Alat Latihan", "เครื่องมือฝึก")}</h1><p>${B("Digunakan bersama Bab 6–7 dan Bab 13", "ใช้คู่กับบทที่ 6–7 และบทที่ 13")}</p></div>
 
       <div class="tool" id="t-imb">
-        <h3>${B("Pengimbuhan kata dasar", "เติมปัจจัยให้คำฐาน")}</h3>
+        <h2 class="tool-h">${B("Pengimbuhan kata dasar", "เติมปัจจัยให้คำฐาน")}</h2>
         <p class="lead"><span class="bm" lang="ms">Taipkan kata dasar. Imbuhan ditambah mengikut peraturan peleburan bunyi dalam <i>Tatabahasa Dewan</i>, beserta sebabnya. Ulang kaji <a class="on-band" style="color:var(--langit)" href="#/bab/6">Bab 6</a>.</span><span class="tr">พิมพ์คำฐาน ระบบจะเติมปัจจัยตามกฎการหลอมเสียงใน <i>Tatabahasa Dewan</i> พร้อมบอกเหตุผล ใช้ทบทวนบทที่ 6</span></p>
         <div class="tool-row"><input class="tinput" type="text" id="imb-in" value="tulis" lang="ms" autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="Kata dasar · คำฐาน"></div>
         <div class="chips-row" aria-label="Contoh kata dasar · ตัวอย่างคำฐาน">${["baca", "pukul", "tulis", "kira", "sapu", "ambil", "cat", "lawat", "cari", "proses", "kerja", "ajar", "rasa", "bersih"].map(x => `<button type="button" data-w="${x}">${x}</button>`).join("")}</div>
@@ -398,7 +399,7 @@
       </div>
 
       <div class="tool" id="t-pas">
-        <h3>${B("Ayat aktif → ayat pasif", "แปลงประโยคกรรตุวาจกเป็นกรรมวาจก")}</h3>
+        <h2 class="tool-h">${B("Ayat aktif → ayat pasif", "แปลงประโยคกรรตุวาจกเป็นกรรมวาจก")}</h2>
         <p class="lead"><span class="bm" lang="ms">Isikan unsur ayat. Ayat aktif dan ayat pasif dibina mengikut diri pelaku. Ulang kaji <a class="on-band" style="color:var(--langit)" href="#/bab/13">Bab 13</a>.</span><span class="tr">กรอกส่วนประกอบของประโยค ระบบจะสร้างประโยคกรรตุวาจกและกรรมวาจกที่ถูกต้องตามบุรุษของผู้กระทำ ใช้ทบทวนบทที่ 13</span></p>
         <div class="tool-grid">
           <label>Pelaku (subjek) · ผู้กระทำ<input class="tinput" id="p-s" value="Menteri" lang="ms" autocomplete="off"></label>
@@ -450,7 +451,7 @@
     setNav("istilah"); document.title = `Istilah Tatabahasa · อภิธานศัพท์ | ${C.code}`;
     const all = window.ISTILAH.map(([m, t, d, n]) => ({ m, t, d, n }));
     app.innerHTML = `<section class="section"><div class="wrap">
-      <div class="section-head"><h2>${B("Istilah Tatabahasa", "อภิธานศัพท์ไวยากรณ์")}</h2><p>${B(`${all.length} istilah`, `${all.length} คำ`)}</p></div>
+      <div class="section-head"><h1>${B("Istilah Tatabahasa", "อภิธานศัพท์ไวยากรณ์")}</h1><p>${B(`${all.length} istilah`, `${all.length} คำ`)}</p></div>
       <div class="gl-tools"><label class="sr-only" for="gq">Cari istilah · ค้นหาศัพท์</label><input id="gq" type="search" placeholder="Cari, contohnya frasa · ค้นหา เช่น วลี" autocomplete="off">
       <label class="sr-only" for="gb">Pilih bab · เลือกบท</label><select id="gb"><option value="">Semua bab · ทุกบท</option>${CH.map(c => `<option value="${c.no}">Bab ${c.no} ${c.ms}</option>`).join("")}</select></div>
       <p class="gl-count" aria-live="polite"></p>
@@ -471,24 +472,24 @@
   function kursus() {
     setNav("kursus"); document.title = `Maklumat Kursus · ข้อมูลรายวิชา | ${C.code}`;
     app.innerHTML = `<section class="section"><div class="wrap">
-      <div class="section-head"><h2>${B(`${C.code} ${C.ms}`, C.th)}</h2><p>${B(`${C.termMs} · ${C.credits} kredit`, `${C.term} · ${C.credits} หน่วยกิต`)}</p></div>
+      <div class="section-head"><h1>${B(`${C.code} ${C.ms}`, C.th)}</h1><p>${B(`${C.termMs} · ${C.credits} kredit`, `${C.term} · ${C.credits} หน่วยกิต`)}</p></div>
       <div class="info-grid">
         <div class="prose">
-          <h3>${B("Sinopsis kursus", "คำอธิบายรายวิชา")}</h3><p class="bm" lang="ms">${C.descMs}</p><p class="tr">${C.descTh}</p><p lang="en" style="color:var(--muted)">${C.descEn}</p>
-          <h3>${B("Matlamat", "จุดมุ่งหมาย")}</h3><p class="bm" lang="ms">${C.goalMs}</p><p class="tr">${C.goal}</p>
-          <h3>${B("Hasil pembelajaran kursus (CLO) dan wajaran", "ผลลัพธ์การเรียนรู้ (CLOs) และสัดส่วนคะแนน")}</h3>
+          <h2 class="h3">${B("Sinopsis kursus", "คำอธิบายรายวิชา")}</h2><p class="bm" lang="ms">${C.descMs}</p><p class="tr">${C.descTh}</p><p lang="en" style="color:var(--muted)">${C.descEn}</p>
+          <h2 class="h3">${B("Matlamat", "จุดมุ่งหมาย")}</h2><p class="bm" lang="ms">${C.goalMs}</p><p class="tr">${C.goal}</p>
+          <h2 class="h3">${B("Hasil pembelajaran kursus (CLO) dan wajaran", "ผลลัพธ์การเรียนรู้ (CLOs) และสัดส่วนคะแนน")}</h2>
           <ul class="clo">${C.clos.map(c => `<li><b>${c.id}</b><div>${B(c.ms, c.text)}<div class="bar" role="img" aria-label="${c.weight}%"><span style="width:${c.weight}%"></span></div><small style="color:var(--muted)">${c.weight}% · ${c.howMs} · ${c.how}</small></div></li>`).join("")}</ul>
         </div>
         <div class="prose">
-          <h3>${B("Pensyarah", "ผู้สอน")}</h3><ul class="people">${C.teachers.map(t => `<li>${t.name}<small>${t.roleMs} · ${t.role}${t.email ? ` · <a href="mailto:${t.email}">${t.email}</a>` : ""}</small></li>`).join("")}</ul>
-          <h3>${B("Waktu konsultasi", "เวลาให้คำปรึกษา")}</h3><p class="bm" lang="ms">${C.officeMs}</p><p class="tr">${C.office}</p>
-          <h3>${B("Kumpulan kuliah", "กลุ่มเรียน")}</h3>${table([B("Kumpulan", "กลุ่ม"), B("Hari dan masa", "วันและเวลา"), B("Bilik", "ห้อง")], C.groups.map(g => [g[0], B(g[3] || g[1], g[1]), g[2]]))}
-          <h3>${B("Skala gred", "เกณฑ์การตัดสินผล (อิงเกณฑ์)")}</h3>${table([B("Gred", "ระดับ"), B("Markah (%)", "คะแนน (%)"), B("Maksud", "ความหมาย")], C.grades.map(g => [g[0], g[1], B(g[3] || g[2], g[2])]))}
+          <h2 class="h3">${B("Pensyarah", "ผู้สอน")}</h2><ul class="people">${C.teachers.map(t => `<li>${t.name}<small>${t.roleMs} · ${t.role}${t.email ? ` · <a href="mailto:${t.email}">${t.email}</a>` : ""}</small></li>`).join("")}</ul>
+          <h2 class="h3">${B("Waktu konsultasi", "เวลาให้คำปรึกษา")}</h2><p class="bm" lang="ms">${C.officeMs}</p><p class="tr">${C.office}</p>
+          <h2 class="h3">${B("Kumpulan kuliah", "กลุ่มเรียน")}</h2>${table([B("Kumpulan", "กลุ่ม"), B("Hari dan masa", "วันและเวลา"), B("Bilik", "ห้อง")], C.groups.map(g => [g[0], B(g[3] || g[1], g[1]), g[2]]))}
+          <h2 class="h3">${B("Skala gred", "เกณฑ์การตัดสินผล (อิงเกณฑ์)")}</h2>${table([B("Gred", "ระดับ"), B("Markah (%)", "คะแนน (%)"), B("Maksud", "ความหมาย")], C.grades.map(g => [g[0], g[1], B(g[3] || g[2], g[2])]))}
         </div>
       </div>
       <div class="info-grid" style="margin-top:20px">
-        <div class="prose"><h3>${B("Buku teks dan bacaan", "ตำราและเอกสารแนะนำ")}</h3><ul>${C.books.map(b => `<li>${b}</li>`).join("")}</ul></div>
-        <div class="prose"><h3>${B("Sumber dalam talian", "แหล่งเรียนรู้ออนไลน์")}</h3><ul>${C.resources.map(r => `<li><a href="${r.url}" target="_blank" rel="noopener">${r.th}</a></li>`).join("")}</ul></div>
+        <div class="prose"><h2 class="h3">${B("Buku teks dan bacaan", "ตำราและเอกสารแนะนำ")}</h2><ul>${C.books.map(b => `<li>${b}</li>`).join("")}</ul></div>
+        <div class="prose"><h2 class="h3">${B("Sumber dalam talian", "แหล่งเรียนรู้ออนไลน์")}</h2><ul>${C.resources.map(r => `<li><a href="${r.url}" target="_blank" rel="noopener">${r.th}</a></li>`).join("")}</ul></div>
       </div>
     </div></section>`;
     window.scrollTo(0, 0);
@@ -558,9 +559,10 @@
     top: '<path d="M12 19V6"/><path d="M6 11l6-6 6 6"/>'
   };
   const ico = k => `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${ICON[k]}</svg>`;
-  const SEQ = [{ key: "kulit-dalam", href: "#/kulit-dalam", name: "Kulit Dalam · ปกใน" }, { key: "kandungan", href: "#/kandungan", name: "Kandungan · สารบัญ" }, { key: "home", href: "#/", name: "Rancangan · แผนการเรียน" }]
-    .concat(CH.map(c => ({ key: "bab" + c.no, href: babLink(c.no), name: "Bab " + c.no + " · บทที่ " + c.no })))
-    .concat([{ key: "kuiz", href: "#/kuiz", name: "Kuiz · แบบทดสอบ" }, { key: "alat", href: "#/alat", name: "Alat Latihan · เครื่องมือฝึก" }, { key: "istilah", href: "#/istilah", name: "Istilah · อภิธานศัพท์" }, { key: "kursus", href: "#/kursus", name: "Maklumat Kursus · ข้อมูลรายวิชา" }]);
+  const SEQ = [{ key: "kulit-dalam", href: "#/kulit-dalam", ms: "Kulit Dalam", th: "ปกใน" }, { key: "kandungan", href: "#/kandungan", ms: "Kandungan", th: "สารบัญ" }, { key: "home", href: "#/", ms: "Rancangan", th: "แผนการเรียน" }]
+    .concat(CH.map(c => ({ key: "bab" + c.no, href: babLink(c.no), ms: "Bab " + c.no, th: "บทที่ " + c.no })))
+    .concat([{ key: "kuiz", href: "#/kuiz", ms: "Kuiz", th: "แบบทดสอบ" }, { key: "alat", href: "#/alat", ms: "Alat Latihan", th: "เครื่องมือฝึก" }, { key: "istilah", href: "#/istilah", ms: "Istilah", th: "อภิธานศัพท์" }, { key: "kursus", href: "#/kursus", ms: "Maklumat Kursus", th: "ข้อมูลรายวิชา" }]);
+  const pnName = x => `<b class="pn-ms">${x.ms}</b><i class="pn-th">${x.th}</i>`;
   function pageNav(key) {
     const nav = $("#pagenav"); const i = SEQ.findIndex(x => x.key === key);
     const prev = i > 0 ? SEQ[i - 1] : null, next = i >= 0 && i < SEQ.length - 1 ? SEQ[i + 1] : null;
@@ -568,10 +570,10 @@
     nav.innerHTML = `
       <a href="#/"${cur("home")}>${ico("home")}<span class="pn-dw">Utama<small>หน้าแรก</small></span></a>
       <span class="sep" aria-hidden="true"></span>
-      ${key === "kulit-dalam" ? `<button type="button" class="pn-wide" data-opencover aria-label="Sebelum · ก่อนหน้า: Kulit Hadapan · ปกนอก">${ico("prev")}<span><small>Sebelum · ก่อนหน้า</small>Kulit Hadapan · ปกนอก</span></button>`
-        : prev ? `<a class="pn-wide" href="${prev.href}" aria-label="Sebelum · ก่อนหน้า: ${prev.name}">${ico("prev")}<span><small>Sebelum · ก่อนหน้า</small>${prev.name}</span></a>`
+      ${key === "kulit-dalam" ? `<button type="button" class="pn-wide" data-opencover aria-label="Sebelum · ก่อนหน้า: Kulit Hadapan · ปกนอก">${ico("prev")}<span><small>Sebelum · ก่อนหน้า</small>${pnName({ ms: "Kulit Hadapan", th: "ปกนอก" })}</span></button>`
+        : prev ? `<a class="pn-wide" href="${prev.href}" aria-label="Sebelum · ก่อนหน้า: ${prev.ms} · ${prev.th}">${ico("prev")}<span><small>Sebelum · ก่อนหน้า</small>${pnName(prev)}</span></a>`
              : `<span class="pn-wide is-off" aria-hidden="true">${ico("prev")}<span><small>Sebelum · ก่อนหน้า</small>—</span></span>`}
-      ${next ? `<a class="pn-wide next" href="${next.href}" aria-label="Seterusnya · ถัดไป: ${next.name}"><span><small>Seterusnya · ถัดไป</small>${next.name}</span>${ico("next")}</a>`
+      ${next ? `<a class="pn-wide next" href="${next.href}" aria-label="Seterusnya · ถัดไป: ${next.ms} · ${next.th}"><span><small>Seterusnya · ถัดไป</small>${pnName(next)}</span>${ico("next")}</a>`
              : `<span class="pn-wide next is-off" aria-hidden="true"><span><small>Seterusnya · ถัดไป</small>—</span>${ico("next")}</span>`}
       <span class="sep" aria-hidden="true"></span>
       <a href="#/istilah"${cur("istilah")}>${ico("book")}<span class="pn-dw">Istilah<small>ศัพท์</small></span></a>
