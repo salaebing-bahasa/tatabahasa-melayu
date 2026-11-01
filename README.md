@@ -24,6 +24,8 @@ assets/js/istilah.js       อภิธานศัพท์ไวยากร�
 assets/js/app.js           โปรแกรมแสดงผล (ไม่ต้องแก้ไข)
 assets/css/style.css       สีและรูปแบบ (สีหลักที่ตัวแปร --biru และสีทองที่ --emas บนสุดของไฟล์)
 assets/vendor/marked.min.js ตัวแปลง Markdown (MIT License)
+pdf/bab-01.pdf … 13.pdf     ไฟล์ PDF แต่ละบท (สร้างอัตโนมัติ ไม่ต้องแก้ไข)
+tools/buat-pdf.mjs          สคริปต์สร้าง PDF
 ```
 
 ## วิธีแก้ไขเนื้อหาบทเรียน
@@ -46,6 +48,14 @@ assets/vendor/marked.min.js ตัวแปลง Markdown (MIT License)
 
 **เฉลย** 1 ข · 2 ง
 ```
+
+## ไฟล์ PDF ของแต่ละบท
+
+หน้าบทเรียนทุกบทมีปุ่ม **Muat turun PDF · ดาวน์โหลด PDF** (ไฟล์ `pdf/bab-01.pdf` ถึง `pdf/bab-13.pdf`) และปุ่ม **Cetak · พิมพ์**
+
+- PDF สร้างใหม่ **อัตโนมัติ** ทุกครั้งที่แก้ไฟล์ใน `content/` หรือ `assets/` โดย GitHub Actions (`.github/workflows/pdf.yml`) ใช้เวลาประมาณ 3–5 นาที ดูความคืบหน้าได้ที่แท็บ **Actions**
+- ถ้าต้องการสร้างใหม่เอง: แท็บ **Actions** → **Bina PDF bab** → ปุ่ม **Run workflow**
+- สคริปต์ที่ใช้สร้าง: `tools/buat-pdf.mjs` (ไม่ต้องแก้ไข)
 
 ## การเผยแพร่
 

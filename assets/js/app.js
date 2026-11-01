@@ -258,6 +258,11 @@
     return out;
   }
 
+  const PDF_ICO = '<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M5 21h14"/></svg>';
+  /* Cetak: buka semua panduan jawapan supaya turut dicetak · เปิดแนวคำตอบทั้งหมดก่อนพิมพ์ */
+  document.addEventListener("click", e => { if (e.target.closest("[data-print]")) window.print(); });
+  window.addEventListener("beforeprint", () => $$("details.hint").forEach(d => { d.dataset.wasOpen = d.open ? "1" : ""; d.open = true; }));
+  window.addEventListener("afterprint", () => $$("details.hint").forEach(d => { d.open = d.dataset.wasOpen === "1"; }));
   function lesson(n, sub) {
     const c = CH.find(x => x.no === n); if (!c) return notFound();
     setNav("home"); document.title = `Bab ${c.no} ${c.ms} · บทที่ ${c.no} | ${C.code}`;
@@ -269,6 +274,10 @@
         <h1 class="lesson-title" lang="ms">${c.ms}</h1>
         <p class="lesson-th">${c.th}</p>
         <ul class="chips">${c.clos.map(x => `<li class="chip" title="${esc((C.clos.find(y => y.id === x) || {}).text || "")}">${x}</li>`).join("")}</ul>
+        <div class="pdf-row">
+          <a class="btn btn-pdf btn-dw" href="pdf/bab-${pad(n)}.pdf" download="${C.code}-Bab-${pad(n)}.pdf">${PDF_ICO}<span>${B("Muat turun PDF", "ดาวน์โหลด PDF")}</span></a>
+          <button type="button" class="btn btn-ghost btn-dw" data-print>${B("Cetak", "พิมพ์")}</button>
+        </div>
       </div></header>
       <div class="wrap lesson-body"><nav class="toc" aria-label="Tajuk dalam bab · หัวข้อในบท"><p>Dalam bab ini · ในบทนี้</p><ol>${SEC_IDS.map(id => `<li><a href="#/bab/${n}/${id}" data-sec="${id}">${SEC_SHORT[id]}</a></li>`).join("")}</ol></nav>
         <div id="bab-body"><p class="loading">Memuatkan Bab ${n}… · กำลังโหลดเนื้อหาบทที่ ${n}…</p></div></div>`;

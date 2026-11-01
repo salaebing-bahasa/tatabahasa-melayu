@@ -1,0 +1,56 @@
+# Bina semula PDF setiap bab secara automatik
+# สร้างไฟล์ PDF ของทุกบทใหม่อัตโนมัติ ทุกครั้งที่แก้ไฟล์เนื้อหา (content/) หรือรูปแบบเว็บ
+# ดูผลการทำงานได้ที่แท็บ Actions ของ repo
+
+name: Bina PDF bab
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "content/**"
+      - "assets/**"
+      - "index.html"
+      - "tools/buat-pdf.mjs"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+  pages: write
+
+concurrency:
+  group: bina-pdf
+  cancel-in-progress: true
+
+jobs:
+  pdf:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Pasang pelayar · ติดตั้งเบราว์เซอร์
+        run: |
+          npm install --no-save --no-audit --no-fund playwright@1
+          npx playwright install --with-deps chromium
+          sudo apt-get install -y fonts-thai-tlwg >/dev/null
+
+      - name: Bina PDF · สร้าง PDF
+        run: node tools/buat-pdf.mjs
+
+      - name: Simpan PDF ke repo · บันทึก PDF ลง repo
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add pdf/
+          if git diff --cached --quiet; then echo "Tiada perubahan · ไม่มีการเปลี่ยนแปลง"; exit 0; fi
+          git commit -m "Kemas kini PDF bab · อัปเดต PDF"
+          git push
+
+      - name: Kemas kini laman · สั่งให้เว็บอัปเดต
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh api -X POST "repos/${{ github.repository }}/pages/builds" || echo "Laman akan dikemas kini kemudian"
