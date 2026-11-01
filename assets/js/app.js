@@ -95,6 +95,11 @@
   /* Pisahkan baris Melayu dan Thai dalam satu blok (dipisahkan oleh <br>).
      Blok yang mengandungi kedua-dua bahasa: baris Thai dipaparkan di bawah dengan warna lembut.
      Blok yang hanya dalam satu bahasa (bab yang belum diterjemah) tidak diubah. */
+  /* Bahasa sesuatu baris ditentukan oleh tulisan yang dominan; perkataan Melayu bercondong (<em>)
+     dalam baris Thai dan petikan Thai dalam baris Melayu tidak mengubah bahasanya.
+     ภาษาของแต่ละบรรทัดตัดสินจากตัวอักษรที่มีมากกว่า ไม่นับคำมลายูตัวเอียงและแนวคำตอบ */
+  const noEm = n => { if (n.nodeType !== 1) return n.textContent; const c = n.cloneNode(true); c.querySelectorAll && c.querySelectorAll("em").forEach(e => e.remove()); return c.tagName === "EM" ? "" : c.textContent; };
+  const thaiDom = t => { t = t.replace(/\(แนวคำตอบ:/g, "("); const th = (t.match(/[\u0E00-\u0E7F]/g) || []).length, la = (t.match(/[A-Za-z]/g) || []).length; return th > 0 && th >= la; };
   function splitLang(root) {
     $$("h2, h3, h4, p, li, td, th, .opt", root).forEach(el => {
       if (el.dataset.dw || el.closest(".hint summary")) return;
@@ -102,7 +107,7 @@
       if (!nodes.some(n => n.nodeName === "BR")) return;
       const lines = [[]]; nodes.forEach(n => { if (n.nodeName === "BR") lines.push([]); else lines[lines.length - 1].push(n); });
       const txt = l => l.map(n => n.textContent).join("").trim();
-      const isTh = l => hasThai(txt(l).replace(/\(แนวคำตอบ:/g, "(")); // penanda jawapan tidak dikira sebagai teks Thai
+      const isTh = l => thaiDom(l.map(n => noEm(n)).join(""));
       const solid = lines.filter(l => txt(l));
       if (solid.length < 2 || !solid.some(isTh) || !solid.some(l => !isTh(l))) return;
       el.dataset.dw = "1";
@@ -118,7 +123,7 @@
   }
   function enhance(root) {
     splitLang(root);
-    $$("h2, h3, h4, p, li, td, th, .opt, blockquote", root).forEach(el => { if (!el.dataset.dw && !el.lang && !el.closest("[lang=th]") && hasThai(el.textContent)) el.lang = "th"; });
+    $$("h2, h3, h4, p, li, td, th, .opt, blockquote", root).forEach(el => { if (!el.dataset.dw && !el.lang && !el.closest("[lang=th]") && thaiDom(noEm(el))) el.lang = "th"; });
     $$("table", root).forEach(t => { if (!t.parentElement.classList.contains("tbl-wrap")) { const w = document.createElement("div"); w.className = "tbl-wrap"; t.replaceWith(w); w.appendChild(t); } });
     $$("li, p, td", root).forEach(el => {
       if (!/\(แนวคำตอบ:/.test(el.innerHTML)) return;
