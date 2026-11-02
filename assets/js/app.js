@@ -501,16 +501,13 @@
   }
 
   /* ================= ปกใน และ สารบัญ ================= */
-  const bunga = cls => `<svg class="${cls}" viewBox="-40 -40 80 80" aria-hidden="true"><circle class="ring" r="37"/>${
-    [0, 45, 90, 135, 180, 225, 270, 315].map(r => `<path class="pt" d="M0 -6C7 -14 7 -26 0 -33C-7 -26 -7 -14 0 -6Z" transform="rotate(${r})"/><circle class="dt" cy="-20" r="2" transform="rotate(${r})"/>`).join("")
-  }<circle class="ct" r="5.5"/></svg>`;
   const ruleSVG = '<svg class="rule" viewBox="0 0 120 12" aria-hidden="true"><path class="ln" d="M0 6H48M72 6H120" stroke-width="1"/><path class="dm" d="M60 0 66 6 60 12 54 6Z"/></svg>';
   const nw = t => String(t).split(" ").map(w => `<span class="nw">${w}</span>`).join(" ");
   function kulitDalam() {
     setNav(""); document.title = `Kulit Dalam · ปกใน | ${C.code}`;
     app.innerHTML = `<section class="sheet-wrap"><article class="sheet" aria-label="Kulit dalam · ปกใน">
       <div class="sheet-inner">
-        ${bunga("emblem")}
+        <img class="emblem" src="assets/img/logo-fakulti-400.png" srcset="assets/img/logo-fakulti-400.png 400w, assets/img/logo-fakulti.png 800w" sizes="260px" width="400" height="111" alt="Fakulti Kemanusiaan dan Sains Sosial, Universiti Thaksin · คณะมนุษยศาสตร์และสังคมศาสตร์ มหาวิทยาลัยทักษิณ">
         <p class="doc">${C.docTypeMs}<br>${C.docType}</p>
         <p class="code">Kursus ${C.code} · รายวิชา ${C.code}</p>
         <h1 class="t-th">${nw(C.th)}</h1>
