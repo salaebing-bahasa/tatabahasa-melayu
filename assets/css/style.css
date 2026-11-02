@@ -913,3 +913,84 @@ em strong, strong em { font-weight: 700; background: color-mix(in srgb, var(--em
   .mainnav a { padding-left: 9px; padding-right: 9px; }
 }
 .kj-bahaya .tr, .kj-bahaya .bm { color: #fff !important; opacity: 1; }
+
+/* ================= UX/UI 2 ================= */
+/* Saiz teks: kandungan utama diskalakan · ปรับขนาดเนื้อหาหลัก */
+#app { zoom: var(--fs, 1); }
+/* Pautan langkau · ลิงก์ข้ามไปเนื้อหา */
+.skip { position: absolute; left: 12px; top: -60px; z-index: 100; background: var(--emas); color: #2a0d12; padding: 10px 16px; border-radius: 0 0 10px 10px; font-weight: 600; text-decoration: none; }
+.skip:focus { top: 0; }
+/* Butang dan panel saiz teks */
+.fs-wrap { position: relative; }
+.fs-btn span { font-family: var(--ms-font); font-size: 18px; font-weight: 600; line-height: 1; }
+.fs-panel { position: absolute; right: 0; top: calc(100% + 8px); z-index: 30; width: 230px; background: var(--surface); color: var(--dakwat); border: 1px solid var(--line); border-radius: var(--radius-m); padding: 12px 14px; box-shadow: 0 10px 30px rgba(0,0,0,.18); }
+.fs-panel[hidden] { display: none; }
+.fs-h { margin: 0 0 8px; font-size: 14px; font-weight: 600; color: var(--muted); }
+.fs-row { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+.fs-step, .fs-reset { font: 600 16px var(--th-font); min-width: 52px; min-height: 44px; border: 1.5px solid var(--line); border-radius: var(--radius-s); background: var(--kertas); color: var(--dakwat); cursor: pointer; }
+.fs-step:hover:not([disabled]), .fs-reset:hover { border-color: var(--biru); }
+.fs-step[disabled] { opacity: .4; cursor: default; }
+.fs-val { font-weight: 700; color: var(--biru); font-size: 17px; }
+.fs-reset { width: 100%; margin-top: 8px; font-size: 14px; font-weight: 500; }
+/* Bar kemajuan membaca (emas, di bawah pengepala) · แถบความก้าวหน้าการอ่าน */
+.topbar { position: sticky; }
+.read-bar { position: absolute; left: 0; right: 0; bottom: 0; height: 3px; pointer-events: none; }
+.read-bar span { display: block; height: 100%; background: var(--emas); transform-origin: 0 50%; transform: scaleX(0); transition: transform .08s linear; }
+@media (prefers-reduced-motion: reduce) { .read-bar span { transition: none; } }
+
+/* Sasaran sentuh dan fokus · ปุ่มกดง่ายและเห็นโฟกัสชัด */
+.opt, .lat .opt { min-height: 44px; }
+.icon-btn { min-width: 40px; min-height: 40px; }
+:focus-visible { outline: 3px solid var(--emas); outline-offset: 2px; }
+:root:not([data-theme="dark"]) :focus-visible { outline-color: var(--aksen); }
+
+/* Kandungan lebih lapang dan mudah dibaca · อ่านง่ายขึ้น */
+.prose p, .prose li { line-height: 1.8; }
+.block > h2 { scroll-margin-top: 90px; }
+.prose h3 { margin-top: 1.8em; }
+
+/* Sarung tajuk bab: desktop sentiasa terbuka · สารบัญย่อยของบท */
+.toc-d > summary { list-style: none; cursor: pointer; }
+.toc-d > summary::-webkit-details-marker { display: none; }
+@media (min-width: 861px) {
+  .toc-d > summary { pointer-events: none; font-weight: 600; margin: 0 0 8px; }
+  .toc-kini { display: none; }
+}
+@media (max-width: 860px) {
+  .toc { position: sticky; top: 58px; z-index: 15; margin: 0 -16px 14px; padding: 0 16px; background: var(--kertas); border-bottom: 1px solid var(--line); }
+  .toc-d > summary { display: flex; align-items: center; gap: 10px; min-height: 48px; font-weight: 600; font-size: 15px; }
+  .toc-d > summary::after { content: ""; margin-left: auto; width: 9px; height: 9px; border-right: 2px solid currentColor; border-bottom: 2px solid currentColor; transform: rotate(45deg); transition: transform .15s; }
+  .toc-d[open] > summary::after { transform: rotate(-135deg); }
+  .toc-kini { color: var(--biru); font-weight: 500; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; min-width: 0; }
+  .toc-kini:not(:empty)::before { content: "· "; color: var(--muted); }
+  .toc-d ol { display: block; max-height: 60vh; overflow: auto; padding-bottom: 10px; }
+  .toc-d a { border: 0; border-radius: var(--radius-s); padding: 10px 12px; background: none; }
+  .toc-d a.on { background: var(--biru-muda); }
+}
+
+/* Jadual sebagai kad pada skrin kecil · ตารางเป็นการ์ดบนจอเล็ก */
+@media (max-width: 640px) {
+  .tbl-wrap { overflow: visible; }
+  table.tbl-kad, table.tbl-kad tbody, table.tbl-kad tr, table.tbl-kad td { display: block; width: 100%; }
+  table.tbl-kad thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+  table.tbl-kad tr { border: 1px solid var(--line); border-radius: var(--radius-m); margin: 0 0 12px; padding: 6px 12px; background: var(--surface); }
+  table.tbl-kad td { border: 0; border-bottom: 1px dashed var(--line); padding: 8px 0; }
+  table.tbl-kad td:last-child { border-bottom: 0; }
+  table.tbl-kad td[data-label]::before { content: attr(data-label); display: block; font-size: 12.5px; font-weight: 600; color: var(--muted); letter-spacing: .02em; margin-bottom: 2px; }
+}
+
+/* Latihan pada telefon · แบบฝึกบนมือถือ */
+@media (max-width: 560px) {
+  .lat { padding: 14px 14px; margin-left: -4px; margin-right: -4px; }
+  .lat ol { padding-left: 1.2em; }
+  .lat-opts .opt, .ex .opts .opt { flex: 1 1 100%; }
+  .lat-golong .lat-opts .opt { flex: 1 1 calc(50% - 6px); }
+  .lat-in { display: block; width: 100%; margin: 6px 0; box-sizing: border-box; }
+  .lat-isi .lat-q { display: block; }
+  .lat-ch { flex: 1 1 100%; }
+  .lat-sel { width: 100%; }
+  .lat .ex-foot .btn { width: 100%; }
+}
+
+@media print { .skip, .fs-wrap, .read-bar { display: none !important; } #app { zoom: 1; } .toc-d > summary { display: none; } }
+.ms-say { padding-block: 3px; }

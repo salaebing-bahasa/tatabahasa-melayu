@@ -315,6 +315,7 @@
     splitLang(root);
     $$("h2, h3, h4, p, li, td, th, .opt, blockquote", root).forEach(el => { if (!el.dataset.dw && !el.lang && !el.closest("[lang=th]") && thaiDom(noEm(el))) el.lang = "th"; });
     $$("pre", root).forEach(p => { p.tabIndex = 0; });
+    labelJadual(root);
     $$("table", root).forEach(t => { if (!t.parentElement.classList.contains("tbl-wrap")) { const w = document.createElement("div"); w.className = "tbl-wrap"; t.replaceWith(w); w.appendChild(t); } });
     $$("li, p, td", root).forEach(el => {
       if (!/\(แนวคำตอบ:/.test(el.innerHTML)) return;
@@ -332,6 +333,18 @@
       em.classList.add("ms-say"); em.setAttribute("lang", "ms"); em.tabIndex = 0; em.setAttribute("role", "button"); em.title = "Klik untuk dengar · กดเพื่อฟังเสียง";
     });
   }
+
+  /* Jadual mudah alih: setiap sel diberi label lajur supaya jadual boleh dipaparkan sebagai kad pada skrin kecil
+     ตารางบนมือถือ: ใส่ชื่อคอลัมน์ให้ทุกช่อง เพื่อแสดงเป็นการ์ดบนจอเล็ก */
+  function labelJadual(root) {
+    $$("table", root).forEach(t => {
+      const hs = $$("thead th", t).map(th => { const m = th.querySelector(".bm"), r = th.querySelector(".tr"); return m ? m.textContent.trim() + (r ? " · " + r.textContent.trim() : "") : th.textContent.trim(); });
+      if (!hs.length) return;
+      t.classList.add("tbl-kad");
+      $$("tbody tr", t).forEach(tr => $$("td", tr).forEach((td, i) => { if (hs[i]) td.setAttribute("data-label", hs[i]); }));
+    });
+  }
+  const mqMobile = window.matchMedia("(max-width: 860px)");
 
   /* ---------- shared bits ---------- */
   const babLink = n => `#/bab/${n}`;
@@ -478,7 +491,7 @@
           <button type="button" class="btn btn-ghost btn-dw" data-print>${B("Cetak", "พิมพ์")}</button>
         </div>
       </div></header>
-      <div class="wrap lesson-body"><nav class="toc" aria-label="Tajuk dalam bab · หัวข้อในบท"><p>Dalam bab ini · ในบทนี้</p><ol>${secIds(c).map(id => `<li><a href="#/bab/${n}/${id}" data-sec="${id}">${SEC_SHORT[id]}</a></li>`).join("")}</ol></nav>
+      <div class="wrap lesson-body"><nav class="toc" aria-label="Tajuk dalam bab · หัวข้อในบท"><details class="toc-d" open><summary><span class="toc-sum-h">Dalam bab ini · ในบทนี้</span><span class="toc-kini" aria-hidden="true"></span></summary><ol>${secIds(c).map(id => `<li><a href="#/bab/${n}/${id}" data-sec="${id}">${SEC_SHORT[id]}</a></li>`).join("")}</ol></details></nav>
         <div id="bab-body"><p class="loading">Memuatkan Bab ${n}… · กำลังโหลดเนื้อหาบทที่ ${n}…</p></div></div>`;
     window.scrollTo(0, 0);
     fetchBab(n).then(text => {
@@ -509,11 +522,12 @@
       setAkhir(n, sub && sub !== "tajuk" ? sub : "");
       /* senarai tajuk mengikut bahagian sebenar dalam fail · สารบัญย่อยตามหัวข้อจริงในไฟล์ */
       const ids = (c.struktur === 12 ? ["tajuk"] : []).concat(secs.map(s => s.id));
+      $(".toc-d").open = !mqMobile.matches;
       $(".toc ol").innerHTML = ids.map(id => `<li><a href="#/bab/${n}/${id}" data-sec="${id}">${SEC_SHORT[id] || id}</a></li>`).join("");
       // TOC: เลื่อนภายในหน้า
-      $$(".toc a").forEach(a => a.addEventListener("click", e => { e.preventDefault(); const t = $("#s-" + a.dataset.sec) || (a.dataset.sec === "tajuk" ? $("#s-tajuk") : null); if (t) t.scrollIntoView({ behavior: reduced() ? "auto" : "smooth" }); history.replaceState(null, "", a.getAttribute("href")); }));
+      $$(".toc a").forEach(a => a.addEventListener("click", e => { e.preventDefault(); if (mqMobile.matches) $(".toc-d").open = false; const t = $("#s-" + a.dataset.sec) || (a.dataset.sec === "tajuk" ? $("#s-tajuk") : null); if (t) t.scrollIntoView({ behavior: reduced() ? "auto" : "smooth" }); history.replaceState(null, "", a.getAttribute("href")); }));
       if ("IntersectionObserver" in window) {
-        const io = new IntersectionObserver(es => es.forEach(en => { if (en.isIntersecting) { $$(".toc a").forEach(a => a.classList.toggle("on", "s-" + a.dataset.sec === en.target.id)); if (location.hash.split("/")[2] === String(n)) setAkhir(n, en.target.id === "s-tajuk" ? "" : en.target.id.replace(/^s-/, "")); } }), { rootMargin: "-30% 0px -60% 0px" });
+        const io = new IntersectionObserver(es => es.forEach(en => { if (en.isIntersecting) { $$(".toc a").forEach(a => { const on = "s-" + a.dataset.sec === en.target.id; a.classList.toggle("on", on); if (on) { a.setAttribute("aria-current", "location"); const k = $(".toc-kini"); if (k) k.textContent = a.querySelector(".bm") ? a.querySelector(".bm").textContent : a.textContent; } else a.removeAttribute("aria-current"); }); if (location.hash.split("/")[2] === String(n)) setAkhir(n, en.target.id === "s-tajuk" ? "" : en.target.id.replace(/^s-/, "")); } }), { rootMargin: "-30% 0px -60% 0px" });
         $$(".block", body).forEach(b => io.observe(b)); if ($("#s-tajuk")) io.observe($("#s-tajuk"));
       }
       const btnDone = $("[data-done]", body);
@@ -570,6 +584,7 @@
         <div class="btn-row"><button type="button" class="btn btn-line" id="kj-batal">${B("Batal", "ยกเลิก")}</button><button type="button" class="btn btn-solid kj-bahaya" id="kj-ya">${B("Ya, padam", "ยืนยันล้างข้อมูล")}</button></div>
       </dialog>
     </div></section>`;
+    labelJadual(app);
     const dlg = $("#kj-dialog");
     $("#kj-padam").onclick = () => { if (dlg.showModal) dlg.showModal(); else dlg.setAttribute("open", ""); $("#kj-batal").focus(); };
     $("#kj-batal").onclick = () => { dlg.close ? dlg.close() : dlg.removeAttribute("open"); $("#kj-padam").focus(); };
@@ -876,6 +891,7 @@
   else { document.body.style.overflow = "hidden"; $("#cover-skip").checked = false; setTimeout(() => $("#cover-enter").focus({ preventScroll: true }), 50); }
 
   /* ---------- router ---------- */
+  let laluanPertama = true;
   function route() {
     if ("speechSynthesis" in window) speechSynthesis.cancel();
     const p = location.hash.replace(/^#\/?/, "").split("/");
@@ -891,12 +907,58 @@
     else if (p[0] === "kandungan") kandungan();
     else if (p[0] === "kemajuan") kemajuan();
     else notFound();
-    app.focus({ preventScroll: true });
+    /* Fokus dipindahkan ke kandungan hanya selepas navigasi, bukan semasa halaman mula dibuka (supaya pautan langkau kekal pertama)
+       ย้ายโฟกัสไปเนื้อหาเฉพาะเมื่อเปลี่ยนหน้า ไม่ใช่ตอนเปิดเว็บครั้งแรก */
+    if (!laluanPertama) app.focus({ preventScroll: true });
+    laluanPertama = false;
+    document.documentElement.classList.toggle("di-bab", p[0] === "bab");
+    bacaBar();
+    setTimeout(() => { $("#sr-umum").textContent = document.title; }, 300);
   }
   window.addEventListener("hashchange", route);
 
   /* ---------- chrome ---------- */
   $(".menu-btn").addEventListener("click", e => { const n = $(".mainnav"); const o = n.classList.toggle("open"); e.currentTarget.setAttribute("aria-expanded", o); });
+  /* ---------- Saiz teks · ขนาดตัวอักษร ---------- */
+  const FS = [0.9, 1, 1.1, 1.2, 1.35];
+  const fsBtn = $(".fs-btn"), fsPanel = $("#fs-panel");
+  function applyFs(v, umum) {
+    document.documentElement.style.setProperty("--fs", v);
+    $("#fs-val").textContent = Math.round(v * 100) + "%";
+    $$(".fs-step").forEach(b => { b.disabled = (b.dataset.fs === "-1" && v <= FS[0]) || (b.dataset.fs === "1" && v >= FS[FS.length - 1]); });
+    if (umum) { const s = load(); if (v === 1) delete s.fs; else s.fs = v; save(s); bacaBar(); }
+  }
+  applyFs(load().fs || 1);
+  const fsTutup = fokus => { fsPanel.hidden = true; fsBtn.setAttribute("aria-expanded", "false"); if (fokus) fsBtn.focus(); };
+  fsBtn.addEventListener("click", () => { const o = fsPanel.hidden; fsPanel.hidden = !o; fsBtn.setAttribute("aria-expanded", String(o)); if (o) $(".fs-step:not([disabled])", fsPanel).focus(); });
+  fsPanel.addEventListener("click", e => {
+    const b = e.target.closest("[data-fs]"); if (!b) return;
+    const cur = parseFloat(getComputedStyle(document.documentElement).getPropertyValue("--fs")) || 1;
+    let i = FS.indexOf(FS.reduce((a, x) => Math.abs(x - cur) < Math.abs(a - cur) ? x : a, 1));
+    const d = +b.dataset.fs; i = d === 0 ? 1 : Math.min(FS.length - 1, Math.max(0, i + d));
+    applyFs(FS[i], true);
+  });
+  document.addEventListener("click", e => { if (!fsPanel.hidden && !e.target.closest(".fs-wrap")) fsTutup(false); });
+  document.addEventListener("keydown", e => {
+    if (e.key !== "Escape") return;
+    if (!fsPanel.hidden) fsTutup(true);
+    const n = $(".mainnav"); if (n.classList.contains("open")) { n.classList.remove("open"); $(".menu-btn").setAttribute("aria-expanded", "false"); $(".menu-btn").focus(); }
+  });
+  /* Pautan langkau · ลิงก์ข้ามไปเนื้อหา (tidak mengubah hash supaya penghala tidak terganggu) */
+  $("[data-skip]").addEventListener("click", e => { e.preventDefault(); app.focus(); app.scrollIntoView(); });
+  /* ---------- Bar kemajuan membaca · แถบความก้าวหน้าการอ่าน ---------- */
+  let bacaRaf = 0;
+  function bacaBar() {
+    cancelAnimationFrame(bacaRaf);
+    bacaRaf = requestAnimationFrame(() => {
+      const bar = $(".read-bar span"); if (!bar) return;
+      if (!document.documentElement.classList.contains("di-bab")) { bar.style.transform = "scaleX(0)"; return; }
+      const h = document.documentElement.scrollHeight - innerHeight;
+      bar.style.transform = `scaleX(${h > 0 ? Math.min(1, scrollY / h) : 0})`;
+    });
+  }
+  addEventListener("scroll", bacaBar, { passive: true }); addEventListener("resize", bacaBar);
+  mqMobile.addEventListener && mqMobile.addEventListener("change", () => { const d = $(".toc-d"); if (d) d.open = !mqMobile.matches; });
   function applyTheme(t) { if (t) document.documentElement.setAttribute("data-theme", t); else document.documentElement.removeAttribute("data-theme"); }
   applyTheme(load().theme);
   $(".theme-btn").addEventListener("click", () => {
