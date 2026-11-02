@@ -186,6 +186,30 @@ Ayat yang baik mestilah **betul** (*gramatis*) dan **sesuai** dengan pendengar s
 Jawab setiap latihan; jawapan disemak serta-merta beserta penjelasan.
 ทำแบบฝึกแต่ละชุด ระบบจะตรวจคำตอบทันทีพร้อมคำอธิบาย
 
+```latihan-objektif
+Arahan: Pilih jawapan yang paling tepat; sebab bagi setiap pilihan akan dipaparkan. | เลือกคำตอบที่ถูกที่สุด ระบบจะแสดงเหตุผลของทุกตัวเลือก
+?? Ayat manakah yang tidak gramatis?<br>ประโยคใดไม่ถูกไวยากรณ์
+- *Kami tinggal di Pattani.* :: *di* betul kerana menunjukkan tempat tinggal.<br>*di* ถูก เพราะบอกตำแหน่งที่อยู่
++ *Ayah pergi di masjid.* :: *pergi* menunjukkan arah, maka mesti *ke*.<br>*pergi* บอกทิศทาง ต้องใช้ *ke*
+- *Dia datang dari Yala.* :: *dari* betul untuk tempat asal.<br>*dari* ถูกสำหรับสถานที่ต้นทาง
+- *Adik ke sekolah.* :: Gramatis; frasa sendi nama *ke sekolah* boleh menjadi predikat.<br>ถูก วลีบุพบทเป็นภาคแสดงได้
+?? Unit manakah yang mempunyai subjek dan predikat?<br>หน่วยใดมีประธานและภาคแสดง
+- *frasa* :: Frasa tiada subjek dan predikat.<br>วลีไม่มีประธานและภาคแสดง
+- *morfem* :: Morfem unit pembentuk kata, bukan unit ayat.<br>หน่วยคำเป็นหน่วยสร้างคำ
++ *klausa* :: Klausa ialah unit yang mempunyai subjek dan predikat.<br>อนุประโยคมีประธานและภาคแสดง
+- *kata* :: Kata ialah satu unit sahaja, bukan gabungan subjek dan predikat.<br>คำเป็นหน่วยเดียว
+?? Pilihan manakah yang paling sesuai dalam surat kepada dekan?<br>ข้อใดเหมาะที่สุดในจดหมายถึงคณบดี
+- *Awak boleh luluskan permohonan saya?* :: *awak* terlalu mesra untuk dekan.<br>*awak* เป็นกันเองเกินไป
++ *Dengan hormatnya, saya memohon pertimbangan tuan.* :: Laras rasmi dan kata ganti nama hormat.<br>ภาษาทางการและสรรพนามแสดงความเคารพ
+- *Saya nak minta cuti.* :: *nak* bentuk basahan.<br>*nak* เป็นภาษาพูด
+- *Tolong luluskan cepat.* :: Gramatis tetapi tidak sopan dan tidak rasmi.<br>ถูกไวยากรณ์แต่ไม่สุภาพ
+?? Pernyataan manakah yang menerangkan tatabahasa deskriptif?<br>ข้อใดอธิบายไวยากรณ์แนวพรรณนา
+- Menetapkan bentuk yang betul untuk peperiksaan :: Ini ciri tatabahasa preskriptif.<br>เป็นลักษณะของแนวบัญญัติ
++ Menghuraikan bahasa sebagaimana yang dituturkan :: Itulah tujuan tatabahasa deskriptif.<br>เป็นจุดประสงค์ของแนวพรรณนา
+- Melarang penggunaan dialek :: Tatabahasa deskriptif tidak melarang, tetapi menghuraikan.<br>แนวพรรณนาไม่ห้าม แต่บรรยาย
+- Hanya mengkaji bahasa tulisan :: Tatabahasa deskriptif juga mengkaji bahasa lisan.<br>ศึกษาภาษาพูดด้วย
+```
+
 ```latihan-isi
 Arahan: Taipkan satu perkataan yang betul. | พิมพ์คำที่ถูกต้องหนึ่งคำ
 Saya pergi ___ pasar. | ke | *Pergi* menunjukkan arah, maka *ke*. | *pergi* บอกทิศทาง จึงใช้ *ke*
@@ -195,6 +219,18 @@ Unit bunyi terkecil yang membezakan makna ialah ___. | fonem | Contohnya /p/ dan
 Bidang yang mengkaji susunan kata menjadi ayat ialah ___. | sintaksis | Morfologi mengkaji kata; sintaksis mengkaji ayat. | วจีวิภาคศึกษาคำ วากยสัมพันธ์ศึกษาประโยค
 ```
 
+```latihan-golong
+Tajuk: Kenal Pasti Golongan Kata | ระบุชนิดของคำ
+Arahan: Tentukan golongan kata bagi perkataan yang diberikan. | ระบุชนิดของคำที่กำหนด
+Kategori: Kata nama · คำนาม | Kata kerja · คำกริยา | Kata adjektif · คำคุณศัพท์ | Kata tugas · คำไวยากรณ์
+*pasar* dalam *Ibu pergi ke pasar.* | Kata nama | Menamakan tempat; boleh didahului *ke*. | เป็นชื่อสถานที่ มี *ke* นำหน้าได้
+*pergi* dalam *Ibu pergi ke pasar.* | Kata kerja | Menyatakan perbuatan; boleh menerima *sudah*. | บอกการกระทำ
+*ke* dalam *Ibu pergi ke pasar.* | Kata tugas | Kata sendi nama yang menunjukkan arah. | คำบุพบทบอกทิศทาง
+*gembira* dalam *Kami sangat gembira.* | Kata adjektif | Menyatakan perasaan; boleh menerima *sangat*. | บอกความรู้สึก รับ *sangat* ได้
+*sangat* dalam *Kami sangat gembira.* | Kata tugas | Kata penguat. | คำเน้น
+*universiti* dalam *Dia belajar di universiti.* | Kata nama | Boleh didahului penjodoh bilangan *sebuah*. | มีลักษณนามนำหน้าได้
+```
+
 ```latihan-betulkan
 Arahan: Klik perkataan yang salah dalam setiap ayat. | กดคำที่ผิดในแต่ละประโยค
 Selamat datang [di→ke] Universiti Thaksin. | *Datang* menunjukkan arah tuju, maka *ke*. | *datang* บอกทิศทางที่มาถึง จึงใช้ *ke*
@@ -202,6 +238,15 @@ Sila [tanggal→tanggalkan] kasut sebelum masuk. | Kata kerja ini memerlukan akh
 Ayah pergi [di→ke] masjid. | *Di* menunjukkan tempat, bukan arah. | *di* บอกตำแหน่ง ไม่ได้บอกทิศทาง
 Dilarang merokok di [sini kawasan→kawasan ini]. | Kata nama *kawasan* hadir dahulu, diikuti penunjuk *ini*. | คำนาม *kawasan* อยู่หน้า ตามด้วยคำชี้ *ini*
 Saya [tak→tidak] dapat hadir ke mesyuarat itu. | Surat rasmi menggunakan bentuk baku *tidak*. | จดหมายทางการใช้รูปมาตรฐาน *tidak*
+```
+
+```latihan-analisis
+Arahan: Pilih fungsi bagi setiap bahagian ayat, kemudian klik Semak. | เลือกหน้าที่ของแต่ละส่วนในประโยค แล้วกดตรวจ
+Label: Subjek · ประธาน | Inti predikat · แกนภาคแสดง | Objek · กรรม | Keterangan · ส่วนขยาย
+[Adik saya|Subjek] [belajar|Inti predikat] [di Universiti Thaksin|Keterangan]. | *Adik saya* diterangkan; *belajar* inti predikat; *di Universiti Thaksin* menyatakan tempat. | *Adik saya* เป็นประธาน *belajar* เป็นแกนภาคแสดง ส่วนที่เหลือบอกสถานที่
+[Pelajar itu|Subjek] [membaca|Inti predikat] [buku|Objek]. | *buku* dikenai perbuatan *membaca*. | *buku* ถูกกระทำ
+[Ibu|Subjek] [membeli|Inti predikat] [ikan|Objek] [pagi tadi|Keterangan]. | *pagi tadi* keterangan waktu yang boleh digugurkan. | *pagi tadi* บอกเวลา ตัดได้
+[Kakak|Subjek] [menulis|Inti predikat] [surat|Objek] [di bilik|Keterangan]. | *surat* objek; *di bilik* keterangan tempat. | *surat* เป็นกรรม *di bilik* บอกสถานที่
 ```
 
 ```latihan-golong
@@ -231,12 +276,25 @@ Ayat yang gramatis masih boleh tidak sesuai dengan konteks.<br>ประโย�
 
 > *Selamat datang di Universiti Thaksin. Sila tanggal kasut sebelum masuk di bilik solat. Dilarang merokok di sini kawasan. Kami sangat gembira awak semua datang.*
 
-1. Kenal pasti sekurang-kurangnya tiga kesalahan dan nyatakan sama ada kesalahan itu pada peringkat kata atau peringkat ayat. (แนวคำตอบ: *datang **ke***; *tanggalkan kasut* (+ **-kan**); *masuk **ke** bilik solat*; *di kawasan ini* — hukum D-M)
-   ระบุข้อผิดอย่างน้อย 3 จุด และบอกว่าเป็นปัญหาระดับคำหรือระดับประโยค
-2. Adakah kata ganti nama *awak semua* sesuai untuk papan tanda rasmi? Apakah kata yang patut digunakan? (แนวคำตอบ: *anda semua* / *saudara-saudari*)
-   สรรพนาม *awak semua* เหมาะกับป้ายทางการหรือไม่ ควรใช้คำใดแทน
-3. Kesalahan manakah yang mungkin berpunca daripada pengaruh bahasa Thai? Jelaskan.
-   ข้อผิดใดน่าจะเกิดจากอิทธิพลของภาษาไทย อธิบาย
+```latihan-terbuka
+Tajuk: Soalan Kajian Kes | คำถามกรณีศึกษา
+Arahan: Tulis jawapan anda, kemudian bandingkan dengan contoh jawapan dan kriteria penilaian. | เขียนคำตอบ แล้วเทียบกับตัวอย่างคำตอบและเกณฑ์การประเมิน
+?? Kenal pasti sekurang-kurangnya tiga kesalahan dan nyatakan sama ada kesalahan itu pada peringkat kata atau peringkat ayat.<br>ระบุข้อผิดอย่างน้อย 3 จุด และบอกว่าเป็นปัญหาระดับคำหรือระดับประโยค
+= *datang **ke***; *tanggalkan kasut* (+ **-kan**); *masuk **ke** bilik solat*; *di kawasan ini* — hukum D-M
+* Menyenaraikan sekurang-kurangnya tiga kesalahan yang betul<br>ระบุข้อผิดได้ถูกอย่างน้อย 3 จุด
+* Memberikan bentuk pembetulan bagi setiap kesalahan<br>ให้รูปที่ถูกของแต่ละจุด
+* Menyatakan peringkat kata atau ayat dengan tepat<br>ระบุระดับคำหรือระดับประโยคได้ถูก
+?? Adakah kata ganti nama *awak semua* sesuai untuk papan tanda rasmi? Apakah kata yang patut digunakan?<br>สรรพนาม *awak semua* เหมาะกับป้ายทางการหรือไม่ ควรใช้คำใดแทน
+= *anda semua* / *saudara-saudari*
+* Menyatakan bahawa *awak semua* tidak sesuai kerana terlalu mesra<br>บอกว่า *awak semua* ไม่เหมาะเพราะเป็นกันเองเกินไป
+* Mencadangkan pengganti yang sesuai seperti *anda semua* atau *saudara-saudari*<br>เสนอคำแทนที่เหมาะสม
+* Mengaitkan pilihan dengan laras rasmi papan tanda<br>โยงกับระดับภาษาทางการของป้าย
+?? Kesalahan manakah yang mungkin berpunca daripada pengaruh bahasa Thai? Jelaskan.<br>ข้อผิดใดน่าจะเกิดจากอิทธิพลของภาษาไทย อธิบาย
+= *di/ke* (*datang di*, *masuk di*) berpunca daripada "ที่" dalam bahasa Thai yang digunakan untuk tempat dan arah; *di sini kawasan* mungkin meniru susunan "ที่นี่" dan bukan susunan D-M.
+* Mengenal pasti sekurang-kurangnya satu kesalahan yang berkaitan dengan bahasa Thai<br>ระบุข้อผิดที่เกี่ยวกับภาษาไทยได้อย่างน้อย 1 จุด
+* Menjelaskan struktur bahasa Thai yang menyebabkannya<br>อธิบายโครงสร้างภาษาไทยที่เป็นต้นเหตุ
+* Memberikan bentuk bahasa Melayu yang betul<br>ให้รูปภาษามลายูที่ถูก
+```
 
 ## 10. Rumusan<br>สรุปบทเรียน
 
@@ -295,19 +353,45 @@ Ayat yang gramatis masih boleh tidak sesuai dengan konteks.<br>ประโย�
 
 ### B. Soalan Subjektif<br>ข. อัตนัย
 
-1. Huraikan perbezaan antara *morfologi* dengan *sintaksis*, dan berikan satu contoh ayat bahasa Melayu yang dapat dianalisis pada kedua-dua peringkat. (แนวคำตอบ: Morfologi mengkaji struktur dalaman kata dan pembentukannya; sintaksis mengkaji susunan kata menjadi frasa, klausa dan ayat. Contoh *Pelajar itu membaca buku.* — morfologi: *membaca* = *meN-* + *baca*; sintaksis: *Pelajar itu* = subjek FN, *membaca buku* = predikat FK.)
-   อธิบายความแตกต่างระหว่าง *morfologi* กับ *sintaksis* พร้อมยกตัวอย่างประโยคภาษามลายู 1 ประโยคที่วิเคราะห์ได้ทั้งสองระดับ
-2. Lukiskan rajah hierarki unit bahasa daripada *fonem* hingga *ayat*, beserta contoh anda sendiri bagi setiap peringkat. (แนวคำตอบ: fonem /b/ → morfem *ber-* dan *jalan* → kata *berjalan* → frasa *berjalan kaki* → klausa *adik berjalan kaki* → ayat *Adik berjalan kaki ke sekolah.*)
-   เขียนแผนภาพลำดับชั้นหน่วยภาษาจาก *fonem* ถึง *ayat* พร้อมตัวอย่างของตนเองทุกระดับ
-3. Tukarkan lima ayat bahasa basahan yang anda dengar dalam kehidupan seharian kepada bahasa baku, dan jelaskan perubahan yang dibuat. (แนวคำตอบ: Contoh: *Saya tak tahu* → *Saya tidak tahu* — kata nafi · *Dia dah balik* → *Dia sudah pulang* — kata bantu aspek · *Nak ke mana?* → *Hendak ke mana?* — kata bantu ragam · *Awak dah makan?* → *Saudara sudah makan?* — kata ganti nama sopan.)
-   เปลี่ยนประโยคภาษาพูด 5 ประโยคที่ได้ยินในชีวิตประจำวันให้เป็นภาษามาตรฐาน และอธิบายสิ่งที่เปลี่ยน
+
+```latihan-terbuka
+Tajuk: Soalan Subjektif | ข้อสอบอัตนัย
+Arahan: Tulis jawapan anda, kemudian bandingkan dengan contoh jawapan dan kriteria penilaian. | เขียนคำตอบ แล้วเทียบกับตัวอย่างคำตอบและเกณฑ์การประเมิน
+?? Huraikan perbezaan antara *morfologi* dengan *sintaksis*, dan berikan satu contoh ayat bahasa Melayu yang dapat dianalisis pada kedua-dua peringkat.<br>อธิบายความแตกต่างระหว่าง *morfologi* กับ *sintaksis* พร้อมยกตัวอย่างประโยคภาษามลายู 1 ประโยคที่วิเคราะห์ได้ทั้งสองระดับ
+= Morfologi mengkaji struktur dalaman kata dan pembentukannya; sintaksis mengkaji susunan kata menjadi frasa, klausa dan ayat. Contoh *Pelajar itu membaca buku.* — morfologi: *membaca* = *meN-* + *baca*; sintaksis: *Pelajar itu* = subjek FN, *membaca buku* = predikat FK.
+* Mentakrifkan morfologi dan sintaksis dengan tepat<br>นิยามวจีวิภาคและวากยสัมพันธ์ได้ถูกต้อง
+* Memberikan satu ayat contoh yang sah<br>ยกประโยคตัวอย่างที่ถูกต้อง
+* Menganalisis ayat itu pada peringkat kata dan peringkat ayat<br>วิเคราะห์ทั้งระดับคำและระดับประโยค
+?? Lukiskan rajah hierarki unit bahasa daripada *fonem* hingga *ayat*, beserta contoh anda sendiri bagi setiap peringkat.<br>เขียนแผนภาพลำดับชั้นหน่วยภาษาจาก *fonem* ถึง *ayat* พร้อมตัวอย่างของตนเองทุกระดับ
+= fonem /b/ → morfem *ber-* dan *jalan* → kata *berjalan* → frasa *berjalan kaki* → klausa *adik berjalan kaki* → ayat *Adik berjalan kaki ke sekolah.*
+* Menyusun enam peringkat mengikut urutan yang betul<br>เรียงหกระดับได้ถูกลำดับ
+* Memberikan contoh yang sesuai bagi setiap peringkat<br>ยกตัวอย่างเหมาะสมทุกระดับ
+* Contoh bagi peringkat yang lebih tinggi dibina daripada peringkat yang lebih rendah<br>ตัวอย่างระดับสูงสร้างจากระดับต่ำ
+?? Tukarkan lima ayat bahasa basahan yang anda dengar dalam kehidupan seharian kepada bahasa baku, dan jelaskan perubahan yang dibuat.<br>เปลี่ยนประโยคภาษาพูด 5 ประโยคที่ได้ยินในชีวิตประจำวันให้เป็นภาษามาตรฐาน และอธิบายสิ่งที่เปลี่ยน
+= Contoh: *Saya tak tahu* → *Saya tidak tahu* — kata nafi · *Dia dah balik* → *Dia sudah pulang* — kata bantu aspek · *Nak ke mana?* → *Hendak ke mana?* — kata bantu ragam · *Awak dah makan?* → *Saudara sudah makan?* — kata ganti nama sopan.
+* Lima ayat basahan yang munasabah<br>มีประโยคภาษาพูดที่สมเหตุสมผล 5 ประโยค
+* Bentuk baku yang betul bagi setiap ayat<br>รูปมาตรฐานถูกต้องทุกประโยค
+* Menamakan jenis perubahan seperti kata nafi, kata bantu atau kata ganti nama<br>ระบุชนิดของการเปลี่ยน
+```
 
 ### C. Soalan Pemikiran Kritis<br>ค. โจทย์คิดวิเคราะห์
 
-1. Seorang rakan berkata, "Asalkan orang faham, tidak perlu belajar tatabahasa." Sanggah atau sokong pendapat itu dengan contoh kesalahan yang mengubah makna atau tidak sesuai dengan konteks.
-   เพื่อนนักศึกษาคนหนึ่งกล่าวว่า "พูดรู้เรื่องก็พอ ไม่ต้องเรียนไวยากรณ์" จงโต้แย้งหรือสนับสนุน โดยใช้ตัวอย่างข้อผิดที่ทำให้ความหมายเปลี่ยนหรือไม่เหมาะกับบริบท
-2. Kumpulkan tiga teks bahasa Melayu sebenar (papan tanda, hantaran media sosial, menu makanan) dari kawasan selatan Thailand. Analisis bagaimana unsur dialek Melayu atau bahasa basahan hadir dalam teks tersebut.
-   เก็บข้อความภาษามลายูจริง 3 ชิ้น (ป้าย โพสต์สื่อสังคม เมนูอาหาร) จากพื้นที่ภาคใต้ วิเคราะห์ว่ามีลักษณะภาษามลายูถิ่นหรือภาษาพูดแทรกอยู่อย่างไร
+
+```latihan-terbuka
+Tajuk: Soalan Pemikiran Kritis | โจทย์คิดวิเคราะห์
+Arahan: Tulis jawapan anda, kemudian bandingkan dengan contoh jawapan dan kriteria penilaian. | เขียนคำตอบ แล้วเทียบกับตัวอย่างคำตอบและเกณฑ์การประเมิน
+?? Seorang rakan berkata, "Asalkan orang faham, tidak perlu belajar tatabahasa." Sanggah atau sokong pendapat itu dengan contoh kesalahan yang mengubah makna atau tidak sesuai dengan konteks.<br>เพื่อนนักศึกษาคนหนึ่งกล่าวว่า "พูดรู้เรื่องก็พอ ไม่ต้องเรียนไวยากรณ์" จงโต้แย้งหรือสนับสนุน โดยใช้ตัวอย่างข้อผิดที่ทำให้ความหมายเปลี่ยนหรือไม่เหมาะกับบริบท
+= Tidak setuju: kesalahan tatabahasa boleh mengubah makna atau menjejaskan kesopanan. Contoh: *Saya pergi ke pasar* lain maknanya daripada *Saya di pasar*; *awak* kepada dekan boleh dianggap biadab walaupun difahami. Tatabahasa juga penting untuk penulisan rasmi dan peperiksaan.
+* Menyatakan pendirian yang jelas<br>แสดงจุดยืนชัดเจน
+* Memberikan sekurang-kurangnya dua contoh yang konkrit<br>มีตัวอย่างที่เป็นรูปธรรมอย่างน้อย 2 ตัวอย่าง
+* Membezakan isu makna dengan isu kesesuaian laras<br>แยกปัญหาความหมายกับปัญหาระดับภาษา
+* Membuat kesimpulan yang logik<br>สรุปได้อย่างมีเหตุผล
+?? Kumpulkan tiga teks bahasa Melayu sebenar (papan tanda, hantaran media sosial, menu makanan) dari kawasan selatan Thailand. Analisis bagaimana unsur dialek Melayu atau bahasa basahan hadir dalam teks tersebut.<br>เก็บข้อความภาษามลายูจริง 3 ชิ้น (ป้าย โพสต์สื่อสังคม เมนูอาหาร) จากพื้นที่ภาคใต้ วิเคราะห์ว่ามีลักษณะภาษามลายูถิ่นหรือภาษาพูดแทรกอยู่อย่างไร
+= Contoh pendekatan: bagi setiap teks, salin ayat asal, gariskan unsur basahan atau dialek (contohnya *Dah makan ke?*), berikan bentuk baku (*Sudah makan?*), dan nyatakan jenis perbezaannya (kata bantu, partikel, sebutan, kosa kata dialek Patani).
+* Tiga teks sebenar dengan sumber yang dinyatakan<br>มีข้อความจริง 3 ชิ้นพร้อมแหล่งที่มา
+* Mengenal pasti unsur dialek atau basahan dengan tepat<br>ระบุลักษณะภาษาถิ่นหรือภาษาพูดได้ถูก
+* Memberikan bentuk baku sebagai perbandingan<br>ให้รูปมาตรฐานเปรียบเทียบ
+```
 
 ## 12. Rujukan<br>เอกสารอ้างอิง
 

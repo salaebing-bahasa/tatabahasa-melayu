@@ -102,42 +102,71 @@
      Ditulis dalam fail bab sebagai blok kod:  ```latihan-isi | latihan-betulkan | latihan-golong | latihan-benar
      Baris "Arahan: Melayu | Thai", baris "Kategori: A | B" (golong sahaja), kemudian satu item sebaris; medan dipisahkan " | ".
      เขียนในไฟล์บทเป็นบล็อกโค้ด แต่ละบรรทัดคือหนึ่งข้อ แยกช่องด้วย " | " */
-  const LAT_NAMA = { isi: ["Isi tempat kosong", "เติมคำในช่องว่าง"], betulkan: ["Betulkan kesalahan", "แก้ประโยคที่ผิด"], golong: ["Golongkan", "จัดประเภท"], benar: ["Betul atau salah?", "ถูกหรือผิด"] };
+  const LAT_NAMA = {
+    objektif: ["Soalan Objektif", "ข้อสอบปรนัย"], isi: ["Isi Tempat Kosong", "เติมคำในช่องว่าง"], golong: ["Golongkan", "จัดประเภท"],
+    betulkan: ["Betulkan Kesalahan Ayat", "แก้ไขประโยคผิด"], analisis: ["Analisis Struktur Ayat", "วิเคราะห์โครงสร้างประโยค"],
+    benar: ["Betul atau Salah", "ถูกหรือผิด"], terbuka: ["Soalan Terbuka", "คำถามปลายเปิด"]
+  };
   const ms1 = t => String(t).split(" · ")[0].replace(/<br>.*/, "").trim().toLowerCase();
   const expHTML = (m, t) => m ? `<p class="lat-exp" hidden><b>Penjelasan:</b> ${mdi(m)}${t ? `<br><b>คำอธิบาย:</b> ${mdi(t)}` : ""}</p>` : "";
   const bi = t => { const [m, th] = String(t || "").split("<br>"); return th ? B(mdi(m), mdi(th)) : mdi(m); };
+  const FB = '<p class="lat-fb" aria-live="polite"></p>';
   let latN = 0;
-  function latihanHTML(type, src) {
-    const lines = src.split("\n").map(l => l.trim()).filter(Boolean);
-    let arahan = null, cats = [];
-    const items = [];
-    lines.forEach(l => {
-      if (/^Arahan:/i.test(l)) { arahan = l.replace(/^Arahan:\s*/i, "").split(/\s+\|\s+/); return; }
-      if (/^Kategori:/i.test(l)) { cats = l.replace(/^Kategori:\s*/i, "").split(/\s+\|\s+/); return; }
-      items.push(l.split(/\s+\|\s+/));
+  /* Baca blok: baris kepala (Arahan/Kategori/Label/Tajuk), item sebaris, atau item berbilang baris yang bermula dengan "??"
+     อ่านบล็อก: บรรทัดหัว (Arahan/Kategori/Label/Tajuk) ข้อแบบบรรทัดเดียว หรือข้อหลายบรรทัดที่ขึ้นต้นด้วย "??" */
+  function parseLat(src) {
+    const o = { arahan: null, tajuk: null, cats: [], items: [] }; let cur = null;
+    src.split("\n").map(l => l.trim()).filter(Boolean).forEach(l => {
+      const h = l.match(/^(Arahan|Kategori|Label|Tajuk):\s*(.*)$/i);
+      if (h) { const v = h[2].split(/\s+\|\s+/), k = h[1].toLowerCase(); if (k === "arahan") o.arahan = v; else if (k === "tajuk") o.tajuk = v; else o.cats = v; return; }
+      if (l.startsWith("??")) { cur = { q: l.slice(2).trim(), opts: [], sample: "", kr: [] }; o.items.push(cur); return; }
+      if (cur && /^[+-] /.test(l)) { const [t, r] = l.slice(2).split(/\s+::\s+/); cur.opts.push({ ok: l[0] === "+", t: t.trim(), r: r || "" }); return; }
+      if (cur && l.startsWith("= ")) { cur.sample = l.slice(2).trim(); return; }
+      if (cur && l.startsWith("* ")) { cur.kr.push(l.slice(2).trim()); return; }
+      cur = null; o.items.push(l.split(/\s+\|\s+/));
     });
-    const nm = LAT_NAMA[type]; if (!nm || !items.length) return `<pre>${esc(src)}</pre>`;
+    return o;
+  }
+  function latihanHTML(type, src) {
+    const { arahan, tajuk, cats, items } = parseLat(src);
+    const nm = tajuk || LAT_NAMA[type]; if (!LAT_NAMA[type] || !items.length) return `<pre>${esc(src)}</pre>`;
     const id = "lat" + (++latN);
     const li = items.map(f => {
+      if (type === "objektif") {
+        return `<li class="lat-item"><span class="lat-q">${bi(f.q)}</span><span class="lat-opts">${f.opts.map(x => `<button type="button" class="opt lat-ob"${x.ok ? " data-ok" : ""}>${mdi(x.t)}</button>`).join("")}</span>${FB}<ul class="lat-why" hidden>${f.opts.map(x => `<li class="${x.ok ? "why-ok" : "why-no"}"><b>${x.ok ? "✓" : "✗"} ${mdi(x.t)}</b> ${bi(x.r)}</li>`).join("")}</ul></li>`;
+      }
+      if (type === "terbuka") {
+        const [sm, st] = f.sample.split("<br>");
+        return `<li class="lat-item lat-tb"><span class="lat-q">${bi(f.q)}</span><textarea class="lat-ta" rows="4" lang="ms" aria-label="Jawapan anda · คำตอบของคุณ" placeholder="Tulis jawapan anda di sini · เขียนคำตอบที่นี่"></textarea><button type="button" class="btn btn-line lat-buka">Lihat contoh jawapan dan kriteria · ดูตัวอย่างคำตอบและเกณฑ์</button>${FB}<div class="lat-model" hidden>${f.sample ? `<p class="lat-sample"><b>Contoh jawapan · ตัวอย่างคำตอบ</b><br>${mdi(sm)}${st ? `<br><span class="tr" lang="th">${mdi(st)}</span>` : ""}</p>` : ""}<p class="lat-note">Jawapan anda tidak perlu sama perkataan demi perkataan. Tandakan kriteria yang dipenuhi oleh jawapan anda. · ไม่จำเป็นต้องตรงกับตัวอย่างคำต่อคำ ให้ติ๊กเกณฑ์ที่คำตอบของคุณทำได้</p><ul class="lat-kr">${f.kr.map(k => `<li><label><input type="checkbox" class="lat-kc"> <span>${bi(k)}</span></label></li>`).join("")}</ul><p class="lat-krs" aria-live="polite"></p></div></li>`;
+      }
       if (type === "isi") {
         const [q, ans, em, et] = f; const [a, b] = q.split("___");
-        return `<li class="lat-item" data-ans="${esc(ans || "")}"><span class="lat-q" lang="ms">${mdi(a || "")}<input class="lat-in" type="text" autocomplete="off" autocapitalize="off" spellcheck="false" lang="ms" aria-label="Jawapan · คำตอบ">${mdi(b || "")}</span> <button type="button" class="opt lat-semak">Semak · ตรวจ</button><p class="lat-fb" aria-live="polite"></p>${expHTML(em, et)}</li>`;
+        return `<li class="lat-item" data-ans="${esc(ans || "")}"><span class="lat-q" lang="ms">${mdi(a || "")}<input class="lat-in" type="text" autocomplete="off" autocapitalize="off" spellcheck="false" lang="ms" aria-label="Jawapan · คำตอบ">${mdi(b || "")}</span> <button type="button" class="opt lat-semak">Semak · ตรวจ</button>${FB}${expHTML(em, et)}</li>`;
       }
       if (type === "betulkan") {
         const [q, em, et] = f; const m = q.match(/\[([^\]→]+)→([^\]]+)\]/);
         const wrong = m ? m[1].trim() : "", right = m ? m[2].trim() : "";
         const parts = q.split(/(\[[^\]]+\])/).flatMap(x => /^\[/.test(x) ? [{ w: wrong, ok: 1 }] : x.split(/\s+/).filter(Boolean).map(w => ({ w, ok: 0 })));
         const fixed = q.replace(/\[[^\]]+\]/, `**${right}**`);
-        return `<li class="lat-item"><span class="lat-words" lang="ms">${parts.map(p => /^[.,!?;:]+$/.test(p.w) ? `<span class="lat-p">${esc(p.w)}</span>` : `<button type="button" class="opt lat-w"${p.ok ? " data-ok" : ""}>${esc(p.w)}</button>`).join(" ")}</span><p class="lat-fb" aria-live="polite"></p><p class="lat-fix" hidden lang="ms">✓ ${mdi(fixed)}</p>${expHTML(em, et)}</li>`;
+        return `<li class="lat-item"><span class="lat-words" lang="ms">${parts.map(p => /^[.,!?;:]+$/.test(p.w) ? `<span class="lat-p">${esc(p.w)}</span>` : `<button type="button" class="opt lat-w"${p.ok ? " data-ok" : ""}>${esc(p.w)}</button>`).join(" ")}</span>${FB}<p class="lat-fix" hidden lang="ms">✓ ${mdi(fixed)}</p>${expHTML(em, et)}</li>`;
+      }
+      if (type === "analisis") {
+        const [q, em, et] = f;
+        const body = q.split(/(\[[^\]]+\])/).map(x => {
+          const m = x.match(/^\[([^|\]]+)\|([^\]]+)\]$/); if (!m) return x.trim() ? `<span class="lat-p">${esc(x.trim())}</span>` : "";
+          const k = cats.findIndex(c => ms1(c) === ms1(m[2]));
+          return `<span class="lat-ch" data-a="${k}"><span class="lat-cht" lang="ms">${esc(m[1].trim())}</span><select class="lat-sel" aria-label="Fungsi bagi ${esc(m[1].trim())} · หน้าที่ของ ${esc(m[1].trim())}"><option value="">— pilih · เลือก —</option>${cats.map((c, j) => `<option value="${j}">${esc(c)}</option>`).join("")}</select><small class="lat-cor" hidden>→ ${esc(cats[k] || "?")}</small></span>`;
+        }).join(" ");
+        return `<li class="lat-item"><span class="lat-chs">${body}</span><button type="button" class="opt lat-semak-an">Semak · ตรวจ</button>${FB}${expHTML(em, et)}</li>`;
       }
       if (type === "golong") {
         const [w, cat, em, et] = f; const k = cats.findIndex(c => ms1(c) === ms1(cat));
-        return `<li class="lat-item" data-a="${k}"><span class="lat-q">${bi(w)}</span><span class="lat-opts">${cats.map((c, j) => `<button type="button" class="opt lat-c" data-j="${j}">${mdi(c)}</button>`).join("")}</span><p class="lat-fb" aria-live="polite"></p>${expHTML(em, et)}</li>`;
+        return `<li class="lat-item" data-a="${k}"><span class="lat-q">${bi(w)}</span><span class="lat-opts">${cats.map((c, j) => `<button type="button" class="opt lat-c" data-j="${j}">${mdi(c)}</button>`).join("")}</span>${FB}${expHTML(em, et)}</li>`;
       }
       const [st, bs, em, et] = f; const ok = /^(b|betul|benar)$/i.test((bs || "").trim()) ? 1 : 0;
-      return `<li class="lat-item" data-a="${ok}"><span class="lat-q">${bi(st)}</span><span class="lat-opts"><button type="button" class="opt lat-tf" data-v="1">Betul · ถูก</button><button type="button" class="opt lat-tf" data-v="0">Salah · ผิด</button></span><p class="lat-fb" aria-live="polite"></p>${expHTML(em, et)}</li>`;
+      return `<li class="lat-item" data-a="${ok}"><span class="lat-q">${bi(st)}</span><span class="lat-opts"><button type="button" class="opt lat-tf" data-v="1">Betul · ถูก</button><button type="button" class="opt lat-tf" data-v="0">Salah · ผิด</button></span>${FB}${expHTML(em, et)}</li>`;
     }).join("");
-    return `<div class="lat lat-${type}" id="${id}"><p class="lat-h">${B(nm[0], nm[1])}</p>${arahan ? `<p class="lat-arahan">${mdi(arahan[0])}${arahan[1] ? `<br>${mdi(arahan[1])}` : ""}</p>` : ""}<ol>${li}</ol><div class="ex-foot"><span class="score lat-score" aria-live="polite"></span><button class="btn btn-line" type="button" data-lat-reset="${id}">Cuba semula · ทำใหม่</button></div></div>`;
+    return `<div class="lat lat-${type}" id="${id}"><p class="lat-h">${B(mdi(nm[0]), mdi(nm[1] || ""))}</p>${arahan ? `<p class="lat-arahan">${mdi(arahan[0])}${arahan[1] ? `<br>${mdi(arahan[1])}` : ""}</p>` : ""}<ol>${li}</ol><div class="ex-foot"><span class="score lat-score" aria-live="polite"></span><button class="btn btn-line" type="button" data-lat-reset="${id}">Cuba semula · ทำใหม่</button></div></div>`;
   }
   /* Tukar blok ```latihan-… kepada penanda, kemudian isi selepas markdown diproses */
   function mdLat(body) {
@@ -147,41 +176,74 @@
   }
   const normJ = t => String(t).toLowerCase().replace(/[.,!?;:]+$/g, "").replace(/\s+/g, " ").trim();
   function bindLat(root) {
+    const skor = box => {
+      if (box.classList.contains("lat-terbuka")) {
+        const k = $$(".lat-kc", box), c = k.filter(x => x.checked).length;
+        $(".lat-score", box).textContent = `Penilaian kendiri · ประเมินตนเอง: ${c}/${k.length} kriteria · เกณฑ์`; return;
+      }
+      const all = $$(".lat-item", box), d = all.filter(x => x.dataset.res !== undefined), r = d.filter(x => x.dataset.res === "1").length;
+      $(".lat-score", box).textContent = `Markah · คะแนน ${r}/${all.length}` + (d.length < all.length ? ` (dijawab · ตอบแล้ว ${d.length})` : "");
+    };
     const done = (li, ok, msg) => {
       li.dataset.res = ok ? "1" : "0";
       const fb = $(".lat-fb", li); fb.className = "lat-fb " + (ok ? "right" : "wrong"); fb.textContent = msg;
-      $$(".lat-exp, .lat-fix", li).forEach(x => { x.hidden = false; });
-      const box = li.closest(".lat"), all = $$(".lat-item", box), d = all.filter(x => x.dataset.res !== undefined), r = d.filter(x => x.dataset.res === "1").length;
-      $(".lat-score", box).textContent = `Markah · คะแนน ${r}/${all.length}` + (d.length < all.length ? ` (dijawab · ตอบแล้ว ${d.length})` : "");
+      $$(".lat-exp, .lat-fix, .lat-why", li).forEach(x => { x.hidden = false; });
+      skor(li.closest(".lat"));
     };
     const semak = li => {
       const inp = $(".lat-in", li); if (!inp.value.trim()) { inp.focus(); return; }
-      const ans = li.dataset.ans.split("/").map(normJ), ok = ans.includes(normJ(inp.value));
+      const alt = li.dataset.ans.split("/"), ok = alt.map(normJ).includes(normJ(inp.value)), j = alt.join(" / ");
       inp.disabled = true; inp.classList.add(ok ? "right" : "wrong"); $(".lat-semak", li).disabled = true;
-      done(li, ok, ok ? "Betul · ถูกต้อง" : `Belum tepat. Jawapan: ${li.dataset.ans.split("/").join(" / ")} · ยังไม่ถูก คำตอบคือ ${li.dataset.ans.split("/").join(" / ")}`);
+      done(li, ok, ok ? "Betul · ถูกต้อง" : `Jawapan anda "${inp.value.trim()}" belum tepat. Jawapan: ${j} · คำตอบ "${inp.value.trim()}" ยังไม่ถูก คำตอบที่ถูกคือ ${j}`);
     };
     root.addEventListener("keydown", e => { if (e.key === "Enter" && e.target.classList.contains("lat-in")) { e.preventDefault(); semak(e.target.closest(".lat-item")); } });
+    root.addEventListener("change", e => { if (e.target.classList.contains("lat-kc")) { const li = e.target.closest(".lat-item"), k = $$(".lat-kc", li), c = k.filter(x => x.checked).length; $(".lat-krs", li).textContent = `Kriteria dipenuhi · ผ่านเกณฑ์ ${c}/${k.length}` + (c === k.length ? " — Cemerlang · ยอดเยี่ยม" : c >= k.length / 2 ? " — Baik; semak kriteria yang belum dipenuhi · ดี ลองปรับส่วนที่ยังขาด" : " — Perlu diperbaiki · ควรปรับปรุง"); skor(li.closest(".lat")); } });
     root.addEventListener("click", e => {
       const t = e.target.closest("button"); if (!t || t.disabled) return;
       const li = t.closest(".lat-item");
       if (t.classList.contains("lat-semak")) return semak(li);
+      if (t.classList.contains("lat-buka")) {
+        const ta = $(".lat-ta", li), fb = $(".lat-fb", li);
+        if (!ta.value.trim() && !li.dataset.cuba) { li.dataset.cuba = "1"; fb.className = "lat-fb wrong"; fb.textContent = "Cuba tulis jawapan anda dahulu, kemudian klik sekali lagi. · ลองเขียนคำตอบก่อน แล้วกดอีกครั้ง"; ta.focus(); return; }
+        fb.textContent = ""; $(".lat-model", li).hidden = false; t.disabled = true; skor(li.closest(".lat")); return;
+      }
+      if (t.classList.contains("lat-ob")) {
+        const ok = t.hasAttribute("data-ok");
+        $$(".lat-ob", li).forEach(b => { b.disabled = true; if (b.hasAttribute("data-ok")) b.classList.add("right"); });
+        if (!ok) t.classList.add("wrong");
+        return done(li, ok, ok ? "Betul · ถูกต้อง — lihat sebab setiap pilihan · ดูเหตุผลของแต่ละตัวเลือก" : "Belum tepat · ยังไม่ถูก — lihat sebab setiap pilihan di bawah · ดูเหตุผลของแต่ละตัวเลือกด้านล่าง");
+      }
+      if (t.classList.contains("lat-semak-an")) {
+        const ch = $$(".lat-ch", li), sel = ch.map(c => $(".lat-sel", c));
+        if (sel.some(s => s.value === "")) { const fb = $(".lat-fb", li); fb.className = "lat-fb wrong"; fb.textContent = "Pilih fungsi bagi setiap bahagian dahulu. · เลือกหน้าที่ให้ครบทุกส่วนก่อน"; return; }
+        let r = 0;
+        ch.forEach((c, k) => { const s = sel[k], ok = +s.value === +c.dataset.a; s.disabled = true; s.classList.add(ok ? "right" : "wrong"); if (ok) r++; else $(".lat-cor", c).hidden = false; });
+        t.disabled = true;
+        return done(li, r === ch.length, r === ch.length ? `Betul semua · ถูกทั้งหมด (${r}/${ch.length})` : `${r}/${ch.length} bahagian betul; jawapan yang betul ditunjukkan dengan → · ถูก ${r}/${ch.length} ส่วน คำตอบที่ถูกแสดงด้วย →`);
+      }
       if (t.classList.contains("lat-w")) {
         const ok = t.hasAttribute("data-ok");
         $$(".lat-w", li).forEach(b => { b.disabled = true; if (b.hasAttribute("data-ok")) b.classList.add(ok ? "right" : "wrong-key"); });
         if (!ok) t.classList.add("wrong");
-        return done(li, ok, ok ? "Betul, itulah kesalahannya · ถูกต้อง คำนี้คือจุดที่ผิด" : "Belum tepat. Kesalahan ditandai dengan garis merah · ยังไม่ถูก จุดที่ผิดมีขีดเส้นสีแดง");
+        return done(li, ok, ok ? "Betul, itulah kesalahannya · ถูกต้อง คำนี้คือจุดที่ผิด" : `"${t.textContent}" tidak salah. Kesalahan sebenar ditandai dengan garis merah · "${t.textContent}" ไม่ผิด จุดที่ผิดจริงมีขีดเส้นสีแดง`);
       }
       if (t.classList.contains("lat-c") || t.classList.contains("lat-tf")) {
         const a = +li.dataset.a, j = t.classList.contains("lat-c") ? +t.dataset.j : +t.dataset.v, bs = $$(".lat-c, .lat-tf", li);
         bs.forEach((b, k) => { b.disabled = true; if ((b.classList.contains("lat-c") ? k : +b.dataset.v) === a) b.classList.add("right"); });
         if (j !== a) t.classList.add("wrong");
         const label = t.classList.contains("lat-c") ? bs[a].textContent : (a ? "Betul · ถูก" : "Salah · ผิด");
-        return done(li, j === a, j === a ? "Betul · ถูกต้อง" : `Belum tepat. Jawapan: ${label} · ยังไม่ถูก`);
+        return done(li, j === a, j === a ? "Betul · ถูกต้อง" : `Anda memilih "${t.textContent}". Jawapan: ${label} · คุณเลือก "${t.textContent}" คำตอบที่ถูกคือ ${label}`);
       }
       const rs = e.target.closest("[data-lat-reset]");
       if (rs) {
         const box = $("#" + rs.dataset.latReset);
-        $$(".lat-item", box).forEach(li => { delete li.dataset.res; $$(".lat-fb", li).forEach(f => { f.className = "lat-fb"; f.textContent = ""; }); $$(".lat-exp, .lat-fix", li).forEach(x => { x.hidden = true; }); $$("button, input", li).forEach(b => { b.disabled = false; b.classList.remove("right", "wrong", "wrong-key"); }); const i = $(".lat-in", li); if (i) i.value = ""; });
+        $$(".lat-item", box).forEach(li => {
+          delete li.dataset.res; delete li.dataset.cuba;
+          $$(".lat-fb, .lat-krs", li).forEach(f => { f.className = f.classList.contains("lat-krs") ? "lat-krs" : "lat-fb"; f.textContent = ""; });
+          $$(".lat-exp, .lat-fix, .lat-why, .lat-model, .lat-cor", li).forEach(x => { x.hidden = true; });
+          $$("button, input, select, textarea", li).forEach(b => { b.disabled = false; b.classList.remove("right", "wrong", "wrong-key"); });
+          $$(".lat-in, .lat-ta, .lat-sel", li).forEach(i => { i.value = ""; }); $$(".lat-kc", li).forEach(c => { c.checked = false; });
+        });
         $(".lat-score", box).textContent = "";
       }
     });
@@ -376,7 +438,7 @@
       if (/ปรนัย/.test(h)) {
         const items = parseMCQ(rest);
         out += `<h3>${mdi(h)}</h3>` + (items.length ? `<p class="lead" style="color:var(--muted)">Klik jawapan; semakan dibuat serta-merta · กดเลือกคำตอบ ระบบจะตรวจทันที</p>${mcqHTML(items, `mcq${n}`)}` : md(rest));
-      } else out += `<h3>${mdi(h)}</h3>${md(rest)}`;
+      } else out += `<h3>${mdi(h)}</h3>${mdLat(rest)}`;
     });
     return out;
   }

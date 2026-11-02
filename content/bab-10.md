@@ -163,6 +163,30 @@ Kesalahan dalam bab ini sering berpunca daripada dua arah: bahasa Inggeris (*di 
 Jawab setiap latihan; jawapan disemak serta-merta beserta penjelasan.
 ทำแบบฝึกแต่ละชุด ระบบจะตรวจคำตอบทันทีพร้อมคำอธิบาย
 
+```latihan-objektif
+Arahan: Pilih jawapan yang paling tepat; sebab bagi setiap pilihan akan dipaparkan. | เลือกคำตอบที่ถูกที่สุด ระบบจะแสดงเหตุผลของทุกตัวเลือก
+?? Manakah frasa adjektif yang betul?<br>ข้อใดเป็นวลีคุณศัพท์ที่ถูก
+- *amat cantik sekali* :: Dua penguat ditindihkan.<br>คำเน้นซ้อน
+- *sekali cantik* :: *sekali* penguat belakang, tidak hadir di hadapan.<br>*sekali* อยู่หลังคุณศัพท์
++ *cantik sangat* :: *sangat* penguat bebas yang boleh hadir di belakang.<br>*sangat* เป็นคำเน้นอิสระ อยู่หลังได้
+- *paling tercantik* :: Dua penanda penghabisan.<br>เครื่องหมายสูงสุดซ้อน
+?? *Saya rindu ___ kampung halaman.*<br>เติมคำบุพบท
+- *di* :: *di* untuk tempat berada.<br>*di* บอกตำแหน่ง
++ *akan* :: Kata adjektif perasaan diikuti *akan*.<br>คุณศัพท์บอกความรู้สึกตามด้วย *akan*
+- *dari* :: *dari* untuk tempat asal.<br>*dari* บอกต้นทาง
+- *ke* :: *ke* untuk arah tuju.<br>*ke* บอกทิศทาง
+?? Dalam *Buku itu di atas meja.*, frasa sendi nama berfungsi sebagai<br>วลีบุพบททำหน้าที่
++ predikat :: Ayat pola FN + FSN; FSN menerangkan subjek.<br>เป็นภาคแสดง
+- keterangan :: Tiada kata kerja yang diterangkan.<br>ไม่มีกริยาให้ขยาย
+- pelengkap :: Pelengkap hadir selepas kata kerja tertentu.<br>ส่วนเติมเต็มอยู่หลังกริยาบางคำ
+- subjek :: Subjeknya *Buku itu*.<br>ประธานคือ *Buku itu*
+?? Pembetulan bagi *Universiti di mana saya belajar* ialah<br>แก้ *Universiti di mana saya belajar* เป็น
+- *Universiti di mana-mana saya belajar* :: *di mana-mana* bermaksud di semua tempat.<br>หมายถึงทุกแห่ง
+- *Universiti yang mana saya belajar* :: *yang mana* juga tiruan *which*.<br>เป็นการเลียนแบบ *which*
++ *Universiti tempat saya belajar* :: *tempat* menggantikan penghubung relatif *where*.<br>ใช้ *tempat* แทน *where*
+- *Universiti di sana saya belajar* :: *di sana* kata ganti nama tunjuk tempat, bukan penghubung.<br>ไม่ใช่คำเชื่อม
+```
+
 ```latihan-isi
 Arahan: Taipkan kata sendi nama yang betul. | พิมพ์คำบุพบทที่ถูกต้อง
 Dia mahir ___ bahasa Arab. | dalam | Bidang menggunakan *dalam*. | สาขาใช้ *dalam*
@@ -173,13 +197,15 @@ Adik takut ___ gelap. | akan | Kata adjektif perasaan + *akan*. | คุณศ�
 ```
 
 ```latihan-golong
-Arahan: Tentukan fungsi frasa sendi nama. | ระบุหน้าที่ของวลีบุพบท
-Kategori: Predikat · ภาคแสดง | Keterangan · ส่วนขยาย | Pelengkap · ส่วนเติมเต็ม
-*Hadiah itu **untuk ibu**.* | Predikat | FSN menerangkan subjek. | วลีบุพบทกล่าวถึงประธาน
-*Kami makan **di kantin**.* | Keterangan | Boleh digugurkan. | ตัดได้
-*Mereka tinggal **di Yala**.* | Pelengkap | Wajib selepas *tinggal*. | จำเป็นหลัง *tinggal*
-*Adik saya **di rumah**.* | Predikat | FSN menerangkan subjek. | วลีบุพบทกล่าวถึงประธาน
-*Ayah membaca **di beranda**.* | Keterangan | Tempat perbuatan; boleh digugurkan. | สถานที่ ตัดได้
+Tajuk: Kenal Pasti Golongan Kata | ระบุชนิดของคำ
+Arahan: Tentukan golongan kata bagi perkataan yang diberikan. | ระบุชนิดของคำที่กำหนด
+Kategori: Kata adjektif · คำคุณศัพท์ | Kata tugas · คำไวยากรณ์ | Kata nama · คำนาม | Kata kerja · คำกริยา
+*mahir* dalam *Dia mahir dalam bahasa Arab.* | Kata adjektif | Inti FA; boleh menerima *sangat*. | คำหลักวลีคุณศัพท์
+*dalam* dalam *Dia mahir dalam bahasa Arab.* | Kata tugas | Kata sendi nama. | คำบุพบท
+*atas* dalam *di atas meja* | Kata tugas | Kata arah. | คำบอกทิศ
+*meja* dalam *di atas meja* | Kata nama | Inti frasa nama dalam FSN. | คำนาม
+*legam* dalam *hitam legam* | Kata adjektif | Penerang khusus warna. | คำขยายเฉพาะสี
+*nian* dalam *cantik nian* | Kata tugas | Kata penguat belakang. | คำเน้น
 ```
 
 ```latihan-betulkan
@@ -188,6 +214,25 @@ Saya berasal dari Narathiwat, [di mana→tempat] bahasa Melayu digunakan setiap 
 Universiti itu terletak antara Songkhla [dan→dengan] Phatthalung. | *antara … dengan*. | ใช้คู่กับ *dengan*
 Saya rajin [di→dalam] pelajaran. | Bidang menggunakan *dalam*. | สาขาใช้ *dalam*
 Dia [sangat mahir sekali→sangat mahir] dalam menulis. | Penguat tidak ditindihkan. | ไม่ใช้คำเน้นซ้อน
+```
+
+```latihan-analisis
+Arahan: Pilih fungsi bagi setiap bahagian ayat, kemudian klik Semak. | เลือกหน้าที่ของแต่ละส่วนในประโยค แล้วกดตรวจ
+Label: Subjek · ประธาน | Inti predikat · แกนภาคแสดง | Pelengkap · ส่วนเติมเต็ม | Keterangan · ส่วนขยาย
+[Abang|Subjek] [mahir|Inti predikat] [dalam bahasa Arab|Keterangan]. | *dalam bahasa Arab* keterangan bidang bagi FA. | ส่วนขยายบอกสาขา
+[Hadiah itu|Subjek] [untuk ibu|Inti predikat]. | FSN menjadi predikat. | วลีบุพบทเป็นภาคแสดง
+[Kami|Subjek] [belajar|Inti predikat] [di perpustakaan|Keterangan]. | FSN keterangan tempat. | ส่วนขยายบอกสถานที่
+[Mereka|Subjek] [tinggal|Inti predikat] [di asrama|Pelengkap]. | FSN pelengkap kepada *tinggal*. | ส่วนเติมเต็มของ *tinggal*
+```
+
+```latihan-golong
+Arahan: Tentukan fungsi frasa sendi nama. | ระบุหน้าที่ของวลีบุพบท
+Kategori: Predikat · ภาคแสดง | Keterangan · ส่วนขยาย | Pelengkap · ส่วนเติมเต็ม
+*Hadiah itu **untuk ibu**.* | Predikat | FSN menerangkan subjek. | วลีบุพบทกล่าวถึงประธาน
+*Kami makan **di kantin**.* | Keterangan | Boleh digugurkan. | ตัดได้
+*Mereka tinggal **di Yala**.* | Pelengkap | Wajib selepas *tinggal*. | จำเป็นหลัง *tinggal*
+*Adik saya **di rumah**.* | Predikat | FSN menerangkan subjek. | วลีบุพบทกล่าวถึงประธาน
+*Ayah membaca **di beranda**.* | Keterangan | Tempat perbuatan; boleh digugurkan. | สถานที่ ตัดได้
 ```
 
 ```latihan-benar
@@ -208,12 +253,25 @@ Frasa sendi nama boleh menjadi predikat.<br>วลีบุพบทเป็น
 **Aspek analisis**
 **ประเด็นวิเคราะห์**
 
-1. Kenal pasti semua frasa adjektif dan frasa sendi nama, kemudian tunjukkan kesalahannya.
-   ระบุวลีคุณศัพท์และวลีบุพบททุกวลี และชี้จุดผิด
-2. Tulis semula perenggan itu supaya betul dan meyakinkan jawatankuasa pemilih. (แนวคำตอบ: *…Narathiwat, tempat bahasa Melayu digunakan…; sangat berminat akan/terhadap…; Universiti tempat saya belajar… antara Songkhla dengan Phatthalung; rajin dalam pelajaran; sangat mahir dalam penulisan*)
-   เขียนย่อหน้าใหม่ให้ถูกต้องและน่าเชื่อถือสำหรับกรรมการคัดเลือก
-3. Bincangkan kesalahan mana yang berpunca daripada bahasa Inggeris dan kesalahan mana yang berpunca daripada bahasa Thai.
-   อภิปรายว่าข้อผิดใดมาจากภาษาอังกฤษ ข้อผิดใดมาจากภาษาไทย
+```latihan-terbuka
+Tajuk: Soalan Kajian Kes | คำถามกรณีศึกษา
+Arahan: Tulis jawapan anda, kemudian bandingkan dengan contoh jawapan dan kriteria penilaian. | เขียนคำตอบ แล้วเทียบกับตัวอย่างคำตอบและเกณฑ์การประเมิน
+?? Kenal pasti semua frasa adjektif dan frasa sendi nama, kemudian tunjukkan kesalahannya.<br>ระบุวลีคุณศัพท์และวลีบุพบททุกวลี และชี้จุดผิด
+= FA: *sangat minat* (salah, → *sangat berminat*), *rajin di pelajaran* (→ *rajin dalam pelajaran*), *sangat mahir sekali* (→ *sangat mahir*). FSN: *di mana* (→ *tempat*), *antara Songkhla dan Phatthalung* (→ *dengan*).
+* Mengenal pasti FA dan FSN dalam teks<br>ระบุวลีคุณศัพท์และวลีบุพบท
+* Menunjukkan kesalahan dalam setiap frasa<br>ชี้ข้อผิดของแต่ละวลี
+* Pembetulan yang betul<br>แก้ถูกต้อง
+?? Tulis semula perenggan itu supaya betul dan meyakinkan jawatankuasa pemilih.<br>เขียนย่อหน้าใหม่ให้ถูกต้องและน่าเชื่อถือสำหรับกรรมการคัดเลือก
+= *…Narathiwat, tempat bahasa Melayu digunakan…; sangat berminat akan/terhadap…; Universiti tempat saya belajar… antara Songkhla dengan Phatthalung; rajin dalam pelajaran; sangat mahir dalam penulisan*
+* Semua kesalahan dibetulkan<br>แก้ข้อผิดครบ
+* Perenggan gramatis dan lancar<br>ย่อหน้าถูกไวยากรณ์และลื่นไหล
+* Nada meyakinkan untuk permohonan biasiswa<br>น้ำเสียงน่าเชื่อถือ
+?? Bincangkan kesalahan mana yang berpunca daripada bahasa Inggeris dan kesalahan mana yang berpunca daripada bahasa Thai.<br>อภิปรายว่าข้อผิดใดมาจากภาษาอังกฤษ ข้อผิดใดมาจากภาษาไทย
+= Bahasa Inggeris: *di mana* (where), *minat kepada* (interested in). Bahasa Thai: *antara … dan* (ระหว่าง…และ), *rajin di* (ขยันใน → *dalam*), *sangat … sekali* (มาก ๆ).
+* Kesalahan dikelaskan mengikut sumber pengaruh<br>จำแนกตามแหล่งอิทธิพล
+* Bukti struktur bahasa sumber<br>มีหลักฐานโครงสร้างภาษาต้นทาง
+* Penjelasan yang jelas<br>อธิบายชัดเจน
+```
 
 ## 10. Rumusan<br>สรุปบทเรียน
 
@@ -270,19 +328,44 @@ Frasa sendi nama boleh menjadi predikat.<br>วลีบุพบทเป็น
 
 ### B. Soalan Subjektif<br>ข. อัตนัย
 
-1. Huraikan empat fungsi frasa sendi nama dengan contoh baharu yang tidak sama dengan contoh dalam dokumen ini. (แนวคำตอบ: predikat: *Buku itu untuk adik.* · keterangan: *Kami berbincang di bilik tutorial.* · pelengkap: *Dia tinggal di asrama.* · penerang frasa nama: *pensyarah dari Malaysia*)
-   อธิบายหน้าที่ของวลีบุพบท 4 หน้าที่ พร้อมตัวอย่างใหม่ที่ไม่ซ้ำกับเอกสาร
-2. Bina lima ayat yang mengandungi frasa adjektif + keterangan (contohnya *takut akan*, *bangga dengan*). (แนวคำตอบ: *Dia takut akan gelap.* · *Ibu bangga dengan kejayaan kakak.* · *Abang mahir dalam bahasa Arab.* · *Saya rindu akan keluarga.* · *Adik sayang kepada nenek.*)
-   แต่งประโยคที่มีวลีคุณศัพท์ + ส่วนขยาย 5 ประโยค (เช่น *takut akan*, *bangga dengan*)
-3. Jelaskan mengapa *di mana* tidak sepatutnya digunakan sebagai penghubung relatif dan cadangkan tiga cara pembetulan. (แนวคำตอบ: *Di mana* ialah kata tanya tempat dan penggunaannya sebagai penghubung relatif ialah pengaruh *where*. Pembetulan: guna *tempat* — *kampung tempat saya lahir* · guna *yang* — *universiti yang saya pilih* · pecahkan ayat — *Saya belajar di universiti itu.*)
-   อธิบายว่าทำไม *di mana* จึงไม่ควรใช้เป็นคำเชื่อมสัมพันธ์ และเสนอวิธีแก้ 3 วิธี
+
+```latihan-terbuka
+Tajuk: Soalan Subjektif | ข้อสอบอัตนัย
+Arahan: Tulis jawapan anda, kemudian bandingkan dengan contoh jawapan dan kriteria penilaian. | เขียนคำตอบ แล้วเทียบกับตัวอย่างคำตอบและเกณฑ์การประเมิน
+?? Huraikan empat fungsi frasa sendi nama dengan contoh baharu yang tidak sama dengan contoh dalam dokumen ini.<br>อธิบายหน้าที่ของวลีบุพบท 4 หน้าที่ พร้อมตัวอย่างใหม่ที่ไม่ซ้ำกับเอกสาร
+= predikat: *Buku itu untuk adik.* · keterangan: *Kami berbincang di bilik tutorial.* · pelengkap: *Dia tinggal di asrama.* · penerang frasa nama: *pensyarah dari Malaysia*
+* Empat fungsi dinyatakan<br>ระบุครบสี่หน้าที่
+* Contoh baharu bagi setiap fungsi<br>ตัวอย่างใหม่ทุกหน้าที่
+* Ayat gramatis<br>ประโยคถูกไวยากรณ์
+?? Bina lima ayat yang mengandungi frasa adjektif + keterangan (contohnya *takut akan*, *bangga dengan*).<br>แต่งประโยคที่มีวลีคุณศัพท์ + ส่วนขยาย 5 ประโยค (เช่น *takut akan*, *bangga dengan*)
+= *Dia takut akan gelap.* · *Ibu bangga dengan kejayaan kakak.* · *Abang mahir dalam bahasa Arab.* · *Saya rindu akan keluarga.* · *Adik sayang kepada nenek.*
+* Lima ayat FA + keterangan<br>ห้าประโยค
+* Kata sendi nama yang betul selepas adjektif<br>คำบุพบทหลังคุณศัพท์ถูก
+* Tiada penguat bertindih<br>ไม่มีคำเน้นซ้อน
+?? Jelaskan mengapa *di mana* tidak sepatutnya digunakan sebagai penghubung relatif dan cadangkan tiga cara pembetulan.<br>อธิบายว่าทำไม *di mana* จึงไม่ควรใช้เป็นคำเชื่อมสัมพันธ์ และเสนอวิธีแก้ 3 วิธี
+= *Di mana* ialah kata tanya tempat dan penggunaannya sebagai penghubung relatif ialah pengaruh *where*. Pembetulan: guna *tempat* — *kampung tempat saya lahir* · guna *yang* — *universiti yang saya pilih* · pecahkan ayat — *Saya belajar di universiti itu.*
+* Sebab: *di mana* kata tanya, pengaruh *where*<br>ให้เหตุผลถูก
+* Tiga cara pembetulan<br>สามวิธีแก้
+* Contoh bagi setiap cara<br>ตัวอย่างทุกวิธี
+```
 
 ### C. Soalan Pemikiran Kritis<br>ค. โจทย์คิดวิเคราะห์
 
-1. Kumpulkan tiga contoh penggunaan *di mana* sebagai penghubung relatif daripada media Malaysia. Analisis sama ada penggunaan itu perubahan bahasa yang wajar diterima atau kesalahan yang perlu dibetulkan, dengan merujuk pedoman bahasa baku.
-   เก็บตัวอย่างการใช้ *di mana* แบบคำเชื่อมสัมพันธ์จากสื่อมาเลเซีย 3 ตัวอย่าง วิเคราะห์ว่าเป็นการเปลี่ยนแปลงทางภาษาที่ควรยอมรับหรือเป็นข้อผิดที่ควรแก้ โดยอ้างอิงแนวภาษามาตรฐาน
-2. Bandingkan kata adjektif warna yang mempunyai penerang khusus dalam bahasa Melayu dan bahasa Thai (contohnya *hitam legam* – ดำปี๋), sekurang-kurangnya lima pasangan, dan rumuskan persamaan strukturnya.
-   เปรียบเทียบคุณศัพท์สีแบบมีคำขยายเฉพาะในภาษามลายูกับภาษาไทย (เช่น *hitam legam* – ดำปี๋) อย่างน้อย 5 คู่ และสรุปความเหมือนทางโครงสร้าง
+
+```latihan-terbuka
+Tajuk: Soalan Pemikiran Kritis | โจทย์คิดวิเคราะห์
+Arahan: Tulis jawapan anda, kemudian bandingkan dengan contoh jawapan dan kriteria penilaian. | เขียนคำตอบ แล้วเทียบกับตัวอย่างคำตอบและเกณฑ์การประเมิน
+?? Kumpulkan tiga contoh penggunaan *di mana* sebagai penghubung relatif daripada media Malaysia. Analisis sama ada penggunaan itu perubahan bahasa yang wajar diterima atau kesalahan yang perlu dibetulkan, dengan merujuk pedoman bahasa baku.<br>เก็บตัวอย่างการใช้ *di mana* แบบคำเชื่อมสัมพันธ์จากสื่อมาเลเซีย 3 ตัวอย่าง วิเคราะห์ว่าเป็นการเปลี่ยนแปลงทางภาษาที่ควรยอมรับหรือเป็นข้อผิดที่ควรแก้ โดยอ้างอิงแนวภาษามาตรฐาน
+= Penggunaan *di mana* sebagai penghubung relatif kerap dalam media, tetapi pedoman bahasa baku masih menganggapnya tidak baku; dalam penulisan rasmi, lebih selamat menggunakan *tempat* atau *yang*.
+* Tiga contoh sebenar dengan sumber<br>สามตัวอย่างจริงพร้อมแหล่งที่มา
+* Membincangkan perubahan bahasa dan norma baku<br>อภิปรายการเปลี่ยนแปลงภาษากับบรรทัดฐาน
+* Pendirian yang disokong hujah<br>มีจุดยืนพร้อมเหตุผล
+?? Bandingkan kata adjektif warna yang mempunyai penerang khusus dalam bahasa Melayu dan bahasa Thai (contohnya *hitam legam* – ดำปี๋), sekurang-kurangnya lima pasangan, dan rumuskan persamaan strukturnya.<br>เปรียบเทียบคุณศัพท์สีแบบมีคำขยายเฉพาะในภาษามลายูกับภาษาไทย (เช่น *hitam legam* – ดำปี๋) อย่างน้อย 5 คู่ และสรุปความเหมือนทางโครงสร้าง
+= Contoh: *hitam legam* – ดำปี๋ · *merah menyala* – แดงแจ๊ด · *putih melepak* – ขาวจั๊วะ · *kuning langsat* – เหลืองนวล. Kedua-dua bahasa meletakkan penerang khusus selepas kata warna (D-M).
+* Lima pasangan yang tepat<br>ห้าคู่ที่ถูก
+* Penerang khusus dikenal pasti<br>ระบุคำขยายเฉพาะ
+* Rumusan persamaan struktur<br>สรุปความเหมือนของโครงสร้าง
+```
 
 ## 12. Rujukan<br>เอกสารอ้างอิง
 

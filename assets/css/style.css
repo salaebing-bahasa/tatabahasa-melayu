@@ -815,7 +815,7 @@ td > .tr, th > .tr, .opt > .tr, .toc a .tr { font-size: max(13px, .86em); }
 
 /* ===== Struktur 12 bahagian · โครงสร้าง 12 หัวข้อ ===== */
 .lesson-eyebrow { margin: 0 0 4px; font-size: 14px; letter-spacing: .04em; color: var(--band-muted); }
-.sec-no { color: var(--emas); font-variant-numeric: tabular-nums; }
+.sec-no { color: var(--aksen); font-variant-numeric: tabular-nums; }
 
 /* ===== Latihan interaktif · แบบฝึกหัดโต้ตอบ ===== */
 .lat { background: var(--surface); border: 1px solid var(--line); border-top: 3px solid var(--biru); border-radius: var(--radius-m); padding: 16px 20px; margin: 20px 0; max-width: 820px; }
@@ -848,3 +848,27 @@ td > .tr, th > .tr, .opt > .tr, .toc a .tr { font-size: max(13px, .86em); }
 /* Unsur yang ditegaskan dalam ayat contoh (**…** di dalam *…*) · ส่วนที่เน้นในประโยคตัวอย่าง */
 em strong, strong em { font-weight: 700; background: color-mix(in srgb, var(--emas) 28%, transparent); border-radius: 3px; padding: 0 2px; }
 @media print { em strong, strong em { background: none; text-decoration: underline; } }
+/* Soalan objektif, analisis dan soalan terbuka · ปรนัย วิเคราะห์ และปลายเปิด */
+.lat-why { list-style: none; padding: 0; margin: 8px 0 0; font-size: 14.5px; }
+.lat-why li { padding: 6px 10px; border-left: 3px solid var(--line); margin: 4px 0; }
+.lat-why .why-ok { border-left-color: var(--ok); } .lat-why .why-no { border-left-color: var(--err); }
+.lat-why b { font-weight: 600; margin-right: .3em; }
+.lat-chs { display: flex; flex-wrap: wrap; gap: 8px 10px; align-items: flex-start; margin-bottom: 8px; }
+.lat-ch { display: inline-flex; flex-direction: column; gap: 4px; padding: 6px 8px; border: 1px dashed var(--line); border-radius: var(--radius-s); }
+.lat-cht { font-family: var(--ms-font); font-size: 17.5px; }
+.lat-sel { font: 400 14px var(--th-font); padding: 4px 6px; border: 1.5px solid var(--line); border-radius: 6px; background: var(--kertas); color: var(--dakwat); min-height: 36px; max-width: 100%; }
+.lat-sel.right { border-color: var(--ok); } .lat-sel.wrong { border-color: var(--err); }
+.lat-cor { color: var(--ok); font-size: 13px; }
+.lat-ta { display: block; width: 100%; box-sizing: border-box; margin: 8px 0; font: 400 16px var(--th-font); padding: 8px 10px; border: 1.5px solid var(--line); border-radius: var(--radius-s); background: var(--kertas); color: var(--dakwat); }
+.lat-ta:focus-visible, .lat-sel:focus-visible { outline: 2px solid var(--biru); outline-offset: 1px; }
+.lat-model { margin-top: 10px; padding: 10px 14px; border-radius: var(--radius-s); background: color-mix(in srgb, var(--emas) 10%, transparent); }
+.lat-sample { margin: 0 0 8px; } .lat-note { font-size: 14px; color: var(--muted); margin: 0 0 6px; }
+.lat-kr { list-style: none; padding: 0; margin: 0; } .lat-kr li { margin: 6px 0; } .lat-kr label { display: flex; gap: 8px; align-items: flex-start; cursor: pointer; }
+.lat-kr input { margin-top: .35em; width: 18px; height: 18px; flex: none; }
+.lat-krs { font-weight: 600; color: var(--biru); margin: 6px 0 0; }
+@media print {
+  .lat-why, .lat-cor, .lat-buka, .lat .opt.lat-semak-an { display: none !important; }
+  .lat-model[hidden] { display: block !important; }
+  .lat-ta { min-height: 90px; }
+  .lat-sel { border: 0 !important; } .lat-sel::after { content: ""; }
+}

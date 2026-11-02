@@ -181,6 +181,67 @@ Perhatian: sesetengah ahli bahasa menganggap *Tolong jangan…* bercanggah makna
 Jawab setiap latihan; jawapan disemak serta-merta beserta penjelasan.
 ทำแบบฝึกแต่ละชุด ระบบจะตรวจคำตอบทันทีพร้อมคำอธิบาย
 
+```latihan-objektif
+Arahan: Pilih jawapan yang paling tepat; sebab bagi setiap pilihan akan dipaparkan. | เลือกคำตอบที่ถูกที่สุด ระบบจะแสดงเหตุผลของทุกตัวเลือก
+?? *Pejabat saya di Songkhla.* ialah ayat pola<br>เป็นแบบประโยค
+- FN + FN :: Predikat bukan frasa nama.<br>ภาคแสดงไม่ใช่วลีนาม
+- FN + FK :: Tiada kata kerja.<br>ไม่มีกริยา
+- FN + FA :: Tiada kata adjektif.<br>ไม่มีคุณศัพท์
++ FN + FSN :: Predikat *di Songkhla* frasa sendi nama.<br>ภาคแสดงเป็นวลีบุพบท
+?? Ayat manakah ialah ayat dasar?<br>ข้อใดเป็นประโยคพื้นฐาน
+- *Ke Phuket ayah saya.* :: Susunan songsang.<br>เรียงสลับ
++ *Ayah saya ke Phuket.* :: Penyata, aktif, subjek + predikat.<br>บอกเล่า กรรตุ ประธาน + ภาคแสดง
+- *Nasi goreng kami makan.* :: Ayat pasif.<br>กรรมวาจก
+- *Ke manakah ayah pergi?* :: Ayat tanya.<br>ประโยคคำถาม
+?? Ayat perintah manakah ialah ayat permintaan?<br>ข้อใดเป็นประโยคขอร้อง
+- *Jangan bising.* :: Larangan.<br>ห้าม
+- *Jemputlah duduk.* :: Silaan.<br>เชื้อเชิญ
++ *Tolong tutup tingkap itu.* :: *tolong* menandakan permintaan.<br>*tolong* บอกการขอร้อง
+- *Susun buku itu.* :: Suruhan.<br>สั่ง
+?? Soalan manakah ialah soalan terbuka?<br>ข้อใดเป็นคำถามเปิด
+- *Adakah awak pelajar?* :: Dijawab *ya/tidak*.<br>ตอบใช่/ไม่ใช่
++ *Mengapakah awak lewat?* :: Boleh dijawab dengan pelbagai jawapan.<br>ตอบได้หลายแบบ
+- *Awak sudah makan?* :: Soalan tertutup dengan intonasi.<br>คำถามปิด
+- *Betulkah dia datang?* :: Soalan tertutup.<br>คำถามปิด
+```
+
+```latihan-isi
+Arahan: Lengkapkan ayat. | เติมประโยคให้สมบูรณ์
+___ awak sudah makan? (soalan tertutup) | Adakah | *Adakah* membentuk soalan ya/tidak. | *Adakah* สร้างคำถามปิด
+___ nama awak? (orang) | Siapakah/Siapa | Kata tanya untuk orang. | คำถามสำหรับคน
+___ merokok di kawasan ini. (papan tanda larangan) | Dilarang | Larangan rasmi. | การห้ามแบบทางการ
+___ masuk, tuan. (silaan) | Jemput/Sila/Silakan | Penanda silaan. | คำเชื้อเชิญ
+```
+
+```latihan-golong
+Tajuk: Kenal Pasti Golongan Kata | ระบุชนิดของคำ
+Arahan: Tentukan golongan kata bagi perkataan yang diberikan. | ระบุชนิดของคำที่กำหนด
+Kategori: Kata nama · คำนาม | Kata kerja · คำกริยา | Kata adjektif · คำคุณศัพท์ | Kata tugas · คำไวยากรณ์
+*bernama* dalam *Kucing itu bernama Comel.* | Kata kerja | *ber-* + *nama* membentuk kata kerja. | สร้างกริยา
+*pemurah* dalam *Lelaki itu pemurah.* | Kata adjektif | Menerangkan sifat. | บอกลักษณะ
+*sila* | Kata tugas | Kata perintah (silaan). | คำเชื้อเชิญ
+*wah* | Kata tugas | Kata seru. | คำอุทาน
+*jangan* | Kata tugas | Kata perintah (larangan). | คำห้าม
+*peguam* dalam *Ayahnya peguam.* | Kata nama | Predikat kata nama. | ภาคแสดงเป็นนาม
+```
+
+```latihan-betulkan
+Arahan: Klik bahagian yang salah. | กดส่วนที่ผิด
+Jangan [sentuh lah→sentuhlah] barang pameran ini. | Partikel *-lah* ditulis serangkai. | *-lah* เขียนติด
+[Siapa kah→Siapakah] nama awak? | Partikel *-kah* ditulis serangkai. | *-kah* เขียนติด
+Selamat pagi, Prof. [Awak→Tuan] sudah menerima e-mel saya? | Kata ganti nama hormat untuk profesor. | สรรพนามสุภาพสำหรับศาสตราจารย์
+[Hantar→Sila hantar] dokumen tuan sebelum Jumaat. | Perintah kepada ibu bapa perlu dilembutkan dengan *sila*. | ใช้ *sila* ให้สุภาพ
+```
+
+```latihan-analisis
+Arahan: Tentukan subjek dan predikat; kemudian perhatikan jenis predikat. | ระบุประธานและภาคแสดง แล้วสังเกตชนิดภาคแสดง
+Label: Subjek · ประธาน | Predikat FN · ภาคแสดงวลีนาม | Predikat FK · ภาคแสดงวลีกริยา | Predikat FA · ภาคแสดงวลีคุณศัพท์ | Predikat FSN · ภาคแสดงวลีบุพบท
+[Hamidah|Subjek] [pelajar universiti|Predikat FN]. | Pola FN + FN. | แบบ FN + FN
+[Anif|Subjek] [sedang tidur|Predikat FK]. | Pola FN + FK. | แบบ FN + FK
+[Lelaki itu|Subjek] [sangat pemurah|Predikat FA]. | Pola FN + FA. | แบบ FN + FA
+[Ke Phuket|Predikat FSN] [ayah saya|Subjek]. | Susunan songsang: predikat FSN dikedepankan. | เรียงสลับ ภาคแสดงอยู่หน้า
+```
+
 ```latihan-golong
 Arahan: Tentukan pola ayat dasar. | ระบุแบบประโยคพื้นฐาน
 Kategori: FN + FN | FN + FK | FN + FA | FN + FSN
@@ -201,14 +262,6 @@ Kategori: Penyata · บอกเล่า | Tanya · คำถาม | Perintah
 *Dilarang merokok.* | Perintah | Ayat larangan. | ประโยคห้าม
 ```
 
-```latihan-isi
-Arahan: Lengkapkan ayat. | เติมประโยคให้สมบูรณ์
-___ awak sudah makan? (soalan tertutup) | Adakah | *Adakah* membentuk soalan ya/tidak. | *Adakah* สร้างคำถามปิด
-___ nama awak? (orang) | Siapakah/Siapa | Kata tanya untuk orang. | คำถามสำหรับคน
-___ merokok di kawasan ini. (papan tanda larangan) | Dilarang | Larangan rasmi. | การห้ามแบบทางการ
-___ masuk, tuan. (silaan) | Jemput/Sila/Silakan | Penanda silaan. | คำเชื้อเชิญ
-```
-
 ```latihan-benar
 Arahan: Tentukan sama ada setiap pernyataan betul atau salah. | ตัดสินว่าข้อความแต่ละข้อถูกหรือผิด
 Ayat dasar boleh berbentuk ayat tanya.<br>ประโยคพื้นฐานเป็นประโยคคำถามได้ | S | Ayat dasar ialah ayat penyata. | ประโยคพื้นฐานเป็นประโยคบอกเล่า
@@ -227,12 +280,25 @@ Ayat tanya boleh menggantikan perintah untuk lebih sopan.<br>ใช้ประ�
 **Aspek analisis**
 **ประเด็นวิเคราะห์**
 
-1. Kelaskan jenis setiap ayat (penyata/tanya/perintah jenis apa).
-   จำแนกชนิดของแต่ละประโยค (บอกเล่า/คำถาม/คำสั่งประเภทใด)
-2. Nilai tahap kesantunan mesej itu terhadap ibu bapa yang lebih tua, kemudian tulis semula. (แนวคำตอบ: *Sila hantar dokumen tersebut secepat mungkin. Adakah tuan/puan sudah maklum tentang tarikh tutup permohonan? Jika ada sebarang pertanyaan, tuan/puan boleh menghubungi saya.*)
-   ประเมินความสุภาพต่อผู้ปกครองที่อาวุโสกว่า และเขียนใหม่
-3. Bincangkan perbezaan kepentingan ketepatan tatabahasa dengan kesantunan dalam kerja perkhidmatan.
-   อภิปรายว่าในงานบริการ ความถูกต้องทางไวยากรณ์กับความสุภาพสำคัญต่างกันอย่างไร
+```latihan-terbuka
+Tajuk: Soalan Kajian Kes | คำถามกรณีศึกษา
+Arahan: Tulis jawapan anda, kemudian bandingkan dengan contoh jawapan dan kriteria penilaian. | เขียนคำตอบ แล้วเทียบกับตัวอย่างคำตอบและเกณฑ์การประเมิน
+?? Kelaskan jenis setiap ayat (penyata/tanya/perintah jenis apa).<br>จำแนกชนิดของแต่ละประโยค (บอกเล่า/คำถาม/คำสั่งประเภทใด)
+= *Hantar dokumen sekarang.* — perintah suruhan · *Awak tahu tarikh tutup?* — tanya tanpa kata tanya (tertutup) · *Jangan lambat.* — perintah larangan · *Kalau ada soalan, awak tanya saya.* — perintah suruhan.
+* Jenis setiap ayat dikelaskan<br>จำแนกทุกประโยค
+* Subjenis ayat perintah/tanya dinyatakan<br>ระบุชนิดย่อย
+* Pengelasan yang tepat<br>จำแนกถูกต้อง
+?? Nilai tahap kesantunan mesej itu terhadap ibu bapa yang lebih tua, kemudian tulis semula.<br>ประเมินความสุภาพต่อผู้ปกครองที่อาวุโสกว่า และเขียนใหม่
+= *Sila hantar dokumen tersebut secepat mungkin. Adakah tuan/puan sudah maklum tentang tarikh tutup permohonan? Jika ada sebarang pertanyaan, tuan/puan boleh menghubungi saya.*
+* Menilai mesej sebagai kurang sopan dengan sebab<br>ประเมินว่าไม่สุภาพพร้อมเหตุผล
+* Menggunakan *sila*, ayat tanya dan kata ganti nama hormat<br>ใช้ *sila* คำถาม และสรรพนามสุภาพ
+* Semua ayat gramatis<br>ทุกประโยคถูกไวยากรณ์
+?? Bincangkan perbezaan kepentingan ketepatan tatabahasa dengan kesantunan dalam kerja perkhidmatan.<br>อภิปรายว่าในงานบริการ ความถูกต้องทางไวยากรณ์กับความสุภาพสำคัญต่างกันอย่างไร
+= Dalam kerja perkhidmatan, ketepatan tatabahasa membina kredibiliti, tetapi kesantunan menentukan hubungan dengan pelanggan; mesej yang gramatis tetapi kasar tetap boleh menimbulkan rasa tidak puas hati.
+* Membincangkan kedua-dua aspek<br>อภิปรายทั้งสองด้าน
+* Contoh situasi perkhidmatan<br>ยกตัวอย่างงานบริการ
+* Kesimpulan yang seimbang<br>สรุปอย่างสมดุล
+```
 
 ## 10. Rumusan<br>สรุปบทเรียน
 
@@ -289,19 +355,44 @@ Ayat tanya boleh menggantikan perintah untuk lebih sopan.<br>ใช้ประ�
 
 ### B. Soalan Subjektif<br>ข. อัตนัย
 
-1. Bina dua ayat dasar bagi setiap pola tentang kehidupan di universiti dan tandakan sempadan subjek/predikat. (แนวคำตอบ: Contoh: FN + FN *Ali ketua kelas.* · FN + FK *Kami belajar di perpustakaan.* · FN + FA *Dewan kuliah itu luas.* · FN + FSN *Kelas kami di bangunan 13.* Sempadan subjek dan predikat: *Ali / ketua kelas*)
-   แต่งประโยคพื้นฐานแบบละ 2 ประโยคเกี่ยวกับชีวิตในมหาวิทยาลัย และแสดงเส้นแบ่งประธาน/ภาคแสดง
-2. Tukarkan *Nama awak siapa?* kepada dua bentuk lain dan jelaskan peranan *-kah*. (แนวคำตอบ: *Siapa nama awak?* — kata tanya dikedepankan · *Siapakah nama awak?* — partikel *-kah* menandakan unsur yang ditanya dan lebih sesuai dalam bahasa tulisan)
-   เปลี่ยน *Nama awak siapa?* เป็นอีก 2 รูป และอธิบายบทบาทของ *-kah*
-3. Tulis keempat-empat jenis ayat perintah untuk situasi yang sama (contohnya di perpustakaan). (แนวคำตอบ: suruhan: *Pulangkan buku tepat pada masanya.* · larangan: *Dilarang makan di dalam perpustakaan.* · silaan: *Sila beratur di kaunter.* · permintaan: *Tolong rendahkan suara anda.*)
-   เขียนประโยคคำสั่งทั้ง 4 ประเภทสำหรับสถานการณ์เดียวกัน (เช่น ห้องสมุด)
+
+```latihan-terbuka
+Tajuk: Soalan Subjektif | ข้อสอบอัตนัย
+Arahan: Tulis jawapan anda, kemudian bandingkan dengan contoh jawapan dan kriteria penilaian. | เขียนคำตอบ แล้วเทียบกับตัวอย่างคำตอบและเกณฑ์การประเมิน
+?? Bina dua ayat dasar bagi setiap pola tentang kehidupan di universiti dan tandakan sempadan subjek/predikat.<br>แต่งประโยคพื้นฐานแบบละ 2 ประโยคเกี่ยวกับชีวิตในมหาวิทยาลัย และแสดงเส้นแบ่งประธาน/ภาคแสดง
+= Contoh: FN + FN *Ali ketua kelas.* · FN + FK *Kami belajar di perpustakaan.* · FN + FA *Dewan kuliah itu luas.* · FN + FSN *Kelas kami di bangunan 13.* Sempadan subjek dan predikat: *Ali / ketua kelas*
+* Lapan ayat dasar (dua bagi setiap pola)<br>แปดประโยค (แบบละสอง)
+* Pola setiap ayat betul<br>แบบประโยคถูก
+* Sempadan subjek/predikat ditanda dengan betul<br>แบ่งประธาน/ภาคแสดงถูก
+?? Tukarkan *Nama awak siapa?* kepada dua bentuk lain dan jelaskan peranan *-kah*.<br>เปลี่ยน *Nama awak siapa?* เป็นอีก 2 รูป และอธิบายบทบาทของ *-kah*
+= *Siapa nama awak?* — kata tanya dikedepankan · *Siapakah nama awak?* — partikel *-kah* menandakan unsur yang ditanya dan lebih sesuai dalam bahasa tulisan
+* Dua bentuk lain yang betul<br>สองรูปที่ถูก
+* Peranan *-kah* dijelaskan<br>อธิบายบทบาท *-kah*
+* Perbezaan laras dinyatakan<br>ระบุความต่างของระดับภาษา
+?? Tulis keempat-empat jenis ayat perintah untuk situasi yang sama (contohnya di perpustakaan).<br>เขียนประโยคคำสั่งทั้ง 4 ประเภทสำหรับสถานการณ์เดียวกัน (เช่น ห้องสมุด)
+= suruhan: *Pulangkan buku tepat pada masanya.* · larangan: *Dilarang makan di dalam perpustakaan.* · silaan: *Sila beratur di kaunter.* · permintaan: *Tolong rendahkan suara anda.*
+* Empat jenis ayat perintah<br>ครบสี่ชนิด
+* Penanda yang betul bagi setiap jenis<br>ใช้คำบ่งชี้ถูก
+* Situasi yang sama dan realistik<br>สถานการณ์เดียวกันและสมจริง
+```
 
 ### C. Soalan Pemikiran Kritis<br>ค. โจทย์คิดวิเคราะห์
 
-1. Tinjau lima papan tanda bahasa Melayu di tempat awam (masjid, hospital, pusat pemeriksaan sempadan). Kelaskan jenis ayat perintah, nilai ketepatan dan kesantunannya, dan cadangkan versi yang diperbaiki.
-   สำรวจป้ายภาษามลายู 5 ป้ายในสถานที่สาธารณะ (มัสยิด โรงพยาบาล ด่าน) จำแนกชนิดประโยคคำสั่ง ประเมินความถูกต้องและความสุภาพ และเสนอฉบับปรับปรุง
-2. Mengapakah ahli tatabahasa mengehadkan ayat dasar kepada ayat penyata dalam ragam aktif sahaja? Jelaskan dengan mengaitkannya dengan konsep transformasi ayat (*transformasi*) yang akan dipelajari dalam Bab 13.
-   ทำไมนักไวยากรณ์จึงจำกัดประโยคพื้นฐานให้เป็นบอกเล่าแบบกรรตุวาจกเท่านั้น อธิบายโดยเชื่อมกับแนวคิดการแปลงประโยค (*transformasi*) ที่จะเรียนในบทที่ 13
+
+```latihan-terbuka
+Tajuk: Soalan Pemikiran Kritis | โจทย์คิดวิเคราะห์
+Arahan: Tulis jawapan anda, kemudian bandingkan dengan contoh jawapan dan kriteria penilaian. | เขียนคำตอบ แล้วเทียบกับตัวอย่างคำตอบและเกณฑ์การประเมิน
+?? Tinjau lima papan tanda bahasa Melayu di tempat awam (masjid, hospital, pusat pemeriksaan sempadan). Kelaskan jenis ayat perintah, nilai ketepatan dan kesantunannya, dan cadangkan versi yang diperbaiki.<br>สำรวจป้ายภาษามลายู 5 ป้ายในสถานที่สาธารณะ (มัสยิด โรงพยาบาล ด่าน) จำแนกชนิดประโยคคำสั่ง ประเมินความถูกต้องและความสุภาพ และเสนอฉบับปรับปรุง
+= Contoh: *Dilarang masuk* (larangan, tepat dan rasmi) · *Sila tanggalkan kasut* (silaan, sopan) · *Jangan buang sampah lah* (larangan; *-lah* mesti serangkai dan kurang rasmi → *Dilarang membuang sampah*).
+* Lima papan tanda sebenar<br>ห้าป้ายจริง
+* Jenis ayat perintah dikelaskan<br>จำแนกชนิดประโยคคำสั่ง
+* Ketepatan dan kesantunan dinilai, dengan versi diperbaiki<br>ประเมินและเสนอฉบับปรับปรุง
+?? Mengapakah ahli tatabahasa mengehadkan ayat dasar kepada ayat penyata dalam ragam aktif sahaja? Jelaskan dengan mengaitkannya dengan konsep transformasi ayat (*transformasi*) yang akan dipelajari dalam Bab 13.<br>ทำไมนักไวยากรณ์จึงจำกัดประโยคพื้นฐานให้เป็นบอกเล่าแบบกรรตุวาจกเท่านั้น อธิบายโดยเชื่อมกับแนวคิดการแปลงประโยค (*transformasi*) ที่จะเรียนในบทที่ 13
+= Ayat dasar dihadkan kepada penyata aktif kerana ayat tanya, perintah, pasif dan songsang dianggap terbit daripadanya melalui transformasi seperti penyusunan semula dan pengguguran; dengan itu pola asas kekal kecil dan sistematik.
+* Menyatakan sebab pengehadan<br>ให้เหตุผลการจำกัด
+* Mengaitkan dengan transformasi<br>โยงกับการแปลงประโยค
+* Contoh ayat terbitan daripada ayat dasar<br>ยกตัวอย่างประโยคที่แปลงมา
+```
 
 ## 12. Rujukan<br>เอกสารอ้างอิง
 
