@@ -1026,3 +1026,6 @@ em strong, strong em { font-weight: 700; background: color-mix(in srgb, var(--em
 @media screen { .clo-page .tbl-wrap:has(.clo-matriks) { overflow-x: auto; } }
 .nw-bab a, .clo-web a { display: inline-block; min-width: 24px; padding: 2px 4px; text-align: center; }
 footer .hak-cipta { flex-basis: 100%; margin-top: 6px; padding-top: 12px; border-top: 1px solid rgba(255, 255, 255, .16); font-size: 14px; }
+/* Kaki halaman di tengah · ข้อความท้ายเว็บจัดกึ่งกลาง */
+footer .wrap { flex-direction: column; align-items: center; text-align: center; gap: 8px; }
+footer .hak-cipta { flex-basis: auto; align-self: stretch; }
