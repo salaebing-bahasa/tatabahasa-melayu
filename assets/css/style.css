@@ -1036,3 +1036,20 @@ footer .kaki-tajuk { font-weight: 700; font-size: 1.08em; margin-bottom: 2px; }
 .kaki-bawah .kaki-tajuk { color: var(--biru); }
 .kaki-bawah a { color: var(--biru); }
 .kaki-bawah .hak-cipta { color: var(--muted); font-size: 14px; margin-top: 4px; }
+
+/* Kandungan: bahagian bab dilipat · สารบัญ: หัวข้อย่อยพับเก็บได้ */
+.toc-subd { margin: -6px 0 10px 78px; }
+.toc-subd > summary { display: inline-flex; align-items: center; gap: 6px; min-height: 32px; padding: 2px 4px; font-size: 14px; color: var(--muted); cursor: pointer; list-style: none; border-radius: 6px; }
+.toc-subd > summary::-webkit-details-marker { display: none; }
+.toc-subd > summary::before { content: "▸"; color: var(--aksen); transition: transform .15s; }
+.toc-subd[open] > summary::before { transform: rotate(90deg); }
+.toc-subd > summary:hover { color: var(--biru); }
+.toc-subd .toc-subs { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 0 18px; margin: 4px 0 6px; padding: 0; list-style: none; counter-reset: sb; }
+.toc-subd .toc-subs li { counter-increment: sb; }
+.toc-subd .toc-subs a { display: flex; gap: 8px; align-items: baseline; border: 0; background: none; border-radius: 6px; padding: 5px 6px; font-size: 14.5px; color: var(--dakwat); }
+.toc-subd .toc-subs a::before { content: counter(sb); min-width: 1.4em; color: var(--aksen); font-weight: 600; font-variant-numeric: tabular-nums; }
+.toc-subd .toc-subs .sb-t { display: flex; flex-direction: column; line-height: 1.35; }
+.toc-subd .toc-subs a small { color: var(--muted); font-size: 13px; }
+.toc-subd .toc-subs a:hover { background: var(--biru-muda); color: var(--biru); }
+@media (max-width: 640px) { .toc-subd { margin-left: 0; } .toc-subd .toc-subs { grid-template-columns: 1fr; } }
+@media print { .toc-subd { display: none; } }

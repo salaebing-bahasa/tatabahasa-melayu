@@ -874,7 +874,8 @@
     const part = p => `<div class="toc-part"><h2>${partName(p)}</h2><ol class="toc-list">${CH.filter(c => c.part === p).map(c => {
       const d = isDone(c.no);
       return `<li>${row("Bab " + c.no, `<span class="ms" lang="ms">${c.ms}</span><span class="th">${c.th}</span>`, `<span class="${d ? "toc-pg done" : ""}">${d ? "✓ " : ""}Minggu ${c.week}${getSkor(c.no) ? ` · Kuiz ${getSkor(c.no).best}/${getSkor(c.no).all}` : ""}</span>`, babLink(c.no))}
-        <ul class="toc-subs" aria-label="Tajuk Bab ${c.no} · หัวข้อในบทที่ ${c.no}">${secIds(c).map(id => `<li><a href="${babLink(c.no)}/${id}">${SEC_SHORT[id]}</a></li>`).join("")}</ul></li>`;
+        <details class="toc-subd"><summary><span lang="ms">${secIds(c).length} bahagian</span> · ${secIds(c).length} หัวข้อ</summary>
+        <ol class="toc-subs" aria-label="Bahagian Bab ${c.no} · หัวข้อในบทที่ ${c.no}">${secIds(c).map(id => { const d = SEC_DEF.find(x => x[0] === id); return `<li><a href="${babLink(c.no)}/${id}"><span class="sb-t"><span lang="ms">${d[2]}</span><small>${d[3]}</small></span></a></li>`; }).join("")}</ol></details></li>`;
     }).join("")}</ol></div>`;
     app.innerHTML = `<section class="section"><div class="wrap toc-page">
       <header class="toc-head"><h1 lang="ms">Kandungan</h1><p>สารบัญ</p>${sambungHref() ? `<p class="toc-sambung"><a class="btn btn-solid btn-dw" href="${sambungHref()}">${B("Sambung Belajar · Bab " + load().akhir.n, "เรียนต่อ บทที่ " + load().akhir.n)}</a></p>` : ""}</header>
