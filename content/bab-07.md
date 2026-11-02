@@ -2,7 +2,7 @@
      วิธีเขียนสองภาษา:
      - ย่อหน้าและข้อในรายการ: บรรทัดแรกภาษามลายู ขึ้นบรรทัดใหม่ (ไม่เว้นบรรทัดว่าง) แล้วเป็นภาษาไทย
      - หัวข้อ (## / ###) และช่องในตาราง: ภาษามลายู<br>ภาษาไทย
-     ห้ามลบหัวข้อระดับ ## (6 ส่วนของบท) และให้คงรูปแบบข้อปรนัย (ก. ข. ค. ง.) กับบรรทัด **เฉลย** ไว้ -->
+     ห้ามลบหัวข้อระดับ ## (6 ส่วนของบท) และให้คงรูปแบบข้อปรนัย (ก. ข. ค. ง.) กับบรรทัด **เฉลย** ไว้ · คำอธิบายเฉลยอยู่ใต้ **Penjelasan** เป็นรายการ - **เลขข้อ** มลายู<br>ไทย -->
 
 ## 1. Hasil Pembelajaran<br>ผลลัพธ์การเรียนรู้ประจำบท
 
@@ -50,7 +50,7 @@ Pada akhir bab ini, pelajar dapat:
 | -kan | -i |
 |---|---|
 | *Ayah **menanamkan** pokok pisang di kebun.* (objek = benda yang ditanam)<br>(กรรม = สิ่งที่ถูกปลูก) | *Ayah **menanami** kebun dengan pokok pisang.* (objek = tempat)<br>(กรรม = สถานที่) |
-| *Dia **menghantarkan** surat.* | *Dia **menghadiri** majlis.* |
+| *Dia **memasukkan** buku ke dalam beg.* (objek = benda yang dimasukkan)<br>(กรรม = สิ่งที่ถูกใส่) | *Dia **memasuki** dewan.* (objek = tempat yang dimasuki)<br>(กรรม = สถานที่ที่เข้าไป) |
 
 ### 7.2 Apitan<br>ปัจจัยคร่อม (*apitan*)
 
@@ -145,14 +145,22 @@ Makna yang terhasil: jamak (*buku-buku*) · pelbagai (*buah-buahan*) · menyerup
 
 **เฉลย** 1 ข · 2 ค · 3 ค · 4 ข · 5 ง
 
+**Penjelasan · คำอธิบาย**
+
+- **1** Objek *sawahnya* ialah tempat, maka akhiran *-i* (lokatif): *menanami sawah dengan padi*. Akhiran *-kan* digunakan jika objeknya benda yang ditanam: *menanamkan padi*.<br>กรรม *sawahnya* เป็นสถานที่ จึงใช้ *-i*: *menanami sawah dengan padi* ส่วน *-kan* ใช้เมื่อกรรมเป็นสิ่งที่ถูกปลูก: *menanamkan padi*
+- **2** *Lauk-pauk* mengulang kata dengan perubahan bunyi yang berirama. *Buku-buku* ganda penuh, *lelaki* ganda separa dan *berlari-lari* ganda separa kata berimbuhan.<br>*lauk-pauk* ซ้ำคำโดยเปลี่ยนเสียงให้สัมผัสกัน ส่วน *buku-buku* ซ้ำทั้งคำ *lelaki* ซ้ำบางส่วน และ *berlari-lari* ซ้ำบางส่วนของคำที่เติมปัจจัย
+- **3** *Tandatangan* ialah kata majmuk mantap yang ditulis serangkai. Ejaan betul bagi pilihan lain: *setiausaha*, *pengambilalihan*, *warganegara*.<br>*tandatangan* เป็นคำประสมที่เขียนติดกัน ตัวเลือกอื่นต้องสะกดเป็น *setiausaha*, *pengambilalihan*, *warganegara*
+- **4** *Pawagam* (panggung wayang gambar) dibaca sebagai satu kata, maka akronim; singkatan dibaca huruf demi huruf.<br>*pawagam* (panggung wayang gambar) อ่านเป็นคำเดียว จึงเป็นคำย่ออ่านเป็นคำ ส่วนอักษรย่ออ่านทีละตัว
+- **5** *Telunjuk* = *tunjuk* + sisipan *-el-* yang diselitkan selepas konsonan pertama.<br>*telunjuk* = *tunjuk* + อาคม *-el-* ที่แทรกหลังพยัญชนะตัวแรก
+
 ### B. Soalan Subjektif<br>ข. อัตนัย
 
 1. Huraikan perbezaan antara *-kan* dengan *-i* melalui pasangan ayat *melukiskan/melukisi* dan *menaikkan/menaiki*.
    อธิบายความแตกต่างระหว่าง *-kan* กับ *-i* ด้วยคู่ประโยค *melukiskan/melukisi*, *menaikkan/menaiki*
 2. Berikan contoh kata ganda yang membawa lima makna (jamak, pelbagai, menyerupai, berbalas-balas, penegasan) beserta ayat.
    ยกตัวอย่างคำซ้ำที่แสดงความหมาย 5 แบบ (พหูพจน์ หลากหลาย คล้าย ซึ่งกันและกัน เน้น) พร้อมประโยค
-3. Imbuhkan kata majmuk *kerja sama, ambil alih, garis bawah, tanggungjawab* sehingga mendapat tiga bentuk bagi setiap satu, dan eja dengan betul.
-   เติมปัจจัยกับคำประสม *kerja sama, ambil alih, garis bawah, tanggungjawab* ให้ได้ 3 รูปต่อคำ และสะกดให้ถูก
+3. Imbuhkan kata majmuk *kerjasama, ambil alih, garis bawah, tanggungjawab* sehingga mendapat tiga bentuk bagi setiap satu, dan eja dengan betul.
+   เติมปัจจัยกับคำประสม *kerjasama, ambil alih, garis bawah, tanggungjawab* ให้ได้ 3 รูปต่อคำ และสะกดให้ถูก
 
 ### C. Soalan Pemikiran Kritis<br>ค. โจทย์คิดวิเคราะห์
 

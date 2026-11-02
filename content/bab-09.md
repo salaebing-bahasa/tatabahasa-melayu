@@ -2,7 +2,7 @@
      วิธีเขียนสองภาษา:
      - ย่อหน้าและข้อในรายการ: บรรทัดแรกภาษามลายู ขึ้นบรรทัดใหม่ (ไม่เว้นบรรทัดว่าง) แล้วเป็นภาษาไทย
      - หัวข้อ (## / ###) และช่องในตาราง: ภาษามลายู<br>ภาษาไทย
-     ห้ามลบหัวข้อระดับ ## (6 ส่วนของบท) และให้คงรูปแบบข้อปรนัย (ก. ข. ค. ง.) กับบรรทัด **เฉลย** ไว้ -->
+     ห้ามลบหัวข้อระดับ ## (6 ส่วนของบท) และให้คงรูปแบบข้อปรนัย (ก. ข. ค. ง.) กับบรรทัด **เฉลย** ไว้ · คำอธิบายเฉลยอยู่ใต้ **Penjelasan** เป็นรายการ - **เลขข้อ** มลายู<br>ไทย -->
 
 ## 1. Hasil Pembelajaran<br>ผลลัพธ์การเรียนรู้ประจำบท
 
@@ -126,6 +126,14 @@ Pada akhir bab ini, pelajar dapat:
    ก. Waktu<br>เวลา ข. Tempat<br>สถานที่ ค. Alat/cara<br>เครื่องมือ/วิธี ง. Sebab<br>เหตุผล
 
 **เฉลย** 1 ข · 2 ค · 3 ก · 4 ข · 5 ค
+
+**Penjelasan · คำอธิบาย**
+
+- **1** Unsur yang diterangkan (*masakan*) hadir dahulu, diikuti unsur yang menerangkan (*Thai*).<br>คำที่ถูกขยาย (*masakan*) อยู่หน้า ตามด้วยคำขยาย (*Thai*)
+- **2** *Pelajar* ialah inti. *Tiga orang* penentu hadapan, *Malaysia* penerang dan *itu* penentu belakang.<br>*pelajar* เป็นคำหลัก ส่วน *tiga orang* เป็นคำชี้เฉพาะหน้า *Malaysia* เป็นคำขยาย และ *itu* เป็นคำชี้เฉพาะหลัง
+- **3** *Perdana* (penerang daripada bahasa Sanskrit) hadir di hadapan *menteri*; *menteri besar* mematuhi Hukum D-M.<br>*perdana* (คำขยายจากภาษาสันสกฤต) อยู่หน้า *menteri* ส่วน *menteri besar* เป็นไปตามกฎ ดี-เอ็ม
+- **4** *Guru* melengkapkan kata kerja tak transitif *menjadi*; ia tidak boleh digugurkan dan ayat itu tidak boleh dipasifkan, maka pelengkap, bukan objek.<br>*guru* เติมเต็มอกรรมกริยา *menjadi* ตัดทิ้งไม่ได้และแปลงเป็นกรรมวาจกไม่ได้ จึงเป็นส่วนเติมเต็ม ไม่ใช่กรรม
+- **5** *Dengan pisau* menyatakan alat yang digunakan untuk membuka kotak.<br>*dengan pisau* บอกเครื่องมือที่ใช้เปิดกล่อง
 
 ### B. Soalan Subjektif<br>ข. อัตนัย
 

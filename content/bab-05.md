@@ -2,7 +2,7 @@
      วิธีเขียนสองภาษา:
      - ย่อหน้าและข้อในรายการ: บรรทัดแรกภาษามลายู ขึ้นบรรทัดใหม่ (ไม่เว้นบรรทัดว่าง) แล้วเป็นภาษาไทย
      - หัวข้อ (## / ###) และช่องในตาราง: ภาษามลายู<br>ภาษาไทย
-     ห้ามลบหัวข้อระดับ ## (6 ส่วนของบท) และให้คงรูปแบบข้อปรนัย (ก. ข. ค. ง.) กับบรรทัด **เฉลย** ไว้ -->
+     ห้ามลบหัวข้อระดับ ## (6 ส่วนของบท) และให้คงรูปแบบข้อปรนัย (ก. ข. ค. ง.) กับบรรทัด **เฉลย** ไว้ · คำอธิบายเฉลยอยู่ใต้ **Penjelasan** เป็นรายการ - **เลขข้อ** มลายู<br>ไทย -->
 
 ## 1. Hasil Pembelajaran<br>ผลลัพธ์การเรียนรู้ประจำบท
 
@@ -52,18 +52,18 @@ Nik Safiah Karim และคณะแบ่งเป็นกลุ่มตา
 | Jenis<br>ชนิด | Fungsi<br>หน้าที่ | Contoh<br>ตัวอย่าง |
 |---|---|---|
 | *kata hubung gabungan* | Menghubungkan klausa yang setara<br>เชื่อมอนุประโยคที่เท่ากัน | *dan, atau, tetapi, lalu, serta, sambil* |
-| *kata relatif* | Menghubungkan klausa yang menerangkan kata nama<br>เชื่อมอนุประโยคขยายนาม | *yang* |
-| *kata komplemen* | Memulakan klausa yang menjadi pelengkap<br>นำอนุประโยคที่เป็นส่วนเติมเต็ม | *bahawa, untuk* |
-| *kata keterangan* | Memulakan klausa keterangan sebab, waktu, syarat dan sebagainya<br>นำอนุประโยคบอกเหตุ เวลา เงื่อนไข ฯลฯ | *kerana, ketika, jika, walaupun, supaya* |
+| *kata hubung pancangan relatif* | Menghubungkan klausa yang menerangkan kata nama<br>เชื่อมอนุประโยคขยายนาม | *yang* |
+| *kata hubung pancangan komplemen* | Memulakan klausa yang menjadi pelengkap<br>นำอนุประโยคที่เป็นส่วนเติมเต็ม | *bahawa, untuk* |
+| *kata hubung pancangan keterangan* | Memulakan klausa keterangan sebab, waktu, syarat dan sebagainya<br>นำอนุประโยคบอกเหตุ เวลา เงื่อนไข ฯลฯ | *kerana, ketika, jika, walaupun, supaya* |
 
 ### 5.3 Kata Praklausa<br>กลุ่มหน้าอนุประโยค (*kata praklausa*)
 
 - *kata seru*: *wah, aduh, amboi, syabas* → *Wah, cantiknya!*
-- *kata tanya*: *bila, mengapa, bagaimana* (digunakan bersama *-kah*)
-  ใช้ร่วมกับ *-kah*
+- *kata tanya*: *bila, mengapa, bagaimana* (boleh menerima partikel *-kah*: *Bilakah…?*)
+  รับคำเสริม *-kah* ได้
 - *kata perintah*: *jangan, sila, tolong, minta, jemput*
-- *kata pembenar*: *ya, betul, tidak, bukan* (mengiakan/menidakkan)
-  ตอบรับ/ปฏิเสธ
+- *kata pembenar*: *ya, benar, betul* (mengiakan sesuatu pernyataan; jawapan menidakkan menggunakan kata nafi *tidak/bukan*)
+  ใช้ตอบรับ ส่วนการตอบปฏิเสธใช้คำปฏิเสธ *tidak/bukan*
 - *kata pangkal ayat*: *hatta, adapun, maka, sebermula* (bahasa klasik / bahasa tulisan lama)
   ภาษาคลาสสิก/ภาษาเขียนโบราณ
 
@@ -155,6 +155,14 @@ Partikel yang melekat di hujung kata: *-lah* (penegas/ajakan: *Duduklah.*), *-ka
    ก. *Rumahnya adalah besar.* ข. *Ayahnya ialah cantik.* ค. *Pengerusinya adalah Encik Ali.* ง. *Bajunya ialah di almari.*
 
 **เฉลย** 1 ข · 2 ข · 3 ค · 4 ข · 5 ก
+
+**Penjelasan · คำอธิบาย**
+
+- **1** *Yang* memancangkan klausa relatif yang menerangkan kata nama; *dan* kata hubung gabungan, *bahawa* komplemen dan *kerana* keterangan.<br>*yang* ฝังอนุประโยคสัมพันธ์ที่ขยายนาม ส่วน *dan* เป็นคำเชื่อมแบบเชื่อม *bahawa* แบบส่วนเติมเต็ม และ *kerana* แบบบอกเหตุ
+- **2** Hadiah itu berasal daripada orang, maka *daripada*; *dari* digunakan untuk tempat dan waktu.<br>ของขวัญมาจากบุคคล จึงใช้ *daripada* ส่วน *dari* ใช้กับสถานที่และเวลา
+- **3** *Bukan* menafikan frasa nama *rumah saya*; *rajin* dan *pergi* dinafikan dengan *tidak*.<br>*bukan* ปฏิเสธวลีนาม *rumah saya* ส่วน *rajin* และ *pergi* ต้องปฏิเสธด้วย *tidak*
+- **4** *Batang* digunakan untuk benda yang panjang dan tegak seperti pokok, tiang dan pen.<br>*batang* ใช้กับสิ่งที่ยาวและตั้งตรง เช่น ต้นไม้ เสา ปากกา
+- **5** Mengikut *Tatabahasa Dewan*, *adalah* hadir di hadapan frasa adjektif (*besar*). *Ialah* hadir di hadapan frasa nama, maka yang betul *Pengerusinya ialah Encik Ali*.<br>ตาม *Tatabahasa Dewan* *adalah* ใช้หน้าวลีคุณศัพท์ (*besar*) ส่วน *ialah* ใช้หน้าวลีนาม ที่ถูกจึงเป็น *Pengerusinya ialah Encik Ali*
 
 ### B. Soalan Subjektif<br>ข. อัตนัย
 

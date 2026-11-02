@@ -2,7 +2,7 @@
      วิธีเขียนสองภาษา:
      - ย่อหน้าและข้อในรายการ: บรรทัดแรกภาษามลายู ขึ้นบรรทัดใหม่ (ไม่เว้นบรรทัดว่าง) แล้วเป็นภาษาไทย
      - หัวข้อ (## / ###) และช่องในตาราง: ภาษามลายู<br>ภาษาไทย
-     ห้ามลบหัวข้อระดับ ## (6 ส่วนของบท) และให้คงรูปแบบข้อปรนัย (ก. ข. ค. ง.) กับบรรทัด **เฉลย** ไว้ -->
+     ห้ามลบหัวข้อระดับ ## (6 ส่วนของบท) และให้คงรูปแบบข้อปรนัย (ก. ข. ค. ง.) กับบรรทัด **เฉลย** ไว้ · คำอธิบายเฉลยอยู่ใต้ **Penjelasan** เป็นรายการ - **เลขข้อ** มลายู<br>ไทย -->
 
 ## 1. Hasil Pembelajaran<br>ผลลัพธ์การเรียนรู้ประจำบท
 
@@ -141,6 +141,14 @@ Ayat yang baik mestilah **betul** (*gramatis*) dan **sesuai** dengan pendengar s
    ก. 1 ข. 2 ค. 3 ง. 4
 
 **เฉลย** 1 ข · 2 ง · 3 ค · 4 ข · 5 ข
+
+**Penjelasan · คำอธิบาย**
+
+- **1** *Pengimbuhan* ialah proses pembentukan kata, maka termasuk dalam morfologi; susunan subjek–predikat dan penukaran ayat aktif kepada pasif ialah bidang sintaksis.<br>การเติมปัจจัยเป็นกระบวนการสร้างคำ จึงอยู่ในวจีวิภาค ส่วนการเรียงประธาน–ภาคแสดงและการแปลงวาจกเป็นเรื่องของวากยสัมพันธ์
+- **2** Dalam hierarki unit bahasa, *ayat* berada di peringkat tertinggi: morfem → kata → frasa → klausa → ayat.<br>ในลำดับชั้นของหน่วยภาษา ประโยคอยู่สูงสุด: หน่วยคำ → คำ → วลี → อนุประโยค → ประโยค
+- **3** *Hendak* ialah bentuk baku; *tak*, *dah* dan *nak* ialah bentuk basahan bagi *tidak*, *sudah* dan *hendak*.<br>*hendak* เป็นรูปภาษามาตรฐาน ส่วน *tak*, *dah*, *nak* เป็นภาษาพูดของ *tidak*, *sudah*, *hendak*
+- **4** *Pergi* menunjukkan arah, maka kata sendi nama yang betul ialah *ke*: *Ayah pergi ke masjid.* Ayat *Adik ke sekolah.* gramatis kerana frasa sendi nama boleh menjadi predikat.<br>*pergi* บอกทิศทาง จึงต้องใช้ *ke* ส่วน *Adik ke sekolah.* ถูกไวยากรณ์ เพราะวลีบุพบทเป็นภาคแสดงได้
+- **5** *berlari* = *ber-* + *lari*, iaitu dua morfem: satu morfem terikat dan satu morfem bebas.<br>*berlari* = *ber-* + *lari* คือ 2 หน่วยคำ: หน่วยคำไม่อิสระ 1 และหน่วยคำอิสระ 1
 
 ### B. Soalan Subjektif<br>ข. อัตนัย
 

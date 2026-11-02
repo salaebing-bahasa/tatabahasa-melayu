@@ -2,7 +2,7 @@
      วิธีเขียนสองภาษา:
      - ย่อหน้าและข้อในรายการ: บรรทัดแรกภาษามลายู ขึ้นบรรทัดใหม่ (ไม่เว้นบรรทัดว่าง) แล้วเป็นภาษาไทย
      - หัวข้อ (## / ###) และช่องในตาราง: ภาษามลายู<br>ภาษาไทย
-     ห้ามลบหัวข้อระดับ ## (6 ส่วนของบท) และให้คงรูปแบบข้อปรนัย (ก. ข. ค. ง.) กับบรรทัด **เฉลย** ไว้ -->
+     ห้ามลบหัวข้อระดับ ## (6 ส่วนของบท) และให้คงรูปแบบข้อปรนัย (ก. ข. ค. ง.) กับบรรทัด **เฉลย** ไว้ · คำอธิบายเฉลยอยู่ใต้ **Penjelasan** เป็นรายการ - **เลขข้อ** มลายู<br>ไทย -->
 
 ## 1. Hasil Pembelajaran<br>ผลลัพธ์การเรียนรู้ประจำบท
 
@@ -96,7 +96,7 @@ Catatan: apitan *ke-…-an* dikira sebagai **satu** morfem kerana kedua-dua baha
 
 ## 4. Kajian Kes<br>กรณีศึกษา
 
-**Tidak menemukan kata dalam kamus.** Seorang pelajar tahun satu membaca berita Malaysia dan menemukan ayat berikut:
+**Tidak menemui kata dalam kamus.** Seorang pelajar tahun satu membaca berita Malaysia dan menemui ayat berikut:
 **ค้นคำในพจนานุกรมไม่เจอ** นักศึกษาปี 1 คนหนึ่งอ่านข่าวมาเลเซียและพบประโยค
 
 > *Kerajaan negeri memperkenalkan peraturan kebersihan baharu di pasar-pasar awam.*
@@ -127,9 +127,17 @@ Dia membuka *Kamus Dewan* pada huruf M untuk mencari *memperkenalkan* dan pada h
 4. Kata dasar bagi *menyapu* ialah<br>คำฐานของ *menyapu* คือ
    ก. *nyapu* ข. *sapu* ค. *apu* ง. *yapu*
 5. Manakah *kata ganda separa* (penggandaan sebahagian)?<br>ข้อใดเป็น *kata ganda separa* (ซ้ำบางส่วน)
-   ก. *buku-buku* ข. *lelaki* ค. *sayur-mayur* ง. *bermain-main*
+   ก. *buku-buku* ข. *lelaki* ค. *sayur-mayur* ง. *kanak-kanak*
 
-**เฉลย** 1 ก · 2 ข (*per-…-an* + *tanding*) · 3 ค · 4 ข · 5 ข
+**เฉลย** 1 ก · 2 ข · 3 ค · 4 ข · 5 ข
+
+**Penjelasan · คำอธิบาย**
+
+- **1** *ber-*, *-kan* dan *-nya* tidak boleh hadir bersendirian; *makan*, *di*, *rumah* dan *dan* ialah morfem bebas.<br>*ber-*, *-kan*, *-nya* ปรากฏเดี่ยว ๆ ไม่ได้ ส่วน *makan*, *di*, *rumah*, *dan* เป็นหน่วยคำอิสระ
+- **2** *pertandingan* = *per-…-an* + *tanding*. Apitan dikira satu morfem kerana kedua-dua bahagiannya hadir serentak.<br>*pertandingan* = *per-…-an* + *tanding* ปัจจัยคร่อมนับเป็น 1 หน่วยคำ เพราะทั้งสองส่วนต้องปรากฏพร้อมกัน
+- **3** *Kapal terbang* terdiri daripada dua kata dasar yang membawa satu makna (pesawat), maka ia kata majmuk.<br>*kapal terbang* ประกอบด้วยคำฐาน 2 คำที่รวมเป็นความหมายเดียว (เครื่องบิน) จึงเป็นคำประสม
+- **4** Bunyi *s* pada *sapu* luluh apabila menerima *meN-* yang menjadi *meny-*; oleh itu kata dasarnya *sapu*.<br>เสียง *s* ของ *sapu* หลอมหายไปเมื่อเติม *meN-* ซึ่งกลายเป็น *meny-* คำฐานจึงเป็น *sapu*
+- **5** *Lelaki* terbentuk daripada penggandaan suku kata pertama (*laki* → *lelaki*); *buku-buku* dan *kanak-kanak* ialah ganda penuh, *sayur-mayur* ialah ganda berentak.<br>*lelaki* เกิดจากการซ้ำพยางค์แรก (*laki* → *lelaki*) ส่วน *buku-buku*, *kanak-kanak* เป็นการซ้ำทั้งคำ และ *sayur-mayur* เป็นการซ้ำแบบสัมผัส
 
 ### B. Soalan Subjektif<br>ข. อัตนัย
 

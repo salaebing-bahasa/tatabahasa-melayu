@@ -2,7 +2,7 @@
      วิธีเขียนสองภาษา:
      - ย่อหน้าและข้อในรายการ: บรรทัดแรกภาษามลายู ขึ้นบรรทัดใหม่ (ไม่เว้นบรรทัดว่าง) แล้วเป็นภาษาไทย
      - หัวข้อ (## / ###) และช่องในตาราง: ภาษามลายู<br>ภาษาไทย
-     ห้ามลบหัวข้อระดับ ## (6 ส่วนของบท) และให้คงรูปแบบข้อปรนัย (ก. ข. ค. ง.) กับบรรทัด **เฉลย** ไว้ -->
+     ห้ามลบหัวข้อระดับ ## (6 ส่วนของบท) และให้คงรูปแบบข้อปรนัย (ก. ข. ค. ง.) กับบรรทัด **เฉลย** ไว้ · คำอธิบายเฉลยอยู่ใต้ **Penjelasan** เป็นรายการ - **เลขข้อ** มลายู<br>ไทย -->
 
 ## 1. Hasil Pembelajaran<br>ผลลัพธ์การเรียนรู้ประจำบท
 
@@ -84,10 +84,10 @@ Bentuk *ber-* yang lain: *be-* di hadapan kata yang bermula dengan *r* dan kata 
   ผู้กระทำ/เครื่องมือ
 - *pe-*: orang yang mempunyai pekerjaan atau sifat (sering berkaitan dengan *ber-*) — *petani* (*bertani*), *pelajar* (*belajar*)
   ผู้มีอาชีพหรือลักษณะ (มักสัมพันธ์กับ *ber-*)
-- *per-*: orang yang dikenai perbuatan / mempunyai sifat — *pertapa*
-  ผู้ถูกกระทำ/ผู้มีลักษณะ
-- *ke-*: orang yang dikenai perbuatan atau urutan — *kekasih, ketua*
-  ผู้ถูกกระทำหรือลำดับ
+- *per-*: orang yang melakukan perbuatan (berkaitan dengan *ber-*) — *pertapa* (*bertapa*)
+  ผู้กระทำ (สัมพันธ์กับ *ber-*)
+- *ke-*: orang yang dikenai perbuatan atau yang dijadikan — *kekasih* (orang yang dikasihi), *ketua* (orang yang dituakan)
+  ผู้ถูกกระทำหรือผู้ที่ถูกทำให้เป็น
 
 ### 6.5 Awalan Pembentuk Kata Adjektif<br>อุปสรรคสร้างคุณศัพท์
 
@@ -132,6 +132,14 @@ Bentuk *ber-* yang lain: *be-* di hadapan kata yang bermula dengan *r* dan kata 
    ก. *pensapu* ข. *pesapu* ค. *penyapu* ง. *pengsapu*
 
 **เฉลย** 1 ข · 2 ค · 3 ข · 4 ข · 5 ค
+
+**Penjelasan · คำอธิบาย**
+
+- **1** Bunyi *t* luluh apabila menerima *meN-*: *meN-* + *tolong* → *menolong*.<br>เสียง *t* หลอมหายไปเมื่อเติม *meN-*: *meN-* + *tolong* → *menolong*
+- **2** *Cat* ialah kata dasar satu suku kata, maka *meN-* menjadi *menge-*: *mengecat*.<br>*cat* เป็นคำฐานพยางค์เดียว *meN-* จึงเป็น *menge-*: *mengecat*
+- **3** Suku kata pertama *ker-* berakhir dengan *-er*, maka *ber-* menjadi *be-*: *bekerja*.<br>พยางค์แรก *ker-* ลงท้ายด้วย *-er* *ber-* จึงเป็น *be-*: *bekerja*
+- **4** Dompet itu tertinggal tanpa disengajakan; *ter-* di sini bermaksud tidak sengaja.<br>กระเป๋าสตางค์ถูกลืมไว้โดยไม่ตั้งใจ *ter-* ในที่นี้จึงหมายถึงไม่ได้ตั้งใจ
+- **5** Bunyi *s* luluh dan *peN-* menjadi *peny-*: *penyapu*.<br>เสียง *s* หลอมหายไป และ *peN-* กลายเป็น *peny-*: *penyapu*
 
 ### B. Soalan Subjektif<br>ข. อัตนัย
 

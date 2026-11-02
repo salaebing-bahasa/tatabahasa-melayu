@@ -2,7 +2,7 @@
      วิธีเขียนสองภาษา:
      - ย่อหน้าและข้อในรายการ: บรรทัดแรกภาษามลายู ขึ้นบรรทัดใหม่ (ไม่เว้นบรรทัดว่าง) แล้วเป็นภาษาไทย
      - หัวข้อ (## / ###) และช่องในตาราง: ภาษามลายู<br>ภาษาไทย
-     ห้ามลบหัวข้อระดับ ## (6 ส่วนของบท) และให้คงรูปแบบข้อปรนัย (ก. ข. ค. ง.) กับบรรทัด **เฉลย** ไว้ -->
+     ห้ามลบหัวข้อระดับ ## (6 ส่วนของบท) และให้คงรูปแบบข้อปรนัย (ก. ข. ค. ง.) กับบรรทัด **เฉลย** ไว้ · คำอธิบายเฉลยอยู่ใต้ **Penjelasan** เป็นรายการ - **เลขข้อ** มลายู<br>ไทย -->
 
 ## 1. Hasil Pembelajaran<br>ผลลัพธ์การเรียนรู้ประจำบท
 
@@ -61,8 +61,8 @@ Pada akhir bab ini, pelajar dapat:
 - Dua objek: *Ruslee **membelikan** [isterinya]objek tepat [sebuah motosikal]objek sipi.* → objek tepat dipindahkan menjadi keterangan: *Ruslee membeli sebuah motosikal **untuk isterinya**.*
   กรรมสองตัว: objek tepat = กรรมตรง · objek sipi = กรรมรอง → ย้ายกรรมตรงไปเป็นส่วนขยาย
 
-**C. Kata kerja asal dan kata kerja terbitan:** Kata kerja asal mempunyai kata dasar yang memang kata kerja (*makan, tidur, membaca*). Kata kerja terbitan dibentuk daripada kata dasar golongan lain (*membaiki* < *baik*, kata adjektif; *meninggikan* < *tinggi*; *berbasikal* < *basikal*, kata nama).
-**ค. กริยาเดิมกับกริยาแปลง**: กริยาเดิมมีคำฐานเป็นกริยาอยู่แล้ว (*makan, tidur, membaca*) กริยาแปลงมีคำฐานจากชนิดอื่น (*membaiki* < *baik* คุณศัพท์; *meninggikan* < *tinggi*; *berbasikal* < *basikal* นาม)
+**C. Kata kerja asal dan kata kerja terbitan:** Kata kerja asal ialah kata kerja yang tidak menerima imbuhan (*makan, tidur, pergi*). Kata kerja terbitan dibentuk dengan imbuhan, sama ada daripada kata dasar kata kerja (*membaca* < *baca*) atau daripada kata dasar golongan lain (*membaiki* < *baik*, kata adjektif; *meninggikan* < *tinggi*; *berbasikal* < *basikal*, kata nama).
+**ค. กริยาเดิมกับกริยาแปลง**: กริยาเดิมคือกริยาที่ไม่เติมปัจจัย (*makan, tidur, pergi*) กริยาแปลงสร้างด้วยการเติมปัจจัย ทั้งจากคำฐานที่เป็นกริยา (*membaca* < *baca*) และจากคำฐานชนิดอื่น (*membaiki* < *baik* คุณศัพท์; *meninggikan* < *tinggi*; *berbasikal* < *basikal* นาม)
 
 ### 4.2 Kata Adjektif<br>คำคุณศัพท์ (*kata adjektif*)
 
@@ -135,6 +135,14 @@ Pada akhir bab ini, pelajar dapat:
 
 **เฉลย** 1 ข · 2 ข · 3 ค · 4 ข · 5 ค
 
+**Penjelasan · คำอธิบาย**
+
+- **1** *Tinggal* memerlukan pelengkap *di Yala*; tanpanya ayat tidak lengkap (`*`*Mereka tinggal.*). *Tidur* dan *menangis* tidak berpelengkap, manakala *memasak* transitif.<br>*tinggal* ต้องมีส่วนเติมเต็ม *di Yala* ถ้าตัดออกประโยคไม่สมบูรณ์ ส่วน *tidur*, *menangis* ไม่ต้องมีส่วนเติมเต็ม และ *memasak* เป็นสกรรมกริยา
+- **2** Objek tepat hadir terus selepas *membelikan* dan menerima faedah, iaitu *adik*; *sebuah basikal* ialah objek sipi.<br>กรรมตรงอยู่ติดหลัง *membelikan* และเป็นผู้ได้รับประโยชน์ คือ *adik* ส่วน *sebuah basikal* เป็นกรรมรอง
+- **3** *Tercantik* sudah menyatakan darjah penghabisan. Pilihan lain menindihkan dua penanda: *paling* + *ter-*, atau *sangat/amat* + *sekali*.<br>*tercantik* บอกขั้นสูงสุดอยู่แล้ว ตัวเลือกอื่นใช้เครื่องหมายซ้อนกันสองตัว คือ *paling* + *ter-* หรือ *sangat/amat* + *sekali*
+- **4** *Harum* dikesan melalui deria bau, maka tergolong dalam kata adjektif pancaindera.<br>*harum* รับรู้ด้วยจมูก จึงเป็นคุณศัพท์ประเภทประสาทสัมผัส
+- **5** *Membaiki* = *meN-…-i* + *baik*, dan *baik* ialah kata adjektif.<br>*membaiki* = *meN-…-i* + *baik* และ *baik* เป็นคำคุณศัพท์
+
 ### B. Soalan Subjektif<br>ข. อัตนัย
 
 1. Huraikan perbezaan antara *kata kerja tak transitif berpelengkap* dengan *kata kerja transitif*, beserta dua contoh ayat bagi setiap satu.
@@ -146,8 +154,8 @@ Pada akhir bab ini, pelajar dapat:
 
 ### C. Soalan Pemikiran Kritis<br>ค. โจทย์คิดวิเคราะห์
 
-1. Dalam ayat *Kemalangan itu amat mengerikan.* tiada objek yang hadir, walhal *mengerikan* ialah kata kerja transitif. Jelaskan fenomena pengguguran objek (*pengguguran objek*) ini dan syarat yang membolehkannya.
-   *Kemalangan itu amat mengerikan.* ไม่มีกรรมปรากฏ แต่ *mengerikan* เป็นสกรรมกริยา จงอธิบายปรากฏการณ์การละกรรม (*pengguguran objek*) นี้ และเงื่อนไขที่ทำให้ละได้
+1. Dalam ayat *Kemalangan itu amat mengerikan.* tiada objek yang hadir selepas *mengerikan*. Bincangkan dua tafsiran: *mengerikan* ialah kata kerja transitif yang objeknya digugurkan (*pengguguran objek*), atau *mengerikan* berfungsi sebagai kata adjektif kerana dapat didahului kata penguat *amat*. Tafsiran manakah yang lebih kukuh? Berikan bukti daripada ujian tatabahasa.
+   ใน *Kemalangan itu amat mengerikan.* ไม่มีกรรมตามหลัง *mengerikan* จงอภิปรายการตีความสองแบบ คือ *mengerikan* เป็นสกรรมกริยาที่ละกรรม (*pengguguran objek*) หรือ *mengerikan* ทำหน้าที่เป็นคุณศัพท์เพราะมีคำเน้น *amat* นำหน้าได้ การตีความใดมีน้ำหนักกว่า จงให้หลักฐานจากการทดสอบทางไวยากรณ์
 2. Bandingkan pembentukan darjah penghabisan dengan *paling*, *ter-* dan *sekali*: adakah ketiga-tiganya berbeza dari segi laras bahasa (rasmi/tidak rasmi)? Cari contoh daripada berita dan hantaran media sosial.
    เปรียบเทียบการสร้างขั้นสูงสุดด้วย *paling*, *ter-* และ *sekali* ว่าต่างกันในด้านระดับภาษา (ทางการ/ไม่ทางการ) หรือไม่ ค้นตัวอย่างจากข่าวและโพสต์สื่อสังคมประกอบ
 

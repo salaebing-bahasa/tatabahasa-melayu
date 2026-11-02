@@ -2,7 +2,7 @@
      วิธีเขียนสองภาษา:
      - ย่อหน้าและข้อในรายการ: บรรทัดแรกภาษามลายู ขึ้นบรรทัดใหม่ (ไม่เว้นบรรทัดว่าง) แล้วเป็นภาษาไทย
      - หัวข้อ (## / ###) และช่องในตาราง: ภาษามลายู<br>ภาษาไทย
-     ห้ามลบหัวข้อระดับ ## (6 ส่วนของบท) และให้คงรูปแบบข้อปรนัย (ก. ข. ค. ง.) กับบรรทัด **เฉลย** ไว้ -->
+     ห้ามลบหัวข้อระดับ ## (6 ส่วนของบท) และให้คงรูปแบบข้อปรนัย (ก. ข. ค. ง.) กับบรรทัด **เฉลย** ไว้ · คำอธิบายเฉลยอยู่ใต้ **Penjelasan** เป็นรายการ - **เลขข้อ** มลายู<br>ไทย -->
 
 ## 1. Hasil Pembelajaran<br>ผลลัพธ์การเรียนรู้ประจำบท
 
@@ -132,7 +132,15 @@ Ayat
 5. Manakah klausa tak bebas dalam *Kami berharap bahawa kamu berjaya.*?<br>ข้อใดเป็นอนุประโยคไม่อิสระใน *Kami berharap bahawa kamu berjaya.*
    ก. *Kami berharap* ข. *bahawa kamu berjaya* ค. *kamu* ง. *berjaya*
 
-**เฉลย** 1 ข · 2 ง · 3 ค · 4 ง (semua unsur wajib kerana *tinggal* memerlukan pelengkap · ทุกส่วนจำเป็น เพราะ *tinggal* มีส่วนเติมเต็ม) · 5 ข
+**เฉลย** 1 ข · 2 ง · 3 ค · 4 ง · 5 ข
+
+**Penjelasan · คำอธิบาย**
+
+- **1** *Rumah batu itu* tidak mempunyai subjek dan predikat; pilihan lain mempunyai subjek dan predikat, maka klausa.<br>*rumah batu itu* ไม่มีประธานและภาคแสดง ส่วนตัวเลือกอื่นมีครบจึงเป็นอนุประโยค
+- **2** *Pagi tadi* menyatakan waktu. *Ibu* ialah subjek, *ikan* objek dan *di pasar* keterangan tempat.<br>*pagi tadi* บอกเวลา ส่วน *Ibu* เป็นประธาน *ikan* เป็นกรรม และ *di pasar* เป็นส่วนขยายบอกสถานที่
+- **3** *Doktor* menerangkan subjek *ayahnya*, maka berfungsi sebagai predikat (pola FN + FN).<br>*doktor* กล่าวถึงประธาน *ayahnya* จึงทำหน้าที่ภาคแสดง (แบบ FN + FN)
+- **4** Semua unsur wajib: *Mereka* subjek, *tinggal* inti predikat dan *di Hat Yai* pelengkap yang diperlukan oleh *tinggal*.<br>ทุกส่วนจำเป็น: *Mereka* เป็นประธาน *tinggal* เป็นแกนภาคแสดง และ *di Hat Yai* เป็นส่วนเติมเต็มที่ *tinggal* ต้องมี
+- **5** *Bahawa kamu berjaya* bergantung pada ayat induk *Kami berharap* dan tidak dapat berdiri sendiri sebagai ayat.<br>*bahawa kamu berjaya* ต้องอาศัยประโยคหลัก *Kami berharap* และยืนเป็นประโยคเองไม่ได้
 
 ### B. Soalan Subjektif<br>ข. อัตนัย
 

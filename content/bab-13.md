@@ -2,7 +2,7 @@
      วิธีเขียนสองภาษา:
      - ย่อหน้าและข้อในรายการ: บรรทัดแรกภาษามลายู ขึ้นบรรทัดใหม่ (ไม่เว้นบรรทัดว่าง) แล้วเป็นภาษาไทย
      - หัวข้อ (## / ###) และช่องในตาราง: ภาษามลายู<br>ภาษาไทย
-     ห้ามลบหัวข้อระดับ ## (6 ส่วนของบท) และให้คงรูปแบบข้อปรนัย (ก. ข. ค. ง.) กับบรรทัด **เฉลย** ไว้ -->
+     ห้ามลบหัวข้อระดับ ## (6 ส่วนของบท) และให้คงรูปแบบข้อปรนัย (ก. ข. ค. ง.) กับบรรทัด **เฉลย** ไว้ · คำอธิบายเฉลยอยู่ใต้ **Penjelasan** เป็นรายการ - **เลขข้อ** มลายู<br>ไทย -->
 
 ## 1. Hasil Pembelajaran<br>ผลลัพธ์การเรียนรู้ประจำบท
 
@@ -131,6 +131,14 @@ Semua ayat diterbitkan daripada ayat dasar (Bab 11) melalui tiga proses.
    ก. Pengguguran unsur yang berulang<br>การละส่วนซ้ำ ข. Penyongsangan<br>การเรียงสลับ ค. Pemasifan<br>การแปลงเป็นกรรม ง. Pemancangan klausa relatif<br>การฝังอนุประโยคสัมพันธ์
 
 **เฉลย** 1 ข · 2 ค · 3 ก · 4 ข · 5 ก
+
+**Penjelasan · คำอธิบาย**
+
+- **1** Pelaku diri pertama: kata ganti nama hadir terus di hadapan kata kerja tanpa *meN-*, dan kata bantu *sudah* di hadapan kata ganti nama.<br>ผู้กระทำบุรุษที่ 1: วางสรรพนามหน้ากริยาที่ไม่มี *meN-* ทันที และคำช่วย *sudah* อยู่หน้าสรรพนาม
+- **2** Ayat ini menggunakan kata bantu *kena* + kata kerja tanpa imbuhan (*tendang*).<br>ประโยคนี้ใช้คำช่วย *kena* + กริยาที่ไม่เติมปัจจัย (*tendang*)
+- **3** Pelaku *hujan* menjadi subjek dan kata kerja berawalan *meN-*, maka ayat aktif.<br>ผู้กระทำ *hujan* เป็นประธานและกริยาเติม *meN-* จึงเป็นกรรตุวาจก
+- **4** Predikat frasa sendi nama *di rumah* dikedepankan sebelum subjek *adik saya*.<br>ภาคแสดงวลีบุพบท *di rumah* ถูกย้ายไปไว้หน้าประธาน *adik saya*
+- **5** Ayat ini berasal daripada *Yusuf membeli rojak* + *Yusuf membeli ais kacang*; unsur berulang *Yusuf membeli* digugurkan.<br>ประโยคนี้มาจาก *Yusuf membeli rojak* + *Yusuf membeli ais kacang* โดยละส่วนที่ซ้ำ *Yusuf membeli*
 
 ### B. Soalan Subjektif<br>ข. อัตนัย
 
