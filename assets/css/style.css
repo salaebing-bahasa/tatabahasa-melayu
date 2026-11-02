@@ -1025,7 +1025,14 @@ em strong, strong em { font-weight: 700; background: color-mix(in srgb, var(--em
 .clo-page .clo-matriks td:nth-child(1) { min-width: 0; }
 @media screen { .clo-page .tbl-wrap:has(.clo-matriks) { overflow-x: auto; } }
 .nw-bab a, .clo-web a { display: inline-block; min-width: 24px; padding: 2px 4px; text-align: center; }
-footer .hak-cipta { flex-basis: 100%; margin-top: 6px; padding-top: 12px; border-top: 1px solid rgba(255, 255, 255, .16); font-size: 14px; }
-/* Kaki halaman di tengah · ข้อความท้ายเว็บจัดกึ่งกลาง */
-footer .wrap { flex-direction: column; align-items: center; text-align: center; gap: 8px; }
-footer .hak-cipta { flex-basis: auto; align-self: stretch; }
+/* Kaki halaman dua jalur, di tengah · ท้ายเว็บสองแถบ จัดกึ่งกลาง */
+footer { background: none; box-shadow: none; }
+footer .wrap { display: block; text-align: center; padding-top: 0; padding-bottom: 0; }
+footer p { margin: 0; line-height: 1.75; }
+footer .kaki-tajuk { font-weight: 700; font-size: 1.12em; margin-bottom: 4px; }
+.kaki-atas { background: var(--band); color: var(--band-text); box-shadow: inset 0 3px 0 var(--langit); padding: 26px 0 24px; }
+.kaki-atas .kaki-tajuk { color: var(--langit); }
+.kaki-bawah { background: var(--aksen-soft); color: var(--dakwat); padding: 24px 0 28px; }
+.kaki-bawah .kaki-tajuk { color: var(--biru); }
+.kaki-bawah a { color: var(--biru); }
+.kaki-bawah .hak-cipta { color: var(--muted); font-size: 14px; margin-top: 10px; }
