@@ -174,12 +174,65 @@ Semua ayat diterbitkan daripada ayat dasar (Bab 11) melalui tiga proses.
 Jawab setiap latihan; jawapan disemak serta-merta beserta penjelasan. Untuk latihan tambahan, gunakan juga halaman **Alat Latihan**.
 ทำแบบฝึกแต่ละชุด ระบบจะตรวจคำตอบทันทีพร้อมคำอธิบาย ฝึกเพิ่มได้ที่หน้า **เครื่องมือฝึก**
 
+```latihan-objektif
+Arahan: Pilih jawapan yang paling tepat; sebab bagi setiap pilihan akan dipaparkan. | เลือกคำตอบที่ถูกที่สุด ระบบจะแสดงเหตุผลของทุกตัวเลือก
+?? Ayat pasif yang betul bagi *Kami sudah menjemput tetamu itu.* ialah<br>กรรมวาจกที่ถูกคือ
+- *Tetamu itu sudah dijemput oleh kami.* :: Pelaku diri pertama tidak menggunakan *di- … oleh*.<br>บุรุษที่ 1 ไม่ใช้ *di- … oleh*
+- *Tetamu itu kami sudah jemput.* :: Kata bantu mesti di hadapan kata ganti nama.<br>คำช่วยต้องอยู่หน้าสรรพนาม
++ *Tetamu itu sudah kami jemput.* :: Kata bantu + kata ganti nama + kata kerja tanpa *meN-*.<br>คำช่วย + สรรพนาม + กริยาไม่มี *meN-*
+- *Tetamu itu sudah kami menjemput.* :: *meN-* mesti digugurkan.<br>ต้องตัด *meN-*
+?? *Pencuri itu kena tangkap.* ialah ayat pasif dengan<br>เป็นกรรมวาจกที่ใช้
+- *di-* :: Tiada awalan *di-*.<br>ไม่มี *di-*
+- *ter-* :: Tiada awalan *ter-*.<br>ไม่มี *ter-*
++ *kena* :: Kata bantu *kena* + kata kerja tanpa imbuhan.<br>*kena* + กริยาไม่เติมปัจจัย
+- kata ganti nama diri kedua :: Tiada kata ganti nama.<br>ไม่มีสรรพนาม
+?? Manakah ayat susunan songsang?<br>ข้อใดเป็นประโยคเรียงสลับ
+- *Budak itu pandai sungguh.* :: Susunan biasa.<br>เรียงปกติ
++ *Pandai sungguh budak itu.* :: Predikat FA dikedepankan.<br>ภาคแสดงอยู่หน้า
+- *Budak itu dipuji oleh guru.* :: Ayat pasif, susunan biasa.<br>กรรมวาจก เรียงปกติ
+- *Budak itu pandai.* :: Susunan biasa.<br>เรียงปกติ
+?? *Ahmad menaiki bas yang berwarna biru.* menunjukkan proses<br>แสดงกระบวนการ
+- pengguguran :: Tiada unsur yang digugurkan secara utama.<br>ไม่ได้ละส่วนใดเป็นหลัก
++ peluasan :: Ayat *Bas itu berwarna biru* dipancangkan.<br>ฝังประโยคอื่นเข้ามา
+- penyusunan semula :: Susunan subjek–predikat tidak berubah.<br>ลำดับไม่เปลี่ยน
+- pemasifan :: Ayat masih aktif.<br>ยังเป็นกรรตุวาจก
+```
+
 ```latihan-isi
 Arahan: Tukarkan kepada ayat pasif dengan melengkapkan tempat kosong. | เติมช่องว่างเพื่อเปลี่ยนเป็นกรรมวาจก
 *Saya sudah membaca buku itu.* → *Buku itu sudah saya ___.* | baca | Pelaku diri pertama: kata kerja tanpa *meN-*. | บุรุษที่ 1 กริยาไม่มี *meN-*
 *Polis menangkap pencuri itu.* → *Pencuri itu ___ oleh polis.* | ditangkap | Pelaku kata nama: *di-*. | ผู้กระทำเป็นนามใช้ *di-*
 *Kamu mesti membersihkan bilik ini.* → *Bilik ini mesti kamu ___.* | bersihkan | Akhiran *-kan* dikekalkan. | คงปัจจัย *-kan*
 *Kami akan menghantar surat itu.* → *Surat itu ___ kami hantar.* | akan | Kata bantu di hadapan kata ganti nama. | คำช่วยอยู่หน้าสรรพนาม
+```
+
+```latihan-golong
+Tajuk: Kenal Pasti Golongan Kata | ระบุชนิดของคำ
+Arahan: Tentukan golongan kata bagi perkataan yang diberikan. | ระบุชนิดของคำที่กำหนด
+Kategori: Kata kerja · คำกริยา | Kata tugas · คำไวยากรณ์ | Kata nama · คำนาม | Kata ganti nama · คำสรรพนาม
+*dirasmikan* | Kata kerja | Kata kerja pasif *di-…-kan*. | กริยากรรมวาจก
+*oleh* | Kata tugas | Kata sendi nama yang memperkenalkan pelaku. | คำบุพบทนำผู้กระทำ
+*kena* | Kata tugas | Kata bantu pasif. | คำช่วยกรรมวาจก
+*anda* | Kata ganti nama | Diri kedua. | บุรุษที่ 2
+*menteri* | Kata nama | Pelaku kata nama. | นามผู้กระทำ
+*akan* dalam *Surat itu akan saya hantar.* | Kata tugas | Kata bantu aspek. | คำช่วยบอกกาล
+```
+
+```latihan-betulkan
+Arahan: Klik bahagian yang salah. | กดส่วนที่ผิด
+Borang permohonan perlu [diisi oleh anda→anda isi] dengan lengkap. | Pelaku diri kedua. | บุรุษที่ 2
+Surat tawaran [kami akan→akan kami] hantar minggu depan. | Kata bantu di hadapan kata ganti nama. | คำช่วยอยู่หน้าสรรพนาม
+Buku itu telah [dibaca oleh saya→saya baca]. | Pelaku diri pertama. | บุรุษที่ 1
+Kerja itu sudah saya [menyiapkan→siapkan]. | *meN-* digugurkan. | ตัด *meN-*
+```
+
+```latihan-analisis
+Arahan: Pilih fungsi bagi setiap bahagian ayat, kemudian klik Semak. | เลือกหน้าที่ของแต่ละส่วนในประโยค แล้วกดตรวจ
+Label: Subjek · ประธาน | Kata bantu · คำช่วย | Pelaku · ผู้กระทำ | Kata kerja · กริยา | Keterangan · ส่วนขยาย
+[Bangunan itu|Subjek] [akan|Kata bantu] [dirasmikan|Kata kerja] [oleh menteri|Pelaku]. | Pasif *di-* dengan pelaku kata nama. | กรรมวาจกด้วย *di-*
+[Lelaki itu|Subjek] [masih|Kata bantu] [saya|Pelaku] [hormati|Kata kerja]. | Pasif diri pertama: kata bantu + pelaku + kata kerja. | บุรุษที่ 1
+[Borang ini|Subjek] [perlu|Kata bantu] [anda|Pelaku] [isi|Kata kerja] [dengan lengkap|Keterangan]. | Pasif diri kedua; *dengan lengkap* keterangan cara. | บุรุษที่ 2
+[Surat tawaran|Subjek] [akan|Kata bantu] [kami|Pelaku] [hantar|Kata kerja] [minggu depan|Keterangan]. | *minggu depan* keterangan waktu. | ส่วนขยายบอกเวลา
 ```
 
 ```latihan-golong
@@ -190,14 +243,6 @@ Kategori: di- | ter- | Diri pertama/kedua · บุรุษที่ 1/2 | kena
 *Laksam itu kami makan.* | Diri pertama/kedua | Kata ganti nama di hadapan kata kerja. | สรรพนามอยู่หน้ากริยา
 *Dia kena marah.* | kena | Kata bantu *kena*. | คำช่วย *kena*
 *Borang itu belum anda isi.* | Diri pertama/kedua | Pelaku diri kedua. | บุรุษที่ 2
-```
-
-```latihan-betulkan
-Arahan: Klik bahagian yang salah. | กดส่วนที่ผิด
-Borang permohonan perlu [diisi oleh anda→anda isi] dengan lengkap. | Pelaku diri kedua. | บุรุษที่ 2
-Surat tawaran [kami akan→akan kami] hantar minggu depan. | Kata bantu di hadapan kata ganti nama. | คำช่วยอยู่หน้าสรรพนาม
-Buku itu telah [dibaca oleh saya→saya baca]. | Pelaku diri pertama. | บุรุษที่ 1
-Kerja itu sudah saya [menyiapkan→siapkan]. | *meN-* digugurkan. | ตัด *meN-*
 ```
 
 ```latihan-benar
@@ -218,12 +263,25 @@ Peluasan berlaku apabila ayat lain dipancangkan atau digabungkan.<br>การ�
 **Aspek analisis**
 **ประเด็นวิเคราะห์**
 
-1. Kelaskan ragam setiap ayat dan kenal pasti ayat pasif yang menyalahi peraturan. (แนวคำตอบ: *Borang permohonan perlu anda isi dengan lengkap.* · *Surat tawaran akan kami hantar minggu depan.*)
-   จำแนกวาจกของแต่ละประโยค และระบุประโยคกรรมวาจกที่ผิดกฎ
-2. Mengapakah pengumuman rasmi lebih kerap menggunakan ayat pasif? Tulis semula pengumuman itu supaya dokumen dan tarikh akhir menjadi tumpuan.
-   ประกาศทางการมักใช้กรรมวาจกมากกว่า เพราะอะไร เขียนประกาศใหม่ให้เน้นเอกสารและกำหนดเวลาเป็นหัวเรื่อง
-3. Tambahkan satu ayat susunan songsang untuk menegaskan tarikh akhir dan jelaskan kesannya terhadap pembaca.
-   เพิ่มประโยคเรียงสลับ 1 ประโยคเพื่อเน้นกำหนดส่ง และอธิบายผลที่ได้ต่อผู้อ่าน
+```latihan-terbuka
+Tajuk: Soalan Kajian Kes | คำถามกรณีศึกษา
+Arahan: Tulis jawapan anda, kemudian bandingkan dengan contoh jawapan dan kriteria penilaian. | เขียนคำตอบ แล้วเทียบกับตัวอย่างคำตอบและเกณฑ์การประเมิน
+?? Kelaskan ragam setiap ayat dan kenal pasti ayat pasif yang menyalahi peraturan.<br>จำแนกวาจกของแต่ละประโยค และระบุประโยคกรรมวาจกที่ผิดกฎ
+= Ayat 1: aktif · ayat 2: pasif yang salah → *Borang permohonan perlu anda isi dengan lengkap.* · ayat 3: pasif yang salah → *Surat tawaran akan kami hantar minggu depan.* · ayat 4: aktif
+* Ragam setiap ayat dikelaskan<br>จำแนกวาจกทุกประโยค
+* Dua ayat pasif yang salah dikenal pasti<br>ระบุกรรมวาจกที่ผิดสองประโยค
+* Pembetulan mengikut peraturan pelaku diri pertama/kedua<br>แก้ตามกฎบุรุษที่ 1/2
+?? Mengapakah pengumuman rasmi lebih kerap menggunakan ayat pasif? Tulis semula pengumuman itu supaya dokumen dan tarikh akhir menjadi tumpuan.<br>ประกาศทางการมักใช้กรรมวาจกมากกว่า เพราะอะไร เขียนประกาศใหม่ให้เน้นเอกสารและกำหนดเวลาเป็นหัวเรื่อง
+= Ayat pasif menumpukan perkara yang penting kepada pembaca (dokumen, borang, tarikh) dan bukan pejabat. Contoh: *Semua dokumen akan diperiksa. Borang permohonan perlu diisi dengan lengkap. Surat tawaran akan dihantar minggu depan. Permohonan lewat tidak akan diterima.*
+* Sebab penggunaan pasif dijelaskan<br>อธิบายเหตุที่ใช้กรรมวาจก
+* Pengumuman ditulis semula dengan pasif yang betul<br>เขียนประกาศใหม่ด้วยกรรมวาจกที่ถูก
+* Dokumen dan tarikh menjadi tumpuan<br>เน้นเอกสารและวันที่
+?? Tambahkan satu ayat susunan songsang untuk menegaskan tarikh akhir dan jelaskan kesannya terhadap pembaca.<br>เพิ่มประโยคเรียงสลับ 1 ประโยคเพื่อเน้นกำหนดส่ง และอธิบายผลที่ได้ต่อผู้อ่าน
+= *Sebelum 30 November, semua borang mesti dihantar.* — keterangan waktu dikedepankan supaya tarikh akhir menjadi perkara pertama yang dibaca.
+* Ayat susunan songsang yang gramatis<br>ประโยคเรียงสลับที่ถูก
+* Tarikh akhir ditegaskan<br>เน้นวันสุดท้าย
+* Kesan terhadap pembaca dijelaskan<br>อธิบายผลต่อผู้อ่าน
+```
 
 ## 10. Rumusan<br>สรุปบทเรียน
 
@@ -280,19 +338,45 @@ Peluasan berlaku apabila ayat lain dipancangkan atau digabungkan.<br>การ�
 
 ### B. Soalan Subjektif<br>ข. อัตนัย
 
-1. Tukarkan kepada ayat pasif: (a) *Emak menyapu sampah.* (b) *Kami sudah menjemput tetamu itu.* (c) *Engkau mesti membersihkan bilik ini.* (d) *Polis sedang menyiasat kes itu.* (แนวคำตอบ: a. *Sampah disapu oleh emak.* · b. *Tetamu itu sudah kami jemput.* · c. *Bilik ini mesti engkau bersihkan.* · d. *Kes itu sedang disiasat oleh polis.*)
-   แปลงเป็นกรรมวาจก ตามข้อ (ก)–(ง)
-2. Tulis ayat susunan songsang daripada keempat-empat pola ayat dasar dan jelaskan unsur yang ditegaskan. (แนวคำตอบ: Kedepankan predikat atau sebahagiannya, sering dengan *-lah* atau *-nya*: FA *Pandai sungguh budak itu.* · FSN *Ke Phuket ayah saya.* · keterangan *Pada pukul enam mereka bertolak.* Unsur yang dikedepankan ialah unsur yang ditegaskan.)
-   เขียนประโยคเรียงสลับจากประโยคพื้นฐานทั้ง 4 แบบ และอธิบายส่วนที่ถูกเน้น
-3. Jelaskan dengan contoh bagaimana tiga proses transformasi menghubungkan ayat dasar dengan ayat yang digunakan dalam kehidupan sebenar. (แนวคำตอบ: Pengguguran: *Hantar barang ini.* — subjek *kamu* digugurkan · peluasan: *Ahmad menaiki bas yang berwarna biru.* · penyusunan semula: *Borang ini perlu anda isi.* — aktif menjadi pasif. Ketiga-tiganya bermula daripada ayat dasar.)
-   อธิบายด้วยตัวอย่างว่าการแปลงประโยค 3 กระบวนการเชื่อมโยงประโยคพื้นฐานกับประโยคที่ใช้จริงอย่างไร
+
+```latihan-terbuka
+Tajuk: Soalan Subjektif | ข้อสอบอัตนัย
+Arahan: Tulis jawapan anda, kemudian bandingkan dengan contoh jawapan dan kriteria penilaian. | เขียนคำตอบ แล้วเทียบกับตัวอย่างคำตอบและเกณฑ์การประเมิน
+?? Tukarkan kepada ayat pasif: (a) *Emak menyapu sampah.* (b) *Kami sudah menjemput tetamu itu.* (c) *Engkau mesti membersihkan bilik ini.* (d) *Polis sedang menyiasat kes itu.*<br>แปลงเป็นกรรมวาจก ตามข้อ (ก)–(ง)
+= a. *Sampah disapu oleh emak.* · b. *Tetamu itu sudah kami jemput.* · c. *Bilik ini mesti engkau bersihkan.* · d. *Kes itu sedang disiasat oleh polis.*
+* Empat ayat pasif yang betul<br>กรรมวาจกถูกทั้งสี่
+* Jenis pelaku dikenal pasti bagi setiap ayat<br>ระบุชนิดผู้กระทำ
+* Kedudukan kata bantu yang betul<br>ตำแหน่งคำช่วยถูก
+?? Tulis ayat susunan songsang daripada keempat-empat pola ayat dasar dan jelaskan unsur yang ditegaskan.<br>เขียนประโยคเรียงสลับจากประโยคพื้นฐานทั้ง 4 แบบ และอธิบายส่วนที่ถูกเน้น
+= Kedepankan predikat atau sebahagiannya, sering dengan *-lah* atau *-nya*: FA *Pandai sungguh budak itu.* · FSN *Ke Phuket ayah saya.* · keterangan *Pada pukul enam mereka bertolak.* Unsur yang dikedepankan ialah unsur yang ditegaskan.
+* Ayat songsang bagi pola yang diminta<br>ประโยคเรียงสลับตามแบบ
+* Unsur yang dikedepankan dinyatakan<br>ระบุส่วนที่ย้าย
+* Ayat gramatis dan bermakna<br>ถูกไวยากรณ์และมีความหมาย
+?? Jelaskan dengan contoh bagaimana tiga proses transformasi menghubungkan ayat dasar dengan ayat yang digunakan dalam kehidupan sebenar.<br>อธิบายด้วยตัวอย่างว่าการแปลงประโยค 3 กระบวนการเชื่อมโยงประโยคพื้นฐานกับประโยคที่ใช้จริงอย่างไร
+= Pengguguran: *Hantar barang ini.* — subjek *kamu* digugurkan · peluasan: *Ahmad menaiki bas yang berwarna biru.* · penyusunan semula: *Borang ini perlu anda isi.* — aktif menjadi pasif. Ketiga-tiganya bermula daripada ayat dasar.
+* Contoh ketiga-tiga proses<br>ตัวอย่างครบสามกระบวนการ
+* Ayat dasar asal ditunjukkan bagi setiap contoh<br>แสดงประโยคพื้นฐานเดิม
+* Dikaitkan dengan ayat kehidupan sebenar<br>โยงกับประโยคในชีวิตจริง
+```
 
 ### C. Soalan Pemikiran Kritis (Integrasi Minggu 15)<br>ค. โจทย์คิดวิเคราะห์ (บูรณาการสัปดาห์ที่ 15)
 
-1. **Projek pembetulan teks sebenar:** Kumpulkan satu teks bahasa Melayu sebenar (papan tanda, pengumuman, menu, hantaran) sepanjang kira-kira 100 patah perkataan. Analisis kesalahan pada semua peringkat (kata, frasa, ayat, kesesuaian) dengan merujuk bab yang berkaitan, kemukakan versi yang dibetulkan, dan bentangkan dalam kelas (dinilai dengan rubrik: ketepatan analisis · rujukan kepada prinsip tatabahasa · kualiti versi pembetulan · pembentangan).
-   **โครงงานแก้ไขข้อความจริง** เก็บข้อความภาษามลายูจริง 1 ชิ้น (ป้าย ประกาศ เมนู โพสต์) ความยาวประมาณ 100 คำ วิเคราะห์ข้อผิดทุกระดับ (คำ วลี ประโยค ความเหมาะสม) โดยอ้างอิงบทที่เกี่ยวข้อง เสนอฉบับแก้ และนำเสนอในชั้น (ประเมินด้วยรูบริก: ความถูกต้องของการวิเคราะห์ · การอ้างหลักไวยากรณ์ · คุณภาพฉบับแก้ · การนำเสนอ)
-2. Bahasa Thai menggunakan pasif "ถูก…" lazimnya untuk makna yang tidak diingini, manakala bahasa Melayu boleh menggunakan *di-* secara umum. Analisis kesannya terhadap penterjemahan Thai↔Melayu dan bandingkan dengan *kena* dalam bahasa Melayu.
-   ภาษาไทยใช้กรรมวาจก "ถูก…" มักในความหมายไม่พึงประสงค์ ขณะที่ภาษามลายูใช้ *di-* ได้ทั่วไป จงวิเคราะห์ผลต่อการแปลไทย↔มลายู และเทียบกับ *kena* ในภาษามลายู
+
+```latihan-terbuka
+Tajuk: Soalan Pemikiran Kritis | โจทย์คิดวิเคราะห์
+Arahan: Tulis jawapan anda, kemudian bandingkan dengan contoh jawapan dan kriteria penilaian. | เขียนคำตอบ แล้วเทียบกับตัวอย่างคำตอบและเกณฑ์การประเมิน
+?? **Projek pembetulan teks sebenar:** Kumpulkan satu teks bahasa Melayu sebenar (papan tanda, pengumuman, menu, hantaran) sepanjang kira-kira 100 patah perkataan. Analisis kesalahan pada semua peringkat (kata, frasa, ayat, kesesuaian) dengan merujuk bab yang berkaitan, kemukakan versi yang dibetulkan, dan bentangkan dalam kelas (dinilai dengan rubrik: ketepatan analisis · rujukan kepada prinsip tatabahasa · kualiti versi pembetulan · pembentangan).<br>**โครงงานแก้ไขข้อความจริง** เก็บข้อความภาษามลายูจริง 1 ชิ้น (ป้าย ประกาศ เมนู โพสต์) ความยาวประมาณ 100 คำ วิเคราะห์ข้อผิดทุกระดับ (คำ วลี ประโยค ความเหมาะสม) โดยอ้างอิงบทที่เกี่ยวข้อง เสนอฉบับแก้ และนำเสนอในชั้น (ประเมินด้วยรูบริก: ความถูกต้องของการวิเคราะห์ · การอ้างหลักไวยากรณ์ · คุณภาพฉบับแก้ · การนำเสนอ)
+= Contoh struktur laporan: teks asal → senarai kesalahan (kata, frasa, ayat, kesesuaian) dengan rujukan bab → versi dibetulkan → refleksi tentang punca kesalahan.
+* Kesalahan pada semua peringkat dikenal pasti<br>ระบุข้อผิดครบทุกระดับ
+* Setiap kesalahan dirujuk kepada prinsip tatabahasa dan bab<br>อ้างหลักไวยากรณ์และบท
+* Versi pembetulan yang gramatis dan sesuai<br>ฉบับแก้ถูกและเหมาะสม
+* Pembentangan yang jelas<br>นำเสนอชัดเจน
+?? Bahasa Thai menggunakan pasif "ถูก…" lazimnya untuk makna yang tidak diingini, manakala bahasa Melayu boleh menggunakan *di-* secara umum. Analisis kesannya terhadap penterjemahan Thai↔Melayu dan bandingkan dengan *kena* dalam bahasa Melayu.<br>ภาษาไทยใช้กรรมวาจก "ถูก…" มักในความหมายไม่พึงประสงค์ ขณะที่ภาษามลายูใช้ *di-* ได้ทั่วไป จงวิเคราะห์ผลต่อการแปลไทย↔มลายู และเทียบกับ *kena* ในภาษามลายู
+= "ถูก…" dalam bahasa Thai lazimnya bermakna negatif, jadi penterjemah Thai mungkin mengelak pasif Melayu bagi makna neutral dan menggunakan ayat aktif. Sebaliknya, *di-* yang neutral (*Bangunan itu dirasmikan*) tidak wajar diterjemahkan sebagai "ถูกเปิด". *kena* lebih dekat dengan "ถูก" kerana membawa makna tidak diingini.
+* Membandingkan makna pasif Thai dan Melayu<br>เปรียบเทียบความหมายกรรมวาจกไทย–มลายู
+* Contoh terjemahan dua hala<br>ตัวอย่างการแปลสองทาง
+* Membincangkan *kena* sebagai padanan<br>อภิปราย *kena* ในฐานะคำเทียบ
+```
 
 ## 12. Rujukan<br>เอกสารอ้างอิง
 

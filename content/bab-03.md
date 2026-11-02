@@ -191,6 +191,30 @@ Kata nama dan frasa nama berfungsi sebagai **subjek** (*subjek*), **objek** (*ob
 Jawab setiap latihan; jawapan disemak serta-merta beserta penjelasan.
 ทำแบบฝึกแต่ละชุด ระบบจะตรวจคำตอบทันทีพร้อมคำอธิบาย
 
+```latihan-objektif
+Arahan: Pilih jawapan yang paling tepat; sebab bagi setiap pilihan akan dipaparkan. | เลือกคำตอบที่ถูกที่สุด ระบบจะแสดงเหตุผลของทุกตัวเลือก
+?? "Prof. Ali tidak dapat hadir kerana ___ sakit." Kata ganti nama yang paling sesuai ialah<br>คำสรรพนามที่เหมาะที่สุดคือ
+- *dia* :: Gramatis tetapi kurang hormat bagi seorang profesor.<br>ถูกไวยากรณ์แต่ให้เกียรติไม่พอ
++ *beliau* :: Digunakan untuk diri ketiga yang dihormati.<br>ใช้กับบุรุษที่ 3 ที่ได้รับความเคารพ
+- *baginda* :: Hanya untuk raja.<br>ใช้กับกษัตริย์เท่านั้น
+- *ia* :: Dalam tulisan rasmi lebih sesuai untuk benda.<br>ในภาษาเขียนทางการเหมาะกับสิ่งของ
+?? Manakah kata nama terbitan yang menyatakan proses?<br>ข้อใดเป็นนามแปลงบอกกระบวนการ
+- *penulis* :: *peN-* menyatakan pelaku.<br>*peN-* บอกผู้กระทำ
+- *tulisan* :: *-an* menyatakan hasil.<br>*-an* บอกผลงาน
++ *penulisan* :: *peN-…-an* menyatakan proses.<br>*peN-…-an* บอกกระบวนการ
+- *bertulis* :: Bukan kata nama.<br>ไม่ใช่คำนาม
+?? Kata nama manakah yang ejaannya betul dalam ayat rasmi?<br>ข้อใดเขียนนามถูกต้องในประโยคทางการ
+- *Saya belajar di universiti thaksin.* :: Kata nama khas mesti berhuruf besar.<br>นามเฉพาะต้องขึ้นต้นตัวใหญ่
++ *Saya belajar di Universiti Thaksin.* :: Nama institusi ialah kata nama khas.<br>ชื่อสถาบันเป็นนามเฉพาะ
+- *Saya belajar di Universiti thaksin.* :: Setiap perkataan nama khas berhuruf besar.<br>ทุกคำของชื่อเฉพาะต้องขึ้นต้นตัวใหญ่
+- *Saya belajar di universiti Thaksin.* :: *Universiti* sebahagian daripada nama khas.<br>*Universiti* เป็นส่วนของชื่อเฉพาะ
+?? Ujian manakah yang TIDAK membuktikan sesuatu kata ialah kata nama?<br>การทดสอบใดไม่ได้พิสูจน์ว่าเป็นคำนาม
+- Boleh didahului penjodoh bilangan :: Ini ujian kata nama: *seorang guru*.<br>เป็นการทดสอบคำนาม
+- Boleh diikuti *ini/itu* :: Ini ujian kata nama: *buku itu*.<br>เป็นการทดสอบคำนาม
++ Boleh didahului *sangat* :: *sangat* menguatkan kata adjektif, bukan kata nama.<br>*sangat* ใช้กับคุณศัพท์
+- Dinafikan dengan *bukan* :: Ini ciri kata nama: *bukan guru*.<br>เป็นลักษณะของคำนาม
+```
+
 ```latihan-isi
 Arahan: Taipkan kata yang betul. | พิมพ์คำที่ถูกต้อง
 Dia ___ pelajar. (nafi) | bukan | Kata nama dinafikan dengan *bukan*. | คำนามปฏิเสธด้วย *bukan*
@@ -198,6 +222,35 @@ Ahmad, mari ___ makan bersama-sama. (termasuk pendengar) | kita | *kita* merangk
 Dekan kami sibuk. ___ akan hadir esok. (hormat) | Beliau | *beliau* untuk orang yang dihormati. | *beliau* ใช้กับผู้ที่ได้รับความเคารพ
 Ayah membeli ___ rumah. (satu + penjodoh bilangan) | sebuah | *buah* untuk benda besar seperti rumah; *se-* = satu. | *buah* ใช้กับสิ่งของใหญ่ *se-* = หนึ่ง
 *ke-…-an* + *merdeka* = ___ | kemerdekaan | Apitan *ke-…-an* membentuk kata nama abstrak. | ปัจจัยคร่อมสร้างนามธรรม
+```
+
+```latihan-golong
+Tajuk: Kenal Pasti Golongan Kata | ระบุชนิดของคำ
+Arahan: Tentukan golongan kata bagi perkataan yang diberikan. | ระบุชนิดของคำที่กำหนด
+Kategori: Kata nama · คำนาม | Kata ganti nama · คำสรรพนาม | Kata kerja · คำกริยา | Kata adjektif · คำคุณศัพท์
+*beliau* | Kata ganti nama | Menggantikan nama orang yang dihormati. | ใช้แทนชื่อบุคคล
+*kejujuran* | Kata nama | Kata nama abstrak terbitan. | นามธรรมแปลง
+*kami* | Kata ganti nama | Kata ganti nama diri pertama jamak. | สรรพนามบุรุษที่ 1 พหูพจน์
+*menulis* | Kata kerja | *meN-* + *tulis*. | กริยา
+*penulis* | Kata nama | *peN-* + *tulis*: pelaku. | นามผู้กระทำ
+*jujur* | Kata adjektif | Menyatakan sifat; *sangat jujur*. | บอกลักษณะ
+```
+
+```latihan-betulkan
+Arahan: Klik perkataan yang salah. | กดคำที่ผิด
+Dia [tidak→bukan] doktor. | Predikat kata nama dinafikan dengan *bukan*. | ภาคแสดงที่เป็นนามปฏิเสธด้วย *bukan*
+Puan, [aku→saya] ingin bertanya tentang kursus ini. | *aku* tidak sesuai kepada orang yang dihormati. | *aku* ไม่เหมาะกับผู้ที่ได้รับความเคารพ
+Prof. Ali sakit, jadi [dia→beliau] tidak dapat hadir. | Gunakan *beliau* untuk orang yang dihormati. | ใช้ *beliau* กับผู้ที่ได้รับความเคารพ
+Saya belajar di universiti [thaksin→Thaksin]. | Kata nama khas ditulis dengan huruf besar. | นามเฉพาะขึ้นต้นด้วยตัวใหญ่
+```
+
+```latihan-analisis
+Arahan: Pilih fungsi bagi setiap bahagian ayat, kemudian klik Semak. | เลือกหน้าที่ของแต่ละส่วนในประโยค แล้วกดตรวจ
+Label: Subjek · ประธาน | Inti predikat · แกนภาคแสดง | Objek · กรรม | Keterangan · ส่วนขยาย
+[Petani itu|Subjek] [menanam|Inti predikat] [padi|Objek] [di sawah|Keterangan]. | Kata nama *petani* (subjek) dan *padi* (objek). | คำนามเป็นประธานและกรรม
+[Ayah Fitri|Subjek] [peguam|Inti predikat]. | Kata nama *peguam* menjadi predikat. | คำนามเป็นภาคแสดง
+[Beliau|Subjek] [menghadiri|Inti predikat] [mesyuarat itu|Objek]. | Kata ganti nama *beliau* menjadi subjek. | สรรพนามเป็นประธาน
+[Kami|Subjek] [menghormati|Inti predikat] [pensyarah kami|Objek]. | Frasa nama *pensyarah kami* objek. | วลีนามเป็นกรรม
 ```
 
 ```latihan-golong
@@ -209,14 +262,6 @@ Kategori: Am konkrit · ทั่วไป-รูปธรรม | Am abstrak ·
 *angin* | Am konkrit | Dapat dirasa dengan pancaindera. | รับรู้ด้วยประสาทสัมผัสได้
 *ilmu* | Am abstrak | Konsep. | แนวคิด
 *Siti* | Khas | Nama orang. | ชื่อคน
-```
-
-```latihan-betulkan
-Arahan: Klik perkataan yang salah. | กดคำที่ผิด
-Dia [tidak→bukan] doktor. | Predikat kata nama dinafikan dengan *bukan*. | ภาคแสดงที่เป็นนามปฏิเสธด้วย *bukan*
-Puan, [aku→saya] ingin bertanya tentang kursus ini. | *aku* tidak sesuai kepada orang yang dihormati. | *aku* ไม่เหมาะกับผู้ที่ได้รับความเคารพ
-Prof. Ali sakit, jadi [dia→beliau] tidak dapat hadir. | Gunakan *beliau* untuk orang yang dihormati. | ใช้ *beliau* กับผู้ที่ได้รับความเคารพ
-Saya belajar di universiti [thaksin→Thaksin]. | Kata nama khas ditulis dengan huruf besar. | นามเฉพาะขึ้นต้นด้วยตัวใหญ่
 ```
 
 ```latihan-benar
@@ -237,12 +282,25 @@ Kata nama boleh didahului penjodoh bilangan.<br>คำนามมีลัก�
 **Aspek analisis**
 **ประเด็นวิเคราะห์**
 
-1. Kenal pasti semua kata ganti nama yang tidak sesuai dengan konteks dan cadangkan penggantinya. (แนวคำตอบ: *Kamu → Dr./Prof./tuan/puan*; *Aku → Saya*; *Dia → Beliau*)
-   ระบุคำสรรพนามที่ไม่เหมาะกับบริบททุกคำ และเสนอคำแทนที่
-2. Jelaskan bagaimana pemilihan kata ganti nama mencerminkan hubungan sosial dan bagaimana keadaan ini berbeza daripada bahasa Thai (ฉัน/ผม/หนู).
-   อธิบายว่าการเลือกสรรพนามสะท้อนความสัมพันธ์ทางสังคมอย่างไร และต่างจากภาษาไทย (ฉัน/ผม/หนู) อย่างไร
-3. Tulis semula e-mel itu dalam 4–5 ayat.
-   เขียนอีเมลฉบับปรับแก้ 4–5 ประโยค
+```latihan-terbuka
+Tajuk: Soalan Kajian Kes | คำถามกรณีศึกษา
+Arahan: Tulis jawapan anda, kemudian bandingkan dengan contoh jawapan dan kriteria penilaian. | เขียนคำตอบ แล้วเทียบกับตัวอย่างคำตอบและเกณฑ์การประเมิน
+?? Kenal pasti semua kata ganti nama yang tidak sesuai dengan konteks dan cadangkan penggantinya.<br>ระบุคำสรรพนามที่ไม่เหมาะกับบริบททุกคำ และเสนอคำแทนที่
+= *Kamu → Dr./Prof./tuan/puan*; *Aku → Saya*; *Dia → Beliau*
+* Mengenal pasti *kamu*, *aku* dan *dia* sebagai tidak sesuai<br>ระบุ *kamu*, *aku*, *dia* ว่าไม่เหมาะ
+* Mencadangkan pengganti yang sesuai bagi setiap satu<br>เสนอคำแทนที่เหมาะสมทุกคำ
+* Menjelaskan sebab berdasarkan kedudukan pendengar<br>อธิบายเหตุผลตามสถานะผู้ฟัง
+?? Jelaskan bagaimana pemilihan kata ganti nama mencerminkan hubungan sosial dan bagaimana keadaan ini berbeza daripada bahasa Thai (ฉัน/ผม/หนู).<br>อธิบายว่าการเลือกสรรพนามสะท้อนความสัมพันธ์ทางสังคมอย่างไร และต่างจากภาษาไทย (ฉัน/ผม/หนู) อย่างไร
+= Bahasa Melayu memilih kata ganti nama mengikut kedudukan dan keakraban (*aku/saya*, *dia/beliau*). Bahasa Thai juga begitu, tetapi lebih banyak pilihan diri pertama (ฉัน/ผม/หนู/ดิฉัน) yang turut menandakan jantina dan usia; padanannya dalam bahasa Melayu biasanya *saya* sahaja dalam situasi rasmi.
+* Menjelaskan hubungan kata ganti nama dengan hubungan sosial<br>อธิบายความสัมพันธ์ของสรรพนามกับสถานะทางสังคม
+* Memberikan contoh Melayu dan Thai<br>ยกตัวอย่างทั้งมลายูและไทย
+* Menyatakan perbezaan yang jelas antara kedua-dua bahasa<br>บอกความแตกต่างชัดเจน
+?? Tulis semula e-mel itu dalam 4–5 ayat.<br>เขียนอีเมลฉบับปรับแก้ 4–5 ประโยค
+= *Assalamualaikum, Dr. Dengan hormatnya, saya pelajar dari Universiti Thaksin. Saya ingin bertanya tentang kursus yang ditawarkan. Pensyarah saya mencadangkan agar saya menghubungi Dr. Terima kasih.*
+* Kata ganti nama sopan digunakan secara konsisten<br>ใช้สรรพนามสุภาพสม่ำเสมอ
+* Terdiri daripada 4–5 ayat yang gramatis<br>มี 4–5 ประโยคที่ถูกไวยากรณ์
+* Struktur e-mel rasmi: salam, tujuan, penutup<br>มีโครงสร้างอีเมลทางการ
+```
 
 ## 10. Rumusan<br>สรุปบทเรียน
 
@@ -299,19 +357,44 @@ Kata nama boleh didahului penjodoh bilangan.<br>คำนามมีลัก�
 
 ### B. Soalan Subjektif<br>ข. อัตนัย
 
-1. Kemukakan tiga ujian untuk membuktikan bahawa sesuatu perkataan ialah kata nama, beserta contoh. (แนวคำตอบ: 1. didahului penjodoh bilangan: *seorang guru* · 2. diikuti *ini/itu*: *buku itu* · 3. hadir selepas kata sendi nama: *ke pasar* · 4. dinafikan dengan *bukan*: *bukan guru*)
-   เสนอวิธีทดสอบ 3 วิธีที่ใช้พิสูจน์ว่าคำหนึ่งเป็นคำนาม พร้อมตัวอย่าง
-2. Bentuk kata nama terbitan daripada kata dasar *ajar, tulis, bersih, kampung*, dua bentuk bagi setiap kata, dan jelaskan perbezaan maknanya. (แนวคำตอบ: *ajar*: *pengajar* pelaku, *pengajaran* proses · *tulis*: *penulis* pelaku, *tulisan* hasil · *bersih*: *pembersih* alat atau pelaku, *kebersihan* keadaan · *kampung*: *perkampungan* tempat, *kampungan* sifat)
-   สร้างคำนามแปลงจากคำฐาน *ajar, tulis, bersih, kampung* ให้ได้คำละ 2 รูป และอธิบายความหมายที่ต่างกัน
-3. Bandingkan *kami* dengan *kita*, dan *dia* dengan *beliau*, berdasarkan situasi penggunaan sebenar. (แนวคำตอบ: *Kami* tidak termasuk pendengar: pelajar berkata kepada pensyarah *Kami dari Thailand*. *Kita* termasuk pendengar: *Kita mulakan kelas sekarang*. *Dia* umum; *beliau* untuk orang yang dihormati seperti dekan, pensyarah dan orang tua.)
-   เปรียบเทียบ *kami* กับ *kita* และ *dia* กับ *beliau* โดยยกสถานการณ์ใช้จริง
+
+```latihan-terbuka
+Tajuk: Soalan Subjektif | ข้อสอบอัตนัย
+Arahan: Tulis jawapan anda, kemudian bandingkan dengan contoh jawapan dan kriteria penilaian. | เขียนคำตอบ แล้วเทียบกับตัวอย่างคำตอบและเกณฑ์การประเมิน
+?? Kemukakan tiga ujian untuk membuktikan bahawa sesuatu perkataan ialah kata nama, beserta contoh.<br>เสนอวิธีทดสอบ 3 วิธีที่ใช้พิสูจน์ว่าคำหนึ่งเป็นคำนาม พร้อมตัวอย่าง
+= 1. didahului penjodoh bilangan: *seorang guru* · 2. diikuti *ini/itu*: *buku itu* · 3. hadir selepas kata sendi nama: *ke pasar* · 4. dinafikan dengan *bukan*: *bukan guru*
+* Tiga ujian yang sah<br>มีการทดสอบที่ถูกต้อง 3 แบบ
+* Setiap ujian disertai contoh<br>ทุกการทดสอบมีตัวอย่าง
+* Contoh menggunakan kata nama yang sebenar<br>ตัวอย่างใช้คำนามจริง
+?? Bentuk kata nama terbitan daripada kata dasar *ajar, tulis, bersih, kampung*, dua bentuk bagi setiap kata, dan jelaskan perbezaan maknanya.<br>สร้างคำนามแปลงจากคำฐาน *ajar, tulis, bersih, kampung* ให้ได้คำละ 2 รูป และอธิบายความหมายที่ต่างกัน
+= *ajar*: *pengajar* pelaku, *pengajaran* proses · *tulis*: *penulis* pelaku, *tulisan* hasil · *bersih*: *pembersih* alat atau pelaku, *kebersihan* keadaan · *kampung*: *perkampungan* tempat, *kampungan* sifat
+* Dua bentuk kata nama terbitan bagi setiap kata dasar<br>นามแปลงสองรูปต่อคำฐาน
+* Imbuhan dikenal pasti dengan betul<br>ระบุปัจจัยถูก
+* Perbezaan makna dijelaskan (pelaku, hasil, proses, keadaan, tempat)<br>อธิบายความต่างของความหมาย
+?? Bandingkan *kami* dengan *kita*, dan *dia* dengan *beliau*, berdasarkan situasi penggunaan sebenar.<br>เปรียบเทียบ *kami* กับ *kita* และ *dia* กับ *beliau* โดยยกสถานการณ์ใช้จริง
+= *Kami* tidak termasuk pendengar: pelajar berkata kepada pensyarah *Kami dari Thailand*. *Kita* termasuk pendengar: *Kita mulakan kelas sekarang*. *Dia* umum; *beliau* untuk orang yang dihormati seperti dekan, pensyarah dan orang tua.
+* Membezakan *kami* dan *kita* berdasarkan pendengar<br>แยก *kami* กับ *kita* ตามผู้ฟัง
+* Membezakan *dia* dan *beliau* berdasarkan rasa hormat<br>แยก *dia* กับ *beliau* ตามความเคารพ
+* Situasi penggunaan yang realistik<br>สถานการณ์การใช้สมจริง
+```
 
 ### C. Soalan Pemikiran Kritis<br>ค. โจทย์คิดวิเคราะห์
 
-1. Bahasa Thai mempunyai lebih banyak kata ganti nama diri pertama berbanding bahasa Melayu. Bagaimanakah pelajar Thai mungkin tersalah memilih kata ganti nama Melayu? Analisis sekurang-kurangnya dua kes dan cadangkan pendekatan pengajaran.
-   ภาษาไทยมีสรรพนามบุรุษที่ 1 มากกว่าภาษามลายู ผู้เรียนชาวไทยอาจเลือกสรรพนามมลายูผิดอย่างไร วิเคราะห์อย่างน้อย 2 กรณีและเสนอแนวทางสอน
-2. Kata *pemandu* (orang yang memandu) dan *panduan* (buku petunjuk) berasal daripada kata dasar yang sama. Jelaskan peranan imbuhan terhadap makna dan golongan kata.
-   คำว่า *pemandu* (คนขับ) กับ *panduan* (คู่มือ) มาจากคำฐานเดียวกัน อธิบายบทบาทของปัจจัยต่อความหมายและชนิดคำ
+
+```latihan-terbuka
+Tajuk: Soalan Pemikiran Kritis | โจทย์คิดวิเคราะห์
+Arahan: Tulis jawapan anda, kemudian bandingkan dengan contoh jawapan dan kriteria penilaian. | เขียนคำตอบ แล้วเทียบกับตัวอย่างคำตอบและเกณฑ์การประเมิน
+?? Bahasa Thai mempunyai lebih banyak kata ganti nama diri pertama berbanding bahasa Melayu. Bagaimanakah pelajar Thai mungkin tersalah memilih kata ganti nama Melayu? Analisis sekurang-kurangnya dua kes dan cadangkan pendekatan pengajaran.<br>ภาษาไทยมีสรรพนามบุรุษที่ 1 มากกว่าภาษามลายู ผู้เรียนชาวไทยอาจเลือกสรรพนามมลายูผิดอย่างไร วิเคราะห์อย่างน้อย 2 กรณีและเสนอแนวทางสอน
+= Pelajar mungkin memadankan ฉัน/ผม/หนู dengan pilihan Melayu yang salah, contohnya menggunakan *aku* kepada pensyarah kerana menyangka setara dengan ฉัน, atau menggunakan nama sendiri seperti หนู. Cadangan: ajar kata ganti nama mengikut situasi (rasmi/mesra) dengan latihan main peranan.
+* Sekurang-kurangnya dua kes kesalahan yang munasabah<br>มีกรณีผิดที่สมเหตุสมผลอย่างน้อย 2 กรณี
+* Menjelaskan punca daripada bahasa Thai<br>อธิบายต้นเหตุจากภาษาไทย
+* Mencadangkan pendekatan pengajaran yang praktikal<br>เสนอวิธีสอนที่ใช้ได้จริง
+?? Kata *pemandu* (orang yang memandu) dan *panduan* (buku petunjuk) berasal daripada kata dasar yang sama. Jelaskan peranan imbuhan terhadap makna dan golongan kata.<br>คำว่า *pemandu* (คนขับ) กับ *panduan* (คู่มือ) มาจากคำฐานเดียวกัน อธิบายบทบาทของปัจจัยต่อความหมายและชนิดคำ
+= *pemandu* = *peN-* + *pandu* (pelaku, kata nama) · *panduan* = *pandu* + *-an* (hasil/benda, kata nama) · *memandu* = *meN-* + *pandu* (kata kerja). Imbuhan menentukan makna dan golongan kata.
+* Mencerakinkan kedua-dua kata dengan betul<br>แยกคำทั้งสองถูกต้อง
+* Menjelaskan makna yang dibawa oleh setiap imbuhan<br>อธิบายความหมายของปัจจัยแต่ละตัว
+* Mengaitkan imbuhan dengan golongan kata<br>โยงปัจจัยกับชนิดคำ
+```
 
 ## 12. Rujukan<br>เอกสารอ้างอิง
 

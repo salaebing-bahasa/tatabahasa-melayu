@@ -174,6 +174,67 @@ Ayat
 Jawab setiap latihan; jawapan disemak serta-merta beserta penjelasan.
 ทำแบบฝึกแต่ละชุด ระบบจะตรวจคำตอบทันทีพร้อมคำอธิบาย
 
+```latihan-objektif
+Arahan: Pilih jawapan yang paling tepat; sebab bagi setiap pilihan akan dipaparkan. | เลือกคำตอบที่ถูกที่สุด ระบบจะแสดงเหตุผลของทุกตัวเลือก
+?? Dalam *Ibu membeli ikan di pasar pagi tadi.*, unsur manakah keterangan tempat?<br>ส่วนใดเป็นส่วนขยายบอกสถานที่
+- *Ibu* :: Subjek.<br>ประธาน
+- *ikan* :: Objek.<br>กรรม
++ *di pasar* :: Menyatakan tempat dan boleh digugurkan.<br>บอกสถานที่ ตัดได้
+- *pagi tadi* :: Keterangan waktu, bukan tempat.<br>บอกเวลา
+?? Ujian manakah yang menunjukkan *di perpustakaan* ialah satu unit?<br>การทดสอบใดแสดงว่า *di perpustakaan* เป็นหน่วยเดียว
++ Ujian pemindahan: *Di perpustakaan pelajar itu membaca.* :: Seluruh frasa dapat dipindahkan bersama-sama.<br>ย้ายทั้งวลีได้พร้อมกัน
+- Menukar *di* kepada *ke* :: Mengubah makna, bukan ujian konstituen.<br>เปลี่ยนความหมาย ไม่ใช่การทดสอบ
+- Menambah *-lah* :: Bukan ujian konstituen.<br>ไม่ใช่การทดสอบส่วนประกอบ
+- Menterjemahkannya :: Terjemahan tidak menunjukkan unit sintaksis.<br>การแปลไม่แสดงหน่วย
+?? *Guru itu* dalam *Ayah saya guru itu.* berfungsi sebagai<br>*guru itu* ทำหน้าที่
+- subjek :: Subjeknya *Ayah saya*.<br>ประธานคือ *Ayah saya*
+- objek :: Tiada kata kerja transitif.<br>ไม่มีสกรรมกริยา
++ predikat :: Menerangkan subjek *Ayah saya*.<br>กล่าวถึงประธาน
+- keterangan :: Tidak boleh digugurkan.<br>ตัดไม่ได้
+?? Manakah klausa tak bebas?<br>ข้อใดเป็นอนุประโยคไม่อิสระ
+- *Dia sakit.* :: Klausa bebas; boleh berdiri sendiri.<br>อนุประโยคอิสระ
++ *yang tinggal di Pattani* :: Klausa relatif bergantung pada kata nama yang diterangkan.<br>ต้องพึ่งนามที่ขยาย
+- *rumah batu itu* :: Frasa, bukan klausa.<br>เป็นวลี
+- *Adik tidur.* :: Klausa bebas.<br>อนุประโยคอิสระ
+```
+
+```latihan-isi
+Arahan: Taipkan istilah yang betul. | พิมพ์ศัพท์ที่ถูกต้อง
+Unit yang mempunyai subjek dan predikat ialah ___. | klausa | Frasa tiada subjek–predikat; klausa ada. | วลีไม่มี อนุประโยคมี
+Dalam *Mereka tinggal di Yala*, *di Yala* ialah ___. | pelengkap | Wajib kerana *tinggal* memerlukannya. | จำเป็นเพราะ *tinggal* ต้องมี
+Unsur yang boleh digugurkan tanpa merosakkan ayat ialah ___. | keterangan | Pelengkap dan objek tidak boleh digugurkan. | ส่วนเติมเต็มและกรรมตัดไม่ได้
+Ayat terdiri daripada klausa dan ___. | intonasi | Intonasi menentukan jenis ayat. | ทำนองเสียงกำหนดชนิดประโยค
+Jenis frasa seperti FN dan FK disebut ___. | kategori | Fungsi pula peranan dalam ayat. | ส่วนหน้าที่คือบทบาทในประโยค
+```
+
+```latihan-golong
+Tajuk: Kenal Pasti Golongan Kata | ระบุชนิดของคำ
+Arahan: Tentukan golongan kata bagi perkataan yang diberikan. | ระบุชนิดของคำที่กำหนด
+Kategori: Kata nama · คำนาม | Kata kerja · คำกริยา | Kata adjektif · คำคุณศัพท์ | Kata tugas · คำไวยากรณ์
+*Pelajar* dalam *Pelajar itu sangat rajin.* | Kata nama | Inti subjek. | แกนของประธาน
+*sangat* dalam *Pelajar itu sangat rajin.* | Kata tugas | Kata penguat. | คำเน้น
+*rajin* dalam *Pelajar itu sangat rajin.* | Kata adjektif | Inti predikat FA. | แกนภาคแสดงวลีคุณศัพท์
+*membaca* dalam *Dia membaca buku.* | Kata kerja | Inti predikat FK. | แกนวลีกริยา
+*bahawa* dalam *Saya tahu bahawa dia sakit.* | Kata tugas | Kata hubung komplemen. | คำเชื่อม
+*tahu* dalam *Saya tahu bahawa dia sakit.* | Kata kerja | Inti predikat ayat induk. | แกนภาคแสดงของประโยคหลัก
+```
+
+```latihan-betulkan
+Arahan: Klik bahagian yang salah susunannya. | กดส่วนที่เรียงผิด
+[Pelajar itu yang→Pelajar yang] datang dari Pattani itu rajin. | *itu* tidak hadir sebelum klausa relatif. | *itu* ไม่อยู่หน้าอนุประโยคสัมพันธ์
+Dia [belajar sangat pandai→sangat pandai] dalam matematik. | Terjemahan kata demi kata. | แปลคำต่อคำ
+Bahasa Melayu digunakan di Narathiwat, [di mana→tempat] saya dilahirkan. | *di mana* ialah kata tanya, bukan penghubung relatif. | *di mana* เป็นคำถาม ไม่ใช่คำเชื่อมสัมพันธ์
+```
+
+```latihan-analisis
+Arahan: Pilih fungsi bagi setiap bahagian ayat, kemudian klik Semak. | เลือกหน้าที่ของแต่ละส่วนในประโยค แล้วกดตรวจ
+Label: Subjek · ประธาน | Inti predikat · แกนภาคแสดง | Objek · กรรม | Pelengkap · ส่วนเติมเต็ม | Keterangan · ส่วนขยาย
+[Encik Hassan|Subjek] [menghantar|Inti predikat] [anaknya|Objek] [ke sekolah|Keterangan] [setiap pagi|Keterangan]. | Dua keterangan: arah dan waktu. | ส่วนขยายสองส่วน
+[Mereka|Subjek] [tinggal|Inti predikat] [di Hat Yai|Pelengkap]. | *di Hat Yai* tidak boleh digugurkan. | ตัดไม่ได้
+[Pelajar yang datang dari Pattani itu|Subjek] [sangat cemerlang|Inti predikat] [dalam pelajaran|Keterangan]. | Subjek frasa nama panjang dengan klausa relatif. | ประธานเป็นวลีนามยาว
+[Kami|Subjek] [berbincang|Inti predikat] [dengan pensyarah|Keterangan] [semalam|Keterangan]. | *dengan pensyarah* keterangan penyertaan. | ส่วนขยายบอกการร่วม
+```
+
 ```latihan-golong
 Arahan: Tentukan fungsi bahagian bercetak tebal. | ระบุหน้าที่ของส่วนที่เป็นตัวหนา
 Kategori: Subjek · ประธาน | Objek · กรรม | Pelengkap · ส่วนเติมเต็ม | Keterangan · ส่วนขยาย
@@ -195,13 +256,6 @@ Kategori: Frasa · วลี | Klausa tak bebas · อนุประโยค�
 *yang tinggal di Pattani* | Klausa tak bebas | Klausa relatif. | อนุประโยคสัมพันธ์
 ```
 
-```latihan-betulkan
-Arahan: Klik bahagian yang salah susunannya. | กดส่วนที่เรียงผิด
-[Pelajar itu yang→Pelajar yang] datang dari Pattani itu rajin. | *itu* tidak hadir sebelum klausa relatif. | *itu* ไม่อยู่หน้าอนุประโยคสัมพันธ์
-Dia [belajar sangat pandai→sangat pandai] dalam matematik. | Terjemahan kata demi kata. | แปลคำต่อคำ
-Bahasa Melayu digunakan di Narathiwat, [di mana→tempat] saya dilahirkan. | *di mana* ialah kata tanya, bukan penghubung relatif. | *di mana* เป็นคำถาม ไม่ใช่คำเชื่อมสัมพันธ์
-```
-
 ```latihan-benar
 Arahan: Tentukan sama ada setiap pernyataan betul atau salah. | ตัดสินว่าข้อความแต่ละข้อถูกหรือผิด
 Frasa mempunyai subjek dan predikat.<br>วลีมีประธานและภาคแสดง | S | Frasa tiada struktur subjek–predikat. | วลีไม่มีโครงสร้างประธาน–ภาคแสดง
@@ -220,14 +274,30 @@ Ayat = klausa + intonasi.<br>ประโยค = อนุประโยค + 
 **Aspek analisis**
 **ประเด็นวิเคราะห์**
 
-1. Cerakinkan subjek dan predikat ayat Thai dan ayat Melayu itu, kemudian bandingkan.
-   แยกประธานและภาคแสดงของประโยคไทยและประโยคมลายู เทียบกัน
-2. Apakah kesalahan kedudukan *itu* dan susunan *belajar sangat pandai*?
-   ตำแหน่งของ *itu* และการเรียง *belajar sangat pandai* ผิดอย่างไร
-3. Kemukakan ayat yang telah dibetulkan (แนวคำตอบ: *Pelajar yang datang dari Pattani itu sangat cemerlang dalam pelajaran.*) dan lukiskan rajah pohonnya.
-   เสนอฉบับแก้และเขียนแผนภูมิต้นไม้
-4. Bincangkan: bagaimanakah pengetahuan sintaksis membantu kita menggunakan alat terjemahan secara kritis?
-   อภิปราย: ความรู้วากยสัมพันธ์ช่วยให้ใช้เครื่องมือแปลอย่างมีวิจารณญาณได้อย่างไร
+```latihan-terbuka
+Tajuk: Soalan Kajian Kes | คำถามกรณีศึกษา
+Arahan: Tulis jawapan anda, kemudian bandingkan dengan contoh jawapan dan kriteria penilaian. | เขียนคำตอบ แล้วเทียบกับตัวอย่างคำตอบและเกณฑ์การประเมิน
+?? Cerakinkan subjek dan predikat ayat Thai dan ayat Melayu itu, kemudian bandingkan.<br>แยกประธานและภาคแสดงของประโยคไทยและประโยคมลายู เทียบกัน
+= Thai: [นักศึกษาที่มาจากปัตตานีคนนั้น] subjek + [เรียนเก่งมาก] predikat. Melayu (mesin): [Pelajar itu yang datang dari Pattani] + [belajar sangat pandai]. Subjek kedua-duanya berpadanan, tetapi kedudukan *itu* dan susunan predikat meniru bahasa Thai.
+* Sempadan subjek–predikat yang betul bagi kedua-dua ayat<br>แบ่งประธาน–ภาคแสดงถูกทั้งสองประโยค
+* Membandingkan susunan kedua-dua bahasa<br>เปรียบเทียบการเรียงสองภาษา
+* Menunjukkan bahagian yang tidak sepadan<br>ชี้ส่วนที่ไม่ตรงกัน
+?? Apakah kesalahan kedudukan *itu* dan susunan *belajar sangat pandai*?<br>ตำแหน่งของ *itu* และการเรียง *belajar sangat pandai* ผิดอย่างไร
+= *itu* sepatutnya di hujung frasa nama, selepas klausa relatif: *Pelajar yang datang dari Pattani itu*. *belajar sangat pandai* ialah terjemahan kata demi kata; bentuk Melayu ialah *sangat pandai/cemerlang dalam pelajaran*.
+* Kesalahan kedudukan *itu* dijelaskan<br>อธิบายตำแหน่ง *itu*
+* Kesalahan susunan predikat dijelaskan<br>อธิบายการเรียงภาคแสดง
+* Bentuk pembetulan diberikan<br>ให้รูปที่ถูก
+?? Kemukakan ayat yang telah dibetulkan dan lukiskan rajah pohonnya.<br>เสนอฉบับแก้และเขียนแผนภูมิต้นไม้
+= *Pelajar yang datang dari Pattani itu sangat cemerlang dalam pelajaran.*
+* Ayat yang dibetulkan gramatis dan maknanya setia<br>ประโยคที่แก้ถูกไวยากรณ์และความหมายตรง
+* Rajah pohon menunjukkan subjek dan predikat<br>แผนภาพแสดงประธานและภาคแสดง
+* Klausa relatif diletakkan dalam frasa nama subjek<br>อนุประโยคสัมพันธ์อยู่ในวลีนามประธาน
+?? Bincangkan: bagaimanakah pengetahuan sintaksis membantu kita menggunakan alat terjemahan secara kritis?<br>อภิปราย: ความรู้วากยสัมพันธ์ช่วยให้ใช้เครื่องมือแปลอย่างมีวิจารณญาณได้อย่างไร
+= Pengetahuan sintaksis membolehkan kita mengenal pasti unit yang salah susun, membandingkan struktur ayat sumber dan sasaran, dan menyunting hasil mesin dan bukan menerimanya bulat-bulat.
+* Sekurang-kurangnya dua manfaat yang jelas<br>ประโยชน์ชัดเจนอย่างน้อย 2 ข้อ
+* Dikaitkan dengan contoh kajian kes<br>โยงกับกรณีศึกษา
+* Kesimpulan kritis<br>สรุปอย่างมีวิจารณญาณ
+```
 
 ## 10. Rumusan<br>สรุปบทเรียน
 
@@ -284,19 +354,44 @@ Ayat = klausa + intonasi.<br>ประโยค = อนุประโยค + 
 
 ### B. Soalan Subjektif<br>ข. อัตนัย
 
-1. Huraikan perbezaan antara *frasa, klausa* dan *ayat* dengan contoh yang dibina secara bertingkat. (แนวคำตอบ: frasa *pelajar itu* — tiada subjek dan predikat → klausa *pelajar itu membaca* — ada subjek dan predikat → ayat *Pelajar itu membaca buku cerita.* — klausa + intonasi penyata)
-   อธิบายความแตกต่างระหว่าง *frasa, klausa* และ *ayat* พร้อมตัวอย่างที่ต่อยอดกัน
-2. Lukiskan rajah pohon bagi ayat *Encik Hassan menghantar anaknya ke sekolah setiap pagi.* (แนวคำตอบ: Ayat → Subjek FN *Encik Hassan* + Predikat FK: KK *menghantar* · Objek FN *anaknya* · Keterangan FSN *ke sekolah* · Keterangan FN *setiap pagi*)
-   เขียนแผนภูมิต้นไม้ของ *Encik Hassan menghantar anaknya ke sekolah setiap pagi.*
-3. Jelaskan dengan contoh mengapa "fungsi" perlu dibezakan daripada "kategori" dalam analisis ayat. (แนวคำตอบ: Kategori = jenis frasa, fungsi = peranan dalam ayat. *guru itu* tetap FN tetapi menjadi subjek dalam *Guru itu mengajar*, objek dalam *Saya menghormati guru itu* dan predikat dalam *Ayah saya guru itu*.)
-   อธิบายด้วยตัวอย่างว่าทำไมต้องแยก "หน้าที่" ออกจาก "ประเภท" ในการวิเคราะห์ประโยค
+
+```latihan-terbuka
+Tajuk: Soalan Subjektif | ข้อสอบอัตนัย
+Arahan: Tulis jawapan anda, kemudian bandingkan dengan contoh jawapan dan kriteria penilaian. | เขียนคำตอบ แล้วเทียบกับตัวอย่างคำตอบและเกณฑ์การประเมิน
+?? Huraikan perbezaan antara *frasa, klausa* dan *ayat* dengan contoh yang dibina secara bertingkat.<br>อธิบายความแตกต่างระหว่าง *frasa, klausa* และ *ayat* พร้อมตัวอย่างที่ต่อยอดกัน
+= frasa *pelajar itu* — tiada subjek dan predikat → klausa *pelajar itu membaca* — ada subjek dan predikat → ayat *Pelajar itu membaca buku cerita.* — klausa + intonasi penyata
+* Takrif frasa, klausa dan ayat yang tepat<br>นิยามถูกทั้งสาม
+* Contoh yang dibina secara bertingkat daripada frasa yang sama<br>ตัวอย่างขยายจากวลีเดียวกัน
+* Perbezaan subjek–predikat dan intonasi dinyatakan<br>ระบุเรื่องประธาน–ภาคแสดงและทำนองเสียง
+?? Lukiskan rajah pohon bagi ayat *Encik Hassan menghantar anaknya ke sekolah setiap pagi.*<br>เขียนแผนภูมิต้นไม้ของ *Encik Hassan menghantar anaknya ke sekolah setiap pagi.*
+= Ayat → Subjek FN *Encik Hassan* + Predikat FK: KK *menghantar* · Objek FN *anaknya* · Keterangan FSN *ke sekolah* · Keterangan FN *setiap pagi*
+* Subjek dan predikat dipisahkan dengan betul<br>แยกประธานและภาคแสดงถูก
+* Objek dan dua keterangan dilabel<br>ระบุกรรมและส่วนขยายสองส่วน
+* Kategori frasa dinyatakan (FN, FK, FSN)<br>ระบุชนิดวลี
+?? Jelaskan dengan contoh mengapa "fungsi" perlu dibezakan daripada "kategori" dalam analisis ayat.<br>อธิบายด้วยตัวอย่างว่าทำไมต้องแยก "หน้าที่" ออกจาก "ประเภท" ในการวิเคราะห์ประโยค
+= Kategori = jenis frasa, fungsi = peranan dalam ayat. *guru itu* tetap FN tetapi menjadi subjek dalam *Guru itu mengajar*, objek dalam *Saya menghormati guru itu* dan predikat dalam *Ayah saya guru itu*.
+* Takrif fungsi dan kategori<br>นิยามหน้าที่และชนิดวลี
+* Satu FN dengan sekurang-kurangnya dua fungsi berbeza<br>วลีนามเดียวกันในหน้าที่ต่างกันอย่างน้อย 2
+* Menjelaskan mengapa perbezaan itu penting<br>อธิบายเหตุที่ต้องแยก
+```
 
 ### C. Soalan Pemikiran Kritis<br>ค. โจทย์คิดวิเคราะห์
 
-1. Ayat *Isteri peguam yang kaya itu...* mempunyai dua makna (siapakah yang kaya). Tunjukkan ketaksaan (*ketaksaan*) itu melalui dua cara pencerakinan konstituen dan cadangkan cara menulis semula ayat itu supaya jelas.
-   ประโยค *Isteri peguam yang kaya itu...* มีสองความหมาย (ใครรวย) จงแสดงความกำกวม (*ketaksaan*) ด้วยการแยกส่วนประกอบสองแบบ และเสนอวิธีเขียนใหม่ให้ชัดเจน
-2. Kumpulkan tiga ayat Melayu yang diterjemahkan oleh mesin. Analisis konstituennya, kenal pasti bahagian yang tersalah ditafsirkan sebagai unit oleh mesin, dan betulkan.
-   เก็บประโยคมลายูที่แปลด้วยเครื่อง 3 ประโยค วิเคราะห์ส่วนประกอบ ระบุจุดที่เครื่องตีความผิดหน่วย และแก้ไข
+
+```latihan-terbuka
+Tajuk: Soalan Pemikiran Kritis | โจทย์คิดวิเคราะห์
+Arahan: Tulis jawapan anda, kemudian bandingkan dengan contoh jawapan dan kriteria penilaian. | เขียนคำตอบ แล้วเทียบกับตัวอย่างคำตอบและเกณฑ์การประเมิน
+?? Ayat *Isteri peguam yang kaya itu...* mempunyai dua makna (siapakah yang kaya). Tunjukkan ketaksaan (*ketaksaan*) itu melalui dua cara pencerakinan konstituen dan cadangkan cara menulis semula ayat itu supaya jelas.<br>ประโยค *Isteri peguam yang kaya itu...* มีสองความหมาย (ใครรวย) จงแสดงความกำกวม (*ketaksaan*) ด้วยการแยกส่วนประกอบสองแบบ และเสนอวิธีเขียนใหม่ให้ชัดเจน
+= Makna 1: [Isteri [peguam yang kaya]] itu — peguam yang kaya. Makna 2: [[Isteri peguam] yang kaya] itu — isteri yang kaya. Tulis semula: *Isteri kepada peguam kaya itu…* atau *Isteri peguam itu, yang kaya, …*
+* Dua cerakinan konstituen yang berbeza<br>แยกส่วนประกอบได้สองแบบ
+* Makna setiap cerakinan dijelaskan<br>อธิบายความหมายของแต่ละแบบ
+* Ayat tulis semula yang tidak taksa<br>เขียนใหม่ให้ไม่กำกวม
+?? Kumpulkan tiga ayat Melayu yang diterjemahkan oleh mesin. Analisis konstituennya, kenal pasti bahagian yang tersalah ditafsirkan sebagai unit oleh mesin, dan betulkan.<br>เก็บประโยคมลายูที่แปลด้วยเครื่อง 3 ประโยค วิเคราะห์ส่วนประกอบ ระบุจุดที่เครื่องตีความผิดหน่วย และแก้ไข
+= Contoh: Thai "บ้านหลังใหญ่ของครูคนนั้น" → mesin: *Rumah besar daripada guru itu* · analisis: *daripada* bukan penanda milik → betul: *Rumah besar guru itu*. Ulang langkah yang sama bagi tiga ayat: ayat sumber → hasil mesin → cerakinan konstituen → unit yang salah → pembetulan.
+* Tiga ayat sebenar daripada alat terjemahan<br>สามประโยคจริงจากเครื่องแปล
+* Analisis konstituen bagi setiap ayat<br>วิเคราะห์ส่วนประกอบทุกประโยค
+* Bahagian yang salah dikenal pasti dan dibetulkan<br>ระบุและแก้ส่วนที่ผิด
+```
 
 ## 12. Rujukan<br>เอกสารอ้างอิง
 

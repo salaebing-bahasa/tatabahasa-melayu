@@ -186,12 +186,65 @@ FN
 Jawab setiap latihan; jawapan disemak serta-merta beserta penjelasan.
 ทำแบบฝึกแต่ละชุด ระบบจะตรวจคำตอบทันทีพร้อมคำอธิบาย
 
+```latihan-objektif
+Arahan: Pilih jawapan yang paling tepat; sebab bagi setiap pilihan akan dipaparkan. | เลือกคำตอบที่ถูกที่สุด ระบบจะแสดงเหตุผลของทุกตัวเลือก
+?? Manakah frasa nama yang betul susunannya?<br>ข้อใดเป็นวลีนามที่เรียงถูก
+- *itu dua buah rumah* :: *itu* penentu belakang.<br>*itu* อยู่ท้าย
++ *dua buah rumah itu* :: Penentu hadapan + inti + penentu belakang.<br>หน้า + หลัก + หลัง
+- *rumah dua buah itu* :: Bilangan + penjodoh bilangan hadir sebelum inti.<br>จำนวน + ลักษณนามอยู่หน้าคำหลัก
+- *dua rumah buah itu* :: Penjodoh bilangan terpisah daripada bilangan.<br>ลักษณนามแยกจากจำนวน
+?? *menjadi guru* — *guru* ialah<br>*guru* คือ
+- objek :: *menjadi* tidak boleh dipasifkan.<br>*menjadi* แปลงเป็นกรรมวาจกไม่ได้
++ pelengkap :: Wajib dan melengkapkan *menjadi*.<br>จำเป็นและเติมเต็ม *menjadi*
+- keterangan :: Tidak boleh digugurkan.<br>ตัดไม่ได้
+- penerang :: Penerang terdapat dalam frasa nama.<br>คำขยายอยู่ในวลีนาม
+?? Manakah pengecualian Hukum D-M?<br>ข้อใดเป็นข้อยกเว้นกฎ ดี-เอ็ม
+- *kopi panas* :: Mematuhi D-M.<br>เป็นไปตามกฎ
++ *naib canselor* :: Penerang *naib* di hadapan inti.<br>คำขยายอยู่หน้า
+- *menteri besar* :: Mematuhi D-M.<br>เป็นไปตามกฎ
+- *baju merah* :: Mematuhi D-M.<br>เป็นไปตามกฎ
+?? *Dengan pisau* dalam *Dia memotong kek dengan pisau.* ialah keterangan<br>*dengan pisau* เป็นส่วนขยายบอก
+- cara :: Cara contohnya *dengan cepat*.<br>วิธี เช่น *dengan cepat*
++ alat :: *pisau* ialah alat.<br>*pisau* เป็นเครื่องมือ
+- penyertaan :: Penyertaan contohnya *dengan rakannya*.<br>การร่วม เช่น *dengan rakannya*
+- tempat :: Tiada makna tempat.<br>ไม่บอกสถานที่
+```
+
 ```latihan-isi
 Arahan: Susun semula mengikut Hukum D-M. | เรียงใหม่ตามกฎ ดี-เอ็ม
 *Thai masakan* → ___ | masakan Thai | Inti *masakan* di hadapan. | คำหลักอยู่หน้า
 *merah baju* → ___ | baju merah | Inti *baju* di hadapan. | คำหลักอยู่หน้า
 *Songkhla Masjid* → ___ | Masjid Songkhla | Inti *Masjid* di hadapan. | คำหลักอยู่หน้า
 *Murah Hotel* → ___ | Hotel Murah | Inti *Hotel* di hadapan. | คำหลักอยู่หน้า
+```
+
+```latihan-golong
+Tajuk: Kenal Pasti Golongan Kata | ระบุชนิดของคำ
+Arahan: Tentukan golongan kata bagi perkataan yang diberikan. | ระบุชนิดของคำที่กำหนด
+Kategori: Kata nama · คำนาม | Kata kerja · คำกริยา | Kata adjektif · คำคุณศัพท์ | Kata tugas · คำไวยากรณ์
+*dengan* dalam *dengan pisau* | Kata tugas | Kata sendi nama. | คำบุพบท
+*peserta* dalam *para peserta* | Kata nama | Inti frasa nama. | คำหลักของวลีนาม
+*batu* dalam *rumah batu* | Kata nama | Kata nama sebagai penerang. | คำนามทำหน้าที่ขยาย
+*merah* dalam *baju merah* | Kata adjektif | Penerang adjektif. | คุณศัพท์ขยาย
+*basuh* dalam *mesin basuh* | Kata kerja | Kata kerja sebagai penerang. | กริยาทำหน้าที่ขยาย
+*sedang* dalam *Adik sedang tidur.* | Kata tugas | Kata bantu aspek. | คำช่วยบอกกาล
+```
+
+```latihan-betulkan
+Arahan: Klik bahagian yang melanggar Hukum D-M. | กดส่วนที่ผิดกฎ ดี-เอ็ม
+Kami makan di [Thai restoran→restoran Thai] itu. | Inti *restoran* hadir dahulu. | คำหลักอยู่หน้า
+Dia memakai [merah baju→baju merah] hari ini. | Penerang *merah* hadir selepas inti. | คำขยายอยู่หลัง
+Kami menginap di [Murah Hotel→Hotel Murah] dekat stesen. | Susunan M-D meniru bahasa Inggeris. | เลียนแบบภาษาอังกฤษ
+[Itu tiga orang pelajar→Tiga orang pelajar itu] berasal dari Malaysia. | *itu* penentu belakang di hujung frasa nama. | *itu* อยู่ท้ายวลีนาม
+```
+
+```latihan-analisis
+Arahan: Pilih peranan setiap bahagian frasa nama dalam ayat, kemudian klik Semak. | เลือกบทบาทของแต่ละส่วนในวลีนาม แล้วกดตรวจ
+Label: Penentu hadapan · ชี้เฉพาะหน้า | Inti · คำหลัก | Penerang · คำขยาย | Penentu belakang · ชี้เฉพาะหลัง
+[Tiga orang|Penentu hadapan] [pelajar|Inti] [Malaysia|Penerang] [itu|Penentu belakang] | *tiga orang* bilangan + penjodoh bilangan. | จำนวน + ลักษณนาม
+[Semua|Penentu hadapan] [bilik|Inti] [kuliah baharu|Penerang] [ini|Penentu belakang] | *kuliah baharu* menerangkan *bilik*. | ขยาย *bilik*
+[Encik|Penentu hadapan] [Ahmad|Inti] [dari Kedah|Penerang] | Gelaran ialah penentu hadapan. | คำนำหน้าชื่อเป็นคำชี้เฉพาะหน้า
+[Para|Penentu hadapan] [peserta|Inti] [dari Malaysia|Penerang] | Frasa sendi nama *dari Malaysia* menjadi penerang. | วลีบุพบทเป็นคำขยาย
 ```
 
 ```latihan-golong
@@ -230,12 +283,25 @@ Dalam *Dia menjadi guru*, *guru* ialah objek.<br>ใน *Dia menjadi guru* — *
 **Aspek analisis**
 **ประเด็นวิเคราะห์**
 
-1. Kenal pasti unsur inti dan penerang bagi setiap papan tanda, kemudian betulkan berdasarkan Hukum D-M. (แนวคำตอบ: *Kedai Makanan Thai, Pasar Terapung Hat Yai, Kopi dan Teh Panas, Hotel Murah Dekat Stesen*)
-   ระบุคำหลักและคำขยายของแต่ละป้าย และแก้ให้ถูกตามกฎ ดี-เอ็ม
-2. Kenal pasti puncanya: adakah papan tanda ini dipengaruhi struktur bahasa Thai atau bahasa Inggeris? Gunakan bukti daripada susunan kata.
-   ค้นหาสาเหตุ: ป้ายเหล่านี้ได้รับอิทธิพลจากโครงสร้างภาษาไทยหรือภาษาอังกฤษ ใช้หลักฐานจากลำดับคำ
-3. Reka papan tanda dwibahasa (Thai–Melayu) untuk sebuah kedai sebenar dalam komuniti anda.
-   ออกแบบป้ายสองภาษา (ไทย–มลายู) สำหรับร้านค้าจริงในชุมชนของนักศึกษา 1 แห่ง
+```latihan-terbuka
+Tajuk: Soalan Kajian Kes | คำถามกรณีศึกษา
+Arahan: Tulis jawapan anda, kemudian bandingkan dengan contoh jawapan dan kriteria penilaian. | เขียนคำตอบ แล้วเทียบกับตัวอย่างคำตอบและเกณฑ์การประเมิน
+?? Kenal pasti unsur inti dan penerang bagi setiap papan tanda, kemudian betulkan berdasarkan Hukum D-M.<br>ระบุคำหลักและคำขยายของแต่ละป้าย และแก้ให้ถูกตามกฎ ดี-เอ็ม
+= *Kedai Makanan Thai, Pasar Terapung Hat Yai, Kopi dan Teh Panas, Hotel Murah Dekat Stesen*
+* Inti dan penerang dikenal pasti bagi keempat-empat papan tanda<br>ระบุคำหลักและคำขยายครบสี่ป้าย
+* Pembetulan mematuhi Hukum D-M<br>แก้ตามกฎ ดี-เอ็ม
+* Ejaan dan huruf besar yang betul<br>สะกดและตัวใหญ่ถูกต้อง
+?? Kenal pasti puncanya: adakah papan tanda ini dipengaruhi struktur bahasa Thai atau bahasa Inggeris? Gunakan bukti daripada susunan kata.<br>ค้นหาสาเหตุ: ป้ายเหล่านี้ได้รับอิทธิพลจากโครงสร้างภาษาไทยหรือภาษาอังกฤษ ใช้หลักฐานจากลำดับคำ
+= Papan tanda seperti *Thai Kedai Makanan* dan *Murah Hotel* meniru susunan M-D bahasa Inggeris (*Thai Food Shop*, *Cheap Hotel*); bahasa Thai pula D-M (ร้านอาหารไทย), jadi puncanya bahasa Inggeris.
+* Mengenal pasti punca dengan betul<br>ระบุต้นเหตุถูก
+* Bukti daripada susunan kata<br>มีหลักฐานจากการเรียงคำ
+* Perbandingan tiga bahasa<br>เปรียบเทียบสามภาษา
+?? Reka papan tanda dwibahasa (Thai–Melayu) untuk sebuah kedai sebenar dalam komuniti anda.<br>ออกแบบป้ายสองภาษา (ไทย–มลายู) สำหรับร้านค้าจริงในชุมชนของนักศึกษา 1 แห่ง
+= Contoh: *Kedai Kopi Pak Man · ร้านกาแฟลุงมัน* — inti *Kedai*, penerang *Kopi* dan *Pak Man* mengikut D-M.
+* Papan tanda dwibahasa yang lengkap<br>ป้ายสองภาษาครบ
+* Bahagian Melayu mematuhi Hukum D-M<br>ส่วนภาษามลายูตามกฎ ดี-เอ็ม
+* Ejaan dan huruf besar yang betul<br>สะกดถูกต้อง
+```
 
 ## 10. Rumusan<br>สรุปบทเรียน
 
@@ -292,19 +358,44 @@ Dalam *Dia menjadi guru*, *guru* ialah objek.<br>ใน *Dia menjadi guru* — *
 
 ### B. Soalan Subjektif<br>ข. อัตนัย
 
-1. Analisis frasa nama *kesemua lima buah bilik kuliah baharu di Fakulti Sastera itu* kepada penentu hadapan, inti, penerang dan penentu belakang. (แนวคำตอบ: penentu hadapan *kesemua lima buah* · inti *bilik* · penerang *kuliah baharu di Fakulti Sastera* · penentu belakang *itu*)
-   วิเคราะห์วลีนาม *kesemua lima buah bilik kuliah baharu di Fakulti Sastera itu* เป็นคำชี้เฉพาะหน้า คำหลัก คำขยาย และคำชี้เฉพาะหลัง
-2. Perluas frasa kerja *membaca* dengan kata bantu, objek dan tiga jenis keterangan, kemudian tandakan setiap unsur. (แนวคำตอบ: *Mereka sedang membaca buku rujukan di perpustakaan pada waktu petang dengan tekun.* — kata bantu *sedang* · inti *membaca* · objek *buku rujukan* · keterangan tempat *di perpustakaan* · waktu *pada waktu petang* · cara *dengan tekun*)
-   ขยายวลีกริยา *membaca* ให้มีคำช่วย กรรม และส่วนขยาย 3 ชนิด แล้วชี้แต่ละส่วน
-3. Bandingkan susunan kata dalam frasa nama bahasa Melayu, bahasa Thai dan bahasa Inggeris dengan tiga contoh frasa. (แนวคำตอบ: Bahasa Melayu dan bahasa Thai mengikut susunan D-M, manakala bahasa Inggeris M-D. Contoh: *rumah besar* — big house · *kopi panas* — hot coffee · *buku saya* — my book)
-   เปรียบเทียบลำดับคำในวลีนามภาษามลายู ภาษาไทย และภาษาอังกฤษ ด้วยตัวอย่าง 3 วลี
+
+```latihan-terbuka
+Tajuk: Soalan Subjektif | ข้อสอบอัตนัย
+Arahan: Tulis jawapan anda, kemudian bandingkan dengan contoh jawapan dan kriteria penilaian. | เขียนคำตอบ แล้วเทียบกับตัวอย่างคำตอบและเกณฑ์การประเมิน
+?? Analisis frasa nama *kesemua lima buah bilik kuliah baharu di Fakulti Sastera itu* kepada penentu hadapan, inti, penerang dan penentu belakang.<br>วิเคราะห์วลีนาม *kesemua lima buah bilik kuliah baharu di Fakulti Sastera itu* เป็นคำชี้เฉพาะหน้า คำหลัก คำขยาย และคำชี้เฉพาะหลัง
+= penentu hadapan *kesemua lima buah* · inti *bilik* · penerang *kuliah baharu di Fakulti Sastera* · penentu belakang *itu*
+* Penentu hadapan *kesemua lima buah*<br>คำชี้เฉพาะหน้า
+* Inti *bilik* dan penerang *kuliah baharu di Fakulti Sastera*<br>คำหลักและคำขยาย
+* Penentu belakang *itu*<br>คำชี้เฉพาะหลัง
+?? Perluas frasa kerja *membaca* dengan kata bantu, objek dan tiga jenis keterangan, kemudian tandakan setiap unsur.<br>ขยายวลีกริยา *membaca* ให้มีคำช่วย กรรม และส่วนขยาย 3 ชนิด แล้วชี้แต่ละส่วน
+= *Mereka sedang membaca buku rujukan di perpustakaan pada waktu petang dengan tekun.* — kata bantu *sedang* · inti *membaca* · objek *buku rujukan* · keterangan tempat *di perpustakaan* · waktu *pada waktu petang* · cara *dengan tekun*
+* Kata bantu, objek dan tiga keterangan hadir<br>มีคำช่วย กรรม และส่วนขยายสามชนิด
+* Setiap unsur dilabel dengan betul<br>ระบุทุกส่วนถูก
+* Ayat yang gramatis<br>ประโยคถูกไวยากรณ์
+?? Bandingkan susunan kata dalam frasa nama bahasa Melayu, bahasa Thai dan bahasa Inggeris dengan tiga contoh frasa.<br>เปรียบเทียบลำดับคำในวลีนามภาษามลายู ภาษาไทย และภาษาอังกฤษ ด้วยตัวอย่าง 3 วลี
+= Bahasa Melayu dan bahasa Thai mengikut susunan D-M, manakala bahasa Inggeris M-D. Contoh: *rumah besar* — big house · *kopi panas* — hot coffee · *buku saya* — my book
+* Tiga contoh frasa dalam tiga bahasa<br>สามตัวอย่างในสามภาษา
+* Menyatakan D-M bagi Melayu dan Thai, M-D bagi Inggeris<br>ระบุ ดี-เอ็ม และ เอ็ม-ดี
+* Perbandingan yang jelas<br>เปรียบเทียบชัดเจน
+```
 
 ### C. Soalan Pemikiran Kritis<br>ค. โจทย์คิดวิเคราะห์
 
-1. Banyak nama agensi di selatan Thailand menggunakan bahasa Melayu yang diterjemahkan perkataan demi perkataan daripada bahasa Inggeris. Kumpulkan tiga nama daripada papan tanda sebenar, analisis berdasarkan Hukum D-M dan cadangkan nama yang betul.
-   ชื่อหน่วยงานหลายแห่งในภาคใต้ใช้ภาษามลายูแบบทับศัพท์ทีละคำจากอังกฤษ เก็บตัวอย่าง 3 ชื่อจากป้ายจริง วิเคราะห์ด้วยกฎ ดี-เอ็ม และเสนอชื่อที่ถูกต้อง
-2. Bandingkan *Ibu membeli ikan di pasar.* dengan *Mereka tinggal di Yala.* Mengapakah *di pasar* boleh digugurkan tetapi *di Yala* tidak? Jelaskan dengan konsep pelengkap dan keterangan.
-   เปรียบเทียบ *Ibu membeli ikan di pasar.* กับ *Mereka tinggal di Yala.* ทำไม *di pasar* ตัดได้ แต่ *di Yala* ตัดไม่ได้ อธิบายด้วยแนวคิดส่วนเติมเต็มกับส่วนขยาย
+
+```latihan-terbuka
+Tajuk: Soalan Pemikiran Kritis | โจทย์คิดวิเคราะห์
+Arahan: Tulis jawapan anda, kemudian bandingkan dengan contoh jawapan dan kriteria penilaian. | เขียนคำตอบ แล้วเทียบกับตัวอย่างคำตอบและเกณฑ์การประเมิน
+?? Banyak nama agensi di selatan Thailand menggunakan bahasa Melayu yang diterjemahkan perkataan demi perkataan daripada bahasa Inggeris. Kumpulkan tiga nama daripada papan tanda sebenar, analisis berdasarkan Hukum D-M dan cadangkan nama yang betul.<br>ชื่อหน่วยงานหลายแห่งในภาคใต้ใช้ภาษามลายูแบบทับศัพท์ทีละคำจากอังกฤษ เก็บตัวอย่าง 3 ชื่อจากป้ายจริง วิเคราะห์ด้วยกฎ ดี-เอ็ม และเสนอชื่อที่ถูกต้อง
+= Contoh pendekatan: nama *Selatan Pembangunan Pusat* → inti *Pusat*, penerang *Pembangunan* dan *Selatan* → *Pusat Pembangunan Selatan*.
+* Tiga nama sebenar dengan sumber<br>สามชื่อจริงพร้อมแหล่งที่มา
+* Analisis inti dan penerang<br>วิเคราะห์คำหลักและคำขยาย
+* Nama cadangan yang betul<br>เสนอชื่อที่ถูก
+?? Bandingkan *Ibu membeli ikan di pasar.* dengan *Mereka tinggal di Yala.* Mengapakah *di pasar* boleh digugurkan tetapi *di Yala* tidak? Jelaskan dengan konsep pelengkap dan keterangan.<br>เปรียบเทียบ *Ibu membeli ikan di pasar.* กับ *Mereka tinggal di Yala.* ทำไม *di pasar* ตัดได้ แต่ *di Yala* ตัดไม่ได้ อธิบายด้วยแนวคิดส่วนเติมเต็มกับส่วนขยาย
+= *di pasar* ialah keterangan tempat yang boleh digugurkan (*Ibu membeli ikan.* lengkap). *di Yala* ialah pelengkap kerana *tinggal* memerlukannya (`*`*Mereka tinggal.* tidak lengkap).
+* Ujian pengguguran digunakan<br>ใช้การทดสอบการตัด
+* Konsep pelengkap dan keterangan dijelaskan<br>อธิบายส่วนเติมเต็มและส่วนขยาย
+* Kesimpulan yang tepat<br>สรุปถูก
+```
 
 ## 12. Rujukan<br>เอกสารอ้างอิง
 

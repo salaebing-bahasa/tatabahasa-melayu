@@ -197,6 +197,30 @@ Partikel yang melekat di hujung kata: *-lah* (penegas/ajakan: *Duduklah.*), *-ka
 Jawab setiap latihan; jawapan disemak serta-merta beserta penjelasan.
 ทำแบบฝึกแต่ละชุด ระบบจะตรวจคำตอบทันทีพร้อมคำอธิบาย
 
+```latihan-objektif
+Arahan: Pilih jawapan yang paling tepat; sebab bagi setiap pilihan akan dipaparkan. | เลือกคำตอบที่ถูกที่สุด ระบบจะแสดงเหตุผลของทุกตัวเลือก
+?? *Surat ini ___ pensyarah.*<br>เติมคำบุพบท
+- *dari* :: *dari* untuk tempat dan waktu.<br>ใช้กับสถานที่และเวลา
++ *daripada* :: Sumber berupa orang.<br>แหล่งที่มาเป็นบุคคล
+- *kepada* :: *kepada* untuk penerima, bukan sumber.<br>ใช้กับผู้รับ ไม่ใช่แหล่งที่มา
+- *pada* :: *pada* untuk waktu atau orang yang memiliki.<br>ใช้กับเวลาหรือผู้ครอบครอง
+?? Manakah penggunaan kata pemeri yang betul?<br>ข้อใดใช้คำเชื่อมภาคแสดงถูก
+- *Ayahnya ialah rajin.* :: *ialah* tidak hadir di hadapan frasa adjektif.<br>*ialah* ไม่ใช้หน้าวลีคุณศัพท์
++ *Ibu kota Malaysia ialah Kuala Lumpur.* :: *ialah* di hadapan frasa nama.<br>*ialah* หน้าวลีนาม
+- *Pengarahnya adalah Dr. Siti.* :: *adalah* tidak hadir di hadapan frasa nama.<br>*adalah* ไม่ใช้หน้าวลีนาม
+- *Bukunya ialah di atas meja.* :: Frasa sendi nama didahului *adalah*, bukan *ialah*.<br>วลีบุพบทใช้ *adalah*
+?? Kata manakah ialah kata hubung pancangan keterangan?<br>ข้อใดเป็นคำเชื่อมแบบฝังบอกส่วนขยาย
+- *dan* :: Kata hubung gabungan.<br>คำเชื่อมแบบเชื่อม
+- *yang* :: Pancangan relatif.<br>แบบสัมพันธ์
+- *bahawa* :: Pancangan komplemen.<br>แบบส่วนเติมเต็ม
++ *kerana* :: Memulakan klausa keterangan sebab.<br>นำอนุประโยคบอกเหตุ
+?? Penjodoh bilangan bagi *rumah* ialah<br>ลักษณนามของ *rumah*
+- *ekor* :: Untuk haiwan.<br>ใช้กับสัตว์
++ *buah* :: Untuk benda besar dan umum seperti rumah dan kereta.<br>ใช้กับสิ่งของใหญ่ทั่วไป
+- *helai* :: Untuk benda nipis.<br>ใช้กับสิ่งบาง
+- *biji* :: Untuk benda kecil dan bulat.<br>ใช้กับสิ่งเล็กกลม
+```
+
 ```latihan-isi
 Arahan: Taipkan kata tugas yang betul. | พิมพ์คำไวยากรณ์ที่ถูกต้อง
 Hadiah ini ___ ayah saya. | daripada | Sumber berupa orang. | แหล่งที่มาเป็นบุคคล
@@ -204,6 +228,36 @@ Kami bertolak ___ Yala pada pukul 8. | dari | Titik mula tempat. | จุดเ�
 Itu ___ rumah saya. (nafi) | bukan | Menafikan frasa nama. | ปฏิเสธวลีนาม
 Ibu kota Thailand ___ Bangkok. | ialah | *ialah* di hadapan frasa nama. | *ialah* หน้าวลีนาม
 Dia membeli dua ___ kucing. | ekor | Penjodoh bilangan untuk haiwan. | ลักษณนามของสัตว์
+```
+
+```latihan-golong
+Tajuk: Kenal Pasti Golongan Kata | ระบุชนิดของคำ
+Arahan: Tentukan golongan kata bagi perkataan yang diberikan. | ระบุชนิดของคำที่กำหนด
+Kategori: Kata tugas · คำไวยากรณ์ | Kata nama · คำนาม | Kata kerja · คำกริยา | Kata adjektif · คำคุณศัพท์
+*daripada* | Kata tugas | Kata sendi nama. | คำบุพบท
+*tidak* | Kata tugas | Kata nafi. | คำปฏิเสธ
+*hendak* | Kata tugas | Kata bantu ragam. | คำช่วยบอกความต้องการ
+*pejabat* | Kata nama | Menamakan tempat. | ชื่อสถานที่
+*menghantar* | Kata kerja | Perbuatan dengan objek. | การกระทำ
+*bahawa* | Kata tugas | Kata hubung komplemen. | คำเชื่อม
+```
+
+```latihan-betulkan
+Arahan: Klik perkataan yang salah. | กดคำที่ผิด
+Esok kita pergi [di→ke] perpustakaan. | *ke* untuk arah. | *ke* บอกทิศทาง
+Bawa [buku tiga buah→tiga buah buku]. | Bilangan + penjodoh bilangan di hadapan kata nama. | จำนวน + ลักษณนามอยู่หน้าคำนาม
+Surat [dari→daripada] pensyarah sudah tiba. | Sumber berupa orang. | แหล่งที่มาเป็นบุคคล
+Pengerusi kelab itu [adalah→ialah] Encik Ali. | Frasa nama *Encik Ali* didahului *ialah*, bukan *adalah*. | หน้าวลีนามใช้ *ialah* ไม่ใช่ *adalah*
+Dia [tidak→bukan] pelajar di sini. | Kata nama dinafikan dengan *bukan*. | คำนามปฏิเสธด้วย *bukan*
+```
+
+```latihan-analisis
+Arahan: Pilih fungsi bagi setiap bahagian ayat, kemudian klik Semak. | เลือกหน้าที่ของแต่ละส่วนในประโยค แล้วกดตรวจ
+Label: Subjek · ประธาน | Kata bantu · คำช่วย | Inti predikat · แกนภาคแสดง | Objek · กรรม | Keterangan · ส่วนขยาย
+[Ayah|Subjek] [sudah|Kata bantu] [pulang|Inti predikat] [dari pejabat|Keterangan]. | *sudah* kata bantu aspek; *dari pejabat* keterangan tempat asal. | *sudah* เป็นคำช่วย
+[Kami|Subjek] [akan|Kata bantu] [menghantar|Inti predikat] [surat itu|Objek] [kepada dekan|Keterangan]. | *kepada dekan* menyatakan penerima. | บอกผู้รับ
+[Dia|Subjek] [sedang|Kata bantu] [membaca|Inti predikat] [novel|Objek] [di perpustakaan|Keterangan]. | *sedang* aspek; *di perpustakaan* tempat. | คำช่วย + สถานที่
+[Adik|Subjek] [belum|Kata bantu] [tidur|Inti predikat]. | *belum* kata bantu aspek. | *belum* เป็นคำช่วย
 ```
 
 ```latihan-golong
@@ -215,15 +269,6 @@ Kategori: Penyambung ayat · คำเชื่อม | Praklausa · หน้�
 *-kah* | Pascakata | Partikel pertanyaan. | คำเสริมคำถาม
 *jangan* | Praklausa | Kata perintah. | คำสั่ง
 *kepada* | Prafrasa | Kata sendi nama. | คำบุพบท
-```
-
-```latihan-betulkan
-Arahan: Klik perkataan yang salah. | กดคำที่ผิด
-Esok kita pergi [di→ke] perpustakaan. | *ke* untuk arah. | *ke* บอกทิศทาง
-Bawa [buku tiga buah→tiga buah buku]. | Bilangan + penjodoh bilangan di hadapan kata nama. | จำนวน + ลักษณนามอยู่หน้าคำนาม
-Surat [dari→daripada] pensyarah sudah tiba. | Sumber berupa orang. | แหล่งที่มาเป็นบุคคล
-Pengerusi kelab itu [adalah→ialah] Encik Ali. | Frasa nama *Encik Ali* didahului *ialah*, bukan *adalah*. | หน้าวลีนามใช้ *ialah* ไม่ใช่ *adalah*
-Dia [tidak→bukan] pelajar di sini. | Kata nama dinafikan dengan *bukan*. | คำนามปฏิเสธด้วย *bukan*
 ```
 
 ```latihan-benar
@@ -244,12 +289,25 @@ Kata tugas mudah menerima kata baharu.<br>คำไวยากรณ์รั�
 **Aspek analisis**
 **ประเด็นวิเคราะห์**
 
-1. Kenal pasti semua kata tugas yang salah digunakan dan nyatakan kumpulannya (*prafrasa / penyambung / praklausa*).
-   ระบุคำไวยากรณ์ที่ใช้ผิดทั้งหมดและจัดว่าอยู่กลุ่มใด (*prafrasa / penyambung / praklausa*)
-2. Tulis semula pengumuman itu dengan betul dan sopan; tambahkan partikel *-lah* atau kata perintah sopan *sila* pada tempat yang sesuai.
-   เขียนประกาศใหม่ให้ถูกต้องและสุภาพ เติมคำเสริม *-lah* หรือคำสั่งสุภาพ *sila* ในจุดที่เหมาะ
-3. Bincangkan sejauh mana kesalahan penggunaan *di/ke/dari/daripada* menjejaskan kefahaman pembaca.
-   อภิปรายว่าการใช้ *di/ke/dari/daripada* ผิดกระทบความเข้าใจของผู้อ่านมากหรือน้อยเพียงใด
+```latihan-terbuka
+Tajuk: Soalan Kajian Kes | คำถามกรณีศึกษา
+Arahan: Tulis jawapan anda, kemudian bandingkan dengan contoh jawapan dan kriteria penilaian. | เขียนคำตอบ แล้วเทียบกับตัวอย่างคำตอบและเกณฑ์การประเมิน
+?? Kenal pasti semua kata tugas yang salah digunakan dan nyatakan kumpulannya (*prafrasa / penyambung / praklausa*).<br>ระบุคำไวยากรณ์ที่ใช้ผิดทั้งหมดและจัดว่าอยู่กลุ่มใด (*prafrasa / penyambung / praklausa*)
+= *pergi di* → *pergi ke* (prafrasa: kata sendi nama) · *pen dua batang, buku tiga buah* → *dua batang pen, tiga buah buku* (prafrasa: kata bilangan dan penjodoh bilangan) · *surat dari* → *surat daripada* (prafrasa) · *hantar ke semua orang* → *hantar kepada semua orang* (prafrasa) · *Saya adalah ketua* → *Saya ketua* (prafrasa: kata pemeri)
+* Mengenal pasti sekurang-kurangnya empat kesalahan<br>ระบุข้อผิดอย่างน้อย 4 จุด
+* Pembetulan yang betul<br>แก้ถูกต้อง
+* Kumpulan kata tugas dinyatakan dengan betul<br>ระบุกลุ่มคำไวยากรณ์ถูก
+?? Tulis semula pengumuman itu dengan betul dan sopan; tambahkan partikel *-lah* atau kata perintah sopan *sila* pada tempat yang sesuai.<br>เขียนประกาศใหม่ให้ถูกต้องและสุภาพ เติมคำเสริม *-lah* หรือคำสั่งสุภาพ *sila* ในจุดที่เหมาะ
+= *Esok kita akan pergi ke perpustakaan pada pukul 9 pagi. Sila bawa dua batang pen dan tiga buah buku. Surat daripada pensyarah sudah saya hantar kepada semua orang. Saya ketua kelas; jika ada masalah, tanyalah saya.*
+* Semua kesalahan kata tugas dibetulkan<br>แก้คำไวยากรณ์ผิดครบ
+* Menggunakan *sila* atau *-lah* dengan sesuai<br>ใช้ *sila* หรือ *-lah* อย่างเหมาะสม
+* Nada sopan dan sesuai untuk pengumuman<br>น้ำเสียงสุภาพเหมาะกับประกาศ
+?? Bincangkan sejauh mana kesalahan penggunaan *di/ke/dari/daripada* menjejaskan kefahaman pembaca.<br>อภิปรายว่าการใช้ *di/ke/dari/daripada* ผิดกระทบความเข้าใจของผู้อ่านมากหรือน้อยเพียงใด
+= Kesalahan *di/ke* boleh mengubah makna (berada vs pergi), manakala *dari/daripada* biasanya masih difahami tetapi tidak baku; kesannya lebih kepada imej penulis daripada kefahaman.
+* Membezakan kesalahan yang mengubah makna dengan yang tidak<br>แยกข้อผิดที่เปลี่ยนความหมายกับที่ไม่เปลี่ยน
+* Contoh daripada teks<br>ยกตัวอย่างจากข้อความ
+* Kesimpulan yang seimbang<br>สรุปอย่างสมดุล
+```
 
 ## 10. Rumusan<br>สรุปบทเรียน
 
@@ -306,19 +364,44 @@ Kata tugas mudah menerima kata baharu.<br>คำไวยากรณ์รั�
 
 ### B. Soalan Subjektif<br>ข. อัตนัย
 
-1. Huraikan kriteria pemilihan *ialah* dan *adalah*, beserta dua contoh ayat bagi setiap satu. (แนวคำตอบ: *ialah* di hadapan frasa nama: *Ibu kota Malaysia ialah Kuala Lumpur*, *Pengerusinya ialah Encik Ali* · *adalah* di hadapan frasa adjektif dan frasa sendi nama: *Cadangan itu adalah baik*, *Hadiah itu adalah untuk pemenang*)
-   อธิบายเกณฑ์การเลือก *ialah* กับ *adalah* พร้อมตัวอย่างอย่างละ 2 ประโยค
-2. Bandingkan penggunaan *dari, daripada, kepada, pada* dengan contoh ayat tentang kehidupan di universiti. (แนวคำตอบ: *dari* tempat dan waktu: *dari asrama*, *dari pukul lapan* · *daripada* sumber manusia atau abstrak dan perbandingan: *surat daripada dekan*, *lebih tinggi daripada* · *kepada* penerima: *kepada pensyarah* · *pada* waktu dan orang: *pada hari Isnin*, *buku itu ada pada saya*)
-   เปรียบเทียบการใช้ *dari, daripada, kepada, pada* โดยยกตัวอย่างประโยคที่เกี่ยวกับชีวิตในมหาวิทยาลัย
-3. Mengapakah kata tugas disebut "golongan tertutup"? Berikan alasan dan contoh. (แนวคำตอบ: Disebut golongan tertutup kerana bilangannya terhad, hampir tidak bertambah dan kebanyakannya tidak menerima imbuhan, contohnya *dan, di, ke, yang*. Sebaliknya kata nama terus bertambah, contohnya *swafoto*.)
-   ทำไมคำไวยากรณ์จึงเรียกว่า "กลุ่มปิด" ให้เหตุผลและตัวอย่าง
+
+```latihan-terbuka
+Tajuk: Soalan Subjektif | ข้อสอบอัตนัย
+Arahan: Tulis jawapan anda, kemudian bandingkan dengan contoh jawapan dan kriteria penilaian. | เขียนคำตอบ แล้วเทียบกับตัวอย่างคำตอบและเกณฑ์การประเมิน
+?? Huraikan kriteria pemilihan *ialah* dan *adalah*, beserta dua contoh ayat bagi setiap satu.<br>อธิบายเกณฑ์การเลือก *ialah* กับ *adalah* พร้อมตัวอย่างอย่างละ 2 ประโยค
+= *ialah* di hadapan frasa nama: *Ibu kota Malaysia ialah Kuala Lumpur*, *Pengerusinya ialah Encik Ali* · *adalah* di hadapan frasa adjektif dan frasa sendi nama: *Cadangan itu adalah baik*, *Hadiah itu adalah untuk pemenang*
+* Menyatakan kriteria: *ialah* + FN, *adalah* + FA/FSN<br>ระบุเกณฑ์ถูกต้อง
+* Dua contoh *ialah* yang betul<br>ตัวอย่าง *ialah* ถูก 2 ตัวอย่าง
+* Dua contoh *adalah* yang betul<br>ตัวอย่าง *adalah* ถูก 2 ตัวอย่าง
+?? Bandingkan penggunaan *dari, daripada, kepada, pada* dengan contoh ayat tentang kehidupan di universiti.<br>เปรียบเทียบการใช้ *dari, daripada, kepada, pada* โดยยกตัวอย่างประโยคที่เกี่ยวกับชีวิตในมหาวิทยาลัย
+= *dari* tempat dan waktu: *dari asrama*, *dari pukul lapan* · *daripada* sumber manusia atau abstrak dan perbandingan: *surat daripada dekan*, *lebih tinggi daripada* · *kepada* penerima: *kepada pensyarah* · *pada* waktu dan orang: *pada hari Isnin*, *buku itu ada pada saya*
+* Fungsi keempat-empat kata sendi nama dinyatakan<br>ระบุหน้าที่คำบุพบทครบสี่คำ
+* Contoh ayat bagi setiap kata<br>มีประโยคตัวอย่างทุกคำ
+* Konteks kehidupan universiti<br>ใช้บริบทชีวิตมหาวิทยาลัย
+?? Mengapakah kata tugas disebut "golongan tertutup"? Berikan alasan dan contoh.<br>ทำไมคำไวยากรณ์จึงเรียกว่า "กลุ่มปิด" ให้เหตุผลและตัวอย่าง
+= Disebut golongan tertutup kerana bilangannya terhad, hampir tidak bertambah dan kebanyakannya tidak menerima imbuhan, contohnya *dan, di, ke, yang*. Sebaliknya kata nama terus bertambah, contohnya *swafoto*.
+* Menjelaskan maksud golongan tertutup<br>อธิบายความหมายกลุ่มคำปิด
+* Memberikan alasan seperti bilangan terhad dan jarang menerima imbuhan<br>ให้เหตุผล เช่น จำนวนจำกัด
+* Contoh kata tugas dan perbandingan dengan golongan terbuka<br>ยกตัวอย่างและเปรียบเทียบกับกลุ่มคำเปิด
+```
 
 ### C. Soalan Pemikiran Kritis<br>ค. โจทย์คิดวิเคราะห์
 
-1. Dalam bahasa lisan, penutur Malaysia kerap menggunakan *dari* bagi menggantikan *daripada* dalam hampir semua konteks. Analisis sama ada guru bahasa patut menganggapnya "salah" atau "berbeza laras bahasa", dengan merujuk prinsip bahasa baku dan bahasa basahan dalam Bab 1.
-   ในภาษาพูดชาวมาเลเซียมักได้ยิน *dari* แทน *daripada* แทบทุกกรณี จงวิเคราะห์ว่าครูภาษาควรตัดสินว่าเป็น "ผิด" หรือ "ต่างระดับภาษา" ใช้หลักภาษามาตรฐานกับภาษาพูดจากบทที่ 1 ประกอบ
-2. Bina jadual perbandingan penjodoh bilangan bahasa Thai dan bahasa Melayu sebanyak 10 pasangan (contohnya ตัว–*ekor*, เล่ม–*buah*). Analisis pasangan yang sepadan dan pasangan yang mungkin mengelirukan pelajar.
-   สร้างตารางเปรียบเทียบลักษณนามภาษาไทยกับภาษามลายู 10 คู่ (เช่น ตัว–*ekor*, เล่ม–*buah*) วิเคราะห์ว่าคู่ใดตรงกันและคู่ใดผู้เรียนจะสับสน
+
+```latihan-terbuka
+Tajuk: Soalan Pemikiran Kritis | โจทย์คิดวิเคราะห์
+Arahan: Tulis jawapan anda, kemudian bandingkan dengan contoh jawapan dan kriteria penilaian. | เขียนคำตอบ แล้วเทียบกับตัวอย่างคำตอบและเกณฑ์การประเมิน
+?? Dalam bahasa lisan, penutur Malaysia kerap menggunakan *dari* bagi menggantikan *daripada* dalam hampir semua konteks. Analisis sama ada guru bahasa patut menganggapnya "salah" atau "berbeza laras bahasa", dengan merujuk prinsip bahasa baku dan bahasa basahan dalam Bab 1.<br>ในภาษาพูดชาวมาเลเซียมักได้ยิน *dari* แทน *daripada* แทบทุกกรณี จงวิเคราะห์ว่าครูภาษาควรตัดสินว่าเป็น "ผิด" หรือ "ต่างระดับภาษา" ใช้หลักภาษามาตรฐานกับภาษาพูดจากบทที่ 1 ประกอบ
+= Dalam laras lisan tidak rasmi, *dari* bagi *daripada* boleh dianggap variasi; dalam bahasa baku dan penulisan rasmi, guru wajar membetulkannya kerana *Tatabahasa Dewan* membezakan fungsi kedua-duanya.
+* Membezakan konteks lisan dengan konteks rasmi<br>แยกบริบทภาษาพูดกับทางการ
+* Merujuk prinsip bahasa baku dan basahan<br>อ้างหลักภาษามาตรฐานและภาษาพูด
+* Kesimpulan yang beralasan<br>สรุปอย่างมีเหตุผล
+?? Bina jadual perbandingan penjodoh bilangan bahasa Thai dan bahasa Melayu sebanyak 10 pasangan (contohnya ตัว–*ekor*, เล่ม–*buah*). Analisis pasangan yang sepadan dan pasangan yang mungkin mengelirukan pelajar.<br>สร้างตารางเปรียบเทียบลักษณนามภาษาไทยกับภาษามลายู 10 คู่ (เช่น ตัว–*ekor*, เล่ม–*buah*) วิเคราะห์ว่าคู่ใดตรงกันและคู่ใดผู้เรียนจะสับสน
+= Contoh pasangan: ตัว–*ekor* (sepadan untuk haiwan) · เล่ม–*buah* (buku) · คัน–*buah* (kereta) · หลัง–*buah* (rumah) · แผ่น–*helai/keping* (kertas) · ด้าม–*batang* (pen). Pasangan seperti คัน/หลัง/เล่ม → *buah* mengelirukan kerana tiga penjodoh Thai menjadi satu dalam bahasa Melayu.
+* Sepuluh pasangan yang betul<br>สิบคู่ที่ถูกต้อง
+* Mengenal pasti pasangan yang sepadan dan yang mengelirukan<br>ระบุคู่ที่ตรงกันและคู่ที่สับสน
+* Penjelasan sebab kekeliruan<br>อธิบายเหตุของความสับสน
+```
 
 ## 12. Rujukan<br>เอกสารอ้างอิง
 

@@ -184,14 +184,28 @@ Struktur: [pancangan *komplemen*] **dan** [pancangan *komplemen*] → dua ayat m
 Jawab setiap latihan; jawapan disemak serta-merta beserta penjelasan.
 ทำแบบฝึกแต่ละชุด ระบบจะตรวจคำตอบทันทีพร้อมคำอธิบาย
 
-```latihan-golong
-Arahan: Tentukan jenis ayat. | ระบุชนิดประโยค
-Kategori: Tunggal · เดี่ยว | Gabungan · เชื่อม | Pancangan · ฝัง
-*Ali membaca buku dan Ahmad menulis surat.* | Gabungan | Dua klausa setara dengan *dan*. | อนุประโยคเท่าเทียมสองอนุประโยค
-*Kereta yang dinaiki abang itu kemalangan.* | Pancangan | Ayat kecil relatif. | ประโยคย่อยสัมพันธ์
-*Rumah besar di hujung kampung itu milik datuk.* | Tunggal | Satu subjek dan satu predikat. | ประธานและภาคแสดงอย่างละหนึ่ง
-*Kami sedar bahawa kami lemah.* | Pancangan | Ayat kecil komplemen. | ประโยคย่อยส่วนเติมเต็ม
-*Dia rajin tetapi adiknya malas.* | Gabungan | Pertentangan dengan *tetapi*. | ขัดแย้งด้วย *tetapi*
+```latihan-objektif
+Arahan: Pilih jawapan yang paling tepat; sebab bagi setiap pilihan akan dipaparkan. | เลือกคำตอบที่ถูกที่สุด ระบบจะแสดงเหตุผลของทุกตัวเลือก
+?? *Saya tahu bahawa dia jujur.* ialah ayat majmuk<br>เป็นประโยครวมแบบ
+- gabungan :: *bahawa* bukan kata hubung gabungan.<br>*bahawa* ไม่ใช่คำเชื่อมแบบเชื่อม
+- pancangan relatif :: Relatif menggunakan *yang*.<br>แบบสัมพันธ์ใช้ *yang*
++ pancangan komplemen :: Ayat kecil *bahawa dia jujur* menjadi objek kepada *tahu*.<br>ประโยคย่อยเป็นกรรมของ *tahu*
+- pancangan keterangan :: Tiada makna sebab, syarat atau waktu.<br>ไม่บอกเหตุ เงื่อนไข หรือเวลา
+?? Manakah ayat tunggal?<br>ข้อใดเป็นประโยคเดี่ยว
+- *Dia makan lalu tidur.* :: Dua predikat digabungkan dengan *lalu*.<br>มีสองภาคแสดง
++ *Pelajar tahun satu dari Pattani itu sedang menulis karangan.* :: Satu subjek dan satu predikat walaupun panjang.<br>ประธานและภาคแสดงอย่างละหนึ่ง
+- *Kereta yang dinaiki abang itu rosak.* :: Mengandungi ayat kecil relatif.<br>มีประโยคย่อยสัมพันธ์
+- *Jika hujan, kami tidak keluar.* :: Mengandungi ayat kecil keterangan syarat.<br>มีประโยคย่อยบอกเงื่อนไข
+?? *___ dia sakit, dia tetap hadir.*<br>เติมคำเชื่อม
+- *Kerana* :: Sebab tidak sesuai dengan makna "tetap hadir".<br>เหตุไม่เข้ากับ "ยังคงมา"
++ *Walaupun* :: Pertentangan: sakit tetapi tetap hadir.<br>ขัดแย้ง: ป่วยแต่ยังมา
+- *Supaya* :: Tujuan tidak sesuai.<br>จุดประสงค์ไม่เข้ากัน
+- *Jika* :: Syarat tidak sesuai dengan *tetap*.<br>เงื่อนไขไม่เข้ากับ *tetap*
+?? Kata hubung manakah tidak sesuai untuk ayat majmuk gabungan?<br>คำเชื่อมใดไม่ใช่แบบเชื่อม
+- *dan* :: Gabungan tambahan.<br>เชื่อมแบบเพิ่ม
+- *tetapi* :: Gabungan pertentangan.<br>เชื่อมแบบขัดแย้ง
+- *atau* :: Gabungan pilihan.<br>เชื่อมแบบเลือก
++ *yang* :: *yang* memancangkan klausa relatif.<br>*yang* ใช้ฝังอนุประโยคสัมพันธ์
 ```
 
 ```latihan-isi
@@ -203,11 +217,42 @@ Saya membeli buku ___ mahal itu. (relatif) | yang | Pancangan relatif. | ฝั�
 Dia berkata ___ dia akan datang. (komplemen) | bahawa | Pancangan komplemen. | ฝังส่วนเติมเต็ม
 ```
 
+```latihan-golong
+Tajuk: Kenal Pasti Golongan Kata | ระบุชนิดของคำ
+Arahan: Tentukan golongan kata bagi perkataan yang diberikan. | ระบุชนิดของคำที่กำหนด
+Kategori: Kata tugas · คำไวยากรณ์ | Kata nama · คำนาม | Kata kerja · คำกริยา | Kata adjektif · คำคุณศัพท์
+*walaupun* | Kata tugas | Kata hubung pancangan keterangan. | คำเชื่อม
+*sambil* | Kata tugas | Kata hubung gabungan. | คำเชื่อม
+*memerhatikan* | Kata kerja | *meN-…-kan* + *perhati*. | กริยา
+*lemah* dalam *Kami sedar bahawa kami lemah.* | Kata adjektif | Inti predikat ayat kecil. | แกนภาคแสดงของประโยคย่อย
+*karangan* | Kata nama | *karang* + *-an*: hasil. | นามบอกผลงาน
+*bahawa* | Kata tugas | Kata hubung komplemen. | คำเชื่อม
+```
+
 ```latihan-betulkan
 Arahan: Klik bahagian yang berlebihan atau salah. | กดส่วนที่เกินหรือผิด
 Walaupun hujan, [tetapi dia→dia] tetap datang. | *walaupun* dan *tetapi* tidak digunakan serentak. | ไม่ใช้ *walaupun* กับ *tetapi* พร้อมกัน
 Kerana dia sakit, [maka dia→dia] tidak hadir. | *maka* berlebihan. | *maka* เกินมา
 Saya membeli buku [dan mahal→yang mahal]. | Penerang kata nama menggunakan *yang*. | ขยายนามด้วย *yang*
+```
+
+```latihan-analisis
+Arahan: Pilih fungsi bagi setiap bahagian ayat, kemudian klik Semak. | เลือกหน้าที่ของแต่ละส่วนในประโยค แล้วกดตรวจ
+Label: Klausa bebas · อนุประโยคอิสระ | Kata hubung · คำเชื่อม | Ayat kecil · ประโยคย่อย
+[Ali membaca buku|Klausa bebas] [dan|Kata hubung] [Ahmad menulis surat|Klausa bebas]. | Gabungan: kedua-dua klausa setara. | แบบเชื่อม อนุประโยคเท่ากัน
+[Kami tidak keluar|Klausa bebas] [kerana|Kata hubung] [hujan lebat|Ayat kecil]. | Pancangan keterangan sebab. | แบบฝังบอกเหตุ
+[Laporan itu menyatakan|Klausa bebas] [bahawa|Kata hubung] [kerajaan akan membina jambatan|Ayat kecil]. | Pancangan komplemen. | แบบฝังส่วนเติมเต็ม
+[Dia rajin|Klausa bebas] [tetapi|Kata hubung] [adiknya malas|Klausa bebas]. | Gabungan pertentangan. | แบบเชื่อมขัดแย้ง
+```
+
+```latihan-golong
+Arahan: Tentukan jenis ayat. | ระบุชนิดประโยค
+Kategori: Tunggal · เดี่ยว | Gabungan · เชื่อม | Pancangan · ฝัง
+*Ali membaca buku dan Ahmad menulis surat.* | Gabungan | Dua klausa setara dengan *dan*. | อนุประโยคเท่าเทียมสองอนุประโยค
+*Kereta yang dinaiki abang itu kemalangan.* | Pancangan | Ayat kecil relatif. | ประโยคย่อยสัมพันธ์
+*Rumah besar di hujung kampung itu milik datuk.* | Tunggal | Satu subjek dan satu predikat. | ประธานและภาคแสดงอย่างละหนึ่ง
+*Kami sedar bahawa kami lemah.* | Pancangan | Ayat kecil komplemen. | ประโยคย่อยส่วนเติมเต็ม
+*Dia rajin tetapi adiknya malas.* | Gabungan | Pertentangan dengan *tetapi*. | ขัดแย้งด้วย *tetapi*
 ```
 
 ```latihan-benar
@@ -228,12 +273,25 @@ Dalam ayat majmuk pancangan, ayat kecil tidak dapat berdiri sendiri.<br>ใน�
 **Aspek analisis**
 **ประเด็นวิเคราะห์**
 
-1. Nyatakan pola setiap ayat (ayat tunggal FN+FK / FN+FSN / FN+FA).
-   ระบุแบบของแต่ละประโยค (ประโยคเดี่ยวแบบ FN+FK / FN+FSN / FN+FA)
-2. Gabungkan menjadi satu perenggan yang terdiri daripada 3–4 ayat dengan menggunakan ketiga-tiga jenis ayat majmuk, dan tandakan jenis yang digunakan. (แนวคำตอบ: *Program Minggu Bahasa Melayu **yang** diadakan di Universiti Thaksin pada 5 Mac telah dihadiri oleh ramai pelajar. Mereka bermain teka-teki **dan** membaca pantun. **Walaupun** cuaca panas, semua orang tetap gembira.*)
-   รวมเป็นย่อหน้าเดียว 3–4 ประโยค ใช้ประโยครวมทั้ง 3 แบบ และทำเครื่องหมายบอกแบบที่ใช้
-3. Bincangkan bagaimana pemilihan kata hubung mengubah nada berita (contohnya *walaupun* berbanding *tetapi*).
-   อภิปรายว่าการเลือกคำเชื่อมเปลี่ยนน้ำเสียงของข่าวอย่างไร (เช่น *walaupun* กับ *tetapi*)
+```latihan-terbuka
+Tajuk: Soalan Kajian Kes | คำถามกรณีศึกษา
+Arahan: Tulis jawapan anda, kemudian bandingkan dengan contoh jawapan dan kriteria penilaian. | เขียนคำตอบ แล้วเทียบกับตัวอย่างคำตอบและเกณฑ์การประเมิน
+?? Nyatakan pola setiap ayat (ayat tunggal FN+FK / FN+FSN / FN+FA).<br>ระบุแบบของแต่ละประโยค (ประโยคเดี่ยวแบบ FN+FK / FN+FSN / FN+FA)
+= *Program Minggu Bahasa Melayu diadakan.* FN+FK · *Program itu di Universiti Thaksin.* FN+FSN · *Program itu pada 5 Mac.* FN+FSN · *Pelajar ramai hadir.* FN+FK · *Mereka bermain teka-teki.* FN+FK · *Mereka membaca pantun.* FN+FK · *Cuaca panas.* FN+FA · *Semua orang gembira.* FN+FA
+* Pola semua ayat dinyatakan<br>ระบุแบบครบทุกประโยค
+* Pola yang tepat<br>ระบุถูกต้อง
+* Membezakan FSN dengan FK<br>แยกวลีบุพบทกับวลีกริยาได้
+?? Gabungkan menjadi satu perenggan yang terdiri daripada 3–4 ayat dengan menggunakan ketiga-tiga jenis ayat majmuk, dan tandakan jenis yang digunakan.<br>รวมเป็นย่อหน้าเดียว 3–4 ประโยค ใช้ประโยครวมทั้ง 3 แบบ และทำเครื่องหมายบอกแบบที่ใช้
+= *Program Minggu Bahasa Melayu **yang** diadakan di Universiti Thaksin pada 5 Mac telah dihadiri oleh ramai pelajar. Mereka bermain teka-teki **dan** membaca pantun. **Walaupun** cuaca panas, semua orang tetap gembira.*
+* Tiga jenis ayat majmuk digunakan dan ditanda<br>ใช้และระบุครบสามแบบ
+* Perenggan 3–4 ayat yang gramatis<br>ย่อหน้า 3–4 ประโยคถูกไวยากรณ์
+* Semua maklumat asal dikekalkan<br>คงข้อมูลเดิมครบ
+?? Bincangkan bagaimana pemilihan kata hubung mengubah nada berita (contohnya *walaupun* berbanding *tetapi*).<br>อภิปรายว่าการเลือกคำเชื่อมเปลี่ยนน้ำเสียงของข่าวอย่างไร (เช่น *walaupun* กับ *tetapi*)
+= *walaupun* menonjolkan kegembiraan walaupun ada halangan (nada positif); *tetapi* meletakkan dua maklumat setara dan kurang menekankan pertentangan.
+* Membandingkan sekurang-kurangnya dua kata hubung<br>เปรียบเทียบคำเชื่อมอย่างน้อย 2 คำ
+* Menjelaskan kesan nada<br>อธิบายผลต่อน้ำเสียง
+* Contoh ayat<br>ยกตัวอย่าง
+```
 
 ## 10. Rumusan<br>สรุปบทเรียน
 
@@ -290,19 +348,44 @@ Dalam ayat majmuk pancangan, ayat kecil tidak dapat berdiri sendiri.<br>ใน�
 
 ### B. Soalan Subjektif<br>ข. อัตนัย
 
-1. Gabungkan ayat dengan kata hubung yang diberikan: (a) *Budak itu berdiri.* + *Budak itu gemuk.* (*yang*) (b) *Engkau harus berdoa.* + *Engkau mendapat rezeki yang halal.* (*supaya*) (c) *Dia duduk di kerusi.* + *Dia memerhatikan orang yang lalu-lalang.* (*sambil*) (แนวคำตอบ: a. *Budak yang berdiri itu gemuk.* · b. *Engkau harus berdoa supaya mendapat rezeki yang halal.* · c. *Dia duduk di kerusi sambil memerhatikan orang yang lalu-lalang.*)
-   รวมประโยคด้วยคำเชื่อมที่กำหนดตามข้อ (ก) (ข) (ค)
-2. Cerakinkan ayat-ayat berikut kepada ayat asal: *Nurida sedang memasak sedangkan Nurma membaca novel.* · *Nisrin bukan sahaja rajin tetapi juga baik hati.* (แนวคำตอบ: *Nurida sedang memasak.* + *Nurma membaca novel.* · *Nisrin rajin.* + *Nisrin baik hati.*)
-   แยกประโยคต่อไปนี้เป็นประโยคต้นทาง
-3. Huraikan perbezaan antara *ayat majmuk gabungan* dengan *ayat majmuk pancangan* berdasarkan kriteria "boleh berdiri sebagai ayat atau tidak". (แนวคำตอบ: Gabungan: setiap bahagian setara dan boleh berdiri sebagai ayat, dihubungkan dengan *dan, tetapi, atau*. Pancangan: ayat kecil tidak boleh berdiri sendiri kerana bergantung pada ayat induk, dipancangkan dengan *yang, bahawa, kerana, walaupun*.)
-   อธิบายความแตกต่างระหว่าง *ayat majmuk gabungan* กับ *ayat majmuk pancangan* โดยใช้เกณฑ์ "ยืนเป็นประโยคได้หรือไม่"
+
+```latihan-terbuka
+Tajuk: Soalan Subjektif | ข้อสอบอัตนัย
+Arahan: Tulis jawapan anda, kemudian bandingkan dengan contoh jawapan dan kriteria penilaian. | เขียนคำตอบ แล้วเทียบกับตัวอย่างคำตอบและเกณฑ์การประเมิน
+?? Gabungkan ayat dengan kata hubung yang diberikan: (a) *Budak itu berdiri.* + *Budak itu gemuk.* (*yang*) (b) *Engkau harus berdoa.* + *Engkau mendapat rezeki yang halal.* (*supaya*) (c) *Dia duduk di kerusi.* + *Dia memerhatikan orang yang lalu-lalang.* (*sambil*)<br>รวมประโยคด้วยคำเชื่อมที่กำหนดตามข้อ (ก) (ข) (ค)
+= a. *Budak yang berdiri itu gemuk.* · b. *Engkau harus berdoa supaya mendapat rezeki yang halal.* · c. *Dia duduk di kerusi sambil memerhatikan orang yang lalu-lalang.*
+* Ketiga-tiga ayat digabungkan dengan kata hubung yang diberi<br>รวมครบสามข้อด้วยคำเชื่อมที่กำหนด
+* Unsur yang berulang digugurkan<br>ละส่วนที่ซ้ำ
+* Ayat gramatis<br>ประโยคถูกไวยากรณ์
+?? Cerakinkan ayat-ayat berikut kepada ayat asal: *Nurida sedang memasak sedangkan Nurma membaca novel.* · *Nisrin bukan sahaja rajin tetapi juga baik hati.*<br>แยกประโยคต่อไปนี้เป็นประโยคต้นทาง
+= *Nurida sedang memasak.* + *Nurma membaca novel.* · *Nisrin rajin.* + *Nisrin baik hati.*
+* Ayat asal dicerakinkan dengan betul<br>แยกประโยคเดิมถูก
+* Subjek yang digugurkan dikembalikan<br>คืนประธานที่ถูกละ
+* Kata hubung tidak dimasukkan dalam ayat asal<br>ไม่ใส่คำเชื่อมในประโยคเดิม
+?? Huraikan perbezaan antara *ayat majmuk gabungan* dengan *ayat majmuk pancangan* berdasarkan kriteria "boleh berdiri sebagai ayat atau tidak".<br>อธิบายความแตกต่างระหว่าง *ayat majmuk gabungan* กับ *ayat majmuk pancangan* โดยใช้เกณฑ์ "ยืนเป็นประโยคได้หรือไม่"
+= Gabungan: setiap bahagian setara dan boleh berdiri sebagai ayat, dihubungkan dengan *dan, tetapi, atau*. Pancangan: ayat kecil tidak boleh berdiri sendiri kerana bergantung pada ayat induk, dipancangkan dengan *yang, bahawa, kerana, walaupun*.
+* Kriteria "boleh berdiri sendiri" dijelaskan<br>อธิบายเกณฑ์การยืนเองได้
+* Contoh bagi kedua-dua jenis<br>ยกตัวอย่างทั้งสองแบบ
+* Kata hubung bagi setiap jenis disebut<br>ระบุคำเชื่อมของแต่ละแบบ
+```
 
 ### C. Soalan Pemikiran Kritis<br>ค. โจทย์คิดวิเคราะห์
 
-1. Pilih satu perenggan berita bahasa Melayu yang sebenar. Kira kadar ayat tunggal dan setiap jenis ayat majmuk, kemudian analisis bagaimana kadar ini mencerminkan ciri bahasa media massa.
-   เลือกย่อหน้าข่าวภาษามลายูจริง 1 ย่อหน้า นับสัดส่วนประโยคเดี่ยว ประโยครวมแต่ละแบบ และวิเคราะห์ว่าสัดส่วนนี้สะท้อนลักษณะภาษาสื่อสารมวลชนอย่างไร
-2. Ayat yang terlalu panjang boleh menyukarkan pembacaan. Kemukakan tiga kriteria untuk menentukan sama ada ayat patut digabungkan atau dipisahkan dalam penulisan akademik, beserta contoh.
-   ประโยคที่ยาวเกินไปอาจทำให้อ่านยาก จงเสนอเกณฑ์ 3 ข้อในการตัดสินว่าควรรวมหรือแยกประโยคในงานเขียนวิชาการ พร้อมตัวอย่าง
+
+```latihan-terbuka
+Tajuk: Soalan Pemikiran Kritis | โจทย์คิดวิเคราะห์
+Arahan: Tulis jawapan anda, kemudian bandingkan dengan contoh jawapan dan kriteria penilaian. | เขียนคำตอบ แล้วเทียบกับตัวอย่างคำตอบและเกณฑ์การประเมิน
+?? Pilih satu perenggan berita bahasa Melayu yang sebenar. Kira kadar ayat tunggal dan setiap jenis ayat majmuk, kemudian analisis bagaimana kadar ini mencerminkan ciri bahasa media massa.<br>เลือกย่อหน้าข่าวภาษามลายูจริง 1 ย่อหน้า นับสัดส่วนประโยคเดี่ยว ประโยครวมแต่ละแบบ และวิเคราะห์ว่าสัดส่วนนี้สะท้อนลักษณะภาษาสื่อสารมวลชนอย่างไร
+= Contoh dapatan: berita lazimnya mempunyai banyak ayat majmuk pancangan (relatif dan komplemen, contohnya *menyatakan bahawa…*) kerana berita melaporkan kenyataan dan memperincikan pelaku.
+* Kiraan daripada perenggan sebenar<br>มีการนับจากย่อหน้าจริง
+* Pengelasan jenis ayat yang tepat<br>จำแนกชนิดประโยคถูก
+* Analisis dikaitkan dengan ciri bahasa media<br>วิเคราะห์โยงกับลักษณะภาษาสื่อ
+?? Ayat yang terlalu panjang boleh menyukarkan pembacaan. Kemukakan tiga kriteria untuk menentukan sama ada ayat patut digabungkan atau dipisahkan dalam penulisan akademik, beserta contoh.<br>ประโยคที่ยาวเกินไปอาจทำให้อ่านยาก จงเสนอเกณฑ์ 3 ข้อในการตัดสินว่าควรรวมหรือแยกประโยคในงานเขียนวิชาการ พร้อมตัวอย่าง
+= Contoh kriteria: (1) gabungkan jika ayat berkongsi subjek atau topik yang sama; (2) pisahkan jika ayat melebihi dua ayat kecil atau sukar dibaca dengan sekali lalu; (3) pisahkan jika hubungan logik berubah.
+* Tiga kriteria yang jelas<br>เกณฑ์สามข้อชัดเจน
+* Contoh bagi setiap kriteria<br>ตัวอย่างทุกเกณฑ์
+* Dikaitkan dengan penulisan akademik<br>โยงกับงานเขียนวิชาการ
+```
 
 ## 12. Rujukan<br>เอกสารอ้างอิง
 

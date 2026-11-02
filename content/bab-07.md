@@ -192,6 +192,30 @@ Makna yang terhasil: jamak (*buku-buku*) · pelbagai (*buah-buahan*) · menyerup
 Jawab setiap latihan; jawapan disemak serta-merta beserta penjelasan.
 ทำแบบฝึกแต่ละชุด ระบบจะตรวจคำตอบทันทีพร้อมคำอธิบาย
 
+```latihan-objektif
+Arahan: Pilih jawapan yang paling tepat; sebab bagi setiap pilihan akan dipaparkan. | เลือกคำตอบที่ถูกที่สุด ระบบจะแสดงเหตุผลของทุกตัวเลือก
+?? *Dia ___ dewan itu.* (masuk)<br>เติมคำกริยา
+- *memasukkan* :: *-kan* memerlukan objek benda yang dimasukkan.<br>*-kan* ต้องมีกรรมเป็นสิ่งที่ถูกใส่
++ *memasuki* :: Objek *dewan* ialah tempat, maka *-i*.<br>กรรมเป็นสถานที่ ใช้ *-i*
+- *dimasuki* :: Bentuk pasif; ayat ini aktif.<br>เป็นรูปกรรมวาจก
+- *bermasuk* :: Bentuk ini tidak wujud.<br>ไม่มีรูปนี้
+?? Ejaan manakah yang betul?<br>ข้อใดสะกดถูก
+- *diambilalih* :: Awalan sahaja → terpisah.<br>อุปสรรคอย่างเดียวเขียนแยก
++ *pengambilalihan* :: Apitan → serangkai.<br>ปัจจัยคร่อมเขียนติด
+- *kerja sama* :: Kata majmuk mantap ditulis serangkai.<br>เขียนติดเสมอ
+- *menanda tangani* :: Apitan → serangkai.<br>ปัจจัยคร่อมเขียนติด
+?? *Buah-buahan* membawa makna<br>*buah-buahan* มีความหมายว่า
+- jamak semata-mata :: Jamak ditandai *buah-buah*.<br>พหูพจน์ใช้ *buah-buah*
++ pelbagai jenis :: *-an* + penggandaan menyatakan pelbagai jenis buah.<br>บอกความหลากหลาย
+- menyerupai :: Contoh menyerupai ialah *kuda-kuda*.<br>ตัวอย่างคือ *kuda-kuda*
+- penegasan :: Contoh penegasan ialah *cantik-cantik*.<br>ตัวอย่างคือ *cantik-cantik*
+?? Manakah akronim?<br>ข้อใดเป็นคำย่ออ่านเป็นคำ
+- *UKM* :: Dibaca huruf demi huruf: singkatan.<br>อ่านทีละตัว
++ *tadika* :: Dibaca sebagai satu kata.<br>อ่านเป็นคำเดียว
+- *DBP* :: Singkatan.<br>อักษรย่อ
+- *kapal terbang* :: Kata majmuk.<br>คำประสม
+```
+
 ```latihan-isi
 Arahan: Taipkan bentuk yang betul. | พิมพ์รูปที่ถูกต้อง
 Dia ___ bas ke Hat Yai. (naik + -i) | menaiki | Objek *bas* ialah tempat yang dinaiki. | *bas* เป็นยานพาหนะที่ขึ้น
@@ -199,6 +223,35 @@ Pengawas ___ bendera. (naik + -kan) | menaikkan | Menyebabkan bendera naik. | �
 *peN-…-an* + *ambil alih* = ___ | pengambilalihan | Apitan → serangkai. | ปัจจัยคร่อมจึงเขียนติด
 *ber-* + *kerjasama* = ___ | bekerjasama | Kata majmuk mantap sentiasa serangkai. | คำประสมเขียนติดเสมอ
 Sisipan *-el-* + *tunjuk* = ___ | telunjuk | Sisipan selepas konsonan pertama. | แทรกหลังพยัญชนะแรก
+```
+
+```latihan-golong
+Tajuk: Kenal Pasti Golongan Kata | ระบุชนิดของคำ
+Arahan: Tentukan golongan kata bagi perkataan yang diberikan. | ระบุชนิดของคำที่กำหนด
+Kategori: Kata nama · คำนาม | Kata kerja · คำกริยา | Kata adjektif · คำคุณศัพท์
+*kebersihan* | Kata nama | *ke-…-an* membentuk kata nama keadaan. | นามบอกสภาพ
+*membersihkan* | Kata kerja | *meN-…-kan* membentuk kata kerja transitif. | สกรรมกริยา
+*kemerah-merahan* | Kata adjektif | *ke-…-an* + ganda: agak merah. | คุณศัพท์ ค่อนข้างแดง
+*perjalanan* | Kata nama | *per-…-an*: hasil atau proses. | นาม
+*berguguran* | Kata kerja | *ber-…-an*: banyak dan bertaburan. | กริยา
+*pengakroniman* | Kata nama | *peN-…-an*: proses. | นามบอกกระบวนการ
+```
+
+```latihan-betulkan
+Arahan: Klik bahagian yang salah. | กดส่วนที่ผิด
+Hasil [kerja sama→kerjasama] dua universiti. | Kata majmuk mantap ditulis serangkai. | เขียนติดกัน
+[Semua pelajar-pelajar→Semua pelajar] dijemput hadir. | Tidak digandakan selepas penanda jamak. | ไม่ซ้ำคำหลังคำบอกพหูพจน์
+Peserta mesti [menanda tangani→menandatangani] borang. | Apitan → serangkai. | ปัจจัยคร่อมจึงเขียนติด
+Sila [beri tahu→beritahu] jawatankuasa. | *beritahu* kata majmuk mantap. | *beritahu* เขียนติดเสมอ
+```
+
+```latihan-analisis
+Arahan: Pilih fungsi bagi setiap bahagian ayat, kemudian klik Semak. | เลือกหน้าที่ของแต่ละส่วนในประโยค แล้วกดตรวจ
+Label: Subjek · ประธาน | Inti predikat · แกนภาคแสดง | Objek · กรรม | Keterangan · ส่วนขยาย
+[Ayah|Subjek] [menanami|Inti predikat] [kebun|Objek] [dengan pokok pisang|Keterangan]. | *-i*: objek tempat; *dengan pokok pisang* menyatakan benda yang ditanam. | กรรมเป็นสถานที่
+[Setiausaha kelab|Subjek] [menandatangani|Inti predikat] [surat itu|Objek]. | Kata majmuk + apitan ditulis serangkai. | คำประสม + ปัจจัยคร่อม
+[Daun-daun|Subjek] [berguguran|Inti predikat] [pada musim kemarau|Keterangan]. | *pada musim kemarau* keterangan waktu. | ส่วนขยายบอกเวลา
+[Langit|Subjek] [kemerah-merahan|Inti predikat] [pada waktu senja|Keterangan]. | Predikat frasa adjektif. | ภาคแสดงเป็นวลีคุณศัพท์
 ```
 
 ```latihan-golong
@@ -210,14 +263,6 @@ Kategori: Penuh · ซ้ำทั้งคำ | Separa · ซ้ำบางส
 *dedaun* | Separa | Suku kata pertama digandakan. | ซ้ำพยางค์แรก
 *gunung-ganang* | Berentak | Perubahan vokal berirama. | เปลี่ยนสระให้สัมผัส
 *bermain-main* | Separa | Kata berimbuhan; hanya kata dasar digandakan. | ซ้ำเฉพาะคำฐานของคำที่เติมปัจจัย
-```
-
-```latihan-betulkan
-Arahan: Klik bahagian yang salah. | กดส่วนที่ผิด
-Hasil [kerja sama→kerjasama] dua universiti. | Kata majmuk mantap ditulis serangkai. | เขียนติดกัน
-[Semua pelajar-pelajar→Semua pelajar] dijemput hadir. | Tidak digandakan selepas penanda jamak. | ไม่ซ้ำคำหลังคำบอกพหูพจน์
-Peserta mesti [menanda tangani→menandatangani] borang. | Apitan → serangkai. | ปัจจัยคร่อมจึงเขียนติด
-Sila [beri tahu→beritahu] jawatankuasa. | *beritahu* kata majmuk mantap. | *beritahu* เขียนติดเสมอ
 ```
 
 ```latihan-benar
@@ -238,12 +283,25 @@ Sisipan masih produktif dalam pembentukan kata baharu.<br>อาคมยัง�
 **Aspek analisis**
 **ประเด็นวิเคราะห์**
 
-1. Cari semua kata majmuk dan kata ganda yang salah ejaannya, betulkan, dan nyatakan peraturan yang digunakan. (แนวคำตอบ: *kerjasama, semua pelajar, bertanggungjawab, menandatangani, beritahu, jawatankuasa*)
-   หาคำประสมและคำซ้ำที่เขียนผิดทั้งหมด แก้ไข และอ้างกฎที่ใช้
-2. Mengapakah *bertanggungjawab* ditulis serangkai tetapi *diambil alih* ditulis terpisah? Jelaskan perbezaannya.
-   ทำไม *bertanggungjawab* เขียนติด แต่ *diambil alih* เขียนแยก อธิบายความต่าง
-3. Bincangkan kesan ejaan yang salah dalam dokumen rasmi terhadap imej institusi.
-   อภิปรายผลกระทบต่อภาพลักษณ์สถาบันหากเอกสารทางการสะกดคำผิด
+```latihan-terbuka
+Tajuk: Soalan Kajian Kes | คำถามกรณีศึกษา
+Arahan: Tulis jawapan anda, kemudian bandingkan dengan contoh jawapan dan kriteria penilaian. | เขียนคำตอบ แล้วเทียบกับตัวอย่างคำตอบและเกณฑ์การประเมิน
+?? Cari semua kata majmuk dan kata ganda yang salah ejaannya, betulkan, dan nyatakan peraturan yang digunakan.<br>หาคำประสมและคำซ้ำที่เขียนผิดทั้งหมด แก้ไข และอ้างกฎที่ใช้
+= *kerjasama, semua pelajar, bertanggungjawab, menandatangani, beritahu, jawatankuasa*
+* Mengenal pasti semua ejaan yang salah<br>ระบุคำที่สะกดผิดครบ
+* Bentuk betul bagi setiap kata<br>ให้รูปถูกทุกคำ
+* Menyatakan peraturan: mantap, apitan, penanda jamak<br>ระบุกฎที่ใช้
+?? Mengapakah *bertanggungjawab* ditulis serangkai tetapi *diambil alih* ditulis terpisah? Jelaskan perbezaannya.<br>ทำไม *bertanggungjawab* เขียนติด แต่ *diambil alih* เขียนแยก อธิบายความต่าง
+= *tanggungjawab* ialah kata majmuk mantap yang sentiasa ditulis serangkai, jadi *bertanggungjawab* serangkai. *ambil alih* bukan kata majmuk mantap; apabila menerima awalan sahaja, ia kekal terpisah (*diambil alih*).
+* Menjelaskan konsep kata majmuk mantap<br>อธิบายคำประสมที่เขียนติด
+* Menjelaskan peraturan awalan sahaja<br>อธิบายกฎอุปสรรคอย่างเดียว
+* Perbandingan yang jelas<br>เปรียบเทียบชัดเจน
+?? Bincangkan kesan ejaan yang salah dalam dokumen rasmi terhadap imej institusi.<br>อภิปรายผลกระทบต่อภาพลักษณ์สถาบันหากเอกสารทางการสะกดคำผิด
+= Ejaan yang salah menjejaskan kredibiliti dan profesionalisme institusi, boleh menimbulkan salah faham dan memberi contoh buruk kepada pelajar.
+* Sekurang-kurangnya dua kesan yang munasabah<br>ผลกระทบที่สมเหตุสมผลอย่างน้อย 2 ข้อ
+* Contoh daripada situasi sebenar<br>ตัวอย่างจากสถานการณ์จริง
+* Hujah tersusun<br>เรียบเรียงเหตุผลดี
+```
 
 ## 10. Rumusan<br>สรุปบทเรียน
 
@@ -302,19 +360,44 @@ Sisipan masih produktif dalam pembentukan kata baharu.<br>อาคมยัง�
 
 ### B. Soalan Subjektif<br>ข. อัตนัย
 
-1. Huraikan perbezaan antara *-kan* dengan *-i* melalui pasangan ayat *melukiskan/melukisi* dan *menaikkan/menaiki*. (แนวคำตอบ: *melukiskan* — objeknya benda yang dilukis: *melukiskan pemandangan* · *melukisi* — objeknya tempat: *melukisi dinding* · *menaikkan* — menyebabkan naik: *menaikkan bendera* · *menaiki* — lokatif: *menaiki bas*)
-   อธิบายความแตกต่างระหว่าง *-kan* กับ *-i* ด้วยคู่ประโยค *melukiskan/melukisi*, *menaikkan/menaiki*
-2. Berikan contoh kata ganda yang membawa lima makna (jamak, pelbagai, menyerupai, berbalas-balas, penegasan) beserta ayat. (แนวคำตอบ: jamak *buku-buku* · pelbagai *buah-buahan* · menyerupai *kuda-kuda* · berbalas-balas *pukul-memukul* · penegasan *cantik-cantik*)
-   ยกตัวอย่างคำซ้ำที่แสดงความหมาย 5 แบบ (พหูพจน์ หลากหลาย คล้าย ซึ่งกันและกัน เน้น) พร้อมประโยค
-3. Imbuhkan kata majmuk *kerjasama, ambil alih, garis bawah, tanggungjawab* sehingga mendapat tiga bentuk bagi setiap satu, dan eja dengan betul. (แนวคำตอบ: *ambil alih*: *diambil alih, mengambil alih, pengambilalihan* · *garis bawah*: *garis bawahi, menggarisbawahi, digarisbawahi* · *kerjasama* dan *tanggungjawab* sentiasa serangkai: *bekerjasama, kerjasamanya, bertanggungjawab, dipertanggungjawabkan*)
-   เติมปัจจัยกับคำประสม *kerjasama, ambil alih, garis bawah, tanggungjawab* ให้ได้ 3 รูปต่อคำ และสะกดให้ถูก
+
+```latihan-terbuka
+Tajuk: Soalan Subjektif | ข้อสอบอัตนัย
+Arahan: Tulis jawapan anda, kemudian bandingkan dengan contoh jawapan dan kriteria penilaian. | เขียนคำตอบ แล้วเทียบกับตัวอย่างคำตอบและเกณฑ์การประเมิน
+?? Huraikan perbezaan antara *-kan* dengan *-i* melalui pasangan ayat *melukiskan/melukisi* dan *menaikkan/menaiki*.<br>อธิบายความแตกต่างระหว่าง *-kan* กับ *-i* ด้วยคู่ประโยค *melukiskan/melukisi*, *menaikkan/menaiki*
+= *melukiskan* — objeknya benda yang dilukis: *melukiskan pemandangan* · *melukisi* — objeknya tempat: *melukisi dinding* · *menaikkan* — menyebabkan naik: *menaikkan bendera* · *menaiki* — lokatif: *menaiki bas*
+* Perbezaan makna *-kan* dan *-i*<br>อธิบายความต่าง *-kan* กับ *-i*
+* Empat ayat yang gramatis<br>ประโยคถูกไวยากรณ์สี่ประโยค
+* Objek dalam setiap ayat sesuai dengan akhirannya<br>กรรมสอดคล้องกับปัจจัย
+?? Berikan contoh kata ganda yang membawa lima makna (jamak, pelbagai, menyerupai, berbalas-balas, penegasan) beserta ayat.<br>ยกตัวอย่างคำซ้ำที่แสดงความหมาย 5 แบบ (พหูพจน์ หลากหลาย คล้าย ซึ่งกันและกัน เน้น) พร้อมประโยค
+= jamak *buku-buku* · pelbagai *buah-buahan* · menyerupai *kuda-kuda* · berbalas-balas *pukul-memukul* · penegasan *cantik-cantik*
+* Lima makna diwakili<br>ครบห้าความหมาย
+* Contoh kata ganda yang betul bagi setiap makna<br>ตัวอย่างคำซ้ำถูกทุกความหมาย
+* Ayat yang gramatis<br>ประโยคถูกไวยากรณ์
+?? Imbuhkan kata majmuk *kerjasama, ambil alih, garis bawah, tanggungjawab* sehingga mendapat tiga bentuk bagi setiap satu, dan eja dengan betul.<br>เติมปัจจัยกับคำประสม *kerjasama, ambil alih, garis bawah, tanggungjawab* ให้ได้ 3 รูปต่อคำ และสะกดให้ถูก
+= *ambil alih*: *diambil alih, mengambil alih, pengambilalihan* · *garis bawah*: *garis bawahi, menggarisbawahi, digarisbawahi* · *kerjasama* dan *tanggungjawab* sentiasa serangkai: *bekerjasama, kerjasamanya, bertanggungjawab, dipertanggungjawabkan*
+* Tiga bentuk bagi setiap kata majmuk<br>สามรูปต่อคำ
+* Ejaan terpisah/serangkai yang betul<br>เขียนแยก/ติดถูก
+* Imbuhan yang wujud dalam bahasa Melayu<br>ปัจจัยที่มีอยู่จริง
+```
 
 ### C. Soalan Pemikiran Kritis<br>ค. โจทย์คิดวิเคราะห์
 
-1. Bahasa Thai membentuk kata terutamanya melalui pemajmukan dan penggandaan, manakala bahasa Melayu bergantung terutamanya pada pengimbuhan. Bandingkan kedua-duanya dengan lima pasangan contoh (misalnya *kebersihan* – ความสะอาด) dan rumuskan kesannya terhadap penterjemahan dan pembelajaran.
-   ภาษาไทยสร้างคำด้วยการประสมคำและซ้อนคำมากกว่าการเติมปัจจัย ส่วนภาษามลายูใช้การเติมปัจจัยเป็นหลัก จงเปรียบเทียบด้วยตัวอย่าง 5 คู่ (เช่น *kebersihan* – ความสะอาด) และสรุปผลต่อการแปลและการเรียน
-2. Tinjau lima akronim baharu dalam media Malaysia. Analisis cara pemenggalannya (suku kata awal/huruf awal) dan nilai sama ada akronim itu mematuhi struktur suku kata Melayu.
-   สำรวจคำ *akronim* ใหม่ในสื่อมาเลเซีย 5 คำ วิเคราะห์วิธีตัดส่วน (พยางค์แรก/อักษรแรก) และประเมินว่าเป็นไปตามโครงสร้างพยางค์มลายูหรือไม่
+
+```latihan-terbuka
+Tajuk: Soalan Pemikiran Kritis | โจทย์คิดวิเคราะห์
+Arahan: Tulis jawapan anda, kemudian bandingkan dengan contoh jawapan dan kriteria penilaian. | เขียนคำตอบ แล้วเทียบกับตัวอย่างคำตอบและเกณฑ์การประเมิน
+?? Bahasa Thai membentuk kata terutamanya melalui pemajmukan dan penggandaan, manakala bahasa Melayu bergantung terutamanya pada pengimbuhan. Bandingkan kedua-duanya dengan lima pasangan contoh (misalnya *kebersihan* – ความสะอาด) dan rumuskan kesannya terhadap penterjemahan dan pembelajaran.<br>ภาษาไทยสร้างคำด้วยการประสมคำและซ้อนคำมากกว่าการเติมปัจจัย ส่วนภาษามลายูใช้การเติมปัจจัยเป็นหลัก จงเปรียบเทียบด้วยตัวอย่าง 5 คู่ (เช่น *kebersihan* – ความสะอาด) และสรุปผลต่อการแปลและการเรียน
+= Contoh pasangan: *kebersihan* – ความสะอาด (Melayu: apitan; Thai: ความ + kata dasar) · *penulis* – นักเขียน · *membersihkan* – ทำความสะอาด · *rumah-rumah* – บ้านหลายหลัง · *kapal terbang* – เครื่องบิน. Kesannya: penterjemah perlu menukar imbuhan Melayu kepada pemajmukan Thai dan sebaliknya.
+* Lima pasangan yang tepat<br>ห้าคู่ที่ถูกต้อง
+* Membandingkan proses pembentukan kata<br>เปรียบเทียบกระบวนการสร้างคำ
+* Rumusan tentang terjemahan dan pembelajaran<br>สรุปเรื่องการแปลและการเรียน
+?? Tinjau lima akronim baharu dalam media Malaysia. Analisis cara pemenggalannya (suku kata awal/huruf awal) dan nilai sama ada akronim itu mematuhi struktur suku kata Melayu.<br>สำรวจคำ *akronim* ใหม่ในสื่อมาเลเซีย 5 คำ วิเคราะห์วิธีตัดส่วน (พยางค์แรก/อักษรแรก) และประเมินว่าเป็นไปตามโครงสร้างพยางค์มลายูหรือไม่
+= Contoh analisis: *pawagam* = *pa(nggung)* + *wa(yang)* + *gam(bar)* — suku kata awal; struktur KV-KV-KVK sesuai dengan suku kata Melayu.
+* Lima akronim sebenar dengan sumber<br>ห้าคำย่อจริงพร้อมแหล่งที่มา
+* Cara pemenggalan dianalisis<br>วิเคราะห์วิธีตัดคำ
+* Penilaian struktur suku kata<br>ประเมินโครงสร้างพยางค์
+```
 
 ## 12. Rujukan<br>เอกสารอ้างอิง
 

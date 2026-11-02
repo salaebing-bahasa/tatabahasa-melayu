@@ -173,6 +173,30 @@ Catatan: apitan *ke-…-an* dikira sebagai **satu** morfem kerana kedua-dua baha
 Jawab setiap latihan; jawapan disemak serta-merta beserta penjelasan.
 ทำแบบฝึกแต่ละชุด ระบบจะตรวจคำตอบทันทีพร้อมคำอธิบาย
 
+```latihan-objektif
+Arahan: Pilih jawapan yang paling tepat; sebab bagi setiap pilihan akan dipaparkan. | เลือกคำตอบที่ถูกที่สุด ระบบจะแสดงเหตุผลของทุกตัวเลือก
+?? Kata manakah yang terdiri daripada tiga morfem?<br>คำใดมีสามหน่วยคำ
+- *berlari* :: *ber-* + *lari* = dua morfem.<br>สองหน่วยคำ
++ *dibacakan* :: *di-* + *baca* + *-kan* = tiga morfem.<br>สามหน่วยคำ
+- *kebersihan* :: *ke-…-an* dikira satu morfem + *bersih* = dua.<br>ปัจจัยคร่อมนับหนึ่ง รวมสอง
+- *rumah* :: Satu morfem bebas.<br>หน่วยคำอิสระหนึ่งหน่วย
+?? *Lelaki* ialah contoh<br>*lelaki* เป็นตัวอย่างของ
+- *kata majmuk* :: Kata majmuk menggabungkan dua kata dasar.<br>คำประสมรวมคำฐานสองคำ
+- *kata terbitan* :: Tiada imbuhan dalam *lelaki*.<br>ไม่มีปัจจัย
++ *kata ganda separa* :: Suku kata pertama *laki* digandakan.<br>ซ้ำพยางค์แรกของ *laki*
+- *kata tunggal* :: Kata tunggal tidak melalui penggandaan.<br>คำเดี่ยวไม่มีการซ้ำ
+?? Bentuk *mem-* dalam *membaca* dan *men-* dalam *menulis* ialah<br>*mem-* และ *men-* เป็น
+- morfem bebas :: Kedua-duanya tidak boleh hadir bersendirian.<br>ปรากฏลำพังไม่ได้
+- kata dasar :: Kata dasarnya *baca* dan *tulis*.<br>คำฐานคือ *baca* และ *tulis*
++ alomorf bagi *meN-* :: Bentuk berbeza bagi morfem yang sama mengikut bunyi awal.<br>รูปแปรของหน่วยคำเดียวกันตามเสียงต้น
+- partikel :: Partikel ialah *-lah, -kah, -tah, -pun*.<br>คำเสริมคือ *-lah, -kah, -tah, -pun*
+?? Pola suku kata *em-pat* ialah<br>รูปแบบพยางค์ของ *em-pat* คือ
++ VK + KVK :: *em* = V+K, *pat* = K+V+K.<br>*em* = VK, *pat* = KVK
+- KV + KVK :: Suku kata pertama bermula dengan vokal, bukan konsonan.<br>พยางค์แรกขึ้นต้นด้วยสระ
+- V + KKV :: *pat* bukan KKV.<br>*pat* ไม่ใช่ KKV
+- VK + KV :: *pat* berakhir dengan konsonan.<br>*pat* ลงท้ายด้วยพยัญชนะ
+```
+
 ```latihan-isi
 Arahan: Taipkan kata dasar atau bilangan yang betul. | พิมพ์คำฐานหรือจำนวนที่ถูกต้อง
 Kata dasar bagi *menyapu* ialah ___. | sapu | Bunyi *s* luluh: *meN-* + *sapu* → *menyapu*. | เสียง *s* หลอมหายไป
@@ -180,6 +204,35 @@ Kata dasar bagi *memperkenalkan* ialah ___. | kenal | *meN-* + *per-* + *kenal* 
 Kata *berlari* terdiri daripada ___ morfem. | 2/dua | *ber-* + *lari*. | *ber-* + *lari*
 Kata *kebersihan* terdiri daripada ___ morfem. | 2/dua | *ke-…-an* dikira satu morfem + *bersih*. | ปัจจัยคร่อมนับหนึ่งหน่วย + *bersih*
 Kata dasar bagi *pelajaran* ialah ___. | ajar | *pe-…-an* + *ajar*; bentuk *pel-* berlaku di hadapan *ajar*. | คำฐานคือ *ajar*
+```
+
+```latihan-golong
+Tajuk: Kenal Pasti Golongan Kata | ระบุชนิดของคำ
+Arahan: Tentukan golongan kata bagi perkataan yang diberikan. | ระบุชนิดของคำที่กำหนด
+Kategori: Kata nama · คำนาม | Kata kerja · คำกริยา | Kata adjektif · คำคุณศัพท์ | Kata tugas · คำไวยากรณ์
+*kebersihan* | Kata nama | *ke-…-an* + *bersih* membentuk kata nama abstrak. | ปัจจัยคร่อมสร้างคำนามนามธรรม
+*berlari* | Kata kerja | *ber-* + *lari* menyatakan perbuatan. | บอกการกระทำ
+*cantik* | Kata adjektif | Menyatakan sifat; boleh menerima *sangat*. | บอกลักษณะ
+*dan* | Kata tugas | Kata hubung gabungan. | คำเชื่อม
+*pelajaran* | Kata nama | Imbuhan *pe-…-an* membentuk kata nama. | ปัจจัยสร้างคำนาม
+*memperkenalkan* | Kata kerja | *memper-…-kan* membentuk kata kerja transitif. | สร้างสกรรมกริยา
+```
+
+```latihan-betulkan
+Arahan: Klik bahagian yang salah. | กดส่วนที่ผิด
+Dia mengesat [air-mata→air mata] anaknya. | Kata majmuk tidak ditulis dengan tanda sempang. | คำประสมไม่เขียนด้วยขีด
+Semua [pelajar-pelajar→pelajar] hadir ke kelas. | Kata nama tidak digandakan selepas penanda jamak *semua*. | ไม่ซ้ำคำหลังคำบอกพหูพจน์
+Kami menaiki [kapalterbang→kapal terbang] ke Kuala Lumpur. | *kapal terbang* bukan kata majmuk mantap, maka ditulis terpisah. | ไม่ใช่คำประสมที่เขียนติด
+Ibu membeli [sayur mayur→sayur-mayur] di pasar. | Kata ganda berentak ditulis dengan tanda sempang. | คำซ้ำแบบสัมผัสใช้ขีด
+```
+
+```latihan-analisis
+Arahan: Pilih fungsi bagi setiap bahagian ayat, kemudian klik Semak. | เลือกหน้าที่ของแต่ละส่วนในประโยค แล้วกดตรวจ
+Label: Subjek · ประธาน | Inti predikat · แกนภาคแสดง | Objek · กรรม | Keterangan · ส่วนขยาย
+[Kerajaan negeri|Subjek] [memperkenalkan|Inti predikat] [peraturan baharu|Objek]. | *peraturan baharu* dikenai perbuatan. | ถูกกระทำ
+[Adik|Subjek] [berlari|Inti predikat] [ke sekolah|Keterangan]. | *ke sekolah* menyatakan arah dan boleh digugurkan. | บอกทิศทาง ตัดได้
+[Pelajar itu|Subjek] [mencari|Inti predikat] [makna kata|Objek] [dalam kamus|Keterangan]. | *dalam kamus* keterangan tempat. | ส่วนขยายบอกสถานที่
+[Sayur-mayur|Subjek] [segar|Inti predikat]. | Predikat berintikan kata adjektif *segar*. | ภาคแสดงมีคุณศัพท์เป็นแกน
 ```
 
 ```latihan-golong
@@ -224,12 +277,25 @@ Dia membuka *Kamus Dewan* pada huruf M untuk mencari *memperkenalkan* dan pada h
 **Aspek analisis**
 **ประเด็นวิเคราะห์**
 
-1. Jelaskan mengapa dia tidak menemui kata-kata itu dan di bawah kata apakah dia sepatutnya mencari.
-   อธิบายว่าทำไมเขาจึงค้นไม่เจอ และควรเปิดที่คำใด
-2. Cerakinkan morfem bagi *memperkenalkan, peraturan, kebersihan, pasar-pasar* dan nyatakan bentuk kata setiap satu.
-   แยกหน่วยคำของ *memperkenalkan, peraturan, kebersihan, pasar-pasar* และระบุรูปคำของแต่ละคำ
-3. Sediakan carta alir "Cara mencari kata Melayu dalam kamus" untuk pelajar junior.
-   ทำแผนภูมิขั้นตอน "วิธีค้นคำมลายูในพจนานุกรม" สำหรับรุ่นน้อง
+```latihan-terbuka
+Tajuk: Soalan Kajian Kes | คำถามกรณีศึกษา
+Arahan: Tulis jawapan anda, kemudian bandingkan dengan contoh jawapan dan kriteria penilaian. | เขียนคำตอบ แล้วเทียบกับตัวอย่างคำตอบและเกณฑ์การประเมิน
+?? Jelaskan mengapa dia tidak menemui kata-kata itu dan di bawah kata apakah dia sepatutnya mencari.<br>อธิบายว่าทำไมเขาจึงค้นไม่เจอ และควรเปิดที่คำใด
+= Kamus Dewan menyusun entri mengikut kata dasar. *Memperkenalkan* perlu dicari di bawah *kenal* dan *kebersihan* di bawah *bersih*.
+* Menyatakan bahawa kamus menyusun kata mengikut kata dasar<br>บอกว่าพจนานุกรมเรียงตามคำฐาน
+* Memberikan kata dasar yang betul bagi kedua-dua kata<br>ให้คำฐานที่ถูกต้องทั้งสองคำ
+* Menunjukkan cara imbuhan ditanggalkan<br>แสดงวิธีถอดปัจจัย
+?? Cerakinkan morfem bagi *memperkenalkan, peraturan, kebersihan, pasar-pasar* dan nyatakan bentuk kata setiap satu.<br>แยกหน่วยคำของ *memperkenalkan, peraturan, kebersihan, pasar-pasar* และระบุรูปคำของแต่ละคำ
+= *memperkenalkan* = *meN-* + *per-* + *kenal* + *-kan*, kata terbitan · *peraturan* = *per-…-an* + *atur*, kata terbitan · *kebersihan* = *ke-…-an* + *bersih*, kata terbitan · *pasar-pasar* = *pasar* + penggandaan, kata ganda penuh
+* Cerakinan morfem yang betul bagi keempat-empat kata<br>แยกหน่วยคำถูกทั้งสี่คำ
+* Menamakan bentuk kata setiap satu<br>ระบุรูปคำทุกคำ
+* Mengira apitan sebagai satu morfem<br>นับปัจจัยคร่อมเป็นหนึ่งหน่วย
+?? Sediakan carta alir "Cara mencari kata Melayu dalam kamus" untuk pelajar junior.<br>ทำแผนภูมิขั้นตอน "วิธีค้นคำมลายูในพจนานุกรม" สำหรับรุ่นน้อง
+= 1. Tanggalkan partikel dan klitik → 2. tanggalkan imbuhan dari luar ke dalam → 3. dapatkan kata dasar → 4. cari kata dasar dalam kamus → 5. cari bentuk terbitan di bawah entri itu.
+* Langkah disusun mengikut urutan yang logik<br>ขั้นตอนเรียงอย่างมีเหตุผล
+* Merangkumi penanggalan imbuhan dan pencarian kata dasar<br>มีการถอดปัจจัยและการหาคำฐาน
+* Mudah difahami oleh pelajar junior<br>รุ่นน้องเข้าใจง่าย
+```
 
 ## 10. Rumusan<br>สรุปบทเรียน
 
@@ -286,19 +352,45 @@ Dia membuka *Kamus Dewan* pada huruf M untuk mencari *memperkenalkan* dan pada h
 
 ### B. Soalan Subjektif<br>ข. อัตนัย
 
-1. Huraikan perbezaan antara *morfem* dengan *kata*, beserta contoh kata yang mengandungi satu morfem dan kata yang mengandungi tiga morfem. (แนวคำตอบ: Morfem ialah unit terkecil yang bermakna atau berfungsi; kata ialah unit terkecil yang boleh berdiri bebas. Satu morfem: *rumah* · tiga morfem: *dibacakan* = *di-* + *baca* + *-kan*.)
-   อธิบายความแตกต่างระหว่าง *morfem* กับ *kata* พร้อมยกตัวอย่างคำที่มีหนึ่งหน่วยคำและคำที่มีสามหน่วยคำ
-2. Cerakinkan morfem bagi kata-kata berikut: *dipersembahkan, kesejahteraan, bacakanlah, kemerdekaannya*. (แนวคำตอบ: *dipersembahkan*: *di-* + *per-* + *sembah* + *-kan* → 4 morfem · *kesejahteraan*: *ke-…-an* + *sejahtera* → 2 · *bacakanlah*: *baca* + *-kan* + *-lah* → 3 · *kemerdekaannya*: *ke-…-an* + *merdeka* + *-nya* → 3)
-   แยกหน่วยคำของคำต่อไปนี้: *dipersembahkan, kesejahteraan, bacakanlah, kemerdekaannya*
-3. Huraikan konsep *alomorf* dengan contoh daripada imbuhan *peN-*. (แนวคำตอบ: Alomorf ialah bentuk berlainan bagi morfem yang sama mengikut bunyi awal kata dasar. *peN-*: *pe-* *pelawat* · *pem-* *pembaca, pemukul* · *pen-* *pencari, penulis* · *peng-* *pengambil, pengira* · *peny-* *penyapu* · *penge-* *pengecat*)
-   อธิบายแนวคิด *alomorf* ด้วยตัวอย่างจากปัจจัย *peN-*
+
+```latihan-terbuka
+Tajuk: Soalan Subjektif | ข้อสอบอัตนัย
+Arahan: Tulis jawapan anda, kemudian bandingkan dengan contoh jawapan dan kriteria penilaian. | เขียนคำตอบ แล้วเทียบกับตัวอย่างคำตอบและเกณฑ์การประเมิน
+?? Huraikan perbezaan antara *morfem* dengan *kata*, beserta contoh kata yang mengandungi satu morfem dan kata yang mengandungi tiga morfem.<br>อธิบายความแตกต่างระหว่าง *morfem* กับ *kata* พร้อมยกตัวอย่างคำที่มีหนึ่งหน่วยคำและคำที่มีสามหน่วยคำ
+= Morfem ialah unit terkecil yang bermakna atau berfungsi; kata ialah unit terkecil yang boleh berdiri bebas. Satu morfem: *rumah* · tiga morfem: *dibacakan* = *di-* + *baca* + *-kan*.
+* Mentakrifkan morfem dan kata dengan tepat<br>นิยามหน่วยคำและคำได้ถูก
+* Memberikan contoh kata satu morfem yang betul<br>ยกตัวอย่างคำที่มีหน่วยคำเดียว
+* Memberikan contoh kata tiga morfem dengan cerakinan<br>ยกตัวอย่างคำสามหน่วยคำพร้อมแยก
+?? Cerakinkan morfem bagi kata-kata berikut: *dipersembahkan, kesejahteraan, bacakanlah, kemerdekaannya*.<br>แยกหน่วยคำของคำต่อไปนี้: *dipersembahkan, kesejahteraan, bacakanlah, kemerdekaannya*
+= *dipersembahkan*: *di-* + *per-* + *sembah* + *-kan* → 4 morfem · *kesejahteraan*: *ke-…-an* + *sejahtera* → 2 · *bacakanlah*: *baca* + *-kan* + *-lah* → 3 · *kemerdekaannya*: *ke-…-an* + *merdeka* + *-nya* → 3
+* Cerakinan betul bagi setiap kata<br>แยกถูกทุกคำ
+* Bilangan morfem yang betul<br>จำนวนหน่วยคำถูก
+* Apitan dikira satu morfem<br>นับปัจจัยคร่อมเป็นหนึ่ง
+?? Huraikan konsep *alomorf* dengan contoh daripada imbuhan *peN-*.<br>อธิบายแนวคิด *alomorf* ด้วยตัวอย่างจากปัจจัย *peN-*
+= Alomorf ialah bentuk berlainan bagi morfem yang sama mengikut bunyi awal kata dasar. *peN-*: *pe-* *pelawat* · *pem-* *pembaca, pemukul* · *pen-* *pencari, penulis* · *peng-* *pengambil, pengira* · *peny-* *penyapu* · *penge-* *pengecat*
+* Takrif alomorf yang tepat<br>นิยามรูปแปรถูก
+* Sekurang-kurangnya empat bentuk *peN-* dengan contoh<br>มีรูปของ *peN-* อย่างน้อย 4 รูปพร้อมตัวอย่าง
+* Mengaitkan bentuk dengan bunyi awal kata dasar<br>โยงรูปกับเสียงต้นคำฐาน
+```
 
 ### C. Soalan Pemikiran Kritis<br>ค. โจทย์คิดวิเคราะห์
 
-1. Seorang pelajar berpendapat bahawa *-nya* dalam *bukunya* ialah imbuhan (*imbuhan*), manakala seorang lagi menegaskan bahawa *-nya* ialah klitik (*klitik*). Analisis isu ini dengan menimbangkan kata apakah yang boleh digantikan oleh *-nya* dan sama ada *-nya* mengubah golongan kata.
-   นักศึกษาคนหนึ่งเสนอว่า *-nya* ใน *bukunya* เป็นปัจจัย (*imbuhan*) อีกคนแย้งว่าเป็นคำเกาะ (*klitik*) จงวิเคราะห์โดยพิจารณาว่า *-nya* แทนคำใดได้และเปลี่ยนชนิดคำหรือไม่
-2. Pilih satu perenggan berita bahasa Melayu (kira-kira 50 patah perkataan). Kira kadar *kata tunggal / terbitan / majmuk / ganda*, kemudian simpulkan bentuk kata yang paling kerap dalam bahasa tulisan rasmi dan sebabnya.
-   เลือกย่อหน้าข่าวภาษามลายู 1 ย่อหน้า (ประมาณ 50 คำ) นับสัดส่วน *kata tunggal / terbitan / majmuk / ganda* แล้วสรุปว่ารูปคำใดพบมากที่สุดในภาษาเขียนทางการ และเพราะเหตุใด
+
+```latihan-terbuka
+Tajuk: Soalan Pemikiran Kritis | โจทย์คิดวิเคราะห์
+Arahan: Tulis jawapan anda, kemudian bandingkan dengan contoh jawapan dan kriteria penilaian. | เขียนคำตอบ แล้วเทียบกับตัวอย่างคำตอบและเกณฑ์การประเมิน
+?? Seorang pelajar berpendapat bahawa *-nya* dalam *bukunya* ialah imbuhan (*imbuhan*), manakala seorang lagi menegaskan bahawa *-nya* ialah klitik (*klitik*). Analisis isu ini dengan menimbangkan kata apakah yang boleh digantikan oleh *-nya* dan sama ada *-nya* mengubah golongan kata.<br>นักศึกษาคนหนึ่งเสนอว่า *-nya* ใน *bukunya* เป็นปัจจัย (*imbuhan*) อีกคนแย้งว่าเป็นคำเกาะ (*klitik*) จงวิเคราะห์โดยพิจารณาว่า *-nya* แทนคำใดได้และเปลี่ยนชนิดคำหรือไม่
+= *-nya* lebih tepat dianggap klitik: ia menggantikan kata ganti nama diri ketiga (*buku dia* → *bukunya*) dan tidak mengubah golongan kata *buku*. Imbuhan pula membentuk kata terbitan dan boleh mengubah golongan kata.
+* Membandingkan ciri imbuhan dengan ciri klitik<br>เปรียบเทียบลักษณะปัจจัยกับคำเกาะ
+* Menggunakan bukti penggantian kata ganti nama<br>ใช้หลักฐานการแทนสรรพนาม
+* Menggunakan bukti golongan kata yang tidak berubah<br>ใช้หลักฐานว่าชนิดคำไม่เปลี่ยน
+* Membuat kesimpulan yang disokong bukti<br>สรุปโดยมีหลักฐานสนับสนุน
+?? Pilih satu perenggan berita bahasa Melayu (kira-kira 50 patah perkataan). Kira kadar *kata tunggal / terbitan / majmuk / ganda*, kemudian simpulkan bentuk kata yang paling kerap dalam bahasa tulisan rasmi dan sebabnya.<br>เลือกย่อหน้าข่าวภาษามลายู 1 ย่อหน้า (ประมาณ 50 คำ) นับสัดส่วน *kata tunggal / terbitan / majmuk / ganda* แล้วสรุปว่ารูปคำใดพบมากที่สุดในภาษาเขียนทางการ และเพราะเหตุใด
+= Contoh dapatan: kata terbitan paling kerap kerana bahasa rasmi menggunakan banyak kata kerja *meN-/di-* dan kata nama *peN-…-an*; kata ganda paling jarang.
+* Data kiraan yang jelas daripada teks sebenar<br>มีข้อมูลนับจากข้อความจริงชัดเจน
+* Pengelasan bentuk kata yang tepat<br>จำแนกรูปคำถูกต้อง
+* Kesimpulan dikaitkan dengan ciri bahasa rasmi<br>สรุปโยงกับลักษณะภาษาทางการ
+```
 
 ## 12. Rujukan<br>เอกสารอ้างอิง
 
