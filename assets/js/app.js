@@ -907,18 +907,20 @@
     top: '<path d="M12 19V6"/><path d="M6 11l6-6 6 6"/>'
   };
   const ico = k => `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${ICON[k]}</svg>`;
-  const SEQ = [{ key: "kulit-dalam", href: "#/kulit-dalam", ms: "Kulit Dalam", th: "ปกใน" }, { key: "kandungan", href: "#/kandungan", ms: "Kandungan", th: "สารบัญ" }, { key: "home", href: "#/", ms: "Rancangan", th: "แผนการเรียน" }]
+  /* Kulit dalam tidak dimasukkan dalam urutan Sebelum/Seterusnya; ia masih boleh dibuka dari kulit hadapan dan Kandungan
+     ปกในไม่อยู่ในลำดับปุ่มก่อนหน้า/ถัดไป แต่ยังเปิดได้จากปกนอกและสารบัญ */
+  const SEQ = [{ key: "kandungan", href: "#/kandungan", ms: "Kandungan", th: "สารบัญ" }, { key: "home", href: "#/", ms: "Rancangan", th: "แผนการเรียน" }]
     .concat(CH.map(c => ({ key: "bab" + c.no, href: babLink(c.no), ms: "Bab " + c.no, th: "บทที่ " + c.no })))
     .concat([{ key: "kemajuan", href: "#/kemajuan", ms: "Kemajuan", th: "ความก้าวหน้า" }, { key: "kuiz", href: "#/kuiz", ms: "Kuiz", th: "แบบทดสอบ" }, { key: "alat", href: "#/alat", ms: "Alat Latihan", th: "เครื่องมือฝึก" }, { key: "istilah", href: "#/istilah", ms: "Istilah", th: "อภิธานศัพท์" }, { key: "kursus", href: "#/kursus", ms: "Maklumat Kursus", th: "ข้อมูลรายวิชา" }, { key: "clo", href: "#/clo", ms: "Pemetaan CLO", th: "การเชื่อมโยง CLO" }]);
   const pnName = x => `<b class="pn-ms">${x.ms}</b><i class="pn-th">${x.th}</i>`;
   function pageNav(key) {
     const nav = $("#pagenav"); const i = SEQ.findIndex(x => x.key === key);
-    const prev = i > 0 ? SEQ[i - 1] : null, next = i >= 0 && i < SEQ.length - 1 ? SEQ[i + 1] : null;
+    const prev = i > 0 ? SEQ[i - 1] : null, next = key === "kulit-dalam" ? SEQ[0] : i >= 0 && i < SEQ.length - 1 ? SEQ[i + 1] : null;
     const cur = k => key === k ? ' aria-current="page"' : "";
     nav.innerHTML = `
       <a href="#/"${cur("home")}>${ico("home")}<span class="pn-dw">Utama<small>หน้าแรก</small></span></a>
       <span class="sep" aria-hidden="true"></span>
-      ${key === "kulit-dalam" ? `<button type="button" class="pn-wide" data-opencover aria-label="Sebelum · ก่อนหน้า: Kulit Hadapan · ปกนอก">${ico("prev")}<span><small>Sebelum · ก่อนหน้า</small>${pnName({ ms: "Kulit Hadapan", th: "ปกนอก" })}</span></button>`
+      ${key === "kulit-dalam" || key === "kandungan" ? `<button type="button" class="pn-wide" data-opencover aria-label="Sebelum · ก่อนหน้า: Kulit Hadapan · ปกนอก">${ico("prev")}<span><small>Sebelum · ก่อนหน้า</small>${pnName({ ms: "Kulit Hadapan", th: "ปกนอก" })}</span></button>`
         : prev ? `<a class="pn-wide" href="${prev.href}" aria-label="Sebelum · ก่อนหน้า: ${prev.ms} · ${prev.th}">${ico("prev")}<span><small>Sebelum · ก่อนหน้า</small>${pnName(prev)}</span></a>`
              : `<span class="pn-wide is-off" aria-hidden="true">${ico("prev")}<span><small>Sebelum · ก่อนหน้า</small>—</span></span>`}
       ${next ? `<a class="pn-wide next" href="${next.href}" aria-label="Seterusnya · ถัดไป: ${next.ms} · ${next.th}"><span><small>Seterusnya · ถัดไป</small>${pnName(next)}</span>${ico("next")}</a>`
