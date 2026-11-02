@@ -61,8 +61,32 @@
     if (!cache[n]) cache[n] = fetch(`content/bab-${pad(n)}.md`, { cache: "no-cache" }).then(r => { if (!r.ok) throw new Error(r.status); return r.text(); }).catch(err => { delete cache[n]; throw err; });
     return cache[n];
   }
-  const SEC_IDS = ["hasil", "rangka", "isi", "kes", "soalan", "rujukan"];
-  const SEC_SHORT = { hasil: B("Hasil Pembelajaran", "ผลลัพธ์การเรียนรู้"), rangka: B("Rangka Bab", "โครงร่าง"), isi: B("Isi Penting", "เนื้อหา"), kes: B("Kajian Kes", "กรณีศึกษา"), soalan: B("Soalan Penilaian", "คำถามท้ายบท"), rujukan: B("Rujukan", "เอกสารอ้างอิง") };
+  /* Struktur bab · โครงสร้างบท
+     Struktur 12 bahagian (Tajuk Pelajaran … Rujukan) dan struktur lama 6 bahagian kedua-duanya disokong.
+     id bahagian ditentukan oleh perkataan pertama tajuk ## (bukan kedudukannya).
+     รองรับทั้งโครงสร้างใหม่ 12 หัวข้อและโครงสร้างเดิม 6 หัวข้อ โดยดูจากคำแรกของหัวข้อ ## */
+  const SEC_DEF = [
+    ["tajuk", /^tajuk/i, "Tajuk Pelajaran", "ชื่อบทเรียน"],
+    ["hasil", /^hasil/i, "Hasil Pembelajaran", "ผลลัพธ์การเรียนรู้"],
+    ["pengenalan", /^pengenalan/i, "Pengenalan", "บทนำ"],
+    ["konsep", /^konsep/i, "Konsep dan Definisi", "แนวคิดและนิยาม"],
+    ["penerangan", /^penerangan/i, "Penerangan Tatabahasa", "คำอธิบายหลักไวยากรณ์"],
+    ["contoh", /^contoh/i, "Contoh Ayat", "ตัวอย่างประโยค"],
+    ["jadual", /^jadual/i, "Jadual Perbandingan", "ตารางเปรียบเทียบ"],
+    ["kesalahan", /^kesalahan/i, "Kesalahan Lazim", "ข้อผิดพลาดที่พบบ่อย"],
+    ["latihan", /^latihan/i, "Latihan Interaktif", "แบบฝึกหัดโต้ตอบ"],
+    ["rumusan", /^rumusan/i, "Rumusan", "สรุปบทเรียน"],
+    ["kuiz", /^kuiz/i, "Kuiz Penilaian", "แบบทดสอบท้ายบท"],
+    ["rangka", /^rangka/i, "Rangka Bab", "โครงร่าง"],
+    ["isi", /^isi/i, "Isi Penting", "เนื้อหา"],
+    ["kes", /^kajian/i, "Kajian Kes", "กรณีศึกษา"],
+    ["soalan", /^soalan/i, "Soalan Penilaian", "คำถามท้ายบท"],
+    ["rujukan", /^rujukan/i, "Rujukan", "เอกสารอ้างอิง"]
+  ];
+  const SEC_SHORT = Object.fromEntries(SEC_DEF.map(d => [d[0], B(d[2], d[3])]));
+  const IDS_LAMA = ["hasil", "rangka", "isi", "kes", "soalan", "rujukan"];
+  const IDS_BARU = ["tajuk", "hasil", "pengenalan", "konsep", "penerangan", "contoh", "jadual", "kesalahan", "latihan", "rumusan", "kuiz", "rujukan"];
+  const secIds = c => c && c.struktur === 12 ? IDS_BARU : IDS_LAMA;
   /* แยกไฟล์บทเป็นส่วน ๆ ตามหัวข้อ ## */
   function splitSections(text) {
     text = text.replace(/<!--[\s\S]*?-->/g, "");
@@ -70,7 +94,96 @@
     return parts.map((p, i) => {
       const nl = p.indexOf("\n");
       const title = p.slice(0, nl).trim().replace(/^\d+\.\s*/, "");
-      return { id: SEC_IDS[i] || "s" + i, title, body: p.slice(nl + 1) };
+      const d = SEC_DEF.find(x => x[1].test(title.replace(/<br>.*/, "").trim()));
+      return { id: d ? d[0] : (IDS_LAMA[i] || "s" + i), title, body: p.slice(nl + 1) };
+    });
+  }
+  /* ---------- Latihan interaktif · แบบฝึกหัดโต้ตอบ ----------
+     Ditulis dalam fail bab sebagai blok kod:  ```latihan-isi | latihan-betulkan | latihan-golong | latihan-benar
+     Baris "Arahan: Melayu | Thai", baris "Kategori: A | B" (golong sahaja), kemudian satu item sebaris; medan dipisahkan " | ".
+     เขียนในไฟล์บทเป็นบล็อกโค้ด แต่ละบรรทัดคือหนึ่งข้อ แยกช่องด้วย " | " */
+  const LAT_NAMA = { isi: ["Isi tempat kosong", "เติมคำในช่องว่าง"], betulkan: ["Betulkan kesalahan", "แก้ประโยคที่ผิด"], golong: ["Golongkan", "จัดประเภท"], benar: ["Betul atau salah?", "ถูกหรือผิด"] };
+  const ms1 = t => String(t).split(" · ")[0].replace(/<br>.*/, "").trim().toLowerCase();
+  const expHTML = (m, t) => m ? `<p class="lat-exp" hidden><b>Penjelasan:</b> ${mdi(m)}${t ? `<br><b>คำอธิบาย:</b> ${mdi(t)}` : ""}</p>` : "";
+  const bi = t => { const [m, th] = String(t || "").split("<br>"); return th ? B(mdi(m), mdi(th)) : mdi(m); };
+  let latN = 0;
+  function latihanHTML(type, src) {
+    const lines = src.split("\n").map(l => l.trim()).filter(Boolean);
+    let arahan = null, cats = [];
+    const items = [];
+    lines.forEach(l => {
+      if (/^Arahan:/i.test(l)) { arahan = l.replace(/^Arahan:\s*/i, "").split(/\s+\|\s+/); return; }
+      if (/^Kategori:/i.test(l)) { cats = l.replace(/^Kategori:\s*/i, "").split(/\s+\|\s+/); return; }
+      items.push(l.split(/\s+\|\s+/));
+    });
+    const nm = LAT_NAMA[type]; if (!nm || !items.length) return `<pre>${esc(src)}</pre>`;
+    const id = "lat" + (++latN);
+    const li = items.map(f => {
+      if (type === "isi") {
+        const [q, ans, em, et] = f; const [a, b] = q.split("___");
+        return `<li class="lat-item" data-ans="${esc(ans || "")}"><span class="lat-q" lang="ms">${mdi(a || "")}<input class="lat-in" type="text" autocomplete="off" autocapitalize="off" spellcheck="false" lang="ms" aria-label="Jawapan · คำตอบ">${mdi(b || "")}</span> <button type="button" class="opt lat-semak">Semak · ตรวจ</button><p class="lat-fb" aria-live="polite"></p>${expHTML(em, et)}</li>`;
+      }
+      if (type === "betulkan") {
+        const [q, em, et] = f; const m = q.match(/\[([^\]→]+)→([^\]]+)\]/);
+        const wrong = m ? m[1].trim() : "", right = m ? m[2].trim() : "";
+        const parts = q.split(/(\[[^\]]+\])/).flatMap(x => /^\[/.test(x) ? [{ w: wrong, ok: 1 }] : x.split(/\s+/).filter(Boolean).map(w => ({ w, ok: 0 })));
+        const fixed = q.replace(/\[[^\]]+\]/, `**${right}**`);
+        return `<li class="lat-item"><span class="lat-words" lang="ms">${parts.map(p => /^[.,!?;:]+$/.test(p.w) ? `<span class="lat-p">${esc(p.w)}</span>` : `<button type="button" class="opt lat-w"${p.ok ? " data-ok" : ""}>${esc(p.w)}</button>`).join(" ")}</span><p class="lat-fb" aria-live="polite"></p><p class="lat-fix" hidden lang="ms">✓ ${mdi(fixed)}</p>${expHTML(em, et)}</li>`;
+      }
+      if (type === "golong") {
+        const [w, cat, em, et] = f; const k = cats.findIndex(c => ms1(c) === ms1(cat));
+        return `<li class="lat-item" data-a="${k}"><span class="lat-q">${bi(w)}</span><span class="lat-opts">${cats.map((c, j) => `<button type="button" class="opt lat-c" data-j="${j}">${mdi(c)}</button>`).join("")}</span><p class="lat-fb" aria-live="polite"></p>${expHTML(em, et)}</li>`;
+      }
+      const [st, bs, em, et] = f; const ok = /^(b|betul|benar)$/i.test((bs || "").trim()) ? 1 : 0;
+      return `<li class="lat-item" data-a="${ok}"><span class="lat-q">${bi(st)}</span><span class="lat-opts"><button type="button" class="opt lat-tf" data-v="1">Betul · ถูก</button><button type="button" class="opt lat-tf" data-v="0">Salah · ผิด</button></span><p class="lat-fb" aria-live="polite"></p>${expHTML(em, et)}</li>`;
+    }).join("");
+    return `<div class="lat lat-${type}" id="${id}"><p class="lat-h">${B(nm[0], nm[1])}</p>${arahan ? `<p class="lat-arahan">${mdi(arahan[0])}${arahan[1] ? `<br>${mdi(arahan[1])}` : ""}</p>` : ""}<ol>${li}</ol><div class="ex-foot"><span class="score lat-score" aria-live="polite"></span><button class="btn btn-line" type="button" data-lat-reset="${id}">Cuba semula · ทำใหม่</button></div></div>`;
+  }
+  /* Tukar blok ```latihan-… kepada penanda, kemudian isi selepas markdown diproses */
+  function mdLat(body) {
+    const store = [];
+    const src = body.replace(/^```latihan-(\w+)[^\n]*\n([\s\S]*?)^```\s*$/gm, (_, t, b) => { store.push(latihanHTML(t, b)); return `\n<div data-lat-ph="${store.length - 1}"></div>\n`; });
+    return md(src).replace(/<div data-lat-ph="(\d+)"><\/div>/g, (_, i) => store[+i]);
+  }
+  const normJ = t => String(t).toLowerCase().replace(/[.,!?;:]+$/g, "").replace(/\s+/g, " ").trim();
+  function bindLat(root) {
+    const done = (li, ok, msg) => {
+      li.dataset.res = ok ? "1" : "0";
+      const fb = $(".lat-fb", li); fb.className = "lat-fb " + (ok ? "right" : "wrong"); fb.textContent = msg;
+      $$(".lat-exp, .lat-fix", li).forEach(x => { x.hidden = false; });
+      const box = li.closest(".lat"), all = $$(".lat-item", box), d = all.filter(x => x.dataset.res !== undefined), r = d.filter(x => x.dataset.res === "1").length;
+      $(".lat-score", box).textContent = `Markah · คะแนน ${r}/${all.length}` + (d.length < all.length ? ` (dijawab · ตอบแล้ว ${d.length})` : "");
+    };
+    const semak = li => {
+      const inp = $(".lat-in", li); if (!inp.value.trim()) { inp.focus(); return; }
+      const ans = li.dataset.ans.split("/").map(normJ), ok = ans.includes(normJ(inp.value));
+      inp.disabled = true; inp.classList.add(ok ? "right" : "wrong"); $(".lat-semak", li).disabled = true;
+      done(li, ok, ok ? "Betul · ถูกต้อง" : `Belum tepat. Jawapan: ${li.dataset.ans.split("/").join(" / ")} · ยังไม่ถูก คำตอบคือ ${li.dataset.ans.split("/").join(" / ")}`);
+    };
+    root.addEventListener("keydown", e => { if (e.key === "Enter" && e.target.classList.contains("lat-in")) { e.preventDefault(); semak(e.target.closest(".lat-item")); } });
+    root.addEventListener("click", e => {
+      const t = e.target.closest("button"); if (!t || t.disabled) return;
+      const li = t.closest(".lat-item");
+      if (t.classList.contains("lat-semak")) return semak(li);
+      if (t.classList.contains("lat-w")) {
+        const ok = t.hasAttribute("data-ok");
+        $$(".lat-w", li).forEach(b => { b.disabled = true; if (b.hasAttribute("data-ok")) b.classList.add(ok ? "right" : "wrong-key"); });
+        if (!ok) t.classList.add("wrong");
+        return done(li, ok, ok ? "Betul, itulah kesalahannya · ถูกต้อง คำนี้คือจุดที่ผิด" : "Belum tepat. Kesalahan ditandai dengan garis merah · ยังไม่ถูก จุดที่ผิดมีขีดเส้นสีแดง");
+      }
+      if (t.classList.contains("lat-c") || t.classList.contains("lat-tf")) {
+        const a = +li.dataset.a, j = t.classList.contains("lat-c") ? +t.dataset.j : +t.dataset.v, bs = $$(".lat-c, .lat-tf", li);
+        bs.forEach((b, k) => { b.disabled = true; if ((b.classList.contains("lat-c") ? k : +b.dataset.v) === a) b.classList.add("right"); });
+        if (j !== a) t.classList.add("wrong");
+        const label = t.classList.contains("lat-c") ? bs[a].textContent : (a ? "Betul · ถูก" : "Salah · ผิด");
+        return done(li, j === a, j === a ? "Betul · ถูกต้อง" : `Belum tepat. Jawapan: ${label} · ยังไม่ถูก`);
+      }
+      const rs = e.target.closest("[data-lat-reset]");
+      if (rs) {
+        const box = $("#" + rs.dataset.latReset);
+        $$(".lat-item", box).forEach(li => { delete li.dataset.res; $$(".lat-fb", li).forEach(f => { f.className = "lat-fb"; f.textContent = ""; }); $$(".lat-exp, .lat-fix", li).forEach(x => { x.hidden = true; }); $$("button, input", li).forEach(b => { b.disabled = false; b.classList.remove("right", "wrong", "wrong-key"); }); const i = $(".lat-in", li); if (i) i.value = ""; });
+        $(".lat-score", box).textContent = "";
+      }
     });
   }
   /* อ่านข้อปรนัยจาก markdown: "1. คำถาม" / "   ก. ... ข. ... ค. ... ง. ..." / "**เฉลย** 1 ข · 2 ค (หมายเหตุ)" */
@@ -127,6 +240,7 @@
   function enhance(root) {
     splitLang(root);
     $$("h2, h3, h4, p, li, td, th, .opt, blockquote", root).forEach(el => { if (!el.dataset.dw && !el.lang && !el.closest("[lang=th]") && thaiDom(noEm(el))) el.lang = "th"; });
+    $$("pre", root).forEach(p => { p.tabIndex = 0; });
     $$("table", root).forEach(t => { if (!t.parentElement.classList.contains("tbl-wrap")) { const w = document.createElement("div"); w.className = "tbl-wrap"; t.replaceWith(w); w.appendChild(t); } });
     $$("li, p, td", root).forEach(el => {
       if (!/\(แนวคำตอบ:/.test(el.innerHTML)) return;
@@ -232,7 +346,7 @@
   }
   function bindMCQ(root, onAll) {
     root.addEventListener("click", e => {
-      const opt = e.target.closest(".opt"), rst = e.target.closest("[data-reset]");
+      const opt = e.target.closest(".q .opt"), rst = e.target.closest("[data-reset]");
       if (opt && !opt.disabled) {
         const q = opt.closest(".q"), a = +q.dataset.a, j = +opt.dataset.j, ex = q.closest(".ex");
         $$(".opt", q).forEach((b, k) => { b.disabled = true; if (k === a) b.classList.add("right"); });
@@ -277,8 +391,9 @@
     setNav("home"); document.title = `Bab ${c.no} ${c.ms} · บทที่ ${c.no} | ${C.code}`;
     const i = CH.indexOf(c), prev = CH[i - 1], next = CH[i + 1];
     app.innerHTML = `
-      <header class="lesson-head"><div class="wrap">
+      <header class="lesson-head" id="s-tajuk"><div class="wrap">
         <p class="crumb"><a href="#/">Rancangan · แผนการเรียน</a> / <a href="#/kandungan">Kandungan · สารบัญ</a> / Minggu ${c.week} · สัปดาห์ที่ ${c.week}</p>
+        ${c.struktur === 12 ? `<p class="lesson-eyebrow"><span lang="ms">1. Tajuk Pelajaran</span> · ชื่อบทเรียน</p>` : ""}
         <p class="lesson-no"><span lang="ms">Bab ${c.no}</span> · บทที่ ${c.no}<span class="part-tag" lang="ms">${c.part === "sintaksis" ? "Sintaksis" : "Morfologi"}</span></p>
         <h1 class="lesson-title" lang="ms">${c.ms}</h1>
         <p class="lesson-th">${c.th}</p>
@@ -288,14 +403,14 @@
           <button type="button" class="btn btn-ghost btn-dw" data-print>${B("Cetak", "พิมพ์")}</button>
         </div>
       </div></header>
-      <div class="wrap lesson-body"><nav class="toc" aria-label="Tajuk dalam bab · หัวข้อในบท"><p>Dalam bab ini · ในบทนี้</p><ol>${SEC_IDS.map(id => `<li><a href="#/bab/${n}/${id}" data-sec="${id}">${SEC_SHORT[id]}</a></li>`).join("")}</ol></nav>
+      <div class="wrap lesson-body"><nav class="toc" aria-label="Tajuk dalam bab · หัวข้อในบท"><p>Dalam bab ini · ในบทนี้</p><ol>${secIds(c).map(id => `<li><a href="#/bab/${n}/${id}" data-sec="${id}">${SEC_SHORT[id]}</a></li>`).join("")}</ol></nav>
         <div id="bab-body"><p class="loading">Memuatkan Bab ${n}… · กำลังโหลดเนื้อหาบทที่ ${n}…</p></div></div>`;
     window.scrollTo(0, 0);
     fetchBab(n).then(text => {
       if (location.hash.split("/")[2] !== String(n)) return;
       const secs = splitSections(text);
       const body = $("#bab-body");
-      body.innerHTML = `<p class="say-hint">${SPK} <span>Klik perkataan Melayu bercetak condong untuk mendengar sebutan · กดคำภาษามลายูตัวเอียงเพื่อฟังเสียง</span></p>` + secs.map(s => `<section class="block" id="s-${s.id}"><h2>${mdi(s.title)}</h2><div class="prose">${s.id === "soalan" ? soalanHTML(s.body, n) : md(s.body)}</div></section>`).join("") + `
+      body.innerHTML = `<p class="say-hint">${SPK} <span>Klik perkataan Melayu bercetak condong untuk mendengar sebutan · กดคำภาษามลายูตัวเอียงเพื่อฟังเสียง</span></p>` + secs.map((s, k) => `<section class="block" id="s-${s.id}"><h2>${c.struktur === 12 ? `<span class="sec-no" aria-hidden="true">${k + 2}.</span> ` : ""}${mdi(s.title)}</h2><div class="prose">${s.id === "soalan" || s.id === "kuiz" ? soalanHTML(s.body, n) : mdLat(s.body)}</div></section>`).join("") + `
         <div class="lesson-foot">
           <div class="done-box"><button type="button" class="btn ${isDone(n) ? "btn-line" : "btn-solid"}" data-done>${isDone(n) ? "✓ Bab ini selesai · เรียนบทนี้แล้ว (klik untuk batal · กดเพื่อยกเลิก)" : "Tandakan selesai · ทำเครื่องหมายว่าเรียนแล้ว"}</button>
           <span style="color:var(--muted);font-size:15px">Disimpan dalam pelayar ini sahaja · บันทึกไว้ในเบราว์เซอร์นี้เท่านั้น</span></div>
@@ -304,12 +419,15 @@
             ${next ? `<a class="next" href="${babLink(next.no)}"><small>Bab seterusnya · บทถัดไป (${next.no})</small><span class="ms" lang="ms">${next.ms}</span></a>` : ""}
           </nav>
         </div>`;
-      enhance(body); bindMCQ(body);
+      enhance(body); bindMCQ(body); bindLat(body);
+      /* senarai tajuk mengikut bahagian sebenar dalam fail · สารบัญย่อยตามหัวข้อจริงในไฟล์ */
+      const ids = (c.struktur === 12 ? ["tajuk"] : []).concat(secs.map(s => s.id));
+      $(".toc ol").innerHTML = ids.map(id => `<li><a href="#/bab/${n}/${id}" data-sec="${id}">${SEC_SHORT[id] || id}</a></li>`).join("");
       // TOC: เลื่อนภายในหน้า
-      $$(".toc a").forEach(a => a.addEventListener("click", e => { e.preventDefault(); const t = $("#s-" + a.dataset.sec); if (t) t.scrollIntoView({ behavior: reduced() ? "auto" : "smooth" }); history.replaceState(null, "", a.getAttribute("href")); }));
+      $$(".toc a").forEach(a => a.addEventListener("click", e => { e.preventDefault(); const t = $("#s-" + a.dataset.sec) || (a.dataset.sec === "tajuk" ? $("#s-tajuk") : null); if (t) t.scrollIntoView({ behavior: reduced() ? "auto" : "smooth" }); history.replaceState(null, "", a.getAttribute("href")); }));
       if ("IntersectionObserver" in window) {
         const io = new IntersectionObserver(es => es.forEach(en => { if (en.isIntersecting) $$(".toc a").forEach(a => a.classList.toggle("on", "s-" + a.dataset.sec === en.target.id)); }), { rootMargin: "-30% 0px -60% 0px" });
-        $$(".block", body).forEach(b => io.observe(b));
+        $$(".block", body).forEach(b => io.observe(b)); if ($("#s-tajuk")) io.observe($("#s-tajuk"));
       }
       $("[data-done]", body).addEventListener("click", () => { const v = !isDone(n); setDone(n, v); toast(v ? T(`Bab ${n} ditandakan selesai`, `บันทึกว่าเรียนบทที่ ${n} แล้ว`) : T("Tanda dibatalkan", "ยกเลิกเครื่องหมายแล้ว")); lesson(n); });
       if (sub && $("#s-" + sub)) setTimeout(() => $("#s-" + sub).scrollIntoView(), 30);
@@ -336,7 +454,7 @@
     </div></section>`;
     window.scrollTo(0, 0);
     Promise.all(chs.map(c => fetchBab(c.no).then(t => {
-      const s = splitSections(t).find(x => x.id === "soalan"); if (!s) return [];
+      const s = splitSections(t).find(x => x.id === "soalan" || x.id === "kuiz"); if (!s) return [];
       const m = s.body.split(/^### /m).find(p => /^[^\n]*ปรนัย/.test(p)); if (!m) return [];
       return parseMCQ(m.slice(m.indexOf("\n") + 1)).map(q => Object.assign(q, { bab: c.no }));
     }))).then(lists => {
@@ -535,7 +653,7 @@
     const part = p => `<div class="toc-part"><h2>${partName(p)}</h2><ol class="toc-list">${CH.filter(c => c.part === p).map(c => {
       const d = isDone(c.no);
       return `<li>${row("Bab " + c.no, `<span class="ms" lang="ms">${c.ms}</span><span class="th">${c.th}</span>`, `<span class="${d ? "toc-pg done" : ""}">${d ? "✓ " : ""}Minggu ${c.week}</span>`, babLink(c.no))}
-        <ul class="toc-subs" aria-label="Tajuk Bab ${c.no} · หัวข้อในบทที่ ${c.no}">${SEC_IDS.map(id => `<li><a href="${babLink(c.no)}/${id}">${SEC_SHORT[id]}</a></li>`).join("")}</ul></li>`;
+        <ul class="toc-subs" aria-label="Tajuk Bab ${c.no} · หัวข้อในบทที่ ${c.no}">${secIds(c).map(id => `<li><a href="${babLink(c.no)}/${id}">${SEC_SHORT[id]}</a></li>`).join("")}</ul></li>`;
     }).join("")}</ol></div>`;
     app.innerHTML = `<section class="section"><div class="wrap toc-page">
       <header class="toc-head"><h1 lang="ms">Kandungan</h1><p>สารบัญ</p></header>
