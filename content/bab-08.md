@@ -122,7 +122,7 @@ Ayat
 ### A. Soalan Objektif<br>ก. ปรนัย
 
 1. Manakah *frasa* dan bukan *klausa*?<br>ข้อใดเป็น *frasa* ไม่ใช่ *klausa*
-   ก. *dia sakit* ข. *rumah batu itu* ค. *kami makan* ง. *adik tidur*
+   ก. *rumah batu itu* ข. *dia sakit* ค. *kami makan* ง. *adik tidur*
 2. Dalam *Ibu membeli ikan di pasar pagi tadi.*, keterangan waktu ialah<br>ใน *Ibu membeli ikan di pasar pagi tadi.* ส่วนขยายเวลาคือ
    ก. *Ibu* ข. *ikan* ค. *di pasar* ง. *pagi tadi*
 3. *Ayahnya doktor.* — fungsi *doktor* ialah<br>*Ayahnya doktor.* — *doktor* ทำหน้าที่
@@ -131,8 +131,18 @@ Ayat
    ก. *Mereka* ข. *tinggal* ค. *di Hat Yai* ง. Tiada bahagian yang boleh digugurkan<br>ไม่มีข้อใดตัดได้
 5. Manakah klausa tak bebas dalam *Kami berharap bahawa kamu berjaya.*?<br>ข้อใดเป็นอนุประโยคไม่อิสระใน *Kami berharap bahawa kamu berjaya.*
    ก. *Kami berharap* ข. *bahawa kamu berjaya* ค. *kamu* ง. *berjaya*
+6. Dalam *Pelajar itu membaca buku cerita di perpustakaan.*, *buku cerita* berfungsi sebagai<br>ใน *Pelajar itu membaca buku cerita di perpustakaan.* — *buku cerita* ทำหน้าที่
+   ก. Subjek<br>ประธาน ข. Objek<br>กรรม ค. Pelengkap<br>ส่วนเติมเต็ม ง. Keterangan<br>ส่วนขยาย
+7. *Rumah batu itu* tergolong dalam kategori<br>*rumah batu itu* อยู่ในประเภท
+   ก. FN ข. FK ค. FA ง. FSN
+8. Ujian manakah yang menunjukkan bahawa *pelajar itu* ialah satu unit?<br>การทดสอบใดแสดงว่า *pelajar itu* เป็นหน่วยเดียวกัน
+   ก. Ditambah *-lah*<br>เติม *-lah* ข. Diterjemahkan<br>แปล ค. Diganti dengan *dia*<br>แทนด้วย *dia* ง. Ditulis serangkai<br>เขียนติดกัน
+9. Ayat terdiri daripada klausa dan<br>ประโยคประกอบด้วยอนุประโยคและ
+   ก. *imbuhan* ข. *intonasi* ค. *kata sendi* ง. *penjodoh bilangan*
+10. Dalam *Dia bercakap dengan guru itu.*, *guru itu* ialah frasa nama yang menjadi<br>ใน *Dia bercakap dengan guru itu.* — *guru itu* เป็นวลีนามที่ทำหน้าที่
+   ก. Subjek<br>ประธาน ข. Objek<br>กรรม ค. Predikat<br>ภาคแสดง ง. Pelengkap dalam frasa sendi nama<br>ส่วนเติมเต็มในวลีบุพบท
 
-**เฉลย** 1 ข · 2 ง · 3 ค · 4 ง · 5 ข
+**เฉลย** 1 ก · 2 ง · 3 ค · 4 ง · 5 ข · 6 ข · 7 ก · 8 ค · 9 ข · 10 ง
 
 **Penjelasan · คำอธิบาย**
 
@@ -141,14 +151,19 @@ Ayat
 - **3** *Doktor* menerangkan subjek *ayahnya*, maka berfungsi sebagai predikat (pola FN + FN).<br>*doktor* กล่าวถึงประธาน *ayahnya* จึงทำหน้าที่ภาคแสดง (แบบ FN + FN)
 - **4** Semua unsur wajib: *Mereka* subjek, *tinggal* inti predikat dan *di Hat Yai* pelengkap yang diperlukan oleh *tinggal*.<br>ทุกส่วนจำเป็น: *Mereka* เป็นประธาน *tinggal* เป็นแกนภาคแสดง และ *di Hat Yai* เป็นส่วนเติมเต็มที่ *tinggal* ต้องมี
 - **5** *Bahawa kamu berjaya* bergantung pada ayat induk *Kami berharap* dan tidak dapat berdiri sendiri sebagai ayat.<br>*bahawa kamu berjaya* ต้องอาศัยประโยคหลัก *Kami berharap* และยืนเป็นประโยคเองไม่ได้
+- **6** *Buku cerita* dikenai perbuatan *membaca* dan boleh menjadi subjek ayat pasif, maka objek.<br>*buku cerita* ถูกกระทำโดย *membaca* และเป็นประธานของกรรมวาจกได้ จึงเป็นกรรม
+- **7** Intinya *rumah*, iaitu kata nama, maka frasa nama.<br>คำหลักคือ *rumah* ซึ่งเป็นคำนาม จึงเป็นวลีนาม
+- **8** Ujian penggantian: seluruh *pelajar itu* dapat diganti dengan satu kata *dia*.<br>การทดสอบการแทนที่: *pelajar itu* ทั้งหมดแทนด้วยคำเดียวคือ *dia* ได้
+- **9** Ayat = klausa + intonasi (penyata, tanya, perintah atau seruan).<br>ประโยค = อนุประโยค + ทำนองเสียง (บอกเล่า คำถาม คำสั่ง หรืออุทาน)
+- **10** *Guru itu* hadir selepas kata sendi nama *dengan*, maka menjadi pelengkap dalam frasa sendi nama, bukan objek kata kerja.<br>*guru itu* อยู่หลังคำบุพบท *dengan* จึงเป็นส่วนเติมเต็มในวลีบุพบท ไม่ใช่กรรมของกริยา
 
 ### B. Soalan Subjektif<br>ข. อัตนัย
 
-1. Huraikan perbezaan antara *frasa, klausa* dan *ayat* dengan contoh yang dibina secara bertingkat.
+1. Huraikan perbezaan antara *frasa, klausa* dan *ayat* dengan contoh yang dibina secara bertingkat. (แนวคำตอบ: frasa *pelajar itu* — tiada subjek dan predikat → klausa *pelajar itu membaca* — ada subjek dan predikat → ayat *Pelajar itu membaca buku cerita.* — klausa + intonasi penyata)
    อธิบายความแตกต่างระหว่าง *frasa, klausa* และ *ayat* พร้อมตัวอย่างที่ต่อยอดกัน
-2. Lukiskan rajah pohon bagi ayat *Encik Hassan menghantar anaknya ke sekolah setiap pagi.*
+2. Lukiskan rajah pohon bagi ayat *Encik Hassan menghantar anaknya ke sekolah setiap pagi.* (แนวคำตอบ: Ayat → Subjek FN *Encik Hassan* + Predikat FK: KK *menghantar* · Objek FN *anaknya* · Keterangan FSN *ke sekolah* · Keterangan FN *setiap pagi*)
    เขียนแผนภูมิต้นไม้ของ *Encik Hassan menghantar anaknya ke sekolah setiap pagi.*
-3. Jelaskan dengan contoh mengapa "fungsi" perlu dibezakan daripada "kategori" dalam analisis ayat.
+3. Jelaskan dengan contoh mengapa "fungsi" perlu dibezakan daripada "kategori" dalam analisis ayat. (แนวคำตอบ: Kategori = jenis frasa, fungsi = peranan dalam ayat. *guru itu* tetap FN tetapi menjadi subjek dalam *Guru itu mengajar*, objek dalam *Saya menghormati guru itu* dan predikat dalam *Ayah saya guru itu*.)
    อธิบายด้วยตัวอย่างว่าทำไมต้องแยก "หน้าที่" ออกจาก "ประเภท" ในการวิเคราะห์ประโยค
 
 ### C. Soalan Pemikiran Kritis<br>ค. โจทย์คิดวิเคราะห์

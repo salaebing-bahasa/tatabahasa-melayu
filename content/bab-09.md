@@ -53,6 +53,19 @@ Pada akhir bab ini, pelajar dapat:
 | *semua* | *pelajar* | *tahun satu* | *ini* |
 | *para* | *peserta* | *dari Malaysia* | — |
 
+**Rajah pohon frasa nama** *dua buah rumah batu yang besar itu*
+**แผนภาพต้นไม้ของวลีนาม** *dua buah rumah batu yang besar itu*
+
+```
+FN
+├─ Penentu hadapan ── dua buah
+├─ Inti ──────────── rumah
+├─ Penerang
+│   ├─ KN ────────── batu
+│   └─ Klausa relatif ── yang besar
+└─ Penentu belakang ─ itu
+```
+
 - **Penentu hadapan** (*penentu hadapan*): *semua, segala, para, kaum*, bilangan + penjodoh bilangan, gelaran (*Encik, Dr., Tuan Haji*)
   **คำชี้เฉพาะหน้า**: *semua, segala, para, kaum*, จำนวน + ลักษณนาม, คำนำหน้าชื่อ
 - **Penentu belakang** (*penentu belakang*): *ini, itu, tersebut*
@@ -115,7 +128,7 @@ Pada akhir bab ini, pelajar dapat:
 ### A. Soalan Objektif<br>ก. ปรนัย
 
 1. Manakah yang mematuhi Hukum D-M?<br>ข้อใดเป็นไปตามกฎ ดี-เอ็ม
-   ก. *Thai masakan* ข. *masakan Thai* ค. *Pattani Masjid Pusat* ง. *merah baju*
+   ก. *masakan Thai* ข. *Thai masakan* ค. *Pattani Masjid Pusat* ง. *merah baju*
 2. Unsur inti bagi *tiga orang pelajar Malaysia itu* ialah<br>คำหลักของ *tiga orang pelajar Malaysia itu* คือ
    ก. *tiga* ข. *orang* ค. *pelajar* ง. *Malaysia*
 3. Manakah pengecualian Hukum D-M?<br>ข้อใดเป็นกรณียกเว้นกฎ ดี-เอ็ม
@@ -124,8 +137,18 @@ Pada akhir bab ini, pelajar dapat:
    ก. Objek<br>กรรม ข. Pelengkap<br>ส่วนเติมเต็ม ค. Keterangan<br>ส่วนขยาย ง. Subjek<br>ประธาน
 5. *Dengan pisau* dalam *Hamidah membuka kotak itu dengan pisau.* ialah keterangan<br>*dengan pisau* ใน *Hamidah membuka kotak itu dengan pisau.* เป็นส่วนขยายบอก
    ก. Waktu<br>เวลา ข. Tempat<br>สถานที่ ค. Alat/cara<br>เครื่องมือ/วิธี ง. Sebab<br>เหตุผล
+6. Dalam *dua buah rumah batu yang besar itu*, penentu belakang ialah<br>ใน *dua buah rumah batu yang besar itu* คำชี้เฉพาะหลังคือ
+   ก. *dua buah* ข. *rumah* ค. *batu yang besar* ง. *itu*
+7. Manakah yang mematuhi Hukum D-M?<br>ข้อใดเป็นไปตามกฎ ดี-เอ็ม
+   ก. *Songkhla Seafood Restoran* ข. *Restoran Makanan Laut Songkhla* ค. *Makanan Laut Restoran Songkhla* ง. *Songkhla Restoran Makanan Laut*
+8. Dalam *Ibu membeli ikan di pasar pagi tadi.*, unsur yang boleh digugurkan ialah<br>ใน *Ibu membeli ikan di pasar pagi tadi.* ส่วนที่ตัดทิ้งได้คือ
+   ก. *Ibu* ข. *membeli* ค. *di pasar pagi tadi* ง. *ikan*
+9. *Para* dalam *para peserta* ialah<br>*para* ใน *para peserta* คือ
+   ก. Inti<br>คำหลัก ข. Penerang<br>คำขยาย ค. Penentu hadapan<br>คำชี้เฉพาะหน้า ง. Penentu belakang<br>คำชี้เฉพาะหลัง
+10. *Kerana hujan* dalam *Dia pulang awal kerana hujan.* ialah keterangan<br>*kerana hujan* ใน *Dia pulang awal kerana hujan.* เป็นส่วนขยายบอก
+   ก. Waktu<br>เวลา ข. Sebab<br>เหตุผล ค. Tempat<br>สถานที่ ง. Cara<br>วิธี
 
-**เฉลย** 1 ข · 2 ค · 3 ก · 4 ข · 5 ค
+**เฉลย** 1 ก · 2 ค · 3 ก · 4 ข · 5 ค · 6 ง · 7 ข · 8 ค · 9 ค · 10 ข
 
 **Penjelasan · คำอธิบาย**
 
@@ -134,14 +157,19 @@ Pada akhir bab ini, pelajar dapat:
 - **3** *Perdana* (penerang daripada bahasa Sanskrit) hadir di hadapan *menteri*; *menteri besar* mematuhi Hukum D-M.<br>*perdana* (คำขยายจากภาษาสันสกฤต) อยู่หน้า *menteri* ส่วน *menteri besar* เป็นไปตามกฎ ดี-เอ็ม
 - **4** *Guru* melengkapkan kata kerja tak transitif *menjadi*; ia tidak boleh digugurkan dan ayat itu tidak boleh dipasifkan, maka pelengkap, bukan objek.<br>*guru* เติมเต็มอกรรมกริยา *menjadi* ตัดทิ้งไม่ได้และแปลงเป็นกรรมวาจกไม่ได้ จึงเป็นส่วนเติมเต็ม ไม่ใช่กรรม
 - **5** *Dengan pisau* menyatakan alat yang digunakan untuk membuka kotak.<br>*dengan pisau* บอกเครื่องมือที่ใช้เปิดกล่อง
+- **6** *Itu* hadir di hujung frasa nama sebagai penentu belakang; *dua buah* penentu hadapan.<br>*itu* อยู่ท้ายวลีนามเป็นคำชี้เฉพาะหลัง ส่วน *dua buah* เป็นคำชี้เฉพาะหน้า
+- **7** Inti *restoran* hadir dahulu, diikuti penerang *makanan laut* dan *Songkhla*.<br>คำหลัก *restoran* อยู่หน้า ตามด้วยคำขยาย *makanan laut* และ *Songkhla*
+- **8** *Di pasar* dan *pagi tadi* ialah keterangan, maka boleh digugurkan tanpa merosakkan ayat.<br>*di pasar* และ *pagi tadi* เป็นส่วนขยาย จึงตัดได้โดยประโยคยังสมบูรณ์
+- **9** *Para* hadir di hadapan inti dan menandakan jamak, maka penentu hadapan.<br>*para* อยู่หน้าคำหลักและบอกพหูพจน์ จึงเป็นคำชี้เฉพาะหน้า
+- **10** *Kerana* memperkenalkan sebab.<br>*kerana* นำเหตุผล
 
 ### B. Soalan Subjektif<br>ข. อัตนัย
 
-1. Analisis frasa nama *kesemua lima buah bilik kuliah baharu di Fakulti Sastera itu* kepada penentu hadapan, inti, penerang dan penentu belakang.
+1. Analisis frasa nama *kesemua lima buah bilik kuliah baharu di Fakulti Sastera itu* kepada penentu hadapan, inti, penerang dan penentu belakang. (แนวคำตอบ: penentu hadapan *kesemua lima buah* · inti *bilik* · penerang *kuliah baharu di Fakulti Sastera* · penentu belakang *itu*)
    วิเคราะห์วลีนาม *kesemua lima buah bilik kuliah baharu di Fakulti Sastera itu* เป็นคำชี้เฉพาะหน้า คำหลัก คำขยาย และคำชี้เฉพาะหลัง
-2. Perluas frasa kerja *membaca* dengan kata bantu, objek dan tiga jenis keterangan, kemudian tandakan setiap unsur.
+2. Perluas frasa kerja *membaca* dengan kata bantu, objek dan tiga jenis keterangan, kemudian tandakan setiap unsur. (แนวคำตอบ: *Mereka sedang membaca buku rujukan di perpustakaan pada waktu petang dengan tekun.* — kata bantu *sedang* · inti *membaca* · objek *buku rujukan* · keterangan tempat *di perpustakaan* · waktu *pada waktu petang* · cara *dengan tekun*)
    ขยายวลีกริยา *membaca* ให้มีคำช่วย กรรม และส่วนขยาย 3 ชนิด แล้วชี้แต่ละส่วน
-3. Bandingkan susunan kata dalam frasa nama bahasa Melayu, bahasa Thai dan bahasa Inggeris dengan tiga contoh frasa.
+3. Bandingkan susunan kata dalam frasa nama bahasa Melayu, bahasa Thai dan bahasa Inggeris dengan tiga contoh frasa. (แนวคำตอบ: Bahasa Melayu dan bahasa Thai mengikut susunan D-M, manakala bahasa Inggeris M-D. Contoh: *rumah besar* — big house · *kopi panas* — hot coffee · *buku saya* — my book)
    เปรียบเทียบลำดับคำในวลีนามภาษามลายู ภาษาไทย และภาษาอังกฤษ ด้วยตัวอย่าง 3 วลี
 
 ### C. Soalan Pemikiran Kritis<br>ค. โจทย์คิดวิเคราะห์

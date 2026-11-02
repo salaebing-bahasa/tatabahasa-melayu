@@ -144,17 +144,27 @@ Partikel yang melekat di hujung kata: *-lah* (penegas/ajakan: *Duduklah.*), *-ka
 ### A. Soalan Objektif<br>ก. ปรนัย
 
 1. Manakah *kata hubung pancangan relatif*?<br>ข้อใดเป็น *kata hubung pancangan relatif*
-   ก. *dan* ข. *yang* ค. *bahawa* ง. *kerana*
+   ก. *dan* ข. *kerana* ค. *bahawa* ง. *yang*
 2. *Hadiah ini ___ ayah saya.*
-   ก. *dari* ข. *daripada* ค. *ke* ง. *di*
+   ก. *daripada* ข. *dari* ค. *ke* ง. *di*
 3. Ayat manakah yang menggunakan kata nafi dengan betul?<br>ข้อใดใช้คำปฏิเสธถูก
    ก. *Itu tidak rumah saya.* ข. *Dia bukan rajin.* ค. *Itu bukan rumah saya.* ง. *Saya bukan pergi.*
 4. Penjodoh bilangan bagi *pokok kelapa* ialah<br>ลักษณนามของ *pokok kelapa* คือ
    ก. *ekor* ข. *batang* ค. *helai* ง. *orang*
 5. Ayat manakah yang menggunakan *kata pemeri* dengan betul?<br>ข้อใดใช้ *kata pemeri* ถูก
    ก. *Rumahnya adalah besar.* ข. *Ayahnya ialah cantik.* ค. *Pengerusinya adalah Encik Ali.* ง. *Bajunya ialah di almari.*
+6. *Surat itu sudah saya hantar ___ semua pelajar.*
+   ก. *ke* ข. *kepada* ค. *pada* ง. *di*
+7. Manakah *kata hubung gabungan*?<br>ข้อใดเป็นคำเชื่อมแบบเชื่อม (*kata hubung gabungan*)
+   ก. *yang* ข. *bahawa* ค. *walaupun* ง. *tetapi*
+8. Partikel *-lah* dalam *Duduklah.* berfungsi<br>*-lah* ใน *Duduklah.* ทำหน้าที่
+   ก. Menyatakan pertanyaan<br>บอกคำถาม ข. Melembutkan perintah<br>ทำให้คำสั่งนุ่มนวล ค. Menafikan<br>ปฏิเสธ ง. Menyatakan bilangan<br>บอกจำนวน
+9. Penjodoh bilangan bagi *kain* ialah<br>ลักษณนามของ *kain* คือ
+   ก. *helai* ข. *biji* ค. *batang* ง. *ekor*
+10. *Dia pergi ___ pejabat pos.*
+   ก. *di* ข. *dari* ค. *ke* ง. *daripada*
 
-**เฉลย** 1 ข · 2 ข · 3 ค · 4 ข · 5 ก
+**เฉลย** 1 ง · 2 ก · 3 ค · 4 ข · 5 ก · 6 ข · 7 ง · 8 ข · 9 ก · 10 ค
 
 **Penjelasan · คำอธิบาย**
 
@@ -163,14 +173,19 @@ Partikel yang melekat di hujung kata: *-lah* (penegas/ajakan: *Duduklah.*), *-ka
 - **3** *Bukan* menafikan frasa nama *rumah saya*; *rajin* dan *pergi* dinafikan dengan *tidak*.<br>*bukan* ปฏิเสธวลีนาม *rumah saya* ส่วน *rajin* และ *pergi* ต้องปฏิเสธด้วย *tidak*
 - **4** *Batang* digunakan untuk benda yang panjang dan tegak seperti pokok, tiang dan pen.<br>*batang* ใช้กับสิ่งที่ยาวและตั้งตรง เช่น ต้นไม้ เสา ปากกา
 - **5** Mengikut *Tatabahasa Dewan*, *adalah* hadir di hadapan frasa adjektif (*besar*). *Ialah* hadir di hadapan frasa nama, maka yang betul *Pengerusinya ialah Encik Ali*.<br>ตาม *Tatabahasa Dewan* *adalah* ใช้หน้าวลีคุณศัพท์ (*besar*) ส่วน *ialah* ใช้หน้าวลีนาม ที่ถูกจึงเป็น *Pengerusinya ialah Encik Ali*
+- **6** Penerimanya manusia, maka *kepada*; *ke* digunakan untuk arah tempat.<br>ผู้รับเป็นคน จึงใช้ *kepada* ส่วน *ke* ใช้บอกทิศทางไปยังสถานที่
+- **7** *Tetapi* menghubungkan dua klausa yang setara; *yang*, *bahawa* dan *walaupun* ialah kata hubung pancangan.<br>*tetapi* เชื่อมอนุประโยคที่เท่ากัน ส่วน *yang*, *bahawa*, *walaupun* เป็นคำเชื่อมแบบฝัง
+- **8** Dalam ayat perintah, *-lah* melembutkan suruhan; pertanyaan ditandai oleh *-kah*.<br>ในประโยคคำสั่ง *-lah* ทำให้คำสั่งนุ่มนวลขึ้น ส่วนคำถามใช้ *-kah*
+- **9** *Helai* digunakan untuk benda yang nipis dan lebar seperti kain, kertas dan daun.<br>*helai* ใช้กับสิ่งที่บางและแผ่ออก เช่น ผ้า กระดาษ ใบไม้
+- **10** *Pergi* menyatakan arah tuju ke tempat, maka *ke*.<br>*pergi* บอกทิศทางไปยังสถานที่ จึงใช้ *ke*
 
 ### B. Soalan Subjektif<br>ข. อัตนัย
 
-1. Huraikan kriteria pemilihan *ialah* dan *adalah*, beserta dua contoh ayat bagi setiap satu.
+1. Huraikan kriteria pemilihan *ialah* dan *adalah*, beserta dua contoh ayat bagi setiap satu. (แนวคำตอบ: *ialah* di hadapan frasa nama: *Ibu kota Malaysia ialah Kuala Lumpur*, *Pengerusinya ialah Encik Ali* · *adalah* di hadapan frasa adjektif dan frasa sendi nama: *Cadangan itu adalah baik*, *Hadiah itu adalah untuk pemenang*)
    อธิบายเกณฑ์การเลือก *ialah* กับ *adalah* พร้อมตัวอย่างอย่างละ 2 ประโยค
-2. Bandingkan penggunaan *dari, daripada, kepada, pada* dengan contoh ayat tentang kehidupan di universiti.
+2. Bandingkan penggunaan *dari, daripada, kepada, pada* dengan contoh ayat tentang kehidupan di universiti. (แนวคำตอบ: *dari* tempat dan waktu: *dari asrama*, *dari pukul lapan* · *daripada* sumber manusia atau abstrak dan perbandingan: *surat daripada dekan*, *lebih tinggi daripada* · *kepada* penerima: *kepada pensyarah* · *pada* waktu dan orang: *pada hari Isnin*, *buku itu ada pada saya*)
    เปรียบเทียบการใช้ *dari, daripada, kepada, pada* โดยยกตัวอย่างประโยคที่เกี่ยวกับชีวิตในมหาวิทยาลัย
-3. Mengapakah kata tugas disebut "golongan tertutup"? Berikan alasan dan contoh.
+3. Mengapakah kata tugas disebut "golongan tertutup"? Berikan alasan dan contoh. (แนวคำตอบ: Disebut golongan tertutup kerana bilangannya terhad, hampir tidak bertambah dan kebanyakannya tidak menerima imbuhan, contohnya *dan, di, ke, yang*. Sebaliknya kata nama terus bertambah, contohnya *swafoto*.)
    ทำไมคำไวยากรณ์จึงเรียกว่า "กลุ่มปิด" ให้เหตุผลและตัวอย่าง
 
 ### C. Soalan Pemikiran Kritis<br>ค. โจทย์คิดวิเคราะห์

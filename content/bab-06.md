@@ -121,17 +121,27 @@ Bentuk *ber-* yang lain: *be-* di hadapan kata yang bermula dengan *r* dan kata 
 ### A. Soalan Objektif<br>ก. ปรนัย
 
 1. *meN-* + *tolong* =
-   ก. *mentolong* ข. *menolong* ค. *mengtolong* ง. *metolong*
+   ก. *menolong* ข. *mentolong* ค. *mengtolong* ง. *metolong*
 2. *meN-* + *cat* =
    ก. *mencat* ข. *mengcat* ค. *mengecat* ง. *mecat*
 3. *ber-* + *kerja* =
-   ก. *berkerja* ข. *bekerja* ค. *belkerja* ง. *bkerja*
+   ก. *berkerja* ข. *bkerja* ค. *belkerja* ง. *bekerja*
 4. Awalan *ter-* dalam *Dompetnya tertinggal di kedai.* bermaksud<br>*ter-* ใน *Dompetnya tertinggal di kedai.* มีความหมายว่า
    ก. Paling<br>ที่สุด ข. Tidak sengaja<br>ไม่ได้ตั้งใจ ค. Dapat dilakukan<br>ทำได้ ง. Berbalas-balas<br>ซึ่งกันและกัน
 5. *peN-* + *sapu* =
    ก. *pensapu* ข. *pesapu* ค. *penyapu* ง. *pengsapu*
+6. *meN-* + *kira* =
+   ก. *mengkira* ข. *mekira* ค. *mengira* ง. *menkira*
+7. *meN-* + *proses* =
+   ก. *memroses* ข. *memproses* ค. *menproses* ง. *meproses*
+8. *ber-* + *rehat* =
+   ก. *berrehat* ข. *berehat* ค. *belrehat* ง. *rehat*
+9. *meN-* + *ambil* =
+   ก. *mengambil* ข. *memambil* ค. *menambil* ง. *meambil*
+10. *ber-* dalam *berkereta* bermaksud<br>*ber-* ใน *berkereta* หมายถึง
+   ก. Tidak sengaja<br>ไม่ได้ตั้งใจ ข. Paling<br>ที่สุด ค. Dikenai perbuatan<br>ถูกกระทำ ง. Mempunyai atau menggunakan<br>มีหรือใช้
 
-**เฉลย** 1 ข · 2 ค · 3 ข · 4 ข · 5 ค
+**เฉลย** 1 ก · 2 ค · 3 ง · 4 ข · 5 ค · 6 ค · 7 ข · 8 ข · 9 ก · 10 ง
 
 **Penjelasan · คำอธิบาย**
 
@@ -140,14 +150,19 @@ Bentuk *ber-* yang lain: *be-* di hadapan kata yang bermula dengan *r* dan kata 
 - **3** Suku kata pertama *ker-* berakhir dengan *-er*, maka *ber-* menjadi *be-*: *bekerja*.<br>พยางค์แรก *ker-* ลงท้ายด้วย *-er* *ber-* จึงเป็น *be-*: *bekerja*
 - **4** Dompet itu tertinggal tanpa disengajakan; *ter-* di sini bermaksud tidak sengaja.<br>กระเป๋าสตางค์ถูกลืมไว้โดยไม่ตั้งใจ *ter-* ในที่นี้จึงหมายถึงไม่ได้ตั้งใจ
 - **5** Bunyi *s* luluh dan *peN-* menjadi *peny-*: *penyapu*.<br>เสียง *s* หลอมหายไป และ *peN-* กลายเป็น *peny-*: *penyapu*
+- **6** Bunyi *k* luluh apabila menerima *meN-* yang menjadi *meng-*: *mengira*.<br>เสียง *k* หลอมหายไปเมื่อเติม *meN-* ซึ่งเป็น *meng-*: *mengira*
+- **7** Kata dasar bermula dengan gugus konsonan *pr-*, maka *p* tidak luluh: *memproses*.<br>คำฐานขึ้นต้นด้วยพยัญชนะควบ *pr-* เสียง *p* จึงไม่หลอม: *memproses*
+- **8** Kata dasar bermula dengan *r*, maka *ber-* menjadi *be-*: *berehat*.<br>คำฐานขึ้นต้นด้วย *r* *ber-* จึงเป็น *be-*: *berehat*
+- **9** Kata dasar bermula dengan vokal, maka *meN-* menjadi *meng-*.<br>คำฐานขึ้นต้นด้วยสระ *meN-* จึงเป็น *meng-*
+- **10** *Berkereta* bermaksud mempunyai atau menggunakan kereta; *tidak sengaja* dan *paling* ialah makna *ter-*.<br>*berkereta* หมายถึงมีหรือใช้รถ ส่วนความหมายไม่ได้ตั้งใจและที่สุดเป็นของ *ter-*
 
 ### B. Soalan Subjektif<br>ข. อัตนัย
 
-1. Imbuhkan *meN-* pada kata dasar berikut dan nyatakan alomorfnya: *pinjam, tarik, kumpul, sewa, rasa, faks, cuci, ubah*.
+1. Imbuhkan *meN-* pada kata dasar berikut dan nyatakan alomorfnya: *pinjam, tarik, kumpul, sewa, rasa, faks, cuci, ubah*. (แนวคำตอบ: *meminjam* mem-, p luluh · *menarik* men-, t luluh · *mengumpul* meng-, k luluh · *menyewa* meny-, s luluh · *merasa* me- · *memfaks* mem- · *mencuci* men- · *mengubah* meng-, vokal)
    เติม *meN-* กับคำฐานต่อไปนี้และระบุรูปแปร: *pinjam, tarik, kumpul, sewa, rasa, faks, cuci, ubah*
-2. Huraikan makna *ber-* dalam *berbaju, berkereta, bermain, bersalaman* dan bina satu ayat bagi setiap kata.
+2. Huraikan makna *ber-* dalam *berbaju, berkereta, bermain, bersalaman* dan bina satu ayat bagi setiap kata. (แนวคำตอบ: *berbaju* memakai · *berkereta* mempunyai atau menggunakan · *bermain* melakukan · *bersalaman* berbalas-balas. Contoh ayat: *Adik berbaju merah.* · *Dia berkereta ke pejabat.* · *Kanak-kanak bermain bola.* · *Mereka bersalaman selepas solat.*)
    อธิบายความหมายของ *ber-* ใน *berbaju, berkereta, bermain, bersalaman* และแต่งประโยคแต่ละคำ
-3. Bandingkan *terbuka* (keadaan) dengan *dibuka* (perbuatan) melalui contoh ayat.
+3. Bandingkan *terbuka* (keadaan) dengan *dibuka* (perbuatan) melalui contoh ayat. (แนวคำตอบ: *terbuka* menyatakan keadaan tanpa menonjolkan pelaku: *Pintu itu terbuka.* · *dibuka* menyatakan perbuatan oleh pelaku: *Pintu itu dibuka oleh pengawal.*)
    เปรียบเทียบ *terbuka* (สภาพ) กับ *dibuka* (การกระทำ) ด้วยตัวอย่างประโยค
 
 ### C. Soalan Pemikiran Kritis<br>ค. โจทย์คิดวิเคราะห์

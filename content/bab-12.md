@@ -70,6 +70,21 @@ Ayat ini mempunyai satu **ayat induk** (*ayat induk*) dan **ayat kecil** (*ayat 
 | *komplemen* | *bahawa, untuk* | Menjadi subjek/objek/pelengkap<br>เป็นประธาน/กรรม/ส่วนเติมเต็ม | *Laporan itu menyatakan **bahawa kerajaan akan menghantar pulang pendatang tanpa izin**.* |
 | *keterangan* | *kerana, ketika, sekiranya, walaupun, dengan, untuk* | Menerangkan kata kerja: sebab, syarat, waktu, pertentangan, cara, harapan<br>ขยายกริยา: เหตุ เงื่อนไข เวลา ขัดแย้ง วิธี ความหวัง | ***Walaupun saya sibuk**, saya akan hadir ke mesyuarat tersebut.* |
 
+**Rajah pohon ayat majmuk pancangan relatif** *Ahmad menaiki bas yang berwarna biru.*
+**แผนภาพต้นไม้ของประโยคฝังอนุประโยคสัมพันธ์** *Ahmad menaiki bas yang berwarna biru.*
+
+```
+Ayat (ayat induk: Ahmad menaiki bas)
+├─ Subjek: FN ── Ahmad
+└─ Predikat: FK
+    ├─ KK ── menaiki
+    └─ Objek: FN
+        ├─ Inti ── bas
+        └─ Penerang: ayat kecil (relatif)
+            ├─ yang
+            └─ (bas itu) berwarna biru
+```
+
 **Enam jenis keterangan yang lazim:** sebab (*kerana*), syarat (*sekiranya, jika*), waktu (*ketika, selepas*), pertentangan (*walaupun*), cara/alat (*dengan*), harapan/tujuan (*untuk, supaya, agar*)
 **ส่วนขยาย 6 ชนิดที่พบบ่อย**: เหตุ เงื่อนไข เวลา ขัดแย้ง วิธี/เครื่องมือ ความหวัง/จุดมุ่งหมาย
 
@@ -112,7 +127,7 @@ Struktur: [pancangan *komplemen*] **dan** [pancangan *komplemen*] → dua ayat m
 ### A. Soalan Objektif<br>ก. ปรนัย
 
 1. *Kereta yang dinaiki abang itu kemalangan.* ialah ayat majmuk jenis<br>เป็นประโยครวมแบบ
-   ก. *gabungan* ข. *pancangan relatif* ค. *pancangan komplemen* ง. *campuran*
+   ก. *gabungan* ข. *campuran* ค. *pancangan komplemen* ง. *pancangan relatif*
 2. *Kami sedar bahawa kami lemah.* ialah<br>เป็น
    ก. *gabungan* ข. *pancangan relatif* ค. *pancangan komplemen* ง. *pancangan keterangan*
 3. *Kami tidak akan menyertai pertandingan ini lagi sekiranya kami kalah.* — keterangan yang menyatakan<br>ส่วนขยายบอก
@@ -121,8 +136,18 @@ Struktur: [pancangan *komplemen*] **dan** [pancangan *komplemen*] → dua ayat m
    ก. *Dia makan lalu tidur.* ข. *Rumah yang besar itu milik datuk.* ค. *Pelajar tahun satu dari Pattani itu sedang menulis karangan di perpustakaan.* ง. *Saya tahu bahawa dia sakit.*
 5. Kata hubung manakah yang menyatakan pertentangan dalam ayat majmuk gabungan?<br>คำเชื่อมใดแสดงความขัดแย้งในประโยครวมแบบเชื่อม
    ก. *sambil* ข. *serta* ค. *padahal* ง. *lalu*
+6. *Ali membaca buku dan Ahmad menulis surat.* ialah ayat majmuk<br>เป็นประโยครวมแบบ
+   ก. *gabungan* ข. *pancangan relatif* ค. *pancangan komplemen* ง. *campuran*
+7. *Walaupun hujan, dia tetap datang.* — ayat kecil keterangan menyatakan<br>ประโยคย่อยแสดง
+   ก. Sebab<br>เหตุ ข. Syarat<br>เงื่อนไข ค. Pertentangan<br>ความขัดแย้ง ง. Tujuan<br>จุดประสงค์
+8. Gabungan yang betul bagi *Saya membeli buku.* + *Buku itu mahal.* ialah<br>การรวม *Saya membeli buku.* + *Buku itu mahal.* ที่ถูกคือ
+   ก. *Saya membeli buku dan mahal.* ข. *Saya membeli buku yang mahal.* ค. *Saya membeli buku bahawa mahal.* ง. *Saya membeli mahal buku.*
+9. Kata hubung *supaya* membentuk ayat kecil keterangan<br>คำเชื่อม *supaya* สร้างประโยคย่อยแสดง
+   ก. Tujuan<br>จุดประสงค์ ข. Sebab<br>เหตุ ค. Waktu<br>เวลา ง. Syarat<br>เงื่อนไข
+10. *Ismail dan Safuding sedang minum kopi sambil menonton televisyen di kedai.* ialah<br>เป็น
+   ก. *ayat tunggal* ข. *ayat majmuk* ค. *ayat dasar* ง. *ayat songsang*
 
-**เฉลย** 1 ข · 2 ค · 3 ข · 4 ค · 5 ค
+**เฉลย** 1 ง · 2 ค · 3 ข · 4 ค · 5 ค · 6 ก · 7 ค · 8 ข · 9 ก · 10 ข
 
 **Penjelasan · คำอธิบาย**
 
@@ -131,14 +156,19 @@ Struktur: [pancangan *komplemen*] **dan** [pancangan *komplemen*] → dua ayat m
 - **3** *Sekiranya* memperkenalkan syarat bagi perbuatan dalam ayat induk.<br>*sekiranya* นำเงื่อนไขของการกระทำในประโยคหลัก
 - **4** Ayat ini hanya mempunyai satu subjek dan satu predikat walaupun panjang; pilihan lain mengandungi lebih daripada satu klausa.<br>ประโยคนี้มีประธานและภาคแสดงอย่างละหนึ่งแม้จะยาว ส่วนตัวเลือกอื่นมีมากกว่าหนึ่งอนุประโยค
 - **5** *Padahal* menyatakan pertentangan; *sambil*, *serta* dan *lalu* menyatakan tambahan atau urutan.<br>*padahal* แสดงความขัดแย้ง ส่วน *sambil*, *serta*, *lalu* แสดงการเพิ่มเติมหรือลำดับ
+- **6** Dua klausa yang setara dihubungkan dengan *dan*; setiap klausa boleh berdiri sebagai ayat.<br>อนุประโยคที่เท่ากันสองอนุประโยคเชื่อมด้วย *dan* และแต่ละอนุประโยคยืนเป็นประโยคได้
+- **7** *Walaupun* menyatakan pertentangan: hujan tidak menghalang dia datang.<br>*walaupun* แสดงความขัดแย้ง คือฝนไม่ได้ทำให้เขาไม่มา
+- **8** Ayat kecil *(buku itu) mahal* dipancangkan dengan *yang* untuk menerangkan kata nama *buku*.<br>ฝังประโยคย่อย *(buku itu) mahal* ด้วย *yang* เพื่อขยายนาม *buku*
+- **9** *Supaya* dan *agar* menyatakan tujuan atau harapan.<br>*supaya* และ *agar* แสดงจุดประสงค์หรือความหวัง
+- **10** Walaupun pendek, ayat ini berasal daripada beberapa ayat asal yang digabungkan dengan *dan* dan *sambil*.<br>แม้จะสั้น แต่ประโยคนี้มาจากหลายประโยคที่รวมกันด้วย *dan* และ *sambil*
 
 ### B. Soalan Subjektif<br>ข. อัตนัย
 
-1. Gabungkan ayat dengan kata hubung yang diberikan: (a) *Budak itu berdiri.* + *Budak itu gemuk.* (*yang*) (b) *Engkau harus berdoa.* + *Engkau mendapat rezeki yang halal.* (*supaya*) (c) *Dia duduk di kerusi.* + *Dia memerhatikan orang yang lalu-lalang.* (*sambil*)
+1. Gabungkan ayat dengan kata hubung yang diberikan: (a) *Budak itu berdiri.* + *Budak itu gemuk.* (*yang*) (b) *Engkau harus berdoa.* + *Engkau mendapat rezeki yang halal.* (*supaya*) (c) *Dia duduk di kerusi.* + *Dia memerhatikan orang yang lalu-lalang.* (*sambil*) (แนวคำตอบ: a. *Budak yang berdiri itu gemuk.* · b. *Engkau harus berdoa supaya mendapat rezeki yang halal.* · c. *Dia duduk di kerusi sambil memerhatikan orang yang lalu-lalang.*)
    รวมประโยคด้วยคำเชื่อมที่กำหนดตามข้อ (ก) (ข) (ค)
-2. Cerakinkan ayat-ayat berikut kepada ayat asal: *Nurida sedang memasak sedangkan Nurma membaca novel.* · *Nisrin bukan sahaja rajin tetapi juga baik hati.*
+2. Cerakinkan ayat-ayat berikut kepada ayat asal: *Nurida sedang memasak sedangkan Nurma membaca novel.* · *Nisrin bukan sahaja rajin tetapi juga baik hati.* (แนวคำตอบ: *Nurida sedang memasak.* + *Nurma membaca novel.* · *Nisrin rajin.* + *Nisrin baik hati.*)
    แยกประโยคต่อไปนี้เป็นประโยคต้นทาง
-3. Huraikan perbezaan antara *ayat majmuk gabungan* dengan *ayat majmuk pancangan* berdasarkan kriteria "boleh berdiri sebagai ayat atau tidak".
+3. Huraikan perbezaan antara *ayat majmuk gabungan* dengan *ayat majmuk pancangan* berdasarkan kriteria "boleh berdiri sebagai ayat atau tidak". (แนวคำตอบ: Gabungan: setiap bahagian setara dan boleh berdiri sebagai ayat, dihubungkan dengan *dan, tetapi, atau*. Pancangan: ayat kecil tidak boleh berdiri sendiri kerana bergantung pada ayat induk, dipancangkan dengan *yang, bahawa, kerana, walaupun*.)
    อธิบายความแตกต่างระหว่าง *ayat majmuk gabungan* กับ *ayat majmuk pancangan* โดยใช้เกณฑ์ "ยืนเป็นประโยคได้หรือไม่"
 
 ### C. Soalan Pemikiran Kritis<br>ค. โจทย์คิดวิเคราะห์
