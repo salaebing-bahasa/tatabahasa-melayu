@@ -20,6 +20,18 @@
   function save(o) { try { localStorage.setItem(KEY, JSON.stringify(o)); } catch (e) { /* ignore */ } }
   const isDone = n => (load().done || []).includes(n);
   function setDone(n, v) { const s = load(); const d = new Set(s.done || []); v ? d.add(n) : d.delete(n); s.done = [...d]; save(s); }
+  /* ---------- Kemajuan pelajar · ความก้าวหน้า (localStorage, peranti ini sahaja) ----------
+     done: [nombor bab] · skor: { n: { ok, all, best, cuba, t } } · akhir: { n, sec, t } */
+  const storageOK = (() => { try { localStorage.setItem("__tb", "1"); localStorage.removeItem("__tb"); return true; } catch (e) { return false; } })();
+  const getSkor = n => (load().skor || {})[n] || null;
+  function setSkor(n, ok, all) { const s = load(); s.skor = s.skor || {}; const p = s.skor[n] || {}; s.skor[n] = { ok, all, best: Math.max(p.best || 0, ok), cuba: (p.cuba || 0) + 1, t: Date.now() }; save(s); }
+  function setAkhir(n, sec) { const s = load(); const a = s.akhir || {}; if (a.n === n && a.sec === (sec || "")) return; s.akhir = { n, sec: sec || "", t: Date.now() }; save(s); }
+  function resetKemajuan() { const s = load(); delete s.done; delete s.skor; delete s.akhir; save(s); }
+  const tarikh = t => { try { return new Date(t).toLocaleString("ms-MY", { day: "numeric", month: "short", year: "numeric", hour: "2-digit", minute: "2-digit" }); } catch (e) { return ""; } };
+  const NOTA_SIMPAN_F = () => B("Kemajuan dan skor disimpan dalam pelayar (localStorage) pada peranti ini sahaja. Data ini <b>tidak dihantar kepada pensyarah</b> dan bukan rekod markah rasmi. Jika anda menukar peranti atau pelayar, menggunakan mod peribadi, atau memadam data pelayar, kemajuan tidak akan kelihatan atau akan hilang.",
+    "ความก้าวหน้าและคะแนนบันทึกในเบราว์เซอร์ (localStorage) ของอุปกรณ์เครื่องนี้เท่านั้น <b>ไม่ได้ส่งไปให้อาจารย์</b> และไม่ใช่คะแนนอย่างเป็นทางการ หากเปลี่ยนอุปกรณ์หรือเบราว์เซอร์ ใช้โหมดไม่ระบุตัวตน หรือล้างข้อมูลเบราว์เซอร์ ข้อมูลจะไม่แสดงหรือหายไป");
+  const NOTA_PENDEK_F = () => `<span class="nota-simpan">${B("Disimpan dalam pelayar ini sahaja; tidak dihantar kepada pensyarah.", "บันทึกในเบราว์เซอร์นี้เท่านั้น ไม่ได้ส่งให้อาจารย์")} <a href="#/kemajuan">${B("Lihat kemajuan", "ดูความก้าวหน้า")}</a></span>`;
+  function sambungHref() { const a = load().akhir; if (!a || !CH.some(c => c.no === a.n)) return null; return babLink(a.n) + (a.sec ? "/" + a.sec : ""); }
 
   function toast(msg) { const t = $("#toast"); t.textContent = msg; t.classList.add("show"); clearTimeout(toast.t); toast.t = setTimeout(() => t.classList.remove("show"), 2600); }
 
@@ -361,7 +373,8 @@
           <p class="bm" lang="ms">Dokumen pengajaran dalam talian, ${C.termMs}. Tiga belas bab daripada morfem hingga transformasi ayat, lengkap dengan kajian kes, kuiz dan alat latihan.</p>
           <p class="tr hero-tr2">เอกสารประกอบการสอนออนไลน์ ${C.term} 13 บท ตั้งแต่หน่วยคำถึงการแปลงประโยค พร้อมกรณีศึกษา แบบทดสอบ และเครื่องมือฝึก</p>
           <div class="btn-row">
-            <a class="btn btn-hero btn-dw" href="${babLink(next.no)}">${doneCount ? B("Sambung Bab " + next.no, "เรียนต่อ บทที่ " + next.no) : B("Mula Bab 1", "เริ่มบทที่ 1")}</a>
+            ${(() => { const h = sambungHref(), a = load().akhir; return h ? `<a class="btn btn-hero btn-dw" href="${h}">${B("Sambung Belajar · Bab " + a.n, "เรียนต่อ บทที่ " + a.n)}</a>` : `<a class="btn btn-hero btn-dw" href="${babLink(next.no)}">${doneCount ? B("Mula Bab " + next.no, "เริ่มบทที่ " + next.no) : B("Mula Bab 1", "เริ่มบทที่ 1")}</a>`; })()}
+            <a class="btn btn-ghost btn-dw" href="#/kemajuan">${B(`Kemajuan ${Math.round(doneCount / CH.length * 100)}%`, `ความก้าวหน้า ${Math.round(doneCount / CH.length * 100)}%`)}</a>
             <a class="btn btn-ghost btn-dw" href="#/kandungan">${B("Kandungan", "สารบัญ")}</a>
           </div>
         </div>
@@ -375,7 +388,7 @@
           const head = c.no === 1 || c.no === 8 ? `<li aria-hidden="true"><p class="part-head">${partName(c.part)}</p></li>` : "";
           return `${head}<li><a class="jrow" href="${babLink(c.no)}"><div class="jweek"><b>Minggu ${w.week}</b>Bab ${c.no} · บทที่ ${c.no}</div>
             <div class="jtitle"><span class="ms" lang="ms">${c.ms}</span><span class="th">${c.th}</span></div>
-            <div class="jstat ${d ? "done" : ""}">${d ? "✓ Selesai · เรียนแล้ว" : c.clos.join(" · ")}</div></a></li>`;
+            <div class="jstat ${d ? "done" : ""}">${d ? "✓ Selesai · เรียนแล้ว" : c.clos.join(" · ")}${getSkor(c.no) ? `<span class="jskor">Kuiz ${getSkor(c.no).best}/${getSkor(c.no).all}</span>` : ""}</div></a></li>`;
         }).join("")}</ol>
       </div></section>
       <section class="section" style="padding-top:0"><div class="wrap tri">
@@ -475,27 +488,93 @@
       body.innerHTML = `<p class="say-hint">${SPK} <span>Klik perkataan Melayu bercetak condong untuk mendengar sebutan · กดคำภาษามลายูตัวเอียงเพื่อฟังเสียง</span></p>` + secs.map((s, k) => `<section class="block" id="s-${s.id}"><h2>${c.struktur === 12 ? `<span class="sec-no" aria-hidden="true">${k + 2}.</span> ` : ""}${mdi(s.title)}</h2><div class="prose">${s.id === "soalan" || s.id === "kuiz" ? soalanHTML(s.body, n) : mdLat(s.body)}</div></section>`).join("") + `
         <div class="lesson-foot">
           <div class="done-box"><button type="button" class="btn ${isDone(n) ? "btn-line" : "btn-solid"}" data-done>${isDone(n) ? "✓ Bab ini selesai · เรียนบทนี้แล้ว (klik untuk batal · กดเพื่อยกเลิก)" : "Tandakan selesai · ทำเครื่องหมายว่าเรียนแล้ว"}</button>
-          <span style="color:var(--muted);font-size:15px">Disimpan dalam pelayar ini sahaja · บันทึกไว้ในเบราว์เซอร์นี้เท่านั้น</span></div>
+          ${NOTA_PENDEK_F()}</div>
           <nav class="pn" aria-label="Bab sebelum dan seterusnya · บทก่อนหน้าและถัดไป">
             ${prev ? `<a href="${babLink(prev.no)}"><small>Bab sebelum · บทก่อนหน้า (${prev.no})</small><span class="ms" lang="ms">${prev.ms}</span></a>` : ""}
             ${next ? `<a class="next" href="${babLink(next.no)}"><small>Bab seterusnya · บทถัดไป (${next.no})</small><span class="ms" lang="ms">${next.ms}</span></a>` : ""}
           </nav>
         </div>`;
-      enhance(body); bindMCQ(body); bindLat(body);
+      /* Skor kuiz bab disimpan · บันทึกคะแนนแบบทดสอบท้ายบท */
+      const ex = $(`#mcq${n}`, body);
+      const skorTxt = () => { const k = getSkor(n); return k ? B(`Skor terakhir ${k.ok}/${k.all} · terbaik ${k.best}/${k.all} · ${k.cuba} kali cubaan`, `คะแนนล่าสุด ${k.ok}/${k.all} · สูงสุด ${k.best}/${k.all} · ทำแล้ว ${k.cuba} ครั้ง`) : B("Belum ada skor yang disimpan untuk bab ini.", "ยังไม่มีคะแนนที่บันทึกไว้สำหรับบทนี้"); };
+      if (ex) ex.insertAdjacentHTML("afterend", `<div class="skor-bab" aria-live="polite"><p class="skor-txt">${skorTxt()}</p>${NOTA_PENDEK_F()}</div>`);
+      enhance(body); bindLat(body);
+      bindMCQ(body, (ok, all) => {
+        if (ok === null) return;
+        setSkor(n, ok, all); $(".skor-txt", body).innerHTML = skorTxt();
+        const pc = Math.round(ok / all * 100);
+        if (pc >= 80 && !isDone(n)) toast(T(`Skor ${ok}/${all} disimpan. Anda boleh menandakan bab ini selesai.`, `บันทึกคะแนน ${ok}/${all} แล้ว ทำเครื่องหมายว่าเรียนบทนี้จบได้`));
+        else toast(T(`Skor ${ok}/${all} disimpan`, `บันทึกคะแนน ${ok}/${all} แล้ว`));
+      });
+      setAkhir(n, sub && sub !== "tajuk" ? sub : "");
       /* senarai tajuk mengikut bahagian sebenar dalam fail · สารบัญย่อยตามหัวข้อจริงในไฟล์ */
       const ids = (c.struktur === 12 ? ["tajuk"] : []).concat(secs.map(s => s.id));
       $(".toc ol").innerHTML = ids.map(id => `<li><a href="#/bab/${n}/${id}" data-sec="${id}">${SEC_SHORT[id] || id}</a></li>`).join("");
       // TOC: เลื่อนภายในหน้า
       $$(".toc a").forEach(a => a.addEventListener("click", e => { e.preventDefault(); const t = $("#s-" + a.dataset.sec) || (a.dataset.sec === "tajuk" ? $("#s-tajuk") : null); if (t) t.scrollIntoView({ behavior: reduced() ? "auto" : "smooth" }); history.replaceState(null, "", a.getAttribute("href")); }));
       if ("IntersectionObserver" in window) {
-        const io = new IntersectionObserver(es => es.forEach(en => { if (en.isIntersecting) $$(".toc a").forEach(a => a.classList.toggle("on", "s-" + a.dataset.sec === en.target.id)); }), { rootMargin: "-30% 0px -60% 0px" });
+        const io = new IntersectionObserver(es => es.forEach(en => { if (en.isIntersecting) { $$(".toc a").forEach(a => a.classList.toggle("on", "s-" + a.dataset.sec === en.target.id)); if (location.hash.split("/")[2] === String(n)) setAkhir(n, en.target.id === "s-tajuk" ? "" : en.target.id.replace(/^s-/, "")); } }), { rootMargin: "-30% 0px -60% 0px" });
         $$(".block", body).forEach(b => io.observe(b)); if ($("#s-tajuk")) io.observe($("#s-tajuk"));
       }
-      $("[data-done]", body).addEventListener("click", () => { const v = !isDone(n); setDone(n, v); toast(v ? T(`Bab ${n} ditandakan selesai`, `บันทึกว่าเรียนบทที่ ${n} แล้ว`) : T("Tanda dibatalkan", "ยกเลิกเครื่องหมายแล้ว")); lesson(n); });
+      const btnDone = $("[data-done]", body);
+      btnDone.addEventListener("click", () => {
+        const v = !isDone(n); setDone(n, v);
+        btnDone.className = "btn " + (v ? "btn-line" : "btn-solid");
+        btnDone.textContent = v ? "✓ Bab ini selesai · เรียนบทนี้แล้ว (klik untuk batal · กดเพื่อยกเลิก)" : "Tandakan selesai · ทำเครื่องหมายว่าเรียนแล้ว";
+        const d = CH.filter(x => isDone(x.no)).length;
+        toast(v ? T(`Bab ${n} selesai · ${d}/${CH.length} bab (${Math.round(d / CH.length * 100)}%)`, `เรียนบทที่ ${n} แล้ว · ${d}/${CH.length} บท`) : T("Tanda dibatalkan", "ยกเลิกเครื่องหมายแล้ว"));
+      });
       if (sub && $("#s-" + sub)) setTimeout(() => $("#s-" + sub).scrollIntoView(), 30);
     }).catch(() => {
       $("#bab-body").innerHTML = `<div class="note"><p>Bab ${n} gagal dimuatkan. Sila muat semula halaman. · โหลดเนื้อหาบทที่ ${n} ไม่สำเร็จ ลองรีเฟรชหน้าอีกครั้ง</p><p style="font-size:15px;color:var(--muted)">หมายเหตุสำหรับผู้สอน: เนื้อหาโหลดจากไฟล์ <code>content/bab-${pad(n)}.md</code> ต้องเปิดผ่านเว็บไซต์ (GitHub Pages) ไม่ใช่การดับเบิลคลิกไฟล์ในเครื่อง</p></div>`;
     });
+  }
+
+  /* ================= KEMAJUAN · ความก้าวหน้า ================= */
+  function kemajuan() {
+    setNav("kemajuan"); document.title = `Kemajuan Saya · ความก้าวหน้า | ${C.code}`;
+    const st = load(), skor = st.skor || {}, akhir = st.akhir;
+    const done = CH.filter(c => isDone(c.no)).length, pc = Math.round(done / CH.length * 100);
+    const sk = CH.map(c => skor[c.no]).filter(Boolean);
+    const purata = sk.length ? Math.round(sk.reduce((a, k) => a + k.best / k.all, 0) / sk.length * 100) : null;
+    const h = sambungHref(), ca = akhir && CH.find(c => c.no === akhir.n);
+    app.innerHTML = `<section class="section"><div class="wrap kemajuan">
+      <div class="section-head"><h1>${B("Kemajuan Saya", "ความก้าวหน้าของฉัน")}</h1></div>
+      <div class="note nota-kemajuan" role="note"><p>${NOTA_SIMPAN_F()}</p></div>
+      ${storageOK ? "" : `<div class="note nota-amaran" role="alert"><p>${B("Pelayar ini tidak membenarkan penyimpanan (contohnya mod peribadi). Kemajuan tidak dapat disimpan.", "เบราว์เซอร์นี้ไม่อนุญาตให้บันทึกข้อมูล (เช่น โหมดไม่ระบุตัวตน) จึงบันทึกความก้าวหน้าไม่ได้")}</p></div>`}
+      <div class="kj-stat">
+        <div class="kj-kad"><p class="kj-label">${B("Bab selesai", "บทที่เรียนจบ")}</p><p class="kj-nilai">${done}<small> / ${CH.length}</small></p></div>
+        <div class="kj-kad"><p class="kj-label">${B("Kemajuan pelajaran", "ความก้าวหน้า")}</p><p class="kj-nilai">${pc}<small>%</small></p>
+          <div class="kj-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="${pc}" aria-label="Kemajuan pelajaran · ความก้าวหน้า ${pc}%"><span style="width:${pc}%"></span></div></div>
+        <div class="kj-kad"><p class="kj-label">${B("Kuiz bab dijawab", "แบบทดสอบท้ายบทที่ทำแล้ว")}</p><p class="kj-nilai">${sk.length}<small> / ${CH.length}</small></p></div>
+        <div class="kj-kad"><p class="kj-label">${B("Purata skor terbaik", "ค่าเฉลี่ยคะแนนสูงสุด")}</p><p class="kj-nilai">${purata === null ? "—" : purata + "<small>%</small>"}</p></div>
+      </div>
+      <div class="kj-sambung">
+        ${h ? `<a class="btn btn-solid btn-dw" href="${h}">${B("Sambung Belajar", "เรียนต่อจากครั้งล่าสุด")}</a><p>${B(`Terakhir dibuka: Bab ${ca.no} · ${ca.ms}${akhir.sec && SEC_DEF.find(d => d[0] === akhir.sec) ? " · " + SEC_DEF.find(d => d[0] === akhir.sec)[2] : ""} · ${tarikh(akhir.t)}`, `เปิดล่าสุด: บทที่ ${ca.no} ${ca.th}`)}</p>`
+          : `<a class="btn btn-solid btn-dw" href="${babLink(1)}">${B("Mula Bab 1", "เริ่มบทที่ 1")}</a><p>${B("Belum ada bab yang dibuka.", "ยังไม่ได้เปิดบทเรียน")}</p>`}
+      </div>
+      <h2 class="kj-h2">${B("Kemajuan mengikut bab", "ความก้าวหน้ารายบท")}</h2>
+      <div class="tbl-wrap"><table class="kj-jadual"><thead><tr>
+        <th scope="col">${B("Bab", "บท")}</th><th scope="col">${B("Tajuk", "ชื่อบท")}</th><th scope="col">${B("Status", "สถานะ")}</th>
+        <th scope="col">${B("Skor kuiz terakhir", "คะแนนล่าสุด")}</th><th scope="col">${B("Skor terbaik", "คะแนนสูงสุด")}</th><th scope="col">${B("Cubaan", "จำนวนครั้ง")}</th></tr></thead>
+        <tbody>${CH.map(c => { const k = skor[c.no], d = isDone(c.no); return `<tr>
+          <td>${c.no}</td><td><a href="${babLink(c.no)}"><span lang="ms">${c.ms}</span></a><br><span class="tr-kecil">${c.th}</span></td>
+          <td class="${d ? "kj-ok" : ""}">${d ? B("✓ Selesai", "เรียนจบ") : B("Belum", "ยังไม่จบ")}</td>
+          <td>${k ? `${k.ok}/${k.all} <small>(${Math.round(k.ok / k.all * 100)}%)</small>` : "—"}</td>
+          <td>${k ? `${k.best}/${k.all}` : "—"}</td><td>${k ? k.cuba : "—"}</td></tr>`; }).join("")}</tbody></table></div>
+      <p class="kj-cara">${B("Cara mengemas kini: tekan <b>Tandakan selesai</b> di hujung setiap bab, dan jawab semua soalan objektif dalam <b>Kuiz Penilaian</b> untuk menyimpan skor.", "วิธีอัปเดต: กด <b>ทำเครื่องหมายว่าเรียนแล้ว</b> ท้ายบท และตอบข้อปรนัยใน <b>แบบทดสอบท้ายบท</b> ให้ครบเพื่อบันทึกคะแนน")}</p>
+      <div class="kj-padam"><button type="button" class="btn btn-line" id="kj-padam">${B("Padam data kemajuan", "ล้างข้อมูลความก้าวหน้า")}</button></div>
+      <dialog class="kj-dialog" id="kj-dialog" aria-labelledby="kj-dt">
+        <h2 id="kj-dt">${B("Padam semua data kemajuan?", "ล้างข้อมูลความก้าวหน้าทั้งหมดหรือไม่")}</h2>
+        <p>${B("Tanda bab selesai, skor kuiz dan kedudukan terakhir dalam pelayar ini akan dipadam. Tindakan ini tidak boleh dibatalkan.", "เครื่องหมายบทที่เรียนจบ คะแนนแบบทดสอบ และตำแหน่งล่าสุดในเบราว์เซอร์นี้จะถูกลบ และกู้คืนไม่ได้")}</p>
+        <div class="btn-row"><button type="button" class="btn btn-line" id="kj-batal">${B("Batal", "ยกเลิก")}</button><button type="button" class="btn btn-solid kj-bahaya" id="kj-ya">${B("Ya, padam", "ยืนยันล้างข้อมูล")}</button></div>
+      </dialog>
+    </div></section>`;
+    const dlg = $("#kj-dialog");
+    $("#kj-padam").onclick = () => { if (dlg.showModal) dlg.showModal(); else dlg.setAttribute("open", ""); $("#kj-batal").focus(); };
+    $("#kj-batal").onclick = () => { dlg.close ? dlg.close() : dlg.removeAttribute("open"); $("#kj-padam").focus(); };
+    $("#kj-ya").onclick = () => { resetKemajuan(); dlg.close ? dlg.close() : dlg.removeAttribute("open"); kemajuan(); toast(T("Data kemajuan telah dipadam", "ล้างข้อมูลความก้าวหน้าแล้ว")); };
+    window.scrollTo(0, 0);
   }
 
   /* ================= QUIZ ================= */
@@ -714,11 +793,11 @@
     const row = (no, title, pg, href) => `<a class="toc-row" href="${href}"><span class="toc-no">${no}</span><span class="toc-title">${title}</span><span class="toc-dots" aria-hidden="true"></span><span class="toc-pg">${pg}</span></a>`;
     const part = p => `<div class="toc-part"><h2>${partName(p)}</h2><ol class="toc-list">${CH.filter(c => c.part === p).map(c => {
       const d = isDone(c.no);
-      return `<li>${row("Bab " + c.no, `<span class="ms" lang="ms">${c.ms}</span><span class="th">${c.th}</span>`, `<span class="${d ? "toc-pg done" : ""}">${d ? "✓ " : ""}Minggu ${c.week}</span>`, babLink(c.no))}
+      return `<li>${row("Bab " + c.no, `<span class="ms" lang="ms">${c.ms}</span><span class="th">${c.th}</span>`, `<span class="${d ? "toc-pg done" : ""}">${d ? "✓ " : ""}Minggu ${c.week}${getSkor(c.no) ? ` · Kuiz ${getSkor(c.no).best}/${getSkor(c.no).all}` : ""}</span>`, babLink(c.no))}
         <ul class="toc-subs" aria-label="Tajuk Bab ${c.no} · หัวข้อในบทที่ ${c.no}">${secIds(c).map(id => `<li><a href="${babLink(c.no)}/${id}">${SEC_SHORT[id]}</a></li>`).join("")}</ul></li>`;
     }).join("")}</ol></div>`;
     app.innerHTML = `<section class="section"><div class="wrap toc-page">
-      <header class="toc-head"><h1 lang="ms">Kandungan</h1><p>สารบัญ</p></header>
+      <header class="toc-head"><h1 lang="ms">Kandungan</h1><p>สารบัญ</p>${sambungHref() ? `<p class="toc-sambung"><a class="btn btn-solid btn-dw" href="${sambungHref()}">${B("Sambung Belajar · Bab " + load().akhir.n, "เรียนต่อ บทที่ " + load().akhir.n)}</a></p>` : ""}</header>
       <div class="toc-part"><h2>${B("Bahagian Awal", "ส่วนนำ")}</h2><ul class="toc-list">
         <li><button type="button" class="toc-row" data-opencover><span class="toc-no"></span><span class="toc-title"><span class="ms" lang="ms">Kulit Hadapan</span><span class="th">ปกนอก</span></span><span class="toc-dots" aria-hidden="true"></span><span class="toc-pg">Kulit · ปก</span></button></li>
         <li>${row("", '<span class="ms" lang="ms">Kulit Dalam</span><span class="th">ปกใน</span>', "Penyusun", "#/kulit-dalam")}</li>
@@ -727,6 +806,7 @@
       </ul></div>
       ${part("morfologi")}${part("sintaksis")}
       <div class="toc-part"><h2>${B("Lampiran", "ภาคผนวก")}</h2><ul class="toc-list">
+        <li>${row("", '<span class="ms" lang="ms">Kemajuan Saya</span><span class="th">ความก้าวหน้าของฉัน</span>', `${CH.filter(x => isDone(x.no)).length}/${CH.length} bab`, "#/kemajuan")}</li>
         <li>${row("", '<span class="ms" lang="ms">Kuiz Keseluruhan</span><span class="th">แบบทดสอบรวม</span>', "Semua bab", "#/kuiz")}</li>
         <li>${row("", '<span class="ms" lang="ms">Alat Latihan: Pengimbuhan · Ayat Pasif</span><span class="th">เครื่องมือฝึก: เติมปัจจัย · แปลงกรรมวาจก</span>', "Bab 6, 13", "#/alat")}</li>
         <li>${row("", '<span class="ms" lang="ms">Istilah Tatabahasa</span><span class="th">อภิธานศัพท์ไวยากรณ์</span>', window.ISTILAH.length + " istilah", "#/istilah")}</li>
@@ -749,7 +829,7 @@
   const ico = k => `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${ICON[k]}</svg>`;
   const SEQ = [{ key: "kulit-dalam", href: "#/kulit-dalam", ms: "Kulit Dalam", th: "ปกใน" }, { key: "kandungan", href: "#/kandungan", ms: "Kandungan", th: "สารบัญ" }, { key: "home", href: "#/", ms: "Rancangan", th: "แผนการเรียน" }]
     .concat(CH.map(c => ({ key: "bab" + c.no, href: babLink(c.no), ms: "Bab " + c.no, th: "บทที่ " + c.no })))
-    .concat([{ key: "kuiz", href: "#/kuiz", ms: "Kuiz", th: "แบบทดสอบ" }, { key: "alat", href: "#/alat", ms: "Alat Latihan", th: "เครื่องมือฝึก" }, { key: "istilah", href: "#/istilah", ms: "Istilah", th: "อภิธานศัพท์" }, { key: "kursus", href: "#/kursus", ms: "Maklumat Kursus", th: "ข้อมูลรายวิชา" }]);
+    .concat([{ key: "kemajuan", href: "#/kemajuan", ms: "Kemajuan", th: "ความก้าวหน้า" }, { key: "kuiz", href: "#/kuiz", ms: "Kuiz", th: "แบบทดสอบ" }, { key: "alat", href: "#/alat", ms: "Alat Latihan", th: "เครื่องมือฝึก" }, { key: "istilah", href: "#/istilah", ms: "Istilah", th: "อภิธานศัพท์" }, { key: "kursus", href: "#/kursus", ms: "Maklumat Kursus", th: "ข้อมูลรายวิชา" }]);
   const pnName = x => `<b class="pn-ms">${x.ms}</b><i class="pn-th">${x.th}</i>`;
   function pageNav(key) {
     const nav = $("#pagenav"); const i = SEQ.findIndex(x => x.key === key);
@@ -809,6 +889,7 @@
     else if (p[0] === "kursus") kursus();
     else if (p[0] === "kulit-dalam") kulitDalam();
     else if (p[0] === "kandungan") kandungan();
+    else if (p[0] === "kemajuan") kemajuan();
     else notFound();
     app.focus({ preventScroll: true });
   }
