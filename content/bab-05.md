@@ -1,10 +1,17 @@
-<!-- Bab 5 · ไฟล์เนื้อหาบทที่ 5 (สองภาษา: มลายูบน ไทยล่าง)
+<!-- Bab 5 · ไฟล์เนื้อหาบทที่ 5 — โครงสร้าง 12 หัวข้อ
+     1. Tajuk Pelajaran แสดงจากข้อมูลใน assets/js/course.js (ชื่อบท สัปดาห์ CLO) จึงไม่มีหัวข้อ ## ในไฟล์นี้
+     หัวข้อ ## ที่เหลือ 11 หัวข้อ ระบบรู้จักจากคำแรกของหัวข้อ: Hasil · Pengenalan · Konsep · Penerangan · Contoh · Jadual · Kesalahan · Latihan · Rumusan · Kuiz · Rujukan
      วิธีเขียนสองภาษา:
      - ย่อหน้าและข้อในรายการ: บรรทัดแรกภาษามลายู ขึ้นบรรทัดใหม่ (ไม่เว้นบรรทัดว่าง) แล้วเป็นภาษาไทย
      - หัวข้อ (## / ###) และช่องในตาราง: ภาษามลายู<br>ภาษาไทย
-     ห้ามลบหัวข้อระดับ ## (6 ส่วนของบท) และให้คงรูปแบบข้อปรนัย (ก. ข. ค. ง.) กับบรรทัด **เฉลย** ไว้ · คำอธิบายเฉลยอยู่ใต้ **Penjelasan** เป็นรายการ - **เลขข้อ** มลายู<br>ไทย -->
+     แบบฝึกหัดโต้ตอบเขียนเป็นบล็อก ```latihan-isi / latihan-betulkan / latihan-golong / latihan-benar (หนึ่งบรรทัดหนึ่งข้อ แยกช่องด้วย " | ")
+       latihan-isi:      ประโยคที่มี ___ | คำตอบ (หลายคำตอบคั่นด้วย /) | คำอธิบายมลายู | คำอธิบายไทย
+       latihan-betulkan: ประโยคที่มี [คำผิด→คำถูก] | คำอธิบายมลายู | คำอธิบายไทย
+       latihan-golong:   บรรทัด Kategori: ก | ข แล้วตามด้วย  ข้อความ | ชื่อหมวด | คำอธิบายมลายู | คำอธิบายไทย
+       latihan-benar:    ข้อความ | B (ถูก) หรือ S (ผิด) | คำอธิบายมลายู | คำอธิบายไทย
+     ในส่วน Kuiz Penilaian ให้คงรูปแบบข้อปรนัย (ก. ข. ค. ง.) บรรทัด **เฉลย** และรายการ **Penjelasan** ไว้ -->
 
-## 1. Hasil Pembelajaran<br>ผลลัพธ์การเรียนรู้ประจำบท
+## 2. Hasil Pembelajaran<br>ผลลัพธ์การเรียนรู้
 
 Pada akhir bab ini, pelajar dapat:
 เมื่อจบบทนี้ นักศึกษาสามารถ
@@ -18,7 +25,16 @@ Pada akhir bab ini, pelajar dapat:
 4. membetulkan kesalahan penggunaan kata tugas akibat pengaruh bahasa Thai dalam teks sebenar (CLO4)
    แก้ไขข้อผิดการใช้คำไวยากรณ์ที่เกิดจากอิทธิพลภาษาไทยในข้อความจริงได้ (CLO4)
 
-## 2. Rangka Bab<br>โครงร่างประจำบท
+## 3. Pengenalan<br>บทนำ
+
+Kata tugas ialah kata kecil seperti *di, ke, yang, ialah, tidak, -lah* yang tidak membawa makna isi tetapi menentukan hubungan dalam ayat. Walaupun jumlahnya terhad, kata tugas paling kerap digunakan dan paling kerap disalahgunakan.
+คำไวยากรณ์คือคำเล็ก ๆ เช่น *di, ke, yang, ialah, tidak, -lah* ที่ไม่มีความหมายเนื้อหา แต่กำหนดความสัมพันธ์ในประโยค แม้มีจำนวนจำกัด แต่ใช้บ่อยที่สุดและผิดบ่อยที่สุดด้วย
+
+*Tatabahasa Dewan* menggolongkan kata tugas mengikut kedudukannya: di hadapan ayat atau klausa, di hadapan frasa, dan di hujung kata. Bab ini mengikut susunan itu dan menumpukan kesalahan yang berpunca daripada bahasa Thai.
+*Tatabahasa Dewan* จัดกลุ่มคำไวยากรณ์ตามตำแหน่ง: หน้าประโยคหรืออนุประโยค หน้าวลี และท้ายคำ บทนี้ใช้ลำดับนั้น และเน้นข้อผิดที่มาจากภาษาไทย
+
+**Kandungan bab**
+**เนื้อหาในบท**
 
 1. **5.1 Definisi dan Ciri Kata Tugas**
    **5.1 นิยามและลักษณะของคำไวยากรณ์**
@@ -37,7 +53,21 @@ Pada akhir bab ini, pelajar dapat:
 6. **5.6 Kesalahan Lazim**
    **5.6 ข้อผิดพลาดที่พบบ่อย**
 
-## 3. Isi Penting<br>เนื้อหาสาระสำคัญ
+## 4. Konsep dan Definisi<br>แนวคิดและนิยาม
+
+| Istilah<br>ศัพท์ | Definisi<br>นิยาม |
+|---|---|
+| *kata tugas* | Kata yang mempunyai fungsi sintaksis tetapi tidak membawa makna isi<br>คำที่มีหน้าที่ทางวากยสัมพันธ์ แต่ไม่มีความหมายเนื้อหา |
+| *golongan tertutup* | Golongan kata yang hampir tidak menerima kata baharu<br>กลุ่มคำที่แทบไม่รับคำใหม่ |
+| *kata penyambung ayat* | Kata hubung yang menyambungkan klausa (gabungan dan pancangan)<br>คำเชื่อมอนุประโยค |
+| *kata praklausa* | Kata tugas di hadapan klausa: seru, tanya, perintah, pembenar, pangkal ayat<br>คำไวยากรณ์หน้าอนุประโยค |
+| *kata prafrasa* | Kata tugas di hadapan frasa: bantu, penguat, penegas, nafi, pemeri, sendi nama, arah, bilangan<br>คำไวยากรณ์หน้าวลี |
+| *kata pascakata* | Partikel di hujung kata: *-lah, -kah, -tah, -pun*<br>คำเสริมท้ายคำ |
+| *kata sendi nama* | Kata di hadapan frasa nama: *di, ke, dari, daripada, kepada, pada*<br>คำบุพบท |
+| *kata pemeri* | *ialah* dan *adalah*, yang menghubungkan subjek dengan predikat<br>คำเชื่อมประธานกับภาคแสดง |
+| *penjodoh bilangan* | Kata antara bilangan dengan kata nama: *orang, ekor, buah*<br>ลักษณนาม |
+
+## 5. Penerangan Tatabahasa<br>คำอธิบายหลักไวยากรณ์
 
 ### 5.1 Definisi dan Ciri Kata Tugas<br>นิยามและลักษณะของคำไวยากรณ์
 
@@ -112,17 +142,99 @@ Nik Safiah Karim และคณะแบ่งเป็นกลุ่มตา
 Partikel yang melekat di hujung kata: *-lah* (penegas/ajakan: *Duduklah.*), *-kah* (pertanyaan: *Diakah orangnya?*), *-tah* (pertanyaan retorik dalam bahasa sastera: *Apatah*), *-pun* (penegas/walaupun: *Dia pun datang.* · *walaupun*)
 คำเสริมที่เกาะท้าย: *-lah* (เน้น/ชวนให้ทำ), *-kah* (คำถาม), *-tah* (คำถามเชิงวรรณศิลป์), *-pun* (เน้น/แม้)
 
-### 5.6 Kesalahan Lazim Pelajar Thai<br>ข้อผิดพลาดที่พบบ่อยของผู้เรียนชาวไทย
+## 6. Contoh Ayat<br>ตัวอย่างประโยค
 
-| Salah<br>ผิด | Betul<br>ถูก | Punca<br>สาเหตุ |
+| Ayat<br>ประโยค | Huraian<br>คำอธิบาย |
+|---|---|
+| *Saya tahu **bahawa** dia sakit.* | *bahawa* kata hubung pancangan komplemen<br>คำเชื่อมนำอนุประโยคส่วนเติมเต็ม |
+| *Pelajar **yang** rajin itu lulus.* | *yang* kata hubung pancangan relatif<br>คำเชื่อมนำอนุประโยคสัมพันธ์ |
+| *Ibu kota Malaysia **ialah** Kuala Lumpur.* | *ialah* di hadapan frasa nama<br>*ialah* หน้าวลีนาม |
+| *Cadangan itu **adalah** baik.* | *adalah* di hadapan frasa adjektif<br>*adalah* หน้าวลีคุณศัพท์ |
+| *Surat ini **daripada** pensyarah.* | Sumber berupa orang: *daripada*<br>แหล่งที่มาเป็นบุคคล |
+| *Dia membeli **dua ekor** kambing.* | Bilangan + penjodoh bilangan + kata nama<br>จำนวน + ลักษณนาม + คำนาม |
+| ***Bilakah** kamu pulang?* | Kata tanya + partikel *-kah*<br>คำถาม + *-kah* |
+
+## 7. Jadual Perbandingan<br>ตารางเปรียบเทียบ
+
+**A. *dari* dan *daripada***
+**ก. *dari* กับ *daripada***
+
+| *dari* | *daripada* |
+|---|---|
+| Tempat: *dari Yala*<br>สถานที่ | Orang: *surat daripada ibu*<br>บุคคล |
+| Waktu: *dari pagi*<br>เวลา | Perbandingan: *lebih tinggi daripada*<br>การเปรียบเทียบ |
+| Arah asal: *datang dari Malaysia*<br>ทิศทางที่มา | Bahan: *dibuat daripada kayu*<br>วัสดุ |
+
+**B. *tidak* dan *bukan***
+**ข. *tidak* กับ *bukan***
+
+| *tidak* | *bukan* |
+|---|---|
+| Menafikan kata kerja dan kata adjektif: *tidak datang, tidak rajin*<br>ปฏิเสธกริยาและคุณศัพท์ | Menafikan kata nama dan kata ganti nama: *bukan guru*<br>ปฏิเสธนามและสรรพนาม |
+| — | Menegaskan perbezaan: *bukan malas, tetapi sakit*<br>เน้นความต่าง |
+
+**C. *ialah* dan *adalah***
+**ค. *ialah* กับ *adalah***
+
+| *ialah* | *adalah* |
+|---|---|
+| Di hadapan frasa nama<br>หน้าวลีนาม | Di hadapan frasa adjektif dan frasa sendi nama<br>หน้าวลีคุณศัพท์และวลีบุพบท |
+| *Pengerusinya ialah Encik Ali.* | *Rumahnya adalah besar.* · *Hadiah itu adalah untuk pemenang.* |
+
+## 8. Kesalahan Lazim<br>ข้อผิดพลาดที่พบบ่อย
+
+| Salah<br>ผิด | Betul<br>ถูก | Sebab<br>เหตุผล |
 |---|---|---|
-| `*`*buku tiga buah* | *tiga buah buku* | Susunan penjodoh bilangan cara Thai "หนังสือ 3 เล่ม"<br>ลำดับลักษณนามแบบไทย "หนังสือ 3 เล่ม" |
-| `*`*pergi di pasar* | *pergi ke pasar* | Bahasa Thai mencampuradukkan "ที่" dan "ไป"<br>ไทยใช้ "ที่" และ "ไป" ปนกัน |
-| `*`*surat dari ayah* | *surat daripada ayah* | Sumber berupa orang menggunakan *daripada*<br>ต้นทางที่เป็นคนใช้ *daripada* |
-| `*`*Dia tidak guru.* | *Dia bukan guru.* | Bahasa Thai menggunakan "ไม่ใช่" untuk semua golongan kata<br>ไทยใช้ "ไม่ใช่" กับทุกชนิด |
-| `*`*Saya adalah pelajar.* | *Saya pelajar.* / *Saya ialah pelajar.* (jarang dalam bahasa rasmi)<br>(ทางการน้อยครั้ง) | *Adalah* tidak digunakan di hadapan frasa nama<br>*adalah* ไม่ใช้หน้าวลีนาม |
+| `*`*buku tiga buah* | *tiga buah buku* | Susunan bahasa Thai "หนังสือ 3 เล่ม"<br>ติดการเรียงแบบภาษาไทย |
+| `*`*pergi di pasar* | *pergi ke pasar* | Bahasa Thai "ที่" untuk tempat dan arah<br>ภาษาไทยใช้ "ที่" ทั้งตำแหน่งและทิศทาง |
+| `*`*surat dari ayah* | *surat daripada ayah* | Sumber berupa orang menggunakan *daripada*<br>แหล่งที่มาเป็นบุคคลใช้ *daripada* |
+| `*`*Dia tidak guru.* | *Dia bukan guru.* | Bahasa Thai "ไม่" untuk semua golongan kata<br>ภาษาไทยใช้ "ไม่" กับทุกชนิดคำ |
+| `*`*Saya adalah pelajar.* | *Saya pelajar.* | *adalah* tidak digunakan di hadapan frasa nama<br>ไม่ใช้ *adalah* หน้าวลีนาม |
+| `*`*hantar ke semua pelajar* | *hantar kepada semua pelajar* | Penerima manusia menggunakan *kepada*<br>ผู้รับเป็นคนใช้ *kepada* |
 
-## 4. Kajian Kes<br>กรณีศึกษา
+## 9. Latihan Interaktif<br>แบบฝึกหัดโต้ตอบ
+
+Jawab setiap latihan; jawapan disemak serta-merta beserta penjelasan.
+ทำแบบฝึกแต่ละชุด ระบบจะตรวจคำตอบทันทีพร้อมคำอธิบาย
+
+```latihan-isi
+Arahan: Taipkan kata tugas yang betul. | พิมพ์คำไวยากรณ์ที่ถูกต้อง
+Hadiah ini ___ ayah saya. | daripada | Sumber berupa orang. | แหล่งที่มาเป็นบุคคล
+Kami bertolak ___ Yala pada pukul 8. | dari | Titik mula tempat. | จุดเริ่มต้นที่เป็นสถานที่
+Itu ___ rumah saya. (nafi) | bukan | Menafikan frasa nama. | ปฏิเสธวลีนาม
+Ibu kota Thailand ___ Bangkok. | ialah | *ialah* di hadapan frasa nama. | *ialah* หน้าวลีนาม
+Dia membeli dua ___ kucing. | ekor | Penjodoh bilangan untuk haiwan. | ลักษณนามของสัตว์
+```
+
+```latihan-golong
+Arahan: Golongkan kata tugas mengikut kumpulannya. | จัดกลุ่มคำไวยากรณ์
+Kategori: Penyambung ayat · คำเชื่อม | Praklausa · หน้าอนุประโยค | Prafrasa · หน้าวลี | Pascakata · ท้ายคำ
+*bahawa* | Penyambung ayat | Kata hubung pancangan komplemen. | คำเชื่อมแบบฝัง
+*wah* | Praklausa | Kata seru. | คำอุทาน
+*sudah* | Prafrasa | Kata bantu aspek. | คำช่วยบอกกาล
+*-kah* | Pascakata | Partikel pertanyaan. | คำเสริมคำถาม
+*jangan* | Praklausa | Kata perintah. | คำสั่ง
+*kepada* | Prafrasa | Kata sendi nama. | คำบุพบท
+```
+
+```latihan-betulkan
+Arahan: Klik perkataan yang salah. | กดคำที่ผิด
+Esok kita pergi [di→ke] perpustakaan. | *ke* untuk arah. | *ke* บอกทิศทาง
+Bawa [buku tiga buah→tiga buah buku]. | Bilangan + penjodoh bilangan di hadapan kata nama. | จำนวน + ลักษณนามอยู่หน้าคำนาม
+Surat [dari→daripada] pensyarah sudah tiba. | Sumber berupa orang. | แหล่งที่มาเป็นบุคคล
+Pengerusi kelab itu [adalah→ialah] Encik Ali. | Frasa nama *Encik Ali* didahului *ialah*, bukan *adalah*. | หน้าวลีนามใช้ *ialah* ไม่ใช่ *adalah*
+Dia [tidak→bukan] pelajar di sini. | Kata nama dinafikan dengan *bukan*. | คำนามปฏิเสธด้วย *bukan*
+```
+
+```latihan-benar
+Arahan: Tentukan sama ada setiap pernyataan betul atau salah. | ตัดสินว่าข้อความแต่ละข้อถูกหรือผิด
+Kata tugas mudah menerima kata baharu.<br>คำไวยากรณ์รับคำใหม่ได้ง่าย | S | Kata tugas golongan tertutup. | เป็นกลุ่มคำปิด
+*adalah* hadir di hadapan frasa adjektif.<br>*adalah* ใช้หน้าวลีคุณศัพท์ | B | Contoh *Cadangan itu adalah baik.* | ตัวอย่าง
+*dari* digunakan untuk perbandingan.<br>*dari* ใช้ในการเปรียบเทียบ | S | Perbandingan menggunakan *daripada*. | การเปรียบเทียบใช้ *daripada*
+*yang* ialah kata hubung pancangan relatif.<br>*yang* เป็นคำเชื่อมแบบฝังอนุประโยคสัมพันธ์ | B | *yang* memperkenalkan klausa yang menerangkan kata nama. | *yang* นำอนุประโยคที่ขยายนาม
+```
+
+### Kajian Kes<br>กรณีศึกษา
 
 **Mesej dalam kumpulan LINE kelas.** Ketua kelas menghantar pengumuman kepada rakan sekelas yang berasal dari Malaysia seperti yang berikut:
 **ข้อความในกลุ่มไลน์ของห้อง** หัวหน้าห้องโพสต์ประกาศถึงเพื่อนร่วมชั้นที่มาจากมาเลเซียว่า
@@ -139,7 +251,20 @@ Partikel yang melekat di hujung kata: *-lah* (penegas/ajakan: *Duduklah.*), *-ka
 3. Bincangkan sejauh mana kesalahan penggunaan *di/ke/dari/daripada* menjejaskan kefahaman pembaca.
    อภิปรายว่าการใช้ *di/ke/dari/daripada* ผิดกระทบความเข้าใจของผู้อ่านมากหรือน้อยเพียงใด
 
-## 5. Soalan Penilaian<br>คำถามท้ายบท
+## 10. Rumusan<br>สรุปบทเรียน
+
+- Kata tugas mempunyai fungsi sintaksis dan merupakan golongan tertutup.
+  คำไวยากรณ์มีหน้าที่ทางวากยสัมพันธ์และเป็นกลุ่มคำปิด
+- Empat kumpulan: penyambung ayat, praklausa, prafrasa dan pascakata.
+  แบ่งเป็นสี่กลุ่ม: คำเชื่อม หน้าอนุประโยค หน้าวลี และท้ายคำ
+- *di/ke/dari/daripada/kepada/pada* mempunyai fungsi yang berbeza dan tidak boleh ditukar ganti.
+  คำบุพบทแต่ละคำมีหน้าที่ต่างกัน ใช้แทนกันไม่ได้
+- *tidak* untuk kata kerja dan adjektif; *bukan* untuk kata nama.
+  *tidak* ใช้กับกริยาและคุณศัพท์ *bukan* ใช้กับนาม
+- *ialah* di hadapan frasa nama; *adalah* di hadapan frasa adjektif dan frasa sendi nama.
+  *ialah* หน้าวลีนาม *adalah* หน้าวลีคุณศัพท์และวลีบุพบท
+
+## 11. Kuiz Penilaian<br>แบบทดสอบท้ายบท
 
 ### A. Soalan Objektif<br>ก. ปรนัย
 
@@ -195,11 +320,11 @@ Partikel yang melekat di hujung kata: *-lah* (penegas/ajakan: *Duduklah.*), *-ka
 2. Bina jadual perbandingan penjodoh bilangan bahasa Thai dan bahasa Melayu sebanyak 10 pasangan (contohnya ตัว–*ekor*, เล่ม–*buah*). Analisis pasangan yang sepadan dan pasangan yang mungkin mengelirukan pelajar.
    สร้างตารางเปรียบเทียบลักษณนามภาษาไทยกับภาษามลายู 10 คู่ (เช่น ตัว–*ekor*, เล่ม–*buah*) วิเคราะห์ว่าคู่ใดตรงกันและคู่ใดผู้เรียนจะสับสน
 
-## 6. Rujukan<br>เอกสารอ้างอิงแนะนำ
+## 12. Rujukan<br>เอกสารอ้างอิง
 
-- Nik Safiah Karim et al. (2015). *Tatabahasa Dewan Edisi Ketiga*. Kuala Lumpur: Dewan Bahasa dan Pustaka. — topik *Kata Tugas*
+- Nik Safiah Karim, Farid M. Onn, Hashim Haji Musa & Abdul Hamid Mahmood. (2015). *Tatabahasa Dewan* (Edisi Ketiga). Kuala Lumpur: Dewan Bahasa dan Pustaka. — topik *Kata Tugas*
   หัวข้อ *Kata Tugas*
-- Sulaiman Masri & Ahmad Khair Mohd Nor. (2002). *Tatabahasa Melayu Mesra Pengguna*. Kuala Lumpur: Utusan Publications & Distributors.
-- Alias Mohammad Yatim. (1998). *Mengenali Bahasa Melayu*. Kedah: Percetakan Paavai.
+- Sulaiman Masri & Ahmad Khair Mohd. Nor. (2002). *Tatabahasa Melayu Mesra Pengguna*. Kuala Lumpur: Utusan Publications & Distributors.
+- Alias Mohammad Yatim. (1998). *Mengenali Bahasa Melayu*. Penerbitan Sarlis.
 - Asmah Haji Omar. (2009). *Nahu Melayu Mutakhir* (Edisi Kelima). Kuala Lumpur: Dewan Bahasa dan Pustaka. — perbandingan pengelompokan *partikel*
   เปรียบเทียบการจัดกลุ่ม *partikel*

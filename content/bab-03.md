@@ -1,10 +1,17 @@
-<!-- Bab 3 · ไฟล์เนื้อหาบทที่ 3 (สองภาษา: มลายูบน ไทยล่าง)
+<!-- Bab 3 · ไฟล์เนื้อหาบทที่ 3 — โครงสร้าง 12 หัวข้อ
+     1. Tajuk Pelajaran แสดงจากข้อมูลใน assets/js/course.js (ชื่อบท สัปดาห์ CLO) จึงไม่มีหัวข้อ ## ในไฟล์นี้
+     หัวข้อ ## ที่เหลือ 11 หัวข้อ ระบบรู้จักจากคำแรกของหัวข้อ: Hasil · Pengenalan · Konsep · Penerangan · Contoh · Jadual · Kesalahan · Latihan · Rumusan · Kuiz · Rujukan
      วิธีเขียนสองภาษา:
      - ย่อหน้าและข้อในรายการ: บรรทัดแรกภาษามลายู ขึ้นบรรทัดใหม่ (ไม่เว้นบรรทัดว่าง) แล้วเป็นภาษาไทย
      - หัวข้อ (## / ###) และช่องในตาราง: ภาษามลายู<br>ภาษาไทย
-     ห้ามลบหัวข้อระดับ ## (6 ส่วนของบท) และให้คงรูปแบบข้อปรนัย (ก. ข. ค. ง.) กับบรรทัด **เฉลย** ไว้ · คำอธิบายเฉลยอยู่ใต้ **Penjelasan** เป็นรายการ - **เลขข้อ** มลายู<br>ไทย -->
+     แบบฝึกหัดโต้ตอบเขียนเป็นบล็อก ```latihan-isi / latihan-betulkan / latihan-golong / latihan-benar (หนึ่งบรรทัดหนึ่งข้อ แยกช่องด้วย " | ")
+       latihan-isi:      ประโยคที่มี ___ | คำตอบ (หลายคำตอบคั่นด้วย /) | คำอธิบายมลายู | คำอธิบายไทย
+       latihan-betulkan: ประโยคที่มี [คำผิด→คำถูก] | คำอธิบายมลายู | คำอธิบายไทย
+       latihan-golong:   บรรทัด Kategori: ก | ข แล้วตามด้วย  ข้อความ | ชื่อหมวด | คำอธิบายมลายู | คำอธิบายไทย
+       latihan-benar:    ข้อความ | B (ถูก) หรือ S (ผิด) | คำอธิบายมลายู | คำอธิบายไทย
+     ในส่วน Kuiz Penilaian ให้คงรูปแบบข้อปรนัย (ก. ข. ค. ง.) บรรทัด **เฉลย** และรายการ **Penjelasan** ไว้ -->
 
-## 1. Hasil Pembelajaran<br>ผลลัพธ์การเรียนรู้ประจำบท
+## 2. Hasil Pembelajaran<br>ผลลัพธ์การเรียนรู้
 
 Pada akhir bab ini, pelajar dapat:
 เมื่อจบบทนี้ นักศึกษาสามารถ
@@ -18,7 +25,16 @@ Pada akhir bab ini, pelajar dapat:
 4. memilih kata ganti nama diri (*kata ganti nama diri*) yang sesuai dengan kedudukan pendengar dan konteks (CLO4)
    เลือกใช้คำสรรพนามบุรุษ (*kata ganti nama diri*) ให้เหมาะกับฐานะของผู้ฟังและบริบทได้ (CLO4)
 
-## 2. Rangka Bab<br>โครงร่างประจำบท
+## 3. Pengenalan<br>บทนำ
+
+Bab ini memulakan kajian golongan kata dengan *kata nama*, iaitu golongan kata yang paling besar dan menjadi inti frasa nama. Kata nama hadir sebagai subjek, objek dan predikat, jadi pemahaman tentangnya menjadi asas bagi bab sintaksis kemudian.
+บทนี้เริ่มศึกษาชนิดคำด้วย *kata nama* ซึ่งเป็นชนิดคำที่ใหญ่ที่สุดและเป็นคำหลักของวลีนาม คำนามทำหน้าที่ประธาน กรรม และภาคแสดง ความเข้าใจเรื่องนี้จึงเป็นพื้นฐานของบทวากยสัมพันธ์ต่อไป
+
+Bagi pelajar Thai, bahagian yang paling mencabar ialah *kata ganti nama diri*. Bahasa Thai dan bahasa Melayu sama-sama mempunyai kata ganti nama yang berbeza mengikut hubungan sosial, tetapi padanannya tidak sentiasa satu lawan satu.
+สำหรับผู้เรียนไทย ส่วนที่ยากที่สุดคือ *kata ganti nama diri* ทั้งภาษาไทยและมลายูมีสรรพนามที่ต่างกันตามความสัมพันธ์ทางสังคม แต่ไม่ได้เทียบกันแบบหนึ่งต่อหนึ่งเสมอ
+
+**Kandungan bab**
+**เนื้อหาในบท**
 
 1. **3.1 Definisi dan Ciri Kata Nama**
    **3.1 นิยามและลักษณะของคำนาม**
@@ -39,7 +55,22 @@ Pada akhir bab ini, pelajar dapat:
 6. **3.6 Fungsi Kata Nama dalam Ayat**
    **3.6 หน้าที่ของคำนามในประโยค**
 
-## 3. Isi Penting<br>เนื้อหาสาระสำคัญ
+## 4. Konsep dan Definisi<br>แนวคิดและนิยาม
+
+| Istilah<br>ศัพท์ | Definisi<br>นิยาม |
+|---|---|
+| *kata nama* | Kata yang menamakan orang, haiwan, benda, tempat, konsep atau peristiwa<br>คำที่เรียกชื่อคน สัตว์ สิ่งของ สถานที่ แนวคิด หรือเหตุการณ์ |
+| *kata nama am* | Kata nama yang tidak merujuk secara khusus dan ditulis dengan huruf kecil<br>คำนามที่ไม่ชี้เฉพาะ เขียนด้วยอักษรตัวเล็ก |
+| *kata nama khas* | Nama khusus bagi orang, tempat, institusi atau benda, dimulakan dengan huruf besar<br>ชื่อเฉพาะของคน สถานที่ สถาบัน หรือสิ่งของ ขึ้นต้นด้วยอักษรตัวใหญ่ |
+| *konkrit* | Dapat ditanggapi dengan pancaindera<br>รับรู้ได้ด้วยประสาทสัมผัส |
+| *abstrak* | Konsep atau perasaan yang tidak dapat disentuh<br>แนวคิดหรือความรู้สึกที่จับต้องไม่ได้ |
+| *kata ganti nama* | Kata yang menggantikan kata nama<br>คำที่ใช้แทนคำนาม |
+| *kata ganti nama tunjuk* | *ini, itu* (umum) dan *sini, situ, sana* (tempat)<br>สรรพนามชี้เฉพาะ |
+| *kata ganti nama diri* | Kata ganti nama orang (diri pertama, kedua, ketiga) dan kata ganti nama diri tanya<br>สรรพนามบุรุษ และสรรพนามคำถาม |
+| *kata nama terbitan* | Kata nama yang dibentuk dengan imbuhan<br>คำนามที่สร้างด้วยการเติมปัจจัย |
+| *penjodoh bilangan* | Kata yang hadir antara bilangan dengan kata nama: *seorang*, *sebuah*<br>ลักษณนาม |
+
+## 5. Penerangan Tatabahasa<br>คำอธิบายหลักไวยากรณ์
 
 ### 3.1 Definisi dan Ciri Kata Nama<br>นิยามและลักษณะของคำนาม
 
@@ -112,7 +143,91 @@ Kata nama dan frasa nama berfungsi sebagai **subjek** (*subjek*), **objek** (*ob
 - *Ayah Fitri* [*peguam*]predikat.
   predikat = ภาคแสดง
 
-## 4. Kajian Kes<br>กรณีศึกษา
+## 6. Contoh Ayat<br>ตัวอย่างประโยค
+
+| Ayat<br>ประโยค | Huraian<br>คำอธิบาย |
+|---|---|
+| *Petani itu menanam padi.* | *petani* (subjek) dan *padi* (objek) ialah kata nama<br>*petani* เป็นประธาน *padi* เป็นกรรม |
+| *Ayah Fitri peguam.* | Kata nama *peguam* menjadi predikat<br>คำนาม *peguam* เป็นภาคแสดง |
+| *Dia **bukan** guru.* | Kata nama dinafikan dengan *bukan*<br>คำนามปฏิเสธด้วย *bukan* |
+| *Kita akan ke Masjid Pusat Pattani.* | *kita* termasuk pendengar; *Masjid Pusat Pattani* kata nama khas<br>*kita* รวมผู้ฟัง ส่วนชื่อมัสยิดเป็นนามเฉพาะ |
+| *Beliau dekan fakulti kami.* | *beliau* untuk orang yang dihormati<br>*beliau* ใช้กับผู้ที่ได้รับความเคารพ |
+| *Kebersihan kampus tanggungjawab semua.* | *kebersihan* = *ke-…-an* + *bersih*, kata nama abstrak terbitan<br>นามธรรมที่เป็นคำแปลง |
+
+## 7. Jadual Perbandingan<br>ตารางเปรียบเทียบ
+
+**A. Kata nama am dan kata nama khas**
+**ก. นามทั่วไปกับนามเฉพาะ**
+
+| Aspek<br>ประเด็น | Kata nama am<br>นามทั่วไป | Kata nama khas<br>นามเฉพาะ |
+|---|---|---|
+| Rujukan<br>สิ่งที่อ้างถึง | Umum<br>ทั่วไป | Khusus<br>เฉพาะ |
+| Ejaan<br>การเขียน | Huruf kecil<br>ตัวเล็ก | Huruf besar di awal<br>ขึ้นต้นตัวใหญ่ |
+| Contoh<br>ตัวอย่าง | *sungai, masjid, universiti* | *Sungai Kolok, Universiti Thaksin* |
+
+**B. Kata ganti nama yang sering dikelirukan**
+**ข. สรรพนามที่มักสับสน**
+
+| Pasangan<br>คู่คำ | Perbezaan<br>ความต่าง |
+|---|---|
+| *kami* / *kita* | *kami* tanpa pendengar; *kita* termasuk pendengar<br>*kami* ไม่รวมผู้ฟัง *kita* รวมผู้ฟัง |
+| *dia* / *beliau* | *beliau* untuk orang yang dihormati<br>*beliau* ใช้กับผู้ที่ได้รับความเคารพ |
+| *dia* / *ia* | *ia* dalam bahasa tulisan boleh merujuk benda<br>*ia* ในภาษาเขียนใช้กับสิ่งของได้ |
+| *awak* / *anda* | *anda* lebih umum dan sesuai untuk khalayak<br>*anda* เป็นกลางกว่า เหมาะกับผู้ฟังทั่วไป |
+
+## 8. Kesalahan Lazim<br>ข้อผิดพลาดที่พบบ่อย
+
+| Salah<br>ผิด | Betul<br>ถูก | Sebab<br>เหตุผล |
+|---|---|---|
+| `*`*Dia tidak guru.* | *Dia bukan guru.* | Kata nama dinafikan dengan *bukan*<br>คำนามปฏิเสธด้วย *bukan* |
+| *Kami* (bermaksud termasuk pendengar) | *Kita* | Bahasa Thai "เรา" meliputi kedua-duanya<br>"เรา" ในภาษาไทยใช้ได้ทั้งสองแบบ |
+| *Aku* kepada pensyarah | *Saya* | *aku* terlalu mesra<br>*aku* เป็นกันเองเกินไป |
+| *Dia* untuk dekan | *Beliau* | Hormat kepada orang yang dihormati<br>แสดงความเคารพ |
+| `*`*Beliau* untuk diri sendiri | *saya* | *beliau* hanya untuk diri ketiga<br>*beliau* ใช้กับบุรุษที่ 3 เท่านั้น |
+| *universiti thaksin* | *Universiti Thaksin* | Kata nama khas ditulis dengan huruf besar<br>นามเฉพาะขึ้นต้นตัวใหญ่ |
+
+## 9. Latihan Interaktif<br>แบบฝึกหัดโต้ตอบ
+
+Jawab setiap latihan; jawapan disemak serta-merta beserta penjelasan.
+ทำแบบฝึกแต่ละชุด ระบบจะตรวจคำตอบทันทีพร้อมคำอธิบาย
+
+```latihan-isi
+Arahan: Taipkan kata yang betul. | พิมพ์คำที่ถูกต้อง
+Dia ___ pelajar. (nafi) | bukan | Kata nama dinafikan dengan *bukan*. | คำนามปฏิเสธด้วย *bukan*
+Ahmad, mari ___ makan bersama-sama. (termasuk pendengar) | kita | *kita* merangkumi Ahmad sebagai pendengar. | *kita* รวม Ahmad ผู้ฟัง
+Dekan kami sibuk. ___ akan hadir esok. (hormat) | Beliau | *beliau* untuk orang yang dihormati. | *beliau* ใช้กับผู้ที่ได้รับความเคารพ
+Ayah membeli ___ rumah. (satu + penjodoh bilangan) | sebuah | *buah* untuk benda besar seperti rumah; *se-* = satu. | *buah* ใช้กับสิ่งของใหญ่ *se-* = หนึ่ง
+*ke-…-an* + *merdeka* = ___ | kemerdekaan | Apitan *ke-…-an* membentuk kata nama abstrak. | ปัจจัยคร่อมสร้างนามธรรม
+```
+
+```latihan-golong
+Arahan: Golongkan kata nama berikut. | จัดประเภทคำนามต่อไปนี้
+Kategori: Am konkrit · ทั่วไป-รูปธรรม | Am abstrak · ทั่วไป-นามธรรม | Khas · นามเฉพาะ
+*meja* | Am konkrit | Dapat disentuh. | จับต้องได้
+*kejujuran* | Am abstrak | Sifat yang tidak dapat disentuh. | คุณสมบัติที่จับต้องไม่ได้
+*Songkhla* | Khas | Nama tempat. | ชื่อสถานที่
+*angin* | Am konkrit | Dapat dirasa dengan pancaindera. | รับรู้ด้วยประสาทสัมผัสได้
+*ilmu* | Am abstrak | Konsep. | แนวคิด
+*Siti* | Khas | Nama orang. | ชื่อคน
+```
+
+```latihan-betulkan
+Arahan: Klik perkataan yang salah. | กดคำที่ผิด
+Dia [tidak→bukan] doktor. | Predikat kata nama dinafikan dengan *bukan*. | ภาคแสดงที่เป็นนามปฏิเสธด้วย *bukan*
+Puan, [aku→saya] ingin bertanya tentang kursus ini. | *aku* tidak sesuai kepada orang yang dihormati. | *aku* ไม่เหมาะกับผู้ที่ได้รับความเคารพ
+Prof. Ali sakit, jadi [dia→beliau] tidak dapat hadir. | Gunakan *beliau* untuk orang yang dihormati. | ใช้ *beliau* กับผู้ที่ได้รับความเคารพ
+Saya belajar di universiti [thaksin→Thaksin]. | Kata nama khas ditulis dengan huruf besar. | นามเฉพาะขึ้นต้นด้วยตัวใหญ่
+```
+
+```latihan-benar
+Arahan: Tentukan sama ada setiap pernyataan betul atau salah. | ตัดสินว่าข้อความแต่ละข้อถูกหรือผิด
+*Kami* termasuk pendengar.<br>*kami* รวมผู้ฟัง | S | *Kami* tidak termasuk pendengar; *kita* termasuk. | *kami* ไม่รวมผู้ฟัง *kita* รวม
+Kata nama boleh didahului penjodoh bilangan.<br>คำนามมีลักษณนามนำหน้าได้ | B | Contohnya *seorang guru*. | เช่น *seorang guru*
+*Beliau* sesuai digunakan untuk orang yang lebih muda.<br>*beliau* ใช้กับผู้ที่อายุน้อยกว่าได้ | S | *Beliau* untuk orang yang dihormati. | *beliau* ใช้กับผู้ที่ได้รับความเคารพ
+*Pengajaran* ialah kata nama terbitan yang menyatakan proses.<br>*pengajaran* เป็นนามแปลงบอกกระบวนการ | B | *peN-…-an* + *ajar*. | *peN-…-an* + *ajar*
+```
+
+### Kajian Kes<br>กรณีศึกษา
 
 **E-mel kepada pensyarah di Malaysia.** Seorang pelajar yang akan mengikuti program pertukaran menulis e-mel kepada penasihatnya di Malaysia seperti yang berikut:
 **อีเมลถึงอาจารย์ในมาเลเซีย** นักศึกษาที่จะไปแลกเปลี่ยนเขียนอีเมลถึงอาจารย์ที่ปรึกษาฝั่งมาเลเซียว่า
@@ -129,7 +244,20 @@ Kata nama dan frasa nama berfungsi sebagai **subjek** (*subjek*), **objek** (*ob
 3. Tulis semula e-mel itu dalam 4–5 ayat.
    เขียนอีเมลฉบับปรับแก้ 4–5 ประโยค
 
-## 5. Soalan Penilaian<br>คำถามท้ายบท
+## 10. Rumusan<br>สรุปบทเรียน
+
+- Kata nama menamakan orang, benda, tempat, konsep atau peristiwa dan menjadi inti frasa nama.
+  คำนามเรียกชื่อคน สิ่งของ สถานที่ แนวคิด หรือเหตุการณ์ และเป็นคำหลักของวลีนาม
+- Kata nama terbahagi kepada kata nama am, kata nama khas dan kata ganti nama.
+  คำนามแบ่งเป็นนามทั่วไป นามเฉพาะ และสรรพนาม
+- Ujian kata nama: penjodoh bilangan, *ini/itu*, kata sendi nama dan nafi *bukan*.
+  การทดสอบคำนาม: ลักษณนาม *ini/itu* คำบุพบท และการปฏิเสธด้วย *bukan*
+- Pemilihan kata ganti nama diri bergantung pada hubungan sosial dan konteks.
+  การเลือกสรรพนามบุรุษขึ้นกับความสัมพันธ์ทางสังคมและบริบท
+- Imbuhan *peN-, pe-, -an, ke-…-an, peN-…-an, per-…-an* membentuk kata nama terbitan dengan makna yang berbeza.
+  ปัจจัยต่าง ๆ สร้างนามแปลงที่มีความหมายต่างกัน
+
+## 11. Kuiz Penilaian<br>แบบทดสอบท้ายบท
 
 ### A. Soalan Objektif<br>ก. ปรนัย
 
@@ -185,10 +313,10 @@ Kata nama dan frasa nama berfungsi sebagai **subjek** (*subjek*), **objek** (*ob
 2. Kata *pemandu* (orang yang memandu) dan *panduan* (buku petunjuk) berasal daripada kata dasar yang sama. Jelaskan peranan imbuhan terhadap makna dan golongan kata.
    คำว่า *pemandu* (คนขับ) กับ *panduan* (คู่มือ) มาจากคำฐานเดียวกัน อธิบายบทบาทของปัจจัยต่อความหมายและชนิดคำ
 
-## 6. Rujukan<br>เอกสารอ้างอิงแนะนำ
+## 12. Rujukan<br>เอกสารอ้างอิง
 
-- Nik Safiah Karim et al. (2015). *Tatabahasa Dewan Edisi Ketiga*. Kuala Lumpur: Dewan Bahasa dan Pustaka. — topik *Kata Nama* dan *Kata Nama Terbitan*
+- Nik Safiah Karim, Farid M. Onn, Hashim Haji Musa & Abdul Hamid Mahmood. (2015). *Tatabahasa Dewan* (Edisi Ketiga). Kuala Lumpur: Dewan Bahasa dan Pustaka. — topik *Kata Nama* dan *Kata Nama Terbitan*
   หัวข้อ *Kata Nama* และ *Kata Nama Terbitan*
-- Alias Mohammad Yatim. (1998). *Mengenali Bahasa Melayu*. Kedah: Percetakan Paavai.
+- Alias Mohammad Yatim. (1998). *Mengenali Bahasa Melayu*. Penerbitan Sarlis.
 - Asmah Haji Omar. (2009). *Nahu Melayu Mutakhir* (Edisi Kelima). Kuala Lumpur: Dewan Bahasa dan Pustaka.
 - มูหำหมัด สาแลบิง. (2569). *ไวยากรณ์ภาษามลายู*. สงขลา: หลักสูตรภาษามลายู มหาวิทยาลัยทักษิณ.

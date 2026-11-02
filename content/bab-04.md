@@ -1,10 +1,17 @@
-<!-- Bab 4 · ไฟล์เนื้อหาบทที่ 4 (สองภาษา: มลายูบน ไทยล่าง)
+<!-- Bab 4 · ไฟล์เนื้อหาบทที่ 4 — โครงสร้าง 12 หัวข้อ
+     1. Tajuk Pelajaran แสดงจากข้อมูลใน assets/js/course.js (ชื่อบท สัปดาห์ CLO) จึงไม่มีหัวข้อ ## ในไฟล์นี้
+     หัวข้อ ## ที่เหลือ 11 หัวข้อ ระบบรู้จักจากคำแรกของหัวข้อ: Hasil · Pengenalan · Konsep · Penerangan · Contoh · Jadual · Kesalahan · Latihan · Rumusan · Kuiz · Rujukan
      วิธีเขียนสองภาษา:
      - ย่อหน้าและข้อในรายการ: บรรทัดแรกภาษามลายู ขึ้นบรรทัดใหม่ (ไม่เว้นบรรทัดว่าง) แล้วเป็นภาษาไทย
      - หัวข้อ (## / ###) และช่องในตาราง: ภาษามลายู<br>ภาษาไทย
-     ห้ามลบหัวข้อระดับ ## (6 ส่วนของบท) และให้คงรูปแบบข้อปรนัย (ก. ข. ค. ง.) กับบรรทัด **เฉลย** ไว้ · คำอธิบายเฉลยอยู่ใต้ **Penjelasan** เป็นรายการ - **เลขข้อ** มลายู<br>ไทย -->
+     แบบฝึกหัดโต้ตอบเขียนเป็นบล็อก ```latihan-isi / latihan-betulkan / latihan-golong / latihan-benar (หนึ่งบรรทัดหนึ่งข้อ แยกช่องด้วย " | ")
+       latihan-isi:      ประโยคที่มี ___ | คำตอบ (หลายคำตอบคั่นด้วย /) | คำอธิบายมลายู | คำอธิบายไทย
+       latihan-betulkan: ประโยคที่มี [คำผิด→คำถูก] | คำอธิบายมลายู | คำอธิบายไทย
+       latihan-golong:   บรรทัด Kategori: ก | ข แล้วตามด้วย  ข้อความ | ชื่อหมวด | คำอธิบายมลายู | คำอธิบายไทย
+       latihan-benar:    ข้อความ | B (ถูก) หรือ S (ผิด) | คำอธิบายมลายู | คำอธิบายไทย
+     ในส่วน Kuiz Penilaian ให้คงรูปแบบข้อปรนัย (ก. ข. ค. ง.) บรรทัด **เฉลย** และรายการ **Penjelasan** ไว้ -->
 
-## 1. Hasil Pembelajaran<br>ผลลัพธ์การเรียนรู้ประจำบท
+## 2. Hasil Pembelajaran<br>ผลลัพธ์การเรียนรู้
 
 Pada akhir bab ini, pelajar dapat:
 เมื่อจบบทนี้ นักศึกษาสามารถ
@@ -18,7 +25,16 @@ Pada akhir bab ini, pelajar dapat:
 4. membetulkan kesalahan penggunaan kata penguat (*kata penguat*) secara bertindih dalam teks sebenar (CLO4)
    แก้ไขข้อผิดเรื่องคำเน้น (*kata penguat*) ซ้อนกันในข้อความจริงได้ (CLO4)
 
-## 2. Rangka Bab<br>โครงร่างประจำบท
+## 3. Pengenalan<br>บทนำ
+
+Kata kerja dan kata adjektif biasanya menjadi inti predikat. Bab ini membezakan kata kerja yang memerlukan objek dengan kata kerja yang tidak memerlukannya, serta menghuraikan jenis kata adjektif dan cara membandingkan sifat.
+คำกริยาและคำคุณศัพท์มักเป็นแกนของภาคแสดง บทนี้แยกกริยาที่ต้องมีกรรมกับที่ไม่ต้องมี และอธิบายชนิดของคุณศัพท์กับวิธีเปรียบเทียบลักษณะ
+
+Pelajar Thai sering menindihkan kata penguat (*sangat … sekali*) kerana bahasa Thai membenarkan "มาก ๆ เลย". Bab ini menunjukkan bentuk baku bagi setiap darjah perbandingan.
+ผู้เรียนไทยมักใช้คำเน้นซ้อนกัน (*sangat … sekali*) เพราะภาษาไทยพูด "มาก ๆ เลย" ได้ บทนี้แสดงรูปมาตรฐานของการเปรียบเทียบแต่ละระดับ
+
+**Kandungan bab**
+**เนื้อหาในบท**
 
 1. **4.1 Kata Kerja** (*kata kerja*)
    **4.1 คำกริยา**
@@ -39,7 +55,21 @@ Pada akhir bab ini, pelajar dapat:
    - Kata penguat (*kata penguat*) dan kata adjektif
      คำเน้นกับคำคุณศัพท์
 
-## 3. Isi Penting<br>เนื้อหาสาระสำคัญ
+## 4. Konsep dan Definisi<br>แนวคิดและนิยาม
+
+| Istilah<br>ศัพท์ | Definisi<br>นิยาม |
+|---|---|
+| *kata kerja* | Kata yang menyatakan perbuatan atau keadaan dan menjadi inti frasa kerja<br>คำที่บอกการกระทำหรือสภาพ เป็นคำหลักของวลีกริยา |
+| *kata kerja transitif* | Kata kerja yang memerlukan objek dan boleh dipasifkan<br>กริยาที่ต้องมีกรรมและแปลงเป็นกรรมวาจกได้ |
+| *kata kerja tak transitif* | Kata kerja yang tidak memerlukan objek<br>กริยาที่ไม่ต้องมีกรรม |
+| *pelengkap* | Unsur wajib selepas kata kerja tak transitif berpelengkap<br>ส่วนที่จำเป็นหลังกริยาอกรรมแบบมีส่วนเติมเต็ม |
+| *objek tepat* | Objek yang hadir terus selepas kata kerja transitif<br>กรรมที่อยู่ติดหลังสกรรมกริยา |
+| *objek sipi* | Objek kedua dalam ayat yang mempunyai dua objek<br>กรรมตัวที่สองในประโยคที่มีกรรมสองตัว |
+| *kata adjektif* | Kata yang menerangkan sifat atau keadaan kata nama<br>คำที่บอกลักษณะหรือสภาพของคำนาม |
+| *darjah perbandingan* | Tahap biasa, bandingan dan penghabisan<br>ระดับปกติ เปรียบเทียบ และสูงสุด |
+| *kata penguat* | Kata yang menguatkan makna kata adjektif<br>คำเน้นความหมายของคุณศัพท์ |
+
+## 5. Penerangan Tatabahasa<br>คำอธิบายหลักไวยากรณ์
 
 ### 4.1 Kata Kerja<br>คำกริยา (*kata kerja*)
 
@@ -101,7 +131,86 @@ Pada akhir bab ini, pelajar dapat:
 - `*`*lebih besar dari* → *lebih besar **daripada*** (gunakan *daripada* dalam perbandingan)
   ใช้ *daripada* ในการเปรียบเทียบ
 
-## 4. Kajian Kes<br>กรณีศึกษา
+## 6. Contoh Ayat<br>ตัวอย่างประโยค
+
+| Ayat<br>ประโยค | Huraian<br>คำอธิบาย |
+|---|---|
+| *Adik **menangis**.* | Tak transitif tanpa pelengkap<br>อกรรมกริยาไม่มีส่วนเติมเต็ม |
+| *Dia **menjadi** guru.* | Tak transitif berpelengkap; *guru* tidak boleh digugurkan<br>อกรรมกริยามีส่วนเติมเต็ม ตัด *guru* ไม่ได้ |
+| *Ibu **memasak** nasi.* → *Nasi dimasak oleh ibu.* | Transitif: ada objek dan boleh dipasifkan<br>สกรรมกริยา มีกรรมและแปลงเป็นกรรมวาจกได้ |
+| *Kakak **menghadiahi** adik sebuah beg.* | Dua objek: *adik* objek tepat, *sebuah beg* objek sipi<br>กรรมสองตัว |
+| *Hat Yai **lebih besar daripada** Songkhla.* | Darjah bandingan dengan *lebih … daripada*<br>ระดับเปรียบเทียบ |
+| *Bangunan itu **tertinggi** di bandar ini.* | Darjah penghabisan dengan *ter-*<br>ระดับสูงสุดด้วย *ter-* |
+
+## 7. Jadual Perbandingan<br>ตารางเปรียบเทียบ
+
+**A. Tiga jenis kata kerja**
+**ก. กริยาสามแบบ**
+
+| Jenis<br>ชนิด | Objek/pelengkap<br>กรรม/ส่วนเติมเต็ม | Boleh dipasifkan<br>แปลงกรรมวาจกได้ | Contoh<br>ตัวอย่าง |
+|---|---|---|---|
+| Tak transitif tanpa pelengkap<br>อกรรม ไม่มีส่วนเติมเต็ม | Tiada<br>ไม่มี | Tidak<br>ไม่ได้ | *Adik tidur.* |
+| Tak transitif berpelengkap<br>อกรรม มีส่วนเติมเต็ม | Pelengkap wajib<br>ต้องมีส่วนเติมเต็ม | Tidak<br>ไม่ได้ | *Mereka tinggal di Yala.* |
+| Transitif<br>สกรรม | Objek<br>มีกรรม | Ya<br>ได้ | *Ibu membeli ikan.* |
+
+**B. Darjah perbandingan**
+**ข. ระดับการเปรียบเทียบ**
+
+| Darjah<br>ระดับ | Penanda<br>เครื่องหมาย | Contoh<br>ตัวอย่าง |
+|---|---|---|
+| Biasa<br>ปกติ | — | *Ali rajin.* |
+| Bandingan<br>เปรียบเทียบ | *lebih/kurang … daripada*, *se-* | *Ali lebih rajin daripada Abu.* · *Ali serajin Abu.* |
+| Penghabisan<br>สูงสุด | *paling*, *ter-*, *… sekali* | *paling rajin* · *terpandai* · *rajin sekali* |
+
+## 8. Kesalahan Lazim<br>ข้อผิดพลาดที่พบบ่อย
+
+| Salah<br>ผิด | Betul<br>ถูก | Sebab<br>เหตุผล |
+|---|---|---|
+| `*`*sangat cantik sekali* | *sangat cantik* / *cantik sekali* | Kata penguat tidak ditindihkan<br>ไม่ใช้คำเน้นซ้อนกัน |
+| `*`*paling terbesar* | *paling besar* / *terbesar* | Dua penanda penghabisan<br>เครื่องหมายขั้นสูงสุดซ้อนกัน |
+| `*`*lebih besar dari* | *lebih besar daripada* | Perbandingan menggunakan *daripada*<br>การเปรียบเทียบใช้ *daripada* |
+| `*`*Mereka tinggal.* | *Mereka tinggal di Yala.* | *tinggal* memerlukan pelengkap<br>*tinggal* ต้องมีส่วนเติมเต็ม |
+
+## 9. Latihan Interaktif<br>แบบฝึกหัดโต้ตอบ
+
+Jawab setiap latihan; jawapan disemak serta-merta beserta penjelasan.
+ทำแบบฝึกแต่ละชุด ระบบจะตรวจคำตอบทันทีพร้อมคำอธิบาย
+
+```latihan-isi
+Arahan: Taipkan kata yang betul. | พิมพ์คำที่ถูกต้อง
+Hat Yai lebih besar ___ Songkhla. | daripada | Perbandingan menggunakan *daripada*. | การเปรียบเทียบใช้ *daripada*
+Adik ___ abangnya. (sama tinggi) | setinggi | *se-* menyatakan bandingan setara. | *se-* บอกการเปรียบเทียบเท่ากัน
+Gunung itu ___ tinggi di Malaysia. (penghabisan) | paling | *paling* + kata adjektif menyatakan darjah penghabisan. | *paling* + คุณศัพท์ บอกขั้นสูงสุด
+Kata dasar bagi *membaiki* ialah ___. | baik | *meN-…-i* + *baik* (kata adjektif). | คำฐานเป็นคุณศัพท์
+```
+
+```latihan-golong
+Arahan: Golongkan kata kerja dalam ayat. | จัดประเภทกริยาในประโยค
+Kategori: Transitif · สกรรม | Tak transitif tanpa pelengkap · อกรรม ไม่มีส่วนเติมเต็ม | Tak transitif berpelengkap · อกรรม มีส่วนเติมเต็ม
+*Kakak membaca novel.* | Transitif | *novel* objek; boleh dipasifkan. | *novel* เป็นกรรม
+*Bayi itu tidur.* | Tak transitif tanpa pelengkap | Ayat lengkap tanpa unsur lain. | ประโยคสมบูรณ์โดยไม่ต้องมีส่วนอื่น
+*Dia menjadi jurutera.* | Tak transitif berpelengkap | *jurutera* tidak boleh digugurkan. | ตัด *jurutera* ไม่ได้
+*Mereka berasal dari Narathiwat.* | Tak transitif berpelengkap | *berasal* memerlukan *dari Narathiwat*. | *berasal* ต้องมีส่วนเติมเต็ม
+*Pak Zainal menggunting rambut.* | Transitif | *rambut* objek. | *rambut* เป็นกรรม
+```
+
+```latihan-betulkan
+Arahan: Klik bahagian yang salah. | กดส่วนที่ผิด
+Kain ini [sangat cantik sekali→cantik sekali]. | Kata penguat tidak ditindihkan. | ไม่ใช้คำเน้นซ้อนกัน
+Kedai ini [paling termurah→paling murah] di Hat Yai. | Pilih *paling* atau *ter-*, bukan kedua-duanya. | เลือก *paling* หรือ *ter-* อย่างใดอย่างหนึ่ง
+Warnanya lebih terang [dari→daripada] kain lain. | Perbandingan menggunakan *daripada*. | การเปรียบเทียบใช้ *daripada*
+Rumah saya [lebih paling→paling] dekat dengan masjid. | Satu penanda darjah sahaja. | ใช้เครื่องหมายระดับเดียว
+```
+
+```latihan-benar
+Arahan: Tentukan sama ada setiap pernyataan betul atau salah. | ตัดสินว่าข้อความแต่ละข้อถูกหรือผิด
+Kata kerja transitif boleh dipasifkan.<br>สกรรมกริยาแปลงเป็นกรรมวาจกได้ | B | *Ibu memasak nasi* → *Nasi dimasak oleh ibu*. | ตัวอย่างการแปลง
+Pelengkap boleh digugurkan seperti keterangan.<br>ส่วนเติมเต็มตัดทิ้งได้เหมือนส่วนขยาย | S | Pelengkap wajib; keterangan boleh digugurkan. | ส่วนเติมเต็มต้องมี ส่วนขยายตัดได้
+*Harum* ialah kata adjektif pancaindera.<br>*harum* เป็นคุณศัพท์ประสาทสัมผัส | B | Dikesan melalui deria bau. | รับรู้ด้วยจมูก
+*Membaca* ialah kata kerja asal.<br>*membaca* เป็นกริยาเดิม | S | *membaca* menerima *meN-*, maka kata kerja terbitan. | มี *meN-* จึงเป็นกริยาแปลง
+```
+
+### Kajian Kes<br>กรณีศึกษา
 
 **Ulasan produk dalam talian.** Sebuah kedai di Hat Yai menjual kain batik kepada pelanggan Malaysia melalui platform dalam talian dan menulis keterangan produk seperti yang berikut:
 **รีวิวสินค้าออนไลน์** ร้านค้าในหาดใหญ่ขายผ้าบาติกให้ลูกค้ามาเลเซียผ่านแพลตฟอร์มออนไลน์ และเขียนคำบรรยายสินค้าดังนี้
@@ -118,7 +227,20 @@ Pada akhir bab ini, pelajar dapat:
 3. Bagaimanakah teks yang tidak gramatis menjejaskan kredibiliti kedai apabila pelanggannya rakyat Malaysia?
    ข้อความที่ผิดไวยากรณ์ส่งผลต่อความน่าเชื่อถือของร้านค้าอย่างไรเมื่อลูกค้าเป็นชาวมาเลเซีย
 
-## 5. Soalan Penilaian<br>คำถามท้ายบท
+## 10. Rumusan<br>สรุปบทเรียน
+
+- Kata kerja tak transitif tidak memerlukan objek; sesetengahnya memerlukan pelengkap yang tidak boleh digugurkan.
+  อกรรมกริยาไม่ต้องมีกรรม บางคำต้องมีส่วนเติมเต็มที่ตัดไม่ได้
+- Kata kerja transitif memerlukan objek dan boleh dipasifkan; sesetengahnya mempunyai objek tepat dan objek sipi.
+  สกรรมกริยาต้องมีกรรมและแปลงเป็นกรรมวาจกได้ บางคำมีกรรมตรงและกรรมรอง
+- Kata adjektif dibahagikan kepada sembilan jenis mengikut makna.
+  คุณศัพท์แบ่งเป็นเก้าประเภทตามความหมาย
+- Darjah perbandingan: biasa, bandingan (*lebih … daripada*, *se-*) dan penghabisan (*paling*, *ter-*, *sekali*).
+  ระดับการเปรียบเทียบ: ปกติ เปรียบเทียบ และสูงสุด
+- Jangan menindihkan kata penguat atau penanda darjah.
+  อย่าใช้คำเน้นหรือเครื่องหมายระดับซ้อนกัน
+
+## 11. Kuiz Penilaian<br>แบบทดสอบท้ายบท
 
 ### A. Soalan Objektif<br>ก. ปรนัย
 
@@ -174,10 +296,10 @@ Pada akhir bab ini, pelajar dapat:
 2. Bandingkan pembentukan darjah penghabisan dengan *paling*, *ter-* dan *sekali*: adakah ketiga-tiganya berbeza dari segi laras bahasa (rasmi/tidak rasmi)? Cari contoh daripada berita dan hantaran media sosial.
    เปรียบเทียบการสร้างขั้นสูงสุดด้วย *paling*, *ter-* และ *sekali* ว่าต่างกันในด้านระดับภาษา (ทางการ/ไม่ทางการ) หรือไม่ ค้นตัวอย่างจากข่าวและโพสต์สื่อสังคมประกอบ
 
-## 6. Rujukan<br>เอกสารอ้างอิงแนะนำ
+## 12. Rujukan<br>เอกสารอ้างอิง
 
-- Nik Safiah Karim et al. (2015). *Tatabahasa Dewan Edisi Ketiga*. Kuala Lumpur: Dewan Bahasa dan Pustaka. — topik *Kata Kerja* dan *Kata Adjektif*
+- Nik Safiah Karim, Farid M. Onn, Hashim Haji Musa & Abdul Hamid Mahmood. (2015). *Tatabahasa Dewan* (Edisi Ketiga). Kuala Lumpur: Dewan Bahasa dan Pustaka. — topik *Kata Kerja* dan *Kata Adjektif*
   หัวข้อ *Kata Kerja* และ *Kata Adjektif*
-- Alias Mohammad Yatim. (1998). *Mengenali Bahasa Melayu*. Kedah: Percetakan Paavai.
-- Sulaiman Masri & Ahmad Khair Mohd Nor. (2002). *Tatabahasa Melayu Mesra Pengguna*. Kuala Lumpur: Utusan Publications & Distributors.
-- Abdullah Hassan. (2003). *Tatabahasa Bahasa Melayu*. Pahang: PTS Publications & Distributors.
+- Alias Mohammad Yatim. (1998). *Mengenali Bahasa Melayu*. Penerbitan Sarlis.
+- Sulaiman Masri & Ahmad Khair Mohd. Nor. (2002). *Tatabahasa Melayu Mesra Pengguna*. Kuala Lumpur: Utusan Publications & Distributors.
+- Abdullah Hassan. (2002). *Tatabahasa Bahasa Melayu: Morfologi dan Sintaksis untuk Guru dan Pelajar*. Pahang: PTS Publications & Distributors.

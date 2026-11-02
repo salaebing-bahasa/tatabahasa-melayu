@@ -1,10 +1,17 @@
-<!-- Bab 12 · ไฟล์เนื้อหาบทที่ 12 (สองภาษา: มลายูบน ไทยล่าง)
+<!-- Bab 12 · ไฟล์เนื้อหาบทที่ 12 — โครงสร้าง 12 หัวข้อ
+     1. Tajuk Pelajaran แสดงจากข้อมูลใน assets/js/course.js (ชื่อบท สัปดาห์ CLO) จึงไม่มีหัวข้อ ## ในไฟล์นี้
+     หัวข้อ ## ที่เหลือ 11 หัวข้อ ระบบรู้จักจากคำแรกของหัวข้อ: Hasil · Pengenalan · Konsep · Penerangan · Contoh · Jadual · Kesalahan · Latihan · Rumusan · Kuiz · Rujukan
      วิธีเขียนสองภาษา:
      - ย่อหน้าและข้อในรายการ: บรรทัดแรกภาษามลายู ขึ้นบรรทัดใหม่ (ไม่เว้นบรรทัดว่าง) แล้วเป็นภาษาไทย
      - หัวข้อ (## / ###) และช่องในตาราง: ภาษามลายู<br>ภาษาไทย
-     ห้ามลบหัวข้อระดับ ## (6 ส่วนของบท) และให้คงรูปแบบข้อปรนัย (ก. ข. ค. ง.) กับบรรทัด **เฉลย** ไว้ · คำอธิบายเฉลยอยู่ใต้ **Penjelasan** เป็นรายการ - **เลขข้อ** มลายู<br>ไทย -->
+     แบบฝึกหัดโต้ตอบเขียนเป็นบล็อก ```latihan-isi / latihan-betulkan / latihan-golong / latihan-benar (หนึ่งบรรทัดหนึ่งข้อ แยกช่องด้วย " | ")
+       latihan-isi:      ประโยคที่มี ___ | คำตอบ (หลายคำตอบคั่นด้วย /) | คำอธิบายมลายู | คำอธิบายไทย
+       latihan-betulkan: ประโยคที่มี [คำผิด→คำถูก] | คำอธิบายมลายู | คำอธิบายไทย
+       latihan-golong:   บรรทัด Kategori: ก | ข แล้วตามด้วย  ข้อความ | ชื่อหมวด | คำอธิบายมลายู | คำอธิบายไทย
+       latihan-benar:    ข้อความ | B (ถูก) หรือ S (ผิด) | คำอธิบายมลายู | คำอธิบายไทย
+     ในส่วน Kuiz Penilaian ให้คงรูปแบบข้อปรนัย (ก. ข. ค. ง.) บรรทัด **เฉลย** และรายการ **Penjelasan** ไว้ -->
 
-## 1. Hasil Pembelajaran<br>ผลลัพธ์การเรียนรู้ประจำบท
+## 2. Hasil Pembelajaran<br>ผลลัพธ์การเรียนรู้
 
 Pada akhir bab ini, pelajar dapat:
 เมื่อจบบทนี้ นักศึกษาสามารถ
@@ -18,7 +25,16 @@ Pada akhir bab ini, pelajar dapat:
 4. menggabungkan beberapa ayat pendek menjadi perenggan yang berkait dan gramatis dengan kata hubung yang sesuai (CLO4)
    รวมประโยคสั้นหลายประโยคเป็นย่อหน้าที่เชื่อมโยงสละสลวยด้วยคำเชื่อมที่เหมาะสมได้ (CLO4)
 
-## 2. Rangka Bab<br>โครงร่างประจำบท
+## 3. Pengenalan<br>บทนำ
+
+Selepas memahami ayat dasar dalam Bab 11, pelajar kini akan menggabungkan ayat. Bab ini membezakan ayat tunggal dengan ayat majmuk, serta tiga jenis ayat majmuk: gabungan, pancangan dan campuran.
+หลังจากเข้าใจประโยคพื้นฐานในบทที่ 11 แล้ว ผู้เรียนจะได้รวมประโยค บทนี้แยกประโยคเดี่ยวกับประโยครวม และประโยครวมสามแบบ: แบบเชื่อม แบบฝัง และแบบผสม
+
+Kemahiran ini penting dalam penulisan. Teks yang terdiri daripada ayat pendek sahaja kelihatan terputus-putus, manakala ayat yang terlalu panjang sukar difahami.
+ทักษะนี้สำคัญในการเขียน ข้อความที่มีแต่ประโยคสั้นดูขาดเป็นช่วง ๆ ส่วนประโยคที่ยาวเกินไปก็เข้าใจยาก
+
+**Kandungan bab**
+**เนื้อหาในบท**
 
 1. **12.1 Ayat Tunggal** (*ayat tunggal*)
    **12.1 ประโยคเดี่ยว**
@@ -36,7 +52,22 @@ Pada akhir bab ini, pelajar dapat:
 5. **12.5 Panjang Ayat Bukan Ukuran**
    **12.5 ความยาวไม่ใช่เกณฑ์**
 
-## 3. Isi Penting<br>เนื้อหาสาระสำคัญ
+## 4. Konsep dan Definisi<br>แนวคิดและนิยาม
+
+| Istilah<br>ศัพท์ | Definisi<br>นิยาม |
+|---|---|
+| *ayat tunggal* | Ayat yang mempunyai satu klausa<br>ประโยคที่มีอนุประโยคเดียว |
+| *ayat majmuk* | Ayat yang terbentuk daripada dua ayat atau lebih<br>ประโยคที่เกิดจากสองประโยคขึ้นไป |
+| *ayat majmuk gabungan* | Ayat-ayat setara yang dihubungkan dengan kata hubung gabungan<br>ประโยคที่เท่าเทียมกัน เชื่อมด้วยคำเชื่อมแบบเชื่อม |
+| *ayat majmuk pancangan* | Ayat induk + ayat kecil yang dipancangkan<br>ประโยคหลัก + ประโยคย่อยที่ถูกฝัง |
+| *ayat majmuk campuran* | Ayat yang mengandungi lebih daripada satu jenis penggabungan<br>ประโยคที่มีการรวมมากกว่าหนึ่งแบบ |
+| *ayat induk* | Ayat utama yang menerima ayat kecil<br>ประโยคหลักที่รับประโยคย่อย |
+| *ayat kecil* | Ayat yang dipancangkan dan tidak dapat berdiri sendiri<br>ประโยคที่ถูกฝังและยืนเองไม่ได้ |
+| *relatif* | Ayat kecil dengan *yang* yang menerangkan kata nama<br>ประโยคย่อยด้วย *yang* ขยายนาม |
+| *komplemen* | Ayat kecil dengan *bahawa/untuk* yang menjadi subjek, objek atau pelengkap<br>ประโยคย่อยด้วย *bahawa/untuk* |
+| *keterangan* | Ayat kecil yang menyatakan sebab, syarat, waktu, pertentangan, cara atau tujuan<br>ประโยคย่อยบอกเหตุ เงื่อนไข เวลา ความขัดแย้ง วิธี หรือจุดประสงค์ |
+
+## 5. Penerangan Tatabahasa<br>คำอธิบายหลักไวยากรณ์
 
 ### 12.1 Ayat Tunggal<br>ประโยคเดี่ยว (*ayat tunggal*)
 
@@ -105,7 +136,89 @@ Struktur: [pancangan *komplemen*] **dan** [pancangan *komplemen*] → dua ayat m
 - *Helikopter jenis Alouette Tentera Udara Diraja Malaysia telah jatuh terhempas di kawasan berbukit-bukau di bahagian Timur Laut Sabah pada minggu lepas.* — panjang, tetapi **ayat tunggal**
   ยาว แต่เป็น **ประโยคเดี่ยว**
 
-## 4. Kajian Kes<br>กรณีศึกษา
+## 6. Contoh Ayat<br>ตัวอย่างประโยค
+
+| Ayat<br>ประโยค | Huraian<br>คำอธิบาย |
+|---|---|
+| *Pelajar tahun satu dari Pattani itu sedang menulis karangan di perpustakaan.* | Panjang tetapi ayat tunggal<br>ยาวแต่เป็นประโยคเดี่ยว |
+| *Mereka membunuh ular itu **lalu** membuangnya ke dalam semak.* | Gabungan: urutan<br>แบบเชื่อม: ลำดับ |
+| *Ahmad menaiki bas **yang** berwarna biru.* | Pancangan relatif<br>แบบฝังอนุประโยคสัมพันธ์ |
+| *Laporan itu menyatakan **bahawa** kerajaan akan membina jambatan baharu.* | Pancangan komplemen<br>แบบฝังส่วนเติมเต็ม |
+| ***Walaupun** saya sibuk, saya akan hadir.* | Pancangan keterangan pertentangan<br>แบบฝังบอกความขัดแย้ง |
+| *Dia sedar **bahawa** dia salah **dan** dia meminta maaf.* | Campuran: komplemen + gabungan<br>แบบผสม |
+
+## 7. Jadual Perbandingan<br>ตารางเปรียบเทียบ
+
+**A. Tiga jenis ayat majmuk**
+**ก. ประโยครวมสามแบบ**
+
+| Jenis<br>ชนิด | Hubungan<br>ความสัมพันธ์ | Kata hubung<br>คำเชื่อม | Bahagian boleh berdiri sendiri<br>ยืนเองได้ |
+|---|---|---|---|
+| Gabungan<br>แบบเชื่อม | Setara<br>เท่าเทียม | *dan, atau, tetapi, lalu* | Semua bahagian<br>ทุกส่วน |
+| Pancangan<br>แบบฝัง | Induk–kecil<br>หลัก–ย่อย | *yang, bahawa, kerana, walaupun* | Ayat induk sahaja<br>เฉพาะประโยคหลัก |
+| Campuran<br>แบบผสม | Kedua-duanya<br>ทั้งสองแบบ | Gabungan + pancangan<br>ผสม | Bergantung pada struktur<br>ขึ้นกับโครงสร้าง |
+
+**B. Kata hubung keterangan**
+**ข. คำเชื่อมนำประโยคย่อยบอก**
+
+| Makna<br>ความหมาย | Kata hubung<br>คำเชื่อม |
+|---|---|
+| Sebab<br>เหตุ | *kerana, sebab* |
+| Syarat<br>เงื่อนไข | *jika, sekiranya, kalau* |
+| Waktu<br>เวลา | *ketika, semasa, selepas* |
+| Pertentangan<br>ขัดแย้ง | *walaupun, meskipun* |
+| Tujuan<br>จุดประสงค์ | *untuk, supaya, agar* |
+| Cara<br>วิธี | *dengan* |
+
+## 8. Kesalahan Lazim<br>ข้อผิดพลาดที่พบบ่อย
+
+| Salah<br>ผิด | Betul<br>ถูก | Sebab<br>เหตุผล |
+|---|---|---|
+| Menilai ayat panjang sebagai ayat majmuk | Kira bilangan klausa<br>นับจำนวนอนุประโยค | Panjang ayat bukan ukuran<br>ความยาวไม่ใช่เกณฑ์ |
+| `*`*Walaupun hujan, tetapi dia datang.* | *Walaupun hujan, dia datang.* | Dua penanda pertentangan<br>ใช้คำแสดงความขัดแย้งซ้อน |
+| `*`*Kerana dia sakit, maka dia tidak hadir.* | *Kerana dia sakit, dia tidak hadir.* | *maka* berlebihan selepas *kerana*<br>*maka* เกินมาหลัง *kerana* |
+| Perenggan dengan ayat pendek sahaja | Gabungkan dengan kata hubung yang sesuai<br>รวมด้วยคำเชื่อมที่เหมาะสม | Teks terputus-putus<br>ข้อความขาดเป็นช่วง |
+
+## 9. Latihan Interaktif<br>แบบฝึกหัดโต้ตอบ
+
+Jawab setiap latihan; jawapan disemak serta-merta beserta penjelasan.
+ทำแบบฝึกแต่ละชุด ระบบจะตรวจคำตอบทันทีพร้อมคำอธิบาย
+
+```latihan-golong
+Arahan: Tentukan jenis ayat. | ระบุชนิดประโยค
+Kategori: Tunggal · เดี่ยว | Gabungan · เชื่อม | Pancangan · ฝัง
+*Ali membaca buku dan Ahmad menulis surat.* | Gabungan | Dua klausa setara dengan *dan*. | อนุประโยคเท่าเทียมสองอนุประโยค
+*Kereta yang dinaiki abang itu kemalangan.* | Pancangan | Ayat kecil relatif. | ประโยคย่อยสัมพันธ์
+*Rumah besar di hujung kampung itu milik datuk.* | Tunggal | Satu subjek dan satu predikat. | ประธานและภาคแสดงอย่างละหนึ่ง
+*Kami sedar bahawa kami lemah.* | Pancangan | Ayat kecil komplemen. | ประโยคย่อยส่วนเติมเต็ม
+*Dia rajin tetapi adiknya malas.* | Gabungan | Pertentangan dengan *tetapi*. | ขัดแย้งด้วย *tetapi*
+```
+
+```latihan-isi
+Arahan: Isikan kata hubung yang sesuai. | เติมคำเชื่อมที่เหมาะสม
+___ hujan lebat, perlawanan itu diteruskan. (pertentangan) | Walaupun/Meskipun | Menyatakan pertentangan. | แสดงความขัดแย้ง
+Dia belajar bersungguh-sungguh ___ lulus peperiksaan. (tujuan) | supaya/agar/untuk | Menyatakan tujuan. | แสดงจุดประสงค์
+Kami tidak keluar ___ hujan lebat. (sebab) | kerana/sebab | Menyatakan sebab. | แสดงเหตุ
+Saya membeli buku ___ mahal itu. (relatif) | yang | Pancangan relatif. | ฝังอนุประโยคสัมพันธ์
+Dia berkata ___ dia akan datang. (komplemen) | bahawa | Pancangan komplemen. | ฝังส่วนเติมเต็ม
+```
+
+```latihan-betulkan
+Arahan: Klik bahagian yang berlebihan atau salah. | กดส่วนที่เกินหรือผิด
+Walaupun hujan, [tetapi dia→dia] tetap datang. | *walaupun* dan *tetapi* tidak digunakan serentak. | ไม่ใช้ *walaupun* กับ *tetapi* พร้อมกัน
+Kerana dia sakit, [maka dia→dia] tidak hadir. | *maka* berlebihan. | *maka* เกินมา
+Saya membeli buku [dan mahal→yang mahal]. | Penerang kata nama menggunakan *yang*. | ขยายนามด้วย *yang*
+```
+
+```latihan-benar
+Arahan: Tentukan sama ada setiap pernyataan betul atau salah. | ตัดสินว่าข้อความแต่ละข้อถูกหรือผิด
+Ayat yang panjang sentiasa ayat majmuk.<br>ประโยคยาวเป็นประโยครวมเสมอ | S | Ayat tunggal boleh panjang kerana penerang. | ประโยคเดี่ยวยาวได้เพราะคำขยาย
+Dalam ayat majmuk pancangan, ayat kecil tidak dapat berdiri sendiri.<br>ในประโยครวมแบบฝัง ประโยคย่อยยืนเองไม่ได้ | B | Ayat kecil bergantung pada ayat induk. | ต้องพึ่งประโยคหลัก
+*Padahal* menyatakan pertentangan.<br>*padahal* แสดงความขัดแย้ง | B | Kata hubung gabungan pertentangan. | คำเชื่อมแบบเชื่อมแสดงความขัดแย้ง
+*Sekiranya* menyatakan sebab.<br>*sekiranya* แสดงเหตุ | S | *Sekiranya* menyatakan syarat. | *sekiranya* แสดงเงื่อนไข
+```
+
+### Kajian Kes<br>กรณีศึกษา
 
 **Laporan berita aktiviti program.** Seorang pelajar menulis berita pendek untuk laman program pengajian, tetapi semua ayatnya pendek:
 **รายงานข่าวกิจกรรมของสาขา** นักศึกษาเขียนข่าวสั้นสำหรับเพจสาขาวิชา แต่เขียนเป็นประโยคสั้นทั้งหมด
@@ -122,7 +235,20 @@ Struktur: [pancangan *komplemen*] **dan** [pancangan *komplemen*] → dua ayat m
 3. Bincangkan bagaimana pemilihan kata hubung mengubah nada berita (contohnya *walaupun* berbanding *tetapi*).
    อภิปรายว่าการเลือกคำเชื่อมเปลี่ยนน้ำเสียงของข่าวอย่างไร (เช่น *walaupun* กับ *tetapi*)
 
-## 5. Soalan Penilaian<br>คำถามท้ายบท
+## 10. Rumusan<br>สรุปบทเรียน
+
+- Ayat tunggal mempunyai satu klausa walaupun panjang.
+  ประโยคเดี่ยวมีอนุประโยคเดียวแม้จะยาว
+- Ayat majmuk gabungan menghubungkan ayat setara dengan *dan, atau, tetapi, lalu*.
+  ประโยครวมแบบเชื่อมเชื่อมประโยคที่เท่ากัน
+- Ayat majmuk pancangan terdiri daripada ayat induk dan ayat kecil relatif, komplemen atau keterangan.
+  ประโยครวมแบบฝังมีประโยคหลักและประโยคย่อยสามชนิด
+- Ayat majmuk campuran menggabungkan lebih daripada satu cara.
+  ประโยครวมแบบผสมรวมหลายวิธี
+- Jangan menggunakan dua kata hubung untuk hubungan yang sama (*walaupun … tetapi*).
+  อย่าใช้คำเชื่อมสองคำสำหรับความสัมพันธ์เดียวกัน
+
+## 11. Kuiz Penilaian<br>แบบทดสอบท้ายบท
 
 ### A. Soalan Objektif<br>ก. ปรนัย
 
@@ -178,11 +304,11 @@ Struktur: [pancangan *komplemen*] **dan** [pancangan *komplemen*] → dua ayat m
 2. Ayat yang terlalu panjang boleh menyukarkan pembacaan. Kemukakan tiga kriteria untuk menentukan sama ada ayat patut digabungkan atau dipisahkan dalam penulisan akademik, beserta contoh.
    ประโยคที่ยาวเกินไปอาจทำให้อ่านยาก จงเสนอเกณฑ์ 3 ข้อในการตัดสินว่าควรรวมหรือแยกประโยคในงานเขียนวิชาการ พร้อมตัวอย่าง
 
-## 6. Rujukan<br>เอกสารอ้างอิงแนะนำ
+## 12. Rujukan<br>เอกสารอ้างอิง
 
-- Nik Safiah Karim et al. (2015). *Tatabahasa Dewan Edisi Ketiga*. Kuala Lumpur: Dewan Bahasa dan Pustaka. — topik *Ayat Tunggal* dan *Ayat Majmuk*
+- Nik Safiah Karim, Farid M. Onn, Hashim Haji Musa & Abdul Hamid Mahmood. (2015). *Tatabahasa Dewan* (Edisi Ketiga). Kuala Lumpur: Dewan Bahasa dan Pustaka. — topik *Ayat Tunggal* dan *Ayat Majmuk*
   หัวข้อ *Ayat Tunggal* และ *Ayat Majmuk*
-- Alias Mohammad Yatim. (1998). *Mengenali Bahasa Melayu*. Kedah: Percetakan Paavai.
-- Sulaiman Masri & Ahmad Khair Mohd Nor. (2002). *Tatabahasa Melayu Mesra Pengguna*. Kuala Lumpur: Utusan Publications & Distributors.
+- Alias Mohammad Yatim. (1998). *Mengenali Bahasa Melayu*. Penerbitan Sarlis.
+- Sulaiman Masri & Ahmad Khair Mohd. Nor. (2002). *Tatabahasa Melayu Mesra Pengguna*. Kuala Lumpur: Utusan Publications & Distributors.
 - Asmah Haji Omar. (2009). *Nahu Melayu Mutakhir* (Edisi Kelima). Kuala Lumpur: Dewan Bahasa dan Pustaka. — perbandingan pengelasan ayat majmuk
   เปรียบเทียบการจำแนกประโยครวม

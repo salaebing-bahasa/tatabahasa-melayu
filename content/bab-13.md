@@ -1,10 +1,17 @@
-<!-- Bab 13 · ไฟล์เนื้อหาบทที่ 13 (สองภาษา: มลายูบน ไทยล่าง)
+<!-- Bab 13 · ไฟล์เนื้อหาบทที่ 13 — โครงสร้าง 12 หัวข้อ
+     1. Tajuk Pelajaran แสดงจากข้อมูลใน assets/js/course.js (ชื่อบท สัปดาห์ CLO) จึงไม่มีหัวข้อ ## ในไฟล์นี้
+     หัวข้อ ## ที่เหลือ 11 หัวข้อ ระบบรู้จักจากคำแรกของหัวข้อ: Hasil · Pengenalan · Konsep · Penerangan · Contoh · Jadual · Kesalahan · Latihan · Rumusan · Kuiz · Rujukan
      วิธีเขียนสองภาษา:
      - ย่อหน้าและข้อในรายการ: บรรทัดแรกภาษามลายู ขึ้นบรรทัดใหม่ (ไม่เว้นบรรทัดว่าง) แล้วเป็นภาษาไทย
      - หัวข้อ (## / ###) และช่องในตาราง: ภาษามลายู<br>ภาษาไทย
-     ห้ามลบหัวข้อระดับ ## (6 ส่วนของบท) และให้คงรูปแบบข้อปรนัย (ก. ข. ค. ง.) กับบรรทัด **เฉลย** ไว้ · คำอธิบายเฉลยอยู่ใต้ **Penjelasan** เป็นรายการ - **เลขข้อ** มลายู<br>ไทย -->
+     แบบฝึกหัดโต้ตอบเขียนเป็นบล็อก ```latihan-isi / latihan-betulkan / latihan-golong / latihan-benar (หนึ่งบรรทัดหนึ่งข้อ แยกช่องด้วย " | ")
+       latihan-isi:      ประโยคที่มี ___ | คำตอบ (หลายคำตอบคั่นด้วย /) | คำอธิบายมลายู | คำอธิบายไทย
+       latihan-betulkan: ประโยคที่มี [คำผิด→คำถูก] | คำอธิบายมลายู | คำอธิบายไทย
+       latihan-golong:   บรรทัด Kategori: ก | ข แล้วตามด้วย  ข้อความ | ชื่อหมวด | คำอธิบายมลายู | คำอธิบายไทย
+       latihan-benar:    ข้อความ | B (ถูก) หรือ S (ผิด) | คำอธิบายมลายู | คำอธิบายไทย
+     ในส่วน Kuiz Penilaian ให้คงรูปแบบข้อปรนัย (ก. ข. ค. ง.) บรรทัด **เฉลย** และรายการ **Penjelasan** ไว้ -->
 
-## 1. Hasil Pembelajaran<br>ผลลัพธ์การเรียนรู้ประจำบท
+## 2. Hasil Pembelajaran<br>ผลลัพธ์การเรียนรู้
 
 Pada akhir bab ini, pelajar dapat:
 เมื่อจบบทนี้ นักศึกษาสามารถ
@@ -18,7 +25,16 @@ Pada akhir bab ini, pelajar dapat:
 4. menganalisis tiga proses transformasi ayat (*transformasi*) dan menggunakannya untuk menyesuaikan teks dengan konteks (CLO4)
    วิเคราะห์กระบวนการแปลงประโยค (*transformasi*) 3 แบบ และใช้ปรับแก้ข้อความให้เหมาะกับบริบทได้ (CLO4)
 
-## 2. Rangka Bab<br>โครงร่างประจำบท
+## 3. Pengenalan<br>บทนำ
+
+Bab terakhir ini menunjukkan bagaimana ayat yang sama dapat diubah bentuknya: daripada aktif kepada pasif, daripada susunan biasa kepada songsang, dan melalui proses transformasi. Kemahiran ini membolehkan penulis memilih bentuk ayat yang paling sesuai dengan tujuan.
+บทสุดท้ายนี้แสดงว่าประโยคเดียวกันเปลี่ยนรูปได้อย่างไร: จากกรรตุเป็นกรรมวาจก จากเรียงปกติเป็นเรียงสลับ และผ่านกระบวนการแปลง ทักษะนี้ช่วยให้ผู้เขียนเลือกรูปประโยคที่เหมาะกับจุดประสงค์ที่สุด
+
+Ayat pasif dengan kata ganti nama diri pertama dan kedua ialah sumber kesalahan yang paling kerap, contohnya *diisi oleh anda*. Bab ini menerangkan sebabnya.
+ประโยคกรรมวาจกที่ผู้กระทำเป็นสรรพนามบุรุษที่ 1 และ 2 เป็นต้นเหตุของข้อผิดที่พบบ่อยที่สุด เช่น *diisi oleh anda* บทนี้อธิบายเหตุผล
+
+**Kandungan bab**
+**เนื้อหาในบท**
 
 1. **13.1 Ragam Ayat** (*ragam ayat*)
    **13.1 วาจกของประโยค**
@@ -36,7 +52,21 @@ Pada akhir bab ini, pelajar dapat:
    - Pengguguran (*pengguguran*) · peluasan (*peluasan*) · penyusunan semula (*penyusunan semula*)
      การละ · การเพิ่ม/ขยาย · การเรียงใหม่
 
-## 3. Isi Penting<br>เนื้อหาสาระสำคัญ
+## 4. Konsep dan Definisi<br>แนวคิดและนิยาม
+
+| Istilah<br>ศัพท์ | Definisi<br>นิยาม |
+|---|---|
+| *ragam ayat* | Bentuk ayat mengikut tumpuan: aktif atau pasif<br>รูปประโยคตามจุดเน้น: กรรตุหรือกรรมวาจก |
+| *ayat aktif* | Ayat yang menumpukan pelaku<br>ประโยคที่เน้นผู้กระทำ |
+| *ayat pasif* | Ayat yang menumpukan unsur yang dikenai perbuatan<br>ประโยคที่เน้นผู้ถูกกระทำ |
+| *susunan biasa* | Subjek hadir sebelum predikat<br>ประธานอยู่หน้าภาคแสดง |
+| *susunan songsang* | Predikat atau sebahagiannya dikedepankan<br>ย้ายภาคแสดงหรือบางส่วนไปข้างหน้า |
+| *transformasi* | Proses yang menerbitkan ayat daripada ayat dasar<br>กระบวนการแปลงประโยคจากประโยคพื้นฐาน |
+| *pengguguran* | Unsur ayat digugurkan<br>การละส่วนของประโยค |
+| *peluasan* | Ayat lain digabungkan atau dipancangkan<br>การขยายด้วยการรวมหรือฝังประโยค |
+| *penyusunan semula* | Unsur ayat disusun semula, contohnya aktif → pasif<br>การเรียงใหม่ เช่น กรรตุ → กรรม |
+
+## 5. Penerangan Tatabahasa<br>คำอธิบายหลักไวยากรณ์
 
 ### 13.1 Ragam Ayat<br>วาจกของประโยค (*ragam ayat*)
 
@@ -98,7 +128,87 @@ Semua ayat diterbitkan daripada ayat dasar (Bab 11) melalui tiga proses.
 | Peluasan (*peluasan*)<br>การเพิ่ม/ขยาย | Ayat lain digabungkan atau dipancangkan<br>เชื่อมหรือฝังประโยคเพิ่ม | *Ahmad menaiki bas* + *Bas itu berwarna biru* → *Ahmad menaiki bas yang berwarna biru.* |
 | Penyusunan semula (*penyusunan semula*)<br>การเรียงใหม่ | Aktif → pasif · biasa → songsang<br>กรรตุ → กรรม · ปกติ → สลับ | *Kami makan nasi goreng.* → *Nasi goreng kami makan.* |
 
-## 4. Kajian Kes<br>กรณีศึกษา
+## 6. Contoh Ayat<br>ตัวอย่างประโยค
+
+| Ayat<br>ประโยค | Huraian<br>คำอธิบาย |
+|---|---|
+| *Menteri akan merasmikan bangunan itu.* → *Bangunan itu akan dirasmikan oleh menteri.* | Pasif *di-*: pelaku kata nama<br>กรรมวาจกด้วย *di-* |
+| *Saya masih menghormati lelaki itu.* → *Lelaki itu masih saya hormati.* | Pasif diri pertama: tanpa *meN-*, kata bantu di hadapan<br>บุรุษที่ 1 ไม่มี *meN-* |
+| *Pencuri itu kena tangkap.* | Pasif dengan *kena*: peristiwa tidak diingini<br>กรรมวาจกด้วย *kena* |
+| *Budak itu pandai sungguh.* → *Pandai sungguh budak itu.* | Songsang: seluruh predikat dikedepankan<br>ย้ายภาคแสดงทั้งหมด |
+| *(Kamu) hantar barang ini.* | Pengguguran subjek ayat perintah<br>ละประธานประโยคคำสั่ง |
+| *Ahmad menaiki bas yang berwarna biru.* | Peluasan dengan pancangan relatif<br>การขยายด้วยการฝัง |
+
+## 7. Jadual Perbandingan<br>ตารางเปรียบเทียบ
+
+**A. Ayat pasif mengikut pelaku**
+**ก. กรรมวาจกตามผู้กระทำ**
+
+| Pelaku<br>ผู้กระทำ | Bentuk kata kerja<br>รูปกริยา | Kedudukan pelaku<br>ตำแหน่งผู้กระทำ | Contoh<br>ตัวอย่าง |
+|---|---|---|---|
+| Diri ketiga / kata nama<br>บุรุษที่ 3 / นาม | *di-* | Selepas kata kerja (+ *oleh*)<br>หลังกริยา | *Surat itu dihantar oleh Ali.* |
+| Diri pertama / kedua<br>บุรุษที่ 1 / 2 | Tanpa imbuhan *meN-/di-*<br>ไม่มี *meN-/di-* | Terus di hadapan kata kerja<br>หน้ากริยาทันที | *Surat itu akan saya hantar.* |
+| Peristiwa tidak diingini<br>เหตุการณ์ไม่พึงประสงค์ | *kena* + kata kerja dasar<br>*kena* + กริยาฐาน | Selepas kata kerja (+ *oleh*)<br>หลังกริยา | *Dia kena marah oleh ibunya.* |
+
+**B. Tiga proses transformasi**
+**ข. กระบวนการแปลงสามแบบ**
+
+| Proses<br>กระบวนการ | Sebelum<br>ก่อน | Selepas<br>หลัง |
+|---|---|---|
+| Pengguguran<br>การละ | *Yusuf membeli rojak.* + *Yusuf membeli ais kacang.* | *Yusuf membeli rojak dan ais kacang.* |
+| Peluasan<br>การขยาย | *Ahmad menaiki bas.* + *Bas itu berwarna biru.* | *Ahmad menaiki bas yang berwarna biru.* |
+| Penyusunan semula<br>การเรียงใหม่ | *Kami makan nasi goreng.* | *Nasi goreng kami makan.* |
+
+## 8. Kesalahan Lazim<br>ข้อผิดพลาดที่พบบ่อย
+
+| Salah<br>ผิด | Betul<br>ถูก | Sebab<br>เหตุผล |
+|---|---|---|
+| `*`*Buku itu telah dibaca oleh saya.* | *Buku itu telah saya baca.* | Pelaku diri pertama tidak menggunakan *di- … oleh*<br>บุรุษที่ 1 ไม่ใช้ *di- … oleh* |
+| `*`*Borang ini perlu diisi oleh anda.* | *Borang ini perlu anda isi.* | Pelaku diri kedua<br>บุรุษที่ 2 |
+| `*`*Surat itu saya akan hantar.* | *Surat itu akan saya hantar.* | Kata bantu di hadapan kata ganti nama<br>คำช่วยอยู่หน้าสรรพนาม |
+| `*`*Kerja itu sudah saya menyiapkan.* | *Kerja itu sudah saya siapkan.* | *meN-* digugurkan<br>ตัด *meN-* |
+| `*`*Kami akan memeriksa semua dokumen* (dalam pengumuman yang menumpukan dokumen) | *Semua dokumen akan diperiksa.* | Ayat pasif menumpukan dokumen<br>กรรมวาจกเน้นเอกสาร |
+
+## 9. Latihan Interaktif<br>แบบฝึกหัดโต้ตอบ
+
+Jawab setiap latihan; jawapan disemak serta-merta beserta penjelasan. Untuk latihan tambahan, gunakan juga halaman **Alat Latihan**.
+ทำแบบฝึกแต่ละชุด ระบบจะตรวจคำตอบทันทีพร้อมคำอธิบาย ฝึกเพิ่มได้ที่หน้า **เครื่องมือฝึก**
+
+```latihan-isi
+Arahan: Tukarkan kepada ayat pasif dengan melengkapkan tempat kosong. | เติมช่องว่างเพื่อเปลี่ยนเป็นกรรมวาจก
+*Saya sudah membaca buku itu.* → *Buku itu sudah saya ___.* | baca | Pelaku diri pertama: kata kerja tanpa *meN-*. | บุรุษที่ 1 กริยาไม่มี *meN-*
+*Polis menangkap pencuri itu.* → *Pencuri itu ___ oleh polis.* | ditangkap | Pelaku kata nama: *di-*. | ผู้กระทำเป็นนามใช้ *di-*
+*Kamu mesti membersihkan bilik ini.* → *Bilik ini mesti kamu ___.* | bersihkan | Akhiran *-kan* dikekalkan. | คงปัจจัย *-kan*
+*Kami akan menghantar surat itu.* → *Surat itu ___ kami hantar.* | akan | Kata bantu di hadapan kata ganti nama. | คำช่วยอยู่หน้าสรรพนาม
+```
+
+```latihan-golong
+Arahan: Tentukan jenis ayat pasif. | ระบุชนิดกรรมวาจก
+Kategori: di- | ter- | Diri pertama/kedua · บุรุษที่ 1/2 | kena
+*Tikus itu dimakan kucing.* | di- | Awalan *di-*. | อุปสรรค *di-*
+*Wang itu terambil oleh Rusnee.* | ter- | Tidak sengaja. | ไม่ได้ตั้งใจ
+*Laksam itu kami makan.* | Diri pertama/kedua | Kata ganti nama di hadapan kata kerja. | สรรพนามอยู่หน้ากริยา
+*Dia kena marah.* | kena | Kata bantu *kena*. | คำช่วย *kena*
+*Borang itu belum anda isi.* | Diri pertama/kedua | Pelaku diri kedua. | บุรุษที่ 2
+```
+
+```latihan-betulkan
+Arahan: Klik bahagian yang salah. | กดส่วนที่ผิด
+Borang permohonan perlu [diisi oleh anda→anda isi] dengan lengkap. | Pelaku diri kedua. | บุรุษที่ 2
+Surat tawaran [kami akan→akan kami] hantar minggu depan. | Kata bantu di hadapan kata ganti nama. | คำช่วยอยู่หน้าสรรพนาม
+Buku itu telah [dibaca oleh saya→saya baca]. | Pelaku diri pertama. | บุรุษที่ 1
+Kerja itu sudah saya [menyiapkan→siapkan]. | *meN-* digugurkan. | ตัด *meN-*
+```
+
+```latihan-benar
+Arahan: Tentukan sama ada setiap pernyataan betul atau salah. | ตัดสินว่าข้อความแต่ละข้อถูกหรือผิด
+*Oleh* boleh digugurkan jika pelaku hadir terus selepas kata kerja *di-*.<br>ละ *oleh* ได้ถ้าผู้กระทำอยู่หลังกริยา *di-* ทันที | B | *Tikus itu dimakan kucing.* | ตัวอย่าง
+*Di rumah adik saya.* ialah ayat susunan songsang.<br>*Di rumah adik saya.* เป็นประโยคเรียงสลับ | B | Predikat FSN dikedepankan. | ภาคแสดงวลีบุพบทถูกย้ายไปหน้า
+Pasif dengan *kena* lazimnya untuk peristiwa yang menggembirakan.<br>กรรมวาจกด้วย *kena* มักใช้กับเรื่องดี | S | *Kena* lazimnya untuk peristiwa yang tidak diingini. | *kena* มักใช้กับเรื่องไม่พึงประสงค์
+Peluasan berlaku apabila ayat lain dipancangkan atau digabungkan.<br>การขยายเกิดเมื่อฝังหรือรวมประโยคอื่น | B | Contoh pancangan relatif dengan *yang*. | ตัวอย่างการฝังด้วย *yang*
+```
+
+### Kajian Kes<br>กรณีศึกษา
 
 **Pengumuman pejabat pendaftaran.** Pejabat hubungan antarabangsa sebuah universiti menyediakan draf pengumuman bahasa Melayu kepada pelajar pertukaran seperti yang berikut:
 **ประกาศของงานทะเบียน** สำนักงานวิเทศสัมพันธ์ของมหาวิทยาลัยร่างประกาศภาษามลายูถึงนักศึกษาแลกเปลี่ยนดังนี้
@@ -115,7 +225,20 @@ Semua ayat diterbitkan daripada ayat dasar (Bab 11) melalui tiga proses.
 3. Tambahkan satu ayat susunan songsang untuk menegaskan tarikh akhir dan jelaskan kesannya terhadap pembaca.
    เพิ่มประโยคเรียงสลับ 1 ประโยคเพื่อเน้นกำหนดส่ง และอธิบายผลที่ได้ต่อผู้อ่าน
 
-## 5. Soalan Penilaian<br>คำถามท้ายบท
+## 10. Rumusan<br>สรุปบทเรียน
+
+- Ayat aktif menumpukan pelaku; ayat pasif menumpukan unsur yang dikenai perbuatan.
+  กรรตุวาจกเน้นผู้กระทำ กรรมวาจกเน้นผู้ถูกกระทำ
+- Pasif *di-* untuk pelaku diri ketiga dan kata nama; pelaku diri pertama dan kedua hadir terus di hadapan kata kerja tanpa *meN-*.
+  *di-* สำหรับบุรุษที่ 3 และนาม ส่วนบุรุษที่ 1–2 วางหน้ากริยาที่ไม่มี *meN-*
+- Kata bantu hadir di hadapan kata ganti nama dalam ayat pasif diri pertama dan kedua.
+  คำช่วยอยู่หน้าสรรพนามในกรรมวาจกบุรุษที่ 1–2
+- Susunan songsang mengedepankan predikat atau sebahagiannya untuk penegasan.
+  การเรียงสลับย้ายภาคแสดงหรือบางส่วนไปข้างหน้าเพื่อเน้น
+- Semua ayat diterbitkan daripada ayat dasar melalui pengguguran, peluasan dan penyusunan semula.
+  ทุกประโยคแปลงมาจากประโยคพื้นฐานด้วยการละ การขยาย และการเรียงใหม่
+
+## 11. Kuiz Penilaian<br>แบบทดสอบท้ายบท
 
 ### A. Soalan Objektif<br>ก. ปรนัย
 
@@ -171,11 +294,11 @@ Semua ayat diterbitkan daripada ayat dasar (Bab 11) melalui tiga proses.
 2. Bahasa Thai menggunakan pasif "ถูก…" lazimnya untuk makna yang tidak diingini, manakala bahasa Melayu boleh menggunakan *di-* secara umum. Analisis kesannya terhadap penterjemahan Thai↔Melayu dan bandingkan dengan *kena* dalam bahasa Melayu.
    ภาษาไทยใช้กรรมวาจก "ถูก…" มักในความหมายไม่พึงประสงค์ ขณะที่ภาษามลายูใช้ *di-* ได้ทั่วไป จงวิเคราะห์ผลต่อการแปลไทย↔มลายู และเทียบกับ *kena* ในภาษามลายู
 
-## 6. Rujukan<br>เอกสารอ้างอิงแนะนำ
+## 12. Rujukan<br>เอกสารอ้างอิง
 
-- Nik Safiah Karim et al. (2015). *Tatabahasa Dewan Edisi Ketiga*. Kuala Lumpur: Dewan Bahasa dan Pustaka. — topik *Ragam Ayat*, *Susunan Ayat* dan *Proses Transformasi*
+- Nik Safiah Karim, Farid M. Onn, Hashim Haji Musa & Abdul Hamid Mahmood. (2015). *Tatabahasa Dewan* (Edisi Ketiga). Kuala Lumpur: Dewan Bahasa dan Pustaka. — topik *Ragam Ayat*, *Susunan Ayat* dan *Proses Transformasi*
   หัวข้อ *Ragam Ayat*, *Susunan Ayat* และ *Proses Transformasi*
-- Alias Mohammad Yatim. (1998). *Mengenali Bahasa Melayu*. Kedah: Percetakan Paavai.
-- Sulaiman Masri & Ahmad Khair Mohd Nor. (2002). *Tatabahasa Melayu Mesra Pengguna*. Kuala Lumpur: Utusan Publications & Distributors.
+- Alias Mohammad Yatim. (1998). *Mengenali Bahasa Melayu*. Penerbitan Sarlis.
+- Sulaiman Masri & Ahmad Khair Mohd. Nor. (2002). *Tatabahasa Melayu Mesra Pengguna*. Kuala Lumpur: Utusan Publications & Distributors.
 - Asmah Haji Omar. (2009). *Nahu Melayu Mutakhir* (Edisi Kelima). Kuala Lumpur: Dewan Bahasa dan Pustaka.
 - มูหำหมัด สาแลบิง. (2569). *ไวยากรณ์ภาษามลายู*. สงขลา: หลักสูตรภาษามลายู มหาวิทยาลัยทักษิณ.

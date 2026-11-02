@@ -1,10 +1,17 @@
-<!-- Bab 7 · ไฟล์เนื้อหาบทที่ 7 (สองภาษา: มลายูบน ไทยล่าง)
+<!-- Bab 7 · ไฟล์เนื้อหาบทที่ 7 — โครงสร้าง 12 หัวข้อ
+     1. Tajuk Pelajaran แสดงจากข้อมูลใน assets/js/course.js (ชื่อบท สัปดาห์ CLO) จึงไม่มีหัวข้อ ## ในไฟล์นี้
+     หัวข้อ ## ที่เหลือ 11 หัวข้อ ระบบรู้จักจากคำแรกของหัวข้อ: Hasil · Pengenalan · Konsep · Penerangan · Contoh · Jadual · Kesalahan · Latihan · Rumusan · Kuiz · Rujukan
      วิธีเขียนสองภาษา:
      - ย่อหน้าและข้อในรายการ: บรรทัดแรกภาษามลายู ขึ้นบรรทัดใหม่ (ไม่เว้นบรรทัดว่าง) แล้วเป็นภาษาไทย
      - หัวข้อ (## / ###) และช่องในตาราง: ภาษามลายู<br>ภาษาไทย
-     ห้ามลบหัวข้อระดับ ## (6 ส่วนของบท) และให้คงรูปแบบข้อปรนัย (ก. ข. ค. ง.) กับบรรทัด **เฉลย** ไว้ · คำอธิบายเฉลยอยู่ใต้ **Penjelasan** เป็นรายการ - **เลขข้อ** มลายู<br>ไทย -->
+     แบบฝึกหัดโต้ตอบเขียนเป็นบล็อก ```latihan-isi / latihan-betulkan / latihan-golong / latihan-benar (หนึ่งบรรทัดหนึ่งข้อ แยกช่องด้วย " | ")
+       latihan-isi:      ประโยคที่มี ___ | คำตอบ (หลายคำตอบคั่นด้วย /) | คำอธิบายมลายู | คำอธิบายไทย
+       latihan-betulkan: ประโยคที่มี [คำผิด→คำถูก] | คำอธิบายมลายู | คำอธิบายไทย
+       latihan-golong:   บรรทัด Kategori: ก | ข แล้วตามด้วย  ข้อความ | ชื่อหมวด | คำอธิบายมลายู | คำอธิบายไทย
+       latihan-benar:    ข้อความ | B (ถูก) หรือ S (ผิด) | คำอธิบายมลายู | คำอธิบายไทย
+     ในส่วน Kuiz Penilaian ให้คงรูปแบบข้อปรนัย (ก. ข. ค. ง.) บรรทัด **เฉลย** และรายการ **Penjelasan** ไว้ -->
 
-## 1. Hasil Pembelajaran<br>ผลลัพธ์การเรียนรู้ประจำบท
+## 2. Hasil Pembelajaran<br>ผลลัพธ์การเรียนรู้
 
 Pada akhir bab ini, pelajar dapat:
 เมื่อจบบทนี้ นักศึกษาสามารถ
@@ -18,7 +25,16 @@ Pada akhir bab ini, pelajar dapat:
 4. membezakan akronim (*akronim*) daripada singkatan (*singkatan*) (CLO2)
    แยกคำอักษรย่ออ่านเป็นคำ (*akronim*) ออกจากอักษรย่อ (*singkatan*) ได้ (CLO2)
 
-## 2. Rangka Bab<br>โครงร่างประจำบท
+## 3. Pengenalan<br>บทนำ
+
+Bab ini melengkapkan kajian pembentukan kata. Selain awalan dalam Bab 6, bahasa Melayu membentuk kata melalui akhiran, apitan, sisipan, penggandaan, pemajmukan dan pengakroniman.
+บทนี้ทำให้การศึกษาการสร้างคำสมบูรณ์ นอกจากอุปสรรคในบทที่ 6 แล้ว ภาษามลายูยังสร้างคำด้วยปัจจัยท้าย ปัจจัยคร่อม อาคม การซ้ำคำ การประสมคำ และการย่อคำ
+
+Dua perkara yang paling kerap menimbulkan masalah ialah perbezaan makna *-kan* dengan *-i*, dan ejaan kata majmuk yang ditulis terpisah atau serangkai.
+สองเรื่องที่มีปัญหาบ่อยที่สุดคือความต่างระหว่าง *-kan* กับ *-i* และการสะกดคำประสมว่าเขียนแยกหรือเขียนติด
+
+**Kandungan bab**
+**เนื้อหาในบท**
 
 1. **7.1 Akhiran** (*akhiran*): *-an, -kan, -i*
    **7.1 ปัจจัยท้าย**
@@ -36,7 +52,23 @@ Pada akhir bab ini, pelajar dapat:
 6. **7.6 Pengakroniman** (*pengakroniman*)
    **7.6 การสร้างคำอักษรย่ออ่านเป็นคำ**
 
-## 3. Isi Penting<br>เนื้อหาสาระสำคัญ
+## 4. Konsep dan Definisi<br>แนวคิดและนิยาม
+
+| Istilah<br>ศัพท์ | Definisi<br>นิยาม |
+|---|---|
+| *akhiran* | Imbuhan di belakang kata dasar: *-an, -kan, -i*<br>ปัจจัยท้ายคำฐาน |
+| *apitan* | Imbuhan yang hadir serentak di hadapan dan di belakang kata dasar<br>ปัจจัยที่ปรากฏหน้าและหลังคำฐานพร้อมกัน |
+| *sisipan* | Imbuhan yang diselitkan selepas konsonan pertama kata dasar<br>ปัจจัยที่แทรกหลังพยัญชนะตัวแรกของคำฐาน |
+| *penggandaan* | Proses mengulang kata atau sebahagiannya<br>กระบวนการซ้ำคำหรือบางส่วนของคำ |
+| *ganda penuh* | Seluruh kata digandakan: *rumah-rumah*<br>ซ้ำทั้งคำ |
+| *ganda separa* | Sebahagian kata digandakan: *lelaki*<br>ซ้ำบางส่วน |
+| *ganda berentak* | Penggandaan dengan perubahan bunyi berirama: *sayur-mayur*<br>ซ้ำแบบเปลี่ยนเสียงให้สัมผัส |
+| *pemajmukan* | Proses menggabungkan dua kata dasar atau lebih menjadi satu makna<br>การรวมคำฐานเป็นความหมายเดียว |
+| *kata majmuk mantap* | Kata majmuk yang ditulis serangkai: *setiausaha*<br>คำประสมที่เขียนติดกัน |
+| *akronim* | Kata baharu daripada gabungan bahagian beberapa kata, dibaca sebagai satu kata<br>คำย่อที่อ่านเป็นคำ |
+| *singkatan* | Bentuk pendek yang dibaca huruf demi huruf: *DBP*<br>อักษรย่อที่อ่านทีละตัว |
+
+## 5. Penerangan Tatabahasa<br>คำอธิบายหลักไวยากรณ์
 
 ### 7.1 Akhiran<br>ปัจจัยท้าย (*akhiran*)
 
@@ -111,7 +143,92 @@ Makna yang terhasil: jamak (*buku-buku*) · pelbagai (*buah-buahan*) · menyerup
 *Akronim* ialah kata baharu yang terbentuk daripada gabungan bahagian beberapa perkataan dan dibaca sebagai satu kata: *tadika* (*taman didikan kanak-kanak*), *pawagam* (*panggung wayang gambar*), *cerpen* (*cerita pendek*), *jentolak* (*jentera tolak*), *Bernama* (*Berita Nasional Malaysia*). *Akronim* berbeza daripada *singkatan*, yang dibaca huruf demi huruf: *DBP, UKM*.
 *Akronim* คือคำใหม่ที่เกิดจากการตัดส่วนของหลายคำมารวมกันและอ่านเป็นคำ ต่างจาก *singkatan* ซึ่งอ่านทีละตัวอักษร: *DBP, UKM*
 
-## 4. Kajian Kes<br>กรณีศึกษา
+## 6. Contoh Ayat<br>ตัวอย่างประโยค
+
+| Ayat<br>ประโยค | Huraian<br>คำอธิบาย |
+|---|---|
+| *Ayah **menanamkan** pokok pisang di kebun.* | *-kan*: objek ialah benda yang ditanam<br>กรรมเป็นสิ่งที่ถูกปลูก |
+| *Ayah **menanami** kebun dengan pokok pisang.* | *-i*: objek ialah tempat<br>กรรมเป็นสถานที่ |
+| *Bunga-bunga di taman **berguguran**.* | *ber-…-an*: banyak dan bertaburan<br>จำนวนมาก กระจัดกระจาย |
+| *Langit **kemerah-merahan** pada waktu senja.* | *ke-…-an* + ganda: agak merah<br>ค่อนข้างแดง |
+| *Setiausaha kelab **menandatangani** surat itu.* | Kata majmuk + apitan ditulis serangkai<br>คำประสม + ปัจจัยคร่อม เขียนติด |
+| *Syarikat itu telah **diambil alih**.* | Kata majmuk + awalan sahaja ditulis terpisah<br>คำประสม + อุปสรรคอย่างเดียว เขียนแยก |
+
+## 7. Jadual Perbandingan<br>ตารางเปรียบเทียบ
+
+**A. *-kan* dan *-i***
+**ก. *-kan* กับ *-i***
+
+| Aspek<br>ประเด็น | *-kan* | *-i* |
+|---|---|---|
+| Makna utama<br>ความหมายหลัก | Menyebabkan, melakukan untuk orang lain<br>ทำให้ ทำเพื่อผู้อื่น | Lokatif, perbuatan berulang<br>ทำต่อสถานที่ ทำซ้ำ |
+| Objek<br>กรรม | Benda yang dikenai<br>สิ่งที่ถูกกระทำ | Tempat atau sasaran<br>สถานที่หรือเป้าหมาย |
+| Contoh<br>ตัวอย่าง | *memasukkan buku* · *menaikkan bendera* | *memasuki dewan* · *menaiki bas* |
+
+**B. Ejaan kata majmuk**
+**ข. การสะกดคำประสม**
+
+| Keadaan<br>กรณี | Ejaan<br>การสะกด | Contoh<br>ตัวอย่าง |
+|---|---|---|
+| Tanpa imbuhan<br>ไม่เติมปัจจัย | Terpisah<br>แยก | *ambil alih* |
+| Awalan sahaja<br>อุปสรรคอย่างเดียว | Terpisah<br>แยก | *diambil alih* |
+| Akhiran sahaja<br>ปัจจัยท้ายอย่างเดียว | Terpisah<br>แยก | *garis bawahi* |
+| Apitan<br>ปัจจัยคร่อม | Serangkai<br>ติดกัน | *pengambilalihan, menggarisbawahi* |
+| Kata majmuk mantap<br>คำประสมเขียนติด | Sentiasa serangkai<br>ติดกันเสมอ | *kerjasama, bekerjasama* |
+
+## 8. Kesalahan Lazim<br>ข้อผิดพลาดที่พบบ่อย
+
+| Salah<br>ผิด | Betul<br>ถูก | Sebab<br>เหตุผล |
+|---|---|---|
+| `*`*semua pelajar-pelajar* | *semua pelajar* | Sudah ada penanda jamak<br>มีคำบอกพหูพจน์แล้ว |
+| `*`*kerja sama* | *kerjasama* | Kata majmuk mantap<br>คำประสมที่เขียนติด |
+| `*`*menanda tangani* | *menandatangani* | Menerima apitan → serangkai<br>เติมปัจจัยคร่อมจึงเขียนติด |
+| `*`*bertanggung jawab* | *bertanggungjawab* | *tanggungjawab* kata majmuk mantap<br>เขียนติดเสมอ |
+| `*`*diambilalih* | *diambil alih* | Awalan sahaja → terpisah<br>อุปสรรคอย่างเดียวเขียนแยก |
+| `*`*Petani menanamkan sawahnya dengan padi.* | *Petani menanami sawahnya dengan padi.* | Objek tempat menggunakan *-i*<br>กรรมเป็นสถานที่ใช้ *-i* |
+
+## 9. Latihan Interaktif<br>แบบฝึกหัดโต้ตอบ
+
+Jawab setiap latihan; jawapan disemak serta-merta beserta penjelasan.
+ทำแบบฝึกแต่ละชุด ระบบจะตรวจคำตอบทันทีพร้อมคำอธิบาย
+
+```latihan-isi
+Arahan: Taipkan bentuk yang betul. | พิมพ์รูปที่ถูกต้อง
+Dia ___ bas ke Hat Yai. (naik + -i) | menaiki | Objek *bas* ialah tempat yang dinaiki. | *bas* เป็นยานพาหนะที่ขึ้น
+Pengawas ___ bendera. (naik + -kan) | menaikkan | Menyebabkan bendera naik. | ทำให้ธงขึ้น
+*peN-…-an* + *ambil alih* = ___ | pengambilalihan | Apitan → serangkai. | ปัจจัยคร่อมจึงเขียนติด
+*ber-* + *kerjasama* = ___ | bekerjasama | Kata majmuk mantap sentiasa serangkai. | คำประสมเขียนติดเสมอ
+Sisipan *-el-* + *tunjuk* = ___ | telunjuk | Sisipan selepas konsonan pertama. | แทรกหลังพยัญชนะแรก
+```
+
+```latihan-golong
+Arahan: Golongkan jenis kata ganda. | จัดประเภทคำซ้ำ
+Kategori: Penuh · ซ้ำทั้งคำ | Separa · ซ้ำบางส่วน | Berentak · ซ้ำแบบสัมผัส
+*rumah-rumah* | Penuh | Seluruh kata digandakan. | ซ้ำทั้งคำ
+*lelaki* | Separa | Suku kata pertama digandakan. | ซ้ำพยางค์แรก
+*lauk-pauk* | Berentak | Perubahan bunyi berirama. | เปลี่ยนเสียงให้สัมผัส
+*dedaun* | Separa | Suku kata pertama digandakan. | ซ้ำพยางค์แรก
+*gunung-ganang* | Berentak | Perubahan vokal berirama. | เปลี่ยนสระให้สัมผัส
+*bermain-main* | Separa | Kata berimbuhan; hanya kata dasar digandakan. | ซ้ำเฉพาะคำฐานของคำที่เติมปัจจัย
+```
+
+```latihan-betulkan
+Arahan: Klik bahagian yang salah. | กดส่วนที่ผิด
+Hasil [kerja sama→kerjasama] dua universiti. | Kata majmuk mantap ditulis serangkai. | เขียนติดกัน
+[Semua pelajar-pelajar→Semua pelajar] dijemput hadir. | Tidak digandakan selepas penanda jamak. | ไม่ซ้ำคำหลังคำบอกพหูพจน์
+Peserta mesti [menanda tangani→menandatangani] borang. | Apitan → serangkai. | ปัจจัยคร่อมจึงเขียนติด
+Sila [beri tahu→beritahu] jawatankuasa. | *beritahu* kata majmuk mantap. | *beritahu* เขียนติดเสมอ
+```
+
+```latihan-benar
+Arahan: Tentukan sama ada setiap pernyataan betul atau salah. | ตัดสินว่าข้อความแต่ละข้อถูกหรือผิด
+*Pawagam* ialah singkatan.<br>*pawagam* เป็นอักษรย่อ | S | *Pawagam* dibaca sebagai satu kata, maka akronim. | อ่านเป็นคำเดียวจึงเป็นคำย่อ
+Sisipan masih produktif dalam pembentukan kata baharu.<br>อาคมยังใช้สร้างคำใหม่อยู่ | S | Sisipan hanya terdapat dalam kata sedia ada. | อาคมพบเฉพาะในคำที่มีอยู่แล้ว
+*Diambil alih* ditulis terpisah.<br>*diambil alih* เขียนแยก | B | Kata majmuk yang menerima awalan sahaja ditulis terpisah. | รับอุปสรรคอย่างเดียวเขียนแยก
+*-i* dalam *menduduki* membawa makna lokatif.<br>*-i* ใน *menduduki* บอกสถานที่ | B | Objeknya tempat yang diduduki. | กรรมเป็นที่ที่นั่ง
+```
+
+### Kajian Kes<br>กรณีศึกษา
 
 **Hantaran publisiti fakulti.** Jawatankuasa kelab pelajar memuat naik hantaran untuk mempromosikan kem bahasa bersama sebuah universiti di Malaysia:
 **โพสต์ประชาสัมพันธ์คณะ** คณะกรรมการสโมสรนักศึกษาโพสต์ประชาสัมพันธ์ค่ายภาษาร่วมกับมหาวิทยาลัยในมาเลเซีย
@@ -128,7 +245,22 @@ Makna yang terhasil: jamak (*buku-buku*) · pelbagai (*buah-buahan*) · menyerup
 3. Bincangkan kesan ejaan yang salah dalam dokumen rasmi terhadap imej institusi.
    อภิปรายผลกระทบต่อภาพลักษณ์สถาบันหากเอกสารทางการสะกดคำผิด
 
-## 5. Soalan Penilaian<br>คำถามท้ายบท
+## 10. Rumusan<br>สรุปบทเรียน
+
+- *-kan* lazimnya kausatif atau benefaktif; *-i* lazimnya lokatif atau perbuatan berulang.
+  *-kan* มักบอกการทำให้หรือทำเพื่อ *-i* มักบอกสถานที่หรือการทำซ้ำ
+- Apitan membentuk kata nama, kata kerja dan kata adjektif dengan makna khusus.
+  ปัจจัยคร่อมสร้างนาม กริยา และคุณศัพท์ที่มีความหมายเฉพาะ
+- Sisipan *-el-, -em-, -er-* tidak lagi produktif.
+  อาคม *-el-, -em-, -er-* ไม่ใช้สร้างคำใหม่แล้ว
+- Penggandaan terbahagi kepada penuh, separa dan berentak, dan tidak digunakan selepas penanda jamak.
+  การซ้ำคำมีสามแบบ และไม่ใช้หลังคำบอกพหูพจน์
+- Kata majmuk ditulis terpisah, kecuali kata majmuk mantap atau apabila menerima apitan.
+  คำประสมเขียนแยก ยกเว้นคำที่เขียนติดอยู่แล้วหรือเมื่อเติมปัจจัยคร่อม
+- Akronim dibaca sebagai satu kata; singkatan dibaca huruf demi huruf.
+  คำย่ออ่านเป็นคำ อักษรย่ออ่านทีละตัว
+
+## 11. Kuiz Penilaian<br>แบบทดสอบท้ายบท
 
 ### A. Soalan Objektif<br>ก. ปรนัย
 
@@ -184,11 +316,11 @@ Makna yang terhasil: jamak (*buku-buku*) · pelbagai (*buah-buahan*) · menyerup
 2. Tinjau lima akronim baharu dalam media Malaysia. Analisis cara pemenggalannya (suku kata awal/huruf awal) dan nilai sama ada akronim itu mematuhi struktur suku kata Melayu.
    สำรวจคำ *akronim* ใหม่ในสื่อมาเลเซีย 5 คำ วิเคราะห์วิธีตัดส่วน (พยางค์แรก/อักษรแรก) และประเมินว่าเป็นไปตามโครงสร้างพยางค์มลายูหรือไม่
 
-## 6. Rujukan<br>เอกสารอ้างอิงแนะนำ
+## 12. Rujukan<br>เอกสารอ้างอิง
 
-- Nik Safiah Karim et al. (2015). *Tatabahasa Dewan Edisi Ketiga*. Kuala Lumpur: Dewan Bahasa dan Pustaka. — topik *Proses Pembentukan Kata*
+- Nik Safiah Karim, Farid M. Onn, Hashim Haji Musa & Abdul Hamid Mahmood. (2015). *Tatabahasa Dewan* (Edisi Ketiga). Kuala Lumpur: Dewan Bahasa dan Pustaka. — topik *Proses Pembentukan Kata*
   หัวข้อ *Proses Pembentukan Kata*
-- Abdullah Hassan. (2003). *Tatabahasa Bahasa Melayu*. Pahang: PTS Publications & Distributors.
-- Sulaiman Masri & Ahmad Khair Mohd Nor. (2002). *Tatabahasa Melayu Mesra Pengguna*. Kuala Lumpur: Utusan Publications & Distributors.
+- Abdullah Hassan. (2002). *Tatabahasa Bahasa Melayu: Morfologi dan Sintaksis untuk Guru dan Pelajar*. Pahang: PTS Publications & Distributors.
+- Sulaiman Masri & Ahmad Khair Mohd. Nor. (2002). *Tatabahasa Melayu Mesra Pengguna*. Kuala Lumpur: Utusan Publications & Distributors.
 - *Pedoman Umum Ejaan Bahasa Melayu* (Dewan Bahasa dan Pustaka) dan PRPM (prpm.dbp.gov.my) — untuk menyemak ejaan kata majmuk
   ตรวจการสะกดคำประสม
