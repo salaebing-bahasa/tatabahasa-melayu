@@ -73,6 +73,9 @@ if (FONT_DIR) {
 fs.mkdirSync(OUT, { recursive: true });
 const C = await (async () => { const pg = await ctx.newPage(); await pg.goto(BASE + "/index.html#/kandungan"); const c = await pg.evaluate(() => window.COURSE); await pg.close(); return c; })();
 
+// โลโก้คณะในหัวกระดาษ (headerTemplate โหลดไฟล์ภายนอกไม่ได้ จึงฝังเป็น data URI)
+const LOGO = "data:image/png;base64," + fs.readFileSync(path.join(ROOT, "assets/img/logo-fakulti-400.png")).toString("base64");
+
 for (const n of bab) {
   const ch = C.chapters.find(c => c.no === n) || { ms: "", th: "" };
   const pg = await ctx.newPage();
@@ -89,9 +92,9 @@ for (const n of bab) {
     path: path.join(OUT, `bab-${nn}.pdf`),
     format: "A4",
     printBackground: true,
-    margin: { top: "16mm", bottom: "18mm", left: "16mm", right: "16mm" },
+    margin: { top: "20mm", bottom: "18mm", left: "16mm", right: "16mm" },
     displayHeaderFooter: true,
-    headerTemplate: `<div style="width:100%;font-size:8px;color:#7A1F2B;padding:0 16mm;display:flex;justify-content:space-between;font-family:sans-serif"><span>${C.code} ${esc(C.ms)} · ${esc(C.th)}</span><span>Bab ${n} · ${esc(ch.ms)}</span></div>`,
+    headerTemplate: `<div style="width:100%;font-size:8px;color:#7A1F2B;padding:0 16mm;display:flex;justify-content:space-between;align-items:center;font-family:sans-serif"><img src="${LOGO}" style="height:7mm;width:auto"><span style="text-align:right">${C.code} ${esc(C.ms)} · ${esc(C.th)}<br>Bab ${n} · ${esc(ch.ms)}</span></div>`,
     footerTemplate: `<div style="width:100%;font-size:8px;color:#6B5558;padding:0 16mm;display:flex;justify-content:space-between;font-family:sans-serif"><span>Universiti Thaksin · มหาวิทยาลัยทักษิณ</span><span><span class="pageNumber"></span> / <span class="totalPages"></span></span></div>`
   });
   await pg.close();
