@@ -99,8 +99,8 @@ Tahap kesantunan daripada rendah kepada tinggi:
 5. *Bolehkah tuan menghantar borang itu?* (ayat tanya menggantikan perintah — paling sopan)
    (คำถามแทนคำสั่ง — สุภาพที่สุด)
 
-Perhatian: `*`*Tolong jangan datang.* tidak sesuai (maknanya bercanggah).
-ข้อควรระวัง: `*`*Tolong jangan datang.* ไม่เหมาะสม (ขัดกันทางความหมาย)
+Perhatian: sesetengah ahli bahasa menganggap *Tolong jangan…* bercanggah maknanya (*tolong* meminta bantuan, *jangan* melarang). Dalam papan tanda dan dokumen rasmi, gunakan *Dilarang…* atau *Jangan…*.
+ข้อควรระวัง: นักภาษาศาสตร์บางส่วนเห็นว่า *Tolong jangan…* ขัดกันทางความหมาย (*tolong* คือขอความช่วยเหลือ *jangan* คือห้าม) ในป้ายและเอกสารทางการจึงควรใช้ *Dilarang…* หรือ *Jangan…*
 
 ## 4. Kajian Kes<br>กรณีศึกษา
 
@@ -128,13 +128,23 @@ Perhatian: `*`*Tolong jangan datang.* tidak sesuai (maknanya bercanggah).
 2. *Jam tangan itu untuk emak.* ialah ayat pola<br>เป็นแบบประโยค
    ก. FN + FN ข. FN + FK ค. FN + FA ง. FN + FSN
 3. Manakah ayat tunggal tetapi bukan ayat dasar?<br>ข้อใดเป็นประโยคเดี่ยว แต่ไม่ใช่ประโยคพื้นฐาน
-   ก. *Ayah saya ke Phuket.* ข. *Ke Phuket ayah saya.* ค. *Dia guru.* ง. *Adik tidur.*
+   ก. *Ke Phuket ayah saya.* ข. *Ayah saya ke Phuket.* ค. *Dia guru.* ง. *Adik tidur.*
 4. *___ awak sanggup melakukan tugasan ini?* (soalan tertutup)<br>(คำถามปิด)
    ก. *Siapakah* ข. *Apakah* ค. *Bilakah* ง. *Adakah*
 5. Papan tanda larangan di tempat rasmi sepatutnya menggunakan<br>ป้ายห้ามในสถานที่ราชการควรใช้
    ก. *Jangan sentuh lah.* ข. *Dilarang sentuh.* ค. *Tak usah sentuh.* ง. *Tolong jangan sentuh.*
+6. *Pelajar itu sedang menulis.* ialah ayat pola<br>เป็นแบบประโยค
+   ก. FN + FN ข. FN + FK ค. FN + FA ง. FN + FSN
+7. *Ibu bapanya di Pattani.* ialah ayat pola<br>เป็นแบบประโยค
+   ก. FN + FN ข. FN + FK ค. FN + FA ง. FN + FSN
+8. *Silalah duduk.* ialah ayat perintah jenis<br>*Silalah duduk.* เป็นประโยคคำสั่งประเภท
+   ก. Suruhan<br>สั่ง ข. Larangan<br>ห้าม ค. Silaan<br>เชื้อเชิญ ง. Permintaan<br>ขอร้อง
+9. Ayat manakah ialah ayat seruan?<br>ข้อใดเป็นประโยคอุทาน
+   ก. *Wah, cantiknya baju itu!* ข. *Baju itu cantik.* ค. *Cantikkah baju itu?* ง. *Belilah baju itu.*
+10. Ayat yang paling sopan untuk meminta ibu bapa pelajar menghantar borang ialah<br>ประโยคที่สุภาพที่สุดในการขอให้ผู้ปกครองส่งแบบฟอร์มคือ
+   ก. *Hantar borang itu.* ข. *Hantarlah borang itu.* ค. *Tolong hantar borang itu.* ง. *Bolehkah tuan/puan menghantar borang itu?*
 
-**เฉลย** 1 ข · 2 ง · 3 ข · 4 ง · 5 ข
+**เฉลย** 1 ข · 2 ง · 3 ก · 4 ง · 5 ข · 6 ข · 7 ง · 8 ค · 9 ก · 10 ง
 
 **Penjelasan · คำอธิบาย**
 
@@ -142,15 +152,20 @@ Perhatian: `*`*Tolong jangan datang.* tidak sesuai (maknanya bercanggah).
 - **2** *Untuk emak* ialah frasa sendi nama, maka pola FN + FSN.<br>*untuk emak* เป็นวลีบุพบท จึงเป็นแบบ FN + FSN
 - **3** Predikat *ke Phuket* dikedepankan (susunan songsang), sedangkan ayat dasar mesti bersusunan subjek + predikat.<br>ภาคแสดง *ke Phuket* ถูกย้ายไปข้างหน้า (เรียงสลับ) ขณะที่ประโยคพื้นฐานต้องเรียงประธาน + ภาคแสดง
 - **4** *Adakah* membentuk soalan tertutup yang dijawab dengan *ya/tidak*; pilihan lain membentuk soalan terbuka.<br>*adakah* สร้างคำถามปิดที่ตอบ *ya/tidak* ส่วนตัวเลือกอื่นเป็นคำถามเปิด
-- **5** Papan tanda rasmi menggunakan *dilarang*. *Jangan … lah* dan *tak usah* tidak rasmi, manakala *tolong jangan* bercanggah maknanya.<br>ป้ายทางการใช้ *dilarang* ส่วน *jangan … lah* และ *tak usah* ไม่เป็นทางการ และ *tolong jangan* มีความหมายขัดกัน
+- **5** Papan tanda rasmi menggunakan *dilarang*. *Jangan … lah* dan *tak usah* tidak rasmi, manakala *tolong jangan* dianggap bercanggah maknanya oleh sesetengah ahli bahasa.<br>ป้ายทางการใช้ *dilarang* ส่วน *jangan … lah* และ *tak usah* ไม่เป็นทางการ และ *tolong jangan* ถูกมองว่ามีความหมายขัดกัน
+- **6** Predikatnya *sedang menulis*, iaitu frasa kerja.<br>ภาคแสดงคือ *sedang menulis* ซึ่งเป็นวลีกริยา
+- **7** Predikatnya *di Pattani*, iaitu frasa sendi nama.<br>ภาคแสดงคือ *di Pattani* ซึ่งเป็นวลีบุพบท
+- **8** Ayat silaan ditandai oleh *sila* atau *jemput*.<br>ประโยคเชื้อเชิญมี *sila* หรือ *jemput*
+- **9** Ayat seruan menyatakan perasaan dengan kata seru (*wah*) dan tanda seru.<br>ประโยคอุทานแสดงความรู้สึกด้วยคำอุทาน (*wah*) และเครื่องหมายอัศเจรีย์
+- **10** Ayat tanya yang menggantikan perintah, bersama kata ganti nama hormat, ialah bentuk yang paling sopan.<br>การใช้ประโยคคำถามแทนคำสั่งพร้อมสรรพนามแสดงความเคารพสุภาพที่สุด
 
 ### B. Soalan Subjektif<br>ข. อัตนัย
 
-1. Bina dua ayat dasar bagi setiap pola tentang kehidupan di universiti dan tandakan sempadan subjek/predikat.
+1. Bina dua ayat dasar bagi setiap pola tentang kehidupan di universiti dan tandakan sempadan subjek/predikat. (แนวคำตอบ: Contoh: FN + FN *Ali ketua kelas.* · FN + FK *Kami belajar di perpustakaan.* · FN + FA *Dewan kuliah itu luas.* · FN + FSN *Kelas kami di bangunan 13.* Sempadan subjek dan predikat: *Ali / ketua kelas*)
    แต่งประโยคพื้นฐานแบบละ 2 ประโยคเกี่ยวกับชีวิตในมหาวิทยาลัย และแสดงเส้นแบ่งประธาน/ภาคแสดง
-2. Tukarkan *Nama awak siapa?* kepada dua bentuk lain dan jelaskan peranan *-kah*.
+2. Tukarkan *Nama awak siapa?* kepada dua bentuk lain dan jelaskan peranan *-kah*. (แนวคำตอบ: *Siapa nama awak?* — kata tanya dikedepankan · *Siapakah nama awak?* — partikel *-kah* menandakan unsur yang ditanya dan lebih sesuai dalam bahasa tulisan)
    เปลี่ยน *Nama awak siapa?* เป็นอีก 2 รูป และอธิบายบทบาทของ *-kah*
-3. Tulis keempat-empat jenis ayat perintah untuk situasi yang sama (contohnya di perpustakaan).
+3. Tulis keempat-empat jenis ayat perintah untuk situasi yang sama (contohnya di perpustakaan). (แนวคำตอบ: suruhan: *Pulangkan buku tepat pada masanya.* · larangan: *Dilarang makan di dalam perpustakaan.* · silaan: *Sila beratur di kaunter.* · permintaan: *Tolong rendahkan suara anda.*)
    เขียนประโยคคำสั่งทั้ง 4 ประเภทสำหรับสถานการณ์เดียวกัน (เช่น ห้องสมุด)
 
 ### C. Soalan Pemikiran Kritis<br>ค. โจทย์คิดวิเคราะห์

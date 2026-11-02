@@ -120,7 +120,7 @@ Semua ayat diterbitkan daripada ayat dasar (Bab 11) melalui tiga proses.
 ### A. Soalan Objektif<br>ก. ปรนัย
 
 1. Manakah ayat pasif yang betul?<br>ข้อใดเป็นประโยคกรรมวาจกที่ถูกต้อง
-   ก. *Kerja itu sudah disiapkan oleh saya.* ข. *Kerja itu sudah saya siapkan.* ค. *Kerja itu saya sudah siapkan.* ง. *Kerja itu sudah menyiapkan saya.*
+   ก. *Kerja itu sudah disiapkan oleh saya.* ข. *Kerja itu sudah menyiapkan saya.* ค. *Kerja itu saya sudah siapkan.* ง. *Kerja itu sudah saya siapkan.*
 2. *Bola kena tendang oleh Danish.* ialah ayat pasif jenis<br>เป็นประโยคกรรมชนิด
    ก. *di-* ข. *ter-* ค. *kena* ง. Kata ganti nama diri pertama<br>สรรพนามบุรุษที่ 1
 3. *Hujan menimpa bumi.* ialah<br>เป็น
@@ -129,8 +129,18 @@ Semua ayat diterbitkan daripada ayat dasar (Bab 11) melalui tiga proses.
    ก. *Adik saya di rumah.* ข. *Di rumah adik saya.* ค. *Adik saya tidur.* ง. *Rumah adik saya besar.*
 5. *Yusuf membeli rojak dan ais kacang.* menunjukkan proses<br>แสดงกระบวนการ
    ก. Pengguguran unsur yang berulang<br>การละส่วนซ้ำ ข. Penyongsangan<br>การเรียงสลับ ค. Pemasifan<br>การแปลงเป็นกรรม ง. Pemancangan klausa relatif<br>การฝังอนุประโยคสัมพันธ์
+6. Ayat pasif bagi *Guru memeriksa buku latihan itu.* ialah<br>ประโยคกรรมวาจกของ *Guru memeriksa buku latihan itu.* คือ
+   ก. *Buku latihan itu diperiksa oleh guru.* ข. *Buku latihan itu guru periksa.* ค. *Buku latihan itu memeriksa guru.* ง. *Guru diperiksa buku latihan itu.*
+7. Ayat pasif bagi *Kamu mesti menyiapkan tugasan ini.* ialah<br>ประโยคกรรมวาจกของ *Kamu mesti menyiapkan tugasan ini.* คือ
+   ก. *Tugasan ini mesti disiapkan oleh kamu.* ข. *Tugasan ini kamu mesti siapkan.* ค. *Tugasan ini mesti kamu siapkan.* ง. *Tugasan ini mesti kamu menyiapkan.*
+8. *Dompet itu terambil oleh Rusnee.* ialah ayat pasif dengan<br>*Dompet itu terambil oleh Rusnee.* เป็นกรรมวาจกที่ใช้
+   ก. *di-* ข. *ter-* ค. *kena* ง. Kata ganti nama diri kedua<br>สรรพนามบุรุษที่ 2
+9. *Pada pukul enam mereka bertolak.* ialah<br>เป็น
+   ก. Ayat pasif<br>กรรมวาจก ข. Susunan biasa<br>เรียงปกติ ค. Ayat perintah<br>ประโยคคำสั่ง ง. Susunan songsang<br>เรียงสลับ
+10. *Ahmad menaiki bas yang berwarna biru.* terhasil melalui proses<br>*Ahmad menaiki bas yang berwarna biru.* เกิดจากกระบวนการ
+   ก. Pengguguran<br>การละ ข. Peluasan<br>การขยาย ค. Penyusunan semula<br>การเรียงใหม่ ง. Pemasifan<br>การแปลงเป็นกรรมวาจก
 
-**เฉลย** 1 ข · 2 ค · 3 ก · 4 ข · 5 ก
+**เฉลย** 1 ง · 2 ค · 3 ก · 4 ข · 5 ก · 6 ก · 7 ค · 8 ข · 9 ง · 10 ข
 
 **Penjelasan · คำอธิบาย**
 
@@ -139,14 +149,19 @@ Semua ayat diterbitkan daripada ayat dasar (Bab 11) melalui tiga proses.
 - **3** Pelaku *hujan* menjadi subjek dan kata kerja berawalan *meN-*, maka ayat aktif.<br>ผู้กระทำ *hujan* เป็นประธานและกริยาเติม *meN-* จึงเป็นกรรตุวาจก
 - **4** Predikat frasa sendi nama *di rumah* dikedepankan sebelum subjek *adik saya*.<br>ภาคแสดงวลีบุพบท *di rumah* ถูกย้ายไปไว้หน้าประธาน *adik saya*
 - **5** Ayat ini berasal daripada *Yusuf membeli rojak* + *Yusuf membeli ais kacang*; unsur berulang *Yusuf membeli* digugurkan.<br>ประโยคนี้มาจาก *Yusuf membeli rojak* + *Yusuf membeli ais kacang* โดยละส่วนที่ซ้ำ *Yusuf membeli*
+- **6** Pelaku *guru* ialah kata nama (diri ketiga), maka gunakan *di-* dan *oleh*.<br>ผู้กระทำ *guru* เป็นนาม (บุรุษที่ 3) จึงใช้ *di-* และ *oleh*
+- **7** Pelaku diri kedua: kata bantu *mesti* di hadapan *kamu*, dan kata kerja tanpa *meN-*.<br>ผู้กระทำบุรุษที่ 2: คำช่วย *mesti* อยู่หน้า *kamu* และกริยาไม่มี *meN-*
+- **8** Kata kerja *terambil* menggunakan awalan *ter-*, iaitu perbuatan yang tidak disengajakan.<br>กริยา *terambil* ใช้อุปสรรค *ter-* แสดงการกระทำที่ไม่ได้ตั้งใจ
+- **9** Keterangan *pada pukul enam*, iaitu sebahagian daripada predikat, dikedepankan sebelum subjek.<br>ส่วนขยาย *pada pukul enam* ซึ่งเป็นส่วนหนึ่งของภาคแสดงถูกย้ายไปไว้หน้าประธาน
+- **10** Ayat *Bas itu berwarna biru* dipancangkan ke dalam ayat induk, maka proses peluasan.<br>ประโยค *Bas itu berwarna biru* ถูกฝังเข้าในประโยคหลัก จึงเป็นกระบวนการขยาย
 
 ### B. Soalan Subjektif<br>ข. อัตนัย
 
-1. Tukarkan kepada ayat pasif: (a) *Emak menyapu sampah.* (b) *Kami sudah menjemput tetamu itu.* (c) *Engkau mesti membersihkan bilik ini.* (d) *Polis sedang menyiasat kes itu.*
+1. Tukarkan kepada ayat pasif: (a) *Emak menyapu sampah.* (b) *Kami sudah menjemput tetamu itu.* (c) *Engkau mesti membersihkan bilik ini.* (d) *Polis sedang menyiasat kes itu.* (แนวคำตอบ: a. *Sampah disapu oleh emak.* · b. *Tetamu itu sudah kami jemput.* · c. *Bilik ini mesti engkau bersihkan.* · d. *Kes itu sedang disiasat oleh polis.*)
    แปลงเป็นกรรมวาจก ตามข้อ (ก)–(ง)
-2. Tulis ayat susunan songsang daripada keempat-empat pola ayat dasar dan jelaskan unsur yang ditegaskan.
+2. Tulis ayat susunan songsang daripada keempat-empat pola ayat dasar dan jelaskan unsur yang ditegaskan. (แนวคำตอบ: Kedepankan predikat atau sebahagiannya, sering dengan *-lah* atau *-nya*: FA *Pandai sungguh budak itu.* · FSN *Ke Phuket ayah saya.* · keterangan *Pada pukul enam mereka bertolak.* Unsur yang dikedepankan ialah unsur yang ditegaskan.)
    เขียนประโยคเรียงสลับจากประโยคพื้นฐานทั้ง 4 แบบ และอธิบายส่วนที่ถูกเน้น
-3. Jelaskan dengan contoh bagaimana tiga proses transformasi menghubungkan ayat dasar dengan ayat yang digunakan dalam kehidupan sebenar.
+3. Jelaskan dengan contoh bagaimana tiga proses transformasi menghubungkan ayat dasar dengan ayat yang digunakan dalam kehidupan sebenar. (แนวคำตอบ: Pengguguran: *Hantar barang ini.* — subjek *kamu* digugurkan · peluasan: *Ahmad menaiki bas yang berwarna biru.* · penyusunan semula: *Borang ini perlu anda isi.* — aktif menjadi pasif. Ketiga-tiganya bermula daripada ayat dasar.)
    อธิบายด้วยตัวอย่างว่าการแปลงประโยค 3 กระบวนการเชื่อมโยงประโยคพื้นฐานกับประโยคที่ใช้จริงอย่างไร
 
 ### C. Soalan Pemikiran Kritis (Integrasi Minggu 15)<br>ค. โจทย์คิดวิเคราะห์ (บูรณาการสัปดาห์ที่ 15)

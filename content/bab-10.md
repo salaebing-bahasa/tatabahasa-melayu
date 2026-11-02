@@ -93,7 +93,7 @@ Pada akhir bab ini, pelajar dapat:
 | `*`*Universiti di mana saya belajar …* | *Universiti tempat saya belajar …* | *Di mana* ialah kata tanya, bukan penghubung relatif (pengaruh *where*)<br>*di mana* เป็นคำถาม ไม่ใช่คำเชื่อมสัมพันธ์ (อิทธิพล *where*) |
 | `*`*antara Pattani dan Yala* | *antara Pattani dengan Yala* | Pasangan kata *antara … dengan*<br>คู่คำ *antara … dengan* |
 | `*`*Dia takut ular.* (bahasa tulisan)<br>(ภาษาเขียน) | *Dia takut akan ular.* | Bahasa lisan sering menggugurkan *akan*<br>ภาษาพูดมักละ *akan* |
-| `*`*Saya cinta kepada negara.* | *Saya cinta akan negara.* | Kata adjektif perasaan terhadap benda abstrak menggunakan *akan*<br>คุณศัพท์บอกความรู้สึกต่อสิ่งนามธรรมใช้ *akan* |
+| `*`*Dia sayang ke ibunya.* | *Dia sayang kepada ibunya.* | *Ke* hanya untuk arah tempat; perasaan terhadap manusia menggunakan *kepada*<br>*ke* ใช้กับทิศทางไปยังสถานที่เท่านั้น ความรู้สึกต่อบุคคลใช้ *kepada* |
 
 ## 4. Kajian Kes<br>กรณีศึกษา
 
@@ -117,17 +117,27 @@ Pada akhir bab ini, pelajar dapat:
 ### A. Soalan Objektif<br>ก. ปรนัย
 
 1. Manakah penggunaan kata penguat yang betul?<br>ข้อใดใช้คำเน้นถูกต้อง
-   ก. *sekali cantik* ข. *cantik nian* ค. *amat cantik sekali* ง. *cantik sangat sekali*
+   ก. *sekali cantik* ข. *cantik sangat sekali* ค. *amat cantik sekali* ง. *cantik nian*
 2. *Dia mahir ___ bahasa Arab.*
-   ก. *di* ข. *dalam* ค. *kepada* ง. *dari*
+   ก. *di* ข. *kepada* ค. *dalam* ง. *dari*
 3. Dalam *di bawah meja*, *bawah* ialah<br>*di bawah meja* — *bawah* คือ
-   ก. *kata sendi nama* ข. *kata arah* ค. *kata nama* ง. *kata adjektif*
+   ก. *kata sendi nama* ข. *kata adjektif* ค. *kata nama* ง. *kata arah*
 4. Ayat manakah yang predikatnya frasa sendi nama?<br>ประโยคใดมีวลีบุพบทเป็นภาคแสดง
-   ก. *Ayah membaca di beranda.* ข. *Hadiah itu untuk ibu.* ค. *Kami makan di kantin.* ง. *Dia berlari ke padang.*
+   ก. *Hadiah itu untuk ibu.* ข. *Ayah membaca di beranda.* ค. *Kami makan di kantin.* ง. *Dia berlari ke padang.*
 5. Manakah yang betul?<br>ข้อใดถูก
    ก. *antara saya dan dia* ข. *antara saya dengan dia* ค. *di antara saya dan dia* ง. *antara saya serta dia*
+6. *Dia takut ___ ular.* (bahasa tulisan)<br>(ภาษาเขียน)
+   ก. *kepada* ข. *akan* ค. *dengan* ง. *pada*
+7. Manakah kata adjektif warna dengan penerang khusus?<br>ข้อใดเป็นคุณศัพท์บอกสีที่มีคำขยายเฉพาะ
+   ก. *hitam legam* ข. *sangat hitam* ค. *hitam sekali* ง. *agak hitam*
+8. *Universiti di mana saya belajar…* sepatutnya ditulis<br>*Universiti di mana saya belajar…* ควรเขียนเป็น
+   ก. *Universiti yang mana saya belajar…* ข. *Universiti tempat saya belajar…* ค. *Universiti di mana-mana saya belajar…* ง. *Universiti di sana saya belajar…*
+9. Dalam *Kami belajar di perpustakaan.*, frasa sendi nama berfungsi sebagai<br>ใน *Kami belajar di perpustakaan.* วลีบุพบททำหน้าที่
+   ก. Predikat<br>ภาคแสดง ข. Subjek<br>ประธาน ค. Keterangan<br>ส่วนขยาย ง. Objek<br>กรรม
+10. *Sikapnya ___ kerja sangat positif.*
+   ก. *terhadap* ข. *tentang* ค. *daripada* ง. *ke*
 
-**เฉลย** 1 ข · 2 ข · 3 ข · 4 ข · 5 ข
+**เฉลย** 1 ง · 2 ค · 3 ง · 4 ก · 5 ข · 6 ข · 7 ก · 8 ข · 9 ค · 10 ก
 
 **Penjelasan · คำอธิบาย**
 
@@ -136,14 +146,19 @@ Pada akhir bab ini, pelajar dapat:
 - **3** *Bawah* ialah kata arah yang hadir antara kata sendi nama *di* dengan frasa nama *meja*.<br>*bawah* เป็นคำบอกทิศที่อยู่ระหว่างคำบุพบท *di* กับวลีนาม *meja*
 - **4** *Untuk ibu* menjadi predikat kepada *Hadiah itu* (pola FN + FSN). Dalam ayat lain, frasa sendi nama hanya keterangan kepada kata kerja.<br>*untuk ibu* เป็นภาคแสดงของ *Hadiah itu* (แบบ FN + FSN) ส่วนประโยคอื่นวลีบุพบทเป็นเพียงส่วนขยายของกริยา
 - **5** *Antara* berpasangan dengan *dengan*, bukan *dan* atau *serta*; *di* sebelum *antara* tidak diperlukan.<br>*antara* ใช้คู่กับ *dengan* ไม่ใช่ *dan* หรือ *serta* และไม่ต้องมี *di* หน้า *antara*
+- **6** Dalam bahasa tulisan baku, *takut* diikuti *akan* sebelum objek perasaannya.<br>ในภาษาเขียนมาตรฐาน *takut* ตามด้วย *akan* หน้าสิ่งที่กลัว
+- **7** *Legam* hanya hadir bersama *hitam*; pilihan lain menggunakan kata penguat umum.<br>*legam* ใช้กับ *hitam* เท่านั้น ส่วนตัวเลือกอื่นใช้คำเน้นทั่วไป
+- **8** *Di mana* ialah kata tanya; untuk menerangkan tempat, gunakan *tempat*.<br>*di mana* เป็นคำถาม ถ้าจะขยายสถานที่ให้ใช้ *tempat*
+- **9** *Di perpustakaan* menerangkan tempat perbuatan *belajar* dan boleh digugurkan, maka keterangan.<br>*di perpustakaan* บอกสถานที่ของการกระทำ *belajar* และตัดได้ จึงเป็นส่วนขยาย
+- **10** *Terhadap* digunakan untuk sikap atau pendirian; *tentang* bermaksud berkenaan dengan.<br>*terhadap* ใช้กับทัศนคติหรือจุดยืน ส่วน *tentang* หมายถึงเกี่ยวกับ
 
 ### B. Soalan Subjektif<br>ข. อัตนัย
 
-1. Huraikan empat fungsi frasa sendi nama dengan contoh baharu yang tidak sama dengan contoh dalam dokumen ini.
+1. Huraikan empat fungsi frasa sendi nama dengan contoh baharu yang tidak sama dengan contoh dalam dokumen ini. (แนวคำตอบ: predikat: *Buku itu untuk adik.* · keterangan: *Kami berbincang di bilik tutorial.* · pelengkap: *Dia tinggal di asrama.* · penerang frasa nama: *pensyarah dari Malaysia*)
    อธิบายหน้าที่ของวลีบุพบท 4 หน้าที่ พร้อมตัวอย่างใหม่ที่ไม่ซ้ำกับเอกสาร
-2. Bina lima ayat yang mengandungi frasa adjektif + keterangan (contohnya *takut akan*, *bangga dengan*).
+2. Bina lima ayat yang mengandungi frasa adjektif + keterangan (contohnya *takut akan*, *bangga dengan*). (แนวคำตอบ: *Dia takut akan gelap.* · *Ibu bangga dengan kejayaan kakak.* · *Abang mahir dalam bahasa Arab.* · *Saya rindu akan keluarga.* · *Adik sayang kepada nenek.*)
    แต่งประโยคที่มีวลีคุณศัพท์ + ส่วนขยาย 5 ประโยค (เช่น *takut akan*, *bangga dengan*)
-3. Jelaskan mengapa *di mana* tidak sepatutnya digunakan sebagai penghubung relatif dan cadangkan tiga cara pembetulan.
+3. Jelaskan mengapa *di mana* tidak sepatutnya digunakan sebagai penghubung relatif dan cadangkan tiga cara pembetulan. (แนวคำตอบ: *Di mana* ialah kata tanya tempat dan penggunaannya sebagai penghubung relatif ialah pengaruh *where*. Pembetulan: guna *tempat* — *kampung tempat saya lahir* · guna *yang* — *universiti yang saya pilih* · pecahkan ayat — *Saya belajar di universiti itu.*)
    อธิบายว่าทำไม *di mana* จึงไม่ควรใช้เป็นคำเชื่อมสัมพันธ์ และเสนอวิธีแก้ 3 วิธี
 
 ### C. Soalan Pemikiran Kritis<br>ค. โจทย์คิดวิเคราะห์

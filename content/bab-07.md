@@ -133,7 +133,7 @@ Makna yang terhasil: jamak (*buku-buku*) · pelbagai (*buah-buahan*) · menyerup
 ### A. Soalan Objektif<br>ก. ปรนัย
 
 1. *Petani itu ___ sawahnya dengan padi.*
-   ก. *menanamkan* ข. *menanami* ค. *ditanam* ง. *bertanam*
+   ก. *menanami* ข. *menanamkan* ค. *ditanam* ง. *bertanam*
 2. Manakah *kata ganda berentak*?<br>ข้อใดเป็น *kata ganda berentak*
    ก. *buku-buku* ข. *lelaki* ค. *lauk-pauk* ง. *berlari-lari*
 3. Manakah ejaan yang betul?<br>ข้อใดสะกดถูกต้อง
@@ -142,8 +142,18 @@ Makna yang terhasil: jamak (*buku-buku*) · pelbagai (*buah-buahan*) · menyerup
    ก. *singkatan* ข. *akronim* ค. *kata majmuk* ง. *kata ganda*
 5. *Telunjuk* terbentuk melalui penambahan<br>*telunjuk* เกิดจากการเติม
    ก. *awalan* ข. *akhiran* ค. *apitan* ง. *sisipan*
+6. *Ayah ___ pokok pisang di kebun.*
+   ก. *menanami* ข. *menanamkan* ค. *ditanami* ง. *bertanami*
+7. Manakah yang betul?<br>ข้อใดถูก
+   ก. *semua pelajar-pelajar* ข. *banyak buku-buku* ค. *para peserta* ง. *beberapa murid-murid*
+8. Ejaan yang betul bagi *garis bawah* + *meN-…-i* ialah<br>การสะกด *garis bawah* + *meN-…-i* ที่ถูกคือ
+   ก. *menggaris bawahi* ข. *menggarisbawahi* ค. *menggaris-bawahi* ง. *meng-garis bawahi*
+9. *Kemerah-merahan* membawa makna<br>*kemerah-merahan* มีความหมายว่า
+   ก. Sangat merah<br>แดงมาก ข. Tidak merah<br>ไม่แดง ค. Paling merah<br>แดงที่สุด ง. Agak merah<br>ค่อนข้างแดง
+10. *DBP* ialah<br>*DBP* เป็น
+   ก. *singkatan* ข. *akronim* ค. *kata majmuk* ง. *kata ganda*
 
-**เฉลย** 1 ข · 2 ค · 3 ค · 4 ข · 5 ง
+**เฉลย** 1 ก · 2 ค · 3 ค · 4 ข · 5 ง · 6 ข · 7 ค · 8 ข · 9 ง · 10 ก
 
 **Penjelasan · คำอธิบาย**
 
@@ -152,14 +162,19 @@ Makna yang terhasil: jamak (*buku-buku*) · pelbagai (*buah-buahan*) · menyerup
 - **3** *Tandatangan* ialah kata majmuk mantap yang ditulis serangkai. Ejaan betul bagi pilihan lain: *setiausaha*, *pengambilalihan*, *warganegara*.<br>*tandatangan* เป็นคำประสมที่เขียนติดกัน ตัวเลือกอื่นต้องสะกดเป็น *setiausaha*, *pengambilalihan*, *warganegara*
 - **4** *Pawagam* (panggung wayang gambar) dibaca sebagai satu kata, maka akronim; singkatan dibaca huruf demi huruf.<br>*pawagam* (panggung wayang gambar) อ่านเป็นคำเดียว จึงเป็นคำย่ออ่านเป็นคำ ส่วนอักษรย่ออ่านทีละตัว
 - **5** *Telunjuk* = *tunjuk* + sisipan *-el-* yang diselitkan selepas konsonan pertama.<br>*telunjuk* = *tunjuk* + อาคม *-el-* ที่แทรกหลังพยัญชนะตัวแรก
+- **6** Objeknya benda yang ditanam (*pokok pisang*), maka *-kan*; *-i* digunakan jika objeknya tempat (*menanami kebun*).<br>กรรมเป็นสิ่งที่ถูกปลูก (*pokok pisang*) จึงใช้ *-kan* ส่วน *-i* ใช้เมื่อกรรมเป็นสถานที่ (*menanami kebun*)
+- **7** Apabila sudah ada penanda jamak (*semua, banyak, beberapa, para*), kata nama tidak digandakan lagi.<br>เมื่อมีคำบอกพหูพจน์ (*semua, banyak, beberapa, para*) แล้ว ไม่ต้องซ้ำคำนามอีก
+- **8** Kata majmuk yang menerima apitan ditulis serangkai.<br>คำประสมที่เติมปัจจัยคร่อมเขียนติดกัน
+- **9** Apitan *ke-…-an* dengan kata adjektif yang digandakan membawa makna agak atau kurang sedikit.<br>ปัจจัยคร่อม *ke-…-an* กับคุณศัพท์ที่ซ้ำคำให้ความหมายว่าค่อนข้าง
+- **10** *DBP* dibaca huruf demi huruf, maka singkatan; akronim dibaca sebagai satu kata (*pawagam*).<br>*DBP* อ่านทีละตัวอักษร จึงเป็นอักษรย่อ ส่วนคำย่ออ่านเป็นคำ (*pawagam*) อ่านเป็นคำเดียว
 
 ### B. Soalan Subjektif<br>ข. อัตนัย
 
-1. Huraikan perbezaan antara *-kan* dengan *-i* melalui pasangan ayat *melukiskan/melukisi* dan *menaikkan/menaiki*.
+1. Huraikan perbezaan antara *-kan* dengan *-i* melalui pasangan ayat *melukiskan/melukisi* dan *menaikkan/menaiki*. (แนวคำตอบ: *melukiskan* — objeknya benda yang dilukis: *melukiskan pemandangan* · *melukisi* — objeknya tempat: *melukisi dinding* · *menaikkan* — menyebabkan naik: *menaikkan bendera* · *menaiki* — lokatif: *menaiki bas*)
    อธิบายความแตกต่างระหว่าง *-kan* กับ *-i* ด้วยคู่ประโยค *melukiskan/melukisi*, *menaikkan/menaiki*
-2. Berikan contoh kata ganda yang membawa lima makna (jamak, pelbagai, menyerupai, berbalas-balas, penegasan) beserta ayat.
+2. Berikan contoh kata ganda yang membawa lima makna (jamak, pelbagai, menyerupai, berbalas-balas, penegasan) beserta ayat. (แนวคำตอบ: jamak *buku-buku* · pelbagai *buah-buahan* · menyerupai *kuda-kuda* · berbalas-balas *pukul-memukul* · penegasan *cantik-cantik*)
    ยกตัวอย่างคำซ้ำที่แสดงความหมาย 5 แบบ (พหูพจน์ หลากหลาย คล้าย ซึ่งกันและกัน เน้น) พร้อมประโยค
-3. Imbuhkan kata majmuk *kerjasama, ambil alih, garis bawah, tanggungjawab* sehingga mendapat tiga bentuk bagi setiap satu, dan eja dengan betul.
+3. Imbuhkan kata majmuk *kerjasama, ambil alih, garis bawah, tanggungjawab* sehingga mendapat tiga bentuk bagi setiap satu, dan eja dengan betul. (แนวคำตอบ: *ambil alih*: *diambil alih, mengambil alih, pengambilalihan* · *garis bawah*: *garis bawahi, menggarisbawahi, digarisbawahi* · *kerjasama* dan *tanggungjawab* sentiasa serangkai: *bekerjasama, kerjasamanya, bertanggungjawab, dipertanggungjawabkan*)
    เติมปัจจัยกับคำประสม *kerjasama, ambil alih, garis bawah, tanggungjawab* ให้ได้ 3 รูปต่อคำ และสะกดให้ถูก
 
 ### C. Soalan Pemikiran Kritis<br>ค. โจทย์คิดวิเคราะห์

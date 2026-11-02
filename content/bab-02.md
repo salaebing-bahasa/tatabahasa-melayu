@@ -125,11 +125,21 @@ Dia membuka *Kamus Dewan* pada huruf M untuk mencari *memperkenalkan* dan pada h
 3. *Kapal terbang* ialah bentuk kata yang mana?<br>*kapal terbang* เป็นรูปคำแบบใด
    ก. *kata tunggal* ข. *kata terbitan* ค. *kata majmuk* ง. *kata ganda*
 4. Kata dasar bagi *menyapu* ialah<br>คำฐานของ *menyapu* คือ
-   ก. *nyapu* ข. *sapu* ค. *apu* ง. *yapu*
+   ก. *nyapu* ข. *yapu* ค. *apu* ง. *sapu*
 5. Manakah *kata ganda separa* (penggandaan sebahagian)?<br>ข้อใดเป็น *kata ganda separa* (ซ้ำบางส่วน)
-   ก. *buku-buku* ข. *lelaki* ค. *sayur-mayur* ง. *kanak-kanak*
+   ก. *buku-buku* ข. *kanak-kanak* ค. *sayur-mayur* ง. *lelaki*
+6. Manakah *kata terbitan*?<br>ข้อใดเป็น *kata terbitan*
+   ก. *rumah* ข. *kecantikan* ค. *air mata* ง. *buku-buku*
+7. Kata *dibacakannya* terdiri daripada berapa morfem?<br>*dibacakannya* มีกี่หน่วยคำ
+   ก. 2 ข. 3 ค. 4 ง. 5
+8. Pola suku kata bagi *teks* ialah<br>รูปแบบพยางค์ของ *teks* คือ
+   ก. KVK ข. KVKK ค. KKVK ง. VKK
+9. Manakah yang semuanya *morfem bebas*?<br>ข้อใดเป็น *morfem bebas* ทั้งหมด
+   ก. *meja, cantik, dan* ข. *meja, -lah, dan* ค. *cantik, ter-, lari* ง. *-an, buku, pergi*
+10. Untuk mencari *kebersihan* dalam *Kamus Dewan*, pengguna perlu melihat entri<br>จะค้น *kebersihan* ใน *Kamus Dewan* ต้องดูที่คำตั้ง
+   ก. *kebersihan* ข. *bersih* ค. *ber-* ง. *sihat*
 
-**เฉลย** 1 ก · 2 ข · 3 ค · 4 ข · 5 ข
+**เฉลย** 1 ก · 2 ข · 3 ค · 4 ง · 5 ง · 6 ข · 7 ค · 8 ข · 9 ก · 10 ข
 
 **Penjelasan · คำอธิบาย**
 
@@ -138,14 +148,19 @@ Dia membuka *Kamus Dewan* pada huruf M untuk mencari *memperkenalkan* dan pada h
 - **3** *Kapal terbang* terdiri daripada dua kata dasar yang membawa satu makna (pesawat), maka ia kata majmuk.<br>*kapal terbang* ประกอบด้วยคำฐาน 2 คำที่รวมเป็นความหมายเดียว (เครื่องบิน) จึงเป็นคำประสม
 - **4** Bunyi *s* pada *sapu* luluh apabila menerima *meN-* yang menjadi *meny-*; oleh itu kata dasarnya *sapu*.<br>เสียง *s* ของ *sapu* หลอมหายไปเมื่อเติม *meN-* ซึ่งกลายเป็น *meny-* คำฐานจึงเป็น *sapu*
 - **5** *Lelaki* terbentuk daripada penggandaan suku kata pertama (*laki* → *lelaki*); *buku-buku* dan *kanak-kanak* ialah ganda penuh, *sayur-mayur* ialah ganda berentak.<br>*lelaki* เกิดจากการซ้ำพยางค์แรก (*laki* → *lelaki*) ส่วน *buku-buku*, *kanak-kanak* เป็นการซ้ำทั้งคำ และ *sayur-mayur* เป็นการซ้ำแบบสัมผัส
+- **6** *Kecantikan* = *ke-…-an* + *cantik*. *Rumah* kata tunggal, *air mata* kata majmuk dan *buku-buku* kata ganda.<br>*kecantikan* = *ke-…-an* + *cantik* ส่วน *rumah* เป็นคำเดี่ยว *air mata* เป็นคำประสม และ *buku-buku* เป็นคำซ้ำ
+- **7** *di-* + *baca* + *-kan* + *-nya* = 4 morfem.<br>*di-* + *baca* + *-kan* + *-nya* = 4 หน่วยคำ
+- **8** *t-e-k-s* = K + V + K + K. Pola KVKK hadir dalam kata pinjaman.<br>*t-e-k-s* = K + V + K + K รูปแบบ KVKK พบในคำยืม
+- **9** *Meja*, *cantik* dan *dan* boleh hadir bersendirian; kata tugas seperti *dan* juga morfem bebas. *-lah*, *ter-* dan *-an* ialah morfem terikat.<br>*meja*, *cantik*, *dan* ปรากฏเดี่ยว ๆ ได้ คำไวยากรณ์อย่าง *dan* ก็เป็นหน่วยคำอิสระ ส่วน *-lah*, *ter-*, *-an* เป็นหน่วยคำไม่อิสระ
+- **10** Kamus menyusun kata terbitan di bawah kata dasar; kata dasar *kebersihan* ialah *bersih*.<br>พจนานุกรมเรียงคำแปลงไว้ใต้คำฐาน คำฐานของ *kebersihan* คือ *bersih*
 
 ### B. Soalan Subjektif<br>ข. อัตนัย
 
-1. Huraikan perbezaan antara *morfem* dengan *kata*, beserta contoh kata yang mengandungi satu morfem dan kata yang mengandungi tiga morfem.
+1. Huraikan perbezaan antara *morfem* dengan *kata*, beserta contoh kata yang mengandungi satu morfem dan kata yang mengandungi tiga morfem. (แนวคำตอบ: Morfem ialah unit terkecil yang bermakna atau berfungsi; kata ialah unit terkecil yang boleh berdiri bebas. Satu morfem: *rumah* · tiga morfem: *dibacakan* = *di-* + *baca* + *-kan*.)
    อธิบายความแตกต่างระหว่าง *morfem* กับ *kata* พร้อมยกตัวอย่างคำที่มีหนึ่งหน่วยคำและคำที่มีสามหน่วยคำ
-2. Cerakinkan morfem bagi kata-kata berikut: *dipersembahkan, kesejahteraan, bacakanlah, kemerdekaannya*.
+2. Cerakinkan morfem bagi kata-kata berikut: *dipersembahkan, kesejahteraan, bacakanlah, kemerdekaannya*. (แนวคำตอบ: *dipersembahkan*: *di-* + *per-* + *sembah* + *-kan* → 4 morfem · *kesejahteraan*: *ke-…-an* + *sejahtera* → 2 · *bacakanlah*: *baca* + *-kan* + *-lah* → 3 · *kemerdekaannya*: *ke-…-an* + *merdeka* + *-nya* → 3)
    แยกหน่วยคำของคำต่อไปนี้: *dipersembahkan, kesejahteraan, bacakanlah, kemerdekaannya*
-3. Huraikan konsep *alomorf* dengan contoh daripada imbuhan *peN-*.
+3. Huraikan konsep *alomorf* dengan contoh daripada imbuhan *peN-*. (แนวคำตอบ: Alomorf ialah bentuk berlainan bagi morfem yang sama mengikut bunyi awal kata dasar. *peN-*: *pe-* *pelawat* · *pem-* *pembaca, pemukul* · *pen-* *pencari, penulis* · *peng-* *pengambil, pengira* · *peny-* *penyapu* · *penge-* *pengecat*)
    อธิบายแนวคิด *alomorf* ด้วยตัวอย่างจากปัจจัย *peN-*
 
 ### C. Soalan Pemikiran Kritis<br>ค. โจทย์คิดวิเคราะห์

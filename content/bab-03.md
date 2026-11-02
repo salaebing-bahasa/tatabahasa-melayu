@@ -134,7 +134,7 @@ Kata nama dan frasa nama berfungsi sebagai **subjek** (*subjek*), **objek** (*ob
 ### A. Soalan Objektif<br>ก. ปรนัย
 
 1. Manakah *kata nama abstrak*?<br>ข้อใดเป็น *kata nama abstrak*
-   ก. *batu* ข. *kejujuran* ค. *sungai* ง. *Yala*
+   ก. *kejujuran* ข. *batu* ค. *sungai* ง. *Yala*
 2. Kata ganti nama yang digunakan untuk orang yang dihormati ialah<br>สรรพนามที่ใช้กับบุคคลที่ได้รับความเคารพคือ
    ก. *dia* ข. *ia* ค. *beliau* ง. *mereka*
 3. "___ (termasuk pendengar) akan pergi bersama-sama." Kata ganti nama yang sesuai ialah<br>"เรา (รวมผู้ฟัง) จะไปด้วยกัน" ควรใช้
@@ -143,8 +143,18 @@ Kata nama dan frasa nama berfungsi sebagai **subjek** (*subjek*), **objek** (*ob
    ก. *peN-* ข. *-an* ค. *peN-…-an* ง. *per-…-an*
 5. Ayat nafi yang berpredikat kata nama manakah yang betul?<br>ประโยคปฏิเสธที่มีภาคแสดงเป็นคำนามข้อใดถูก
    ก. *Dia tidak guru.* ข. *Dia bukan guru.* ค. *Dia jangan guru.* ง. *Dia belum guru.*
+6. Ujian manakah yang membuktikan bahawa *guru* ialah kata nama?<br>การทดสอบใดพิสูจน์ว่า *guru* เป็นคำนาม
+   ก. *sangat guru* ข. *seorang guru* ค. *tidak guru* ง. *sudah guru*
+7. Manakah *kata nama khas*?<br>ข้อใดเป็น *kata nama khas*
+   ก. *masjid* ข. *sungai* ค. *universiti* ง. *Masjid Pusat Pattani*
+8. Kata ganti nama yang digunakan oleh rakyat untuk merujuk diri sendiri apabila bercakap dengan raja ialah<br>สรรพนามที่ประชาชนใช้แทนตนเมื่อพูดกับกษัตริย์คือ
+   ก. *patik* ข. *beta* ค. *baginda* ง. *tuanku*
+9. Dalam *Petani itu menanam padi.*, *padi* berfungsi sebagai<br>ใน *Petani itu menanam padi.* — *padi* ทำหน้าที่
+   ก. Subjek<br>ประธาน ข. Predikat<br>ภาคแสดง ค. Objek<br>กรรม ง. Keterangan<br>ส่วนขยาย
+10. *Pemandu* membawa makna<br>*pemandu* มีความหมายว่า
+   ก. Proses memandu<br>กระบวนการขับ ข. Tempat memandu<br>สถานที่ขับ ค. Orang yang memandu<br>ผู้ขับ ง. Hasil memandu<br>ผลของการขับ
 
-**เฉลย** 1 ข · 2 ค · 3 ข · 4 ค · 5 ข
+**เฉลย** 1 ก · 2 ค · 3 ข · 4 ค · 5 ข · 6 ข · 7 ง · 8 ก · 9 ค · 10 ค
 
 **Penjelasan · คำอธิบาย**
 
@@ -153,14 +163,19 @@ Kata nama dan frasa nama berfungsi sebagai **subjek** (*subjek*), **objek** (*ob
 - **3** *Kita* merangkumi pendengar, manakala *kami* tidak; *beta* hanya digunakan oleh raja.<br>*kita* รวมผู้ฟัง ส่วน *kami* ไม่รวม และ *beta* ใช้เฉพาะกษัตริย์
 - **4** *pengajaran* = *peN-…-an* + *ajar* dan membawa makna proses; *peN-* menghasilkan *pengajar* dan *-an* menghasilkan *ajaran*.<br>*pengajaran* = *peN-…-an* + *ajar* มีความหมายบอกกระบวนการ ส่วน *peN-* ให้ *pengajar* และ *-an* ให้ *ajaran*
 - **5** Predikat frasa nama dinafikan dengan *bukan*; *tidak* digunakan untuk kata kerja dan kata adjektif.<br>ภาคแสดงที่เป็นวลีนามปฏิเสธด้วย *bukan* ส่วน *tidak* ใช้กับคำกริยาและคำคุณศัพท์
+- **6** Kata nama boleh didahului penjodoh bilangan (*seorang guru*). *Sangat*, *tidak* dan *sudah* hadir di hadapan kata adjektif atau kata kerja.<br>คำนามมีลักษณนามนำหน้าได้ (*seorang guru*) ส่วน *sangat*, *tidak*, *sudah* ใช้หน้าคุณศัพท์หรือกริยา
+- **7** *Masjid Pusat Pattani* ialah nama khusus dan ditulis dengan huruf besar; pilihan lain kata nama am.<br>*Masjid Pusat Pattani* เป็นชื่อเฉพาะและขึ้นต้นด้วยอักษรตัวใหญ่ ส่วนตัวเลือกอื่นเป็นนามทั่วไป
+- **8** *Patik* digunakan oleh rakyat; *beta* digunakan oleh raja, *baginda* untuk raja sebagai diri ketiga dan *tuanku* untuk menyapa raja.<br>*patik* ประชาชนใช้แทนตน *beta* กษัตริย์ใช้แทนพระองค์ *baginda* ใช้กล่าวถึงกษัตริย์ และ *tuanku* ใช้เรียกกษัตริย์
+- **9** *Padi* ialah kata nama yang dikenai perbuatan *menanam*, maka objek.<br>*padi* เป็นนามที่ถูกกระทำโดย *menanam* จึงเป็นกรรม
+- **10** Awalan *peN-* membentuk kata nama pelaku; proses dibentuk dengan *peN-…-an* (*pemanduan*).<br>อุปสรรค *peN-* สร้างนามบอกผู้กระทำ ส่วนกระบวนการใช้ *peN-…-an* (*pemanduan*)
 
 ### B. Soalan Subjektif<br>ข. อัตนัย
 
-1. Kemukakan tiga ujian untuk membuktikan bahawa sesuatu perkataan ialah kata nama, beserta contoh.
+1. Kemukakan tiga ujian untuk membuktikan bahawa sesuatu perkataan ialah kata nama, beserta contoh. (แนวคำตอบ: 1. didahului penjodoh bilangan: *seorang guru* · 2. diikuti *ini/itu*: *buku itu* · 3. hadir selepas kata sendi nama: *ke pasar* · 4. dinafikan dengan *bukan*: *bukan guru*)
    เสนอวิธีทดสอบ 3 วิธีที่ใช้พิสูจน์ว่าคำหนึ่งเป็นคำนาม พร้อมตัวอย่าง
-2. Bentuk kata nama terbitan daripada kata dasar *ajar, tulis, bersih, kampung*, dua bentuk bagi setiap kata, dan jelaskan perbezaan maknanya.
+2. Bentuk kata nama terbitan daripada kata dasar *ajar, tulis, bersih, kampung*, dua bentuk bagi setiap kata, dan jelaskan perbezaan maknanya. (แนวคำตอบ: *ajar*: *pengajar* pelaku, *pengajaran* proses · *tulis*: *penulis* pelaku, *tulisan* hasil · *bersih*: *pembersih* alat atau pelaku, *kebersihan* keadaan · *kampung*: *perkampungan* tempat, *kampungan* sifat)
    สร้างคำนามแปลงจากคำฐาน *ajar, tulis, bersih, kampung* ให้ได้คำละ 2 รูป และอธิบายความหมายที่ต่างกัน
-3. Bandingkan *kami* dengan *kita*, dan *dia* dengan *beliau*, berdasarkan situasi penggunaan sebenar.
+3. Bandingkan *kami* dengan *kita*, dan *dia* dengan *beliau*, berdasarkan situasi penggunaan sebenar. (แนวคำตอบ: *Kami* tidak termasuk pendengar: pelajar berkata kepada pensyarah *Kami dari Thailand*. *Kita* termasuk pendengar: *Kita mulakan kelas sekarang*. *Dia* umum; *beliau* untuk orang yang dihormati seperti dekan, pensyarah dan orang tua.)
    เปรียบเทียบ *kami* กับ *kita* และ *dia* กับ *beliau* โดยยกสถานการณ์ใช้จริง
 
 ### C. Soalan Pemikiran Kritis<br>ค. โจทย์คิดวิเคราะห์

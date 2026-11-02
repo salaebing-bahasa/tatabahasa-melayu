@@ -123,7 +123,7 @@ Pada akhir bab ini, pelajar dapat:
 ### A. Soalan Objektif<br>ก. ปรนัย
 
 1. Ayat manakah yang mengandungi kata kerja tak transitif berpelengkap?<br>ประโยคใดมีคำกริยาอกรรมกริยาแบบมีส่วนเติมเต็ม
-   ก. *Adik tidur.* ข. *Mereka tinggal di Yala.* ค. *Ibu memasak nasi.* ง. *Kakak menangis.*
+   ก. *Mereka tinggal di Yala.* ข. *Adik tidur.* ค. *Ibu memasak nasi.* ง. *Kakak menangis.*
 2. Dalam ayat *Ayah membelikan adik sebuah basikal.*, objek tepat ialah<br>ใน *Ayah membelikan adik sebuah basikal.* กรรมตรงคือ
    ก. *Ayah* ข. *adik* ค. *sebuah basikal* ง. *membelikan*
 3. Manakah yang betul?<br>ข้อใดถูกต้อง
@@ -132,8 +132,18 @@ Pada akhir bab ini, pelajar dapat:
    ก. *perasaan* ข. *pancaindera* ค. *sifatan* ง. *cara*
 5. *Membaiki* ialah kata kerja terbitan daripada kata dasar golongan apa?<br>*membaiki* เป็นกริยาแปลงจากคำฐานชนิดใด
    ก. Kata nama<br>คำนาม ข. Kata kerja<br>คำกริยา ค. Kata adjektif<br>คำคุณศัพท์ ง. Kata sendi nama<br>คำบุพบท
+6. Ayat manakah yang mengandungi kata kerja transitif?<br>ประโยคใดมีสกรรมกริยา
+   ก. *Adik menangis.* ข. *Kakak menjadi guru.* ค. *Ayah membaca akhbar.* ง. *Mereka tinggal di Yala.*
+7. Dalam *Kakak menghadiahi adik sebuah beg.*, objek sipi ialah<br>ใน *Kakak menghadiahi adik sebuah beg.* กรรมรองคือ
+   ก. *Kakak* ข. *sebuah beg* ค. *adik* ง. *menghadiahi*
+8. *Dia setinggi abangnya.* menunjukkan darjah<br>*Dia setinggi abangnya.* แสดงระดับ
+   ก. Biasa<br>ปกติ ข. Penghabisan<br>สูงสุด ค. Bandingan<br>เปรียบเทียบ ง. Penguat<br>คำเน้น
+9. *Bulat* tergolong dalam kata adjektif<br>*bulat* เป็นคุณศัพท์ประเภท
+   ก. *bentuk* ข. *ukuran* ค. *warna* ง. *jarak*
+10. Manakah yang betul?<br>ข้อใดถูก
+   ก. *lebih besar dari Songkhla* ข. *paling terbesar* ค. *sangat besar sekali* ง. *lebih besar daripada Songkhla*
 
-**เฉลย** 1 ข · 2 ข · 3 ค · 4 ข · 5 ค
+**เฉลย** 1 ก · 2 ข · 3 ค · 4 ข · 5 ค · 6 ค · 7 ข · 8 ค · 9 ก · 10 ง
 
 **Penjelasan · คำอธิบาย**
 
@@ -142,14 +152,19 @@ Pada akhir bab ini, pelajar dapat:
 - **3** *Tercantik* sudah menyatakan darjah penghabisan. Pilihan lain menindihkan dua penanda: *paling* + *ter-*, atau *sangat/amat* + *sekali*.<br>*tercantik* บอกขั้นสูงสุดอยู่แล้ว ตัวเลือกอื่นใช้เครื่องหมายซ้อนกันสองตัว คือ *paling* + *ter-* หรือ *sangat/amat* + *sekali*
 - **4** *Harum* dikesan melalui deria bau, maka tergolong dalam kata adjektif pancaindera.<br>*harum* รับรู้ด้วยจมูก จึงเป็นคุณศัพท์ประเภทประสาทสัมผัส
 - **5** *Membaiki* = *meN-…-i* + *baik*, dan *baik* ialah kata adjektif.<br>*membaiki* = *meN-…-i* + *baik* และ *baik* เป็นคำคุณศัพท์
+- **6** *Membaca* diikuti objek *akhbar* dan boleh dipasifkan (*Akhbar dibaca oleh ayah*). *Menjadi* dan *tinggal* berpelengkap, *menangis* tanpa pelengkap.<br>*membaca* มีกรรม *akhbar* และแปลงเป็นกรรมวาจกได้ ส่วน *menjadi*, *tinggal* มีส่วนเติมเต็ม และ *menangis* ไม่ต้องมี
+- **7** *Adik* ialah objek tepat yang hadir terus selepas kata kerja; *sebuah beg* ialah objek sipi.<br>*adik* เป็นกรรมตรงที่อยู่ติดกริยา ส่วน *sebuah beg* เป็นกรรมรอง
+- **8** Awalan *se-* menyatakan bandingan setara, iaitu sama tinggi.<br>อุปสรรค *se-* แสดงการเปรียบเทียบแบบเท่ากัน คือสูงเท่ากัน
+- **9** *Bulat*, *bujur* dan *lurus* menyatakan rupa benda, maka kata adjektif bentuk.<br>*bulat*, *bujur*, *lurus* บอกรูปทรง จึงเป็นคุณศัพท์บอกรูปร่าง
+- **10** Perbandingan menggunakan *daripada*; *paling terbesar* dan *sangat besar sekali* menindihkan penanda.<br>การเปรียบเทียบใช้ *daripada* ส่วน *paling terbesar* และ *sangat besar sekali* ใช้เครื่องหมายซ้อนกัน
 
 ### B. Soalan Subjektif<br>ข. อัตนัย
 
-1. Huraikan perbezaan antara *kata kerja tak transitif berpelengkap* dengan *kata kerja transitif*, beserta dua contoh ayat bagi setiap satu.
+1. Huraikan perbezaan antara *kata kerja tak transitif berpelengkap* dengan *kata kerja transitif*, beserta dua contoh ayat bagi setiap satu. (แนวคำตอบ: Tak transitif berpelengkap: tiada objek, pelengkap wajib, tidak boleh dipasifkan — *Dia menjadi guru*, *Mereka tinggal di Yala*. Transitif: ada objek frasa nama dan boleh dipasifkan — *Ibu memasak nasi* → *Nasi dimasak oleh ibu*; *Ali menendang bola* → *Bola ditendang oleh Ali*.)
    อธิบายความแตกต่างระหว่าง *kata kerja tak transitif berpelengkap* กับ *kata kerja transitif* พร้อมตัวอย่างอย่างละ 2 ประโยค
-2. Bina ayat yang menunjukkan tiga darjah perbandingan bagi kata adjektif *rajin* dan *jauh*.
+2. Bina ayat yang menunjukkan tiga darjah perbandingan bagi kata adjektif *rajin* dan *jauh*. (แนวคำตอบ: *rajin*: *Ali rajin* · *Ali lebih rajin daripada Abu* atau *Ali serajin Abu* · *Ali paling rajin* atau *Ali rajin sekali*. *jauh*: *Yala jauh* · *Yala lebih jauh daripada Pattani* · *Narathiwat paling jauh* atau *terjauh*)
    แต่งประโยคแสดงระดับการเปรียบเทียบ 3 ระดับของคุณศัพท์ *rajin* และ *jauh*
-3. Berikan contoh perkataan yang boleh menjadi kata kerja atau kata adjektif bergantung pada konteks, dan jelaskan cara menentukan golongan katanya.
+3. Berikan contoh perkataan yang boleh menjadi kata kerja atau kata adjektif bergantung pada konteks, dan jelaskan cara menentukan golongan katanya. (แนวคำตอบ: Gunakan ujian: jika boleh didahului *sangat/paling*, kata itu adjektif; jika diikuti objek dan boleh dipasifkan, kata kerja. Contoh *menarik*: *Buku itu sangat menarik* — adjektif · *Dia menarik tali* — kata kerja transitif.)
    ยกตัวอย่างคำที่เป็นได้ทั้งกริยาและคุณศัพท์ตามบริบท และอธิบายวิธีตัดสินชนิดคำ
 
 ### C. Soalan Pemikiran Kritis<br>ค. โจทย์คิดวิเคราะห์

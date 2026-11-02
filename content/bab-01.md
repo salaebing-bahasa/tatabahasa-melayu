@@ -130,7 +130,7 @@ Ayat yang baik mestilah **betul** (*gramatis*) dan **sesuai** dengan pendengar s
 ### A. Soalan Objektif<br>ก. ปรนัย
 
 1. Manakah yang termasuk dalam skop morfologi (*morfologi*)?<br>ข้อใดเป็นขอบเขตของวจีวิภาค (*morfologi*)
-   ก. Susunan subjek dan predikat<br>การเรียงประธานกับภาคแสดง ข. Proses pengimbuhan awalan *ber-*<br>กระบวนการเติมอุปสรรค *ber-* ค. Penukaran ayat aktif kepada ayat pasif<br>การแปลงประโยคกรรตุเป็นกรรม ง. Intonasi ayat tanya<br>ทำนองเสียงคำถาม
+   ก. Proses pengimbuhan awalan *ber-*<br>กระบวนการเติมอุปสรรค *ber-* ข. Susunan subjek dan predikat<br>การเรียงประธานกับภาคแสดง ค. Penukaran ayat aktif kepada ayat pasif<br>การแปลงประโยคกรรตุเป็นกรรม ง. Intonasi ayat tanya<br>ทำนองเสียงคำถาม
 2. Unit bahasa manakah yang paling besar?<br>หน่วยภาษาใดใหญ่ที่สุด
    ก. *frasa* ข. *klausa* ค. *morfem* ง. *ayat*
 3. Ayat manakah ialah bahasa baku?<br>ข้อใดเป็นภาษามาตรฐาน
@@ -139,8 +139,18 @@ Ayat yang baik mestilah **betul** (*gramatis*) dan **sesuai** dengan pendengar s
    ก. *Kami tinggal di Pattani.* ข. *Ayah pergi di masjid.* ค. *Dia datang dari Yala.* ง. *Adik ke sekolah.*
 5. Kata *berlari* terdiri daripada berapa morfem?<br>*berlari* ประกอบด้วยหน่วยคำกี่หน่วย
    ก. 1 ข. 2 ค. 3 ง. 4
+6. *Kata ganti nama* yang sesuai dalam surat rasmi kepada dekan ialah<br>สรรพนามที่เหมาะในจดหมายทางการถึงคณบดีคือ
+   ก. *awak* ข. *engkau* ค. *tuan* ง. *kau*
+7. Unit manakah yang mempunyai subjek dan predikat tetapi belum tentu dapat berdiri sebagai ayat?<br>หน่วยใดมีประธานและภาคแสดง แต่ยังไม่แน่ว่ายืนเป็นประโยคได้
+   ก. *frasa* ข. *klausa* ค. *morfem* ง. *kata*
+8. Pendekatan yang mempengaruhi bahagian sintaksis *Tatabahasa Dewan* ialah<br>แนวทางที่มีอิทธิพลต่อภาควากยสัมพันธ์ของ *Tatabahasa Dewan* คือ
+   ก. Pendekatan tradisional<br>แนวดั้งเดิม ข. Pendekatan struktural<br>แนวโครงสร้าง ค. Pendekatan transformasi-generatif<br>แนวไวยากรณ์เพิ่มพูนและปริวรรต ง. Pendekatan komunikatif<br>แนวการสื่อสาร
+9. Bunyi /p/ dan /b/ yang membezakan *pagi* dengan *bagi* ialah contoh<br>เสียง /p/ กับ /b/ ที่ทำให้ *pagi* ต่างจาก *bagi* เป็นตัวอย่างของ
+   ก. *fonem* ข. *morfem* ค. *imbuhan* ง. *suku kata*
+10. Bentuk baku bagi *Awak nak pergi mana?* ialah<br>รูปมาตรฐานของ *Awak nak pergi mana?* คือ
+   ก. *Awak hendak pergi mana?* ข. *Awak nak pergi ke mana?* ค. *Awak hendak pergi ke mana?* ง. *Awak mahu pergi di mana?*
 
-**เฉลย** 1 ข · 2 ง · 3 ค · 4 ข · 5 ข
+**เฉลย** 1 ก · 2 ง · 3 ค · 4 ข · 5 ข · 6 ค · 7 ข · 8 ค · 9 ก · 10 ค
 
 **Penjelasan · คำอธิบาย**
 
@@ -149,14 +159,19 @@ Ayat yang baik mestilah **betul** (*gramatis*) dan **sesuai** dengan pendengar s
 - **3** *Hendak* ialah bentuk baku; *tak*, *dah* dan *nak* ialah bentuk basahan bagi *tidak*, *sudah* dan *hendak*.<br>*hendak* เป็นรูปภาษามาตรฐาน ส่วน *tak*, *dah*, *nak* เป็นภาษาพูดของ *tidak*, *sudah*, *hendak*
 - **4** *Pergi* menunjukkan arah, maka kata sendi nama yang betul ialah *ke*: *Ayah pergi ke masjid.* Ayat *Adik ke sekolah.* gramatis kerana frasa sendi nama boleh menjadi predikat.<br>*pergi* บอกทิศทาง จึงต้องใช้ *ke* ส่วน *Adik ke sekolah.* ถูกไวยากรณ์ เพราะวลีบุพบทเป็นภาคแสดงได้
 - **5** *berlari* = *ber-* + *lari*, iaitu dua morfem: satu morfem terikat dan satu morfem bebas.<br>*berlari* = *ber-* + *lari* คือ 2 หน่วยคำ: หน่วยคำไม่อิสระ 1 และหน่วยคำอิสระ 1
+- **6** Surat rasmi memerlukan kata ganti nama hormat seperti *tuan/puan*; *awak*, *engkau* dan *kau* digunakan dalam situasi mesra.<br>จดหมายทางการต้องใช้สรรพนามแสดงความเคารพ เช่น *tuan/puan* ส่วน *awak*, *engkau*, *kau* ใช้ในบริบทเป็นกันเอง
+- **7** Klausa mempunyai subjek dan predikat; klausa menjadi ayat apabila dapat berdiri sendiri dan disertai intonasi.<br>อนุประโยคมีประธานและภาคแสดง และจะเป็นประโยคเมื่อยืนได้เองและมีทำนองเสียง
+- **8** *Tatabahasa Dewan* menghuraikan ayat kompleks sebagai terbitan daripada ayat dasar melalui transformasi, iaitu konsep pendekatan transformasi-generatif.<br>*Tatabahasa Dewan* อธิบายว่าประโยคซับซ้อนแปลงมาจากประโยคพื้นฐาน ซึ่งเป็นแนวคิดของไวยากรณ์เพิ่มพูนและปริวรรต
+- **9** Kedua-dua bunyi itu membezakan makna kata, maka masing-masing ialah fonem.<br>เสียงทั้งสองทำให้ความหมายของคำต่างกัน จึงเป็นหน่วยเสียง
+- **10** *Nak* ditukar kepada *hendak*, dan kata sendi nama *ke* diperlukan kerana *pergi* menunjukkan arah.<br>เปลี่ยน *nak* เป็น *hendak* และต้องเติม *ke* เพราะ *pergi* บอกทิศทาง
 
 ### B. Soalan Subjektif<br>ข. อัตนัย
 
-1. Huraikan perbezaan antara *morfologi* dengan *sintaksis*, dan berikan satu contoh ayat bahasa Melayu yang dapat dianalisis pada kedua-dua peringkat.
+1. Huraikan perbezaan antara *morfologi* dengan *sintaksis*, dan berikan satu contoh ayat bahasa Melayu yang dapat dianalisis pada kedua-dua peringkat. (แนวคำตอบ: Morfologi mengkaji struktur dalaman kata dan pembentukannya; sintaksis mengkaji susunan kata menjadi frasa, klausa dan ayat. Contoh *Pelajar itu membaca buku.* — morfologi: *membaca* = *meN-* + *baca*; sintaksis: *Pelajar itu* = subjek FN, *membaca buku* = predikat FK.)
    อธิบายความแตกต่างระหว่าง *morfologi* กับ *sintaksis* พร้อมยกตัวอย่างประโยคภาษามลายู 1 ประโยคที่วิเคราะห์ได้ทั้งสองระดับ
-2. Lukiskan rajah hierarki unit bahasa daripada *fonem* hingga *ayat*, beserta contoh anda sendiri bagi setiap peringkat.
+2. Lukiskan rajah hierarki unit bahasa daripada *fonem* hingga *ayat*, beserta contoh anda sendiri bagi setiap peringkat. (แนวคำตอบ: fonem /b/ → morfem *ber-* dan *jalan* → kata *berjalan* → frasa *berjalan kaki* → klausa *adik berjalan kaki* → ayat *Adik berjalan kaki ke sekolah.*)
    เขียนแผนภาพลำดับชั้นหน่วยภาษาจาก *fonem* ถึง *ayat* พร้อมตัวอย่างของตนเองทุกระดับ
-3. Tukarkan lima ayat bahasa basahan yang anda dengar dalam kehidupan seharian kepada bahasa baku, dan jelaskan perubahan yang dibuat.
+3. Tukarkan lima ayat bahasa basahan yang anda dengar dalam kehidupan seharian kepada bahasa baku, dan jelaskan perubahan yang dibuat. (แนวคำตอบ: Contoh: *Saya tak tahu* → *Saya tidak tahu* — kata nafi · *Dia dah balik* → *Dia sudah pulang* — kata bantu aspek · *Nak ke mana?* → *Hendak ke mana?* — kata bantu ragam · *Awak dah makan?* → *Saudara sudah makan?* — kata ganti nama sopan.)
    เปลี่ยนประโยคภาษาพูด 5 ประโยคที่ได้ยินในชีวิตประจำวันให้เป็นภาษามาตรฐาน และอธิบายสิ่งที่เปลี่ยน
 
 ### C. Soalan Pemikiran Kritis<br>ค. โจทย์คิดวิเคราะห์
