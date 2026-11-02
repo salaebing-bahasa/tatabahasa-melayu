@@ -808,8 +808,9 @@
       </div>
 
       <h2 class="h3 clo-h">${B("1. CLO, kaedah dan alat penilaian rasmi", "1. CLO วิธีสอน และเครื่องมือประเมินตาม มคอ.3")} ${tag("rasmi")}</h2>
-      ${table([B("CLO", "CLO"), B("Kaedah pengajaran", "วิธีสอน"), B("Alat pengukuran", "เครื่องมือวัด"), B("Penilaian sumatif", "การประเมินสรุป"), B("Wajaran", "สัดส่วน")],
-        C.clos.map(c => { const r = M.rasmi[c.id]; return [`${cloRingkas(c)}<div class="clo-teks">${B(c.ms, c.text)}</div>`, B(r.ajarMs, r.ajarTh), B(r.alatMs, r.alatTh), B(c.howMs, c.how), `<b>${c.weight}%</b>`]; }))}
+      ${table([B("CLO", "CLO"), B("PLO", "PLO"), B("Kaedah pengajaran", "วิธีสอน"), B("Alat pengukuran", "เครื่องมือวัด"), B("Penilaian sumatif", "การประเมินสรุป"), B("Wajaran", "สัดส่วน")],
+        C.clos.map(c => { const r = M.rasmi[c.id]; return [`${cloRingkas(c)}<div class="clo-teks">${B(c.ms, c.text)}</div>`, `<b>${(M.plo[c.id] || []).join(", ")}</b>`, B(r.ajarMs, r.ajarTh), B(r.alatMs, r.alatTh), B(c.howMs, c.how), `<b>${c.weight}%</b>`]; }))}
+      <p class="clo-ket">${B(`PLO: Jadual 1 dalam lampiran มคอ.3, ${M.ploMs}. Jadual itu hanya mempunyai lajur PLO1, dan keempat-empat CLO dipetakan kepada PLO1.`, `PLO: ตารางที่ 1 ในภาคผนวก มคอ.3 สำหรับ${M.ploTh} ตารางมีเฉพาะคอลัมน์ PLO1 และ CLO ทั้ง 4 ข้อเชื่อมกับ PLO1`)}</p>
 
       <h2 class="h3 clo-h">${B("2. Pemetaan CLO → bab → aktiviti → alat penilaian", "2. ตารางเชื่อมโยง CLO → บทเรียน → กิจกรรม → เครื่องมือประเมิน")}</h2>
       <p class="clo-ket">${B("Lajur bab: senarai pertama mengikut pelan mingguan; “+ laman web” ialah bab yang turut ditanda dengan CLO itu dalam laman web.", "คอลัมน์บทเรียน: รายการแรกตามแผนรายสัปดาห์ ส่วน “+ เว็บไซต์” คือบทที่เว็บไซต์ติดป้าย CLO นั้นเพิ่ม")}</p>
@@ -835,7 +836,8 @@
         <li>${B("CLO3: penilaian sumatif ialah tugasan dan aktiviti amali dengan rubrik (20%), tetapi rubrik CLO3 belum terdapat dalam dokumen yang disemak; penilaian minggu 9–13 terdiri daripada lembaran kerja dan kuiz.", "CLO3: การประเมินสรุปคืองานมอบหมายและกิจกรรมปฏิบัติพร้อมรูบริก (20%) แต่ยังไม่พบรูบริกของ CLO3 ในเอกสารที่ตรวจ การวัดผลสัปดาห์ 9–13 เป็นใบงานและแบบทดสอบย่อย")}</li>
         <li>${B("Tanda CLO dalam laman web lebih luas daripada pelan mingguan bagi Bab 1, 3, 4, 5, 9, 10 dan 11 (lihat ○ dalam matriks). Pensyarah boleh memilih sama ada mengekalkan tanda tambahan ini atau menyelaraskannya dengan pelan mingguan.", "ป้าย CLO บนเว็บไซต์กว้างกว่าแผนรายสัปดาห์ในบทที่ 1, 3, 4, 5, 9, 10 และ 11 (ดู ○ ในเมทริกซ์) ผู้สอนเลือกได้ว่าจะคงป้ายเพิ่มไว้ หรือปรับให้ตรงกับแผนรายสัปดาห์")}</li>
         <li>${B("Markah dalam laman web disimpan dalam pelayar pelajar sahaja dan tidak dihantar kepada pensyarah, jadi ia tidak boleh menjadi bukti pencapaian CLO yang rasmi; gunakannya sebagai penilaian formatif.", "คะแนนบนเว็บไซต์บันทึกในเบราว์เซอร์ของนิสิตเท่านั้นและไม่ได้ส่งถึงอาจารย์ จึงใช้เป็นหลักฐานการบรรลุ CLO ทางการไม่ได้ ใช้เป็นการประเมินระหว่างเรียนเท่านั้น")}</li>
-        <li>${B("Ujian pra dan pasca (minggu 1 dan 15) tidak terdapat dalam laman web. Pemetaan CLO → PLO dalam lampiran มคอ.3 tidak dimasukkan kerana tanda dalam jadual tersebut tidak dapat dibaca dengan pasti daripada fail.", "แบบทดสอบก่อนและหลังเรียน (สัปดาห์ 1 และ 15) ไม่มีบนเว็บไซต์ และไม่ได้ใส่การเชื่อมโยง CLO → PLO ในภาคผนวกของ มคอ.3 เพราะอ่านเครื่องหมายในตารางจากไฟล์ได้ไม่ชัดเจน")}</li>
+        <li>${B("Ujian pra dan pasca (minggu 1 dan 15) tidak terdapat dalam laman web.", "แบบทดสอบก่อนและหลังเรียน (สัปดาห์ 1 และ 15) ไม่มีบนเว็บไซต์")}</li>
+        <li>${B("Semua CLO dipetakan kepada PLO1 sahaja. Jika program mempunyai lebih daripada satu PLO, semak sama ada CLO4 (komunikasi) juga patut dikaitkan dengan PLO lain. Dokumen มคอ.3 ini masih bertanda “ร่าง” (draf).", "CLO ทุกข้อเชื่อมกับ PLO1 เพียงข้อเดียว หากหลักสูตรมี PLO มากกว่าหนึ่งข้อ ควรพิจารณาว่า CLO4 (การสื่อสาร) ควรเชื่อมกับ PLO อื่นด้วยหรือไม่ และ มคอ.3 ฉบับนี้ยังมีตราว่า “ร่าง”")}</li>
       </ol>
       <p class="clo-ket"><a href="#/kursus">← <span lang="ms">Kembali ke Maklumat Kursus</span> · กลับไปหน้าข้อมูลรายวิชา</a></p>
     </div></section>`;

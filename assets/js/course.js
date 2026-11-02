@@ -35,8 +35,11 @@ window.COURSE = {
      pelan  = คัดจาก "แผนการสอนรายสัปดาห์ รายวิชา 0113131" ของผู้สอน
      aktiviti = ข้อเสนอการเชื่อมโยงกิจกรรมบนเว็บไซต์ (ไม่ใช่เอกสารทางการ) */
   mko3: {
-    sumberTh: "มคอ.3 (TSU03) รายวิชา 0113131 ไวยากรณ์ภาษามลายู ภาคเรียนที่ 2/2569 ปรับปรุงวันที่ 23 ตุลาคม 2569",
-    sumberMs: "Dokumen มคอ.3 (TSU03) kursus 0113131 Tatabahasa Melayu, Semester 2/2569, dikemas kini 23 Oktober 2569",
+    sumberTh: "มคอ.3 (TSU03) รายวิชา 0113131 ไวยากรณ์ภาษามลายู ภาคเรียนที่ 2/2569 ปรับปรุงวันที่ 31 ตุลาคม 2569 (เอกสารมีตราว่า “ร่าง”)",
+    sumberMs: "Dokumen มคอ.3 (TSU03) kursus 0113131 Tatabahasa Melayu, Semester 2/2569, dikemas kini 31 Oktober 2569 (bertanda “ร่าง” · draf)",
+    /* ภาคผนวก ตารางที่ 1: CLO → PLO (หลักสูตรภาษามลายู ปรับปรุง พ.ศ. 2566) — ตาราง มคอ.3 มีเฉพาะคอลัมน์ PLO1 */
+    ploTh: "หลักสูตรภาษามลายู (หลักสูตรปรับปรุง พ.ศ. 2566)", ploMs: "Program Bahasa Melayu (kurikulum semakan 2566)",
+    plo: { CLO1: ["PLO1"], CLO2: ["PLO1"], CLO3: ["PLO1"], CLO4: ["PLO1"] },
     pelanTh: "แผนการสอนรายสัปดาห์ รายวิชา 0113131 ไวยากรณ์ภาษามลายู (เอกสารของผู้สอน)",
     pelanMs: "Rancangan pengajaran mingguan kursus 0113131 (dokumen pensyarah)",
     rasmi: {
