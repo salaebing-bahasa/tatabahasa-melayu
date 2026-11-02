@@ -32,9 +32,10 @@ window.COURSE = {
   ],
   grades: [["A","80–100","ดีเยี่ยม","Cemerlang"],["B+","75–79","ดีมาก","Sangat baik"],["B","70–74","ดี","Baik"],["C+","65–69","ค่อนข้างดี","Agak baik"],["C","60–64","พอใช้","Sederhana"],["D+","55–59","อ่อน","Lemah"],["D","50–54","อ่อนมาก","Sangat lemah"],["F","0–49","ไม่ผ่าน","Gagal"]],
 
-  /* บทเรียน: no = เลขบท, file = ไฟล์เนื้อหาใน content/, part = ภาค (morfologi / sintaksis) */
+  /* บทเรียน: no = เลขบท, part = ภาค (morfologi / sintaksis)
+     struktur: 12 = บทที่เขียนตามโครงสร้างใหม่ 12 หัวข้อ (Tajuk Pelajaran … Rujukan) ถ้าไม่ใส่จะเป็นโครงสร้างเดิม 6 หัวข้อ */
   chapters: [
-    { no: 1,  week: 1,  part: "morfologi", ms: "Pengenalan Tatabahasa", th: "บทนำ: ไวยากรณ์ภาษามลายูกับการสื่อสาร", clos: ["CLO1", "CLO4"] },
+    { no: 1,  week: 1,  part: "morfologi", ms: "Pengenalan Tatabahasa", th: "บทนำ: ไวยากรณ์ภาษามลายูกับการสื่อสาร", clos: ["CLO1", "CLO4"], struktur: 12 },
     { no: 2,  week: 2,  part: "morfologi", ms: "Morfem dan Kata", th: "หน่วยคำและคำ", clos: ["CLO1", "CLO2"] },
     { no: 3,  week: 3,  part: "morfologi", ms: "Kata Nama", th: "คำนาม", clos: ["CLO2", "CLO4"] },
     { no: 4,  week: 4,  part: "morfologi", ms: "Kata Kerja dan Kata Adjektif", th: "คำกริยาและคำคุณศัพท์", clos: ["CLO2", "CLO4"] },

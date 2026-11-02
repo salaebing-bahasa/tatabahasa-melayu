@@ -1,10 +1,17 @@
-<!-- Bab 1 · ไฟล์เนื้อหาบทที่ 1 (สองภาษา: มลายูบน ไทยล่าง)
+<!-- Bab 1 · ไฟล์เนื้อหาบทที่ 1 — โครงสร้าง 12 หัวข้อ (ต้นแบบ)
+     1. Tajuk Pelajaran แสดงจากข้อมูลใน assets/js/course.js (ชื่อบท สัปดาห์ CLO) จึงไม่มีหัวข้อ ## ในไฟล์นี้
+     หัวข้อ ## ที่เหลือ 11 หัวข้อ ระบบรู้จักจากคำแรกของหัวข้อ: Hasil · Pengenalan · Konsep · Penerangan · Contoh · Jadual · Kesalahan · Latihan · Rumusan · Kuiz · Rujukan
      วิธีเขียนสองภาษา:
      - ย่อหน้าและข้อในรายการ: บรรทัดแรกภาษามลายู ขึ้นบรรทัดใหม่ (ไม่เว้นบรรทัดว่าง) แล้วเป็นภาษาไทย
      - หัวข้อ (## / ###) และช่องในตาราง: ภาษามลายู<br>ภาษาไทย
-     ห้ามลบหัวข้อระดับ ## (6 ส่วนของบท) และให้คงรูปแบบข้อปรนัย (ก. ข. ค. ง.) กับบรรทัด **เฉลย** ไว้ · คำอธิบายเฉลยอยู่ใต้ **Penjelasan** เป็นรายการ - **เลขข้อ** มลายู<br>ไทย -->
+     แบบฝึกหัดโต้ตอบเขียนเป็นบล็อก ```latihan-isi / latihan-betulkan / latihan-golong / latihan-benar (หนึ่งบรรทัดหนึ่งข้อ แยกช่องด้วย " | ")
+       latihan-isi:      ประโยคที่มี ___ | คำตอบ (หลายคำตอบคั่นด้วย /) | คำอธิบายมลายู | คำอธิบายไทย
+       latihan-betulkan: ประโยคที่มี [คำผิด→คำถูก] | คำอธิบายมลายู | คำอธิบายไทย
+       latihan-golong:   บรรทัด Kategori: ก | ข แล้วตามด้วย  ข้อความ | ชื่อหมวด | คำอธิบายมลายู | คำอธิบายไทย
+       latihan-benar:    ข้อความ | B (ถูก) หรือ S (ผิด) | คำอธิบายมลายู | คำอธิบายไทย
+     ในส่วน Kuiz Penilaian ให้คงรูปแบบข้อปรนัย (ก. ข. ค. ง.) บรรทัด **เฉลย** และรายการ **Penjelasan** ไว้ -->
 
-## 1. Hasil Pembelajaran<br>ผลลัพธ์การเรียนรู้ประจำบท
+## 2. Hasil Pembelajaran<br>ผลลัพธ์การเรียนรู้
 
 Pada akhir bab ini, pelajar dapat:
 เมื่อจบบทนี้ นักศึกษาสามารถ
@@ -18,105 +25,211 @@ Pada akhir bab ini, pelajar dapat:
 4. mengenal pasti kesalahan tatabahasa dalam teks pendek daripada situasi sebenar, dan menentukan sama ada kesalahan itu berlaku pada peringkat kata atau peringkat ayat (CLO4)
    ชี้ข้อผิดไวยากรณ์ในข้อความสั้นจากสถานการณ์จริง และระบุว่าเป็นปัญหาระดับคำหรือระดับประโยคได้ (CLO4)
 
-## 2. Rangka Bab<br>โครงร่างประจำบท
+## 3. Pengenalan<br>บทนำ
 
-1. **1.1 Maksud dan Kepentingan Tatabahasa**
-   **1.1 ความหมายและความสำคัญของไวยากรณ์**
-   - Definisi *tatabahasa*
-     นิยาม *tatabahasa*
-   - Tatabahasa dan kegramatisan (*kegramatisan*)
-     ไวยากรณ์กับความถูกต้อง (*kegramatisan*)
-2. **1.2 Bahasa Melayu dan Bahasa Baku**
-   **1.2 ภาษามลายูและภาษามาตรฐาน**
-   - Kedudukan bahasa Melayu di rantau ini
-     สถานะของภาษามลายูในภูมิภาค
-   - *Bahasa baku*, *bahasa basahan* dan dialek Melayu
-     *bahasa baku* กับ *bahasa basahan* และภาษามลายูถิ่น
-3. **1.3 Hierarki Unit Bahasa** (*hierarki unit bahasa*)
-   **1.3 ลำดับชั้นหน่วยภาษา**
-4. **1.4 Morfologi dan Sintaksis**
-   **1.4 วจีวิภาคและวากยสัมพันธ์**
-5. **1.5 Pendekatan Kajian Tatabahasa Melayu**
-   **1.5 แนวการศึกษาไวยากรณ์มลายู**
-   - Pendekatan tradisional · struktural · transformasi-generatif
-     แนวดั้งเดิม · แนวโครงสร้าง · แนวเพิ่มพูนและปริวรรต
-6. **1.6 Tatabahasa untuk Komunikasi**
-   **1.6 ไวยากรณ์เพื่อการสื่อสาร**
-   - Ketepatan dan kesesuaian (*laras bahasa*)
-     ความถูกต้องกับความเหมาะสม (*laras bahasa*)
+Setiap penutur bahasa Melayu menggunakan tatabahasa walaupun tidak menyedarinya. Apabila kita memilih *ke* dan bukan *di* dalam *pergi ke pasar*, atau menukar *menulis* kepada *ditulis*, kita sedang mematuhi peraturan bahasa. Bab ini memperkenalkan peraturan itu secara sistematik sebagai asas bagi Bab 2 hingga Bab 13.
+ผู้พูดภาษามลายูทุกคนใช้ไวยากรณ์อยู่แล้วแม้ไม่รู้ตัว เมื่อเราเลือกใช้ *ke* ไม่ใช่ *di* ใน *pergi ke pasar* หรือเปลี่ยน *menulis* เป็น *ditulis* ก็คือการทำตามกฎของภาษา บทนี้แนะนำกฎเหล่านั้นอย่างเป็นระบบ เพื่อเป็นพื้นฐานของบทที่ 2 ถึง 13
 
-## 3. Isi Penting<br>เนื้อหาสาระสำคัญ
+Bagi pelajar Thai, tatabahasa Melayu mempunyai persamaan dengan bahasa Thai (contohnya susunan diterangkan–menerangkan) dan perbezaan yang besar (contohnya imbuhan). Oleh itu, bab ini juga menunjukkan di mana pengaruh bahasa Thai sering menyebabkan kesalahan.
+สำหรับผู้เรียนชาวไทย ไวยากรณ์มลายูมีทั้งส่วนที่คล้ายภาษาไทย (เช่น การเรียงคำหลักไว้หน้าคำขยาย) และส่วนที่ต่างกันมาก (เช่น ระบบปัจจัย) บทนี้จึงชี้ด้วยว่าอิทธิพลของภาษาไทยมักทำให้เกิดข้อผิดตรงไหน
+
+**Kandungan bab**
+**เนื้อหาในบท**
+
+1. 1.1 Maksud dan kepentingan tatabahasa
+   1.1 ความหมายและความสำคัญของไวยากรณ์
+2. 1.2 Bahasa Melayu dan bahasa baku
+   1.2 ภาษามลายูและภาษามาตรฐาน
+3. 1.3 Hierarki unit bahasa
+   1.3 ลำดับชั้นหน่วยภาษา
+4. 1.4 Morfologi dan sintaksis
+   1.4 วจีวิภาคและวากยสัมพันธ์
+5. 1.5 Pendekatan kajian tatabahasa Melayu
+   1.5 แนวการศึกษาไวยากรณ์มลายู
+6. 1.6 Tatabahasa untuk komunikasi
+   1.6 ไวยากรณ์เพื่อการสื่อสาร
+
+## 4. Konsep dan Definisi<br>แนวคิดและนิยาม
+
+| Istilah<br>ศัพท์ | Definisi<br>นิยาม |
+|---|---|
+| *tatabahasa* | Peraturan tentang cara kata dibentuk dan cara kata bergabung untuk menghasilkan ayat yang gramatis<br>กฎว่าด้วยวิธีสร้างคำและวิธีรวมคำให้เป็นประโยคที่ถูกไวยากรณ์ |
+| *morfologi* | Bidang yang mengkaji struktur, bentuk dan golongan kata<br>ภาคที่ศึกษาโครงสร้าง รูป และชนิดของคำ |
+| *sintaksis* | Bidang yang mengkaji susunan kata menjadi frasa, klausa dan ayat<br>ภาคที่ศึกษาการเรียงคำเป็นวลี อนุประโยค และประโยค |
+| *fonem* | Unit bunyi terkecil yang dapat membezakan makna<br>หน่วยเสียงเล็กที่สุดที่แยกความหมายได้ |
+| *morfem* | Unit terkecil yang mempunyai makna atau fungsi tatabahasa<br>หน่วยเล็กที่สุดที่มีความหมายหรือหน้าที่ทางไวยากรณ์ |
+| *kata* | Unit terkecil yang dapat berdiri sendiri dan mempunyai makna<br>หน่วยเล็กที่สุดที่ปรากฏตามลำพังได้และมีความหมาย |
+| *frasa* | Kumpulan kata yang mempunyai unsur inti tetapi tiada subjek dan predikat<br>กลุ่มคำที่มีคำหลัก แต่ไม่มีประธานและภาคแสดง |
+| *klausa* | Unit yang mempunyai subjek dan predikat<br>หน่วยที่มีประธานและภาคแสดง |
+| *ayat* | Unit yang dapat berdiri sendiri, terdiri daripada klausa dan intonasi<br>หน่วยที่ยืนได้เอง ประกอบด้วยอนุประโยคและทำนองเสียง |
+| *ayat gramatis* | Ayat yang mematuhi peraturan tatabahasa<br>ประโยคที่ถูกตามกฎไวยากรณ์ |
+| *bahasa baku* | Bahasa yang mematuhi norma tatabahasa, ejaan dan sebutan yang ditetapkan, digunakan dalam situasi rasmi<br>ภาษาที่ถูกตามบรรทัดฐานด้านไวยากรณ์ การสะกด และการออกเสียง ใช้ในสถานการณ์ทางการ |
+| *bahasa basahan* | Bahasa harian yang tidak rasmi<br>ภาษาที่ใช้ในชีวิตประจำวันอย่างไม่เป็นทางการ |
+| *laras bahasa* | Gaya bahasa yang dipilih mengikut situasi, pendengar dan tujuan<br>ลีลาภาษาที่เลือกตามสถานการณ์ ผู้ฟัง และจุดประสงค์ |
+| *tatabahasa preskriptif* | Tatabahasa yang menetapkan bentuk yang betul dan patut digunakan<br>ไวยากรณ์ที่กำหนดว่ารูปใดถูกต้องและควรใช้ |
+| *tatabahasa deskriptif* | Tatabahasa yang menghuraikan bahasa sebagaimana yang sebenarnya digunakan<br>ไวยากรณ์ที่บรรยายภาษาตามที่ผู้พูดใช้จริง |
+
+## 5. Penerangan Tatabahasa<br>คำอธิบายหลักไวยากรณ์
 
 ### 1.1 Maksud dan Kepentingan Tatabahasa<br>ความหมายและความสำคัญของไวยากรณ์
 
-*Tatabahasa* ialah set peraturan yang mengawal pembentukan kata dan penyusunan kata menjadi ayat dalam sesuatu bahasa. *Tatabahasa Dewan* membahagikan tatabahasa bahasa Melayu kepada dua bidang besar, iaitu bidang *morfologi* dan bidang *sintaksis*. Ayat yang mematuhi peraturan disebut *ayat gramatis*, manakala ayat yang menyalahi peraturan disebut *ayat tidak gramatis* (dalam dokumen ini ditandai dengan `*` di hadapan ayat).
-*Tatabahasa* คือ ชุดกฎเกณฑ์ที่กำกับการสร้างคำและการเรียงคำเป็นประโยคในภาษาหนึ่ง ตำรา *Tatabahasa Dewan* แบ่งไวยากรณ์ภาษามลายูเป็นสองภาคใหญ่ คือ ภาค *morfologi* และภาค *sintaksis* ประโยคที่ถูกต้องตามกฎเรียกว่า *ayat gramatis* ส่วนประโยคที่ผิดเรียกว่า *ayat tidak gramatis* (ในเอกสารนี้ใช้เครื่องหมาย `*` นำหน้า)
-
-- *Saya pergi **ke** pasar.* ✓
-- `*`*Saya pergi **di** pasar.* ✗ — *di* menunjukkan tempat, manakala *ke* menunjukkan arah
-  *di* บอกตำแหน่ง ส่วน *ke* บอกทิศทาง
+*Tatabahasa Dewan* membahagikan tatabahasa bahasa Melayu kepada dua bidang besar, iaitu bidang *morfologi* dan bidang *sintaksis*. Ayat yang mematuhi peraturan disebut *ayat gramatis*, manakala ayat yang menyalahi peraturan disebut *ayat tidak gramatis* (dalam dokumen ini ditandai dengan `*` di hadapan ayat).
+ตำรา *Tatabahasa Dewan* แบ่งไวยากรณ์ภาษามลายูเป็นสองภาคใหญ่ คือ ภาค *morfologi* และภาค *sintaksis* ประโยคที่ถูกต้องตามกฎเรียกว่า *ayat gramatis* ส่วนประโยคที่ผิดเรียกว่า *ayat tidak gramatis* (ในเอกสารนี้ใช้เครื่องหมาย `*` นำหน้า)
 
 Pengetahuan tatabahasa membantu pelajar (1) memahami *mengapa* sesuatu ayat itu betul atau salah, bukan sekadar menghafalnya, (2) membetulkan kesalahan sendiri, dan (3) menggunakan bahasa pada laras yang tepat dalam penulisan akademik dan urusan rasmi.
 ความรู้ไวยากรณ์ช่วยให้ผู้เรียน (1) เข้าใจว่า *ทำไม* ประโยคจึงถูกหรือผิด ไม่ใช่เพียงจำ (2) แก้ข้อผิดของตนเองได้ และ (3) ใช้ภาษาได้ถูกระดับในงานเขียนวิชาการและงานราชการ
 
 ### 1.2 Bahasa Melayu dan Bahasa Baku<br>ภาษามลายูและภาษามาตรฐาน
 
-Bahasa Melayu ialah bahasa rasmi Malaysia, Brunei dan Singapura, serta menjadi asas kepada bahasa Indonesia. Di Thailand, dialek Melayu Patani digunakan dalam kehidupan seharian masyarakat Islam di wilayah sempadan selatan. Dokumen ini berpegang pada **bahasa Melayu baku** (*bahasa Melayu baku*) berdasarkan panduan Dewan Bahasa dan Pustaka (DBP).
-ภาษามลายูเป็นภาษาราชการของมาเลเซีย บรูไน และสิงคโปร์ และเป็นฐานของภาษาอินโดนีเซีย ในประเทศไทยภาษามลายูถิ่นปัตตานีใช้ในชีวิตประจำวันของชาวมุสลิมในจังหวัดชายแดนภาคใต้ เอกสารนี้ยึด **ภาษามลายูมาตรฐาน** (*bahasa Melayu baku*) ตามแนวของ Dewan Bahasa dan Pustaka (DBP)
+Bahasa Melayu ialah bahasa kebangsaan Malaysia dan Brunei, salah satu bahasa rasmi Singapura, dan menjadi asas kepada bahasa Indonesia. Di Thailand, dialek Melayu Patani digunakan dalam kehidupan seharian masyarakat Islam di wilayah sempadan selatan. Dokumen ini berpegang pada **bahasa Melayu baku** berdasarkan panduan Dewan Bahasa dan Pustaka (DBP).
+ภาษามลายูเป็นภาษาประจำชาติของมาเลเซียและบรูไน เป็นภาษาราชการภาษาหนึ่งของสิงคโปร์ และเป็นฐานของภาษาอินโดนีเซีย ในประเทศไทยภาษามลายูถิ่นปัตตานีใช้ในชีวิตประจำวันของชาวมุสลิมในจังหวัดชายแดนภาคใต้ เอกสารนี้ยึด **ภาษามลายูมาตรฐาน** ตามแนวของ Dewan Bahasa dan Pustaka (DBP)
 
-| Bahasa basahan<br>ภาษาพูด | Bahasa baku<br>ภาษามาตรฐาน | Isu<br>ประเด็น |
-|---|---|---|
-| *Awak nak pergi mana?* | *Awak hendak pergi ke mana?* | Kata bantu *hendak* dan kata sendi nama *ke*<br>คำช่วย *hendak* และคำบุพบท *ke* |
-| *Saya dah makan.* | *Saya sudah makan.* | Kata bantu aspek<br>คำช่วยบอกกาล |
-| *Dia tak datang.* | *Dia tidak datang.* | Kata nafi<br>คำปฏิเสธ |
+Bahasa baku tidak bermaksud bahasa basahan dan dialek itu "salah". Setiap ragam bahasa mempunyai tempatnya; yang penting ialah memilih ragam yang sesuai dengan situasi. Dalam kursus ini, penilaian dibuat berdasarkan bahasa baku.
+ภาษามาตรฐานไม่ได้หมายความว่าภาษาพูดหรือภาษาถิ่น "ผิด" ภาษาแต่ละแบบมีที่ใช้ของตน สิ่งสำคัญคือเลือกให้เหมาะกับสถานการณ์ ในวิชานี้การประเมินยึดภาษามาตรฐาน
 
 ### 1.3 Hierarki Unit Bahasa<br>ลำดับชั้นหน่วยภาษา
 
-| Istilah Melayu<br>ศัพท์มลายู | Padanan Thai<br>หน่วย | Contoh<br>ตัวอย่าง |
-|---|---|---|
-| *fonem* | หน่วยเสียง | /p/–/b/ membezakan makna *pagi* dan *bagi*<br>/p/–/b/ แยกความหมาย *pagi* กับ *bagi* |
-| *morfem* | หน่วยคำ | *ber-* + *lari* → *berlari* |
-| *kata* | คำ | *rumah*, *berlari* |
-| *frasa* | วลี | *rumah besar itu* |
-| *klausa* | อนุประโยค | *(yang) tinggal di Pattani* |
-| *ayat* | ประโยค | *Adik saya belajar di Universiti Thaksin.* |
+Unit bahasa tersusun secara berlapis. Unit yang lebih tinggi sentiasa dibina daripada unit yang lebih rendah. Kursus ini mengkaji unit bahasa bermula daripada *morfem* ke atas.
+หน่วยภาษาเรียงซ้อนกันเป็นชั้น หน่วยที่สูงกว่าประกอบขึ้นจากหน่วยที่ต่ำกว่าเสมอ วิชานี้ศึกษาตั้งแต่ *morfem* ขึ้นไป
 
-Unit yang lebih tinggi sentiasa dibina daripada unit yang lebih rendah. Kursus ini mengkaji unit bahasa bermula daripada *morfem* ke atas.
-หน่วยที่สูงกว่าประกอบขึ้นจากหน่วยที่ต่ำกว่าเสมอ วิชานี้ศึกษาตั้งแต่ *morfem* ขึ้นไป
+```
+ayat     Adik saya belajar di Universiti Thaksin.
+  └─ klausa   adik saya + belajar di Universiti Thaksin
+      └─ frasa    adik saya · di Universiti Thaksin
+          └─ kata     adik · saya · belajar · di
+              └─ morfem   bel- + ajar   (belajar)
+                  └─ fonem    /b/ /e/ /l/ /a/ /j/ /a/ /r/
+```
 
 ### 1.4 Morfologi dan Sintaksis<br>วจีวิภาคและวากยสัมพันธ์
 
-- **Morfologi** (*morfologi*) mengkaji struktur dalaman kata, golongan kata (*golongan kata*) dan proses pembentukan kata (*pembentukan kata*), contohnya *membaca* = *meN-* + *baca*
-  **วจีวิภาค** (*morfologi*) ศึกษาโครงสร้างภายในคำ ชนิดคำ (*golongan kata*) และกระบวนการสร้างคำ (*pembentukan kata*) เช่น *membaca* = *meN-* + *baca*
-- **Sintaksis** (*sintaksis*) mengkaji penyusunan kata menjadi frasa dan ayat, contohnya [*Pelajar itu*]FN + [*membaca buku*]FK
-  **วากยสัมพันธ์** (*sintaksis*) ศึกษาการเรียงคำเป็นวลีและประโยค เช่น [*Pelajar itu*]FN + [*membaca buku*]FK
+- **Morfologi** mengkaji struktur dalaman kata, golongan kata (*golongan kata*) dan proses pembentukan kata (*pembentukan kata*), contohnya *membaca* = *meN-* + *baca*
+  **วจีวิภาค** ศึกษาโครงสร้างภายในคำ ชนิดคำ (*golongan kata*) และกระบวนการสร้างคำ (*pembentukan kata*) เช่น *membaca* = *meN-* + *baca*
+- **Sintaksis** mengkaji penyusunan kata menjadi frasa dan ayat, contohnya [*Pelajar itu*]FN + [*membaca buku*]FK
+  **วากยสัมพันธ์** ศึกษาการเรียงคำเป็นวลีและประโยค เช่น [*Pelajar itu*]FN + [*membaca buku*]FK
 
 Kedua-dua bidang ini saling berkaitan: pemilihan awalan *meN-* atau *di-* (peringkat kata) menentukan sama ada ayat itu ayat aktif atau ayat pasif (peringkat ayat).
-ทั้งสองภาคสัมพันธ์กัน: การเลือกอุปสรรค *meN-* หรือ *di-* (ระดับคำ) กำหนดว่าประโยคเป็นกรรตุหรือกรรมวาจก (ระดับประโยค)
+ทั้งสองภาคสัมพันธ์กัน: การเลือกอุปสรรค *meN-* หรือ *di-* (ระดับคำ) กำหนดว่าประโยคเป็นกรรตุวาจกหรือกรรมวาจก (ระดับประโยค)
 
 ### 1.5 Pendekatan Kajian Tatabahasa Melayu<br>แนวการศึกษาไวยากรณ์มลายู
 
-- **Pendekatan tradisional** (*tradisional*) — Za'ba, *Pelita Bahasa Melayu* (1940-an), yang menekankan peraturan dan makna
-  **แนวดั้งเดิม** (*tradisional*) — Za'ba, *Pelita Bahasa Melayu* (1940-an) เน้นกฎและความหมาย
-- **Pendekatan struktural** (*struktural*) — mengelaskan kata berdasarkan bentuk dan kedudukannya dalam ayat
-  **แนวโครงสร้าง** (*struktural*) — จำแนกคำตามรูปและตำแหน่งในประโยค
-- **Pendekatan transformasi-generatif** (*transformasi-generatif*) — menjelaskan bahawa ayat yang kompleks diterbitkan daripada ayat dasar (*ayat dasar*). Pendekatan ini mempengaruhi bahagian sintaksis *Tatabahasa Dewan*, iaitu buku teks utama kursus ini.
-  **แนวเพิ่มพูนและปริวรรต** (*transformasi-generatif*) — อธิบายประโยคซับซ้อนว่าแปลงมาจากประโยคพื้นฐาน (*ayat dasar*) แนวนี้มีอิทธิพลต่อภาควากยสัมพันธ์ของ *Tatabahasa Dewan* ซึ่งเป็นตำราหลักของวิชานี้
+- **Pendekatan tradisional** — Za'ba, *Pelita Bahasa Melayu* (1940-an), yang menekankan peraturan dan makna
+  **แนวดั้งเดิม** — Za'ba, *Pelita Bahasa Melayu* (ทศวรรษ 1940) เน้นกฎและความหมาย
+- **Pendekatan struktural** — mengelaskan kata berdasarkan bentuk dan kedudukannya dalam ayat
+  **แนวโครงสร้าง** — จำแนกคำตามรูปและตำแหน่งในประโยค
+- **Pendekatan transformasi-generatif** — menjelaskan bahawa ayat yang kompleks diterbitkan daripada ayat dasar (*ayat dasar*). Pendekatan ini mempengaruhi bahagian sintaksis *Tatabahasa Dewan*, iaitu buku teks utama kursus ini.
+  **แนวไวยากรณ์เพิ่มพูนและปริวรรต** — อธิบายว่าประโยคซับซ้อนแปลงมาจากประโยคพื้นฐาน (*ayat dasar*) แนวนี้มีอิทธิพลต่อภาควากยสัมพันธ์ของ *Tatabahasa Dewan* ซึ่งเป็นตำราหลักของวิชานี้
+
+Selain pendekatan, tatabahasa juga dapat dibezakan mengikut tujuannya. **Tatabahasa preskriptif** menetapkan bentuk yang betul untuk digunakan, manakala **tatabahasa deskriptif** menghuraikan bahasa sebagaimana yang dituturkan. Dalam pendidikan di Malaysia, *Tatabahasa Dewan* lazimnya dijadikan rujukan bentuk baku, iaitu peranan preskriptif.
+นอกจากแนวการศึกษาแล้ว ไวยากรณ์ยังแบ่งตามจุดประสงค์ได้ **ไวยากรณ์แนวบัญญัติ** กำหนดรูปที่ถูกต้องที่ควรใช้ ส่วน **ไวยากรณ์แนวพรรณนา** บรรยายภาษาตามที่ผู้พูดใช้จริง ในการศึกษาของมาเลเซีย *Tatabahasa Dewan* มักใช้เป็นหลักอ้างอิงรูปมาตรฐาน คือทำหน้าที่แบบบัญญัติ
 
 ### 1.6 Tatabahasa untuk Komunikasi<br>ไวยากรณ์เพื่อการสื่อสาร
 
 Ayat yang baik mestilah **betul** (*gramatis*) dan **sesuai** dengan pendengar serta konteks (*laras bahasa*). Contohnya, surat kepada dekan menggunakan *Dengan hormatnya…* dan kata ganti nama *tuan/puan*, bukan *awak*.
 ประโยคที่ดีต้อง **ถูกต้อง** (*gramatis*) และ **เหมาะสม** กับผู้ฟังและบริบท (*laras bahasa*) เช่น จดหมายถึงคณบดีใช้ *Dengan hormatnya…* และสรรพนาม *tuan/puan* ไม่ใช่ *awak*
 
-## 4. Kajian Kes<br>กรณีศึกษา
+## 6. Contoh Ayat<br>ตัวอย่างประโยค
+
+| Ayat<br>ประโยค | Huraian<br>คำอธิบาย |
+|---|---|
+| *Adik saya belajar di Universiti Thaksin.* | Ayat penyata: [*Adik saya*] subjek + [*belajar di Universiti Thaksin*] predikat — analisis peringkat sintaksis<br>ประโยคบอกเล่า: ประธาน + ภาคแสดง — วิเคราะห์ระดับวากยสัมพันธ์ |
+| *Pelajar itu **membaca** buku.* | *membaca* = *meN-* + *baca*: dua morfem dalam satu kata — analisis peringkat morfologi<br>*membaca* มี 2 หน่วยคำในคำเดียว — วิเคราะห์ระดับวจีวิภาค |
+| *Buku itu **dibaca** oleh pelajar.* | Awalan *di-* (peringkat kata) menjadikan ayat pasif (peringkat ayat)<br>อุปสรรค *di-* (ระดับคำ) ทำให้ประโยคเป็นกรรมวาจก (ระดับประโยค) |
+| *Saya pergi **ke** pasar.* | *ke* menunjukkan arah; `*`*pergi di pasar* tidak gramatis<br>*ke* บอกทิศทาง ส่วน *pergi di pasar* ผิดไวยากรณ์ |
+| *Mereka **hendak** ke Hat Yai.* | Bentuk baku; bentuk basahannya *Diorang nak ke Hat Yai.*<br>รูปมาตรฐาน ส่วนภาษาพูดคือ *Diorang nak ke Hat Yai.* |
+| *Dengan hormatnya, saya ingin memohon cuti.* | Laras rasmi untuk surat kepada pihak berkuasa<br>ระดับภาษาทางการสำหรับจดหมายถึงผู้มีอำนาจ |
+
+## 7. Jadual Perbandingan<br>ตารางเปรียบเทียบ
+
+**A. Morfologi dan sintaksis**
+**ก. วจีวิภาคกับวากยสัมพันธ์**
+
+| Aspek<br>ประเด็น | Morfologi<br>วจีวิภาค | Sintaksis<br>วากยสัมพันธ์ |
+|---|---|---|
+| Unit yang dikaji<br>หน่วยที่ศึกษา | Morfem dan kata<br>หน่วยคำและคำ | Frasa, klausa dan ayat<br>วลี อนุประโยค และประโยค |
+| Soalan utama<br>คำถามหลัก | Bagaimana kata dibentuk?<br>คำสร้างขึ้นอย่างไร | Bagaimana kata disusun menjadi ayat?<br>คำเรียงเป็นประโยคอย่างไร |
+| Contoh<br>ตัวอย่าง | *ber-* + *lari* → *berlari* | [*Adik*] + [*berlari ke sekolah*] |
+| Dalam kursus ini<br>ในวิชานี้ | Bab 2–7<br>บทที่ 2–7 | Bab 8–13<br>บทที่ 8–13 |
+
+**B. Bahasa basahan dan bahasa baku**
+**ข. ภาษาพูดกับภาษามาตรฐาน**
+
+| Bahasa basahan<br>ภาษาพูด | Bahasa baku<br>ภาษามาตรฐาน | Isu<br>ประเด็น |
+|---|---|---|
+| *Awak nak pergi mana?* | *Awak hendak pergi ke mana?* | Kata bantu *hendak* dan kata sendi nama *ke*<br>คำช่วย *hendak* และคำบุพบท *ke* |
+| *Saya dah makan.* | *Saya sudah makan.* | Kata bantu aspek<br>คำช่วยบอกกาล |
+| *Dia tak datang.* | *Dia tidak datang.* | Kata nafi<br>คำปฏิเสธ |
+| *Diorang dah balik.* | *Mereka sudah pulang.* | Kata ganti nama dan pilihan kata<br>สรรพนามและการเลือกคำ |
+
+**C. Tatabahasa preskriptif dan deskriptif**
+**ค. ไวยากรณ์แนวบัญญัติกับแนวพรรณนา**
+
+| Aspek<br>ประเด็น | Preskriptif<br>แนวบัญญัติ | Deskriptif<br>แนวพรรณนา |
+|---|---|---|
+| Tujuan<br>จุดประสงค์ | Menetapkan bentuk yang betul<br>กำหนดรูปที่ถูกต้อง | Menghuraikan bentuk yang digunakan<br>บรรยายรูปที่ใช้จริง |
+| Sikap terhadap *dari* bagi *daripada*<br>ท่าทีต่อการใช้ *dari* แทน *daripada* | Salah dalam bahasa baku<br>ผิดในภาษามาตรฐาน | Dicatat sebagai variasi bahasa lisan<br>บันทึกว่าเป็นความแปรของภาษาพูด |
+| Contoh penggunaan<br>ตัวอย่างการใช้ | Buku teks, peperiksaan, dokumen rasmi<br>ตำรา การสอบ เอกสารทางการ | Kajian dialek dan sosiolinguistik<br>การศึกษาภาษาถิ่นและภาษาศาสตร์สังคม |
+
+## 8. Kesalahan Lazim<br>ข้อผิดพลาดที่พบบ่อย
+
+| Salah<br>ผิด | Betul<br>ถูก | Sebab<br>เหตุผล |
+|---|---|---|
+| `*`*Ayah pergi di masjid.* | *Ayah pergi ke masjid.* | *ke* untuk arah, *di* untuk tempat; bahasa Thai menggunakan "ที่" untuk kedua-duanya<br>*ke* บอกทิศทาง *di* บอกตำแหน่ง ภาษาไทยใช้ "ที่" ได้ทั้งสองกรณี |
+| `*`*Selamat datang di Universiti Thaksin.* | *Selamat datang ke Universiti Thaksin.* | *datang* menunjukkan arah tuju<br>*datang* บอกทิศทางที่มาถึง |
+| `*`*Sila tanggal kasut.* | *Sila tanggalkan kasut.* | Kata kerja transitif ini memerlukan akhiran *-kan*<br>กริยานี้ต้องเติมปัจจัย *-kan* |
+| `*`*di sini kawasan* | *di kawasan ini* | Hukum D-M dan kedudukan kata penunjuk *ini*<br>กฎ ดี-เอ็ม และตำแหน่งของ *ini* |
+| *Saya tak datang.* (dalam surat rasmi) | *Saya tidak datang.* | Bentuk basahan tidak sesuai dalam laras rasmi<br>รูปภาษาพูดไม่เหมาะกับภาษาทางการ |
+| *awak* kepada pensyarah | *tuan/puan, Dr.* | Kata ganti nama mesti sesuai dengan kedudukan pendengar<br>สรรพนามต้องเหมาะกับสถานะของผู้ฟัง |
+
+## 9. Latihan Interaktif<br>แบบฝึกหัดโต้ตอบ
+
+Jawab setiap latihan; jawapan disemak serta-merta beserta penjelasan.
+ทำแบบฝึกแต่ละชุด ระบบจะตรวจคำตอบทันทีพร้อมคำอธิบาย
+
+```latihan-isi
+Arahan: Taipkan satu perkataan yang betul. | พิมพ์คำที่ถูกต้องหนึ่งคำ
+Saya pergi ___ pasar. | ke | *Pergi* menunjukkan arah, maka *ke*. | *pergi* บอกทิศทาง จึงใช้ *ke*
+Kata *membaca* dibentuk daripada awalan *meN-* dan kata dasar ___. | baca | Bunyi *b* tidak luluh: *meN-* + *baca* → *membaca*. | เสียง *b* ไม่หลอม: *meN-* + *baca* → *membaca*
+Bentuk baku bagi *dah* ialah ___. | sudah | *Dah* ialah bentuk basahan bagi kata bantu aspek *sudah*. | *dah* เป็นรูปภาษาพูดของคำช่วยบอกกาล *sudah*
+Unit bunyi terkecil yang membezakan makna ialah ___. | fonem | Contohnya /p/ dan /b/ dalam *pagi* dan *bagi*. | เช่น /p/ และ /b/ ใน *pagi* กับ *bagi*
+Bidang yang mengkaji susunan kata menjadi ayat ialah ___. | sintaksis | Morfologi mengkaji kata; sintaksis mengkaji ayat. | วจีวิภาคศึกษาคำ วากยสัมพันธ์ศึกษาประโยค
+```
+
+```latihan-betulkan
+Arahan: Klik perkataan yang salah dalam setiap ayat. | กดคำที่ผิดในแต่ละประโยค
+Selamat datang [di→ke] Universiti Thaksin. | *Datang* menunjukkan arah tuju, maka *ke*. | *datang* บอกทิศทางที่มาถึง จึงใช้ *ke*
+Sila [tanggal→tanggalkan] kasut sebelum masuk. | Kata kerja ini memerlukan akhiran *-kan* dalam ayat perintah. | กริยานี้ต้องเติม *-kan* ในประโยคคำสั่ง
+Ayah pergi [di→ke] masjid. | *Di* menunjukkan tempat, bukan arah. | *di* บอกตำแหน่ง ไม่ได้บอกทิศทาง
+Dilarang merokok di [sini kawasan→kawasan ini]. | Kata nama *kawasan* hadir dahulu, diikuti penunjuk *ini*. | คำนาม *kawasan* อยู่หน้า ตามด้วยคำชี้ *ini*
+Saya [tak→tidak] dapat hadir ke mesyuarat itu. | Surat rasmi menggunakan bentuk baku *tidak*. | จดหมายทางการใช้รูปมาตรฐาน *tidak*
+```
+
+```latihan-golong
+Arahan: Golongkan setiap topik ke dalam bidang yang betul. | จัดแต่ละหัวข้อให้อยู่ในภาคที่ถูกต้อง
+Kategori: Morfologi · วจีวิภาค | Sintaksis · วากยสัมพันธ์
+Pembentukan kata *bekerja*<br>การสร้างคำ *bekerja* | Morfologi | Pengimbuhan *ber-* ialah proses pembentukan kata. | การเติม *ber-* เป็นกระบวนการสร้างคำ
+Susunan subjek dan predikat<br>การเรียงประธานกับภาคแสดง | Sintaksis | Subjek dan predikat ialah unsur ayat. | ประธานและภาคแสดงเป็นส่วนประกอบของประโยค
+Golongan kata: kata nama, kata kerja<br>ชนิดคำ: นาม กริยา | Morfologi | *Tatabahasa Dewan* membincangkan golongan kata dalam bahagian morfologi. | *Tatabahasa Dewan* อธิบายชนิดคำไว้ในภาควจีวิภาค
+Ayat aktif dan ayat pasif<br>ประโยคกรรตุวาจกและกรรมวาจก | Sintaksis | Ragam ayat ialah perkara peringkat ayat. | วาจกเป็นเรื่องระดับประโยค
+Penggandaan *rumah-rumah*<br>การซ้ำคำ *rumah-rumah* | Morfologi | Penggandaan ialah proses pembentukan kata. | การซ้ำคำเป็นกระบวนการสร้างคำ
+Frasa nama *rumah besar itu*<br>วลีนาม *rumah besar itu* | Sintaksis | Frasa ialah unit sintaksis. | วลีเป็นหน่วยทางวากยสัมพันธ์
+```
+
+```latihan-benar
+Arahan: Tentukan sama ada setiap pernyataan betul atau salah. | ตัดสินว่าข้อความแต่ละข้อถูกหรือผิด
+Klausa sentiasa dapat berdiri sendiri sebagai ayat.<br>อนุประโยคยืนเป็นประโยคเองได้เสมอ | S | Klausa tak bebas seperti *bahawa dia sakit* tidak dapat berdiri sendiri. | อนุประโยคไม่อิสระ เช่น *bahawa dia sakit* ยืนเองไม่ได้
+*Tatabahasa Dewan* membahagikan tatabahasa kepada morfologi dan sintaksis.<br>*Tatabahasa Dewan* แบ่งไวยากรณ์เป็นวจีวิภาคและวากยสัมพันธ์ | B | Kedua-dua bidang ini menjadi dua bahagian utama buku itu. | สองภาคนี้เป็นสองส่วนหลักของตำรา
+Bahasa basahan sesuai digunakan dalam surat rasmi kepada dekan.<br>ภาษาพูดเหมาะกับจดหมายทางการถึงคณบดี | S | Surat rasmi memerlukan bahasa baku dan laras rasmi. | จดหมายทางการต้องใช้ภาษามาตรฐานและระดับภาษาทางการ
+Awalan *ber-* ialah morfem bebas.<br>อุปสรรค *ber-* เป็นหน่วยคำอิสระ | S | *ber-* ialah morfem terikat kerana tidak dapat hadir bersendirian. | *ber-* เป็นหน่วยคำไม่อิสระ เพราะปรากฏเดี่ยว ๆ ไม่ได้
+Ayat yang gramatis masih boleh tidak sesuai dengan konteks.<br>ประโยคที่ถูกไวยากรณ์อาจยังไม่เหมาะกับบริบทได้ | B | Contohnya *Awak boleh datang esok?* gramatis tetapi tidak sesuai kepada dekan. | เช่น *Awak boleh datang esok?* ถูกไวยากรณ์แต่ไม่เหมาะจะใช้กับคณบดี
+```
+
+### Kajian Kes<br>กรณีศึกษา
 
 **Papan tanda menyambut rombongan pelajar Malaysia.** Kelab pelajar Muslim di sebuah universiti di Songkhla menyediakan papan tanda untuk menyambut pelajar pertukaran dari Malaysia seperti yang berikut:
 **ป้ายต้อนรับคณะนักศึกษามาเลเซีย** ชมรมนักศึกษามุสลิมของมหาวิทยาลัยแห่งหนึ่งในสงขลาเตรียมป้ายต้อนรับนักศึกษาจากมาเลเซียที่มาแลกเปลี่ยน ดังนี้
 
 > *Selamat datang di Universiti Thaksin. Sila tanggal kasut sebelum masuk di bilik solat. Dilarang merokok di sini kawasan. Kami sangat gembira awak semua datang.*
-
-**Aspek analisis**
-**ประเด็นวิเคราะห์**
 
 1. Kenal pasti sekurang-kurangnya tiga kesalahan dan nyatakan sama ada kesalahan itu pada peringkat kata atau peringkat ayat. (แนวคำตอบ: *datang **ke***; *tanggalkan kasut* (+ **-kan**); *masuk **ke** bilik solat*; *di kawasan ini* — hukum D-M)
    ระบุข้อผิดอย่างน้อย 3 จุด และบอกว่าเป็นปัญหาระดับคำหรือระดับประโยค
@@ -125,7 +238,22 @@ Ayat yang baik mestilah **betul** (*gramatis*) dan **sesuai** dengan pendengar s
 3. Kesalahan manakah yang mungkin berpunca daripada pengaruh bahasa Thai? Jelaskan.
    ข้อผิดใดน่าจะเกิดจากอิทธิพลของภาษาไทย อธิบาย
 
-## 5. Soalan Penilaian<br>คำถามท้ายบท
+## 10. Rumusan<br>สรุปบทเรียน
+
+- Tatabahasa ialah peraturan pembentukan kata dan penyusunan kata menjadi ayat; *Tatabahasa Dewan* membahagikannya kepada morfologi dan sintaksis.
+  ไวยากรณ์คือกฎการสร้างคำและการเรียงคำเป็นประโยค *Tatabahasa Dewan* แบ่งเป็นวจีวิภาคและวากยสัมพันธ์
+- Unit bahasa tersusun daripada fonem → morfem → kata → frasa → klausa → ayat.
+  หน่วยภาษาเรียงจาก หน่วยเสียง → หน่วยคำ → คำ → วลี → อนุประโยค → ประโยค
+- Morfologi dan sintaksis saling berkaitan, contohnya *meN-*/*di-* menentukan ragam ayat.
+  วจีวิภาคกับวากยสัมพันธ์สัมพันธ์กัน เช่น *meN-*/*di-* กำหนดวาจกของประโยค
+- Bahasa baku digunakan dalam situasi rasmi; bahasa basahan dan dialek mempunyai tempatnya sendiri.
+  ภาษามาตรฐานใช้ในสถานการณ์ทางการ ส่วนภาษาพูดและภาษาถิ่นก็มีที่ใช้ของตน
+- Ayat yang baik mestilah gramatis dan sesuai dengan laras bahasa.
+  ประโยคที่ดีต้องถูกไวยากรณ์และเหมาะกับระดับภาษา
+- Kesalahan lazim pelajar Thai berpunca daripada pemindahan struktur bahasa Thai, contohnya *di/ke*.
+  ข้อผิดที่พบบ่อยของผู้เรียนไทยเกิดจากการถ่ายโอนโครงสร้างภาษาไทย เช่น *di/ke*
+
+## 11. Kuiz Penilaian<br>แบบทดสอบท้ายบท
 
 ### A. Soalan Objektif<br>ก. ปรนัย
 
@@ -181,13 +309,13 @@ Ayat yang baik mestilah **betul** (*gramatis*) dan **sesuai** dengan pendengar s
 2. Kumpulkan tiga teks bahasa Melayu sebenar (papan tanda, hantaran media sosial, menu makanan) dari kawasan selatan Thailand. Analisis bagaimana unsur dialek Melayu atau bahasa basahan hadir dalam teks tersebut.
    เก็บข้อความภาษามลายูจริง 3 ชิ้น (ป้าย โพสต์สื่อสังคม เมนูอาหาร) จากพื้นที่ภาคใต้ วิเคราะห์ว่ามีลักษณะภาษามลายูถิ่นหรือภาษาพูดแทรกอยู่อย่างไร
 
-## 6. Rujukan<br>เอกสารอ้างอิงแนะนำ
+## 12. Rujukan<br>เอกสารอ้างอิง
 
 - มูหำหมัด สาแลบิง. (2569). *ไวยากรณ์ภาษามลายู*. สงขลา: หลักสูตรภาษามลายู คณะมนุษยศาสตร์และสังคมศาสตร์ มหาวิทยาลัยทักษิณ.
-- Nik Safiah Karim et al. (2015). *Tatabahasa Dewan Edisi Ketiga*. Kuala Lumpur: Dewan Bahasa dan Pustaka. — bab asas bahasa Melayu dan unit bahasa
-  บทพื้นฐานภาษามลายูและหน่วยภาษา
+- Nik Safiah Karim, Farid M. Onn, Hashim Haji Musa & Abdul Hamid Mahmood. (2015). *Tatabahasa Dewan* (Edisi Ketiga). Kuala Lumpur: Dewan Bahasa dan Pustaka. — bahagian pengenalan bahasa Melayu, unit bahasa dan pembahagian morfologi–sintaksis
+  ส่วนบทนำภาษามลายู หน่วยภาษา และการแบ่งวจีวิภาค–วากยสัมพันธ์
 - Asmah Haji Omar. (2009). *Nahu Melayu Mutakhir* (Edisi Kelima). Kuala Lumpur: Dewan Bahasa dan Pustaka. — pandangan tatabahasa daripada aliran lain, untuk perbandingan
   มุมมองไวยากรณ์อีกสำนักหนึ่ง ใช้เปรียบเทียบ
-- Alias Mohammad Yatim. (1998). *Mengenali Bahasa Melayu*. Kedah: Percetakan Paavai.
-- Pusat Rujukan Persuratan Melayu (PRPM), Dewan Bahasa dan Pustaka — prpm.dbp.gov.my untuk menyemak kata dan penggunaan bahasa baku
+- Alias Mohammad Yatim. (1998). *Mengenali Bahasa Melayu*. Penerbitan Sarlis.
+- Pusat Rujukan Persuratan Melayu (PRPM), Dewan Bahasa dan Pustaka — https://prpm.dbp.gov.my untuk menyemak kata dan penggunaan bahasa baku
   สำหรับตรวจคำและการใช้ภาษามาตรฐาน
