@@ -845,3 +845,6 @@ td > .tr, th > .tr, .opt > .tr, .toc a .tr { font-size: max(13px, .86em); }
   .lat-opts .opt::before { content: "☐ "; }
   .lat-w { border-bottom: 1px dotted #999 !important; }
 }
+/* Unsur yang ditegaskan dalam ayat contoh (**…** di dalam *…*) · ส่วนที่เน้นในประโยคตัวอย่าง */
+em strong, strong em { font-weight: 700; background: color-mix(in srgb, var(--emas) 28%, transparent); border-radius: 3px; padding: 0 2px; }
+@media print { em strong, strong em { background: none; text-decoration: underline; } }

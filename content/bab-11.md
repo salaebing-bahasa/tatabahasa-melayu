@@ -1,10 +1,17 @@
-<!-- Bab 11 · ไฟล์เนื้อหาบทที่ 11 (สองภาษา: มลายูบน ไทยล่าง)
+<!-- Bab 11 · ไฟล์เนื้อหาบทที่ 11 — โครงสร้าง 12 หัวข้อ
+     1. Tajuk Pelajaran แสดงจากข้อมูลใน assets/js/course.js (ชื่อบท สัปดาห์ CLO) จึงไม่มีหัวข้อ ## ในไฟล์นี้
+     หัวข้อ ## ที่เหลือ 11 หัวข้อ ระบบรู้จักจากคำแรกของหัวข้อ: Hasil · Pengenalan · Konsep · Penerangan · Contoh · Jadual · Kesalahan · Latihan · Rumusan · Kuiz · Rujukan
      วิธีเขียนสองภาษา:
      - ย่อหน้าและข้อในรายการ: บรรทัดแรกภาษามลายู ขึ้นบรรทัดใหม่ (ไม่เว้นบรรทัดว่าง) แล้วเป็นภาษาไทย
      - หัวข้อ (## / ###) และช่องในตาราง: ภาษามลายู<br>ภาษาไทย
-     ห้ามลบหัวข้อระดับ ## (6 ส่วนของบท) และให้คงรูปแบบข้อปรนัย (ก. ข. ค. ง.) กับบรรทัด **เฉลย** ไว้ · คำอธิบายเฉลยอยู่ใต้ **Penjelasan** เป็นรายการ - **เลขข้อ** มลายู<br>ไทย -->
+     แบบฝึกหัดโต้ตอบเขียนเป็นบล็อก ```latihan-isi / latihan-betulkan / latihan-golong / latihan-benar (หนึ่งบรรทัดหนึ่งข้อ แยกช่องด้วย " | ")
+       latihan-isi:      ประโยคที่มี ___ | คำตอบ (หลายคำตอบคั่นด้วย /) | คำอธิบายมลายู | คำอธิบายไทย
+       latihan-betulkan: ประโยคที่มี [คำผิด→คำถูก] | คำอธิบายมลายู | คำอธิบายไทย
+       latihan-golong:   บรรทัด Kategori: ก | ข แล้วตามด้วย  ข้อความ | ชื่อหมวด | คำอธิบายมลายู | คำอธิบายไทย
+       latihan-benar:    ข้อความ | B (ถูก) หรือ S (ผิด) | คำอธิบายมลายู | คำอธิบายไทย
+     ในส่วน Kuiz Penilaian ให้คงรูปแบบข้อปรนัย (ก. ข. ค. ง.) บรรทัด **เฉลย** และรายการ **Penjelasan** ไว้ -->
 
-## 1. Hasil Pembelajaran<br>ผลลัพธ์การเรียนรู้ประจำบท
+## 2. Hasil Pembelajaran<br>ผลลัพธ์การเรียนรู้
 
 Pada akhir bab ini, pelajar dapat:
 เมื่อจบบทนี้ นักศึกษาสามารถ
@@ -18,7 +25,16 @@ Pada akhir bab ini, pelajar dapat:
 4. menggunakan ayat perintah dan ayat tanya yang sopan dan sesuai dengan situasi komunikasi sebenar (CLO4)
    เลือกใช้ประโยคคำสั่งและคำถามให้สุภาพและเหมาะกับสถานการณ์สื่อสารจริงได้ (CLO4)
 
-## 2. Rangka Bab<br>โครงร่างประจำบท
+## 3. Pengenalan<br>บทนำ
+
+Semua ayat dalam bahasa Melayu dapat dikesan kembali kepada beberapa pola asas yang disebut *ayat dasar*. Bab ini memperkenalkan empat pola ayat dasar dan empat jenis ayat mengikut tujuan.
+ประโยคมลายูทุกประโยคย้อนกลับไปหาแบบพื้นฐานไม่กี่แบบที่เรียกว่า *ayat dasar* บทนี้แนะนำประโยคพื้นฐานสี่แบบ และประโยคสี่ชนิดตามจุดประสงค์
+
+Bab ini juga menekankan kesantunan. Ayat perintah dan ayat tanya yang gramatis belum tentu sopan, terutamanya apabila ditujukan kepada orang yang lebih tua atau dalam urusan rasmi.
+บทนี้ยังเน้นความสุภาพ ประโยคคำสั่งและคำถามที่ถูกไวยากรณ์อาจไม่สุภาพ โดยเฉพาะเมื่อพูดกับผู้ใหญ่หรือในงานทางการ
+
+**Kandungan bab**
+**เนื้อหาในบท**
 
 1. **11.1 Ayat Dasar** (*ayat dasar*)
    **11.1 ประโยคพื้นฐาน**
@@ -32,7 +48,21 @@ Pada akhir bab ini, pelajar dapat:
 3. **11.3 Kesantunan dalam Ayat Perintah dan Ayat Tanya**
    **11.3 ความสุภาพในประโยคคำสั่งและคำถาม**
 
-## 3. Isi Penting<br>เนื้อหาสาระสำคัญ
+## 4. Konsep dan Definisi<br>แนวคิดและนิยาม
+
+| Istilah<br>ศัพท์ | Definisi<br>นิยาม |
+|---|---|
+| *ayat dasar* | Ayat yang menjadi sumber pembentukan ayat lain; ayat penyata, aktif, susunan subjek + predikat<br>ประโยคต้นแบบของประโยคอื่น เป็นประโยคบอกเล่า กรรตุวาจก เรียงประธาน + ภาคแสดง |
+| *pola ayat* | Jenis ayat dasar yang ditentukan oleh predikat<br>แบบประโยคที่กำหนดโดยภาคแสดง |
+| *ayat tunggal* | Ayat dengan satu subjek dan satu predikat<br>ประโยคที่มีประธานและภาคแสดงอย่างละหนึ่ง |
+| *ayat penyata* | Ayat yang menyatakan maklumat<br>ประโยคบอกเล่า |
+| *ayat tanya* | Ayat untuk bertanya, dengan atau tanpa kata tanya<br>ประโยคคำถาม |
+| *ayat perintah* | Ayat suruhan, larangan, silaan atau permintaan<br>ประโยคคำสั่ง |
+| *ayat seruan* | Ayat yang melahirkan perasaan dengan kata seru<br>ประโยคอุทาน |
+| *soalan tertutup* | Soalan yang dijawab *ya/tidak*<br>คำถามปิด |
+| *soalan terbuka* | Soalan yang boleh dijawab dengan pelbagai jawapan<br>คำถามเปิด |
+
+## 5. Penerangan Tatabahasa<br>คำอธิบายหลักไวยากรณ์
 
 ### 11.1 Ayat Dasar<br>ประโยคพื้นฐาน (*ayat dasar*)
 
@@ -102,7 +132,92 @@ Tahap kesantunan daripada rendah kepada tinggi:
 Perhatian: sesetengah ahli bahasa menganggap *Tolong jangan…* bercanggah maknanya (*tolong* meminta bantuan, *jangan* melarang). Dalam papan tanda dan dokumen rasmi, gunakan *Dilarang…* atau *Jangan…*.
 ข้อควรระวัง: นักภาษาศาสตร์บางส่วนเห็นว่า *Tolong jangan…* ขัดกันทางความหมาย (*tolong* คือขอความช่วยเหลือ *jangan* คือห้าม) ในป้ายและเอกสารทางการจึงควรใช้ *Dilarang…* หรือ *Jangan…*
 
-## 4. Kajian Kes<br>กรณีศึกษา
+## 6. Contoh Ayat<br>ตัวอย่างประโยค
+
+| Ayat<br>ประโยค | Huraian<br>คำอธิบาย |
+|---|---|
+| *Hamidah pelajar universiti.* | Pola FN + FN<br>แบบ FN + FN |
+| *Anif sedang tidur.* | Pola FN + FK<br>แบบ FN + FK |
+| *Lelaki itu pemurah.* | Pola FN + FA<br>แบบ FN + FA |
+| *Pejabat saya di Songkhla.* | Pola FN + FSN<br>แบบ FN + FSN |
+| *Siapakah nama awak?* | Ayat tanya dengan kata tanya dan *-kah*<br>คำถามที่มีคำถามและ *-kah* |
+| *Sila hantar borang itu.* | Ayat perintah silaan yang sopan<br>ประโยคเชื้อเชิญที่สุภาพ |
+| *Wah, sudah besar kamu sekarang!* | Ayat seruan<br>ประโยคอุทาน |
+
+## 7. Jadual Perbandingan<br>ตารางเปรียบเทียบ
+
+**A. Empat jenis ayat perintah**
+**ก. ประโยคคำสั่งสี่ชนิด**
+
+| Jenis<br>ชนิด | Penanda<br>คำบ่งชี้ | Contoh<br>ตัวอย่าง |
+|---|---|---|
+| Suruhan<br>สั่ง | Kata kerja (+ *-lah*) | *Susunlah buku itu.* |
+| Larangan<br>ห้าม | *jangan, usah, dilarang* | *Dilarang merokok.* |
+| Silaan<br>เชื้อเชิญ | *sila, jemput* | *Jemputlah masuk.* |
+| Permintaan<br>ขอร้อง | *minta, tolong* | *Tolong tutup pintu.* |
+
+**B. Tahap kesantunan**
+**ข. ระดับความสุภาพ**
+
+| Tahap<br>ระดับ | Contoh<br>ตัวอย่าง |
+|---|---|
+| Langsung<br>ตรง | *Hantar borang itu.* |
+| Dilembutkan<br>นุ่มนวลขึ้น | *Hantarlah borang itu.* |
+| Permintaan<br>ขอร้อง | *Tolong hantar borang itu.* |
+| Rasmi<br>ทางการ | *Sila hantar borang itu.* |
+| Paling sopan<br>สุภาพที่สุด | *Bolehkah tuan menghantar borang itu?* |
+
+## 8. Kesalahan Lazim<br>ข้อผิดพลาดที่พบบ่อย
+
+| Salah<br>ผิด | Betul<br>ถูก | Sebab<br>เหตุผล |
+|---|---|---|
+| *Hantar dokumen sekarang.* (kepada ibu bapa) | *Sila hantar dokumen tersebut secepat mungkin.* | Terlalu langsung untuk orang yang lebih tua<br>ตรงเกินไปสำหรับผู้ใหญ่ |
+| *Awak tahu tarikh tutup?* (kepada ibu bapa) | *Adakah tuan/puan sudah maklum tentang tarikh tutup?* | Kata ganti nama dan bentuk soalan tidak sopan<br>สรรพนามและรูปคำถามไม่สุภาพ |
+| `*`*Jangan sentuh lah.* | *Jangan sentuh.* / *Dilarang sentuh.* | *-lah* ditulis serangkai; papan tanda rasmi menggunakan *dilarang*<br>*-lah* เขียนติด และป้ายทางการใช้ *dilarang* |
+| *Ke Phuket ayah saya* dianggap ayat dasar | Ayat tunggal susunan songsang | Ayat dasar mesti subjek + predikat<br>ประโยคพื้นฐานต้องเรียงประธาน + ภาคแสดง |
+
+## 9. Latihan Interaktif<br>แบบฝึกหัดโต้ตอบ
+
+Jawab setiap latihan; jawapan disemak serta-merta beserta penjelasan.
+ทำแบบฝึกแต่ละชุด ระบบจะตรวจคำตอบทันทีพร้อมคำอธิบาย
+
+```latihan-golong
+Arahan: Tentukan pola ayat dasar. | ระบุแบบประโยคพื้นฐาน
+Kategori: FN + FN | FN + FK | FN + FA | FN + FSN
+*Ayahnya doktor.* | FN + FN | Predikat *doktor* kata nama. | ภาคแสดงเป็นนาม
+*Kucing itu bernama Comel.* | FN + FK | *bernama* kata kerja. | *bernama* เป็นกริยา
+*Bilik itu sangat bersih.* | FN + FA | Predikat frasa adjektif. | ภาคแสดงเป็นวลีคุณศัพท์
+*Jam tangan itu untuk emak.* | FN + FSN | Predikat frasa sendi nama. | ภาคแสดงเป็นวลีบุพบท
+*Mereka belajar bersungguh-sungguh.* | FN + FK | *belajar* kata kerja. | *belajar* เป็นกริยา
+```
+
+```latihan-golong
+Arahan: Tentukan jenis ayat. | ระบุชนิดประโยค
+Kategori: Penyata · บอกเล่า | Tanya · คำถาม | Perintah · คำสั่ง | Seruan · อุทาน
+*Encik Malik guru bahasa kami.* | Penyata | Memberi maklumat. | ให้ข้อมูล
+*Bilakah kamu tiba?* | Tanya | Kata tanya + *-kah*. | คำถาม + *-kah*
+*Jemputlah masuk.* | Perintah | Ayat silaan. | ประโยคเชื้อเชิญ
+*Syabas atas kejayaan anda!* | Seruan | Kata seru *syabas*. | คำอุทาน *syabas*
+*Dilarang merokok.* | Perintah | Ayat larangan. | ประโยคห้าม
+```
+
+```latihan-isi
+Arahan: Lengkapkan ayat. | เติมประโยคให้สมบูรณ์
+___ awak sudah makan? (soalan tertutup) | Adakah | *Adakah* membentuk soalan ya/tidak. | *Adakah* สร้างคำถามปิด
+___ nama awak? (orang) | Siapakah/Siapa | Kata tanya untuk orang. | คำถามสำหรับคน
+___ merokok di kawasan ini. (papan tanda larangan) | Dilarang | Larangan rasmi. | การห้ามแบบทางการ
+___ masuk, tuan. (silaan) | Jemput/Sila/Silakan | Penanda silaan. | คำเชื้อเชิญ
+```
+
+```latihan-benar
+Arahan: Tentukan sama ada setiap pernyataan betul atau salah. | ตัดสินว่าข้อความแต่ละข้อถูกหรือผิด
+Ayat dasar boleh berbentuk ayat tanya.<br>ประโยคพื้นฐานเป็นประโยคคำถามได้ | S | Ayat dasar ialah ayat penyata. | ประโยคพื้นฐานเป็นประโยคบอกเล่า
+*Ke Phuket ayah saya.* ialah ayat tunggal.<br>*Ke Phuket ayah saya.* เป็นประโยคเดี่ยว | B | Ayat tunggal susunan songsang. | ประโยคเดี่ยวที่เรียงสลับ
+Ayat tanya boleh menggantikan perintah untuk lebih sopan.<br>ใช้ประโยคคำถามแทนคำสั่งให้สุภาพขึ้นได้ | B | *Bolehkah tuan menghantar borang itu?* | ตัวอย่าง
+*Dilarang* sesuai untuk papan tanda rasmi.<br>*Dilarang* เหมาะกับป้ายทางการ | B | Larangan rasmi. | การห้ามแบบทางการ
+```
+
+### Kajian Kes<br>กรณีศึกษา
 
 **Membalas mesej ibu bapa dari Malaysia.** Seorang pelajar latihan industri di pejabat hubungan antarabangsa universiti membalas mesej ibu bapa yang bertanya tentang permohonan anak mereka seperti yang berikut:
 **แชทตอบผู้ปกครองชาวมาเลเซีย** นักศึกษาฝึกงานที่งานวิเทศสัมพันธ์ของมหาวิทยาลัยตอบข้อความผู้ปกครองที่ถามเรื่องการสมัครเรียนของบุตรดังนี้
@@ -119,7 +234,20 @@ Perhatian: sesetengah ahli bahasa menganggap *Tolong jangan…* bercanggah makna
 3. Bincangkan perbezaan kepentingan ketepatan tatabahasa dengan kesantunan dalam kerja perkhidmatan.
    อภิปรายว่าในงานบริการ ความถูกต้องทางไวยากรณ์กับความสุภาพสำคัญต่างกันอย่างไร
 
-## 5. Soalan Penilaian<br>คำถามท้ายบท
+## 10. Rumusan<br>สรุปบทเรียน
+
+- Ayat dasar ialah ayat penyata, aktif dan bersusunan subjek + predikat.
+  ประโยคพื้นฐานเป็นประโยคบอกเล่า กรรตุวาจก เรียงประธาน + ภาคแสดง
+- Empat pola: FN + FN, FN + FK, FN + FA dan FN + FSN, ditentukan oleh predikat.
+  สี่แบบ กำหนดโดยภาคแสดง
+- Ayat tunggal lebih luas: boleh songsang, pasif, tanya, perintah atau seruan.
+  ประโยคเดี่ยวกว้างกว่า เรียงสลับ เป็นกรรมวาจก คำถาม คำสั่ง หรืออุทานได้
+- Empat jenis ayat mengikut tujuan: penyata, tanya, perintah dan seruan.
+  ประโยคสี่ชนิดตามจุดประสงค์
+- Kesantunan bergantung pada bentuk perintah, kata ganti nama dan konteks.
+  ความสุภาพขึ้นกับรูปคำสั่ง สรรพนาม และบริบท
+
+## 11. Kuiz Penilaian<br>แบบทดสอบท้ายบท
 
 ### A. Soalan Objektif<br>ก. ปรนัย
 
@@ -175,10 +303,10 @@ Perhatian: sesetengah ahli bahasa menganggap *Tolong jangan…* bercanggah makna
 2. Mengapakah ahli tatabahasa mengehadkan ayat dasar kepada ayat penyata dalam ragam aktif sahaja? Jelaskan dengan mengaitkannya dengan konsep transformasi ayat (*transformasi*) yang akan dipelajari dalam Bab 13.
    ทำไมนักไวยากรณ์จึงจำกัดประโยคพื้นฐานให้เป็นบอกเล่าแบบกรรตุวาจกเท่านั้น อธิบายโดยเชื่อมกับแนวคิดการแปลงประโยค (*transformasi*) ที่จะเรียนในบทที่ 13
 
-## 6. Rujukan<br>เอกสารอ้างอิงแนะนำ
+## 12. Rujukan<br>เอกสารอ้างอิง
 
-- Nik Safiah Karim et al. (2015). *Tatabahasa Dewan Edisi Ketiga*. Kuala Lumpur: Dewan Bahasa dan Pustaka. — topik *Ayat Dasar* dan *Jenis Ayat*
+- Nik Safiah Karim, Farid M. Onn, Hashim Haji Musa & Abdul Hamid Mahmood. (2015). *Tatabahasa Dewan* (Edisi Ketiga). Kuala Lumpur: Dewan Bahasa dan Pustaka. — topik *Ayat Dasar* dan *Jenis Ayat*
   หัวข้อ *Ayat Dasar* และ *Jenis Ayat*
-- Alias Mohammad Yatim. (1998). *Mengenali Bahasa Melayu*. Kedah: Percetakan Paavai.
-- Sulaiman Masri & Ahmad Khair Mohd Nor. (2002). *Tatabahasa Melayu Mesra Pengguna*. Kuala Lumpur: Utusan Publications & Distributors.
+- Alias Mohammad Yatim. (1998). *Mengenali Bahasa Melayu*. Penerbitan Sarlis.
+- Sulaiman Masri & Ahmad Khair Mohd. Nor. (2002). *Tatabahasa Melayu Mesra Pengguna*. Kuala Lumpur: Utusan Publications & Distributors.
 - มูหำหมัด สาแลบิง. (2569). *ไวยากรณ์ภาษามลายู*. สงขลา: หลักสูตรภาษามลายู มหาวิทยาลัยทักษิณ.

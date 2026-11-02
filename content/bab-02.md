@@ -1,10 +1,17 @@
-<!-- Bab 2 · ไฟล์เนื้อหาบทที่ 2 (สองภาษา: มลายูบน ไทยล่าง)
+<!-- Bab 2 · ไฟล์เนื้อหาบทที่ 2 — โครงสร้าง 12 หัวข้อ
+     1. Tajuk Pelajaran แสดงจากข้อมูลใน assets/js/course.js (ชื่อบท สัปดาห์ CLO) จึงไม่มีหัวข้อ ## ในไฟล์นี้
+     หัวข้อ ## ที่เหลือ 11 หัวข้อ ระบบรู้จักจากคำแรกของหัวข้อ: Hasil · Pengenalan · Konsep · Penerangan · Contoh · Jadual · Kesalahan · Latihan · Rumusan · Kuiz · Rujukan
      วิธีเขียนสองภาษา:
      - ย่อหน้าและข้อในรายการ: บรรทัดแรกภาษามลายู ขึ้นบรรทัดใหม่ (ไม่เว้นบรรทัดว่าง) แล้วเป็นภาษาไทย
      - หัวข้อ (## / ###) และช่องในตาราง: ภาษามลายู<br>ภาษาไทย
-     ห้ามลบหัวข้อระดับ ## (6 ส่วนของบท) และให้คงรูปแบบข้อปรนัย (ก. ข. ค. ง.) กับบรรทัด **เฉลย** ไว้ · คำอธิบายเฉลยอยู่ใต้ **Penjelasan** เป็นรายการ - **เลขข้อ** มลายู<br>ไทย -->
+     แบบฝึกหัดโต้ตอบเขียนเป็นบล็อก ```latihan-isi / latihan-betulkan / latihan-golong / latihan-benar (หนึ่งบรรทัดหนึ่งข้อ แยกช่องด้วย " | ")
+       latihan-isi:      ประโยคที่มี ___ | คำตอบ (หลายคำตอบคั่นด้วย /) | คำอธิบายมลายู | คำอธิบายไทย
+       latihan-betulkan: ประโยคที่มี [คำผิด→คำถูก] | คำอธิบายมลายู | คำอธิบายไทย
+       latihan-golong:   บรรทัด Kategori: ก | ข แล้วตามด้วย  ข้อความ | ชื่อหมวด | คำอธิบายมลายู | คำอธิบายไทย
+       latihan-benar:    ข้อความ | B (ถูก) หรือ S (ผิด) | คำอธิบายมลายู | คำอธิบายไทย
+     ในส่วน Kuiz Penilaian ให้คงรูปแบบข้อปรนัย (ก. ข. ค. ง.) บรรทัด **เฉลย** และรายการ **Penjelasan** ไว้ -->
 
-## 1. Hasil Pembelajaran<br>ผลลัพธ์การเรียนรู้ประจำบท
+## 2. Hasil Pembelajaran<br>ผลลัพธ์การเรียนรู้
 
 Pada akhir bab ini, pelajar dapat:
 เมื่อจบบทนี้ นักศึกษาสามารถ
@@ -18,7 +25,16 @@ Pada akhir bab ini, pelajar dapat:
 4. mengelaskan empat bentuk kata, iaitu *kata tunggal, kata terbitan, kata majmuk, kata ganda* (CLO2)
    จำแนกรูปคำ 4 แบบ คือ *kata tunggal, kata terbitan, kata majmuk, kata ganda* ได้ (CLO2)
 
-## 2. Rangka Bab<br>โครงร่างประจำบท
+## 3. Pengenalan<br>บทนำ
+
+Bab 1 menunjukkan bahawa tatabahasa bermula daripada unit yang kecil. Bab ini menumpukan dua unit asas morfologi, iaitu *morfem* dan *kata*. Pelajar yang dapat mencerakinkan kata kepada morfemnya akan lebih mudah memahami imbuhan, penggandaan dan pemajmukan dalam Bab 6 dan Bab 7.
+บทที่ 1 แสดงว่าไวยากรณ์เริ่มจากหน่วยเล็ก บทนี้เน้นหน่วยพื้นฐานสองหน่วยของวจีวิภาค คือ *morfem* และ *kata* ผู้เรียนที่แยกคำออกเป็นหน่วยคำได้จะเข้าใจการเติมปัจจัย การซ้ำคำ และการประสมคำในบทที่ 6 และ 7 ได้ง่ายขึ้น
+
+Kemahiran ini juga sangat praktikal. Kamus Melayu menyusun kata mengikut kata dasar, jadi pelajar yang tidak dapat mengenal pasti kata dasar akan sukar mencari makna kata seperti *memperkenalkan* atau *kebersihan*.
+ทักษะนี้ใช้ได้จริงด้วย พจนานุกรมมลายูเรียงคำตามคำฐาน ผู้เรียนที่หาคำฐานไม่เป็นจะค้นความหมายของคำอย่าง *memperkenalkan* หรือ *kebersihan* ได้ยาก
+
+**Kandungan bab**
+**เนื้อหาในบท**
 
 1. **2.1 Morfem** (*morfem*)
    **2.1 หน่วยคำ**
@@ -44,7 +60,23 @@ Pada akhir bab ini, pelajar dapat:
    - Mencari kata dasar untuk menggunakan kamus
      การหาคำฐานเพื่อใช้พจนานุกรม
 
-## 3. Isi Penting<br>เนื้อหาสาระสำคัญ
+## 4. Konsep dan Definisi<br>แนวคิดและนิยาม
+
+| Istilah<br>ศัพท์ | Definisi<br>นิยาม |
+|---|---|
+| *morfem* | Unit terkecil yang mempunyai makna atau fungsi tatabahasa<br>หน่วยเล็กที่สุดที่มีความหมายหรือหน้าที่ทางไวยากรณ์ |
+| *morfem bebas* | Morfem yang boleh hadir bersendirian sebagai kata<br>หน่วยคำที่ปรากฏตามลำพังเป็นคำได้ |
+| *morfem terikat* | Morfem yang mesti bergabung dengan morfem lain<br>หน่วยคำที่ต้องเกาะกับหน่วยคำอื่น |
+| *alomorf* | Bentuk-bentuk berlainan bagi morfem yang sama<br>รูปแปรต่าง ๆ ของหน่วยคำเดียวกัน |
+| *kata* | Unit terkecil yang boleh hadir secara bebas dan mempunyai makna yang lengkap<br>หน่วยเล็กที่สุดที่ปรากฏอิสระได้และมีความหมายสมบูรณ์ |
+| *kata dasar* | Bentuk kata yang belum menerima imbuhan<br>รูปคำที่ยังไม่ได้เติมปัจจัย |
+| *suku kata* | Unit sebutan dalam kata, contohnya *ma-ta*<br>หน่วยการออกเสียงในคำ เช่น *ma-ta* |
+| *kata tunggal* | Kata yang tidak menerima imbuhan, tidak digandakan dan tidak dimajmukkan<br>คำที่ไม่เติมปัจจัย ไม่ซ้ำ และไม่ประสม |
+| *kata terbitan* | Kata dasar yang menerima imbuhan<br>คำฐานที่เติมปัจจัย |
+| *kata majmuk* | Gabungan dua kata dasar atau lebih yang membawa satu makna<br>การรวมคำฐานตั้งแต่สองคำที่ให้ความหมายเดียว |
+| *kata ganda* | Kata yang terhasil daripada penggandaan seluruh atau sebahagian kata<br>คำที่เกิดจากการซ้ำทั้งคำหรือบางส่วน |
+
+## 5. Penerangan Tatabahasa<br>คำอธิบายหลักไวยากรณ์
 
 ### 2.1 Morfem<br>หน่วยคำ (*morfem*)
 
@@ -94,7 +126,92 @@ Catatan: apitan *ke-…-an* dikira sebagai **satu** morfem kerana kedua-dua baha
 **Kepentingan dari segi amalan:** Kamus Melayu seperti *Kamus Dewan* menyusun kata mengikut kata dasar. Untuk mencari *memperkenalkan*, pengguna perlu tahu bahawa kata itu terletak di bawah *kenal*.
 **ความสำคัญในทางปฏิบัติ** พจนานุกรมมลายู เช่น *Kamus Dewan* เรียงคำตามคำฐาน ผู้ที่จะค้น *memperkenalkan* ต้องรู้ว่าต้องเปิดที่ *kenal*
 
-## 4. Kajian Kes<br>กรณีศึกษา
+## 6. Contoh Ayat<br>ตัวอย่างประโยค
+
+| Ayat<br>ประโยค | Huraian<br>คำอธิบาย |
+|---|---|
+| *Rumah itu besar.* | Setiap kata ialah satu morfem bebas<br>ทุกคำเป็นหน่วยคำอิสระหนึ่งหน่วย |
+| *Adik **berlari** ke sekolah.* | *berlari* = *ber-* + *lari*: morfem terikat + morfem bebas<br>หน่วยคำไม่อิสระ + หน่วยคำอิสระ |
+| *Buku itu **diajarkannya** kepada kami.* | *di-* + *ajar* + *-kan* + *-nya*: empat morfem dalam satu kata<br>สี่หน่วยคำในคำเดียว |
+| *Kebersihan kampus penting.* | *ke-…-an* dikira satu morfem; kata dasarnya *bersih*<br>ปัจจัยคร่อมนับเป็นหนึ่งหน่วยคำ คำฐานคือ *bersih* |
+| *Air mata ibu mengalir.* | *air mata* ialah kata majmuk, bukan dua kata yang berasingan maknanya<br>*air mata* เป็นคำประสม |
+| *Sayur-mayur di pasar segar.* | *sayur-mayur* ialah kata ganda berentak<br>*sayur-mayur* เป็นคำซ้ำแบบสัมผัส |
+
+## 7. Jadual Perbandingan<br>ตารางเปรียบเทียบ
+
+**A. Morfem dan kata**
+**ก. หน่วยคำกับคำ**
+
+| Aspek<br>ประเด็น | Morfem<br>หน่วยคำ | Kata<br>คำ |
+|---|---|---|
+| Boleh hadir bersendirian<br>ปรากฏลำพังได้ | Tidak semestinya (*ber-* tidak boleh)<br>ไม่เสมอไป (*ber-* ไม่ได้) | Ya<br>ได้ |
+| Saiz<br>ขนาด | Unit terkecil bermakna<br>หน่วยเล็กที่สุดที่มีความหมาย | Satu morfem atau lebih<br>หนึ่งหน่วยคำขึ้นไป |
+| Contoh<br>ตัวอย่าง | *ber-*, *-kan*, *lari* | *berlari*, *rumah* |
+
+**B. Empat bentuk kata**
+**ข. รูปคำสี่แบบ**
+
+| Bentuk<br>รูปคำ | Proses<br>กระบวนการ | Contoh<br>ตัวอย่าง |
+|---|---|---|
+| *kata tunggal* | Tiada proses<br>ไม่มีกระบวนการ | *ikan, pergi* |
+| *kata terbitan* | Pengimbuhan<br>การเติมปัจจัย | *pelajaran, berjalan* |
+| *kata majmuk* | Pemajmukan<br>การประสมคำ | *kapal terbang* |
+| *kata ganda* | Penggandaan<br>การซ้ำคำ | *rumah-rumah, lelaki* |
+
+## 8. Kesalahan Lazim<br>ข้อผิดพลาดที่พบบ่อย
+
+| Salah<br>ผิด | Betul<br>ถูก | Sebab<br>เหตุผล |
+|---|---|---|
+| Mencari *memperkenalkan* di bawah huruf M | Cari di bawah *kenal* | Kamus menyusun kata mengikut kata dasar<br>พจนานุกรมเรียงตามคำฐาน |
+| Kata dasar *menyapu* ialah *nyapu* | Kata dasarnya *sapu* | Bunyi *s* luluh apabila menerima *meN-*<br>เสียง *s* หลอมเมื่อเติม *meN-* |
+| *ke-…-an* dikira dua morfem | *ke-…-an* ialah satu morfem | Kedua-dua bahagian apitan hadir serentak<br>ปัจจัยคร่อมปรากฏพร้อมกันทั้งสองส่วน |
+| *kapal terbang* dianggap dua kata bebas | Satu kata majmuk | Gabungan itu membawa satu makna (pesawat)<br>รวมกันแล้วมีความหมายเดียว |
+| *dan* bukan morfem kerana tiada makna isi | *dan* ialah morfem bebas | Morfem boleh membawa fungsi tatabahasa<br>หน่วยคำอาจมีแค่หน้าที่ทางไวยากรณ์ก็ได้ |
+
+## 9. Latihan Interaktif<br>แบบฝึกหัดโต้ตอบ
+
+Jawab setiap latihan; jawapan disemak serta-merta beserta penjelasan.
+ทำแบบฝึกแต่ละชุด ระบบจะตรวจคำตอบทันทีพร้อมคำอธิบาย
+
+```latihan-isi
+Arahan: Taipkan kata dasar atau bilangan yang betul. | พิมพ์คำฐานหรือจำนวนที่ถูกต้อง
+Kata dasar bagi *menyapu* ialah ___. | sapu | Bunyi *s* luluh: *meN-* + *sapu* → *menyapu*. | เสียง *s* หลอมหายไป
+Kata dasar bagi *memperkenalkan* ialah ___. | kenal | *meN-* + *per-* + *kenal* + *-kan*. | *meN-* + *per-* + *kenal* + *-kan*
+Kata *berlari* terdiri daripada ___ morfem. | 2/dua | *ber-* + *lari*. | *ber-* + *lari*
+Kata *kebersihan* terdiri daripada ___ morfem. | 2/dua | *ke-…-an* dikira satu morfem + *bersih*. | ปัจจัยคร่อมนับหนึ่งหน่วย + *bersih*
+Kata dasar bagi *pelajaran* ialah ___. | ajar | *pe-…-an* + *ajar*; bentuk *pel-* berlaku di hadapan *ajar*. | คำฐานคือ *ajar*
+```
+
+```latihan-golong
+Arahan: Golongkan setiap morfem. | จัดประเภทหน่วยคำแต่ละหน่วย
+Kategori: Morfem bebas · หน่วยคำอิสระ | Morfem terikat · หน่วยคำไม่อิสระ
+*rumah* | Morfem bebas | Boleh hadir sebagai kata. | ปรากฏเป็นคำได้
+*ber-* | Morfem terikat | Awalan mesti melekat pada kata dasar. | อุปสรรคต้องเกาะคำฐาน
+*-nya* | Morfem terikat | Klitik tidak hadir bersendirian. | คำเกาะปรากฏลำพังไม่ได้
+*dan* | Morfem bebas | Kata tugas juga morfem bebas. | คำไวยากรณ์ก็เป็นหน่วยคำอิสระ
+*-lah* | Morfem terikat | Partikel melekat di hujung kata. | คำเสริมเกาะท้ายคำ
+*cantik* | Morfem bebas | Kata adjektif yang boleh berdiri sendiri. | คุณศัพท์ที่ยืนเองได้
+```
+
+```latihan-golong
+Arahan: Tentukan bentuk setiap kata. | ระบุรูปของแต่ละคำ
+Kategori: Tunggal · คำเดี่ยว | Terbitan · คำแปลง | Majmuk · คำประสม | Ganda · คำซ้ำ
+*kapal terbang* | Majmuk | Dua kata dasar dengan satu makna. | คำฐานสองคำ ความหมายเดียว
+*pelajaran* | Terbitan | Kata dasar *ajar* + imbuhan. | คำฐาน *ajar* + ปัจจัย
+*ikan* | Tunggal | Tiada imbuhan, gandaan atau majmuk. | ไม่มีการเติม ซ้ำ หรือประสม
+*lelaki* | Ganda | Penggandaan separa suku kata pertama. | ซ้ำพยางค์แรกบางส่วน
+*buah-buahan* | Ganda | Penggandaan kata berimbuhan *buah* + *-an*. | ซ้ำคำที่เติมปัจจัย
+```
+
+```latihan-benar
+Arahan: Tentukan sama ada setiap pernyataan betul atau salah. | ตัดสินว่าข้อความแต่ละข้อถูกหรือผิด
+Setiap kata mesti terdiri daripada sekurang-kurangnya dua morfem.<br>ทุกคำต้องมีอย่างน้อยสองหน่วยคำ | S | Kata seperti *rumah* hanya satu morfem. | คำอย่าง *rumah* มีหน่วยคำเดียว
+*mem-*, *men-* dan *meng-* ialah alomorf bagi *meN-*.<br>*mem-*, *men-*, *meng-* เป็นรูปแปรของ *meN-* | B | Bentuknya berubah mengikut bunyi awal kata dasar. | รูปเปลี่ยนตามเสียงต้นของคำฐาน
+Pola suku kata asli bahasa Melayu termasuk KKV.<br>รูปแบบพยางค์ดั้งเดิมของมลายูมี KKV | S | Pola asli ialah V, VK, KV dan KVK; KKV datang daripada kata pinjaman. | รูปแบบดั้งเดิมคือ V, VK, KV, KVK ส่วน KKV มาจากคำยืม
+Partikel *-lah* ialah morfem terikat.<br>คำเสริม *-lah* เป็นหน่วยคำไม่อิสระ | B | *-lah* mesti melekat pada kata lain. | *-lah* ต้องเกาะคำอื่น
+```
+
+### Kajian Kes<br>กรณีศึกษา
 
 **Tidak menemui kata dalam kamus.** Seorang pelajar tahun satu membaca berita Malaysia dan menemui ayat berikut:
 **ค้นคำในพจนานุกรมไม่เจอ** นักศึกษาปี 1 คนหนึ่งอ่านข่าวมาเลเซียและพบประโยค
@@ -114,7 +231,20 @@ Dia membuka *Kamus Dewan* pada huruf M untuk mencari *memperkenalkan* dan pada h
 3. Sediakan carta alir "Cara mencari kata Melayu dalam kamus" untuk pelajar junior.
    ทำแผนภูมิขั้นตอน "วิธีค้นคำมลายูในพจนานุกรม" สำหรับรุ่นน้อง
 
-## 5. Soalan Penilaian<br>คำถามท้ายบท
+## 10. Rumusan<br>สรุปบทเรียน
+
+- Morfem ialah unit terkecil yang bermakna atau berfungsi; kata ialah unit terkecil yang boleh berdiri bebas.
+  หน่วยคำคือหน่วยเล็กที่สุดที่มีความหมายหรือหน้าที่ ส่วนคำคือหน่วยเล็กที่สุดที่ยืนอิสระได้
+- Morfem terbahagi kepada morfem bebas dan morfem terikat (imbuhan, partikel, klitik).
+  หน่วยคำแบ่งเป็นหน่วยคำอิสระและไม่อิสระ (ปัจจัย คำเสริม คำเกาะ)
+- Alomorf ialah bentuk berlainan bagi morfem yang sama, contohnya bentuk-bentuk *meN-*.
+  รูปแปรคือรูปต่าง ๆ ของหน่วยคำเดียวกัน เช่น รูปของ *meN-*
+- Terdapat empat bentuk kata: tunggal, terbitan, majmuk dan ganda.
+  รูปคำมีสี่แบบ: เดี่ยว แปลง ประสม และซ้ำ
+- Cerakinkan kata dari luar ke dalam untuk mendapat kata dasar, kemudian gunakan kata dasar itu untuk mencari dalam kamus.
+  แยกคำจากนอกเข้าในเพื่อหาคำฐาน แล้วใช้คำฐานค้นพจนานุกรม
+
+## 11. Kuiz Penilaian<br>แบบทดสอบท้ายบท
 
 ### A. Soalan Objektif<br>ก. ปรนัย
 
@@ -170,12 +300,12 @@ Dia membuka *Kamus Dewan* pada huruf M untuk mencari *memperkenalkan* dan pada h
 2. Pilih satu perenggan berita bahasa Melayu (kira-kira 50 patah perkataan). Kira kadar *kata tunggal / terbitan / majmuk / ganda*, kemudian simpulkan bentuk kata yang paling kerap dalam bahasa tulisan rasmi dan sebabnya.
    เลือกย่อหน้าข่าวภาษามลายู 1 ย่อหน้า (ประมาณ 50 คำ) นับสัดส่วน *kata tunggal / terbitan / majmuk / ganda* แล้วสรุปว่ารูปคำใดพบมากที่สุดในภาษาเขียนทางการ และเพราะเหตุใด
 
-## 6. Rujukan<br>เอกสารอ้างอิงแนะนำ
+## 12. Rujukan<br>เอกสารอ้างอิง
 
-- Nik Safiah Karim et al. (2015). *Tatabahasa Dewan Edisi Ketiga*. Kuala Lumpur: Dewan Bahasa dan Pustaka. — bahagian morfologi: *morfem* dan *bentuk kata*
+- Nik Safiah Karim, Farid M. Onn, Hashim Haji Musa & Abdul Hamid Mahmood. (2015). *Tatabahasa Dewan* (Edisi Ketiga). Kuala Lumpur: Dewan Bahasa dan Pustaka. — bahagian morfologi: *morfem* dan *bentuk kata*
   ภาคมอร์โฟโลยี: *morfem* และ *bentuk kata*
-- Abdullah Hassan. (2003). *Tatabahasa Bahasa Melayu*. Pahang: PTS Publications & Distributors.
-- Sulaiman Masri & Ahmad Khair Mohd Nor. (2002). *Tatabahasa Melayu Mesra Pengguna*. Kuala Lumpur: Utusan Publications & Distributors.
+- Abdullah Hassan. (2002). *Tatabahasa Bahasa Melayu: Morfologi dan Sintaksis untuk Guru dan Pelajar*. Pahang: PTS Publications & Distributors.
+- Sulaiman Masri & Ahmad Khair Mohd. Nor. (2002). *Tatabahasa Melayu Mesra Pengguna*. Kuala Lumpur: Utusan Publications & Distributors.
 - มูหำหมัด สาแลบิง. (2569). *ไวยากรณ์ภาษามลายู*. สงขลา: หลักสูตรภาษามลายู มหาวิทยาลัยทักษิณ.
 - *Kamus Dewan* (edisi terkini) dan PRPM (prpm.dbp.gov.my) — latihan mencari kata berdasarkan kata dasar
   ฝึกค้นคำตามคำฐาน

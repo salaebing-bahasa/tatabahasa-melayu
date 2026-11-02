@@ -36,18 +36,18 @@ window.COURSE = {
      struktur: 12 = บทที่เขียนตามโครงสร้างใหม่ 12 หัวข้อ (Tajuk Pelajaran … Rujukan) ถ้าไม่ใส่จะเป็นโครงสร้างเดิม 6 หัวข้อ */
   chapters: [
     { no: 1,  week: 1,  part: "morfologi", ms: "Pengenalan Tatabahasa", th: "บทนำ: ไวยากรณ์ภาษามลายูกับการสื่อสาร", clos: ["CLO1", "CLO4"], struktur: 12 },
-    { no: 2,  week: 2,  part: "morfologi", ms: "Morfem dan Kata", th: "หน่วยคำและคำ", clos: ["CLO1", "CLO2"] },
-    { no: 3,  week: 3,  part: "morfologi", ms: "Kata Nama", th: "คำนาม", clos: ["CLO2", "CLO4"] },
-    { no: 4,  week: 4,  part: "morfologi", ms: "Kata Kerja dan Kata Adjektif", th: "คำกริยาและคำคุณศัพท์", clos: ["CLO2", "CLO4"] },
-    { no: 5,  week: 5,  part: "morfologi", ms: "Kata Tugas", th: "คำไวยากรณ์", clos: ["CLO2", "CLO4"] },
-    { no: 6,  week: 6,  part: "morfologi", ms: "Pengimbuhan I: Awalan", th: "การเติมปัจจัย I: อุปสรรค", clos: ["CLO2"] },
-    { no: 7,  week: 7,  part: "morfologi", ms: "Pengimbuhan II dan Pembentukan Kata Lain", th: "การเติมปัจจัย II และกระบวนการสร้างคำอื่น", clos: ["CLO2", "CLO4"] },
-    { no: 8,  week: 9,  part: "sintaksis", ms: "Pengenalan Sintaksis", th: "บทนำวากยสัมพันธ์", clos: ["CLO1", "CLO3"] },
-    { no: 9,  week: 10, part: "sintaksis", ms: "Frasa Nama dan Frasa Kerja", th: "วลีนามและวลีกริยา", clos: ["CLO3", "CLO4"] },
-    { no: 10, week: 11, part: "sintaksis", ms: "Frasa Adjektif dan Frasa Sendi Nama", th: "วลีคุณศัพท์และวลีบุพบท", clos: ["CLO3", "CLO4"] },
-    { no: 11, week: 12, part: "sintaksis", ms: "Ayat Dasar dan Jenis Ayat", th: "ประโยคพื้นฐานและชนิดของประโยค", clos: ["CLO3", "CLO4"] },
-    { no: 12, week: 13, part: "sintaksis", ms: "Ayat Tunggal dan Ayat Majmuk", th: "ประโยคเดี่ยวและประโยครวม", clos: ["CLO3", "CLO4"] },
-    { no: 13, week: 14, part: "sintaksis", ms: "Ragam, Susunan dan Transformasi Ayat", th: "วาจก การเรียงลำดับ และการแปลงประโยค", clos: ["CLO3", "CLO4"] }
+    { no: 2,  week: 2,  part: "morfologi", ms: "Morfem dan Kata", th: "หน่วยคำและคำ", clos: ["CLO1", "CLO2"], struktur: 12 },
+    { no: 3,  week: 3,  part: "morfologi", ms: "Kata Nama", th: "คำนาม", clos: ["CLO2", "CLO4"], struktur: 12 },
+    { no: 4,  week: 4,  part: "morfologi", ms: "Kata Kerja dan Kata Adjektif", th: "คำกริยาและคำคุณศัพท์", clos: ["CLO2", "CLO4"], struktur: 12 },
+    { no: 5,  week: 5,  part: "morfologi", ms: "Kata Tugas", th: "คำไวยากรณ์", clos: ["CLO2", "CLO4"], struktur: 12 },
+    { no: 6,  week: 6,  part: "morfologi", ms: "Pengimbuhan I: Awalan", th: "การเติมปัจจัย I: อุปสรรค", clos: ["CLO2"], struktur: 12 },
+    { no: 7,  week: 7,  part: "morfologi", ms: "Pengimbuhan II dan Pembentukan Kata Lain", th: "การเติมปัจจัย II และกระบวนการสร้างคำอื่น", clos: ["CLO2", "CLO4"], struktur: 12 },
+    { no: 8,  week: 9,  part: "sintaksis", ms: "Pengenalan Sintaksis", th: "บทนำวากยสัมพันธ์", clos: ["CLO1", "CLO3"], struktur: 12 },
+    { no: 9,  week: 10, part: "sintaksis", ms: "Frasa Nama dan Frasa Kerja", th: "วลีนามและวลีกริยา", clos: ["CLO3", "CLO4"], struktur: 12 },
+    { no: 10, week: 11, part: "sintaksis", ms: "Frasa Adjektif dan Frasa Sendi Nama", th: "วลีคุณศัพท์และวลีบุพบท", clos: ["CLO3", "CLO4"], struktur: 12 },
+    { no: 11, week: 12, part: "sintaksis", ms: "Ayat Dasar dan Jenis Ayat", th: "ประโยคพื้นฐานและชนิดของประโยค", clos: ["CLO3", "CLO4"], struktur: 12 },
+    { no: 12, week: 13, part: "sintaksis", ms: "Ayat Tunggal dan Ayat Majmuk", th: "ประโยคเดี่ยวและประโยครวม", clos: ["CLO3", "CLO4"], struktur: 12 },
+    { no: 13, week: 14, part: "sintaksis", ms: "Ragam, Susunan dan Transformasi Ayat", th: "วาจก การเรียงลำดับ และการแปลงประโยค", clos: ["CLO3", "CLO4"], struktur: 12 }
   ],
   /* สัปดาห์ที่ไม่ใช่บทเรียน */
   extraWeeks: [
@@ -70,10 +70,10 @@ window.COURSE = {
   ],
   books: [
     "มูหำหมัด สาแลบิง. (2569). <i>ไวยากรณ์ภาษามลายู</i>. สงขลา: หลักสูตรภาษามลายู คณะมนุษยศาสตร์และสังคมศาสตร์ มหาวิทยาลัยทักษิณ. (buku teks utama · ตำราหลัก)",
-    "Abdullah Hassan. (2003). <i>Tatabahasa Bahasa Melayu</i>. Pahang: PTS Publications &amp; Distributors.",
-    "Alias Mohammad Yatim. (1998). <i>Mengenali Bahasa Melayu</i>. Kedah: Percetakan Paavai.",
+    "Abdullah Hassan. (2002). <i>Tatabahasa Bahasa Melayu: Morfologi dan Sintaksis untuk Guru dan Pelajar</i>. Pahang: PTS Publications &amp; Distributors.",
+    "Alias Mohammad Yatim. (1998). <i>Mengenali Bahasa Melayu</i>. Penerbitan Sarlis.",
     "Nik Safiah Karim, Farid M. Onn, Hashim Haji Musa &amp; Abdul Hamid Mahmood. (2015). <i>Tatabahasa Dewan Edisi Ketiga</i>. Kuala Lumpur: Dewan Bahasa dan Pustaka.",
-    "Sulaiman Masri &amp; Ahmad Khair Mohd Nor. (2002). <i>Tatabahasa Melayu Mesra Pengguna</i>. Kuala Lumpur: Utusan Publications &amp; Distributors.",
+    "Sulaiman Masri &amp; Ahmad Khair Mohd. Nor. (2002). <i>Tatabahasa Melayu Mesra Pengguna</i>. Kuala Lumpur: Utusan Publications &amp; Distributors.",
     "Asmah Haji Omar. (2009). <i>Nahu Melayu Mutakhir</i> (Edisi Kelima). Kuala Lumpur: Dewan Bahasa dan Pustaka. (bacaan tambahan · อ่านเพิ่มเติม)"
   ],
   resources: [

@@ -1,10 +1,17 @@
-<!-- Bab 9 · ไฟล์เนื้อหาบทที่ 9 (สองภาษา: มลายูบน ไทยล่าง)
+<!-- Bab 9 · ไฟล์เนื้อหาบทที่ 9 — โครงสร้าง 12 หัวข้อ
+     1. Tajuk Pelajaran แสดงจากข้อมูลใน assets/js/course.js (ชื่อบท สัปดาห์ CLO) จึงไม่มีหัวข้อ ## ในไฟล์นี้
+     หัวข้อ ## ที่เหลือ 11 หัวข้อ ระบบรู้จักจากคำแรกของหัวข้อ: Hasil · Pengenalan · Konsep · Penerangan · Contoh · Jadual · Kesalahan · Latihan · Rumusan · Kuiz · Rujukan
      วิธีเขียนสองภาษา:
      - ย่อหน้าและข้อในรายการ: บรรทัดแรกภาษามลายู ขึ้นบรรทัดใหม่ (ไม่เว้นบรรทัดว่าง) แล้วเป็นภาษาไทย
      - หัวข้อ (## / ###) และช่องในตาราง: ภาษามลายู<br>ภาษาไทย
-     ห้ามลบหัวข้อระดับ ## (6 ส่วนของบท) และให้คงรูปแบบข้อปรนัย (ก. ข. ค. ง.) กับบรรทัด **เฉลย** ไว้ · คำอธิบายเฉลยอยู่ใต้ **Penjelasan** เป็นรายการ - **เลขข้อ** มลายู<br>ไทย -->
+     แบบฝึกหัดโต้ตอบเขียนเป็นบล็อก ```latihan-isi / latihan-betulkan / latihan-golong / latihan-benar (หนึ่งบรรทัดหนึ่งข้อ แยกช่องด้วย " | ")
+       latihan-isi:      ประโยคที่มี ___ | คำตอบ (หลายคำตอบคั่นด้วย /) | คำอธิบายมลายู | คำอธิบายไทย
+       latihan-betulkan: ประโยคที่มี [คำผิด→คำถูก] | คำอธิบายมลายู | คำอธิบายไทย
+       latihan-golong:   บรรทัด Kategori: ก | ข แล้วตามด้วย  ข้อความ | ชื่อหมวด | คำอธิบายมลายู | คำอธิบายไทย
+       latihan-benar:    ข้อความ | B (ถูก) หรือ S (ผิด) | คำอธิบายมลายู | คำอธิบายไทย
+     ในส่วน Kuiz Penilaian ให้คงรูปแบบข้อปรนัย (ก. ข. ค. ง.) บรรทัด **เฉลย** และรายการ **Penjelasan** ไว้ -->
 
-## 1. Hasil Pembelajaran<br>ผลลัพธ์การเรียนรู้ประจำบท
+## 2. Hasil Pembelajaran<br>ผลลัพธ์การเรียนรู้
 
 Pada akhir bab ini, pelajar dapat:
 เมื่อจบบทนี้ นักศึกษาสามารถ
@@ -18,7 +25,16 @@ Pada akhir bab ini, pelajar dapat:
 4. membina frasa nama dan frasa kerja yang diperluas secara berlapis dengan betul (CLO4)
    สร้างวลีนามและวลีกริยาที่ขยายความหลายชั้นได้ถูกต้อง (CLO4)
 
-## 2. Rangka Bab<br>โครงร่างประจำบท
+## 3. Pengenalan<br>บทนำ
+
+Bab ini meneliti dua frasa yang paling kerap digunakan, iaitu frasa nama dan frasa kerja. Kedua-duanya membentuk subjek dan predikat dalam kebanyakan ayat bahasa Melayu.
+บทนี้ศึกษาวลีสองชนิดที่ใช้บ่อยที่สุด คือ วลีนามและวลีกริยา ทั้งสองเป็นประธานและภาคแสดงของประโยคมลายูส่วนใหญ่
+
+Susunan frasa nama bahasa Melayu mengikut Hukum D-M (diterangkan–menerangkan), sama seperti bahasa Thai tetapi berbeza daripada bahasa Inggeris. Banyak papan tanda di selatan Thailand tersalah susun kerana meniru bahasa Inggeris.
+การเรียงวลีนามมลายูเป็นไปตามกฎ ดี-เอ็ม (คำที่ถูกขยายอยู่หน้า คำขยายอยู่หลัง) เหมือนภาษาไทยแต่ต่างจากภาษาอังกฤษ ป้ายหลายป้ายในภาคใต้เรียงผิดเพราะเลียนแบบภาษาอังกฤษ
+
+**Kandungan bab**
+**เนื้อหาในบท**
 
 1. **9.1 Frasa Nama** (*frasa nama*)
    **9.1 วลีนาม**
@@ -37,7 +53,21 @@ Pada akhir bab ini, pelajar dapat:
    - Kata bantu · pelengkap · keterangan (*keterangan*)
      คำช่วย · ส่วนเติมเต็ม · ส่วนขยาย
 
-## 3. Isi Penting<br>เนื้อหาสาระสำคัญ
+## 4. Konsep dan Definisi<br>แนวคิดและนิยาม
+
+| Istilah<br>ศัพท์ | Definisi<br>นิยาม |
+|---|---|
+| *frasa nama (FN)* | Frasa yang unsur intinya kata nama atau kata ganti nama<br>วลีที่มีคำนามหรือสรรพนามเป็นคำหลัก |
+| *inti* | Unsur utama dalam frasa<br>ส่วนสำคัญของวลี |
+| *penerang* | Unsur yang menerangkan inti<br>ส่วนที่ขยายคำหลัก |
+| *penentu hadapan* | Unsur sebelum inti: *semua, para*, bilangan + penjodoh bilangan, gelaran<br>ส่วนที่อยู่หน้าคำหลัก |
+| *penentu belakang* | Unsur di hujung frasa nama: *ini, itu, tersebut*<br>ส่วนท้ายวลีนาม |
+| *Hukum D-M* | Unsur yang diterangkan hadir di hadapan unsur yang menerangkan<br>คำที่ถูกขยายอยู่หน้าคำขยาย |
+| *frasa kerja (FK)* | Frasa yang unsur intinya kata kerja<br>วลีที่มีคำกริยาเป็นคำหลัก |
+| *pelengkap* | Unsur wajib selepas kata kerja tak transitif berpelengkap<br>ส่วนจำเป็นหลังอกรรมกริยาแบบมีส่วนเติมเต็ม |
+| *keterangan* | Unsur tambahan: waktu, tempat, cara, alat, tujuan, sebab, penyertaan<br>ส่วนขยายเพิ่มเติม |
+
+## 5. Penerangan Tatabahasa<br>คำอธิบายหลักไวยากรณ์
 
 ### 9.1 Frasa Nama<br>วลีนาม (*frasa nama*)
 
@@ -106,7 +136,91 @@ FN
 **Pelengkap ≠ keterangan:** Pelengkap tidak boleh digugurkan (`*`*Mereka tinggal.*), manakala keterangan boleh digugurkan (*Ibu membeli ikan.*).
 **ส่วนเติมเต็ม ≠ ส่วนขยาย** ส่วนเติมเต็มตัดทิ้งไม่ได้ ส่วนขยายตัดทิ้งได้
 
-## 4. Kajian Kes<br>กรณีศึกษา
+## 6. Contoh Ayat<br>ตัวอย่างประโยค
+
+| Ayat<br>ประโยค | Huraian<br>คำอธิบาย |
+|---|---|
+| ***Dua buah rumah batu yang besar itu** dijual.* | FN: penentu hadapan + inti + penerang + penentu belakang<br>วลีนามโครงสร้างเต็ม |
+| *Saya minum **kopi panas**.* | D-M: *kopi* (D) + *panas* (M)<br>คำหลักอยู่หน้า |
+| *Adik **sedang tidur**.* | FK: kata bantu + kata kerja tak transitif<br>คำช่วย + อกรรมกริยา |
+| *Dia **menjadi guru**.* | FK: kata kerja + pelengkap<br>กริยา + ส่วนเติมเต็ม |
+| *Ibu **membeli ikan di pasar pagi tadi**.* | FK: kata kerja + objek + keterangan tempat + keterangan waktu<br>กริยา + กรรม + ส่วนขยาย |
+| *Hamidah membuka kotak itu **dengan pisau**.* | Keterangan alat<br>ส่วนขยายบอกเครื่องมือ |
+
+## 7. Jadual Perbandingan<br>ตารางเปรียบเทียบ
+
+**A. Susunan frasa nama dalam tiga bahasa**
+**ก. การเรียงวลีนามในสามภาษา**
+
+| Melayu<br>มลายู | Thai<br>ไทย | Inggeris<br>อังกฤษ |
+|---|---|---|
+| *kopi panas* (D-M) | กาแฟร้อน (D-M) | hot coffee (M-D) |
+| *rumah besar itu* (D-M) | บ้านหลังใหญ่นั้น (D-M) | that big house (M-D) |
+| *Universiti Thaksin* (D-M) | มหาวิทยาลัยทักษิณ (D-M) | Thaksin University (M-D) |
+
+**B. Jenis keterangan**
+**ข. ชนิดของส่วนขยาย**
+
+| Jenis<br>ชนิด | Penanda lazim<br>คำบ่งชี้ | Contoh<br>ตัวอย่าง |
+|---|---|---|
+| Waktu<br>เวลา | *semalam, pada, ketika* | *pada hari Isnin* |
+| Tempat<br>สถานที่ | *di, ke, dari* | *di kampus* |
+| Cara<br>วิธี | *dengan* | *dengan cepat* |
+| Alat<br>เครื่องมือ | *dengan* | *dengan pisau* |
+| Tujuan<br>จุดประสงค์ | *untuk, bagi* | *untuk keluarganya* |
+| Sebab<br>เหตุ | *kerana* | *kerana hujan* |
+| Penyertaan<br>การร่วม | *bersama, dengan* | *bersama rakannya* |
+
+## 8. Kesalahan Lazim<br>ข้อผิดพลาดที่พบบ่อย
+
+| Salah<br>ผิด | Betul<br>ถูก | Sebab<br>เหตุผล |
+|---|---|---|
+| `*`*Thai Kedai Makanan* | *Kedai Makanan Thai* | Hukum D-M<br>กฎ ดี-เอ็ม |
+| `*`*Hat Yai Pasar Terapung* | *Pasar Terapung Hat Yai* | Hukum D-M<br>กฎ ดี-เอ็ม |
+| `*`*Panas Kopi* | *Kopi Panas* | Penerang hadir selepas inti<br>คำขยายอยู่หลังคำหลัก |
+| `*`*Murah Hotel* | *Hotel Murah* | Pengaruh bahasa Inggeris<br>อิทธิพลภาษาอังกฤษ |
+| `*`*Mereka tinggal.* | *Mereka tinggal di Yala.* | Pelengkap tidak boleh digugurkan<br>ตัดส่วนเติมเต็มไม่ได้ |
+
+## 9. Latihan Interaktif<br>แบบฝึกหัดโต้ตอบ
+
+Jawab setiap latihan; jawapan disemak serta-merta beserta penjelasan.
+ทำแบบฝึกแต่ละชุด ระบบจะตรวจคำตอบทันทีพร้อมคำอธิบาย
+
+```latihan-isi
+Arahan: Susun semula mengikut Hukum D-M. | เรียงใหม่ตามกฎ ดี-เอ็ม
+*Thai masakan* → ___ | masakan Thai | Inti *masakan* di hadapan. | คำหลักอยู่หน้า
+*merah baju* → ___ | baju merah | Inti *baju* di hadapan. | คำหลักอยู่หน้า
+*Songkhla Masjid* → ___ | Masjid Songkhla | Inti *Masjid* di hadapan. | คำหลักอยู่หน้า
+*Murah Hotel* → ___ | Hotel Murah | Inti *Hotel* di hadapan. | คำหลักอยู่หน้า
+```
+
+```latihan-golong
+Arahan: Tentukan peranan setiap unsur dalam *semua pelajar tahun satu ini*. | ระบุบทบาทของแต่ละส่วน
+Kategori: Penentu hadapan · ชี้เฉพาะหน้า | Inti · คำหลัก | Penerang · คำขยาย | Penentu belakang · ชี้เฉพาะหลัง
+*semua* | Penentu hadapan | Hadir sebelum inti. | อยู่หน้าคำหลัก
+*pelajar* | Inti | Kata nama utama. | คำนามหลัก
+*tahun satu* | Penerang | Menerangkan *pelajar*. | ขยาย *pelajar*
+*ini* | Penentu belakang | Di hujung frasa nama. | อยู่ท้ายวลีนาม
+```
+
+```latihan-golong
+Arahan: Tentukan jenis keterangan. | ระบุชนิดของส่วนขยาย
+Kategori: Waktu · เวลา | Tempat · สถานที่ | Alat · เครื่องมือ | Sebab · เหตุ
+*Dia pulang **kerana hujan**.* | Sebab | *kerana* menyatakan sebab. | *kerana* บอกเหตุ
+*Kami belajar **di perpustakaan**.* | Tempat | *di* + tempat. | *di* + สถานที่
+*Ayah memotong kayu **dengan kapak**.* | Alat | Alat yang digunakan. | เครื่องมือที่ใช้
+*Mereka bertolak **pagi tadi**.* | Waktu | Menyatakan masa. | บอกเวลา
+```
+
+```latihan-benar
+Arahan: Tentukan sama ada setiap pernyataan betul atau salah. | ตัดสินว่าข้อความแต่ละข้อถูกหรือผิด
+*Perdana menteri* ialah pengecualian Hukum D-M.<br>*perdana menteri* เป็นข้อยกเว้นกฎ ดี-เอ็ม | B | Penerang *perdana* hadir di hadapan. | คำขยาย *perdana* อยู่หน้า
+Bahasa Thai dan bahasa Melayu sama-sama mengikut susunan D-M.<br>ภาษาไทยและมลายูเรียงแบบ ดี-เอ็ม เหมือนกัน | B | Contoh *kopi panas* / กาแฟร้อน. | ตัวอย่าง
+Dalam *Dia menjadi guru*, *guru* ialah objek.<br>ใน *Dia menjadi guru* — *guru* เป็นกรรม | S | *guru* pelengkap; ayat tidak boleh dipasifkan. | *guru* เป็นส่วนเติมเต็ม
+*itu* ialah penentu hadapan.<br>*itu* เป็นคำชี้เฉพาะหน้า | S | *itu* penentu belakang. | *itu* เป็นคำชี้เฉพาะหลัง
+```
+
+### Kajian Kes<br>กรณีศึกษา
 
 **Papan tanda kedai di sekitar sempadan Sadao dan Hat Yai.** Banyak kedai membuat papan tanda bahasa Melayu untuk pelancong Malaysia. Contoh yang serupa dengan yang ditemui:
 **ป้ายร้านค้าแถบด่านสะเดาและหาดใหญ่** ร้านค้าหลายแห่งทำป้ายภาษามลายูสำหรับนักท่องเที่ยวชาวมาเลเซีย ตัวอย่างที่พบได้ในทำนองเดียวกัน:
@@ -123,7 +237,20 @@ FN
 3. Reka papan tanda dwibahasa (Thai–Melayu) untuk sebuah kedai sebenar dalam komuniti anda.
    ออกแบบป้ายสองภาษา (ไทย–มลายู) สำหรับร้านค้าจริงในชุมชนของนักศึกษา 1 แห่ง
 
-## 5. Soalan Penilaian<br>คำถามท้ายบท
+## 10. Rumusan<br>สรุปบทเรียน
+
+- Frasa nama terdiri daripada inti dengan penerang, penentu hadapan dan penentu belakang.
+  วลีนามประกอบด้วยคำหลัก คำขยาย และคำชี้เฉพาะหน้า/หลัง
+- Hukum D-M: yang diterangkan di hadapan, yang menerangkan di belakang; ada beberapa pengecualian.
+  กฎ ดี-เอ็ม: คำที่ถูกขยายอยู่หน้า คำขยายอยู่หลัง มีข้อยกเว้นบางคำ
+- Frasa kerja: (kata bantu) + kata kerja + (objek/pelengkap) + (keterangan).
+  วลีกริยา: (คำช่วย) + กริยา + (กรรม/ส่วนเติมเต็ม) + (ส่วนขยาย)
+- Pelengkap wajib; keterangan boleh digugurkan.
+  ส่วนเติมเต็มต้องมี ส่วนขยายตัดได้
+- Keterangan menyatakan waktu, tempat, cara, alat, tujuan, sebab dan penyertaan.
+  ส่วนขยายบอกเวลา สถานที่ วิธี เครื่องมือ จุดประสงค์ เหตุ และการร่วม
+
+## 11. Kuiz Penilaian<br>แบบทดสอบท้ายบท
 
 ### A. Soalan Objektif<br>ก. ปรนัย
 
@@ -179,10 +306,10 @@ FN
 2. Bandingkan *Ibu membeli ikan di pasar.* dengan *Mereka tinggal di Yala.* Mengapakah *di pasar* boleh digugurkan tetapi *di Yala* tidak? Jelaskan dengan konsep pelengkap dan keterangan.
    เปรียบเทียบ *Ibu membeli ikan di pasar.* กับ *Mereka tinggal di Yala.* ทำไม *di pasar* ตัดได้ แต่ *di Yala* ตัดไม่ได้ อธิบายด้วยแนวคิดส่วนเติมเต็มกับส่วนขยาย
 
-## 6. Rujukan<br>เอกสารอ้างอิงแนะนำ
+## 12. Rujukan<br>เอกสารอ้างอิง
 
-- Nik Safiah Karim et al. (2015). *Tatabahasa Dewan Edisi Ketiga*. Kuala Lumpur: Dewan Bahasa dan Pustaka. — topik *Frasa Nama* dan *Frasa Kerja*
+- Nik Safiah Karim, Farid M. Onn, Hashim Haji Musa & Abdul Hamid Mahmood. (2015). *Tatabahasa Dewan* (Edisi Ketiga). Kuala Lumpur: Dewan Bahasa dan Pustaka. — topik *Frasa Nama* dan *Frasa Kerja*
   หัวข้อ *Frasa Nama* และ *Frasa Kerja*
-- Alias Mohammad Yatim. (1998). *Mengenali Bahasa Melayu*. Kedah: Percetakan Paavai.
-- Sulaiman Masri & Ahmad Khair Mohd Nor. (2002). *Tatabahasa Melayu Mesra Pengguna*. Kuala Lumpur: Utusan Publications & Distributors.
+- Alias Mohammad Yatim. (1998). *Mengenali Bahasa Melayu*. Penerbitan Sarlis.
+- Sulaiman Masri & Ahmad Khair Mohd. Nor. (2002). *Tatabahasa Melayu Mesra Pengguna*. Kuala Lumpur: Utusan Publications & Distributors.
 - มูหำหมัด สาแลบิง. (2569). *ไวยากรณ์ภาษามลายู*. สงขลา: หลักสูตรภาษามลายู มหาวิทยาลัยทักษิณ.

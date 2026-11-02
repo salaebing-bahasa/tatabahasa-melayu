@@ -1,10 +1,17 @@
-<!-- Bab 8 · ไฟล์เนื้อหาบทที่ 8 (สองภาษา: มลายูบน ไทยล่าง)
+<!-- Bab 8 · ไฟล์เนื้อหาบทที่ 8 — โครงสร้าง 12 หัวข้อ
+     1. Tajuk Pelajaran แสดงจากข้อมูลใน assets/js/course.js (ชื่อบท สัปดาห์ CLO) จึงไม่มีหัวข้อ ## ในไฟล์นี้
+     หัวข้อ ## ที่เหลือ 11 หัวข้อ ระบบรู้จักจากคำแรกของหัวข้อ: Hasil · Pengenalan · Konsep · Penerangan · Contoh · Jadual · Kesalahan · Latihan · Rumusan · Kuiz · Rujukan
      วิธีเขียนสองภาษา:
      - ย่อหน้าและข้อในรายการ: บรรทัดแรกภาษามลายู ขึ้นบรรทัดใหม่ (ไม่เว้นบรรทัดว่าง) แล้วเป็นภาษาไทย
      - หัวข้อ (## / ###) และช่องในตาราง: ภาษามลายู<br>ภาษาไทย
-     ห้ามลบหัวข้อระดับ ## (6 ส่วนของบท) และให้คงรูปแบบข้อปรนัย (ก. ข. ค. ง.) กับบรรทัด **เฉลย** ไว้ · คำอธิบายเฉลยอยู่ใต้ **Penjelasan** เป็นรายการ - **เลขข้อ** มลายู<br>ไทย -->
+     แบบฝึกหัดโต้ตอบเขียนเป็นบล็อก ```latihan-isi / latihan-betulkan / latihan-golong / latihan-benar (หนึ่งบรรทัดหนึ่งข้อ แยกช่องด้วย " | ")
+       latihan-isi:      ประโยคที่มี ___ | คำตอบ (หลายคำตอบคั่นด้วย /) | คำอธิบายมลายู | คำอธิบายไทย
+       latihan-betulkan: ประโยคที่มี [คำผิด→คำถูก] | คำอธิบายมลายู | คำอธิบายไทย
+       latihan-golong:   บรรทัด Kategori: ก | ข แล้วตามด้วย  ข้อความ | ชื่อหมวด | คำอธิบายมลายู | คำอธิบายไทย
+       latihan-benar:    ข้อความ | B (ถูก) หรือ S (ผิด) | คำอธิบายมลายู | คำอธิบายไทย
+     ในส่วน Kuiz Penilaian ให้คงรูปแบบข้อปรนัย (ก. ข. ค. ง.) บรรทัด **เฉลย** และรายการ **Penjelasan** ไว้ -->
 
-## 1. Hasil Pembelajaran<br>ผลลัพธ์การเรียนรู้ประจำบท
+## 2. Hasil Pembelajaran<br>ผลลัพธ์การเรียนรู้
 
 Pada akhir bab ini, pelajar dapat:
 เมื่อจบบทนี้ นักศึกษาสามารถ
@@ -18,7 +25,16 @@ Pada akhir bab ini, pelajar dapat:
 4. menganalisis unsur ayat menggunakan analisis konstituen terdekat (*analisis konstituen terdekat*) dan menggunakan hasilnya untuk membetulkan ayat terjemahan mesin (CLO4)
    วิเคราะห์ส่วนประกอบประโยคด้วยวิธีแยกส่วนประกอบใกล้เคียง (*analisis konstituen terdekat*) และใช้ผลวิเคราะห์แก้ประโยคที่แปลด้วยเครื่องได้ (CLO4)
 
-## 2. Rangka Bab<br>โครงร่างประจำบท
+## 3. Pengenalan<br>บทนำ
+
+Bab 8 membuka bahagian sintaksis. Jika morfologi bertanya "bagaimana kata dibentuk", sintaksis bertanya "bagaimana kata disusun menjadi ayat". Bab ini memperkenalkan unit sintaksis, unsur utama ayat dan kaedah menganalisis ayat yang akan digunakan dalam Bab 9 hingga Bab 13.
+บทที่ 8 เปิดภาควากยสัมพันธ์ ถ้าวจีวิภาคถามว่า "คำสร้างอย่างไร" วากยสัมพันธ์ก็ถามว่า "คำเรียงเป็นประโยคอย่างไร" บทนี้แนะนำหน่วยทางวากยสัมพันธ์ ส่วนประกอบหลักของประโยค และวิธีวิเคราะห์ประโยคที่จะใช้ในบทที่ 9–13
+
+Kemahiran analisis ini membantu pelajar menilai hasil alat terjemahan mesin secara kritis, kerana mesin sering tersalah mengenal pasti unit dalam ayat.
+ทักษะการวิเคราะห์นี้ช่วยให้ผู้เรียนประเมินผลจากเครื่องมือแปลภาษาอย่างมีวิจารณญาณ เพราะเครื่องมักระบุหน่วยในประโยคผิด
+
+**Kandungan bab**
+**เนื้อหาในบท**
 
 1. **8.1 Maksud dan Skop Sintaksis**
    **8.1 ความหมายและขอบเขตของวากยสัมพันธ์**
@@ -35,7 +51,23 @@ Pada akhir bab ini, pelajar dapat:
    - Analisis konstituen terdekat · rajah pohon (*rajah pohon*) · ujian penggantian dan pemindahan
      การแยกส่วนประกอบใกล้เคียง · แผนภูมิต้นไม้ · การทดสอบด้วยการแทนที่และการย้าย
 
-## 3. Isi Penting<br>เนื้อหาสาระสำคัญ
+## 4. Konsep dan Definisi<br>แนวคิดและนิยาม
+
+| Istilah<br>ศัพท์ | Definisi<br>นิยาม |
+|---|---|
+| *sintaksis* | Kajian tentang peraturan penyusunan kata menjadi frasa, klausa dan ayat<br>การศึกษากฎการเรียงคำเป็นวลี อนุประโยค และประโยค |
+| *frasa* | Kumpulan kata yang mempunyai unsur inti tetapi tiada struktur subjek–predikat<br>กลุ่มคำที่มีคำหลักแต่ไม่มีโครงสร้างประธาน–ภาคแสดง |
+| *klausa bebas* | Klausa yang boleh berdiri sebagai ayat<br>อนุประโยคที่ยืนเป็นประโยคได้ |
+| *klausa tak bebas* | Klausa yang bergantung pada klausa bebas<br>อนุประโยคที่ต้องพึ่งอนุประโยคอิสระ |
+| *subjek* | Unsur yang diterangkan dalam ayat<br>ส่วนที่ถูกกล่าวถึงในประโยค |
+| *predikat* | Unsur yang menerangkan subjek<br>ส่วนที่กล่าวถึงประธาน |
+| *objek* | Frasa nama yang dikenai perbuatan kata kerja transitif<br>วลีนามที่ถูกกระทำโดยสกรรมกริยา |
+| *pelengkap* | Unsur wajib yang melengkapkan predikat<br>ส่วนจำเป็นที่ทำให้ภาคแสดงสมบูรณ์ |
+| *keterangan* | Unsur yang menerangkan waktu, tempat, cara, sebab dan sebagainya; boleh digugurkan<br>ส่วนขยายบอกเวลา สถานที่ วิธี เหตุ ฯลฯ ตัดได้ |
+| *kategori* | Jenis frasa: FN, FK, FA, FSN<br>ชนิดของวลี |
+| *fungsi* | Peranan unsur dalam ayat: subjek, predikat, objek dan lain-lain<br>หน้าที่ของส่วนประกอบในประโยค |
+
+## 5. Penerangan Tatabahasa<br>คำอธิบายหลักไวยากรณ์
 
 ### 8.1 Maksud dan Skop<br>ความหมายและขอบเขต
 
@@ -98,7 +130,87 @@ Ayat
 - Ujian pengguguran (*pengguguran*): keterangan boleh digugurkan, tetapi pelengkap tidak boleh
   ทดสอบการละ: ส่วนขยายละได้ แต่ส่วนเติมเต็มละไม่ได้
 
-## 4. Kajian Kes<br>กรณีศึกษา
+## 6. Contoh Ayat<br>ตัวอย่างประโยค
+
+| Ayat<br>ประโยค | Huraian<br>คำอธิบาย |
+|---|---|
+| *Pelajar itu membaca buku cerita di perpustakaan.* | [Subjek FN] + [Predikat: KK + objek FN + keterangan FSN]<br>ประธาน + ภาคแสดง (กริยา + กรรม + ส่วนขยาย) |
+| *Ayahnya doktor.* | Predikat frasa nama<br>ภาคแสดงเป็นวลีนาม |
+| *Mereka tinggal di Hat Yai.* | *di Hat Yai* pelengkap, tidak boleh digugurkan<br>ส่วนเติมเต็มตัดไม่ได้ |
+| *Saya tahu bahawa dia sakit.* | Klausa bebas *Saya tahu* + klausa tak bebas *bahawa dia sakit*<br>อนุประโยคอิสระ + อนุประโยคไม่อิสระ |
+| *Di perpustakaan pelajar itu membaca buku cerita.* | Ujian pemindahan: keterangan dipindahkan sebagai satu unit<br>การทดสอบการย้าย |
+| *Dia membaca buku cerita.* | Ujian penggantian: *pelajar itu* → *dia*<br>การทดสอบการแทนที่ |
+
+## 7. Jadual Perbandingan<br>ตารางเปรียบเทียบ
+
+**A. Frasa, klausa dan ayat**
+**ก. วลี อนุประโยค และประโยค**
+
+| Unit<br>หน่วย | Subjek–predikat<br>ประธาน–ภาคแสดง | Berdiri sendiri<br>ยืนเองได้ | Contoh<br>ตัวอย่าง |
+|---|---|---|---|
+| Frasa<br>วลี | Tiada<br>ไม่มี | Tidak<br>ไม่ได้ | *rumah batu itu* |
+| Klausa tak bebas<br>อนุประโยคไม่อิสระ | Ada<br>มี | Tidak<br>ไม่ได้ | *bahawa dia sakit* |
+| Klausa bebas / ayat<br>อนุประโยคอิสระ / ประโยค | Ada<br>มี | Ya (dengan intonasi)<br>ได้ (มีทำนองเสียง) | *Dia sakit.* |
+
+**B. Pelengkap dan keterangan**
+**ข. ส่วนเติมเต็มกับส่วนขยาย**
+
+| Aspek<br>ประเด็น | Pelengkap<br>ส่วนเติมเต็ม | Keterangan<br>ส่วนขยาย |
+|---|---|---|
+| Boleh digugurkan<br>ตัดได้ | Tidak<br>ไม่ได้ | Ya<br>ได้ |
+| Contoh<br>ตัวอย่าง | *tinggal **di Yala*** | *makan **di kantin*** |
+
+## 8. Kesalahan Lazim<br>ข้อผิดพลาดที่พบบ่อย
+
+| Salah<br>ผิด | Betul<br>ถูก | Sebab<br>เหตุผล |
+|---|---|---|
+| `*`*Pelajar itu yang datang dari Pattani…* | *Pelajar yang datang dari Pattani itu…* | *itu* hadir di hujung frasa nama<br>*itu* อยู่ท้ายวลีนาม |
+| `*`*…belajar sangat pandai.* | *…sangat cemerlang dalam pelajaran.* | Terjemahan kata demi kata daripada bahasa Thai<br>แปลคำต่อคำจากภาษาไทย |
+| Menganggap *di Yala* dalam *tinggal di Yala* sebagai keterangan | Pelengkap | Tidak boleh digugurkan<br>ตัดไม่ได้ |
+| Mengelirukan kategori dengan fungsi | *guru itu* = FN, fungsinya bergantung pada ayat | Kategori ≠ fungsi<br>ชนิดวลีไม่เท่ากับหน้าที่ |
+
+## 9. Latihan Interaktif<br>แบบฝึกหัดโต้ตอบ
+
+Jawab setiap latihan; jawapan disemak serta-merta beserta penjelasan.
+ทำแบบฝึกแต่ละชุด ระบบจะตรวจคำตอบทันทีพร้อมคำอธิบาย
+
+```latihan-golong
+Arahan: Tentukan fungsi bahagian bercetak tebal. | ระบุหน้าที่ของส่วนที่เป็นตัวหนา
+Kategori: Subjek · ประธาน | Objek · กรรม | Pelengkap · ส่วนเติมเต็ม | Keterangan · ส่วนขยาย
+***Ibu** membeli ikan.* | Subjek | Unsur yang diterangkan. | ส่วนที่ถูกกล่าวถึง
+*Ibu membeli **ikan**.* | Objek | Dikenai perbuatan *membeli*. | ถูกกระทำ
+*Ibu membeli ikan **pagi tadi**.* | Keterangan | Waktu; boleh digugurkan. | บอกเวลา ตัดได้
+*Dia menjadi **guru**.* | Pelengkap | Wajib selepas *menjadi*. | จำเป็นหลัง *menjadi*
+*Mereka tinggal **di Yala**.* | Pelengkap | Wajib selepas *tinggal*. | จำเป็นหลัง *tinggal*
+*Kami makan **di kantin**.* | Keterangan | Tempat; boleh digugurkan. | บอกสถานที่ ตัดได้
+```
+
+```latihan-golong
+Arahan: Frasa, klausa atau ayat? | วลี อนุประโยค หรือประโยค
+Kategori: Frasa · วลี | Klausa tak bebas · อนุประโยคไม่อิสระ | Ayat · ประโยค
+*rumah batu itu* | Frasa | Tiada subjek dan predikat. | ไม่มีประธานและภาคแสดง
+*bahawa dia sakit* | Klausa tak bebas | Bergantung pada ayat induk. | ต้องพึ่งประโยคหลัก
+*Adik tidur.* | Ayat | Klausa bebas dengan intonasi. | อนุประโยคอิสระที่มีทำนองเสียง
+*pelajar tahun satu* | Frasa | Inti *pelajar* + penerang. | คำหลัก + คำขยาย
+*yang tinggal di Pattani* | Klausa tak bebas | Klausa relatif. | อนุประโยคสัมพันธ์
+```
+
+```latihan-betulkan
+Arahan: Klik bahagian yang salah susunannya. | กดส่วนที่เรียงผิด
+[Pelajar itu yang→Pelajar yang] datang dari Pattani itu rajin. | *itu* tidak hadir sebelum klausa relatif. | *itu* ไม่อยู่หน้าอนุประโยคสัมพันธ์
+Dia [belajar sangat pandai→sangat pandai] dalam matematik. | Terjemahan kata demi kata. | แปลคำต่อคำ
+Bahasa Melayu digunakan di Narathiwat, [di mana→tempat] saya dilahirkan. | *di mana* ialah kata tanya, bukan penghubung relatif. | *di mana* เป็นคำถาม ไม่ใช่คำเชื่อมสัมพันธ์
+```
+
+```latihan-benar
+Arahan: Tentukan sama ada setiap pernyataan betul atau salah. | ตัดสินว่าข้อความแต่ละข้อถูกหรือผิด
+Frasa mempunyai subjek dan predikat.<br>วลีมีประธานและภาคแสดง | S | Frasa tiada struktur subjek–predikat. | วลีไม่มีโครงสร้างประธาน–ภาคแสดง
+Keterangan boleh digugurkan tanpa merosakkan ayat.<br>ส่วนขยายตัดได้โดยไม่ทำให้ประโยคเสีย | B | Contoh *Ibu membeli ikan (di pasar).* | ตัวอย่าง
+FN sentiasa berfungsi sebagai subjek.<br>วลีนามทำหน้าที่ประธานเสมอ | S | FN juga boleh menjadi objek atau predikat. | วลีนามเป็นกรรมหรือภาคแสดงได้ด้วย
+Ayat = klausa + intonasi.<br>ประโยค = อนุประโยค + ทำนองเสียง | B | Intonasi menentukan jenis ayat. | ทำนองเสียงกำหนดชนิดประโยค
+```
+
+### Kajian Kes<br>กรณีศึกษา
 
 **Tugasan terjemahan mesin.** Seorang pelajar menggunakan alat terjemahan untuk menterjemahkan ayat Thai "นักศึกษาที่มาจากปัตตานีคนนั้นเรียนเก่งมาก" dan memperoleh hasil berikut:
 **งานที่แปลด้วยเครื่อง** นักศึกษาใช้เครื่องมือแปลภาษาแปลประโยคไทย "นักศึกษาที่มาจากปัตตานีคนนั้นเรียนเก่งมาก" ได้ผลว่า
@@ -117,7 +229,20 @@ Ayat
 4. Bincangkan: bagaimanakah pengetahuan sintaksis membantu kita menggunakan alat terjemahan secara kritis?
    อภิปราย: ความรู้วากยสัมพันธ์ช่วยให้ใช้เครื่องมือแปลอย่างมีวิจารณญาณได้อย่างไร
 
-## 5. Soalan Penilaian<br>คำถามท้ายบท
+## 10. Rumusan<br>สรุปบทเรียน
+
+- Sintaksis mengkaji penyusunan kata menjadi frasa, klausa dan ayat.
+  วากยสัมพันธ์ศึกษาการเรียงคำเป็นวลี อนุประโยค และประโยค
+- Frasa tiada subjek–predikat; klausa ada; ayat ialah klausa yang berdiri sendiri dengan intonasi.
+  วลีไม่มีประธาน–ภาคแสดง อนุประโยคมี ประโยคคืออนุประโยคที่ยืนเองได้พร้อมทำนองเสียง
+- Ayat terdiri daripada subjek dan predikat; predikat boleh mengandungi objek, pelengkap dan keterangan.
+  ประโยคมีประธานและภาคแสดง ภาคแสดงอาจมีกรรม ส่วนเติมเต็ม และส่วนขยาย
+- Kategori (jenis frasa) berbeza daripada fungsi (peranan dalam ayat).
+  ชนิดวลีต่างจากหน้าที่ในประโยค
+- Ujian penggantian, pemindahan dan pengguguran membantu mengenal pasti konstituen.
+  การทดสอบการแทนที่ การย้าย และการตัด ช่วยระบุส่วนประกอบ
+
+## 11. Kuiz Penilaian<br>แบบทดสอบท้ายบท
 
 ### A. Soalan Objektif<br>ก. ปรนัย
 
@@ -173,10 +298,10 @@ Ayat
 2. Kumpulkan tiga ayat Melayu yang diterjemahkan oleh mesin. Analisis konstituennya, kenal pasti bahagian yang tersalah ditafsirkan sebagai unit oleh mesin, dan betulkan.
    เก็บประโยคมลายูที่แปลด้วยเครื่อง 3 ประโยค วิเคราะห์ส่วนประกอบ ระบุจุดที่เครื่องตีความผิดหน่วย และแก้ไข
 
-## 6. Rujukan<br>เอกสารอ้างอิงแนะนำ
+## 12. Rujukan<br>เอกสารอ้างอิง
 
-- Nik Safiah Karim et al. (2015). *Tatabahasa Dewan Edisi Ketiga*. Kuala Lumpur: Dewan Bahasa dan Pustaka. — pengenalan bahagian *Sintaksis*
+- Nik Safiah Karim, Farid M. Onn, Hashim Haji Musa & Abdul Hamid Mahmood. (2015). *Tatabahasa Dewan* (Edisi Ketiga). Kuala Lumpur: Dewan Bahasa dan Pustaka. — pengenalan bahagian *Sintaksis*
   บทนำภาค *Sintaksis*
-- Alias Mohammad Yatim. (1998). *Mengenali Bahasa Melayu*. Kedah: Percetakan Paavai.
+- Alias Mohammad Yatim. (1998). *Mengenali Bahasa Melayu*. Penerbitan Sarlis.
 - Asmah Haji Omar. (2009). *Nahu Melayu Mutakhir* (Edisi Kelima). Kuala Lumpur: Dewan Bahasa dan Pustaka.
-- Sulaiman Masri & Ahmad Khair Mohd Nor. (2002). *Tatabahasa Melayu Mesra Pengguna*. Kuala Lumpur: Utusan Publications & Distributors.
+- Sulaiman Masri & Ahmad Khair Mohd. Nor. (2002). *Tatabahasa Melayu Mesra Pengguna*. Kuala Lumpur: Utusan Publications & Distributors.
