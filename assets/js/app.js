@@ -764,6 +764,7 @@
           <h2 class="h3">${B("Matlamat", "จุดมุ่งหมาย")}</h2><p class="bm" lang="ms">${C.goalMs}</p><p class="tr">${C.goal}</p>
           <h2 class="h3">${B("Hasil pembelajaran kursus (CLO) dan wajaran", "ผลลัพธ์การเรียนรู้ (CLOs) และสัดส่วนคะแนน")}</h2>
           <ul class="clo">${C.clos.map(c => `<li><b>${c.id}</b><div>${B(c.ms, c.text)}<div class="bar" role="img" aria-label="${c.weight}%"><span style="width:${c.weight}%"></span></div><small style="color:var(--muted)">${c.weight}% · ${c.howMs} · ${c.how}</small></div></li>`).join("")}</ul>
+          <p><a class="btn btn-line" href="#/clo">${B("Lihat pemetaan CLO → bab → aktiviti → alat penilaian", "ดูตารางเชื่อมโยง CLO → บทเรียน → กิจกรรม → เครื่องมือประเมิน")}</a></p>
         </div>
         <div class="prose">
           <h2 class="h3">${B("Pensyarah", "ผู้สอน")}</h2><ul class="people">${C.teachers.map(t => `<li>${t.name}<small>${t.roleMs} · ${t.role}${t.email ? ` · <a href="mailto:${t.email}">${t.email}</a>` : ""}</small></li>`).join("")}</ul>
@@ -777,6 +778,70 @@
         <div class="prose"><h2 class="h3">${B("Sumber dalam talian", "แหล่งเรียนรู้ออนไลน์")}</h2><ul>${C.resources.map(r => `<li><a href="${r.url}" target="_blank" rel="noopener">${r.th}</a></li>`).join("")}</ul></div>
       </div>
     </div></section>`;
+    window.scrollTo(0, 0);
+  }
+
+  /* ================= Pemetaan CLO · การเชื่อมโยง CLO ================= */
+  function pemetaanClo() {
+    setNav("kursus"); document.title = `Pemetaan CLO · การเชื่อมโยง CLO | ${C.code}`;
+    const M = C.mko3, ids = C.clos.map(c => c.id);
+    const tag = (k) => k === "rasmi" ? `<span class="sumber-tag rasmi">${B("Rasmi · มคอ.3", "ทางการ")}</span>`
+      : k === "pelan" ? `<span class="sumber-tag pelan">${B("Pelan mingguan", "แผนรายสัปดาห์")}</span>`
+      : `<span class="sumber-tag cadang">${B("Cadangan laman web", "ข้อเสนอของเว็บไซต์")}</span>`;
+    const babL = n => { const c = CH.find(x => x.no === n); return c ? `<a href="#/bab/${n}" aria-label="Bab ${n} · บทที่ ${n}">${n}</a>` : ""; };
+    const babUntuk = id => "Bab " + M.pelan.filter(r => r.bab && r.clos.includes(id)).map(r => babL(r.bab)).join(", ");
+    const babWeb = id => M.pelan.filter(r => r.bab && r.web.includes(id)).map(r => babL(r.bab)).join(", ");
+    const kelasUntuk = id => M.pelan.filter(r => r.clos.includes(id)).map(r => `<li>${B(`Minggu ${r.week}: ${r.ms}`, `สัปดาห์ ${r.week}: ${r.th}`)}</li>`).join("");
+    const sel = (r, id) => r.clos.includes(id) ? `<span class="m-pelan" aria-hidden="true" title="Pelan mingguan · แผนรายสัปดาห์">●</span><span class="sr-only">Pelan mingguan</span>`
+      : r.web.includes(id) ? `<span class="m-web" aria-hidden="true" title="Tambahan laman web · เว็บติดป้ายเพิ่ม">○</span><span class="sr-only">Tambahan laman web</span>` : `<span aria-hidden="true">·</span><span class="sr-only">Tiada</span>`;
+    const cloRingkas = c => `<b>${c.id}</b>`;
+    app.innerHTML = `<section class="section clo-page"><div class="wrap">
+      <div class="section-head"><h1>${B("Pemetaan CLO → bab → aktiviti → alat penilaian", "ตารางเชื่อมโยง CLO → บทเรียน → กิจกรรม → เครื่องมือประเมิน")}</h1>
+        <p>${B(`${C.code} ${C.ms} · ${C.termMs}`, `${C.code} ${C.th} · ${C.term}`)}</p></div>
+      <div class="nota-sumber prose">
+        <h2 class="h3">${B("Sumber dan status maklumat", "ที่มาและสถานะของข้อมูล")}</h2>
+        <ul class="sumber-senarai">
+          <li>${tag("rasmi")} ${B(`Pernyataan CLO, kaedah pengajaran, alat pengukuran dan wajaran dipetik daripada ${M.sumberMs}. Teks Melayu ialah terjemahan; teks Thai mengikut dokumen asal.`, `ข้อความ CLO วิธีสอน เครื่องมือวัด และสัดส่วนคะแนน คัดจาก${M.sumberTh} ข้อความภาษามลายูเป็นคำแปล ข้อความภาษาไทยเป็นไปตามต้นฉบับ`)}</li>
+          <li>${tag("pelan")} ${B(`CLO setiap minggu dan cara penilaian dalam kelas dipetik daripada ${M.pelanMs}.`, `CLO รายสัปดาห์และการวัดผลในชั้นเรียน คัดจาก${M.pelanTh}`)}</li>
+          <li>${tag("cadang")} ${B("Kaitan aktiviti dalam laman web ini dengan CLO ialah cadangan penyusun laman web untuk latihan kendiri, bukan sebahagian daripada dokumen rasmi dan tidak dikira dalam markah.", "การโยงกิจกรรมบนเว็บไซต์นี้กับ CLO เป็นข้อเสนอของผู้จัดทำเว็บไซต์เพื่อการฝึกด้วยตนเอง ไม่ใช่ส่วนหนึ่งของเอกสารทางการ และไม่นำไปคิดคะแนน")}</li>
+        </ul>
+      </div>
+
+      <h2 class="h3 clo-h">${B("1. CLO, kaedah dan alat penilaian rasmi", "1. CLO วิธีสอน และเครื่องมือประเมินตาม มคอ.3")} ${tag("rasmi")}</h2>
+      ${table([B("CLO", "CLO"), B("Kaedah pengajaran", "วิธีสอน"), B("Alat pengukuran", "เครื่องมือวัด"), B("Penilaian sumatif", "การประเมินสรุป"), B("Wajaran", "สัดส่วน")],
+        C.clos.map(c => { const r = M.rasmi[c.id]; return [`${cloRingkas(c)}<div class="clo-teks">${B(c.ms, c.text)}</div>`, B(r.ajarMs, r.ajarTh), B(r.alatMs, r.alatTh), B(c.howMs, c.how), `<b>${c.weight}%</b>`]; }))}
+
+      <h2 class="h3 clo-h">${B("2. Pemetaan CLO → bab → aktiviti → alat penilaian", "2. ตารางเชื่อมโยง CLO → บทเรียน → กิจกรรม → เครื่องมือประเมิน")}</h2>
+      <p class="clo-ket">${B("Lajur bab: senarai pertama mengikut pelan mingguan; “+ laman web” ialah bab yang turut ditanda dengan CLO itu dalam laman web.", "คอลัมน์บทเรียน: รายการแรกตามแผนรายสัปดาห์ ส่วน “+ เว็บไซต์” คือบทที่เว็บไซต์ติดป้าย CLO นั้นเพิ่ม")}</p>
+      ${table([B("CLO", "CLO"), `${B("Bab", "บทเรียน")}`, `${B("Aktiviti kelas", "กิจกรรม/การวัดผลในชั้น")} ${tag("pelan")}`, `${B("Aktiviti laman web", "กิจกรรมบนเว็บไซต์")} ${tag("cadang")}`, `${B("Alat penilaian rasmi", "เครื่องมือประเมินทางการ")} ${tag("rasmi")}`],
+        C.clos.map(c => { const r = M.rasmi[c.id], w = babWeb(c.id);
+          return [`${cloRingkas(c)}<div class="clo-teks">${B(c.ms, c.text)}</div>`,
+            `<span class="nw-bab">${babUntuk(c.id)}</span>${w ? `<div class="clo-web"><span lang="ms">+ laman web</span> · เว็บไซต์: ${w}</div>` : ""}`,
+            `<ul class="clo-ul">${kelasUntuk(c.id)}</ul>`,
+            `<ul class="clo-ul">${M.aktiviti[c.id].map(a => `<li><a href="${a.h}">${B(a.ms, a.th)}</a></li>`).join("")}</ul>`,
+            `${B(r.alatMs, r.alatTh)}<div class="clo-sum">${B(`${c.howMs} · ${c.weight}%`, `${c.how} · ${c.weight}%`)}</div>`]; }))}
+
+      <h2 class="h3 clo-h">${B("3. Matriks minggu × CLO", "3. เมทริกซ์สัปดาห์ × CLO")}</h2>
+      <p class="clo-ket"><span class="m-pelan" aria-hidden="true">●</span> <span lang="ms">pelan mingguan</span> · ตามแผนรายสัปดาห์ &nbsp;&nbsp; <span class="m-web" aria-hidden="true">○</span> <span lang="ms">tanda tambahan laman web sahaja</span> · เว็บไซต์ติดป้ายเพิ่มเท่านั้น</p>
+      ${table([B("Minggu", "สัปดาห์"), B("Bab", "บทเรียน"), ...ids, B("Penilaian dalam kelas", "การวัดผลในชั้น")],
+        M.pelan.map(r => { const c = r.bab ? CH.find(x => x.no === r.bab) : null;
+          const ex = !c && C.extraWeeks ? C.extraWeeks.find(x => x.week === r.week) : null;
+          return [String(r.week), c ? `<a href="#/bab/${c.no}">${B(`Bab ${c.no}: ${c.ms}`, c.th)}</a>` : ex ? B(ex.ms, ex.th) : "—", ...ids.map(id => `<span class="m-sel">${sel(r, id)}</span>`), B(r.ms, r.th)]; }))}
+
+      <h2 class="h3 clo-h">${B("4. Jurang dan perkara untuk disemak", "4. ช่องว่างและประเด็นที่ควรตรวจสอบ")}</h2>
+      <ol class="clo-jurang prose">
+        <li>${B("Peperiksaan pertengahan: มคอ.3 mengaitkannya dengan CLO1 (30%), tetapi pelan mingguan memberikan 60 daripada 100 markah kepada bahagian CLO2. Perlu ditentukan bagaimana markah bahagian CLO2 dikira (dalam 30% CLO1 atau dalam 20% CLO2).", "สอบกลางภาค: มคอ.3 ผูกกับ CLO1 (30%) แต่แผนรายสัปดาห์ให้ส่วนที่วัด CLO2 60 จาก 100 คะแนน ควรกำหนดว่าคะแนนส่วน CLO2 จะนับใน 30% ของ CLO1 หรือใน 20% ของ CLO2")}</li>
+        <li>${B("CLO4: penilaian sumatif rasmi hanya peperiksaan akhir (30%), sedangkan alat pengukuran dan pelan mingguan juga menggunakan hasil penulisan/pembetulan teks dan pembentangan berubrik (minggu 14–15). Wajaran bagi tugasan berubrik ini belum dinyatakan.", "CLO4: การประเมินสรุปทางการมีเฉพาะสอบปลายภาค (30%) แต่เครื่องมือวัดและแผนรายสัปดาห์ใช้ชิ้นงานเขียน/ปรับแก้ข้อความและการนำเสนอที่ใช้รูบริก (สัปดาห์ 14–15) ด้วย ยังไม่ได้ระบุว่าชิ้นงานเหล่านี้นับคะแนนส่วนใด")}</li>
+        <li>${B("CLO3: penilaian sumatif ialah tugasan dan aktiviti amali dengan rubrik (20%), tetapi rubrik CLO3 belum terdapat dalam dokumen yang disemak; penilaian minggu 9–13 terdiri daripada lembaran kerja dan kuiz.", "CLO3: การประเมินสรุปคืองานมอบหมายและกิจกรรมปฏิบัติพร้อมรูบริก (20%) แต่ยังไม่พบรูบริกของ CLO3 ในเอกสารที่ตรวจ การวัดผลสัปดาห์ 9–13 เป็นใบงานและแบบทดสอบย่อย")}</li>
+        <li>${B("Tanda CLO dalam laman web lebih luas daripada pelan mingguan bagi Bab 1, 3, 4, 5, 9, 10 dan 11 (lihat ○ dalam matriks). Pensyarah boleh memilih sama ada mengekalkan tanda tambahan ini atau menyelaraskannya dengan pelan mingguan.", "ป้าย CLO บนเว็บไซต์กว้างกว่าแผนรายสัปดาห์ในบทที่ 1, 3, 4, 5, 9, 10 และ 11 (ดู ○ ในเมทริกซ์) ผู้สอนเลือกได้ว่าจะคงป้ายเพิ่มไว้ หรือปรับให้ตรงกับแผนรายสัปดาห์")}</li>
+        <li>${B("Markah dalam laman web disimpan dalam pelayar pelajar sahaja dan tidak dihantar kepada pensyarah, jadi ia tidak boleh menjadi bukti pencapaian CLO yang rasmi; gunakannya sebagai penilaian formatif.", "คะแนนบนเว็บไซต์บันทึกในเบราว์เซอร์ของนิสิตเท่านั้นและไม่ได้ส่งถึงอาจารย์ จึงใช้เป็นหลักฐานการบรรลุ CLO ทางการไม่ได้ ใช้เป็นการประเมินระหว่างเรียนเท่านั้น")}</li>
+        <li>${B("Ujian pra dan pasca (minggu 1 dan 15) tidak terdapat dalam laman web. Pemetaan CLO → PLO dalam lampiran มคอ.3 tidak dimasukkan kerana tanda dalam jadual tersebut tidak dapat dibaca dengan pasti daripada fail.", "แบบทดสอบก่อนและหลังเรียน (สัปดาห์ 1 และ 15) ไม่มีบนเว็บไซต์ และไม่ได้ใส่การเชื่อมโยง CLO → PLO ในภาคผนวกของ มคอ.3 เพราะอ่านเครื่องหมายในตารางจากไฟล์ได้ไม่ชัดเจน")}</li>
+      </ol>
+      <p class="clo-ket"><a href="#/kursus">← <span lang="ms">Kembali ke Maklumat Kursus</span> · กลับไปหน้าข้อมูลรายวิชา</a></p>
+    </div></section>`;
+    labelJadual(app);
+    /* Matriks kekal sebagai jadual (boleh skrol) di telefon · เมทริกซ์คงเป็นตาราง เลื่อนแนวนอนได้บนมือถือ */
+    const mt = $$("table", app)[2]; if (mt) { mt.classList.remove("tbl-kad"); mt.classList.add("clo-matriks"); const wr = mt.parentElement; wr.tabIndex = 0; wr.setAttribute("role", "region"); wr.setAttribute("aria-label", "Matriks minggu × CLO · เมทริกซ์สัปดาห์ × CLO"); }
     window.scrollTo(0, 0);
   }
 
@@ -844,7 +909,7 @@
   const ico = k => `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${ICON[k]}</svg>`;
   const SEQ = [{ key: "kulit-dalam", href: "#/kulit-dalam", ms: "Kulit Dalam", th: "ปกใน" }, { key: "kandungan", href: "#/kandungan", ms: "Kandungan", th: "สารบัญ" }, { key: "home", href: "#/", ms: "Rancangan", th: "แผนการเรียน" }]
     .concat(CH.map(c => ({ key: "bab" + c.no, href: babLink(c.no), ms: "Bab " + c.no, th: "บทที่ " + c.no })))
-    .concat([{ key: "kemajuan", href: "#/kemajuan", ms: "Kemajuan", th: "ความก้าวหน้า" }, { key: "kuiz", href: "#/kuiz", ms: "Kuiz", th: "แบบทดสอบ" }, { key: "alat", href: "#/alat", ms: "Alat Latihan", th: "เครื่องมือฝึก" }, { key: "istilah", href: "#/istilah", ms: "Istilah", th: "อภิธานศัพท์" }, { key: "kursus", href: "#/kursus", ms: "Maklumat Kursus", th: "ข้อมูลรายวิชา" }]);
+    .concat([{ key: "kemajuan", href: "#/kemajuan", ms: "Kemajuan", th: "ความก้าวหน้า" }, { key: "kuiz", href: "#/kuiz", ms: "Kuiz", th: "แบบทดสอบ" }, { key: "alat", href: "#/alat", ms: "Alat Latihan", th: "เครื่องมือฝึก" }, { key: "istilah", href: "#/istilah", ms: "Istilah", th: "อภิธานศัพท์" }, { key: "kursus", href: "#/kursus", ms: "Maklumat Kursus", th: "ข้อมูลรายวิชา" }, { key: "clo", href: "#/clo", ms: "Pemetaan CLO", th: "การเชื่อมโยง CLO" }]);
   const pnName = x => `<b class="pn-ms">${x.ms}</b><i class="pn-th">${x.th}</i>`;
   function pageNav(key) {
     const nav = $("#pagenav"); const i = SEQ.findIndex(x => x.key === key);
@@ -903,6 +968,7 @@
     else if (p[0] === "alat") alat();
     else if (p[0] === "istilah") istilah();
     else if (p[0] === "kursus") kursus();
+    else if (p[0] === "clo") pemetaanClo();
     else if (p[0] === "kulit-dalam") kulitDalam();
     else if (p[0] === "kandungan") kandungan();
     else if (p[0] === "kemajuan") kemajuan();

@@ -30,6 +30,68 @@ window.COURSE = {
     { id: "CLO3", ms: "Menganalisis struktur frasa, klausa dan ayat bahasa Melayu berdasarkan prinsip tatabahasa", howMs: "Tugasan dan aktiviti amali (rubrik)", text: "วิเคราะห์โครงสร้างวลี อนุประโยค และประโยคภาษามลายูตามหลักไวยากรณ์ได้", weight: 20, how: "งานมอบหมายและกิจกรรมปฏิบัติ (เกณฑ์รูบริก)" },
     { id: "CLO4", ms: "Membina dan membetulkan ayat atau teks bahasa Melayu supaya betul dari segi tatabahasa dan sesuai dengan situasi komunikasi", howMs: "Peperiksaan akhir (penulisan analitis dan aplikasi)", text: "สร้างและปรับแก้ประโยคหรือข้อความภาษามลายูให้ถูกต้องตามหลักไวยากรณ์และเหมาะสมกับสถานการณ์สื่อสารได้", weight: 30, how: "สอบปลายภาค (ข้อเขียนเชิงวิเคราะห์และประยุกต์ใช้)" }
   ],
+  /* ===== Pemetaan CLO · การเชื่อมโยง CLO =====
+     rasmi  = คัดจาก มคอ.3 (TSU03) ตามต้นฉบับ ห้ามแก้ข้อความ CLO เอง
+     pelan  = คัดจาก "แผนการสอนรายสัปดาห์ รายวิชา 0113131" ของผู้สอน
+     aktiviti = ข้อเสนอการเชื่อมโยงกิจกรรมบนเว็บไซต์ (ไม่ใช่เอกสารทางการ) */
+  mko3: {
+    sumberTh: "มคอ.3 (TSU03) รายวิชา 0113131 ไวยากรณ์ภาษามลายู ภาคเรียนที่ 2/2569 ปรับปรุงวันที่ 23 ตุลาคม 2569",
+    sumberMs: "Dokumen มคอ.3 (TSU03) kursus 0113131 Tatabahasa Melayu, Semester 2/2569, dikemas kini 23 Oktober 2569",
+    pelanTh: "แผนการสอนรายสัปดาห์ รายวิชา 0113131 ไวยากรณ์ภาษามลายู (เอกสารของผู้สอน)",
+    pelanMs: "Rancangan pengajaran mingguan kursus 0113131 (dokumen pensyarah)",
+    rasmi: {
+      CLO1: { ajarTh: "บรรยายแบบมีส่วนร่วม แผนผังแนวคิด อภิปรายตัวอย่าง", ajarMs: "Kuliah interaktif, peta konsep, perbincangan contoh", alatTh: "แบบทดสอบความรู้ แบบฝึกอธิบายแนวคิด", alatMs: "Ujian pengetahuan, latihan menghuraikan konsep" },
+      CLO2: { ajarTh: "วิเคราะห์คำจากข้อความจริง กิจกรรมกลุ่มจำแนกคำ", ajarMs: "Analisis kata daripada teks sebenar, aktiviti kumpulan mengklasifikasikan kata", alatTh: "ใบงานวิเคราะห์คำ แบบทดสอบเชิงวิเคราะห์", alatMs: "Lembaran kerja analisis kata, ujian analitis" },
+      CLO3: { ajarTh: "ฝึกแยกส่วนประกอบวลีและประโยค อภิปรายกรณีศึกษา", ajarMs: "Latihan mencerakinkan unsur frasa dan ayat, perbincangan kajian kes", alatTh: "ใบงานวิเคราะห์ประโยค แบบทดสอบ", alatMs: "Lembaran kerja analisis ayat, ujian" },
+      CLO4: { ajarTh: "ฝึกเขียนและแก้ไขข้อความ แลกเปลี่ยนข้อเสนอแนะระหว่างเพื่อน", ajarMs: "Latihan menulis dan membetulkan teks, maklum balas rakan sebaya", alatTh: "ชิ้นงานเขียน/แก้ไขข้อความ เกณฑ์ประเมินรูบริก", alatMs: "Hasil penulisan/pembetulan teks, rubrik penilaian" }
+    },
+    /* bab: เลขบทบนเว็บ (null = สัปดาห์ที่ไม่มีบท) · clos: ตามแผนรายสัปดาห์ · web: CLO ที่เว็บติดป้ายเพิ่ม (course.js หรือหัวข้อผลลัพธ์การเรียนรู้ของบท) */
+    pelan: [
+      { week: 1,  bab: 1,    clos: ["CLO1"],         web: ["CLO4"], th: "แบบทดสอบก่อนเรียน (ไม่คิดคะแนน)", ms: "Ujian pra (tidak diberi markah)" },
+      { week: 2,  bab: 2,    clos: ["CLO1", "CLO2"], web: [],       th: "ใบงาน 1 วิเคราะห์หน่วยคำ", ms: "Lembaran kerja 1: analisis morfem" },
+      { week: 3,  bab: 3,    clos: ["CLO2"],         web: ["CLO4"], th: "ใบงานจำแนกคำนามและสรรพนาม", ms: "Lembaran kerja: kata nama dan kata ganti nama" },
+      { week: 4,  bab: 4,    clos: ["CLO2"],         web: ["CLO4"], th: "แบบฝึกในชั้นและ Exit ticket", ms: "Latihan dalam kelas dan exit ticket" },
+      { week: 5,  bab: 5,    clos: ["CLO2", "CLO4"], web: ["CLO1"], th: "แบบทดสอบย่อย 1", ms: "Kuiz 1" },
+      { week: 6,  bab: 6,    clos: ["CLO2"],         web: [],       th: "ใบงาน 2 การเติมหน่วยคำ", ms: "Lembaran kerja 2: pengimbuhan" },
+      { week: 7,  bab: 7,    clos: ["CLO2", "CLO4"], web: [],       th: "ชิ้นงานกลุ่ม (โพสต์ประชาสัมพันธ์)", ms: "Tugasan kumpulan (hantaran promosi)" },
+      { week: 8,  bab: null, clos: ["CLO1", "CLO2"], web: [],       th: "สอบกลางภาค: ส่วน CLO1 40 คะแนน, ส่วน CLO2 60 คะแนน", ms: "Peperiksaan pertengahan: bahagian CLO1 40 markah, bahagian CLO2 60 markah" },
+      { week: 9,  bab: 8,    clos: ["CLO1", "CLO3"], web: [],       th: "แบบฝึกแยกส่วนประกอบประโยค", ms: "Latihan mencerakinkan unsur ayat" },
+      { week: 10, bab: 9,    clos: ["CLO3"],         web: ["CLO4"], th: "ใบงาน 3 วิเคราะห์วลี", ms: "Lembaran kerja 3: analisis frasa" },
+      { week: 11, bab: 10,   clos: ["CLO3"],         web: ["CLO4"], th: "แบบทดสอบย่อย 2", ms: "Kuiz 2" },
+      { week: 12, bab: 11,   clos: ["CLO3", "CLO4"], web: ["CLO1"], th: "แบบฝึกในชั้นและประกาศของกลุ่ม", ms: "Latihan dalam kelas dan pengumuman kumpulan" },
+      { week: 13, bab: 12,   clos: ["CLO3", "CLO4"], web: [],       th: "ใบงาน 4 วิเคราะห์ประโยค", ms: "Lembaran kerja 4: analisis ayat" },
+      { week: 14, bab: 13,   clos: ["CLO3", "CLO4"], web: [],       th: "ชิ้นงานเขียนและปรับแก้ข้อความ (รูบริก)", ms: "Hasil penulisan dan pembetulan teks (rubrik)" },
+      { week: 15, bab: null, clos: ["CLO4"],         web: [],       th: "การนำเสนอ (รูบริก) และแบบทดสอบหลังเรียน", ms: "Pembentangan (rubrik) dan ujian pasca" }
+    ],
+    /* ข้อเสนอ: กิจกรรมบนเว็บไซต์ → CLO (h = ลิงก์) */
+    aktiviti: {
+      CLO1: [
+        { ms: "Benar atau Salah", th: "ถูกหรือผิด", h: "#/bab/1/latihan" },
+        { ms: "Soalan Objektif (konsep)", th: "ปรนัย (แนวคิด)", h: "#/bab/1/latihan" },
+        { ms: "Konsep dan Definisi · Rumusan", th: "แนวคิดและนิยาม · สรุป", h: "#/bab/8/konsep" },
+        { ms: "Kuiz Penilaian A–B (Bab 1, 2, 8)", th: "แบบทดสอบท้ายบท ก–ข", h: "#/bab/2/kuiz" }
+      ],
+      CLO2: [
+        { ms: "Kenal Pasti Golongan Kata", th: "ระบุชนิดของคำ", h: "#/bab/3/latihan" },
+        { ms: "Isi Tempat Kosong (imbuhan dan kata tugas)", th: "เติมคำ (ปัจจัยและคำไวยากรณ์)", h: "#/bab/6/latihan" },
+        { ms: "Alat Latihan: pengimbuhan kata dasar", th: "เครื่องมือฝึก: เติมปัจจัย", h: "#/alat" },
+        { ms: "Kuiz Morfologi (Bab 1–7)", th: "แบบทดสอบภาควจีวิภาค", h: "#/kuiz/morfologi" }
+      ],
+      CLO3: [
+        { ms: "Analisis Struktur Ayat", th: "วิเคราะห์โครงสร้างประโยค", h: "#/bab/9/latihan" },
+        { ms: "Rajah pohon (Bab 8, Kuiz B)", th: "แผนภูมิต้นไม้", h: "#/bab/8/kuiz" },
+        { ms: "Kajian Kes (Bab 8–13)", th: "กรณีศึกษา", h: "#/bab/12/latihan" },
+        { ms: "Kuiz Sintaksis (Bab 8–13)", th: "แบบทดสอบภาควากยสัมพันธ์", h: "#/kuiz/sintaksis" }
+      ],
+      CLO4: [
+        { ms: "Betulkan Kesalahan Ayat", th: "แก้ไขประโยคที่ผิด", h: "#/bab/5/latihan" },
+        { ms: "Kesalahan Lazim", th: "ข้อผิดพลาดที่พบบ่อย", h: "#/bab/13/kesalahan" },
+        { ms: "Alat Latihan: ayat aktif → pasif", th: "เครื่องมือฝึก: กรรตุ → กรรมวาจก", h: "#/alat" },
+        { ms: "Soalan Pemikiran Kritis (Kuiz C) dan projek minggu 15", th: "โจทย์คิดวิเคราะห์ และโครงงานสัปดาห์ 15", h: "#/bab/13/kuiz" }
+      ]
+    }
+  },
+
   grades: [["A","80–100","ดีเยี่ยม","Cemerlang"],["B+","75–79","ดีมาก","Sangat baik"],["B","70–74","ดี","Baik"],["C+","65–69","ค่อนข้างดี","Agak baik"],["C","60–64","พอใช้","Sederhana"],["D+","55–59","อ่อน","Lemah"],["D","50–54","อ่อนมาก","Sangat lemah"],["F","0–49","ไม่ผ่าน","Gagal"]],
 
   /* บทเรียน: no = เลขบท, part = ภาค (morfologi / sintaksis)

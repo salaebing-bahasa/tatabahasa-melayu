@@ -994,3 +994,34 @@ em strong, strong em { font-weight: 700; background: color-mix(in srgb, var(--em
 
 @media print { .skip, .fs-wrap, .read-bar { display: none !important; } #app { zoom: 1; } .toc-d > summary { display: none; } }
 .ms-say { padding-block: 3px; }
+
+/* ===== Pemetaan CLO · การเชื่อมโยง CLO ===== */
+.nota-sumber { border: 1px solid var(--line); border-left: 4px solid var(--emas); border-radius: 12px; padding: 14px 18px; margin: 0 0 22px; max-width: none; }
+.sumber-senarai { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
+.sumber-tag { display: inline-block; font: 600 13px/1.3 var(--th-font); padding: 3px 9px; border-radius: 999px; vertical-align: middle; white-space: nowrap; border: 1px solid currentColor; }
+.sumber-tag .bm, .sumber-tag .tr { display: inline; margin: 0; font: inherit; color: inherit; }
+.sumber-tag .tr::before { content: " · "; }
+.sumber-tag.rasmi { color: var(--biru); background: var(--biru-muda); }
+.sumber-tag.pelan { color: var(--aksen); background: var(--aksen-soft, transparent); }
+.sumber-tag.cadang { color: var(--muted); border-style: dashed; }
+.clo-h { margin: 28px 0 10px; display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+.clo-ket { color: var(--muted); font-size: .95em; margin: 0 0 10px; }
+.clo-teks { margin-top: 4px; font-size: .92em; }
+.clo-web { margin-top: 6px; color: var(--muted); font-size: .92em; }
+.clo-sum { margin-top: 8px; padding-top: 6px; border-top: 1px dashed var(--line); font-weight: 600; }
+.clo-ul { margin: 0; padding-left: 1.1em; }
+.clo-ul li { margin: 0 0 6px; }
+.m-sel { display: inline-block; min-width: 1.5em; text-align: center; font-size: 1.1em; }
+.m-pelan { color: var(--biru); }
+.m-web { color: var(--aksen); }
+.clo-jurang { max-width: none; padding-left: 1.3em; }
+.clo-jurang li { margin-bottom: 10px; }
+@media print { .nota-sumber { break-inside: avoid; } .clo-h { break-after: avoid; } }
+.clo-page .tbl-wrap { max-width: none; }
+.clo-page td:nth-child(1) { min-width: 11em; }
+.nw-bab { white-space: normal; }
+.clo-matriks { min-width: 640px; }
+.clo-matriks td:nth-child(n+3):nth-child(-n+6), .clo-matriks th:nth-child(n+3):nth-child(-n+6) { text-align: center; }
+.clo-page .clo-matriks td:nth-child(1) { min-width: 0; }
+@media screen { .clo-page .tbl-wrap:has(.clo-matriks) { overflow-x: auto; } }
+.nw-bab a, .clo-web a { display: inline-block; min-width: 24px; padding: 2px 4px; text-align: center; }
