@@ -2,7 +2,7 @@
      วิธีเขียนสองภาษา:
      - ย่อหน้าและข้อในรายการ: บรรทัดแรกภาษามลายู ขึ้นบรรทัดใหม่ (ไม่เว้นบรรทัดว่าง) แล้วเป็นภาษาไทย
      - หัวข้อ (## / ###) และช่องในตาราง: ภาษามลายู<br>ภาษาไทย
-     ห้ามลบหัวข้อระดับ ## (6 ส่วนของบท) และให้คงรูปแบบข้อปรนัย (ก. ข. ค. ง.) กับบรรทัด **เฉลย** ไว้ -->
+     ห้ามลบหัวข้อระดับ ## (6 ส่วนของบท) และให้คงรูปแบบข้อปรนัย (ก. ข. ค. ง.) กับบรรทัด **เฉลย** ไว้ · คำอธิบายเฉลยอยู่ใต้ **Penjelasan** เป็นรายการ - **เลขข้อ** มลายู<br>ไทย -->
 
 ## 1. Hasil Pembelajaran<br>ผลลัพธ์การเรียนรู้ประจำบท
 
@@ -78,11 +78,11 @@ Nama khusus bagi orang, tempat, institusi atau benda, dan dimulakan dengan huruf
 **B. Kata ganti nama diri orang** (*kata ganti nama diri orang*)
 **ข. สรรพนามบุรุษ**
 
-| Diri<br>บุรุษ | Mesra<br>เป็นกันเอง | Sopan / rasmi<br>สุภาพ/ทางการ | Bahasa diraja dan khas<br>ราชาศัพท์และพิเศษ |
-|---|---|---|---|
-| Pertama (*pertama*)<br>บุรุษที่ 1 | *aku, kami, kita* | *saya* | *beta* (raja bertitah), *patik* (rakyat kepada raja)<br>*beta* กษัตริย์พูด, *patik* พูดกับกษัตริย์ |
-| Kedua (*kedua*)<br>บุรุษที่ 2 | *engkau, kau, kamu, awak* | *anda, saudara/saudari, tuan, puan* | *tuanku* |
-| Ketiga (*ketiga*)<br>บุรุษที่ 3 | *dia, ia, mereka* | *beliau* (orang yang dihormati)<br>(ผู้ได้รับความเคารพ) | *baginda* |
+| Diri<br>บุรุษ | Mesra (tunggal)<br>เป็นกันเอง (เอกพจน์) | Sopan / rasmi (tunggal)<br>สุภาพ/ทางการ (เอกพจน์) | Jamak<br>พหูพจน์ | Bahasa diraja<br>ราชาศัพท์ |
+|---|---|---|---|---|
+| Pertama (*pertama*)<br>บุรุษที่ 1 | *aku* | *saya* | *kami* (tanpa pendengar), *kita* (termasuk pendengar)<br>*kami* ไม่รวมผู้ฟัง, *kita* รวมผู้ฟัง | *beta* (raja bertitah), *patik* (rakyat kepada raja)<br>*beta* กษัตริย์พูด, *patik* พูดกับกษัตริย์ |
+| Kedua (*kedua*)<br>บุรุษที่ 2 | *engkau, kau, kamu, awak* | *anda, saudara/saudari, tuan, puan* | *kalian, anda semua* | *tuanku* |
+| Ketiga (*ketiga*)<br>บุรุษที่ 3 | *dia, ia* | *beliau* (orang yang dihormati)<br>(ผู้ได้รับความเคารพ) | *mereka* | *baginda* |
 
 Perhatian: *kami* tidak termasuk pendengar, manakala *kita* termasuk pendengar · *ia* dalam bahasa tulisan rasmi boleh merujuk kepada benda bukan manusia · *beliau* tidak digunakan untuk diri sendiri atau orang yang lebih muda.
 ข้อสังเกต: *kami* ไม่รวมผู้ฟัง ส่วน *kita* รวมผู้ฟัง · *ia* ในภาษาเขียนทางการใช้กับสิ่งที่ไม่ใช่มนุษย์ได้ · *beliau* ไม่ใช้กับตนเองหรือผู้มีอายุน้อยกว่า
@@ -145,6 +145,14 @@ Kata nama dan frasa nama berfungsi sebagai **subjek** (*subjek*), **objek** (*ob
    ก. *Dia tidak guru.* ข. *Dia bukan guru.* ค. *Dia jangan guru.* ง. *Dia belum guru.*
 
 **เฉลย** 1 ข · 2 ค · 3 ข · 4 ค · 5 ข
+
+**Penjelasan · คำอธิบาย**
+
+- **1** *Kejujuran* ialah konsep yang tidak dapat disentuh; *batu* dan *sungai* konkrit, manakala *Yala* kata nama khas.<br>*kejujuran* เป็นนามธรรมที่จับต้องไม่ได้ ส่วน *batu*, *sungai* เป็นรูปธรรม และ *Yala* เป็นนามเฉพาะ
+- **2** *Beliau* digunakan untuk diri ketiga yang dihormati; *dia* dan *ia* umum, manakala *mereka* jamak.<br>*beliau* ใช้กับบุรุษที่ 3 ที่ได้รับความเคารพ ส่วน *dia*, *ia* ใช้ทั่วไป และ *mereka* เป็นพหูพจน์
+- **3** *Kita* merangkumi pendengar, manakala *kami* tidak; *beta* hanya digunakan oleh raja.<br>*kita* รวมผู้ฟัง ส่วน *kami* ไม่รวม และ *beta* ใช้เฉพาะกษัตริย์
+- **4** *pengajaran* = *peN-…-an* + *ajar* dan membawa makna proses; *peN-* menghasilkan *pengajar* dan *-an* menghasilkan *ajaran*.<br>*pengajaran* = *peN-…-an* + *ajar* มีความหมายบอกกระบวนการ ส่วน *peN-* ให้ *pengajar* และ *-an* ให้ *ajaran*
+- **5** Predikat frasa nama dinafikan dengan *bukan*; *tidak* digunakan untuk kata kerja dan kata adjektif.<br>ภาคแสดงที่เป็นวลีนามปฏิเสธด้วย *bukan* ส่วน *tidak* ใช้กับคำกริยาและคำคุณศัพท์
 
 ### B. Soalan Subjektif<br>ข. อัตนัย
 

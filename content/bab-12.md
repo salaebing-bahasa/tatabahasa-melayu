@@ -2,7 +2,7 @@
      วิธีเขียนสองภาษา:
      - ย่อหน้าและข้อในรายการ: บรรทัดแรกภาษามลายู ขึ้นบรรทัดใหม่ (ไม่เว้นบรรทัดว่าง) แล้วเป็นภาษาไทย
      - หัวข้อ (## / ###) และช่องในตาราง: ภาษามลายู<br>ภาษาไทย
-     ห้ามลบหัวข้อระดับ ## (6 ส่วนของบท) และให้คงรูปแบบข้อปรนัย (ก. ข. ค. ง.) กับบรรทัด **เฉลย** ไว้ -->
+     ห้ามลบหัวข้อระดับ ## (6 ส่วนของบท) และให้คงรูปแบบข้อปรนัย (ก. ข. ค. ง.) กับบรรทัด **เฉลย** ไว้ · คำอธิบายเฉลยอยู่ใต้ **Penjelasan** เป็นรายการ - **เลขข้อ** มลายู<br>ไทย -->
 
 ## 1. Hasil Pembelajaran<br>ผลลัพธ์การเรียนรู้ประจำบท
 
@@ -87,7 +87,7 @@ Struktur: [pancangan *komplemen*] **dan** [pancangan *komplemen*] → dua ayat m
 
 - *Ismail dan Safuding sedang minum kopi sambil menonton televisyen di kedai.* — pendek, tetapi **ayat majmuk** (berasal daripada empat ayat asal)
   สั้น แต่เป็น **ประโยครวม** (มาจาก 4 ประโยคต้นทาง)
-- *Helikopter jenis Elluote Tentera Udara Diraja Malaysia telah jatuh terhempas di kawasan berbukit-bukau di bahagian Timur Laut Sabah pada minggu lepas.* — panjang, tetapi **ayat tunggal**
+- *Helikopter jenis Alouette Tentera Udara Diraja Malaysia telah jatuh terhempas di kawasan berbukit-bukau di bahagian Timur Laut Sabah pada minggu lepas.* — panjang, tetapi **ayat tunggal**
   ยาว แต่เป็น **ประโยคเดี่ยว**
 
 ## 4. Kajian Kes<br>กรณีศึกษา
@@ -123,6 +123,14 @@ Struktur: [pancangan *komplemen*] **dan** [pancangan *komplemen*] → dua ayat m
    ก. *sambil* ข. *serta* ค. *padahal* ง. *lalu*
 
 **เฉลย** 1 ข · 2 ค · 3 ข · 4 ค · 5 ค
+
+**Penjelasan · คำอธิบาย**
+
+- **1** Ayat kecil *yang dinaiki abang* menerangkan kata nama *kereta*, maka pancangan relatif.<br>ประโยคย่อย *yang dinaiki abang* ขยายนาม *kereta* จึงเป็นแบบฝังอนุประโยคสัมพันธ์
+- **2** Ayat kecil *bahawa kami lemah* menjadi pelengkap kepada *sedar*, maka pancangan komplemen.<br>ประโยคย่อย *bahawa kami lemah* เป็นส่วนเติมเต็มของ *sedar* จึงเป็นแบบฝังส่วนเติมเต็ม
+- **3** *Sekiranya* memperkenalkan syarat bagi perbuatan dalam ayat induk.<br>*sekiranya* นำเงื่อนไขของการกระทำในประโยคหลัก
+- **4** Ayat ini hanya mempunyai satu subjek dan satu predikat walaupun panjang; pilihan lain mengandungi lebih daripada satu klausa.<br>ประโยคนี้มีประธานและภาคแสดงอย่างละหนึ่งแม้จะยาว ส่วนตัวเลือกอื่นมีมากกว่าหนึ่งอนุประโยค
+- **5** *Padahal* menyatakan pertentangan; *sambil*, *serta* dan *lalu* menyatakan tambahan atau urutan.<br>*padahal* แสดงความขัดแย้ง ส่วน *sambil*, *serta*, *lalu* แสดงการเพิ่มเติมหรือลำดับ
 
 ### B. Soalan Subjektif<br>ข. อัตนัย
 

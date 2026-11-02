@@ -2,7 +2,7 @@
      วิธีเขียนสองภาษา:
      - ย่อหน้าและข้อในรายการ: บรรทัดแรกภาษามลายู ขึ้นบรรทัดใหม่ (ไม่เว้นบรรทัดว่าง) แล้วเป็นภาษาไทย
      - หัวข้อ (## / ###) และช่องในตาราง: ภาษามลายู<br>ภาษาไทย
-     ห้ามลบหัวข้อระดับ ## (6 ส่วนของบท) และให้คงรูปแบบข้อปรนัย (ก. ข. ค. ง.) กับบรรทัด **เฉลย** ไว้ -->
+     ห้ามลบหัวข้อระดับ ## (6 ส่วนของบท) และให้คงรูปแบบข้อปรนัย (ก. ข. ค. ง.) กับบรรทัด **เฉลย** ไว้ · คำอธิบายเฉลยอยู่ใต้ **Penjelasan** เป็นรายการ - **เลขข้อ** มลายู<br>ไทย -->
 
 ## 1. Hasil Pembelajaran<br>ผลลัพธ์การเรียนรู้ประจำบท
 
@@ -47,9 +47,9 @@ Pada akhir bab ini, pelajar dapat:
 
 | Kedudukan<br>ตำแหน่ง | Kata<br>คำ | Contoh<br>ตัวอย่าง |
 |---|---|---|
-| Di hadapan kata adjektif (*hadapan*)<br>หน้าคุณศัพท์ | *amat, sangat, terlalu, paling, agak, kurang* | *sangat cantik* |
+| Di hadapan kata adjektif (*hadapan*)<br>หน้าคุณศัพท์ | *terlalu, paling, agak, makin, kurang* | *terlalu cantik* |
 | Di belakang kata adjektif (*belakang*)<br>หลังคุณศัพท์ | *sekali, benar, nian* | *cantik sekali* |
-| Boleh di kedua-dua kedudukan (*bebas*)<br>อยู่ได้ทั้งสองตำแหน่ง | *betul, sungguh* | *sungguh cantik / cantik sungguh* |
+| Boleh di kedua-dua kedudukan (*bebas*)<br>อยู่ได้ทั้งสองตำแหน่ง | *amat, sangat, sungguh* | *sangat cantik / cantik sangat* · *sungguh cantik / cantik sungguh* |
 
 **B. Kata adjektif + keterangan:** Sesetengah kata adjektif mesti diikuti frasa sendi nama tertentu
 **ข. คุณศัพท์ + ส่วนขยาย**: คุณศัพท์บางคำต้องตามด้วยวลีบุพบทเฉพาะ
@@ -128,6 +128,14 @@ Pada akhir bab ini, pelajar dapat:
    ก. *antara saya dan dia* ข. *antara saya dengan dia* ค. *di antara saya dan dia* ง. *antara saya serta dia*
 
 **เฉลย** 1 ข · 2 ข · 3 ข · 4 ข · 5 ข
+
+**Penjelasan · คำอธิบาย**
+
+- **1** *Nian* ialah kata penguat belakang. Pilihan lain menindihkan dua penguat atau meletakkan *sekali* di hadapan kata adjektif.<br>*nian* เป็นคำเน้นที่อยู่หลังคุณศัพท์ ตัวเลือกอื่นใช้คำเน้นซ้อนกัน หรือวาง *sekali* ไว้หน้าคุณศัพท์
+- **2** *Mahir* diikuti *dalam* untuk menyatakan bidang: *mahir dalam bahasa Arab*.<br>*mahir* ตามด้วย *dalam* เพื่อบอกสาขา: *mahir dalam bahasa Arab*
+- **3** *Bawah* ialah kata arah yang hadir antara kata sendi nama *di* dengan frasa nama *meja*.<br>*bawah* เป็นคำบอกทิศที่อยู่ระหว่างคำบุพบท *di* กับวลีนาม *meja*
+- **4** *Untuk ibu* menjadi predikat kepada *Hadiah itu* (pola FN + FSN). Dalam ayat lain, frasa sendi nama hanya keterangan kepada kata kerja.<br>*untuk ibu* เป็นภาคแสดงของ *Hadiah itu* (แบบ FN + FSN) ส่วนประโยคอื่นวลีบุพบทเป็นเพียงส่วนขยายของกริยา
+- **5** *Antara* berpasangan dengan *dengan*, bukan *dan* atau *serta*; *di* sebelum *antara* tidak diperlukan.<br>*antara* ใช้คู่กับ *dengan* ไม่ใช่ *dan* หรือ *serta* และไม่ต้องมี *di* หน้า *antara*
 
 ### B. Soalan Subjektif<br>ข. อัตนัย
 

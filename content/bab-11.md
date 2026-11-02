@@ -2,7 +2,7 @@
      วิธีเขียนสองภาษา:
      - ย่อหน้าและข้อในรายการ: บรรทัดแรกภาษามลายู ขึ้นบรรทัดใหม่ (ไม่เว้นบรรทัดว่าง) แล้วเป็นภาษาไทย
      - หัวข้อ (## / ###) และช่องในตาราง: ภาษามลายู<br>ภาษาไทย
-     ห้ามลบหัวข้อระดับ ## (6 ส่วนของบท) และให้คงรูปแบบข้อปรนัย (ก. ข. ค. ง.) กับบรรทัด **เฉลย** ไว้ -->
+     ห้ามลบหัวข้อระดับ ## (6 ส่วนของบท) และให้คงรูปแบบข้อปรนัย (ก. ข. ค. ง.) กับบรรทัด **เฉลย** ไว้ · คำอธิบายเฉลยอยู่ใต้ **Penjelasan** เป็นรายการ - **เลขข้อ** มลายู<br>ไทย -->
 
 ## 1. Hasil Pembelajaran<br>ผลลัพธ์การเรียนรู้ประจำบท
 
@@ -36,8 +36,8 @@ Pada akhir bab ini, pelajar dapat:
 
 ### 11.1 Ayat Dasar<br>ประโยคพื้นฐาน (*ayat dasar*)
 
-*Ayat dasar* ialah ayat yang menjadi dasar atau sumber kepada pembentukan semua ayat lain (juga disebut *ayat inti* atau *ayat mudah*). Ayat dasar ialah ayat penyata dalam ragam aktif, dan subjeknya sentiasa hadir di hadapan predikat. Pola ayat ditentukan oleh jenis predikatnya.
-*Ayat dasar* คือประโยคที่เป็นฐานหรือต้นกำเนิดของประโยคอื่นทั้งหมด (เรียกอีกอย่างว่า *ayat inti* หรือ *ayat mudah*) เป็นประโยคบอกเล่าแบบกรรตุวาจก และประธานอยู่หน้าภาคแสดงเสมอ แบบประโยคกำหนดโดยชนิดของภาคแสดง
+*Ayat dasar* ialah ayat yang menjadi dasar atau sumber kepada pembentukan semua ayat lain (juga disebut *ayat inti*). Ayat dasar ialah ayat penyata dalam ragam aktif, dan subjeknya sentiasa hadir di hadapan predikat. Pola ayat ditentukan oleh jenis predikatnya.
+*Ayat dasar* คือประโยคที่เป็นฐานหรือต้นกำเนิดของประโยคอื่นทั้งหมด (เรียกอีกอย่างว่า *ayat inti*) เป็นประโยคบอกเล่าแบบกรรตุวาจก และประธานอยู่หน้าภาคแสดงเสมอ แบบประโยคกำหนดโดยชนิดของภาคแสดง
 
 | Pola<br>แบบ | Subjek<br>ประธาน | Predikat<br>ภาคแสดง |
 |---|---|---|
@@ -135,6 +135,14 @@ Perhatian: `*`*Tolong jangan datang.* tidak sesuai (maknanya bercanggah).
    ก. *Jangan sentuh lah.* ข. *Dilarang sentuh.* ค. *Tak usah sentuh.* ง. *Tolong jangan sentuh.*
 
 **เฉลย** 1 ข · 2 ง · 3 ข · 4 ง · 5 ข
+
+**Penjelasan · คำอธิบาย**
+
+- **1** *Bernama* ialah kata kerja (*ber-* + *nama*), maka predikatnya frasa kerja: FN + FK.<br>*bernama* เป็นคำกริยา (*ber-* + *nama*) ภาคแสดงจึงเป็นวลีกริยา: FN + FK
+- **2** *Untuk emak* ialah frasa sendi nama, maka pola FN + FSN.<br>*untuk emak* เป็นวลีบุพบท จึงเป็นแบบ FN + FSN
+- **3** Predikat *ke Phuket* dikedepankan (susunan songsang), sedangkan ayat dasar mesti bersusunan subjek + predikat.<br>ภาคแสดง *ke Phuket* ถูกย้ายไปข้างหน้า (เรียงสลับ) ขณะที่ประโยคพื้นฐานต้องเรียงประธาน + ภาคแสดง
+- **4** *Adakah* membentuk soalan tertutup yang dijawab dengan *ya/tidak*; pilihan lain membentuk soalan terbuka.<br>*adakah* สร้างคำถามปิดที่ตอบ *ya/tidak* ส่วนตัวเลือกอื่นเป็นคำถามเปิด
+- **5** Papan tanda rasmi menggunakan *dilarang*. *Jangan … lah* dan *tak usah* tidak rasmi, manakala *tolong jangan* bercanggah maknanya.<br>ป้ายทางการใช้ *dilarang* ส่วน *jangan … lah* และ *tak usah* ไม่เป็นทางการ และ *tolong jangan* มีความหมายขัดกัน
 
 ### B. Soalan Subjektif<br>ข. อัตนัย
 

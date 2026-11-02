@@ -75,8 +75,11 @@
   }
   /* อ่านข้อปรนัยจาก markdown: "1. คำถาม" / "   ก. ... ข. ... ค. ... ง. ..." / "**เฉลย** 1 ข · 2 ค (หมายเหตุ)" */
   function parseMCQ(text) {
-    const lines = text.split("\n"); const qs = []; let cur = null; let key = "";
+    const lines = text.split("\n"); const qs = []; let cur = null; let key = ""; const exp = {};
     for (const ln of lines) {
+      /* Penjelasan jawapan: "- **1** Melayu<br>Thai" selepas baris เฉลย · คำอธิบายเฉลยรายข้อ */
+      const me = ln.match(/^\s*-\s+\*\*(\d+)\*\*\s+(.+)$/);
+      if (key && me) { exp[+me[1]] = me[2].trim(); continue; }
       const mq = ln.match(/^(\d+)\.\s+(.*)$/);
       if (mq) { cur = { n: +mq[1], q: mq[2].trim(), o: [] }; qs.push(cur); continue; }
       if (/\*\*เฉลย\*\*/.test(ln)) { key = ln.replace(/\*\*เฉลย\*\*/, ""); continue; }
@@ -89,7 +92,7 @@
     }
     const ans = {}; const re = /(\d+)\s*([กขคง])(?:\s*\(([^)]*)\))?/g; let m;
     while ((m = re.exec(key))) ans[+m[1]] = { a: "กขคง".indexOf(m[2]), note: m[3] || "" };
-    return qs.filter(q => q.o.length >= 2 && ans[q.n]).map(q => ({ q: q.q, o: q.o, a: ans[q.n].a, note: ans[q.n].note }));
+    return qs.filter(q => q.o.length >= 2 && ans[q.n]).map(q => ({ q: q.q, o: q.o, a: ans[q.n].a, note: ans[q.n].note, exp: exp[q.n] || "" }));
   }
   /* หลังแปลง markdown: ห่อตาราง ซ่อนแนวคำตอบ และทำให้คำมลายูกดฟังเสียงได้ */
   /* Pisahkan baris Melayu dan Thai dalam satu blok (dipisahkan oleh <br>).
@@ -224,7 +227,7 @@
         ${src ? `<p class="quiz-src"><a href="${babLink(it.bab)}">Bab ${it.bab} · บทที่ ${it.bab}</a></p>` : ""}
         <p class="q-text">${i + 1}. ${mdi(it.q)}</p>
         <div class="opts">${it.o.map((o, j) => `<button type="button" class="opt" data-j="${j}">${"กขคง"[j]}. ${mdi(o)}</button>`).join("")}</div>
-        <p class="fb" aria-live="polite"></p>${it.note ? `<p class="note-ans" hidden>Catatan · หมายเหตุ: ${mdi(it.note)}</p>` : ""}</div>`).join("")}
+        <p class="fb" aria-live="polite"></p>${it.note ? `<p class="note-ans" hidden>Catatan · หมายเหตุ: ${mdi(it.note)}</p>` : ""}${it.exp ? `<p class="note-ans exp-ans" hidden>${(([m, t]) => `<b>Penjelasan:</b> ${mdi(m)}${t ? `<br><b>คำอธิบาย:</b> ${mdi(t)}` : ""}`)(it.exp.split("<br>"))}</p>` : ""}</div>`).join("")}
       <div class="ex-foot"><span class="score" aria-live="polite"></span><button class="btn btn-line" type="button" data-reset="${id}">Cuba semula · ทำใหม่</button></div></div>`;
   }
   function bindMCQ(root, onAll) {
@@ -236,14 +239,14 @@
         if (j !== a) opt.classList.add("wrong");
         q.dataset.res = j === a ? "1" : "0";
         const fb = $(".fb", q); fb.className = "fb " + (j === a ? "right" : "wrong"); fb.textContent = j === a ? "Betul · ถูกต้อง" : `Belum tepat. Jawapan yang betul ialah ${"กขคง"[a]} (kotak hijau) · ยังไม่ถูก คำตอบที่ถูกคือข้อ ${"กขคง"[a]} (กรอบสีเขียว)`;
-        const nt = $(".note-ans", q); if (nt) nt.hidden = false;
+        $$(".note-ans", q).forEach(nt => { nt.hidden = false; });
         const all = $$(".q", ex), done = all.filter(x => x.dataset.res !== undefined), ok = done.filter(x => x.dataset.res === "1").length;
         $(".score", ex).textContent = `Markah · คะแนน ${ok}/${all.length}` + (done.length < all.length ? ` (dijawab · ตอบแล้ว ${done.length})` : "");
         if (done.length === all.length && onAll) onAll(ok, all.length);
       }
       if (rst) {
         const ex = $("#" + rst.dataset.reset);
-        $$(".q", ex).forEach(q => { delete q.dataset.res; $$(".opt", q).forEach(b => { b.disabled = false; b.classList.remove("right", "wrong"); }); const fb = $(".fb", q); fb.className = "fb"; fb.textContent = ""; const nt = $(".note-ans", q); if (nt) nt.hidden = true; });
+        $$(".q", ex).forEach(q => { delete q.dataset.res; $$(".opt", q).forEach(b => { b.disabled = false; b.classList.remove("right", "wrong"); }); const fb = $(".fb", q); fb.className = "fb"; fb.textContent = ""; $$(".note-ans", q).forEach(nt => { nt.hidden = true; }); });
         $(".score", ex).textContent = "";
         if (onAll) onAll(null);
       }
@@ -358,13 +361,16 @@
 
   /* ================= TOOLS ================= */
   const VOW = /[aeiou]/;
-  const syll = w => (w.match(/[aeiou]+/g) || []).length;
+  /* Kata dasar satu suku kata: satu vokal sahaja (cat, bom, lap). Kata seperti baik, naik, buat
+     mempunyai dua suku kata (ba-ik, na-ik, bu-at) walaupun vokalnya berturutan.
+     คำพยางค์เดียวต้องมีสระตัวเดียว ส่วน baik, naik, buat เป็นสองพยางค์ */
+  const syll = w => (w.match(/[aeiou]/g) || []).length;
   const isCluster = w => /^[bcdfghjklmnpqrstvwxyz]{2}/.test(w) && !/^(ng|ny|sy|kh)/.test(w);
   /* กฎการหลอมรวมของ meN- / peN- (Tatabahasa Dewan) */
   function nasal(base, pre) { // pre = "me" หรือ "pe"
     const w = base.toLowerCase().trim(); if (!w) return null;
     const EXC = { punya: [pre + "mpunya", "Pengecualian: bunyi p dikekalkan dalam mempunyai · คำยกเว้น: คงเสียง p ใน mempunyai"], kaji: [pre + "ngkaji", "Pengecualian: bunyi k dikekalkan untuk membezakannya daripada mengaji (membaca al-Quran) · คำยกเว้น: คงเสียง k เพื่อแยกจาก mengaji (อ่านอัลกุรอาน)"] };
-    if (EXC[w]) return { w: EXC[w][0], r: EXC[w][1] };
+    if (EXC[w] && !(w === "punya" && pre === "pe")) return { w: EXC[w][0], r: EXC[w][1] }; // peN- + punya → pemunya (biasa)
     if (syll(w) === 1) return { w: pre + "nge" + w, r: `Kata dasar satu suku kata → ${pre}nge- · คำฐานพยางค์เดียว` };
     if (isCluster(w)) {
       const f = w[0];
