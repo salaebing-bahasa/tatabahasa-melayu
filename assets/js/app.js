@@ -960,6 +960,17 @@
 
   /* ---------- router ---------- */
   let laluanPertama = true;
+  /* GoatCounter: kira setiap halaman # sekali · นับผู้เข้าชมทุกหน้า (เว็บนี้เปลี่ยนหน้าด้วย # จึงต้องนับเอง) */
+  let gcAkhir = "";
+  window.kiraLawatan = function () {
+    const gc = window.goatcounter;
+    if (!gc || typeof gc.count !== "function") return;
+    /* Bahagian dalam bab tidak dikira berasingan · หัวข้อย่อยในบทนับรวมเป็นหน้าบทเดียว */
+    const laluan = location.pathname + location.hash.replace(/^(#\/bab\/\d+)\/.*$/, "$1");
+    if (laluan === gcAkhir) return;
+    gcAkhir = laluan;
+    try { gc.count({ path: laluan, title: document.title }); } catch (e) {}
+  };
   function route() {
     if ("speechSynthesis" in window) speechSynthesis.cancel();
     const p = location.hash.replace(/^#\/?/, "").split("/");
@@ -982,6 +993,7 @@
     laluanPertama = false;
     document.documentElement.classList.toggle("di-bab", p[0] === "bab");
     bacaBar();
+    window.kiraLawatan();
     setTimeout(() => { $("#sr-umum").textContent = document.title; }, 300);
   }
   window.addEventListener("hashchange", route);
