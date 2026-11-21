@@ -1254,3 +1254,15 @@ footer .kaki-tajuk { font-weight: 700; font-size: 1.08em; margin-bottom: 2px; }
 .vid figcaption .tr { color: var(--muted); font-size: 14px; }
 .vid-cetak { display: none; }
 @media print { .vid-main, .vid-iframe { display: none !important; } .vid-cetak { display: block; font-size: 10pt; margin: 2px 0 0; } }
+
+/* ================= Kajian Kes pilihan · กรณีศึกษา (ไม่บังคับ) ================= */
+.cabaran { margin: 26px 0 10px; border: 1px dashed var(--emas); border-radius: var(--radius-m); background: var(--surface); }
+.cabaran > summary { cursor: pointer; padding: 14px 16px; font-weight: 600; display: flex; flex-wrap: wrap; gap: 6px 10px; align-items: center; list-style: none; }
+.cabaran > summary::-webkit-details-marker { display: none; }
+.cabaran > summary::before { content: "▸"; color: var(--emas); font-size: 18px; transition: transform .15s; }
+.cabaran[open] > summary::before { transform: rotate(90deg); }
+.cabaran > summary .tr { font-weight: 400; color: var(--muted); }
+.cabaran-tag { background: var(--emas); color: #fff; border-radius: 99px; padding: 2px 10px; font-size: 12.5px; }
+.cabaran[open] { padding: 0 16px 14px; }
+.cabaran[open] > summary { margin: 0 -16px 6px; border-bottom: 1px dashed var(--line); }
+.cabaran-nota { color: var(--muted); font-size: 14.5px; }

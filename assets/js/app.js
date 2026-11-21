@@ -210,6 +210,17 @@
     f.allowFullscreen = true; f.loading = "lazy"; f.className = "vid-iframe";
     b.replaceWith(f);
   });
+  /* Kajian Kes dijadikan cabaran pilihan (dilipat) · กรณีศึกษาเป็นโจทย์ท้าทาย ไม่บังคับ (พับไว้) */
+  function lipatKajianKes(root) {
+    $$(".prose > h3", root).filter(h => /^\s*Kajian Kes/i.test(h.textContent)).forEach(h => {
+      const d = document.createElement("details"); d.className = "cabaran";
+      d.innerHTML = `<summary><span class="cabaran-tag">Cabaran · โจทย์ท้าทาย</span> <span lang="ms">Kajian Kes (pilihan)</span> <span class="tr">กรณีศึกษา (ไม่บังคับ)</span></summary>
+        <p class="cabaran-nota">${B("Bahagian ini lebih mencabar dan tidak wajib. Cuba jika anda sudah memahami isi bab.", "ส่วนนี้ยากกว่าปกติและไม่บังคับ ลองทำเมื่อเข้าใจเนื้อหาในบทแล้ว")}</p>`;
+      let n = h.nextElementSibling;
+      while (n && !/^H[23]$/.test(n.tagName)) { const nx = n.nextElementSibling; d.appendChild(n); n = nx; }
+      h.replaceWith(d);
+    });
+  }
   function mdLat(body) {
     const store = [];
     const src = body.replace(/^```latihan-(\w+)[^\n]*\n([\s\S]*?)^```\s*$/gm, (_, t, b) => { store.push(latihanHTML(t, b)); return `\n<div data-lat-ph="${store.length - 1}"></div>\n`; })
@@ -416,7 +427,7 @@
         </div>
         <div class="hero-side">
           <h1><span lang="ms">${C.code} ${C.ms}</span><br><span style="font-weight:500;opacity:.85">${C.th}</span></h1>
-          <p class="bm" lang="ms">Dokumen pengajaran dalam talian, ${C.termMs}. Tiga belas bab daripada morfem hingga transformasi ayat, lengkap dengan kajian kes, kuiz dan alat latihan.</p>
+          <p class="bm" lang="ms">Dokumen pengajaran dalam talian, ${C.termMs}. Tiga belas bab daripada morfem hingga transformasi ayat, lengkap dengan latihan, kuiz dan alat latihan.</p>
           <p class="tr hero-tr2">เอกสารประกอบการสอนออนไลน์ ${C.term} 13 บท ตั้งแต่หน่วยคำถึงการแปลงประโยค พร้อมกรณีศึกษา แบบทดสอบ และเครื่องมือฝึก</p>
           <div class="btn-row">
             ${(() => { const h = sambungHref(), a = load().akhir; return h ? `<a class="btn btn-hero btn-dw" href="${h}">${B("Sambung Belajar · Bab " + a.n, "เรียนต่อ บทที่ " + a.n)}</a>` : `<a class="btn btn-hero btn-dw" href="${babLink(next.no)}">${doneCount ? B("Mula Bab " + next.no, "เริ่มบทที่ " + next.no) : B("Mula Bab 1", "เริ่มบทที่ 1")}</a>`; })()}
@@ -546,7 +557,7 @@
       const ex = $(`#mcq${n}`, body);
       const skorTxt = () => { const k = getSkor(n); return k ? B(`Skor terakhir ${k.ok}/${k.all} · terbaik ${k.best}/${k.all} · ${k.cuba} kali cubaan`, `คะแนนล่าสุด ${k.ok}/${k.all} · สูงสุด ${k.best}/${k.all} · ทำแล้ว ${k.cuba} ครั้ง`) : B("Belum ada skor yang disimpan untuk bab ini.", "ยังไม่มีคะแนนที่บันทึกไว้สำหรับบทนี้"); };
       if (ex) ex.insertAdjacentHTML("afterend", `<div class="skor-bab" aria-live="polite"><p class="skor-txt">${skorTxt()}</p>${NOTA_PENDEK_F()}</div>`);
-      enhance(body); bindLat(body);
+      lipatKajianKes(body); enhance(body); bindLat(body);
       bindMCQ(body, (ok, all) => {
         if (ok === null) return;
         setSkor(n, ok, all); $(".skor-txt", body).innerHTML = skorTxt();
