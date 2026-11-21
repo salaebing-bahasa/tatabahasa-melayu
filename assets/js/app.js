@@ -17,7 +17,18 @@
   /* ---------- storage (per viewer, optional) ---------- */
   const KEY = "tb0113131";
   function load() { try { return JSON.parse(localStorage.getItem(KEY)) || {}; } catch (e) { return {}; } }
-  function save(o) { try { localStorage.setItem(KEY, JSON.stringify(o)); } catch (e) { /* ignore */ } }
+  function save(o) {
+    try { localStorage.setItem(KEY, JSON.stringify(o)); } catch (e) { /* ignore */ }
+    /* Akaun pelajar: segerakkan ke awan jika log masuk · ถ้าล็อกอินอยู่ ส่งความก้าวหน้าขึ้นระบบ (assets/js/akaun.js) */
+    try { if (window.TBAkaun) window.TBAkaun.simpan(o); } catch (e) { /* ignore */ }
+  }
+  /* Rekod setiap jawapan latihan/kuiz untuk akaun yang log masuk · บันทึกคำตอบรายข้อเมื่อล็อกอิน */
+  function rekodJawapan(d) {
+    const m = location.hash.match(/^#\/bab\/(\d+)/);
+    d.bab = m ? +m[1] : null; d.laluan = location.hash.replace(/^#/, "") || "/";
+    try { window.dispatchEvent(new CustomEvent("tb:jawab", { detail: d })); } catch (e) { /* ignore */ }
+  }
+  const dalamAkaun = () => { try { return !!(window.TBAkaun && window.TBAkaun.pengguna()); } catch (e) { return false; } };
   const isDone = n => (load().done || []).includes(n);
   function setDone(n, v) { const s = load(); const d = new Set(s.done || []); v ? d.add(n) : d.delete(n); s.done = [...d]; save(s); }
   /* ---------- Kemajuan pelajar · ความก้าวหน้า (localStorage, peranti ini sahaja) ----------
@@ -28,9 +39,9 @@
   function setAkhir(n, sec) { const s = load(); const a = s.akhir || {}; if (a.n === n && a.sec === (sec || "")) return; s.akhir = { n, sec: sec || "", t: Date.now() }; save(s); }
   function resetKemajuan() { const s = load(); delete s.done; delete s.skor; delete s.akhir; save(s); }
   const tarikh = t => { try { return new Date(t).toLocaleString("ms-MY", { day: "numeric", month: "short", year: "numeric", hour: "2-digit", minute: "2-digit" }); } catch (e) { return ""; } };
-  const NOTA_SIMPAN_F = () => B("Kemajuan dan skor disimpan dalam pelayar (localStorage) pada peranti ini sahaja. Data ini <b>tidak dihantar kepada pensyarah</b> dan bukan rekod markah rasmi. Jika anda menukar peranti atau pelayar, menggunakan mod peribadi, atau memadam data pelayar, kemajuan tidak akan kelihatan atau akan hilang.",
+  const NOTA_SIMPAN_F = () => dalamAkaun() ? B("Anda telah log masuk. Kemajuan, skor dan jawapan latihan anda disimpan dalam akaun anda dan <b>boleh dilihat oleh pensyarah</b> untuk tujuan pengajaran. Data ini bukan rekod markah rasmi.", "คุณล็อกอินแล้ว ความก้าวหน้า คะแนน และคำตอบแบบฝึกหัดจะบันทึกในบัญชีของคุณ และ<b>อาจารย์ผู้สอนดูได้</b>เพื่อใช้ในการจัดการเรียนการสอน ข้อมูลนี้ไม่ใช่คะแนนอย่างเป็นทางการ") : B("Kemajuan dan skor disimpan dalam pelayar (localStorage) pada peranti ini sahaja. Data ini <b>tidak dihantar kepada pensyarah</b> dan bukan rekod markah rasmi. Jika anda menukar peranti atau pelayar, menggunakan mod peribadi, atau memadam data pelayar, kemajuan tidak akan kelihatan atau akan hilang.",
     "ความก้าวหน้าและคะแนนบันทึกในเบราว์เซอร์ (localStorage) ของอุปกรณ์เครื่องนี้เท่านั้น <b>ไม่ได้ส่งไปให้อาจารย์</b> และไม่ใช่คะแนนอย่างเป็นทางการ หากเปลี่ยนอุปกรณ์หรือเบราว์เซอร์ ใช้โหมดไม่ระบุตัวตน หรือล้างข้อมูลเบราว์เซอร์ ข้อมูลจะไม่แสดงหรือหายไป");
-  const NOTA_PENDEK_F = () => `<span class="nota-simpan">${B("Disimpan dalam pelayar ini sahaja; tidak dihantar kepada pensyarah.", "บันทึกในเบราว์เซอร์นี้เท่านั้น ไม่ได้ส่งให้อาจารย์")} <a href="#/kemajuan">${B("Lihat kemajuan", "ดูความก้าวหน้า")}</a></span>`;
+  const NOTA_PENDEK_F = () => `<span class="nota-simpan">${dalamAkaun() ? B("Disimpan dalam akaun anda.", "บันทึกในบัญชีของคุณแล้ว") : B("Disimpan dalam pelayar ini sahaja; tidak dihantar kepada pensyarah.", "บันทึกในเบราว์เซอร์นี้เท่านั้น ไม่ได้ส่งให้อาจารย์")} <a href="#/kemajuan">${B("Lihat kemajuan", "ดูความก้าวหน้า")}</a></span>`;
   function sambungHref() { const a = load().akhir; if (!a || !CH.some(c => c.no === a.n)) return null; return babLink(a.n) + (a.sec ? "/" + a.sec : ""); }
 
   function toast(msg) { const t = $("#toast"); t.textContent = msg; t.classList.add("show"); clearTimeout(toast.t); toast.t = setTimeout(() => t.classList.remove("show"), 2600); }
@@ -196,8 +207,11 @@
       const all = $$(".lat-item", box), d = all.filter(x => x.dataset.res !== undefined), r = d.filter(x => x.dataset.res === "1").length;
       $(".lat-score", box).textContent = `Markah · คะแนน ${r}/${all.length}` + (d.length < all.length ? ` (dijawab · ตอบแล้ว ${d.length})` : "");
     };
-    const done = (li, ok, msg) => {
+    const done = (li, ok, msg, ans) => {
       li.dataset.res = ok ? "1" : "0";
+      const box = li.closest(".lat"), q = $(".lat-q, .lat-words, .lat-chs", li);
+      rekodJawapan({ jenis: ((box.className.match(/\blat-(?!item)(\w+)/) || [])[1]) || "latihan", latihan: box.id, item: $$(".lat-item", box).indexOf(li) + 1,
+        soalan: (q ? q.textContent : "").replace(/\s+/g, " ").trim().slice(0, 300), jawapan: String(ans == null ? "" : ans).slice(0, 300), betul: !!ok });
       const fb = $(".lat-fb", li); fb.className = "lat-fb " + (ok ? "right" : "wrong"); fb.textContent = msg;
       $$(".lat-exp, .lat-fix, .lat-why", li).forEach(x => { x.hidden = false; });
       skor(li.closest(".lat"));
@@ -206,7 +220,7 @@
       const inp = $(".lat-in", li); if (!inp.value.trim()) { inp.focus(); return; }
       const alt = li.dataset.ans.split("/"), ok = alt.map(normJ).includes(normJ(inp.value)), j = alt.join(" / ");
       inp.disabled = true; inp.classList.add(ok ? "right" : "wrong"); $(".lat-semak", li).disabled = true;
-      done(li, ok, ok ? "Betul · ถูกต้อง" : `Jawapan anda "${inp.value.trim()}" belum tepat. Jawapan: ${j} · คำตอบ "${inp.value.trim()}" ยังไม่ถูก คำตอบที่ถูกคือ ${j}`);
+      done(li, ok, ok ? "Betul · ถูกต้อง" : `Jawapan anda "${inp.value.trim()}" belum tepat. Jawapan: ${j} · คำตอบ "${inp.value.trim()}" ยังไม่ถูก คำตอบที่ถูกคือ ${j}`, inp.value.trim());
     };
     root.addEventListener("keydown", e => { if (e.key === "Enter" && e.target.classList.contains("lat-in")) { e.preventDefault(); semak(e.target.closest(".lat-item")); } });
     root.addEventListener("change", e => { if (e.target.classList.contains("lat-kc")) { const li = e.target.closest(".lat-item"), k = $$(".lat-kc", li), c = k.filter(x => x.checked).length; $(".lat-krs", li).textContent = `Kriteria dipenuhi · ผ่านเกณฑ์ ${c}/${k.length}` + (c === k.length ? " — Cemerlang · ยอดเยี่ยม" : c >= k.length / 2 ? " — Baik; semak kriteria yang belum dipenuhi · ดี ลองปรับส่วนที่ยังขาด" : " — Perlu diperbaiki · ควรปรับปรุง"); skor(li.closest(".lat")); } });
@@ -223,7 +237,7 @@
         const ok = t.hasAttribute("data-ok");
         $$(".lat-ob", li).forEach(b => { b.disabled = true; if (b.hasAttribute("data-ok")) b.classList.add("right"); });
         if (!ok) t.classList.add("wrong");
-        return done(li, ok, ok ? "Betul · ถูกต้อง — lihat sebab setiap pilihan · ดูเหตุผลของแต่ละตัวเลือก" : "Belum tepat · ยังไม่ถูก — lihat sebab setiap pilihan di bawah · ดูเหตุผลของแต่ละตัวเลือกด้านล่าง");
+        return done(li, ok, ok ? "Betul · ถูกต้อง — lihat sebab setiap pilihan · ดูเหตุผลของแต่ละตัวเลือก" : "Belum tepat · ยังไม่ถูก — lihat sebab setiap pilihan di bawah · ดูเหตุผลของแต่ละตัวเลือกด้านล่าง", t.textContent.trim());
       }
       if (t.classList.contains("lat-semak-an")) {
         const ch = $$(".lat-ch", li), sel = ch.map(c => $(".lat-sel", c));
@@ -231,20 +245,20 @@
         let r = 0;
         ch.forEach((c, k) => { const s = sel[k], ok = +s.value === +c.dataset.a; s.disabled = true; s.classList.add(ok ? "right" : "wrong"); if (ok) r++; else $(".lat-cor", c).hidden = false; });
         t.disabled = true;
-        return done(li, r === ch.length, r === ch.length ? `Betul semua · ถูกทั้งหมด (${r}/${ch.length})` : `${r}/${ch.length} bahagian betul; jawapan yang betul ditunjukkan dengan → · ถูก ${r}/${ch.length} ส่วน คำตอบที่ถูกแสดงด้วย →`);
+        return done(li, r === ch.length, r === ch.length ? `Betul semua · ถูกทั้งหมด (${r}/${ch.length})` : `${r}/${ch.length} bahagian betul; jawapan yang betul ditunjukkan dengan → · ถูก ${r}/${ch.length} ส่วน คำตอบที่ถูกแสดงด้วย →`, ch.map((c, k) => $(".lat-cht", c).textContent + "=" + (sel[k].selectedOptions[0] ? sel[k].selectedOptions[0].textContent : "")).join("; "));
       }
       if (t.classList.contains("lat-w")) {
         const ok = t.hasAttribute("data-ok");
         $$(".lat-w", li).forEach(b => { b.disabled = true; if (b.hasAttribute("data-ok")) b.classList.add(ok ? "right" : "wrong-key"); });
         if (!ok) t.classList.add("wrong");
-        return done(li, ok, ok ? "Betul, itulah kesalahannya · ถูกต้อง คำนี้คือจุดที่ผิด" : `"${t.textContent}" tidak salah. Kesalahan sebenar ditandai dengan garis merah · "${t.textContent}" ไม่ผิด จุดที่ผิดจริงมีขีดเส้นสีแดง`);
+        return done(li, ok, ok ? "Betul, itulah kesalahannya · ถูกต้อง คำนี้คือจุดที่ผิด" : `"${t.textContent}" tidak salah. Kesalahan sebenar ditandai dengan garis merah · "${t.textContent}" ไม่ผิด จุดที่ผิดจริงมีขีดเส้นสีแดง`, t.textContent.trim());
       }
       if (t.classList.contains("lat-c") || t.classList.contains("lat-tf")) {
         const a = +li.dataset.a, j = t.classList.contains("lat-c") ? +t.dataset.j : +t.dataset.v, bs = $$(".lat-c, .lat-tf", li);
         bs.forEach((b, k) => { b.disabled = true; if ((b.classList.contains("lat-c") ? k : +b.dataset.v) === a) b.classList.add("right"); });
         if (j !== a) t.classList.add("wrong");
         const label = t.classList.contains("lat-c") ? bs[a].textContent : (a ? "Betul · ถูก" : "Salah · ผิด");
-        return done(li, j === a, j === a ? "Betul · ถูกต้อง" : `Anda memilih "${t.textContent}". Jawapan: ${label} · คุณเลือก "${t.textContent}" คำตอบที่ถูกคือ ${label}`);
+        return done(li, j === a, j === a ? "Betul · ถูกต้อง" : `Anda memilih "${t.textContent}". Jawapan: ${label} · คุณเลือก "${t.textContent}" คำตอบที่ถูกคือ ${label}`, t.textContent.trim());
       }
       const rs = e.target.closest("[data-lat-reset]");
       if (rs) {
@@ -440,6 +454,7 @@
         $$(".opt", q).forEach((b, k) => { b.disabled = true; if (k === a) b.classList.add("right"); });
         if (j !== a) opt.classList.add("wrong");
         q.dataset.res = j === a ? "1" : "0";
+        rekodJawapan({ jenis: "kuiz", latihan: ex.id, item: $$(".q", ex).indexOf(q) + 1, soalan: ($(".q-text", q) || q).textContent.replace(/\s+/g, " ").trim().slice(0, 300), jawapan: opt.textContent.trim().slice(0, 300), betul: j === a });
         const fb = $(".fb", q); fb.className = "fb " + (j === a ? "right" : "wrong"); fb.textContent = j === a ? "Betul · ถูกต้อง" : `Belum tepat. Jawapan yang betul ialah ${"กขคง"[a]} (kotak hijau) · ยังไม่ถูก คำตอบที่ถูกคือข้อ ${"กขคง"[a]} (กรอบสีเขียว)`;
         $$(".note-ans", q).forEach(nt => { nt.hidden = false; });
         const all = $$(".q", ex), done = all.filter(x => x.dataset.res !== undefined), ok = done.filter(x => x.dataset.res === "1").length;
@@ -997,6 +1012,8 @@
     setTimeout(() => { $("#sr-umum").textContent = document.title; }, 300);
   }
   window.addEventListener("hashchange", route);
+  /* Akaun: lukis semula selepas data awan digabungkan · วาดหน้าใหม่หลังรวมข้อมูลจากบัญชี */
+  window.addEventListener("tb:segar", () => { if (!/^#\/bab\//.test(location.hash)) route(); });
 
   /* ---------- chrome ---------- */
   $(".menu-btn").addEventListener("click", e => { const n = $(".mainnav"); const o = n.classList.toggle("open"); e.currentTarget.setAttribute("aria-expanded", o); });

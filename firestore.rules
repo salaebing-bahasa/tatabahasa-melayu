@@ -1,0 +1,41 @@
+rules_version = '2';
+// กฎความปลอดภัยของฐานข้อมูล Firestore สำหรับเว็บ 0113131 Tatabahasa Bahasa Melayu
+// วิธีใช้: คัดลอกทั้งไฟล์นี้ไปวางที่ Firebase Console → Firestore → แท็บ Rules แล้วกด Publish
+// - นิสิตอ่านและเขียนได้เฉพาะข้อมูลของตัวเอง
+// - คำตอบรายข้อเพิ่มได้อย่างเดียว แก้ไขหรือลบไม่ได้ (ข้อมูลวิจัยจึงไม่ถูกเปลี่ยนภายหลัง)
+// - อาจารย์ (อีเมลในฟังก์ชัน isGuru) อ่านข้อมูลของนิสิตทุกคนได้
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    function signedIn() { return request.auth != null; }
+    function isOwner(uid) { return signedIn() && request.auth.uid == uid; }
+    function isGuru() {
+      return signedIn()
+        && request.auth.token.email_verified == true
+        && request.auth.token.email in ['salaebing@gmail.com', 'smuhammad@tsu.ac.th'];
+    }
+
+    match /pelajar/{uid} {
+      allow read: if isOwner(uid) || isGuru();
+      allow create, update: if isOwner(uid)
+        && request.resource.data.keys().hasOnly(['nama', 'emel', 'setuju', 'done', 'skor', 'akhir', 'dicipta', 'kemaskini'])
+        && request.resource.data.emel == request.auth.token.email;
+      allow delete: if false;
+
+      match /jawapan/{id} {
+        allow read: if isOwner(uid) || isGuru();
+        allow create: if isOwner(uid)
+          && request.resource.data.keys().hasOnly(['bab', 'laluan', 'jenis', 'latihan', 'item', 'soalan', 'jawapan', 'betul', 'masa'])
+          && request.resource.data.soalan is string && request.resource.data.soalan.size() <= 300
+          && request.resource.data.jawapan is string && request.resource.data.jawapan.size() <= 300
+          && request.resource.data.masa == request.time;
+        allow update, delete: if false;
+      }
+    }
+
+    // ทุกอย่างนอกเหนือจากนี้ปิดไว้
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}
