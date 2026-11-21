@@ -701,10 +701,12 @@
           <td>${s.k ? `${s.k.ok}/${s.k.all} <small>(${pct(s.k.ok, s.k.all)}%)</small>` : "—"}</td>
           <td>${s.k ? `${s.k.best}/${s.k.all} <small>(${pct(s.k.best, s.k.all)}%)</small>` : "—"}</td><td>${s.k ? s.k.cuba : "—"}</td>
           <td class="${s.lulus ? "kj-ok" : s.k ? "kj-err" : ""}">${s.k ? (s.lulus ? B("✓ Lulus", "ผ่าน") : B("Belum lulus", "ยังไม่ผ่าน")) : "—"}</td></tr>`).join("")}</tbody></table></div>
+      ${nama ? `<div id="sk-hadir"></div>` : ""}
       ${nama ? `<div id="sk-latihan" aria-live="polite"><p class="pp-muat">${B("Memuatkan jawapan latihan…", "กำลังโหลดคำตอบแบบฝึกหัด…")}</p></div>` : ""}
     </div></section>`;
     labelJadual(app); ikatLogMasuk(app); window.scrollTo(0, 0);
     if (!nama) return;
+    if (H()) kehadiranSayaHTML($("#sk-hadir"));
     ambilJawapan().then(js => {
       const el = $("#sk-latihan"); if (!el) return;
       if (!js) { el.innerHTML = `<p>${B("Tidak dapat memuatkan jawapan.", "โหลดคำตอบไม่ได้")}</p>`; return; }
@@ -798,6 +800,7 @@
     app.innerHTML = `<section class="section"><div class="wrap guru">
       <div class="section-head"><h1>${B("Halaman Pensyarah", "หน้าอาจารย์")}</h1><p>${B(`Data dimuatkan ${tarikh(d.dimuat)}`, `โหลดข้อมูลเมื่อ ${tarikhCSV(d.dimuat)}`)}</p></div>
       <div class="guru-alat">
+        <a class="btn btn-solid" href="#/guru/hadir">${B("Kehadiran QR", "เช็กชื่อด้วย QR")}</a>
         <button type="button" class="btn btn-line" id="gr-segar">${B("Muat semula", "โหลดใหม่")}</button>
         <label class="guru-susun">${B("Kumpulan", "กลุ่มเรียน")} <select id="gr-kumpulan">
           <option value="">Semua · ทุกกลุ่ม</option>${C.groups.map(g => `<option value="${g[0]}"${GURU_ST.kumpulan === g[0] ? " selected" : ""}>${g[0]} · ${g[3]}</option>`).join("")}
@@ -900,6 +903,201 @@
       </tbody></table></div>` : `<p>${B("Belum ada jawapan.", "ยังไม่มีคำตอบ")}</p>`}
     </div></section>`;
     labelJadual(app); window.scrollTo(0, 0);
+  }
+
+
+  /* ================= KEHADIRAN QR · เช็กชื่อด้วย QR ================= */
+  let hentian = []; /* pendengar/pemasa yang perlu dihentikan apabila halaman bertukar · ตัวฟัง/ตัวจับเวลาที่ต้องหยุดเมื่อเปลี่ยนหน้า */
+  const hentiSemua = () => { hentian.forEach(f => { try { f(); } catch (e) { /* ignore */ } }); hentian = []; };
+  const H = () => window.TBAkaun && window.TBAkaun.hadir;
+  const urlHadir = (sid, kod) => `${location.origin}${location.pathname}#/hadir/${encodeURIComponent(sid)}/${kod}`;
+  const jam = t => t ? new Date(t).toLocaleTimeString("th-TH", { hour: "2-digit", minute: "2-digit" }) : "—";
+  const labelSesi = x => `${x.kumpulan} · ${x.minggu ? `Minggu ${x.minggu}` : ""}${x.tajuk ? ` · ${x.tajuk}` : ""}`;
+  const kad = (cls, html) => `<section class="section"><div class="wrap"><div class="hadir-kad ${cls}">${html}</div></div></section>`;
+
+  /* ----- Halaman pelajar selepas imbas QR · หน้านิสิตหลังสแกน QR ----- */
+  async function hadirPelajar(sid, kod) {
+    setNav(""); document.title = `Kehadiran · เช็กชื่อ | ${C.code}`;
+    const A = window.TBAkaun;
+    if (!sid) {
+      app.innerHTML = kad("", `<h1>${B("Kehadiran", "เช็กชื่อ")}</h1><p>${B("Imbas kod QR yang dipaparkan oleh pensyarah dengan kamera telefon.", "สแกน QR ที่อาจารย์เปิดในห้องเรียนด้วยกล้องโทรศัพท์")}</p><a class="btn btn-line" href="#/skor">${B("Lihat rekod kehadiran saya", "ดูประวัติการเข้าเรียนของฉัน")}</a>`);
+      return;
+    }
+    if (!A.profil()) {
+      app.innerHTML = kad("", `<h1>${B("Kehadiran", "เช็กชื่อ")}</h1><p>${B("Sila lengkapkan maklumat pelajar (no. pelajar dan kumpulan) dahulu.", "กรุณากรอกข้อมูลนิสิต (รหัสและกลุ่มเรียน) ก่อน")}</p><button type="button" class="btn btn-solid" id="hd-profil">${B("Isi maklumat", "กรอกข้อมูล")}</button>`);
+      $("#hd-profil").onclick = async () => { await A.kemaskiniProfil(); route(); };
+      return;
+    }
+    app.innerHTML = kad("", `<p class="pp-muat" aria-live="polite">${B("Merekod kehadiran…", "กำลังบันทึกการเข้าเรียน…")}</p>`);
+    let sesi = null;
+    try { sesi = await H().sesi(sid); } catch (e) { console.error(e); }
+    if (!sesi) { app.innerHTML = kad("hadir-gagal", `<p class="hadir-ikon" aria-hidden="true">✗</p><h1>${B("Sesi tidak dijumpai", "ไม่พบรอบเช็กชื่อ")}</h1><p>${B("Imbas semula kod QR di skrin.", "สแกน QR บนจออีกครั้ง")}</p>`); return; }
+    const pr = A.profil(), lain = pr.kumpulan !== sesi.kumpulan;
+    try {
+      const r = await H().hantar(sid, kod);
+      app.innerHTML = kad("hadir-ok", `<p class="hadir-ikon" aria-hidden="true">✓</p>
+        <h1>${r.sudah ? B("Anda sudah direkodkan hadir", "คุณเช็กชื่อไปแล้ว") : B("Kehadiran direkodkan", "บันทึกการเข้าเรียนแล้ว")}</h1>
+        <p class="hadir-nama">${esc(pr.namaPenuh)} · ${esc(pr.no)}</p>
+        <p>${esc(labelSesi(sesi))}</p><p class="hadir-masa">${B(`Masa: ${jam(r.masa)}`, `เวลา ${jam(r.masa)} น.`)}</p>
+        ${lain ? `<div class="note nota-amaran" role="note"><p>${B(`Perhatian: profil anda kumpulan ${esc(pr.kumpulan)}, tetapi sesi ini untuk ${esc(sesi.kumpulan)}.`, `โปรดทราบ: ข้อมูลของคุณเป็นกลุ่ม ${esc(pr.kumpulan)} แต่รอบนี้เป็นของกลุ่ม ${esc(sesi.kumpulan)} ถ้ากรอกกลุ่มผิด แก้ได้ที่เมนูบัญชี → Profil saya`)}</p></div>` : ""}
+        <a class="btn btn-solid" href="#/papan">${B("Ke Papan Saya", "ไปที่แดชบอร์ด")}</a>`);
+      history.replaceState(null, "", "#/hadir"); /* buang kod daripada URL · ลบรหัสออกจากลิงก์ */
+    } catch (e) {
+      console.error(e);
+      const tamat = sesi.tamat && sesi.tamat < Date.now();
+      app.innerHTML = kad("hadir-gagal", `<p class="hadir-ikon" aria-hidden="true">✗</p>
+        <h1>${tamat ? B("Sesi kehadiran sudah ditutup", "ปิดรอบเช็กชื่อแล้ว") : B("Kod QR sudah tamat", "QR หมดอายุแล้ว")}</h1>
+        <p>${tamat ? B("Sila hubungi pensyarah.", "กรุณาติดต่ออาจารย์") : B("Kod QR bertukar setiap 30 saat. Imbas semula kod QR yang terkini di skrin.", "QR เปลี่ยนทุก 30 วินาที กรุณาสแกน QR ล่าสุดบนจออีกครั้ง")}</p>`);
+    }
+  }
+
+  /* ----- Halaman pensyarah: buka sesi dan rekod · หน้าอาจารย์: เปิดรอบเช็กชื่อและสรุป ----- */
+  const HADIR_ST = { kumpulan: (C.groups[0] || [""])[0] };
+  function guruHadir(sid) {
+    setNav(""); document.title = `Kehadiran · เช็กชื่อ | ${C.code}`;
+    if (!guruPintu()) return;
+    sid ? guruHadirSesi(sid) : guruHadirUtama();
+  }
+  async function guruHadirUtama() {
+    const kmp = HADIR_ST.kumpulan;
+    const pilihan = C.groups.map(g => `<option value="${g[0]}"${g[0] === kmp ? " selected" : ""}>${g[0]} · ${g[3]}</option>`).join("");
+    app.innerHTML = `<section class="section"><div class="wrap guru">
+      <p><a href="#/guru">← ${B("Halaman pensyarah", "หน้าอาจารย์")}</a></p>
+      <div class="section-head"><h1>${B("Kehadiran QR", "เช็กชื่อด้วย QR")}</h1></div>
+      <form class="hadir-borang" id="hd-borang">
+        <h2 class="kj-h2">${B("Buka sesi baharu", "เปิดรอบเช็กชื่อใหม่")}</h2>
+        <div class="hadir-medan">
+          <label>${B("Kumpulan", "กลุ่มเรียน")}<select name="kumpulan">${pilihan}</select></label>
+          <label>${B("Minggu", "สัปดาห์ที่")}<input name="minggu" type="number" min="1" max="17" required></label>
+          <label>${B("Tajuk (pilihan)", "หัวข้อ (ไม่บังคับ)")}<input name="tajuk" maxlength="80" placeholder="Bab 3 Kata Nama"></label>
+          <label>${B("Tempoh", "เปิดนาน")}<select name="minit">${[10, 15, 20, 30, 60].map(m => `<option value="${m}"${m === 15 ? " selected" : ""}>${m} minit · นาที</option>`).join("")}</select></label>
+        </div>
+        <button type="submit" class="btn btn-solid">${B("Buka sesi dan papar QR", "เปิดรอบและแสดง QR")}</button>
+      </form>
+      <h2 class="kj-h2">${B("Rekod kehadiran", "สรุปการเข้าเรียน")}</h2>
+      <div class="guru-alat"><label class="guru-susun">${B("Kumpulan", "กลุ่มเรียน")} <select id="hd-kmp">${pilihan}</select></label></div>
+      <div id="hd-rekod" aria-live="polite"><p class="pp-muat">${B("Memuatkan…", "กำลังโหลด…")}</p></div>
+    </div></section>`;
+    const f = $("#hd-borang");
+    const mg = await H().senaraiSesi(kmp).catch(() => []);
+    if (f.minggu && !f.minggu.value) f.minggu.value = mg.length ? Math.min(17, Math.max(...mg.map(x => x.minggu || 0)) + 1) : 1;
+    f.onsubmit = async e => {
+      e.preventDefault();
+      const b = f.querySelector("button[type=submit]"); b.disabled = true;
+      try {
+        const r = await H().bukaSesi({ kumpulan: f.kumpulan.value, minggu: f.minggu.value, tajuk: f.tajuk.value.trim(), minit: +f.minit.value });
+        HADIR_ST.kumpulan = f.kumpulan.value; location.hash = `#/guru/hadir/${encodeURIComponent(r.sid)}`;
+      } catch (err) { console.error(err); toast(T("Tidak dapat membuka sesi", "เปิดรอบไม่ได้") + " — " + (err.code || err.message)); b.disabled = false; }
+    };
+    $("#hd-kmp").onchange = e => { HADIR_ST.kumpulan = e.target.value; guruHadirUtama(); };
+    rekodKumpulan(kmp, mg);
+  }
+  async function rekodKumpulan(kmp, ss) {
+    const el = $("#hd-rekod"); if (!el) return;
+    try {
+      const [kelas, rekod] = await Promise.all([window.TBAkaun.dataKelas(), Promise.all(ss.map(x => H().rekodSesi(x.sid)))]);
+      if (!$("#hd-rekod")) return;
+      const peta = new Map();
+      (kelas ? kelas.pelajar : []).filter(p => p.profil && p.profil.kumpulan === kmp).forEach(p => peta.set(p.uid, { uid: p.uid, nama: p.profil.namaPenuh, no: p.profil.no, kumpulan: p.profil.kumpulan }));
+      rekod.forEach(rs => rs.forEach(h => { if (!peta.has(h.uid)) peta.set(h.uid, { uid: h.uid, nama: h.nama, no: h.no, kumpulan: h.kumpulan }); }));
+      const pel = [...peta.values()].sort((a, b) => String(a.no).localeCompare(String(b.no)));
+      const ada = (k, uid) => rekod[k].find(h => h.uid === uid);
+      if (!ss.length) { el.innerHTML = `<p>${B(`Belum ada sesi untuk ${kmp}.`, `ยังไม่มีรอบเช็กชื่อของกลุ่ม ${kmp}`)}</p>`; return; }
+      el.innerHTML = `<div class="guru-eksport"><button type="button" class="btn btn-line" id="hd-csv">${B("Muat turun", "ดาวน์โหลด")} (.csv)</button></div>
+        <div class="tbl-wrap"><table class="kj-jadual hadir-jadual"><thead><tr><th scope="col">${B("No. pelajar", "รหัส")}</th><th scope="col">${B("Nama", "ชื่อ")}</th>
+          ${ss.map(x => `<th scope="col"><a href="#/guru/hadir/${encodeURIComponent(x.sid)}">M${x.minggu || "?"}</a><br><span class="tr-kecil">${new Date(x.dibuka || 0).toLocaleDateString("th-TH", { day: "numeric", month: "short" })}</span></th>`).join("")}
+          <th scope="col">${B("Jumlah", "รวม")}</th></tr></thead><tbody>
+          ${pel.map(p => { const n = ss.filter((x, k) => ada(k, p.uid)).length; return `<tr><td>${esc(p.no || "—")}</td><td>${esc(p.nama || "—")}${p.kumpulan !== kmp ? ` <small class="guru-tag">${esc(p.kumpulan)}</small>` : ""}</td>
+            ${ss.map((x, k) => { const h = ada(k, p.uid); return `<td class="${h ? "kj-ok" : "kj-err"}" title="${h ? jam(h.masa) : ""}">${h ? (h.cara === "manual" ? "✓ᵐ" : "✓") : "✗"}</td>`; }).join("")}
+            <td><b>${n}/${ss.length}</b> <small>(${pct(n, ss.length)}%)</small></td></tr>`; }).join("") || `<tr><td colspan="${ss.length + 3}">${B("Tiada pelajar.", "ไม่มีนิสิต")}</td></tr>`}
+        </tbody></table></div>
+        <p class="kj-cara">${B("✓ hadir (imbas QR) · ✓ᵐ ditanda oleh pensyarah · ✗ tidak hadir. Senarai termasuk pelajar yang profilnya dalam kumpulan ini.", "✓ มาเรียน (สแกน QR) · ✓ᵐ อาจารย์เช็กให้ · ✗ ขาด รายชื่อมาจากนิสิตที่กรอกกลุ่มนี้ในข้อมูลนิสิต")}</p>`;
+      labelJadual(el);
+      $("#hd-csv").onclick = () => muatTurunCSV(`0113131-kehadiran-${kmp}-${tarikhCSV(Date.now()).slice(0, 10)}.csv`, [
+        ["no_pelajar", "nama", "kumpulan", ...ss.map(x => `M${x.minggu || "?"}_${tarikhCSV(x.dibuka).slice(0, 10)}`), "jumlah_hadir", "jumlah_sesi", "peratus"],
+        ...pel.map(p => { const n = ss.filter((x, k) => ada(k, p.uid)).length; return [p.no, p.nama, p.kumpulan, ...ss.map((x, k) => { const h = ada(k, p.uid); return h ? (h.cara === "manual" ? "1 (manual)" : 1) : 0; }), n, ss.length, pct(n, ss.length)]; })]);
+    } catch (e) { console.error(e); el.innerHTML = `<div class="note nota-amaran" role="alert"><p>${B("Tidak dapat memuatkan rekod. Pastikan peraturan firestore.rules terkini telah diterbitkan.", "โหลดข้อมูลไม่ได้ ตรวจสอบว่าได้ Publish กฎ firestore.rules ล่าสุดแล้ว")}<br><small>${esc(e.code || e.message || "")}</small></p></div>`; }
+  }
+  async function guruHadirSesi(sid) {
+    app.innerHTML = `<section class="section"><div class="wrap"><p class="pp-muat">${B("Memuatkan sesi…", "กำลังโหลด…")}</p></div></section>`;
+    let sesi = await H().sesi(sid).catch(() => null);
+    if (!sesi) { app.innerHTML = kad("", `<p>${B("Sesi tidak dijumpai.", "ไม่พบรอบเช็กชื่อ")}</p><a class="btn btn-line" href="#/guru/hadir">${B("Kembali", "กลับ")}</a>`); return; }
+    const kelas = await window.TBAkaun.dataKelas().catch(() => null);
+    const ahli = (kelas ? kelas.pelajar : []).filter(p => p.profil && p.profil.kumpulan === sesi.kumpulan);
+    let kod = await H().bacaKod(sid).catch(() => null), senarai = [];
+    app.innerHTML = `<section class="section hadir-skrin"><div class="wrap">
+      <p><a href="#/guru/hadir">← ${B("Kehadiran QR", "เช็กชื่อด้วย QR")}</a></p>
+      <div class="hadir-grid">
+        <div class="hadir-qr-kad">
+          <h1>${esc(labelSesi(sesi))}</h1>
+          <div id="hd-qr" class="hadir-qr" role="img" aria-label="Kod QR kehadiran · QR เช็กชื่อ"></div>
+          <p class="hadir-arahan">${B("Imbas dengan kamera telefon", "สแกนด้วยกล้องโทรศัพท์")}</p>
+          <p class="hadir-status" id="hd-status" aria-live="polite"></p>
+          <div class="hadir-butang">
+            <button type="button" class="btn btn-line" id="hd-penuh">${B("Skrin penuh", "เต็มจอ")}</button>
+            <button type="button" class="btn btn-line" id="hd-lanjut">${B("+10 minit", "+10 นาที")}</button>
+            <button type="button" class="btn btn-solid kj-bahaya" id="hd-tutup">${B("Tutup sesi", "ปิดรอบ")}</button>
+          </div>
+        </div>
+        <div class="hadir-senarai-kad">
+          <p class="hadir-kiraan"><b id="hd-n">0</b><small> / ${ahli.length}</small></p><p class="kj-label">${B("pelajar hadir", "คนที่เช็กชื่อแล้ว")}</p>
+          <ol class="hadir-senarai" id="hd-senarai"></ol>
+          <details class="hadir-manual"><summary>${B("Tandakan hadir secara manual", "เช็กชื่อให้นิสิตเอง")}</summary>
+            <p class="kj-cara">${B("Untuk pelajar yang tiada telefon atau tidak dapat mengimbas.", "สำหรับนิสิตที่ไม่มีโทรศัพท์หรือสแกนไม่ได้")}</p>
+            <div class="hadir-manual-baris"><select id="hd-pilih"></select><button type="button" class="btn btn-line" id="hd-tanda">${B("Tanda hadir", "เช็กชื่อ")}</button></div></details>
+        </div>
+      </div></div></section>`;
+    const lukisQR = () => {
+      const el = $("#hd-qr"); if (!el) return;
+      const buka = sesi.tamat > Date.now();
+      if (!buka || !kod) { el.innerHTML = `<p class="hadir-tutup">${B("Sesi ditutup", "ปิดรอบแล้ว")}</p>`; return; }
+      const q = window.qrcode(0, "M"); q.addData(urlHadir(sid, kod)); q.make();
+      el.innerHTML = q.createSvgTag({ cellSize: 8, margin: 2, scalable: true });
+    };
+    const lukisStatus = () => {
+      const st = $("#hd-status"); if (!st) return;
+      const baki = Math.max(0, Math.round((sesi.tamat - Date.now()) / 1000));
+      st.innerHTML = baki ? B(`Ditutup dalam ${Math.floor(baki / 60)}:${String(baki % 60).padStart(2, "0")} · kod QR bertukar setiap 30 saat`, `ปิดใน ${Math.floor(baki / 60)}:${String(baki % 60).padStart(2, "0")} นาที · QR เปลี่ยนทุก 30 วินาที`) : B("Sesi telah ditutup", "ปิดรอบแล้ว");
+      if (!baki && $("#hd-qr svg")) lukisQR();
+    };
+    const lukisSenarai = () => {
+      const el = $("#hd-senarai"); if (!el) return;
+      const ls = senarai.slice().sort((a, b) => (b.masa || Date.now()) - (a.masa || Date.now()));
+      $("#hd-n").textContent = ls.length;
+      el.innerHTML = ls.map(h => `<li><span><b>${esc(h.nama || "—")}</b> <small>${esc(h.no || "")}</small>${h.kumpulan && h.kumpulan !== sesi.kumpulan ? ` <small class="guru-tag">${esc(h.kumpulan)}</small>` : ""}${h.cara === "manual" ? ` <small class="guru-tag">manual</small>` : ""}</span><span class="pp-masa">${jam(h.masa || Date.now())}</span></li>`).join("");
+      const belum = ahli.filter(p => !senarai.some(h => h.uid === p.uid));
+      $("#hd-pilih").innerHTML = belum.length ? belum.map(p => `<option value="${esc(p.uid)}">${esc(p.profil.no)} · ${esc(p.profil.namaPenuh)}</option>`).join("") : `<option value="">${T("Semua sudah hadir", "เช็กชื่อครบแล้ว")}</option>`;
+    };
+    lukisQR(); lukisStatus(); lukisSenarai();
+    hentian.push(H().dengar(sid, ls => { senarai = ls; lukisSenarai(); }));
+    hentian.push(H().dengarSesi(sid, x => { if (x) { const ub = x.tamat !== sesi.tamat; sesi = x; if (ub) lukisQR(); lukisStatus(); } }));
+    const putar = async () => { if (sesi.tamat > Date.now()) { try { kod = await H().putarKod(sid, kod); lukisQR(); } catch (e) { console.error(e); } } };
+    const tm = setInterval(putar, 30000), tj = setInterval(lukisStatus, 1000);
+    hentian.push(() => clearInterval(tm), () => clearInterval(tj));
+    $("#hd-penuh").onclick = () => { const k = $(".hadir-grid"); if (document.fullscreenElement) document.exitFullscreen(); else if (k.requestFullscreen) k.requestFullscreen(); };
+    $("#hd-lanjut").onclick = async () => { await H().lanjut(sid, Math.max(0, Math.round((Math.max(sesi.tamat, Date.now()) - Date.now()) / 60000)) + 10); if (!kod) kod = await H().putarKod(sid, null); };
+    $("#hd-tutup").onclick = async () => { await H().tutupSesi(sid); toast(T("Sesi ditutup", "ปิดรอบแล้ว")); };
+    $("#hd-tanda").onclick = async () => {
+      const uid = $("#hd-pilih").value; const p = ahli.find(x => x.uid === uid); if (!p) return;
+      try { await H().tandaManual(sid, { uid, nama: p.profil.namaPenuh, no: p.profil.no, kumpulan: p.profil.kumpulan, emel: p.emel }); }
+      catch (e) { console.error(e); toast(T("Tidak dapat menanda", "เช็กชื่อไม่ได้")); }
+    };
+  }
+
+  /* ----- Kehadiran saya (di halaman Skor Saya) · ประวัติการเข้าเรียนของฉัน ----- */
+  async function kehadiranSayaHTML(el) {
+    try {
+      const ls = await H().kehadiranSaya();
+      if (!el.isConnected) return;
+      if (!ls) { el.innerHTML = ""; return; }
+      const n = ls.filter(x => x.hadir).length;
+      el.innerHTML = `<h2 class="kj-h2">${B("Kehadiran saya", "การเข้าเรียนของฉัน")}</h2>
+        ${ls.length ? `<p class="pp-ringkas">${B(`Hadir ${n} daripada ${ls.length} sesi (${pct(n, ls.length)}%)`, `มาเรียน ${n} จาก ${ls.length} ครั้ง`)}</p>
+        <div class="tbl-wrap"><table class="kj-jadual"><thead><tr><th scope="col">${B("Minggu", "สัปดาห์")}</th><th scope="col">${B("Tarikh", "วันที่")}</th><th scope="col">${B("Tajuk", "หัวข้อ")}</th><th scope="col">${B("Status", "สถานะ")}</th></tr></thead><tbody>
+        ${ls.map(x => `<tr><td>${x.minggu || "—"}</td><td>${x.dibuka ? new Date(x.dibuka).toLocaleDateString("th-TH", { day: "numeric", month: "short", year: "numeric" }) : "—"}</td><td>${esc(x.tajuk || "")}</td><td class="${x.hadir ? "kj-ok" : "kj-err"}">${x.hadir ? B(`✓ Hadir ${jam(x.hadir.masa)}`, "มาเรียน") : B("✗ Tidak hadir", "ขาด")}</td></tr>`).join("")}</tbody></table></div>`
+        : `<p>${B("Belum ada sesi kehadiran untuk kumpulan anda.", "ยังไม่มีรอบเช็กชื่อของกลุ่มคุณ")}</p>`}`;
+      labelJadual(el);
+    } catch (e) { console.error(e); el.innerHTML = ""; }
   }
 
   /* ================= QUIZ ================= */
@@ -1306,6 +1504,7 @@
 
   function route() {
     if ("speechSynthesis" in window) speechSynthesis.cancel();
+    hentiSemua();
     const akses = statusAkses();
     if (akses !== "ok") { setNav(""); pageNav("pintu"); pintuMasuk(akses); document.documentElement.classList.remove("di-bab"); laluanPertama = false; return; }
     const p = location.hash.replace(/^#\/?/, "").split("/");
@@ -1323,7 +1522,9 @@
     else if (p[0] === "kemajuan") kemajuan();
     else if (p[0] === "papan") papan();
     else if (p[0] === "skor") skorSaya();
+    else if (p[0] === "guru" && p[1] === "hadir") guruHadir(p[2] ? decodeURIComponent(p[2]) : null);
     else if (p[0] === "guru") guru(p[1] ? decodeURIComponent(p[1]) : null);
+    else if (p[0] === "hadir") hadirPelajar(p[1] ? decodeURIComponent(p[1]) : null, p[2] || "");
     else notFound();
     /* Fokus dipindahkan ke kandungan hanya selepas navigasi, bukan semasa halaman mula dibuka (supaya pautan langkau kekal pertama)
        ย้ายโฟกัสไปเนื้อหาเฉพาะเมื่อเปลี่ยนหน้า ไม่ใช่ตอนเปิดเว็บครั้งแรก */

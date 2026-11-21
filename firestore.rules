@@ -43,6 +43,38 @@ service cloud.firestore {
       }
     }
 
+    // เช็กชื่อด้วย QR: อาจารย์เปิดรอบเช็กชื่อ นิสิตสแกน QR ที่มีรหัสหมุนเวียน (รหัสเก็บใน rahsia ซึ่งนิสิตอ่านไม่ได้)
+    function hadirQrSah(sid, uid) {
+      let s = get(/databases/$(database)/documents/sesi/$(sid)).data;
+      let r = get(/databases/$(database)/documents/sesi/$(sid)/rahsia/kod).data;
+      let d = request.resource.data;
+      return isOwner(uid)
+        && request.time < s.tamat
+        && d.keys().hasOnly(['nama', 'no', 'kumpulan', 'emel', 'masa', 'kod', 'cara'])
+        && d.cara == 'qr' && d.masa == request.time
+        && (d.kod == r.kod || d.kod == r.kodLama)
+        && d.nama is string && d.nama.size() <= 120 && d.no is string && d.no.size() <= 15
+        && d.emel == request.auth.token.email;
+    }
+
+    match /sesi/{sid} {
+      allow read: if signedIn();
+      allow create, update: if isGuru();
+      allow delete: if false;
+
+      match /rahsia/{id} {
+        allow read, write: if isGuru();
+      }
+
+      match /hadir/{uid} {
+        allow read: if isOwner(uid) || isGuru();
+        allow create: if hadirQrSah(sid, uid)
+          || (isGuru() && request.resource.data.cara == 'manual');
+        allow update: if false;
+        allow delete: if isGuru();
+      }
+    }
+
     // ทุกอย่างนอกเหนือจากนี้ปิดไว้
     match /{document=**} {
       allow read, write: if false;

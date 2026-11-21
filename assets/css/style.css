@@ -1164,3 +1164,42 @@ footer .kaki-tajuk { font-weight: 700; font-size: 1.08em; margin-bottom: 2px; }
 .pintu-btn svg { background: #fff; border-radius: 50%; padding: 2px; width: 22px; height: 22px; }
 .pintu-nota { font-size: 13.5px; color: var(--muted); margin-top: 14px; }
 .pintu-btn .tr, .pintu-btn .bm { color: inherit !important; opacity: .9; }
+
+/* ================= Kehadiran QR · เช็กชื่อด้วย QR ================= */
+.hadir-kad { max-width: 520px; margin: 0 auto; text-align: center; background: var(--surface); border: 1px solid var(--line); border-top: 4px solid var(--emas); border-radius: var(--radius-m); padding: 28px 22px; }
+.hadir-kad h1 { font-size: 24px; margin: 6px 0 10px; display: flex; flex-direction: column; gap: 2px; }
+.hadir-ikon { width: 72px; height: 72px; margin: 0 auto; border-radius: 50%; display: grid; place-items: center; font-size: 38px; font-weight: 700; color: #fff; }
+.hadir-ok { border-top-color: var(--ok); }
+.hadir-ok .hadir-ikon { background: var(--ok); }
+.hadir-gagal { border-top-color: var(--err); }
+.hadir-gagal .hadir-ikon { background: var(--err); }
+.hadir-nama { font-size: 19px; font-weight: 700; color: var(--biru); }
+.hadir-masa { color: var(--muted); }
+.hadir-kad .note { text-align: left; }
+.hadir-borang { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius-m); padding: 16px 18px; margin-bottom: 18px; }
+.hadir-borang .kj-h2 { margin-top: 0; }
+.hadir-medan { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 12px; margin-bottom: 14px; }
+.hadir-medan label { display: flex; flex-direction: column; gap: 4px; font-weight: 600; font-size: 15px; }
+.hadir-medan input, .hadir-medan select, .hadir-manual select { min-height: 44px; padding: 0 10px; border: 1px solid var(--line); border-radius: var(--radius-s); background: var(--kertas); color: var(--dakwat); font: 400 16px var(--th-font); }
+.hadir-jadual td, .hadir-jadual th { text-align: center; }
+.hadir-jadual td:nth-child(2), .hadir-jadual th:nth-child(2) { text-align: left; }
+.hadir-grid { display: grid; grid-template-columns: minmax(0, 3fr) minmax(280px, 2fr); gap: 20px; align-items: start; }
+.hadir-grid:fullscreen { background: var(--kertas); padding: 24px; overflow: auto; }
+.hadir-qr-kad, .hadir-senarai-kad { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius-m); padding: 20px; }
+.hadir-qr-kad { text-align: center; }
+.hadir-qr-kad h1 { font-size: 22px; margin: 0 0 10px; }
+.hadir-qr { width: min(100%, 62vh); aspect-ratio: 1; margin: 0 auto; background: #fff; border-radius: 8px; display: grid; place-items: center; }
+.hadir-qr svg { width: 100%; height: 100%; display: block; }
+.hadir-tutup { font-size: 22px; font-weight: 700; color: var(--muted); }
+.hadir-arahan { font-size: 20px; font-weight: 600; margin: 10px 0 2px; }
+.hadir-status { color: var(--muted); font-variant-numeric: tabular-nums; }
+.hadir-butang { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-top: 10px; }
+.hadir-kiraan { margin: 0; font-size: 54px; font-weight: 700; color: var(--ok); line-height: 1; }
+.hadir-kiraan small { font-size: 22px; color: var(--muted); }
+.hadir-senarai { list-style: none; padding: 0; margin: 12px 0; max-height: 52vh; overflow-y: auto; display: flex; flex-direction: column; gap: 6px; }
+.hadir-senarai li { display: flex; justify-content: space-between; gap: 10px; padding: 8px 10px; border: 1px solid var(--line); border-radius: var(--radius-s); background: var(--kertas); }
+.hadir-manual summary { cursor: pointer; font-weight: 600; color: var(--biru); padding: 6px 0; }
+.hadir-manual-baris { display: flex; gap: 8px; flex-wrap: wrap; }
+.hadir-manual-baris select { flex: 1 1 200px; }
+@media (max-width: 860px) { .hadir-grid { grid-template-columns: 1fr; } }
+.btn-solid .tr, .btn-solid .bm { color: inherit !important; opacity: .88; }

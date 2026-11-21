@@ -10,7 +10,7 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
 import { getAuth, GoogleAuthProvider, onAuthStateChanged, signInWithPopup, signInWithRedirect, getRedirectResult, signOut }
   from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
-import { getFirestore, doc, getDoc, setDoc, addDoc, getDocs, collection, query, orderBy, limit, serverTimestamp }
+import { getFirestore, doc, getDoc, setDoc, addDoc, getDocs, collection, query, orderBy, limit, where, onSnapshot, Timestamp, serverTimestamp }
   from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
 
 /* Nilai ini awam (bukan kata laluan); keselamatan data dikawal oleh firestore.rules
@@ -241,9 +241,64 @@ async function simpanSekarang() {
   catch (e) { console.error(e); }
 }
 
+/* ---------- Kehadiran QR · เช็กชื่อด้วย QR ----------
+   sesi/{sid}                 { kumpulan, minggu, tajuk, dibuka, tamat, guru }   (dibaca oleh semua yang log masuk)
+   sesi/{sid}/rahsia/kod      { kod, kodLama, masa }                             (pensyarah sahaja; kod berputar)
+   sesi/{sid}/hadir/{uid}     { nama, no, kumpulan, emel, masa, kod, cara }      (cara: "qr" | "manual") */
+const ABJAD = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789";
+const kodRawak = () => { const a = new Uint32Array(6); crypto.getRandomValues(a); return [...a].map(x => ABJAD[x % ABJAD.length]).join(""); };
+const sesiData = d => { const x = d.data(); return { sid: d.id, ...x, dibuka: keMs(x.dibuka), tamat: keMs(x.tamat) }; };
+const hadirData = d => { const x = d.data(); return { uid: d.id, ...x, masa: keMs(x.masa) }; };
+const hadir = {
+  async bukaSesi({ kumpulan, minggu, tajuk, minit }) {
+    if (!adalahGuru()) throw new Error("bukan pensyarah");
+    const sid = `${kumpulan}-${Date.now().toString(36)}`;
+    await setDoc(doc(db, "sesi", sid), { kumpulan, minggu: Number(minggu) || 0, tajuk: String(tajuk || "").slice(0, 80),
+      dibuka: serverTimestamp(), tamat: Timestamp.fromMillis(Date.now() + minit * 60000), guru: pengguna.email });
+    const kod = kodRawak();
+    await setDoc(doc(db, "sesi", sid, "rahsia", "kod"), { kod, kodLama: kod, masa: serverTimestamp() });
+    return { sid, kod };
+  },
+  async putarKod(sid, kodSemasa) {
+    const kod = kodRawak();
+    await setDoc(doc(db, "sesi", sid, "rahsia", "kod"), { kod, kodLama: kodSemasa || kod, masa: serverTimestamp() });
+    return kod;
+  },
+  async bacaKod(sid) { const s = await getDoc(doc(db, "sesi", sid, "rahsia", "kod")); return s.exists() ? s.data().kod : null; },
+  async tutupSesi(sid) { await setDoc(doc(db, "sesi", sid), { tamat: Timestamp.now() }, { merge: true }); },
+  async lanjut(sid, minit) { await setDoc(doc(db, "sesi", sid), { tamat: Timestamp.fromMillis(Date.now() + minit * 60000) }, { merge: true }); },
+  async sesi(sid) { const s = await getDoc(doc(db, "sesi", sid)); return s.exists() ? sesiData(s) : null; },
+  async senaraiSesi(kumpulan) {
+    const s = await getDocs(query(collection(db, "sesi"), where("kumpulan", "==", kumpulan)));
+    return s.docs.map(sesiData).sort((a, b) => (a.dibuka || 0) - (b.dibuka || 0));
+  },
+  async rekodSesi(sid) { const s = await getDocs(collection(db, "sesi", sid, "hadir")); return s.docs.map(hadirData); },
+  dengar(sid, cb) { return onSnapshot(collection(db, "sesi", sid, "hadir"), s => cb(s.docs.map(hadirData)), e => console.error(e)); },
+  dengarSesi(sid, cb) { return onSnapshot(doc(db, "sesi", sid), s => cb(s.exists() ? sesiData(s) : null), e => console.error(e)); },
+  async tandaManual(sid, p) {
+    await setDoc(doc(db, "sesi", sid, "hadir", p.uid), { nama: p.nama || "", no: p.no || "", kumpulan: p.kumpulan || "", emel: p.emel || "", masa: serverTimestamp(), kod: "", cara: "manual" });
+  },
+  /* Pelajar menghantar kehadiran · นิสิตส่งการเช็กชื่อ */
+  async hantar(sid, kod) {
+    if (!pengguna || !profil) throw Object.assign(new Error("tiada profil"), { code: "tiada-profil" });
+    const ref = doc(db, "sesi", sid, "hadir", pengguna.uid);
+    const ada = await getDoc(ref);
+    if (ada.exists()) return { ...hadirData(ada), sudah: true };
+    await setDoc(ref, { nama: profil.namaPenuh, no: profil.no, kumpulan: profil.kumpulan, emel: pengguna.email || "", masa: serverTimestamp(), kod: String(kod || "").toUpperCase().slice(0, 6), cara: "qr" });
+    return { masa: Date.now(), sudah: false };
+  },
+  async kehadiranSaya() {
+    if (!pengguna || !profil) return null;
+    const ss = await hadir.senaraiSesi(profil.kumpulan);
+    const h = await Promise.all(ss.map(x => getDoc(doc(db, "sesi", x.sid, "hadir", pengguna.uid)).then(d => d.exists() ? hadirData(d) : null).catch(() => null)));
+    return ss.map((x, i) => ({ ...x, hadir: h[i] }));
+  }
+};
+
 /* Dipanggil oleh app.js setiap kali kemajuan disimpan · app.js เรียกทุกครั้งที่บันทึกความก้าวหน้า */
 window.TBAkaun = {
   pengguna: () => pengguna,
+  hadir,
   memuat: () => memuat,
   profil: () => profil,
   kemaskiniProfil: () => kemaskiniProfil(true),
