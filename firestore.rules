@@ -58,13 +58,34 @@ service cloud.firestore {
       }
     }
 
-    // เว็บ Kursus BM Online (repo kursus-bm-online): เก็บเฉพาะชื่อและอีเมลผู้เรียน
+    // เว็บ Kursus BM Online (repo kursus-bm-online): ข้อมูลผู้เรียน ความก้าวหน้า คะแนน คำตอบ และสมุดคำศัพท์
     match /bmonline/{uid} {
       allow read: if isOwner(uid) || isGuru();
       allow create, update: if isOwner(uid)
-        && request.resource.data.keys().hasOnly(['nama', 'emel', 'setuju', 'dicipta', 'kemaskini'])
+        && request.resource.data.keys().hasOnly(['nama', 'emel', 'setuju', 'dicipta', 'kemaskini', 'buka', 'kuiz', 'namaSijil', 'sijil'])
         && request.resource.data.emel == request.auth.token.email;
       allow delete: if isGuru();
+
+      // คำตอบแบบทดสอบรายข้อ: เพิ่มได้อย่างเดียว
+      match /jawapan/{id} {
+        allow read: if isOwner(uid) || isGuru();
+        allow create: if isOwner(uid)
+          && request.resource.data.keys().hasOnly(['n', 'item', 'soalan', 'jawapan', 'betul', 'masa'])
+          && request.resource.data.soalan is string && request.resource.data.soalan.size() <= 300
+          && request.resource.data.jawapan is string && request.resource.data.jawapan.size() <= 300
+          && request.resource.data.masa == request.time;
+        allow update, delete: if false;
+      }
+
+      // สมุดคำศัพท์ของผู้เรียน
+      match /kata/{id} {
+        allow read: if isOwner(uid) || isGuru();
+        allow create, update: if isOwner(uid)
+          && request.resource.data.keys().hasOnly(['kata', 'jawi', 'contoh', 'contohJawi', 'n', 'hafal', 'ulang', 'masa'])
+          && request.resource.data.kata is string && request.resource.data.kata.size() > 0 && request.resource.data.kata.size() <= 60
+          && request.resource.data.contoh is string && request.resource.data.contoh.size() <= 300;
+        allow delete: if isOwner(uid);
+      }
     }
 
     // ทุกอย่างนอกเหนือจากนี้ปิดไว้
