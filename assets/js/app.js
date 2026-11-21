@@ -729,7 +729,8 @@
   /* ================= HALAMAN PENSYARAH · หน้าอาจารย์ ================= */
   /* Data dilindungi oleh firestore.rules (hanya e-mel pensyarah boleh membaca); semakan di sini hanya untuk paparan
      ข้อมูลถูกป้องกันด้วย firestore.rules (เฉพาะอีเมลอาจารย์อ่านได้) การตรวจในหน้านี้มีไว้แสดงผลเท่านั้น */
-  const GURU_ST = { cari: "", susun: "aktif", sembunyiGuru: true };
+  const GURU_ST = { cari: "", susun: "aktif", sembunyiGuru: true, kumpulan: "" };
+  const namaP = p => (p.profil && p.profil.namaPenuh) || p.nama || p.emel || "—";
   const tarikhCSV = t => { if (!t) return ""; const d = new Date(t), z = n => String(n).padStart(2, "0"); return `${d.getFullYear()}-${z(d.getMonth() + 1)}-${z(d.getDate())} ${z(d.getHours())}:${z(d.getMinutes())}`; };
   function muatTurunCSV(nama, rows) {
     const sel = v => { let t = v == null ? "" : String(v); if (/^[=+\-@\t\r]/.test(t)) t = "'" + t; return /[",\r\n]/.test(t) ? `"${t.replace(/"/g, '""')}"` : t; };
@@ -781,7 +782,8 @@
   }
   function guruKelas(d) {
     const semua = d.pelajar.map(infoPelajar);
-    const senarai = semua.filter(i => !(GURU_ST.sembunyiGuru && i.p.guru));
+    const senarai = semua.filter(i => !(GURU_ST.sembunyiGuru && i.p.guru) && (!GURU_ST.kumpulan || (GURU_ST.kumpulan === "-" ? !i.p.profil : i.p.profil && i.p.profil.kumpulan === GURU_ST.kumpulan)));
+    const tanpaProfil = semua.filter(i => !i.p.guru && !i.p.profil).length;
     const minggu = Date.now() - 7 * 864e5;
     const aktif7 = senarai.filter(i => i.aktif && i.aktif >= minggu).length;
     const jumJ = senarai.reduce((a, i) => a + i.nj, 0), jumOk = senarai.reduce((a, i) => a + i.ok, 0);
@@ -797,8 +799,12 @@
       <div class="section-head"><h1>${B("Halaman Pensyarah", "หน้าอาจารย์")}</h1><p>${B(`Data dimuatkan ${tarikh(d.dimuat)}`, `โหลดข้อมูลเมื่อ ${tarikhCSV(d.dimuat)}`)}</p></div>
       <div class="guru-alat">
         <button type="button" class="btn btn-line" id="gr-segar">${B("Muat semula", "โหลดใหม่")}</button>
+        <label class="guru-susun">${B("Kumpulan", "กลุ่มเรียน")} <select id="gr-kumpulan">
+          <option value="">Semua · ทุกกลุ่ม</option>${C.groups.map(g => `<option value="${g[0]}"${GURU_ST.kumpulan === g[0] ? " selected" : ""}>${g[0]} · ${g[3]}</option>`).join("")}
+          <option value="-"${GURU_ST.kumpulan === "-" ? " selected" : ""}>Tiada profil · ยังไม่กรอกข้อมูล</option></select></label>
         <label class="guru-cek"><input type="checkbox" id="gr-sembunyi"${GURU_ST.sembunyiGuru ? " checked" : ""}> ${B("Sembunyikan akaun pensyarah", "ซ่อนบัญชีอาจารย์")}</label>
       </div>
+      ${tanpaProfil ? `<div class="note" role="note"><p>${B(`${tanpaProfil} pelajar belum mengisi no. pelajar dan kumpulan (mereka akan diminta mengisinya apabila log masuk semula).`, `นิสิต ${tanpaProfil} คนยังไม่กรอกรหัสและกลุ่มเรียน (ระบบจะให้กรอกเมื่อล็อกอินครั้งถัดไป)`)}</p></div>` : ""}
       <div class="kj-stat">
         <div class="kj-kad"><p class="kj-label">${B("Pelajar log masuk", "นิสิตที่ล็อกอินแล้ว")}</p><p class="kj-nilai">${senarai.length}</p></div>
         <div class="kj-kad"><p class="kj-label">${B("Aktif 7 hari lalu", "เข้าใช้ใน 7 วันล่าสุด")}</p><p class="kj-nilai">${aktif7}</p></div>
@@ -813,12 +819,12 @@
       </div>
       <h2 class="kj-h2">${B("Senarai pelajar", "รายชื่อนิสิต")}</h2>
       <div class="guru-alat">
-        <label class="guru-cari"><span class="sr-only">Cari · ค้นหา</span><input type="search" id="gr-cari" value="${esc(GURU_ST.cari)}" placeholder="Cari nama / e-mel · ค้นหาชื่อหรืออีเมล" autocomplete="off"></label>
+        <label class="guru-cari"><span class="sr-only">Cari · ค้นหา</span><input type="search" id="gr-cari" value="${esc(GURU_ST.cari)}" placeholder="Cari nama / no. / e-mel · ค้นหาชื่อ รหัส หรืออีเมล" autocomplete="off"></label>
         <label class="guru-susun">${B("Susun", "เรียงตาม")} <select id="gr-susun">
-          ${[["aktif", "Aktif terkini · เข้าใช้ล่าสุด"], ["nama", "Nama · ชื่อ"], ["kemajuan", "Kemajuan · ความก้าวหน้า"], ["tepat", "Ketepatan rendah · ความถูกต้องน้อยสุด"], ["purata", "Skor kuiz · คะแนนแบบทดสอบ"]].map(([v, t]) => `<option value="${v}"${GURU_ST.susun === v ? " selected" : ""}>${t}</option>`).join("")}
+          ${[["aktif", "Aktif terkini · เข้าใช้ล่าสุด"], ["nama", "Nama · ชื่อ"], ["no", "No. pelajar · รหัสนิสิต"], ["kemajuan", "Kemajuan · ความก้าวหน้า"], ["tepat", "Ketepatan rendah · ความถูกต้องน้อยสุด"], ["purata", "Skor kuiz · คะแนนแบบทดสอบ"]].map(([v, t]) => `<option value="${v}"${GURU_ST.susun === v ? " selected" : ""}>${t}</option>`).join("")}
         </select></label>
       </div>
-      <div class="tbl-wrap"><table class="kj-jadual guru-jadual">${th(B("Nama", "ชื่อ"), B("Kemajuan", "ความก้าวหน้า"), B("Bab selesai", "เรียนจบ"), B("Bab lulus", "ผ่าน"), B("Purata kuiz", "คะแนนเฉลี่ย"), B("Jawapan", "คำตอบ"), B("Ketepatan", "ถูก"), B("Aktif terakhir", "เข้าใช้ล่าสุด"))}<tbody id="gr-badan"></tbody></table></div>
+      <div class="tbl-wrap"><table class="kj-jadual guru-jadual">${th(B("Nama", "ชื่อ"), B("No. / Kumpulan", "รหัส / กลุ่ม"), B("Kemajuan", "ความก้าวหน้า"), B("Bab selesai", "เรียนจบ"), B("Bab lulus", "ผ่าน"), B("Purata kuiz", "คะแนนเฉลี่ย"), B("Jawapan", "คำตอบ"), B("Ketepatan", "ถูก"), B("Aktif terakhir", "เข้าใช้ล่าสุด"))}<tbody id="gr-badan"></tbody></table></div>
       <h2 class="kj-h2">${B("Soalan paling banyak dijawab salah", "ข้อที่นิสิตตอบผิดมากที่สุด")}</h2>
       <p class="kj-cara">${B("Disusun mengikut bilangan pelajar yang pernah menjawab salah. Jawapan salah yang lazim membantu mengenal pasti miskonsepsi.", "เรียงตามจำนวนนิสิตที่เคยตอบผิด คำตอบผิดที่พบบ่อยช่วยให้เห็นความเข้าใจคลาดเคลื่อน")}</p>
       ${soalan.filter(o => o.salah).length ? `<ol class="guru-soalan">${soalan.filter(o => o.salah).slice(0, 25).map(o => `<li>
@@ -831,34 +837,37 @@
     </div></section>`;
     const lukisJadual = () => {
       const q = GURU_ST.cari.trim().toLowerCase();
-      const ls = senarai.filter(i => !q || `${i.p.nama} ${i.p.emel}`.toLowerCase().includes(q));
+      const ls = senarai.filter(i => !q || `${namaP(i.p)} ${i.p.nama} ${i.p.emel} ${i.p.profil ? i.p.profil.no : ""}`.toLowerCase().includes(q));
       const k = GURU_ST.susun, v = x => x == null ? -1 : x;
-      ls.sort((a, b) => k === "nama" ? String(a.p.nama || a.p.emel).localeCompare(String(b.p.nama || b.p.emel), "th")
+      ls.sort((a, b) => k === "nama" ? namaP(a.p).localeCompare(namaP(b.p), "th")
+        : k === "no" ? String(a.p.profil ? a.p.profil.no : "~").localeCompare(String(b.p.profil ? b.p.profil.no : "~"))
         : k === "kemajuan" ? b.kemajuan - a.kemajuan : k === "purata" ? v(b.purata) - v(a.purata)
         : k === "tepat" ? (a.tepat == null ? 101 : a.tepat) - (b.tepat == null ? 101 : b.tepat) : v(b.aktif) - v(a.aktif));
       $("#gr-badan").innerHTML = ls.length ? ls.map(i => `<tr>
-        <td><a href="#/guru/${encodeURIComponent(i.p.uid)}">${esc(i.p.nama || "—")}</a>${i.p.guru ? ` <small class="guru-tag">${B("pensyarah", "อาจารย์")}</small>` : ""}<br><span class="tr-kecil">${esc(i.p.emel || "")}</span></td>
+        <td><a href="#/guru/${encodeURIComponent(i.p.uid)}">${esc(namaP(i.p))}</a>${i.p.guru ? ` <small class="guru-tag">${B("pensyarah", "อาจารย์")}</small>` : ""}<br><span class="tr-kecil">${esc(i.p.emel || "")}</span></td>
+        <td>${i.p.profil ? `${esc(i.p.profil.no)}<br><span class="tr-kecil">${esc(i.p.profil.kumpulan)}</span>` : `<span class="kj-err">${B("Belum diisi", "ยังไม่กรอก")}</span>`}</td>
         <td><div class="sk-sel">${bar(i.kemajuan, i.p.nama || "")}<span>${i.kemajuan}%</span></div></td>
         <td>${i.selesai}/${CH.length}</td><td>${i.lulus}/${CH.length}</td><td>${i.purata == null ? "—" : i.purata + "%"}</td>
         <td>${i.nj}</td><td class="${i.tepat != null && i.tepat < 60 ? "kj-err" : ""}">${i.tepat == null ? "—" : i.tepat + "%"}</td><td>${i.aktif ? tarikh(i.aktif) : "—"}</td></tr>`).join("")
-        : `<tr><td colspan="8">${B("Tiada pelajar.", "ไม่พบนิสิต")}</td></tr>`;
+        : `<tr><td colspan="9">${B("Tiada pelajar.", "ไม่พบนิสิต")}</td></tr>`;
       labelJadual(app);
     };
     lukisJadual();
     $("#gr-cari").addEventListener("input", e => { GURU_ST.cari = e.target.value; lukisJadual(); });
     $("#gr-susun").addEventListener("change", e => { GURU_ST.susun = e.target.value; lukisJadual(); });
+    $("#gr-kumpulan").addEventListener("change", e => { GURU_ST.kumpulan = e.target.value; guruKelas(d); });
     $("#gr-sembunyi").addEventListener("change", e => { GURU_ST.sembunyiGuru = e.target.checked; guruKelas(d); });
     $("#gr-segar").onclick = () => { app.innerHTML = `<section class="section"><div class="wrap"><p class="pp-muat">${B("Memuatkan data kelas…", "กำลังโหลดข้อมูลทั้งชั้น…")}</p></div></section>`; window.TBAkaun.dataKelas(true).then(guruKelas).catch(() => guru()); };
-    const hari = tarikhCSV(Date.now()).slice(0, 10);
+    const hari = tarikhCSV(Date.now()).slice(0, 10) + (GURU_ST.kumpulan && GURU_ST.kumpulan !== "-" ? "-" + GURU_ST.kumpulan : "");
     $$("[data-eksport]", app).forEach(b => b.onclick = () => {
       const jenis = b.dataset.eksport;
       if (jenis === "pelajar") muatTurunCSV(`0113131-pelajar-${hari}.csv`, [
-        ["nama", "emel", "kemajuan_%", "bab_selesai", "bab_lulus", "purata_kuiz_%", "jumlah_jawapan", "jawapan_betul", "ketepatan_%", "aktif_terakhir", "daftar", ...CH.map(c => `kuiz_bab${c.no}_terbaik_%`), ...CH.map(c => `latihan_bab${c.no}_%`)],
-        ...senarai.map(i => { const rb = ringkasJawapan(i.p.jawapan || []).perBab; return [i.p.nama, i.p.emel, i.kemajuan, i.selesai, i.lulus, i.purata, i.nj, i.ok, i.tepat, tarikhCSV(i.aktif), tarikhCSV(i.p.dicipta),
+        ["no_pelajar", "kumpulan", "nama_penuh", "nama_google", "emel", "kemajuan_%", "bab_selesai", "bab_lulus", "purata_kuiz_%", "jumlah_jawapan", "jawapan_betul", "ketepatan_%", "aktif_terakhir", "daftar", ...CH.map(c => `kuiz_bab${c.no}_terbaik_%`), ...CH.map(c => `latihan_bab${c.no}_%`)],
+        ...senarai.map(i => { const rb = ringkasJawapan(i.p.jawapan || []).perBab; return [i.p.profil ? i.p.profil.no : "", i.p.profil ? i.p.profil.kumpulan : "", i.p.profil ? i.p.profil.namaPenuh : "", i.p.nama, i.p.emel, i.kemajuan, i.selesai, i.lulus, i.purata, i.nj, i.ok, i.tepat, tarikhCSV(i.aktif), tarikhCSV(i.p.dicipta),
           ...i.rows.map(rw => rw.k ? pct(rw.k.best, rw.k.all) : ""), ...CH.map(c => rb[c.no] ? pct(rb[c.no].ok, rb[c.no].n) : "")]; })]);
       if (jenis === "jawapan") muatTurunCSV(`0113131-jawapan-${hari}.csv`, [
-        ["nama", "emel", "masa", "bab", "jenis", "latihan", "item", "soalan", "jawapan", "betul", "laluan"],
-        ...senarai.flatMap(i => (i.p.jawapan || []).slice().reverse().map(j => [i.p.nama, i.p.emel, tarikhCSV(j.masa), j.bab, j.jenis, j.latihan, j.item, j.soalan, j.jawapan, j.betul ? 1 : 0, j.laluan]))]);
+        ["no_pelajar", "kumpulan", "nama", "emel", "masa", "bab", "jenis", "latihan", "item", "soalan", "jawapan", "betul", "laluan"],
+        ...senarai.flatMap(i => (i.p.jawapan || []).slice().reverse().map(j => [i.p.profil ? i.p.profil.no : "", i.p.profil ? i.p.profil.kumpulan : "", namaP(i.p), i.p.emel, tarikhCSV(j.masa), j.bab, j.jenis, j.latihan, j.item, j.soalan, j.jawapan, j.betul ? 1 : 0, j.laluan]))]);
       if (jenis === "soalan") muatTurunCSV(`0113131-analisis-soalan-${hari}.csv`, [
         ["bab", "jenis", "soalan", "cubaan", "cubaan_salah", "kadar_salah_%", "pelajar_menjawab", "pelajar_pernah_salah", "jawapan_salah_lazim"],
         ...soalan.map(o => [o.bab, o.jenis, o.soalan, o.n, o.salah, o.kadar, o.pelajar.size, o.pelajarSalah.size, o.lazim.map(([w, n]) => `${w} (${n})`).join("; ")])]);
@@ -872,7 +881,7 @@
     const th = (...h) => `<thead><tr>${h.map(x => `<th scope="col">${x}</th>`).join("")}</tr></thead>`;
     app.innerHTML = `<section class="section"><div class="wrap guru">
       <p><a href="#/guru">← ${B("Senarai pelajar", "รายชื่อนิสิต")}</a></p>
-      <div class="section-head"><h1>${esc(p.nama || "—")}</h1><p>${esc(p.emel || "")} · ${B(`Aktif terakhir ${i.aktif ? tarikh(i.aktif) : "—"}`, `เข้าใช้ล่าสุด ${i.aktif ? tarikhCSV(i.aktif) : "—"}`)}</p></div>
+      <div class="section-head"><h1>${esc(namaP(p))}</h1><p>${p.profil ? `${B("No. pelajar", "รหัสนิสิต")} ${esc(p.profil.no)} · ${B("Kumpulan", "กลุ่ม")} ${esc(p.profil.kumpulan)} · ` : ""}${esc(p.emel || "")} · ${B(`Aktif terakhir ${i.aktif ? tarikh(i.aktif) : "—"}`, `เข้าใช้ล่าสุด ${i.aktif ? tarikhCSV(i.aktif) : "—"}`)}</p></div>
       <div class="kj-stat">
         <div class="kj-kad"><p class="kj-label">${B("Kemajuan", "ความก้าวหน้า")}</p><p class="kj-nilai">${i.kemajuan}<small>%</small></p>${bar(i.kemajuan, "Kemajuan · ความก้าวหน้า")}</div>
         <div class="kj-kad"><p class="kj-label">${B("Bab lulus", "บทที่ผ่าน")}</p><p class="kj-nilai">${i.lulus}<small> / ${CH.length}</small></p></div>

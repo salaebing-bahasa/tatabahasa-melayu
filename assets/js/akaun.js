@@ -39,7 +39,8 @@ let sedia = false;       // data awan sudah digabung · รวมข้อมู
 let tSimpan = null;
 let memuat = true;       // sedang memeriksa status log masuk · กำลังตรวจสถานะล็อกอิน
 let cacheKelas = null;   // data kelas untuk halaman pensyarah · ข้อมูลทั้งชั้นสำหรับหน้าอาจารย์
-let cacheJawapan = null; // jawapan pengguna semasa (terbaru dahulu) · คำตอบของผู้ใช้ปัจจุบัน เรียงใหม่สุดก่อน
+let cacheJawapan = null;
+let profil = null;       // { no, kumpulan, namaPenuh } · รหัสนิสิต กลุ่มเรียน ชื่อ-สกุล // jawapan pengguna semasa (terbaru dahulu) · คำตอบของผู้ใช้ปัจจุบัน เรียงใหม่สุดก่อน
 
 const keMs = t => t && t.toMillis ? t.toMillis() : (typeof t === "number" ? t : null);
 const adalahGuru = () => !!(pengguna && pengguna.emailVerified && GURU.includes(String(pengguna.email || "").toLowerCase()));
@@ -111,6 +112,7 @@ function butang() {
       <p class="akaun-nama">${esc(nama)}</p><p class="akaun-emel">${esc(pengguna.email || "")}</p>
       <a href="#/papan" class="akaun-pautan"><span lang="ms">Papan pemuka</span> · แดชบอร์ด</a>
       <a href="#/skor" class="akaun-pautan"><span lang="ms">Skor saya</span> · คะแนนของฉัน</a>
+      ${adalahGuru() ? "" : `<button type="button" class="akaun-pautan akaun-profil-btn" id="akaun-profil"><span lang="ms">Profil saya</span> · ข้อมูลของฉัน${profil ? ` <small>(${esc(profil.no)} · ${esc(profil.kumpulan)})</small>` : ""}</button>`}
       ${adalahGuru() ? `<a href="#/guru" class="akaun-pautan akaun-guru"><span lang="ms">Halaman pensyarah</span> · หน้าอาจารย์</a>` : ""}
       <button type="button" class="btn btn-line" id="akaun-keluar"><span lang="ms">Log keluar</span> · ออกจากระบบ</button>
     </div>`;
@@ -118,6 +120,7 @@ function butang() {
   b.onclick = e => { e.stopPropagation(); const buka = m.hidden; m.hidden = !buka; b.setAttribute("aria-expanded", String(buka)); };
   m.addEventListener("click", e => e.stopPropagation());
   $("#akaun-keluar").onclick = keluar;
+  const bp = $("#akaun-profil"); if (bp) bp.onclick = async () => { m.hidden = true; b.setAttribute("aria-expanded", "false"); await kemaskiniProfil(true); };
   m.querySelectorAll("a").forEach(a => a.onclick = () => { m.hidden = true; b.setAttribute("aria-expanded", "false"); });
 }
 document.addEventListener("click", () => { const m = $("#akaun-menu"); if (m && !m.hidden) { m.hidden = true; const b = $("#akaun-saya"); if (b) b.setAttribute("aria-expanded", "false"); } });
@@ -160,6 +163,51 @@ function mintaSetuju() {
   });
 }
 
+/* ---------- Profil pelajar · ข้อมูลนิสิต (รหัส กลุ่ม ชื่อ-สกุล) ---------- */
+const KUMPULAN = ((window.COURSE && window.COURSE.groups) || []).map(g => ({ kod: g[0], ms: g[3] || "", th: g[1] || "" }));
+const NO_SAH = /^[0-9A-Za-z-]{5,15}$/; // mesti sama dengan profilSah() dalam firestore.rules · ต้องตรงกับใน firestore.rules
+function mintaProfil(lama, bolehBatal) {
+  return new Promise(resolve => {
+    const d = document.createElement("dialog"); d.className = "akaun-dialog"; d.setAttribute("aria-labelledby", "pf-h");
+    d.innerHTML = `<form method="dialog" class="pf-borang" novalidate>
+      <h2 id="pf-h"><span class="bm" lang="ms">Maklumat pelajar</span><span class="tr">ข้อมูลนิสิต</span></h2>
+      <p class="tr">กรอกครั้งเดียว ใช้ให้อาจารย์ดูผลแยกตามกลุ่มเรียนและตรงกับรายชื่อในทะเบียน แก้ไขภายหลังได้ที่เมนูบัญชี → Profil saya</p>
+      <label class="pf-medan"><span><span lang="ms">Nama penuh</span> · ชื่อ-สกุล (ตามทะเบียน)</span>
+        <input name="namaPenuh" required maxlength="120" autocomplete="name" value="${esc((lama && lama.namaPenuh) || (pengguna && pengguna.displayName) || "")}"></label>
+      <label class="pf-medan"><span><span lang="ms">No. pelajar</span> · รหัสนิสิต</span>
+        <input name="no" required inputmode="numeric" maxlength="15" autocomplete="off" value="${esc((lama && lama.no) || "")}" aria-describedby="pf-no-h"><small id="pf-no-h">ตัวเลข 5–15 หลัก</small></label>
+      <fieldset class="pf-medan"><legend><span lang="ms">Kumpulan</span> · กลุ่มเรียน</legend>
+        <div class="pf-kumpulan">${KUMPULAN.map(k => `<label><input type="radio" name="kumpulan" value="${esc(k.kod)}"${lama && lama.kumpulan === k.kod ? " checked" : ""} required> <b>${esc(k.kod)}</b> <small>${esc(k.th)}</small></label>`).join("")}</div></fieldset>
+      <p class="pf-ralat" role="alert"></p>
+      <div class="akaun-dlg-btn">${bolehBatal ? `<button type="button" class="btn btn-line" data-batal><span lang="ms">Batal</span> · ยกเลิก</button>` : `<button type="button" class="btn btn-line" data-keluar><span lang="ms">Log keluar</span> · ออกจากระบบ</button>`}
+        <button type="submit" class="btn btn-solid"><span lang="ms">Simpan</span> · บันทึก</button></div></form>`;
+    document.body.appendChild(d);
+    const f = d.querySelector("form"), ralat = d.querySelector(".pf-ralat");
+    const tutup = v => { d.close(); d.remove(); resolve(v); };
+    f.addEventListener("submit", e => {
+      e.preventDefault();
+      const namaPenuh = f.namaPenuh.value.trim().replace(/\s+/g, " "), no = f.no.value.trim(), k = f.querySelector("input[name=kumpulan]:checked");
+      const salah = !namaPenuh ? [f.namaPenuh, "Sila isi nama penuh · กรุณากรอกชื่อ-สกุล"] : !NO_SAH.test(no) ? [f.no, "No. pelajar tidak sah · รหัสนิสิตไม่ถูกต้อง (ตัวเลข 5–15 หลัก)"] : !k ? [f.querySelector("input[name=kumpulan]"), "Sila pilih kumpulan · กรุณาเลือกกลุ่มเรียน"] : null;
+      if (salah) { ralat.textContent = salah[1]; salah[0].focus(); return; }
+      tutup({ namaPenuh, no, kumpulan: k.value });
+    });
+    const bb = d.querySelector("[data-batal]"); if (bb) bb.onclick = () => tutup(null);
+    const bk = d.querySelector("[data-keluar]"); if (bk) bk.onclick = () => tutup("keluar");
+    d.addEventListener("cancel", e => { e.preventDefault(); if (bolehBatal) tutup(null); });
+    d.showModal();
+  });
+}
+async function kemaskiniProfil(bolehBatal) {
+  if (!pengguna) return;
+  const v = await mintaProfil(profil, bolehBatal);
+  if (v === "keluar") { await keluar(); return; }
+  if (!v) return;
+  try {
+    await setDoc(doc(db, "pelajar", pengguna.uid), { profil: { ...v, masa: serverTimestamp() }, kemaskini: serverTimestamp() }, { merge: true });
+    profil = v; butang(); segar(); toast("Maklumat disimpan · บันทึกข้อมูลแล้ว");
+  } catch (e) { console.error(e); toast("Tidak dapat menyimpan · บันทึกไม่ได้ — " + (e.code || "")); }
+}
+
 /* ---------- Selepas log masuk · หลังล็อกอิน ---------- */
 async function selepasMasuk(u) {
   const ref = doc(db, "pelajar", u.uid);
@@ -180,7 +228,9 @@ async function selepasMasuk(u) {
   try { await setDoc(ref, data, { merge: true }); }
   catch (e) { console.error(e); toast("Tidak dapat menyimpan ke akaun · บันทึกลงบัญชีไม่ได้"); }
   pengguna = u; sedia = true; memuat = false;
+  profil = awan.profil ? { no: awan.profil.no, kumpulan: awan.profil.kumpulan, namaPenuh: awan.profil.namaPenuh } : null;
   butang(); segar();
+  if (!profil && !adalahGuru()) await kemaskiniProfil(false);
   toast(`Selamat datang · ยินดีต้อนรับ ${u.displayName || u.email || ""}`);
 }
 
@@ -195,6 +245,8 @@ async function simpanSekarang() {
 window.TBAkaun = {
   pengguna: () => pengguna,
   memuat: () => memuat,
+  profil: () => profil,
+  kemaskiniProfil: () => kemaskiniProfil(true),
   guru: adalahGuru,
   dataKelas,
   jawapanSaya,
@@ -218,7 +270,7 @@ document.addEventListener("visibilitychange", () => { if (document.visibilitySta
 
 getRedirectResult(auth).catch(e => console.error(e));
 onAuthStateChanged(auth, u => {
-  pengguna = null; sedia = false; cacheJawapan = null; cacheKelas = null; memuat = !!u; butang();
+  pengguna = null; sedia = false; cacheJawapan = null; profil = null; cacheKelas = null; memuat = !!u; butang();
   if (u) selepasMasuk(u).finally(() => { if (memuat) { memuat = false; segar(); } });
   else segar();
 });
