@@ -1078,3 +1078,45 @@ footer .kaki-tajuk { font-weight: 700; font-size: 1.08em; margin-bottom: 2px; }
   .akaun-masuk small { display: none; }
   .akaun-masuk { padding: 4px 10px; }
 }
+
+/* ================= Papan Pemuka & Skor Saya · แดชบอร์ดและคะแนนของฉัน ================= */
+.pp-kepala p { color: var(--muted); }
+.pp-masuk { display: flex; align-items: center; justify-content: space-between; gap: 14px; flex-wrap: wrap; }
+.pp-masuk p { margin: 0; flex: 1 1 320px; }
+.pp-pautan { font-size: 15px; color: var(--biru); }
+.pp-h3 { margin: 18px 0 10px; font-size: 18px; color: var(--biru); }
+.pp-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 12px; }
+.pp-bab { display: grid; grid-template-columns: 40px 1fr auto; grid-template-areas: "no tajuk tajuk" "status status pc" "bar bar bar"; gap: 6px 10px; align-items: center;
+  background: var(--surface); border: 1px solid var(--line); border-left: 4px solid var(--line); border-radius: var(--radius-m); padding: 12px 14px; text-decoration: none; color: var(--dakwat); }
+.pp-bab:hover { box-shadow: 0 4px 14px rgba(0,0,0,.08); }
+.pp-bab:focus-visible { outline: 3px solid var(--emas); outline-offset: 2px; }
+.pp-no { grid-area: no; width: 36px; height: 36px; border-radius: 50%; display: grid; place-items: center; background: var(--kertas); border: 1px solid var(--line); font-weight: 700; color: var(--biru); }
+.pp-tajuk { grid-area: tajuk; display: flex; flex-direction: column; line-height: 1.3; font-weight: 600; }
+.pp-tajuk small { font-weight: 400; color: var(--muted); font-size: 13.5px; }
+.pp-status { grid-area: status; font-size: 13.5px; color: var(--muted); }
+.pp-status .tr { font-size: 12.5px; }
+.pp-pc { grid-area: pc; font-weight: 700; color: var(--biru); }
+.pp-bab .kj-bar { grid-area: bar; margin-top: 0; height: 8px; }
+.pp-lulus { border-left-color: var(--ok); }
+.pp-lulus .pp-no { background: var(--ok); border-color: var(--ok); color: #fff; }
+.pp-ulang { border-left-color: var(--emas); }
+.pp-ulang .kj-bar span { background: var(--emas); }
+.pp-sedang { border-left-color: var(--biru); }
+.pp-muat { color: var(--muted); }
+.pp-ringkas { font-weight: 600; }
+.pp-senarai { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px; }
+.pp-senarai li { display: grid; grid-template-columns: 28px 1fr auto; gap: 10px; align-items: start; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius-s); padding: 10px 12px; font-size: 15px; }
+.pp-ikon { width: 24px; height: 24px; border-radius: 50%; display: grid; place-items: center; color: #fff; font-size: 13px; font-weight: 700; }
+.pp-betul .pp-ikon { background: var(--ok); }
+.pp-salah .pp-ikon { background: var(--err); }
+.pp-masa { font-size: 13px; color: var(--muted); white-space: nowrap; }
+.kj-err { color: var(--err); font-weight: 600; }
+.sk-sel { display: flex; align-items: center; gap: 8px; min-width: 140px; }
+.sk-sel .kj-bar { flex: 1; margin-top: 0; }
+.sk-sel > span { font-weight: 600; min-width: 3em; text-align: right; }
+.sk-salah { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px; }
+.sk-salah li { background: var(--surface); border: 1px solid var(--line); border-left: 4px solid var(--err); border-radius: var(--radius-s); padding: 10px 14px; }
+.sk-salah p { margin: 2px 0; }
+.sk-q { font-weight: 600; }
+.sk-meta { font-size: 14px; color: var(--muted); }
+@media (max-width: 560px) { .pp-senarai li { grid-template-columns: 28px 1fr; } .pp-masa { grid-column: 2; } }

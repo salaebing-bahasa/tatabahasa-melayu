@@ -10,7 +10,7 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
 import { getAuth, GoogleAuthProvider, onAuthStateChanged, signInWithPopup, signInWithRedirect, getRedirectResult, signOut }
   from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
-import { getFirestore, doc, getDoc, setDoc, addDoc, collection, serverTimestamp }
+import { getFirestore, doc, getDoc, setDoc, addDoc, getDocs, collection, query, orderBy, limit, serverTimestamp }
   from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
 
 /* Nilai ini awam (bukan kata laluan); keselamatan data dikawal oleh firestore.rules
@@ -35,6 +35,16 @@ provider.setCustomParameters({ prompt: "select_account" });
 let pengguna = null;     // pengguna yang sudah bersetuju · ผู้ใช้ที่ยอมรับข้อตกลงแล้ว
 let sedia = false;       // data awan sudah digabung · รวมข้อมูลจากบัญชีแล้ว
 let tSimpan = null;
+let cacheJawapan = null; // jawapan pengguna semasa (terbaru dahulu) · คำตอบของผู้ใช้ปัจจุบัน เรียงใหม่สุดก่อน
+
+/* Baca sejarah jawapan untuk Papan Pemuka dan Skor Saya · อ่านประวัติคำตอบสำหรับแดชบอร์ดและหน้าคะแนน */
+async function jawapanSaya(paksa) {
+  if (!pengguna || !sedia) return null;
+  if (cacheJawapan && !paksa) return cacheJawapan;
+  const snap = await getDocs(query(collection(db, "pelajar", pengguna.uid, "jawapan"), orderBy("masa", "desc"), limit(2000)));
+  cacheJawapan = snap.docs.map(d => { const x = d.data(); return { ...x, soalan: x.soalan || "", masa: x.masa && x.masa.toMillis ? x.masa.toMillis() : Date.now() }; });
+  return cacheJawapan;
+}
 
 const $ = s => document.querySelector(s);
 const bacaLokal = () => { try { return JSON.parse(localStorage.getItem(KEY)) || {}; } catch (e) { return {}; } };
@@ -73,14 +83,15 @@ function butang() {
   w.innerHTML = `<button type="button" class="akaun-btn akaun-saya" id="akaun-saya" aria-expanded="false" aria-controls="akaun-menu" aria-label="Akaun saya · บัญชีของฉัน: ${esc(nama)}"><span class="akaun-huruf" aria-hidden="true">${esc(nama.trim().charAt(0).toUpperCase())}</span></button>
     <div class="akaun-menu" id="akaun-menu" hidden>
       <p class="akaun-nama">${esc(nama)}</p><p class="akaun-emel">${esc(pengguna.email || "")}</p>
-      <a href="#/kemajuan" class="akaun-pautan"><span lang="ms">Kemajuan saya</span> · ความก้าวหน้าของฉัน</a>
+      <a href="#/papan" class="akaun-pautan"><span lang="ms">Papan pemuka</span> · แดชบอร์ด</a>
+      <a href="#/skor" class="akaun-pautan"><span lang="ms">Skor saya</span> · คะแนนของฉัน</a>
       <button type="button" class="btn btn-line" id="akaun-keluar"><span lang="ms">Log keluar</span> · ออกจากระบบ</button>
     </div>`;
   const b = $("#akaun-saya"), m = $("#akaun-menu");
   b.onclick = e => { e.stopPropagation(); const buka = m.hidden; m.hidden = !buka; b.setAttribute("aria-expanded", String(buka)); };
   m.addEventListener("click", e => e.stopPropagation());
   $("#akaun-keluar").onclick = keluar;
-  m.querySelector("a").onclick = () => { m.hidden = true; b.setAttribute("aria-expanded", "false"); };
+  m.querySelectorAll("a").forEach(a => a.onclick = () => { m.hidden = true; b.setAttribute("aria-expanded", "false"); });
 }
 document.addEventListener("click", () => { const m = $("#akaun-menu"); if (m && !m.hidden) { m.hidden = true; const b = $("#akaun-saya"); if (b) b.setAttribute("aria-expanded", "false"); } });
 document.addEventListener("keydown", e => { if (e.key === "Escape") { const m = $("#akaun-menu"); if (m && !m.hidden) { m.hidden = true; const b = $("#akaun-saya"); if (b) { b.setAttribute("aria-expanded", "false"); b.focus(); } } } });
@@ -156,6 +167,7 @@ async function simpanSekarang() {
 /* Dipanggil oleh app.js setiap kali kemajuan disimpan · app.js เรียกทุกครั้งที่บันทึกความก้าวหน้า */
 window.TBAkaun = {
   pengguna: () => pengguna,
+  jawapanSaya,
   simpan: () => { if (!pengguna || !sedia) return; clearTimeout(tSimpan); tSimpan = setTimeout(simpanSekarang, 1500); },
   masuk, keluar
 };
@@ -163,18 +175,20 @@ window.TBAkaun = {
 window.addEventListener("tb:jawab", e => {
   if (!pengguna || !sedia) return;
   const d = e.detail || {};
-  addDoc(collection(db, "pelajar", pengguna.uid, "jawapan"), {
+  const rek = {
     bab: Number.isInteger(d.bab) ? d.bab : null, laluan: String(d.laluan || "").slice(0, 120), jenis: String(d.jenis || "").slice(0, 30),
     latihan: String(d.latihan || "").slice(0, 30), item: Number(d.item) || 0, soalan: String(d.soalan || "").slice(0, 300),
-    jawapan: String(d.jawapan || "").slice(0, 300), betul: !!d.betul, masa: serverTimestamp()
-  }).catch(err => console.error(err));
+    jawapan: String(d.jawapan || "").slice(0, 300), betul: !!d.betul
+  };
+  if (cacheJawapan) cacheJawapan.unshift({ ...rek, masa: Date.now() });
+  addDoc(collection(db, "pelajar", pengguna.uid, "jawapan"), { ...rek, masa: serverTimestamp() }).catch(err => console.error(err));
 });
 window.addEventListener("pagehide", () => { if (tSimpan) simpanSekarang(); });
 document.addEventListener("visibilitychange", () => { if (document.visibilityState === "hidden" && tSimpan) simpanSekarang(); });
 
 getRedirectResult(auth).catch(e => console.error(e));
 onAuthStateChanged(auth, u => {
-  pengguna = null; sedia = false; butang();
+  pengguna = null; sedia = false; cacheJawapan = null; butang();
   if (u) selepasMasuk(u);
 });
 butang();
