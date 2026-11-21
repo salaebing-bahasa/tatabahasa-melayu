@@ -115,6 +115,7 @@ function butang() {
       <p class="akaun-nama">${esc(nama)}</p><p class="akaun-emel">${esc(pengguna.email || "")}</p>
       <a href="#/papan" class="akaun-pautan"><span lang="ms">Papan pemuka</span> · แดชบอร์ด</a>
       <a href="#/skor" class="akaun-pautan"><span lang="ms">Skor saya</span> · คะแนนของฉัน</a>
+      <a href="#/peringkat" class="akaun-pautan"><span lang="ms">Papan peringkat</span> · ตารางอันดับ</a>
       <a href="#/kata" class="akaun-pautan"><span lang="ms">Buku kata saya</span> · สมุดคำศัพท์</a>
       ${adalahGuru() ? "" : `<button type="button" class="akaun-pautan akaun-profil-btn" id="akaun-profil"><span lang="ms">Profil saya</span> · ข้อมูลของฉัน${profil ? ` <small>(${esc(profil.no)} · ${esc(profil.kumpulan)})</small>` : ""}</button>`}
       ${adalahGuru() ? `<a href="#/guru" class="akaun-pautan akaun-guru"><span lang="ms">Halaman pensyarah</span> · หน้าอาจารย์</a>` : ""}
@@ -289,9 +290,22 @@ const kata = {
   }
 };
 
+/* ---------- Papan peringkat · ตารางอันดับ (เข้าร่วมโดยสมัครใจ ใช้ชื่อเล่น) ----------
+   peringkat/{uid}  { gelaran, kumpulan, mata, bab, betul, kemaskini } */
+const peringkat = {
+  async semua() { const s = await getDocs(collection(db, "peringkat")); return s.docs.map(d => ({ uid: d.id, ...d.data(), kemaskini: keMs(d.data().kemaskini) })); },
+  async saya() { if (!pengguna) return null; const d = await getDoc(doc(db, "peringkat", pengguna.uid)); return d.exists() ? { uid: d.id, ...d.data() } : null; },
+  async simpan({ gelaran, kumpulan, mata, bab, betul }) {
+    await setDoc(doc(db, "peringkat", pengguna.uid), { gelaran: String(gelaran).trim().slice(0, 24), kumpulan: String(kumpulan || "").slice(0, 8),
+      mata: Math.max(0, Math.min(6000, Math.round(mata))), bab: Math.max(0, Math.min(13, bab | 0)), betul: Math.max(0, Math.min(2000, betul | 0)), kemaskini: serverTimestamp() });
+  },
+  async keluar(uid) { await deleteDoc(doc(db, "peringkat", uid || pengguna.uid)); }
+};
+
 /* Dipanggil oleh app.js setiap kali kemajuan disimpan · app.js เรียกทุกครั้งที่บันทึกความก้าวหน้า */
 window.TBAkaun = {
   pengguna: () => pengguna,
+  peringkat,
   sijil: () => sijil,
   /* Rekod tarikh sijil sekali sahaja · บันทึกวันที่ได้ใบประกาศครั้งเดียว */
   async rekodSijil(kod) {

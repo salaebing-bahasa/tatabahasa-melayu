@@ -666,6 +666,7 @@
           : `<a class="btn btn-solid btn-dw" href="${babLink(1)}">${B("Mula Bab 1", "เริ่มบทที่ 1")}</a>`}
         <a class="btn btn-line" href="#/skor">${B("Skor Saya", "คะแนนของฉัน")}</a>
         <a class="btn btn-line" href="#/kata">${B("Buku Kata", "สมุดคำศัพท์")}</a>
+        <a class="btn btn-line" href="#/peringkat">${B("Peringkat", "ตารางอันดับ")}</a>
         <a class="pp-pautan" href="#/kemajuan">${B("Jadual kemajuan dan padam data", "ตารางความก้าวหน้าและล้างข้อมูล")}</a>
       </div>
       ${rows.every(r => r.s.d && r.s.lulus) ? `<div class="note sj-papan" role="note"><p>🎓 ${B("Tahniah! Anda telah lulus semua 13 bab.", "ยินดีด้วย คุณผ่านครบทั้ง 13 บทแล้ว")}</p><a class="btn btn-solid" href="#/sijil">${B("Lihat sijil", "ดูใบประกาศนียบัตร")}</a></div>`
@@ -678,6 +679,7 @@
     </div></section>`;
     ikatLogMasuk(app); window.scrollTo(0, 0);
     if (!nama) return;
+    if (PR()) PR().saya().then(kemaskiniPeringkat).catch(() => { /* ignore */ });
     ambilJawapan().then(js => {
       const el = $("#pp-aktiviti"); if (!el) return;
       if (!js) { el.innerHTML = `<p>${B("Tidak dapat memuatkan aktiviti.", "โหลดกิจกรรมไม่ได้")}</p>`; return; }
@@ -1119,6 +1121,76 @@
     window.scrollTo(0, 0);
   }
 
+
+  /* ================= PAPAN PERINGKAT · ตารางอันดับ ================= */
+  /* Mata: setiap bab selesai 20 + skor terbaik kuiz (0–50 mengikut %) + 2 bagi setiap soalan latihan berbeza yang dijawab betul
+     คะแนน: บทที่เรียนจบบทละ 20 + คะแนนแบบทดสอบสูงสุด (0–50 ตามร้อยละ) + ข้อละ 2 สำหรับแบบฝึกหัดที่ตอบถูก (นับข้อไม่ซ้ำ) */
+  const PR = () => window.TBAkaun && window.TBAkaun.peringkat;
+  function kiraMata(st, js) {
+    let mata = 0, bab = 0;
+    CH.forEach(c => { const s = statusBab(c, st); if (s.d) mata += 20; if (s.k) mata += Math.round(s.k.best / s.k.all * 50); if (s.d && s.lulus) bab++; });
+    const betul = new Set((js || []).filter(j => j.betul).map(j => `${j.bab}|${j.jenis}|${j.soalan}`)).size;
+    return { mata: mata + betul * 2, bab, betul };
+  }
+  async function kemaskiniPeringkat(saya) {
+    if (!saya) return null;
+    const js = await ambilJawapan().catch(() => []);
+    const m = kiraMata(load(), js || []);
+    if (m.mata !== saya.mata || m.bab !== saya.bab || m.betul !== saya.betul) { await PR().simpan({ ...saya, ...m }); return { ...saya, ...m }; }
+    return saya;
+  }
+  async function papanPeringkat() {
+    setNav("papan"); document.title = `Papan Peringkat · ตารางอันดับ | ${C.code}`;
+    app.innerHTML = `<section class="section"><div class="wrap"><p class="pp-muat">${B("Memuatkan…", "กำลังโหลด…")}</p></div></section>`;
+    const A = window.TBAkaun, guruKah = A.guru();
+    let saya = null, semua = [];
+    try { saya = await PR().saya(); if (saya) saya = await kemaskiniPeringkat(saya); semua = await PR().semua(); }
+    catch (e) { console.error(e); app.innerHTML = kadMudah(`<p>${B("Papan peringkat tidak dapat dimuatkan. Pastikan peraturan firestore.rules terkini telah diterbitkan.", "โหลดตารางอันดับไม่ได้ ตรวจสอบว่าได้ Publish กฎ firestore.rules ล่าสุดแล้ว")}</p><small>${esc(e.code || "")}</small>`); return; }
+    if (!/^#\/peringkat/.test(location.hash)) return;
+    let namaSebenar = new Map();
+    if (guruKah) { const k = await A.dataKelas().catch(() => null); if (k) k.pelajar.forEach(p => namaSebenar.set(p.uid, (p.profil && `${p.profil.namaPenuh} · ${p.profil.no}`) || p.nama || p.emel)); }
+    const pr = A.profil(), uidSaya = A.pengguna() && A.pengguna().uid;
+    const kmpPilih = PERINGKAT_ST.kumpulan;
+    const ls = semua.filter(x => !kmpPilih || x.kumpulan === kmpPilih).sort((a, b) => b.mata - a.mata || b.bab - a.bab || (a.kemaskini || 0) - (b.kemaskini || 0));
+    let ked = 0, prev = null; ls.forEach((x, i) => { if (x.mata !== prev) { ked = i + 1; prev = x.mata; } x.ked = ked; });
+    const atas = ls.slice(0, 10), sayaDalam = ls.find(x => x.uid === uidSaya);
+    const pingat = k => k === 1 ? "🥇" : k === 2 ? "🥈" : k === 3 ? "🥉" : k;
+    const baris = x => `<li class="pk-baris${x.uid === uidSaya ? " pk-saya" : ""}"><span class="pk-ked">${pingat(x.ked)}</span>
+      <span class="pk-nama"><b>${esc(x.gelaran)}</b>${x.kumpulan ? ` <small>${esc(x.kumpulan)}</small>` : ""}${x.uid === uidSaya ? ` <small class="guru-tag">anda · คุณ</small>` : ""}${guruKah && namaSebenar.get(x.uid) ? `<br><span class="tr-kecil">${esc(namaSebenar.get(x.uid))}</span>` : ""}</span>
+      <span class="pk-statistik"><span>${x.bab}/13 ${T("bab", "บท")}</span></span><span class="pk-mata">${x.mata}<small> ${T("mata", "คะแนน")}</small></span>
+      ${guruKah ? `<button type="button" class="kt-padam" data-pk-buang="${esc(x.uid)}" aria-label="Buang ${esc(x.gelaran)} · ลบออก">${B("Buang", "ลบ")}</button>` : ""}</li>`;
+    app.innerHTML = `<section class="section"><div class="wrap peringkat">
+      <div class="section-head"><h1>${B("Papan Peringkat", "ตารางอันดับ")}</h1><p>${B(`${semua.length} peserta`, `ผู้เข้าร่วม ${semua.length} คน`)}</p></div>
+      ${saya ? `<div class="pk-kad-saya"><div><p class="kj-label">${B("Mata anda", "คะแนนของคุณ")}</p><p class="kj-nilai">${saya.mata}</p></div>
+          <div><p class="kj-label">${B("Kedudukan", "อันดับ")}</p><p class="kj-nilai">${sayaDalam ? sayaDalam.ked : "—"}<small> / ${ls.length}</small></p></div>
+          <div><p class="kj-label">${B("Nama paparan", "ชื่อที่แสดง")}</p><p class="pk-gelaran">${esc(saya.gelaran)}</p><button type="button" class="kt-padam" id="pk-keluar">${B("Tarik diri", "ออกจากตารางอันดับ")}</button></div></div>`
+        : guruKah ? "" : `<form class="pk-sertai" id="pk-sertai"><h2 class="kj-h2">${B("Sertai papan peringkat", "เข้าร่วมตารางอันดับ")}</h2>
+          <p>${B("Penyertaan adalah pilihan. Hanya <b>nama paparan</b> yang anda pilih, kumpulan dan mata akan ditunjukkan kepada pelajar lain; nama sebenar tidak dipaparkan.", "เข้าร่วมหรือไม่ก็ได้ เพื่อนจะเห็นเฉพาะ<b>ชื่อที่แสดง</b>ที่คุณตั้ง กลุ่มเรียน และคะแนน ไม่แสดงชื่อจริง")}</p>
+          <div class="hadir-medan"><label>${B("Nama paparan (2–24 aksara)", "ชื่อที่แสดง (2–24 ตัวอักษร)")}<input name="gelaran" required minlength="2" maxlength="24" placeholder="contoh: Bintang Pagi"></label>
+          <label class="guru-cek"><input type="checkbox" name="tunjukKmp" checked> ${B(`Tunjukkan kumpulan (${esc(pr ? pr.kumpulan : "—")})`, "แสดงกลุ่มเรียน")}</label></div>
+          <button type="submit" class="btn btn-solid">${B("Sertai", "เข้าร่วม")}</button></form>`}
+      <div class="guru-alat"><label class="guru-susun">${B("Kumpulan", "กลุ่ม")} <select id="pk-kmp"><option value="">Semua · ทุกกลุ่ม</option>${C.groups.map(g => `<option value="${g[0]}"${kmpPilih === g[0] ? " selected" : ""}>${g[0]}</option>`).join("")}</select></label></div>
+      ${ls.length ? `<ol class="pk-senarai">${atas.map(baris).join("")}</ol>
+        ${sayaDalam && sayaDalam.ked > 10 ? `<p class="pk-jarak" aria-hidden="true">⋯</p><ol class="pk-senarai">${baris(sayaDalam)}</ol>` : ""}
+        ${guruKah && ls.length > 10 ? `<details><summary>${B(`Lihat semua (${ls.length})`, `ดูทั้งหมด (${ls.length})`)}</summary><ol class="pk-senarai">${ls.slice(10).map(baris).join("")}</ol></details>` : ""}`
+        : `<p>${B("Belum ada peserta.", "ยังไม่มีผู้เข้าร่วม")}</p>`}
+      <p class="kj-cara">${B("Cara mengira mata: setiap bab ditandakan selesai = 20 mata; skor terbaik Kuiz Penilaian = hingga 50 mata setiap bab; setiap soalan latihan berbeza yang dijawab betul = 2 mata. Mata dikemas kini apabila anda membuka halaman ini.", "วิธีคิดคะแนน: บทที่กดเรียนจบ บทละ 20 คะแนน · คะแนนสูงสุดของแบบทดสอบท้ายบท สูงสุดบทละ 50 คะแนน · แบบฝึกหัดที่ตอบถูก ข้อละ 2 คะแนน (ข้อเดิมนับครั้งเดียว) คะแนนอัปเดตเมื่อเปิดหน้านี้")}</p>
+    </div></section>`;
+    $("#pk-kmp").onchange = e => { PERINGKAT_ST.kumpulan = e.target.value; papanPeringkat(); };
+    const f = $("#pk-sertai");
+    if (f) f.onsubmit = async e => {
+      e.preventDefault(); const g = f.gelaran.value.trim().replace(/\s+/g, " ");
+      if (g.length < 2) { f.gelaran.focus(); return; }
+      try { const js = await ambilJawapan().catch(() => []); await PR().simpan({ gelaran: g, kumpulan: f.tunjukKmp.checked && pr ? pr.kumpulan : "", ...kiraMata(load(), js || []) }); papanPeringkat(); }
+      catch (err) { console.error(err); toast(T("Tidak dapat menyertai", "เข้าร่วมไม่ได้") + " — " + (err.code || "")); }
+    };
+    const k = $("#pk-keluar");
+    if (k) k.onclick = async () => { if (!confirm(T("Tarik diri daripada papan peringkat?", "ออกจากตารางอันดับหรือไม่"))) return; await PR().keluar(); papanPeringkat(); };
+    $$("[data-pk-buang]").forEach(b => b.onclick = async () => { if (!confirm(T("Buang peserta ini daripada papan peringkat?", "ลบผู้เข้าร่วมนี้ออกจากตารางอันดับหรือไม่"))) return; await PR().keluar(b.dataset.pkBuang); papanPeringkat(); });
+    window.scrollTo(0, 0);
+  }
+  const PERINGKAT_ST = { kumpulan: "" };
+
   /* ================= QUIZ ================= */
   function kuiz(part) {
     setNav("kuiz"); document.title = `Kuiz · แบบทดสอบ | ${C.code}`;
@@ -1550,6 +1622,7 @@
     else if (p[0] === "skor") skorSaya();
     else if (p[0] === "kata") bukuKata();
     else if (p[0] === "sijil") sijilSaya();
+    else if (p[0] === "peringkat") papanPeringkat();
     else if (p[0] === "guru") guru(p[1] ? decodeURIComponent(p[1]) : null);
     else notFound();
     /* Fokus dipindahkan ke kandungan hanya selepas navigasi, bukan semasa halaman mula dibuka (supaya pautan langkau kekal pertama)
