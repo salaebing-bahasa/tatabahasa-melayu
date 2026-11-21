@@ -1053,3 +1053,28 @@ footer .kaki-tajuk { font-weight: 700; font-size: 1.08em; margin-bottom: 2px; }
 .toc-subd .toc-subs a:hover { background: var(--biru-muda); color: var(--biru); }
 @media (max-width: 640px) { .toc-subd { margin-left: 0; } .toc-subd .toc-subs { grid-template-columns: 1fr; } }
 @media print { .toc-subd { display: none; } }
+
+/* ================= Akaun pelajar · ปุ่มบัญชีและหน้าต่างยินยอม (assets/js/akaun.js) ================= */
+.akaun-wrap { position: relative; flex: none; }
+.akaun-btn { cursor: pointer; font-family: var(--th-font); color: #fff; background: transparent; border: 1px solid rgba(226, 184, 87, .55); }
+.akaun-masuk { min-height: 40px; padding: 4px 12px; border-radius: 20px; display: flex; flex-direction: column; align-items: center; justify-content: center; line-height: 1.15; font-size: 14px; font-weight: 600; }
+.akaun-masuk small { font-size: 11px; font-weight: 400; opacity: .8; }
+.akaun-masuk:hover { background: rgba(255,255,255,.1); }
+.akaun-saya { width: 40px; height: 40px; border-radius: 50%; padding: 0; display: grid; place-items: center; background: var(--langit); border-color: var(--langit); }
+.akaun-huruf { color: var(--band-deep); font-weight: 700; font-size: 16px; }
+.akaun-menu { position: absolute; right: 0; top: calc(100% + 8px); z-index: 30; width: 260px; background: var(--surface); color: var(--dakwat); border: 1px solid var(--line); border-radius: var(--radius-m); box-shadow: 0 12px 32px rgba(0,0,0,.18); padding: 14px; display: flex; flex-direction: column; gap: 8px; }
+.akaun-menu[hidden] { display: none; }
+.akaun-nama { margin: 0; font-weight: 600; }
+.akaun-emel { margin: 0; font-size: 13px; color: var(--muted); word-break: break-all; }
+.akaun-pautan { color: var(--biru); padding: 6px 0; }
+.akaun-dialog { max-width: 560px; width: calc(100% - 32px); border: 1px solid var(--line); border-radius: var(--radius-m); background: var(--surface); color: var(--dakwat); padding: 22px; }
+.akaun-dialog::backdrop { background: rgba(30, 8, 14, .55); }
+.akaun-dialog h2 { margin: 0 0 12px; font-family: var(--th-display); color: var(--biru); font-size: 22px; display: flex; flex-direction: column; gap: 2px; }
+.akaun-dialog h2 .bm { font-family: var(--ms-font); font-size: 26px; }
+.akaun-dialog p { line-height: 1.65; }
+.akaun-dlg-btn { display: flex; gap: 10px; justify-content: flex-end; flex-wrap: wrap; margin-top: 8px; }
+.akaun-dlg-btn .btn { min-height: 44px; }
+@media (max-width: 560px) {
+  .akaun-masuk small { display: none; }
+  .akaun-masuk { padding: 4px 10px; }
+}
