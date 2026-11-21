@@ -1149,3 +1149,7 @@ footer .kaki-tajuk { font-weight: 700; font-size: 1.08em; margin-bottom: 2px; }
 .pf-ralat { color: var(--err); font-weight: 600; min-height: 1.2em; }
 .akaun-profil-btn { background: none; border: 0; text-align: left; font: inherit; cursor: pointer; padding: 6px 0; }
 .akaun-profil-btn small { color: var(--muted); }
+
+/* Baiki paparan · ปรับการแสดงผล: ตารางหน้าอาจารย์/คะแนนใช้ความกว้างเต็ม และซ่อนชื่อวิชาที่แถบบนเมื่อเมนูแน่น */
+.guru .tbl-wrap, .skor-saya .tbl-wrap { max-width: 100%; }
+@media (min-width: 961px) and (max-width: 1480px) { .brand-text { display: none; } }
