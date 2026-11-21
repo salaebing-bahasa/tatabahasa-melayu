@@ -1239,3 +1239,25 @@ footer .kaki-tajuk { font-weight: 700; font-size: 1.08em; margin-bottom: 2px; }
   .sj-halaman, .sj-halaman .wrap { padding: 0 !important; margin: 0 !important; max-width: none !important; }
   .sj-kertas { width: 297mm; height: 210mm; max-width: none; aspect-ratio: auto; margin: 0; box-shadow: none; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
 }
+
+/* ================= Papan peringkat · ตารางอันดับ ================= */
+.pk-kad-saya { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 14px; background: var(--surface); border: 1px solid var(--line); border-top: 4px solid var(--emas); border-radius: var(--radius-m); padding: 14px 18px; margin-bottom: 16px; }
+.pk-gelaran { margin: 4px 0; font-size: 20px; font-weight: 700; color: var(--biru); }
+.pk-sertai { background: var(--surface); border: 1px solid var(--line); border-top: 4px solid var(--emas); border-radius: var(--radius-m); padding: 16px 18px; margin-bottom: 16px; }
+.pk-sertai .kj-h2 { margin-top: 0; }
+.pk-sertai .hadir-medan { align-items: end; }
+.pk-senarai { list-style: none; padding: 0; margin: 10px 0; display: flex; flex-direction: column; gap: 8px; }
+.pk-baris { display: grid; grid-template-columns: 48px 1fr auto auto auto; gap: 12px; align-items: center; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius-s); padding: 10px 14px; }
+.pk-saya { border-color: var(--emas); box-shadow: inset 4px 0 0 var(--emas); }
+.pk-ked { font-size: 22px; font-weight: 700; text-align: center; color: var(--biru); }
+.pk-nama small { color: var(--muted); }
+.pk-statistik { font-size: 14px; color: var(--muted); }
+.pk-mata { font-size: 22px; font-weight: 700; color: var(--biru); white-space: nowrap; }
+.pk-mata small { font-size: 13px; color: var(--muted); font-weight: 400; }
+.pk-jarak { text-align: center; margin: 0; color: var(--muted); }
+@media (max-width: 560px) { .pk-baris { grid-template-columns: 40px 1fr auto; } .pk-statistik { display: none; } }
+/* Medan borang ringkas (buku kata, papan peringkat) · ช่องกรอกฟอร์ม */
+.hadir-medan { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; margin-bottom: 14px; }
+.hadir-medan label { display: flex; flex-direction: column; gap: 4px; font-weight: 600; font-size: 15px; }
+.hadir-medan label.guru-cek { flex-direction: row; align-items: center; font-weight: 400; }
+.hadir-medan input:not([type=checkbox]), .hadir-medan select { min-height: 44px; padding: 0 10px; border: 1px solid var(--line); border-radius: var(--radius-s); background: var(--kertas); color: var(--dakwat); font: 400 16px var(--th-font); }

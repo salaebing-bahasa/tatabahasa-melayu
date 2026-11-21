@@ -58,6 +58,20 @@ service cloud.firestore {
       }
     }
 
+    // ตารางอันดับ: เข้าร่วมโดยสมัครใจ ใช้ชื่อเล่น ทุกคนที่ล็อกอินอ่านได้ เจ้าของแก้ไขของตัวเอง อาจารย์ลบได้ (กรณีชื่อเล่นไม่เหมาะสม)
+    match /peringkat/{uid} {
+      allow read: if signedIn();
+      allow create, update: if isOwner(uid)
+        && request.resource.data.keys().hasOnly(['gelaran', 'kumpulan', 'mata', 'bab', 'betul', 'kemaskini'])
+        && request.resource.data.gelaran is string && request.resource.data.gelaran.size() >= 2 && request.resource.data.gelaran.size() <= 24
+        && request.resource.data.kumpulan is string && request.resource.data.kumpulan.size() <= 8
+        && request.resource.data.mata is int && request.resource.data.mata >= 0 && request.resource.data.mata <= 6000
+        && request.resource.data.bab is int && request.resource.data.bab >= 0 && request.resource.data.bab <= 13
+        && request.resource.data.betul is int && request.resource.data.betul >= 0 && request.resource.data.betul <= 2000
+        && request.resource.data.kemaskini == request.time;
+      allow delete: if isOwner(uid) || isGuru();
+    }
+
     // ทุกอย่างนอกเหนือจากนี้ปิดไว้
     match /{document=**} {
       allow read, write: if false;
