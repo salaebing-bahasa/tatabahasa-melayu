@@ -192,9 +192,28 @@
     return `<div class="lat lat-${type}" id="${id}"><p class="lat-h">${B(mdi(nm[0]), mdi(nm[1] || ""))}</p>${arahan ? `<p class="lat-arahan">${mdi(arahan[0])}${arahan[1] ? `<br>${mdi(arahan[1])}` : ""}</p>` : ""}<ol>${li}</ol><div class="ex-foot"><span class="score lat-score" aria-live="polite"></span><button class="btn btn-line" type="button" data-lat-reset="${id}">Cuba semula · ทำใหม่</button></div></div>`;
   }
   /* Tukar blok ```latihan-… kepada penanda, kemudian isi selepas markdown diproses */
+  /* Video YouTube dalam fail bab: satu baris "::video ID | Tajuk Melayu | ชื่อไทย"
+     ฝังวิดีโอ YouTube ในไฟล์บท: เขียนหนึ่งบรรทัด "::video รหัสวิดีโอ | ชื่อภาษามลายู | ชื่อภาษาไทย" */
+  function videoHTML(id, ms, th) {
+    const t = [ms, th].filter(Boolean).join(" · ");
+    return `<figure class="vid"><button type="button" class="vid-main" data-yt="${esc(id)}" aria-label="Main video · เล่นวิดีโอ: ${esc(t)}">
+      <img src="https://i.ytimg.com/vi/${esc(id)}/hqdefault.jpg" alt="" loading="lazy" decoding="async" onerror="this.remove()"><span class="vid-play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z" fill="currentColor"/></svg></span></button>
+      <figcaption><span class="vid-label">Video · วิดีโอ</span> ${ms ? `<span lang="ms">${esc(ms)}</span>` : ""}${th ? `<span class="tr">${esc(th)}</span>` : ""}</figcaption>
+      <p class="vid-cetak">YouTube: https://youtu.be/${esc(id)}</p></figure>`;
+  }
+  document.addEventListener("click", e => {
+    const b = e.target.closest(".vid-main"); if (!b) return;
+    const id = b.dataset.yt; if (!/^[\w-]{11}$/.test(id)) return;
+    const f = document.createElement("iframe");
+    f.src = `https://www.youtube-nocookie.com/embed/${id}?autoplay=1&rel=0&modestbranding=1`;
+    f.title = b.getAttribute("aria-label"); f.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
+    f.allowFullscreen = true; f.loading = "lazy"; f.className = "vid-iframe";
+    b.replaceWith(f);
+  });
   function mdLat(body) {
     const store = [];
-    const src = body.replace(/^```latihan-(\w+)[^\n]*\n([\s\S]*?)^```\s*$/gm, (_, t, b) => { store.push(latihanHTML(t, b)); return `\n<div data-lat-ph="${store.length - 1}"></div>\n`; });
+    const src = body.replace(/^```latihan-(\w+)[^\n]*\n([\s\S]*?)^```\s*$/gm, (_, t, b) => { store.push(latihanHTML(t, b)); return `\n<div data-lat-ph="${store.length - 1}"></div>\n`; })
+      .replace(/^::video\s+([\w-]{11})\s*(?:\|([^|\n]*))?(?:\|([^\n]*))?$/gm, (_, id, ms, th) => { store.push(videoHTML(id, (ms || "").trim(), (th || "").trim())); return `\n<div data-lat-ph="${store.length - 1}"></div>\n`; });
     return md(src).replace(/<div data-lat-ph="(\d+)"><\/div>/g, (_, i) => store[+i]);
   }
   const normJ = t => String(t).toLowerCase().replace(/[.,!?;:]+$/g, "").replace(/\s+/g, " ").trim();

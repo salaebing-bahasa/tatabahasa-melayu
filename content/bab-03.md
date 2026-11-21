@@ -74,6 +74,8 @@ Bagi pelajar Thai, bahagian yang paling mencabar ialah *kata ganti nama diri*. B
 
 ### 3.1 Definisi dan Ciri Kata Nama<br>นิยามและลักษณะของคำนาม
 
+::video OMufDkpsE88 | Pengenalan dan definisi kata nama | บทนำและนิยามของคำนาม
+
 *Kata nama* ialah perkataan yang menamakan orang, haiwan, benda, tempat, konsep atau peristiwa, dan menjadi unsur inti (*inti*) frasa nama (*frasa nama*). Ujian tatabahasa yang berkesan:
 *Kata nama* คือ คำที่บอกชื่อคน สัตว์ สิ่งของ สถานที่ แนวคิด หรือเหตุการณ์ และเป็นคำหลัก (*inti*) ของวลีนาม (*frasa nama*) การทดสอบทางไวยากรณ์ที่ใช้ได้ผล:
 
@@ -87,6 +89,8 @@ Bagi pelajar Thai, bahagian yang paling mencabar ialah *kata ganti nama diri*. B
   ไม่รับคำปฏิเสธ *tidak* โดยตรง (ใช้ *bukan*)
 
 ### 3.2 Kata Nama Am<br>คำนามทั่วไป (*kata nama am*)
+
+::video WQrF-2sjIus | Kata nama am dan kata nama khas | คำนามทั่วไปและคำนามเฉพาะ
 
 Kata nama yang tidak merujuk secara khusus dan ditulis dengan huruf kecil. Kata nama am terbahagi kepada:
 คำนามที่ไม่ได้ชี้เฉพาะ เขียนด้วยอักษรตัวเล็ก แบ่งเป็น
@@ -102,6 +106,8 @@ Nama khusus bagi orang, tempat, institusi atau benda, dan dimulakan dengan huruf
 ชื่อเฉพาะของบุคคล สถานที่ สถาบัน หรือสิ่งของ ขึ้นต้นด้วยอักษรตัวใหญ่ เช่น *Siti, Songkhla, Universiti Thaksin, Masjid Pusat Pattani, Sungai Kolok* ใช้ร่วมกับคำนำหน้านามได้ เช่น *Encik, Puan, Cik, Tuan Haji, Dr.*
 
 ### 3.4 Kata Ganti Nama<br>คำสรรพนาม (*kata ganti nama*)
+
+::video 2zKn080o4ow | Kata ganti nama | คำสรรพนาม
 
 **A. Kata ganti nama tunjuk** (*kata ganti nama tunjuk*): *ini, itu* (umum) dan *sini, situ, sana* (tempat)
 **ก. สรรพนามชี้เฉพาะ**: *ini, itu* (ทั่วไป) และ *sini, situ, sana* (สถานที่)
@@ -123,6 +129,8 @@ Perhatian: *kami* tidak termasuk pendengar, manakala *kita* termasuk pendengar �
 
 ### 3.5 Kata Nama Terbitan<br>คำนามแปลง (*kata nama terbitan*)
 
+::video rLQXOteAd4w | Kata nama terbitan | คำนามแปลง
+
 | Imbuhan<br>ปัจจัย | Makna utama<br>ความหมายหลัก | Contoh<br>ตัวอย่าง |
 |---|---|---|
 | *peN-* | Pelaku / alat<br>ผู้กระทำ / เครื่องมือ | *penulis, pemadam* |
@@ -134,6 +142,8 @@ Perhatian: *kami* tidak termasuk pendengar, manakala *kita* termasuk pendengar �
 | Sisipan (*sisipan*) *-el-, -em-, -er-*<br>อาคม | Kepelbagaian / keserupaan<br>ความหลากหลาย/ความเหมือน | *telunjuk, gerigi* |
 
 ### 3.6 Fungsi Kata Nama dalam Ayat<br>หน้าที่ของคำนามในประโยค
+
+::video Ud-SQLXmZpw | Fungsi kata nama, kesalahan lazim dan kuiz pantas | หน้าที่ของคำนาม ข้อผิดพลาดที่พบบ่อย และแบบทดสอบสั้น
 
 Kata nama dan frasa nama berfungsi sebagai **subjek** (*subjek*), **objek** (*objek*), **predikat** (*predikat*) atau **pelengkap selepas kata sendi nama**.
 คำนามและวลีนามทำหน้าที่เป็น **ประธาน** (*subjek*), **กรรม** (*objek*), **ภาคแสดง** (*predikat*) หรือ **ส่วนเติมเต็มหลังบุพบท**
