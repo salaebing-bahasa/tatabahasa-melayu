@@ -1281,8 +1281,33 @@
     gcAkhir = laluan;
     try { gc.count({ path: laluan, title: document.title }); } catch (e) {}
   };
+  /* ================= WAJIB LOG MASUK · ต้องล็อกอินก่อนใช้งาน ================= */
+  /* Semua halaman (kecuali kulit hadapan) memerlukan log masuk Google · ทุกหน้ายกเว้นหน้าปกต้องล็อกอินด้วย Google */
+  const tMula = Date.now();
+  function statusAkses() {
+    const A = window.TBAkaun;
+    if (!A) return Date.now() - tMula > 10000 ? "gagal" : "memuat";
+    if (A.memuat()) return "memuat";
+    return A.pengguna() ? "ok" : "tiada";
+  }
+  function pintuMasuk(st) {
+    document.title = `Log masuk · เข้าสู่ระบบ | ${C.code}`;
+    const isi = st === "memuat" ? `<p class="pp-muat" aria-live="polite">${B("Memeriksa akaun…", "กำลังตรวจสอบบัญชี…")}</p>`
+      : st === "gagal" ? `<p>${B("Sistem log masuk tidak dapat dimuatkan. Semak sambungan internet dan cuba lagi.", "โหลดระบบล็อกอินไม่ได้ ตรวจสอบอินเทอร์เน็ตแล้วลองใหม่")}</p><button type="button" class="btn btn-solid" onclick="location.reload()">${B("Muat semula", "โหลดหน้าใหม่")}</button>`
+      : `<p>${B("Laman pembelajaran ini untuk pelajar kursus 0113131. Sila log masuk dengan akaun Google untuk membaca pelajaran, membuat latihan dan menyimpan kemajuan anda.", "เว็บบทเรียนนี้สำหรับนิสิตรายวิชา 0113131 กรุณาล็อกอินด้วยบัญชี Google เพื่ออ่านบทเรียน ทำแบบฝึกหัด และบันทึกความก้าวหน้า")}</p>
+        <button type="button" class="btn btn-solid pintu-btn" data-log-masuk><svg width="18" height="18" viewBox="0 0 48 48" aria-hidden="true"><path fill="#FFC107" d="M43.6 20.5H42V20H24v8h11.3C33.7 32.7 29.2 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.3-.1-2.4-.4-3.5z"/><path fill="#FF3D00" d="m6.3 14.7 6.6 4.8C14.7 15.1 19 12 24 12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"/><path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2C29.2 35.1 26.7 36 24 36c-5.2 0-9.6-3.3-11.3-8l-6.5 5C9.5 39.6 16.2 44 24 44z"/><path fill="#1976D2" d="M43.6 20.5H42V20H24v8h11.3c-.8 2.2-2.2 4.2-4.1 5.6l6.2 5.2C37 39.2 44 34 44 24c0-1.3-.1-2.4-.4-3.5z"/></svg>${B("Log masuk dengan Google", "ล็อกอินด้วย Google")}</button>
+        <p class="pintu-nota">${B("Nama, e-mel, kemajuan dan jawapan latihan anda akan disimpan dan boleh dilihat oleh pensyarah kursus.", "ระบบจะบันทึกชื่อ อีเมล ความก้าวหน้า และคำตอบแบบฝึกหัด ซึ่งอาจารย์ผู้สอนดูได้")}</p>`;
+    app.innerHTML = `<section class="section pintu"><div class="wrap"><div class="pintu-kad">
+      <svg class="pintu-logo" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#7A1F2B"/><rect x="2.5" y="2.5" width="27" height="27" rx="5" fill="none" stroke="#E2B857" stroke-opacity=".55"/><path d="M16 5l3.6 7.4L27 16l-7.4 3.6L16 27l-3.6-7.4L5 16l7.4-3.6z" fill="#E2B857"/><circle cx="16" cy="16" r="2.6" fill="#7A1F2B"/></svg>
+      <h1>${B("Tatabahasa Bahasa Melayu", "ไวยากรณ์ภาษามลายู")}</h1>${isi}</div></div></section>`;
+    ikatLogMasuk(app);
+    if (st === "memuat") setTimeout(() => { if ($(".pintu") && statusAkses() !== "memuat") route(); }, 10500);
+  }
+
   function route() {
     if ("speechSynthesis" in window) speechSynthesis.cancel();
+    const akses = statusAkses();
+    if (akses !== "ok") { setNav(""); pageNav("pintu"); pintuMasuk(akses); document.documentElement.classList.remove("di-bab"); laluanPertama = false; return; }
     const p = location.hash.replace(/^#\/?/, "").split("/");
     const n = parseInt(p[1], 10);
     pageNav(!p[0] ? "home" : p[0] === "bab" ? "bab" + n : p[0]);
@@ -1311,7 +1336,7 @@
   }
   window.addEventListener("hashchange", route);
   /* Akaun: lukis semula selepas data awan digabungkan · วาดหน้าใหม่หลังรวมข้อมูลจากบัญชี */
-  window.addEventListener("tb:segar", () => { if (!/^#\/bab\//.test(location.hash)) route(); });
+  window.addEventListener("tb:segar", () => { if ($(".pintu") || statusAkses() !== "ok" || !/^#\/bab\//.test(location.hash)) route(); });
 
   /* ---------- chrome ---------- */
   $(".menu-btn").addEventListener("click", e => { const n = $(".mainnav"); const o = n.classList.toggle("open"); e.currentTarget.setAttribute("aria-expanded", o); });

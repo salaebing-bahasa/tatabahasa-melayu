@@ -27,7 +27,7 @@ const firebaseConfig = {
 const KEY = "tb0113131";
 /* E-mel pensyarah (mesti sama dengan isGuru() dalam firestore.rules) · อีเมลอาจารย์ ต้องตรงกับใน firestore.rules */
 const GURU = ["salaebing@gmail.com", "smuhammad@tsu.ac.th"];
-const VERSI_SETUJU = 1; // naikkan jika teks persetujuan berubah · เพิ่มเลขเมื่อแก้ข้อความแจ้งเรื่องข้อมูล
+const VERSI_SETUJU = 2; // v2: laman wajib log masuk · เว็บต้องล็อกอินก่อนใช้ // naikkan jika teks persetujuan berubah · เพิ่มเลขเมื่อแก้ข้อความแจ้งเรื่องข้อมูล
 const fb = initializeApp(firebaseConfig);
 const auth = getAuth(fb);
 const db = getFirestore(fb);
@@ -153,7 +153,7 @@ function mintaSetuju() {
     d.innerHTML = `<h2 id="akaun-dlg-h"><span class="bm" lang="ms">Makluman penggunaan data</span><span class="tr">การใช้ข้อมูลของผู้เรียน</span></h2>
       <p class="bm" lang="ms">Apabila log masuk, laman ini menyimpan nama, alamat e-mel, kemajuan, skor dan jawapan latihan anda bagi kursus 0113131. Data ini boleh dilihat oleh pensyarah kursus dan digunakan untuk merancang pengajaran serta menambah baik pembelajaran. Data tidak dikongsi dengan pihak lain dan bukan rekod markah rasmi.</p>
       <p class="tr">เมื่อล็อกอิน เว็บไซต์จะบันทึกชื่อ อีเมล ความก้าวหน้า คะแนน และคำตอบแบบฝึกหัดของคุณในรายวิชา 0113131 อาจารย์ผู้สอนดูข้อมูลนี้ได้ และใช้เพื่อวางแผนการสอนและพัฒนาการเรียนรู้ ข้อมูลไม่เปิดเผยแก่บุคคลอื่น และไม่ใช่คะแนนอย่างเป็นทางการ</p>
-      <p class="tr">ถ้าไม่ต้องการ กด "ไม่ยอมรับ" แล้วยังอ่านบทเรียนและทำแบบฝึกได้ตามปกติโดยไม่ต้องล็อกอิน ข้อมูลจะเก็บไว้ในเครื่องนี้เท่านั้น สอบถามหรือขอลบข้อมูลได้ที่ <a href="mailto:smuhammad@tsu.ac.th">smuhammad@tsu.ac.th</a></p>
+      <p class="tr">เว็บไซต์นี้ต้องล็อกอินก่อนใช้งาน ถ้ากด "ไม่ยอมรับ" จะใช้เว็บไม่ได้ ติดต่ออาจารย์เพื่อขอเอกสารบทเรียนในรูปแบบอื่น สอบถามหรือขอลบข้อมูลได้ที่ <a href="mailto:smuhammad@tsu.ac.th">smuhammad@tsu.ac.th</a></p>
       <div class="akaun-dlg-btn"><button type="button" class="btn btn-line" value="tidak"><span lang="ms">Tidak setuju</span> · ไม่ยอมรับ</button><button type="button" class="btn btn-solid" value="ya"><span lang="ms">Setuju</span> · ยอมรับ</button></div>`;
     document.body.appendChild(d);
     const tutup = v => { d.close(); d.remove(); resolve(v); };
@@ -217,7 +217,7 @@ async function selepasMasuk(u) {
 
   if ((awan.setuju && awan.setuju.versi) !== VERSI_SETUJU) {
     const ok = await mintaSetuju();
-    if (!ok) { await signOut(auth); toast("Tidak log masuk. Kemajuan disimpan pada peranti ini sahaja · ไม่ได้ล็อกอิน บันทึกเฉพาะในเครื่องนี้"); return; }
+    if (!ok) { await signOut(auth); toast("Tidak log masuk · ไม่ได้ล็อกอิน"); return; }
   }
   const lokal = bacaLokal();
   const g = gabung(kemajuanSahaja(awan), kemajuanSahaja(lokal));
