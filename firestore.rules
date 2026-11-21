@@ -9,6 +9,15 @@ service cloud.firestore {
 
     function signedIn() { return request.auth != null; }
     function isOwner(uid) { return signedIn() && request.auth.uid == uid; }
+    // ข้อมูลนิสิต: รหัส (5–15 ตัว) กลุ่มเรียน และชื่อ-สกุล
+    function profilSah(p) {
+      return p is map
+        && p.keys().hasOnly(['no', 'kumpulan', 'namaPenuh', 'masa'])
+        && p.no is string && p.no.matches('^[0-9A-Za-z-]{5,15}$')
+        && p.kumpulan in ['S101', 'S102', 'S103', 'S104']
+        && p.namaPenuh is string && p.namaPenuh.size() > 0 && p.namaPenuh.size() <= 120
+        && p.masa is timestamp;
+    }
     function isGuru() {
       return signedIn()
         && request.auth.token.email_verified == true
@@ -18,8 +27,9 @@ service cloud.firestore {
     match /pelajar/{uid} {
       allow read: if isOwner(uid) || isGuru();
       allow create, update: if isOwner(uid)
-        && request.resource.data.keys().hasOnly(['nama', 'emel', 'setuju', 'done', 'skor', 'akhir', 'dicipta', 'kemaskini'])
-        && request.resource.data.emel == request.auth.token.email;
+        && request.resource.data.keys().hasOnly(['nama', 'emel', 'setuju', 'done', 'skor', 'akhir', 'dicipta', 'kemaskini', 'profil'])
+        && request.resource.data.emel == request.auth.token.email
+        && (!('profil' in request.resource.data) || profilSah(request.resource.data.profil));
       allow delete: if false;
 
       match /jawapan/{id} {
