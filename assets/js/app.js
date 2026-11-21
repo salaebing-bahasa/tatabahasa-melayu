@@ -401,7 +401,7 @@
           <p class="tr hero-tr2">เอกสารประกอบการสอนออนไลน์ ${C.term} 13 บท ตั้งแต่หน่วยคำถึงการแปลงประโยค พร้อมกรณีศึกษา แบบทดสอบ และเครื่องมือฝึก</p>
           <div class="btn-row">
             ${(() => { const h = sambungHref(), a = load().akhir; return h ? `<a class="btn btn-hero btn-dw" href="${h}">${B("Sambung Belajar · Bab " + a.n, "เรียนต่อ บทที่ " + a.n)}</a>` : `<a class="btn btn-hero btn-dw" href="${babLink(next.no)}">${doneCount ? B("Mula Bab " + next.no, "เริ่มบทที่ " + next.no) : B("Mula Bab 1", "เริ่มบทที่ 1")}</a>`; })()}
-            <a class="btn btn-ghost btn-dw" href="#/kemajuan">${B(`Kemajuan ${Math.round(doneCount / CH.length * 100)}%`, `ความก้าวหน้า ${Math.round(doneCount / CH.length * 100)}%`)}</a>
+            <a class="btn btn-ghost btn-dw" href="#/papan">${B(`Kemajuan ${Math.round(doneCount / CH.length * 100)}%`, `ความก้าวหน้า ${Math.round(doneCount / CH.length * 100)}%`)}</a>
             <a class="btn btn-ghost btn-dw" href="#/kandungan">${B("Kandungan", "สารบัญ")}</a>
           </div>
         </div>
@@ -491,6 +491,7 @@
   window.addEventListener("afterprint", () => $$("details.hint").forEach(d => { d.open = d.dataset.wasOpen === "1"; }));
   function lesson(n, sub) {
     const c = CH.find(x => x.no === n); if (!c) return notFound();
+    latN = 0; /* id latihan stabil bagi setiap halaman (lat1, lat2…) · ให้รหัสแบบฝึกคงที่ทุกครั้งที่เปิดหน้า */
     setNav("home"); document.title = `Bab ${c.no} ${c.ms} · บทที่ ${c.no} | ${C.code}`;
     const i = CH.indexOf(c), prev = CH[i - 1], next = CH[i + 1];
     app.innerHTML = `
@@ -561,7 +562,7 @@
 
   /* ================= KEMAJUAN · ความก้าวหน้า ================= */
   function kemajuan() {
-    setNav("kemajuan"); document.title = `Kemajuan Saya · ความก้าวหน้า | ${C.code}`;
+    setNav("papan"); document.title = `Kemajuan Saya · ความก้าวหน้า | ${C.code}`;
     const st = load(), skor = st.skor || {}, akhir = st.akhir;
     const done = CH.filter(c => isDone(c.no)).length, pc = Math.round(done / CH.length * 100);
     const sk = CH.map(c => skor[c.no]).filter(Boolean);
@@ -605,6 +606,123 @@
     $("#kj-batal").onclick = () => { dlg.close ? dlg.close() : dlg.removeAttribute("open"); $("#kj-padam").focus(); };
     $("#kj-ya").onclick = () => { resetKemajuan(); dlg.close ? dlg.close() : dlg.removeAttribute("open"); kemajuan(); toast(T("Data kemajuan telah dipadam", "ล้างข้อมูลความก้าวหน้าแล้ว")); };
     window.scrollTo(0, 0);
+  }
+
+
+  /* ================= PAPAN PEMUKA & SKOR SAYA · แดชบอร์ดและคะแนนของฉัน ================= */
+  const LULUS = 0.6; /* had lulus setiap bab 60% · เกณฑ์ผ่านรายบท */
+  const JENIS_NAMA = { ...LAT_NAMA, kuiz: ["Kuiz Penilaian", "แบบทดสอบท้ายบท"] };
+  const akaunAda = () => !!window.TBAkaun;
+  const namaPengguna = () => { try { const u = window.TBAkaun && window.TBAkaun.pengguna(); return u ? (u.displayName || u.email || "") : ""; } catch (e) { return ""; } };
+  function statusBab(c, st) {
+    const k = (st.skor || {})[c.no], d = (st.done || []).includes(c.no), lulus = !!k && k.best / k.all >= LULUS;
+    const pc = (d ? 50 : 0) + (lulus ? 50 : k ? 25 : 0);
+    const kod = lulus && d ? "lulus" : k && !lulus ? "ulang" : d || k || (st.akhir && st.akhir.n === c.no) ? "sedang" : "belum";
+    const label = { lulus: B("Lulus", "ผ่าน"), ulang: B("Perlu ulang kaji", "ควรทบทวน"), sedang: B("Sedang belajar", "กำลังเรียน"), belum: B("Belum mula", "ยังไม่เริ่ม") }[kod];
+    return { k, d, lulus, pc, kod, label };
+  }
+  function ringkasJawapan(js) {
+    const perBab = {}, perJenis = {}, terkini = new Map();
+    js.forEach(j => {
+      if (j.bab) { const b = perBab[j.bab] || (perBab[j.bab] = { n: 0, ok: 0 }); b.n++; if (j.betul) b.ok++; }
+      const t = perJenis[j.jenis || "lain"] || (perJenis[j.jenis || "lain"] = { n: 0, ok: 0 }); t.n++; if (j.betul) t.ok++;
+      const kunci = `${j.bab}|${j.jenis}|${j.soalan}`; if (!terkini.has(kunci)) terkini.set(kunci, j); /* js disusun terbaru dahulu · เรียงใหม่สุดก่อน */
+    });
+    const salah = [...terkini.values()].filter(j => !j.betul);
+    return { n: js.length, ok: js.filter(j => j.betul).length, perBab, perJenis, salah };
+  }
+  const pct = (a, b) => b ? Math.round(a / b * 100) : 0;
+  const bar = (v, label) => `<div class="kj-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="${v}" aria-label="${esc(label)} ${v}%"><span style="width:${v}%"></span></div>`;
+  const kotakLogMasuk = () => akaunAda() ? `<div class="note pp-masuk" role="note"><p>${B("Log masuk untuk menyimpan kemajuan dalam akaun, melihat sejarah jawapan latihan dan menyambung pembelajaran pada peranti lain.", "ล็อกอินเพื่อเก็บความก้าวหน้าในบัญชี ดูประวัติคำตอบแบบฝึกหัด และเรียนต่อบนเครื่องอื่นได้")}</p><button type="button" class="btn btn-solid" data-log-masuk>${B("Log masuk dengan Google", "ล็อกอินด้วย Google")}</button></div>` : "";
+  function ikatLogMasuk(root) { $$("[data-log-masuk]", root).forEach(b => b.onclick = () => window.TBAkaun && window.TBAkaun.masuk()); }
+  async function ambilJawapan() {
+    try { return window.TBAkaun && window.TBAkaun.pengguna() ? await window.TBAkaun.jawapanSaya() : null; }
+    catch (e) { console.error(e); return undefined; }
+  }
+
+  function papan() {
+    setNav("papan"); document.title = `Papan Pemuka · แดชบอร์ด | ${C.code}`;
+    const st = load(), nama = namaPengguna(), rows = CH.map(c => ({ c, s: statusBab(c, st) }));
+    const done = rows.filter(r => r.s.d).length, lulus = rows.filter(r => r.s.lulus).length;
+    const keseluruhan = Math.round(rows.reduce((a, r) => a + r.s.pc, 0) / CH.length);
+    const sk = rows.filter(r => r.s.k), purata = sk.length ? Math.round(sk.reduce((a, r) => a + r.s.k.best / r.s.k.all, 0) / sk.length * 100) : null;
+    const h = sambungHref(), ca = st.akhir && CH.find(c => c.no === st.akhir.n);
+    const kad = r => `<a class="pp-bab pp-${r.s.kod}" href="${babLink(r.c.no)}">
+        <span class="pp-no">${r.c.no}</span><span class="pp-tajuk"><span lang="ms">${r.c.ms}</span><small>${r.c.th}</small></span>
+        <span class="pp-status">${r.s.label}</span>${bar(r.s.pc, `Bab ${r.c.no}`)}<span class="pp-pc">${r.s.pc}%</span></a>`;
+    const kumpulan = (part, ms, th) => `<h3 class="pp-h3">${B(ms, th)}</h3><div class="pp-grid">${rows.filter(r => r.c.part === part).map(kad).join("")}</div>`;
+    app.innerHTML = `<section class="section"><div class="wrap papan">
+      <div class="section-head pp-kepala"><h1>${B("Papan Pemuka", "แดชบอร์ด")}</h1>
+        <p>${nama ? B(`Selamat datang, ${esc(nama)}`, `ยินดีต้อนรับ ${esc(nama)}`) : B("Ringkasan pembelajaran anda bagi kursus ini", "สรุปการเรียนของคุณในรายวิชานี้")}</p></div>
+      ${nama ? "" : kotakLogMasuk()}
+      <div class="kj-stat">
+        <div class="kj-kad"><p class="kj-label">${B("Kemajuan keseluruhan", "ความก้าวหน้ารวม")}</p><p class="kj-nilai">${keseluruhan}<small>%</small></p>${bar(keseluruhan, "Kemajuan keseluruhan · ความก้าวหน้ารวม")}</div>
+        <div class="kj-kad"><p class="kj-label">${B("Bab selesai", "บทที่เรียนจบ")}</p><p class="kj-nilai">${done}<small> / ${CH.length}</small></p></div>
+        <div class="kj-kad"><p class="kj-label">${B("Bab lulus (≥ 60%)", "บทที่ผ่าน (≥ 60%)")}</p><p class="kj-nilai">${lulus}<small> / ${CH.length}</small></p></div>
+        <div class="kj-kad"><p class="kj-label">${B("Purata skor kuiz terbaik", "ค่าเฉลี่ยคะแนนสูงสุด")}</p><p class="kj-nilai">${purata === null ? "—" : purata + "<small>%</small>"}</p></div>
+      </div>
+      <div class="kj-sambung">
+        ${h ? `<a class="btn btn-solid btn-dw" href="${h}">${B("Sambung Belajar", "เรียนต่อจากครั้งล่าสุด")}</a><p>${B(`Terakhir: Bab ${ca.no} · ${ca.ms} · ${tarikh(st.akhir.t)}`, `ล่าสุด: บทที่ ${ca.no} ${ca.th}`)}</p>`
+          : `<a class="btn btn-solid btn-dw" href="${babLink(1)}">${B("Mula Bab 1", "เริ่มบทที่ 1")}</a>`}
+        <a class="btn btn-line" href="#/skor">${B("Skor Saya", "คะแนนของฉัน")}</a>
+        <a class="pp-pautan" href="#/kemajuan">${B("Jadual kemajuan dan padam data", "ตารางความก้าวหน้าและล้างข้อมูล")}</a>
+      </div>
+      <h2 class="kj-h2">${B("Kemajuan mengikut bab", "ความก้าวหน้ารายบท")}</h2>
+      ${kumpulan("morfologi", "Morfologi · Bab 1–7", "ภาควจีวิภาค")}
+      ${kumpulan("sintaksis", "Sintaksis · Bab 8–13", "ภาควากยสัมพันธ์")}
+      <p class="kj-cara">${B("Setiap bab: 50% apabila ditandakan selesai, dan 50% apabila skor terbaik Kuiz Penilaian mencapai 60% (25% jika kuiz dijawab tetapi belum mencapai 60%).", "แต่ละบท: ได้ 50% เมื่อกดทำเครื่องหมายว่าเรียนจบ และอีก 50% เมื่อคะแนนสูงสุดของแบบทดสอบท้ายบทถึง 60% (ได้ 25% ถ้าทำแบบทดสอบแล้วแต่ยังไม่ถึง 60%)")}</p>
+      ${nama ? `<h2 class="kj-h2">${B("Aktiviti terkini", "กิจกรรมล่าสุด")}</h2><div id="pp-aktiviti" class="pp-aktiviti" aria-live="polite"><p class="pp-muat">${B("Memuatkan…", "กำลังโหลด…")}</p></div>` : ""}
+    </div></section>`;
+    ikatLogMasuk(app); window.scrollTo(0, 0);
+    if (!nama) return;
+    ambilJawapan().then(js => {
+      const el = $("#pp-aktiviti"); if (!el) return;
+      if (!js) { el.innerHTML = `<p>${B("Tidak dapat memuatkan aktiviti.", "โหลดกิจกรรมไม่ได้")}</p>`; return; }
+      if (!js.length) { el.innerHTML = `<p>${B("Belum ada jawapan latihan. Mulakan dengan latihan dalam mana-mana bab.", "ยังไม่มีคำตอบแบบฝึกหัด เริ่มทำแบบฝึกหัดในบทใดก็ได้")}</p>`; return; }
+      const r = ringkasJawapan(js);
+      el.innerHTML = `<p class="pp-ringkas">${B(`${r.n} jawapan latihan · ${pct(r.ok, r.n)}% betul`, `ตอบแบบฝึกหัด ${r.n} ข้อ ถูก ${pct(r.ok, r.n)}%`)}</p>
+        <ul class="pp-senarai">${js.slice(0, 6).map(j => `<li class="${j.betul ? "pp-betul" : "pp-salah"}"><span class="pp-ikon" aria-hidden="true">${j.betul ? "✓" : "✗"}</span>
+          <span><b>${j.bab ? `Bab ${j.bab}` : "Kuiz"}</b> · ${esc((JENIS_NAMA[j.jenis] || [j.jenis])[0])}<br><span lang="ms">${esc(j.soalan.slice(0, 110))}${j.soalan.length > 110 ? "…" : ""}</span></span>
+          <span class="pp-masa">${tarikh(j.masa)}</span><span class="sr-only">${j.betul ? "Betul · ถูก" : "Salah · ผิด"}</span></li>`).join("")}</ul>`;
+    });
+  }
+
+  function skorSaya() {
+    setNav("papan"); document.title = `Skor Saya · คะแนนของฉัน | ${C.code}`;
+    const st = load(), nama = namaPengguna(), rows = CH.map(c => ({ c, s: statusBab(c, st) }));
+    app.innerHTML = `<section class="section"><div class="wrap skor-saya">
+      <div class="section-head"><h1>${B("Skor Saya", "คะแนนของฉัน")}</h1><p>${B("Had lulus setiap bab: 60%", "เกณฑ์ผ่านแต่ละบท: 60%")}</p></div>
+      ${nama ? "" : kotakLogMasuk()}
+      <h2 class="kj-h2">${B("Kuiz Penilaian mengikut bab", "แบบทดสอบท้ายบทรายบท")}</h2>
+      <div class="tbl-wrap"><table class="kj-jadual"><thead><tr>
+        <th scope="col">${B("Bab", "บท")}</th><th scope="col">${B("Tajuk", "ชื่อบท")}</th><th scope="col">${B("Skor terakhir", "คะแนนล่าสุด")}</th>
+        <th scope="col">${B("Skor terbaik", "คะแนนสูงสุด")}</th><th scope="col">${B("Cubaan", "จำนวนครั้ง")}</th><th scope="col">${B("Keputusan", "ผล")}</th></tr></thead>
+        <tbody>${rows.map(({ c, s }) => `<tr><td>${c.no}</td><td><a href="${babLink(c.no)}"><span lang="ms">${c.ms}</span></a><br><span class="tr-kecil">${c.th}</span></td>
+          <td>${s.k ? `${s.k.ok}/${s.k.all} <small>(${pct(s.k.ok, s.k.all)}%)</small>` : "—"}</td>
+          <td>${s.k ? `${s.k.best}/${s.k.all} <small>(${pct(s.k.best, s.k.all)}%)</small>` : "—"}</td><td>${s.k ? s.k.cuba : "—"}</td>
+          <td class="${s.lulus ? "kj-ok" : s.k ? "kj-err" : ""}">${s.k ? (s.lulus ? B("✓ Lulus", "ผ่าน") : B("Belum lulus", "ยังไม่ผ่าน")) : "—"}</td></tr>`).join("")}</tbody></table></div>
+      ${nama ? `<div id="sk-latihan" aria-live="polite"><p class="pp-muat">${B("Memuatkan jawapan latihan…", "กำลังโหลดคำตอบแบบฝึกหัด…")}</p></div>` : ""}
+    </div></section>`;
+    labelJadual(app); ikatLogMasuk(app); window.scrollTo(0, 0);
+    if (!nama) return;
+    ambilJawapan().then(js => {
+      const el = $("#sk-latihan"); if (!el) return;
+      if (!js) { el.innerHTML = `<p>${B("Tidak dapat memuatkan jawapan.", "โหลดคำตอบไม่ได้")}</p>`; return; }
+      const r = ringkasJawapan(js);
+      const jBab = CH.filter(c => r.perBab[c.no]).map(c => { const b = r.perBab[c.no], v = pct(b.ok, b.n); return `<tr><td>${c.no}</td><td lang="ms">${c.ms}</td><td>${b.n}</td><td>${b.ok}</td><td><div class="sk-sel">${bar(v, `Bab ${c.no}`)}<span>${v}%</span></div></td></tr>`; }).join("");
+      const jJenis = Object.entries(r.perJenis).sort((a, b) => b[1].n - a[1].n).map(([k, b]) => { const v = pct(b.ok, b.n), nm = JENIS_NAMA[k] || [k, k]; return `<tr><td>${B(nm[0], nm[1])}</td><td>${b.n}</td><td>${b.ok}</td><td><div class="sk-sel">${bar(v, nm[0])}<span>${v}%</span></div></td></tr>`; }).join("");
+      const th = (...h) => `<thead><tr>${h.map(x => `<th scope="col">${x}</th>`).join("")}</tr></thead>`;
+      el.innerHTML = `<h2 class="kj-h2">${B("Latihan mengikut bab", "แบบฝึกหัดรายบท")}</h2>
+        ${jBab ? `<div class="tbl-wrap"><table class="kj-jadual">${th(B("Bab", "บท"), B("Tajuk", "ชื่อบท"), B("Dijawab", "ตอบแล้ว"), B("Betul", "ถูก"), B("Ketepatan", "ความถูกต้อง"))}<tbody>${jBab}</tbody></table></div>` : `<p>${B("Belum ada jawapan latihan.", "ยังไม่มีคำตอบแบบฝึกหัด")}</p>`}
+        ${jJenis ? `<h2 class="kj-h2">${B("Mengikut jenis soalan", "ตามประเภทคำถาม")}</h2><div class="tbl-wrap"><table class="kj-jadual">${th(B("Jenis", "ประเภท"), B("Dijawab", "ตอบแล้ว"), B("Betul", "ถูก"), B("Ketepatan", "ความถูกต้อง"))}<tbody>${jJenis}</tbody></table></div>` : ""}
+        <h2 class="kj-h2">${B("Soalan untuk diulang kaji", "ข้อที่ควรทบทวน")}</h2>
+        <p class="kj-cara">${B("Soalan yang jawapan terakhir anda masih salah.", "ข้อที่คำตอบล่าสุดของคุณยังไม่ถูก")}</p>
+        ${r.salah.length ? `<ul class="sk-salah">${r.salah.slice(0, 30).map(j => `<li><p class="sk-q" lang="ms">${esc(j.soalan)}</p>
+          <p class="sk-meta">${B(`Jawapan anda: <b>${esc(j.jawapan || "—")}</b>`, `คำตอบของคุณ: ${esc(j.jawapan || "—")}`)}</p>
+          <p class="sk-meta">${j.bab ? `<a href="#${esc(j.laluan || babLink(j.bab).slice(1))}">Bab ${j.bab}</a> · ` : ""}${esc((JENIS_NAMA[j.jenis] || [j.jenis])[0])} · ${tarikh(j.masa)}</p></li>`).join("")}</ul>`
+          : `<p class="kj-ok">${B("Tiada. Semua jawapan terakhir anda betul.", "ไม่มี คำตอบล่าสุดของคุณถูกทั้งหมด")}</p>`}`;
+      labelJadual(el);
+    });
   }
 
   /* ================= QUIZ ================= */
@@ -902,7 +1020,7 @@
       </ul></div>
       ${part("morfologi")}${part("sintaksis")}
       <div class="toc-part"><h2>${B("Lampiran", "ภาคผนวก")}</h2><ul class="toc-list">
-        <li>${row("", '<span class="ms" lang="ms">Kemajuan Saya</span><span class="th">ความก้าวหน้าของฉัน</span>', `${CH.filter(x => isDone(x.no)).length}/${CH.length} bab`, "#/kemajuan")}</li>
+        <li>${row("", '<span class="ms" lang="ms">Papan Saya</span><span class="th">แดชบอร์ด</span>', `${CH.filter(x => isDone(x.no)).length}/${CH.length} bab`, "#/papan")}</li>
         <li>${row("", '<span class="ms" lang="ms">Kuiz Keseluruhan</span><span class="th">แบบทดสอบรวม</span>', "Semua bab", "#/kuiz")}</li>
         <li>${row("", '<span class="ms" lang="ms">Alat Latihan: Pengimbuhan · Ayat Pasif</span><span class="th">เครื่องมือฝึก: เติมปัจจัย · แปลงกรรมวาจก</span>', "Bab 6, 13", "#/alat")}</li>
         <li>${row("", '<span class="ms" lang="ms">Istilah Tatabahasa</span><span class="th">อภิธานศัพท์ไวยากรณ์</span>', window.ISTILAH.length + " istilah", "#/istilah")}</li>
@@ -927,7 +1045,7 @@
      ปกในไม่อยู่ในลำดับปุ่มก่อนหน้า/ถัดไป แต่ยังเปิดได้จากปกนอกและสารบัญ */
   const SEQ = [{ key: "kandungan", href: "#/kandungan", ms: "Kandungan", th: "สารบัญ" }, { key: "home", href: "#/", ms: "Rancangan", th: "แผนการเรียน" }]
     .concat(CH.map(c => ({ key: "bab" + c.no, href: babLink(c.no), ms: "Bab " + c.no, th: "บทที่ " + c.no })))
-    .concat([{ key: "kemajuan", href: "#/kemajuan", ms: "Kemajuan", th: "ความก้าวหน้า" }, { key: "kuiz", href: "#/kuiz", ms: "Kuiz", th: "แบบทดสอบ" }, { key: "alat", href: "#/alat", ms: "Alat Latihan", th: "เครื่องมือฝึก" }, { key: "istilah", href: "#/istilah", ms: "Istilah", th: "อภิธานศัพท์" }, { key: "kursus", href: "#/kursus", ms: "Maklumat Kursus", th: "ข้อมูลรายวิชา" }, { key: "clo", href: "#/clo", ms: "Pemetaan CLO", th: "การเชื่อมโยง CLO" }]);
+    .concat([{ key: "papan", href: "#/papan", ms: "Papan Saya", th: "แดชบอร์ด" }, { key: "skor", href: "#/skor", ms: "Skor Saya", th: "คะแนนของฉัน" }, { key: "kemajuan", href: "#/kemajuan", ms: "Kemajuan", th: "ความก้าวหน้า" }, { key: "kuiz", href: "#/kuiz", ms: "Kuiz", th: "แบบทดสอบ" }, { key: "alat", href: "#/alat", ms: "Alat Latihan", th: "เครื่องมือฝึก" }, { key: "istilah", href: "#/istilah", ms: "Istilah", th: "อภิธานศัพท์" }, { key: "kursus", href: "#/kursus", ms: "Maklumat Kursus", th: "ข้อมูลรายวิชา" }, { key: "clo", href: "#/clo", ms: "Pemetaan CLO", th: "การเชื่อมโยง CLO" }]);
   const pnName = x => `<b class="pn-ms">${x.ms}</b><i class="pn-th">${x.th}</i>`;
   function pageNav(key) {
     const nav = $("#pagenav"); const i = SEQ.findIndex(x => x.key === key);
@@ -1001,6 +1119,8 @@
     else if (p[0] === "kulit-dalam") kulitDalam();
     else if (p[0] === "kandungan") kandungan();
     else if (p[0] === "kemajuan") kemajuan();
+    else if (p[0] === "papan") papan();
+    else if (p[0] === "skor") skorSaya();
     else notFound();
     /* Fokus dipindahkan ke kandungan hanya selepas navigasi, bukan semasa halaman mula dibuka (supaya pautan langkau kekal pertama)
        ย้ายโฟกัสไปเนื้อหาเฉพาะเมื่อเปลี่ยนหน้า ไม่ใช่ตอนเปิดเว็บครั้งแรก */
