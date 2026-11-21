@@ -82,7 +82,7 @@ for (const n of bab) {
   await pg.goto(`${BASE}/index.html#/bab/${n}`);
   await pg.waitForSelector("#bab-body .block", { timeout: 20000 });
   await pg.evaluate(async () => {
-    document.querySelectorAll("details.hint").forEach(d => { d.open = true; });
+    document.querySelectorAll("details.hint, details.cabaran").forEach(d => { d.open = true; });
     await document.fonts.ready;
   });
   await pg.emulateMedia({ media: "print" });
