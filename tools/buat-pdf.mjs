@@ -64,7 +64,7 @@ function fontCss() {
 
 const browser = await chromium.launch(process.env.CHROME_PATH ? { executablePath: process.env.CHROME_PATH } : {});
 const ctx = await browser.newContext({ viewport: { width: 1000, height: 1400 } });
-await ctx.addInitScript(() => { try { localStorage.setItem("tb0113131", JSON.stringify({ cover: "off" })); } catch (e) {} });
+await ctx.addInitScript(() => { window.__BINA_PDF = 1; /* langkau pintu log masuk · ข้ามหน้าล็อกอิน */ try { localStorage.setItem("tb0113131", JSON.stringify({ cover: "off" })); } catch (e) {} });
 if (FONT_DIR) {
   const css = fontCss();
   await ctx.route("https://fonts.googleapis.com/**", r => r.fulfill({ status: 200, contentType: "text/css", body: css }));

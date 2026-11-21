@@ -1510,6 +1510,7 @@
   /* Semua halaman (kecuali kulit hadapan) memerlukan log masuk Google · ทุกหน้ายกเว้นหน้าปกต้องล็อกอินด้วย Google */
   const tMula = Date.now();
   function statusAkses() {
+    if (window.__BINA_PDF) return "ok"; /* skrip tools/buat-pdf.mjs membina PDF tanpa log masuk · สคริปต์สร้าง PDF ไม่ต้องล็อกอิน */
     const A = window.TBAkaun;
     if (!A) return Date.now() - tMula > 10000 ? "gagal" : "memuat";
     if (A.memuat()) return "memuat";
