@@ -40,7 +40,8 @@ let tSimpan = null;
 let memuat = true;       // sedang memeriksa status log masuk · กำลังตรวจสถานะล็อกอิน
 let cacheKelas = null;   // data kelas untuk halaman pensyarah · ข้อมูลทั้งชั้นสำหรับหน้าอาจารย์
 let cacheJawapan = null;
-let profil = null;       // { no, kumpulan, namaPenuh } · รหัสนิสิต กลุ่มเรียน ชื่อ-สกุล // jawapan pengguna semasa (terbaru dahulu) · คำตอบของผู้ใช้ปัจจุบัน เรียงใหม่สุดก่อน
+let profil = null;
+let sijil = null;        // { kod, masa } apabila sijil pertama kali dijana · เมื่อออกใบประกาศครั้งแรก       // { no, kumpulan, namaPenuh } · รหัสนิสิต กลุ่มเรียน ชื่อ-สกุล // jawapan pengguna semasa (terbaru dahulu) · คำตอบของผู้ใช้ปัจจุบัน เรียงใหม่สุดก่อน
 
 const keMs = t => t && t.toMillis ? t.toMillis() : (typeof t === "number" ? t : null);
 const adalahGuru = () => !!(pengguna && pengguna.emailVerified && GURU.includes(String(pengguna.email || "").toLowerCase()));
@@ -58,7 +59,7 @@ async function dataKelas(paksa) {
       p.jawapan = s.docs.map(d => { const x = d.data(); return { ...x, soalan: x.soalan || "", jawapan: x.jawapan || "", masa: keMs(x.masa) || 0 }; });
       const sk = await getDocs(collection(db, "pelajar", p.uid, "kata")).catch(() => null);
       p.kata = sk ? sk.docs.map(kataData) : [];
-      p.kemaskini = keMs(p.kemaskini); p.dicipta = keMs(p.dicipta);
+      p.kemaskini = keMs(p.kemaskini); p.dicipta = keMs(p.dicipta); if (p.sijil) p.sijil = { ...p.sijil, masa: keMs(p.sijil.masa) };
       p.guru = GURU.includes(String(p.emel || "").toLowerCase());
     }));
   }
@@ -231,6 +232,7 @@ async function selepasMasuk(u) {
   try { await setDoc(ref, data, { merge: true }); }
   catch (e) { console.error(e); toast("Tidak dapat menyimpan ke akaun · บันทึกลงบัญชีไม่ได้"); }
   pengguna = u; sedia = true; memuat = false;
+  sijil = awan.sijil ? { kod: awan.sijil.kod, masa: keMs(awan.sijil.masa) } : null;
   profil = awan.profil ? { no: awan.profil.no, kumpulan: awan.profil.kumpulan, namaPenuh: awan.profil.namaPenuh } : null;
   butang(); segar();
   if (!profil && !adalahGuru()) await kemaskiniProfil(false);
@@ -290,6 +292,14 @@ const kata = {
 /* Dipanggil oleh app.js setiap kali kemajuan disimpan · app.js เรียกทุกครั้งที่บันทึกความก้าวหน้า */
 window.TBAkaun = {
   pengguna: () => pengguna,
+  sijil: () => sijil,
+  /* Rekod tarikh sijil sekali sahaja · บันทึกวันที่ได้ใบประกาศครั้งเดียว */
+  async rekodSijil(kod) {
+    if (!pengguna || sijil) return sijil;
+    await setDoc(doc(db, "pelajar", pengguna.uid), { sijil: { kod: String(kod).slice(0, 40), masa: serverTimestamp() } }, { merge: true });
+    sijil = { kod, masa: Date.now() };
+    return sijil;
+  },
   kata,
   memuat: () => memuat,
   profil: () => profil,
@@ -317,7 +327,7 @@ document.addEventListener("visibilitychange", () => { if (document.visibilitySta
 
 getRedirectResult(auth).catch(e => console.error(e));
 onAuthStateChanged(auth, u => {
-  pengguna = null; sedia = false; cacheJawapan = null; cacheKata = null; profil = null; cacheKelas = null; memuat = !!u; butang();
+  pengguna = null; sedia = false; cacheJawapan = null; sijil = null; cacheKata = null; profil = null; cacheKelas = null; memuat = !!u; butang();
   if (u) selepasMasuk(u).finally(() => { if (memuat) { memuat = false; segar(); } });
   else segar();
 });

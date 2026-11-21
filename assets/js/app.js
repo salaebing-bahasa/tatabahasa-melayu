@@ -668,6 +668,8 @@
         <a class="btn btn-line" href="#/kata">${B("Buku Kata", "สมุดคำศัพท์")}</a>
         <a class="pp-pautan" href="#/kemajuan">${B("Jadual kemajuan dan padam data", "ตารางความก้าวหน้าและล้างข้อมูล")}</a>
       </div>
+      ${rows.every(r => r.s.d && r.s.lulus) ? `<div class="note sj-papan" role="note"><p>🎓 ${B("Tahniah! Anda telah lulus semua 13 bab.", "ยินดีด้วย คุณผ่านครบทั้ง 13 บทแล้ว")}</p><a class="btn btn-solid" href="#/sijil">${B("Lihat sijil", "ดูใบประกาศนียบัตร")}</a></div>`
+        : `<p class="kj-cara"><a href="#/sijil">${B(`Sijil: ${rows.filter(r => r.s.d && r.s.lulus).length}/${CH.length} bab lulus`, "ดูเงื่อนไขการรับใบประกาศนียบัตร")}</a></p>`}
       <h2 class="kj-h2">${B("Kemajuan mengikut bab", "ความก้าวหน้ารายบท")}</h2>
       ${kumpulan("morfologi", "Morfologi · Bab 1–7", "ภาควจีวิภาค")}
       ${kumpulan("sintaksis", "Sintaksis · Bab 8–13", "ภาควากยสัมพันธ์")}
@@ -809,6 +811,7 @@
       <div class="kj-stat">
         <div class="kj-kad"><p class="kj-label">${B("Pelajar log masuk", "นิสิตที่ล็อกอินแล้ว")}</p><p class="kj-nilai">${senarai.length}</p></div>
         <div class="kj-kad"><p class="kj-label">${B("Aktif 7 hari lalu", "เข้าใช้ใน 7 วันล่าสุด")}</p><p class="kj-nilai">${aktif7}</p></div>
+        <div class="kj-kad"><p class="kj-label">${B("Layak sijil (13 bab lulus)", "ได้ใบประกาศ (ผ่าน 13 บท)")}</p><p class="kj-nilai">${senarai.filter(i => i.rows.every(r => r.d && r.lulus)).length}</p></div>
         <div class="kj-kad"><p class="kj-label">${B("Purata kemajuan", "ความก้าวหน้าเฉลี่ย")}</p><p class="kj-nilai">${puKemajuan}<small>%</small></p>${bar(puKemajuan, "Purata kemajuan · ความก้าวหน้าเฉลี่ย")}</div>
         <div class="kj-kad"><p class="kj-label">${B("Jawapan latihan", "คำตอบแบบฝึกหัด")}</p><p class="kj-nilai">${jumJ}<small> · ${jumJ ? pct(jumOk, jumJ) + "% betul" : "—"}</small></p></div>
       </div>
@@ -865,8 +868,8 @@
     $$("[data-eksport]", app).forEach(b => b.onclick = () => {
       const jenis = b.dataset.eksport;
       if (jenis === "pelajar") muatTurunCSV(`0113131-pelajar-${hari}.csv`, [
-        ["no_pelajar", "kumpulan", "nama_penuh", "nama_google", "emel", "kemajuan_%", "bab_selesai", "bab_lulus", "purata_kuiz_%", "jumlah_jawapan", "jawapan_betul", "ketepatan_%", "aktif_terakhir", "daftar", ...CH.map(c => `kuiz_bab${c.no}_terbaik_%`), ...CH.map(c => `latihan_bab${c.no}_%`)],
-        ...senarai.map(i => { const rb = ringkasJawapan(i.p.jawapan || []).perBab; return [i.p.profil ? i.p.profil.no : "", i.p.profil ? i.p.profil.kumpulan : "", i.p.profil ? i.p.profil.namaPenuh : "", i.p.nama, i.p.emel, i.kemajuan, i.selesai, i.lulus, i.purata, i.nj, i.ok, i.tepat, tarikhCSV(i.aktif), tarikhCSV(i.p.dicipta),
+        ["no_pelajar", "kumpulan", "nama_penuh", "nama_google", "emel", "kemajuan_%", "bab_selesai", "bab_lulus", "purata_kuiz_%", "jumlah_jawapan", "jawapan_betul", "ketepatan_%", "aktif_terakhir", "daftar", "sijil", ...CH.map(c => `kuiz_bab${c.no}_terbaik_%`), ...CH.map(c => `latihan_bab${c.no}_%`)],
+        ...senarai.map(i => { const rb = ringkasJawapan(i.p.jawapan || []).perBab; return [i.p.profil ? i.p.profil.no : "", i.p.profil ? i.p.profil.kumpulan : "", i.p.profil ? i.p.profil.namaPenuh : "", i.p.nama, i.p.emel, i.kemajuan, i.selesai, i.lulus, i.purata, i.nj, i.ok, i.tepat, tarikhCSV(i.aktif), tarikhCSV(i.p.dicipta), i.rows.every(r => r.d && r.lulus) ? (i.p.sijil ? tarikhCSV(i.p.sijil.masa) : "layak") : "",
           ...i.rows.map(rw => rw.k ? pct(rw.k.best, rw.k.all) : ""), ...CH.map(c => rb[c.no] ? pct(rb[c.no].ok, rb[c.no].n) : "")]; })]);
       if (jenis === "jawapan") muatTurunCSV(`0113131-jawapan-${hari}.csv`, [
         ["no_pelajar", "kumpulan", "nama", "emel", "masa", "bab", "jenis", "latihan", "item", "soalan", "jawapan", "betul", "laluan"],
@@ -1054,6 +1057,66 @@
       });
     };
     lukis(); window.scrollTo(0, 0);
+  }
+
+
+  /* ================= SIJIL · ใบประกาศนียบัตร ================= */
+  /* Syarat: semua 13 bab ditandakan selesai DAN skor terbaik Kuiz Penilaian ≥ 60%
+     เงื่อนไข: ทำเครื่องหมายเรียนจบครบ 13 บท และคะแนนสูงสุดของแบบทดสอบท้ายบททุกบท ≥ 60% */
+  const tarikhPanjang = (t, loc) => new Date(t).toLocaleDateString(loc, { day: "numeric", month: "long", year: "numeric" });
+  function layakSijil(st) {
+    const rows = CH.map(c => ({ c, s: statusBab(c, st) }));
+    const sk = rows.filter(r => r.s.k);
+    return { rows, layak: rows.every(r => r.s.d && r.s.lulus), lulus: rows.filter(r => r.s.d && r.s.lulus).length,
+      purata: sk.length ? Math.round(sk.reduce((a, r) => a + r.s.k.best / r.s.k.all, 0) / sk.length * 100) : 0 };
+  }
+  async function sijilSaya() {
+    setNav("papan"); document.title = `Sijil · ใบประกาศนียบัตร | ${C.code}`;
+    const A = window.TBAkaun, pr = A.profil(), st = load(), L = layakSijil(st);
+    if (!L.layak) {
+      app.innerHTML = `<section class="section"><div class="wrap">
+        <div class="section-head"><h1>${B("Sijil Penyempurnaan Kursus", "ใบประกาศนียบัตร")}</h1><p>${B(`${L.lulus} daripada ${CH.length} bab lulus`, `ผ่านแล้ว ${L.lulus} จาก ${CH.length} บท`)}</p></div>
+        <div class="note" role="note"><p>${B("Sijil akan tersedia apabila semua 13 bab <b>ditandakan selesai</b> dan skor terbaik <b>Kuiz Penilaian</b> setiap bab sekurang-kurangnya <b>60%</b>.", "จะได้รับใบประกาศเมื่อ <b>ทำเครื่องหมายเรียนจบ</b> ครบ 13 บท และคะแนนสูงสุดของ <b>แบบทดสอบท้ายบท</b> ทุกบทอย่างน้อย <b>60%</b>")}</p></div>
+        ${bar(Math.round(L.lulus / CH.length * 100), "Bab lulus · บทที่ผ่าน")}
+        <ul class="sj-semak">${L.rows.map(({ c, s }) => `<li class="${s.d && s.lulus ? "sj-ok" : ""}"><span class="sj-ikon" aria-hidden="true">${s.d && s.lulus ? "✓" : c.no}</span>
+          <a href="${babLink(c.no)}"><span lang="ms">Bab ${c.no} · ${c.ms}</span></a>
+          <span class="sj-perlu">${s.d && s.lulus ? T("Lulus", "ผ่าน") : [!s.d ? T("Tandakan selesai", "กดเรียนจบ") : "", !s.lulus ? (s.k ? T(`Kuiz ${pct(s.k.best, s.k.all)}% (perlu 60%)`, "ยังไม่ถึง 60%") : T("Jawab kuiz", "ทำแบบทดสอบ")) : ""].filter(Boolean).join("<br>")}</span></li>`).join("")}</ul>
+      </div></section>`;
+      window.scrollTo(0, 0); return;
+    }
+    if (!pr) { app.innerHTML = kadMudah(`<p>${B("Sila lengkapkan maklumat pelajar untuk menjana sijil.", "กรุณากรอกข้อมูลนิสิตก่อนออกใบประกาศ")}</p><button type="button" class="btn btn-solid" id="sj-profil">${B("Isi maklumat", "กรอกข้อมูล")}</button>`); $("#sj-profil").onclick = async () => { await A.kemaskiniProfil(); route(); }; return; }
+    const mt = C.term.match(/ที่\s*(\d+)\s*ปีการศึกษา\s*(\d+)/);
+    const kod = `${C.code}-${mt ? `${mt[2]}-${mt[1]}` : "x"}-${pr.no}`;
+    let sj = A.sijil();
+    if (!sj) { try { sj = await A.rekodSijil(kod); } catch (e) { console.error(e); sj = { kod, masa: Date.now() }; } }
+    if (!/^#\/sijil/.test(location.hash)) return;
+    const t = sj.masa || Date.now();
+    app.innerHTML = `<section class="section sj-halaman"><div class="wrap">
+      <div class="sj-alat"><a href="#/papan">← ${B("Papan Saya", "แดชบอร์ด")}</a>
+        <button type="button" class="btn btn-solid" id="sj-cetak">${B("Cetak / Simpan PDF", "พิมพ์ / บันทึกเป็น PDF")}</button></div>
+      <p class="kj-cara sj-petua">${B("Pada tetingkap cetak, pilih “Simpan sebagai PDF”, orientasi Landskap, dan hidupkan “Grafik latar belakang”.", "ในหน้าต่างพิมพ์ เลือก “บันทึกเป็น PDF” แนวนอน และเปิด “กราฟิกพื้นหลัง”")}</p>
+      <div class="sj-kertas" id="sj-kertas">
+        <div class="sj-bingkai">
+          <img class="sj-logo" src="assets/img/logo-fakulti-400.png" alt="Fakulti Kemanusiaan dan Sains Sosial, Universiti Thaksin">
+          <p class="sj-tajuk" lang="ms">Sijil Penyempurnaan Kursus</p>
+          <p class="sj-tajuk-th">เกียรติบัตรการเรียนจบรายวิชา</p>
+          <p class="sj-kecil" lang="ms">Dengan ini diperakui bahawa · ขอมอบเกียรติบัตรฉบับนี้ให้ไว้เพื่อแสดงว่า</p>
+          <p class="sj-nama">${esc(pr.namaPenuh)}</p>
+          <p class="sj-kecil">No. pelajar · รหัสนิสิต ${esc(pr.no)}</p>
+          <p class="sj-isi" lang="ms">telah berjaya menamatkan semua 13 bab pembelajaran dalam talian bagi kursus</p>
+          <p class="sj-kursus"><span lang="ms">${C.code} ${C.ms}</span><span>${C.code} ${C.th}</span></p>
+          <p class="sj-isi">ได้เรียนบทเรียนออนไลน์ครบทั้ง 13 บท และผ่านแบบทดสอบท้ายบททุกบท<br>
+            <span lang="ms">${C.termMs}</span> · ${C.term}<br><span lang="ms">Purata skor kuiz</span> · คะแนนแบบทดสอบเฉลี่ย ${L.purata}%</p>
+          <div class="sj-kaki">
+            <div class="sj-tarikh"><p>${tarikhPanjang(t, "ms-MY")}</p><p>${tarikhPanjang(t, "th-TH")}</p></div>
+            <div class="sj-ttd"><span class="sj-garis"></span><p lang="ms">Penolong Profesor Muhammad Salaebing</p><p>ผศ.มูหำหมัด สาแลบิง</p><p class="sj-jawatan" lang="ms">Pensyarah kursus · อาจารย์ผู้สอน</p></div>
+          </div>
+          <p class="sj-nombor">No. sijil · เลขที่ ${esc(sj.kod || kod)}</p>
+          <p class="sj-nota">${esc(C.facultyMs)}, Universiti Thaksin · ${esc(C.faculty)} มหาวิทยาลัยทักษิณ</p>
+        </div>
+      </div></div></section>`;
+    $("#sj-cetak").onclick = () => window.print();
+    window.scrollTo(0, 0);
   }
 
   /* ================= QUIZ ================= */
@@ -1486,6 +1549,7 @@
     else if (p[0] === "papan") papan();
     else if (p[0] === "skor") skorSaya();
     else if (p[0] === "kata") bukuKata();
+    else if (p[0] === "sijil") sijilSaya();
     else if (p[0] === "guru") guru(p[1] ? decodeURIComponent(p[1]) : null);
     else notFound();
     /* Fokus dipindahkan ke kandungan hanya selepas navigasi, bukan semasa halaman mula dibuka (supaya pautan langkau kekal pertama)

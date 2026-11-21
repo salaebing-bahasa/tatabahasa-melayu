@@ -1202,3 +1202,40 @@ footer .kaki-tajuk { font-weight: 700; font-size: 1.08em; margin-bottom: 2px; }
 .kt-awan li b { color: var(--biru); }
 .kt-awan small { color: var(--muted); }
 .btn-solid .tr, .btn-solid .bm { color: inherit !important; opacity: .88; }
+
+/* ================= Sijil · ใบประกาศนียบัตร ================= */
+.sj-semak { list-style: none; padding: 0; margin: 16px 0; display: flex; flex-direction: column; gap: 8px; }
+.sj-semak li { display: grid; grid-template-columns: 32px 1fr auto; gap: 10px; align-items: center; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius-s); padding: 8px 12px; }
+.sj-ikon { width: 30px; height: 30px; border-radius: 50%; display: grid; place-items: center; background: var(--kertas); border: 1px solid var(--line); font-weight: 700; color: var(--biru); font-size: 14px; }
+.sj-ok .sj-ikon { background: var(--ok); border-color: var(--ok); color: #fff; }
+.sj-perlu { font-size: 14px; color: var(--muted); text-align: right; }
+.sj-ok .sj-perlu { color: var(--ok); font-weight: 600; }
+.sj-papan { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+.sj-papan p { margin: 0; font-weight: 600; }
+.sj-alat { display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; margin-bottom: 6px; }
+.sj-kertas { width: 100%; max-width: 1060px; aspect-ratio: 297 / 210; margin: 10px auto 0; background: #FFFDF8; color: #2B1A1C; padding: 2.2%; box-shadow: 0 14px 40px rgba(58,14,22,.16); container-type: inline-size; }
+.sj-bingkai { height: 100%; border: 3px solid #7A1F2B; outline: 1.5px solid #C9992E; outline-offset: -10px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 2.5% 6%; gap: .55cqw;
+  background: radial-gradient(circle at 50% 45%, rgba(201,153,46,.10), transparent 60%); }
+.sj-bingkai p { margin: 0; line-height: 1.35; }
+.sj-logo { height: 7.5cqw; width: auto; margin-bottom: .6cqw; }
+.sj-tajuk { font-family: "Cormorant Garamond", var(--ms-font), serif; font-size: 4.6cqw; font-weight: 700; color: #7A1F2B; letter-spacing: .02em; }
+.sj-tajuk-th { font-family: var(--th-display); font-size: 2.3cqw; color: #7A1F2B; }
+.sj-kecil { font-size: 1.45cqw; color: #6B5A55; }
+.sj-nama { font-family: var(--th-display); font-size: 4cqw; font-weight: 700; color: #3A0E16; border-bottom: 2px solid #C9992E; padding: 0 4cqw .3cqw; margin: .6cqw 0 .2cqw !important; }
+.sj-isi { font-size: 1.6cqw; }
+.sj-kursus { display: flex; flex-direction: column; font-size: 2.4cqw; font-weight: 700; color: #7A1F2B; margin: .3cqw 0 !important; }
+.sj-kursus span + span { font-size: 1.9cqw; font-weight: 600; }
+.sj-kaki { width: 100%; display: flex; justify-content: space-between; align-items: flex-end; margin-top: 1.6cqw; font-size: 1.45cqw; }
+.sj-tarikh { text-align: left; }
+.sj-ttd { text-align: center; min-width: 30%; }
+.sj-garis { display: block; border-top: 1.5px solid #2B1A1C; margin: 3.2cqw 0 .5cqw; }
+.sj-jawatan { color: #6B5A55; }
+.sj-nombor { font-size: 1.15cqw; color: #6B5A55; margin-top: 1cqw !important; }
+.sj-nota { font-size: 1.05cqw; color: #8A7A75; }
+@media print {
+  @page { size: A4 landscape; margin: 0; }
+  body:has(.sj-halaman) { background: #fff !important; padding: 0 !important; }
+  body:has(.sj-halaman) > *:not(main):not(#app), body:has(.sj-halaman) .topbar, body:has(.sj-halaman) footer, body:has(.sj-halaman) .pagenav, body:has(.sj-halaman) .cengkih-band, .sj-alat, .sj-petua, .kata-pop, #toast { display: none !important; }
+  .sj-halaman, .sj-halaman .wrap { padding: 0 !important; margin: 0 !important; max-width: none !important; }
+  .sj-kertas { width: 297mm; height: 210mm; max-width: none; aspect-ratio: auto; margin: 0; box-shadow: none; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+}
