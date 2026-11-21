@@ -10,7 +10,7 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
 import { getAuth, GoogleAuthProvider, onAuthStateChanged, signInWithPopup, signInWithRedirect, getRedirectResult, signOut }
   from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
-import { getFirestore, doc, getDoc, setDoc, addDoc, getDocs, collection, query, orderBy, limit, serverTimestamp }
+import { getFirestore, doc, getDoc, setDoc, addDoc, getDocs, deleteDoc, collection, query, orderBy, limit, serverTimestamp }
   from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
 
 /* Nilai ini awam (bukan kata laluan); keselamatan data dikawal oleh firestore.rules
@@ -56,6 +56,8 @@ async function dataKelas(paksa) {
     await Promise.all(pelajar.slice(i, i + 8).map(async p => {
       const s = await getDocs(query(collection(db, "pelajar", p.uid, "jawapan"), orderBy("masa", "desc"), limit(3000)));
       p.jawapan = s.docs.map(d => { const x = d.data(); return { ...x, soalan: x.soalan || "", jawapan: x.jawapan || "", masa: keMs(x.masa) || 0 }; });
+      const sk = await getDocs(collection(db, "pelajar", p.uid, "kata")).catch(() => null);
+      p.kata = sk ? sk.docs.map(kataData) : [];
       p.kemaskini = keMs(p.kemaskini); p.dicipta = keMs(p.dicipta);
       p.guru = GURU.includes(String(p.emel || "").toLowerCase());
     }));
@@ -112,6 +114,7 @@ function butang() {
       <p class="akaun-nama">${esc(nama)}</p><p class="akaun-emel">${esc(pengguna.email || "")}</p>
       <a href="#/papan" class="akaun-pautan"><span lang="ms">Papan pemuka</span> · แดชบอร์ด</a>
       <a href="#/skor" class="akaun-pautan"><span lang="ms">Skor saya</span> · คะแนนของฉัน</a>
+      <a href="#/kata" class="akaun-pautan"><span lang="ms">Buku kata saya</span> · สมุดคำศัพท์</a>
       ${adalahGuru() ? "" : `<button type="button" class="akaun-pautan akaun-profil-btn" id="akaun-profil"><span lang="ms">Profil saya</span> · ข้อมูลของฉัน${profil ? ` <small>(${esc(profil.no)} · ${esc(profil.kumpulan)})</small>` : ""}</button>`}
       ${adalahGuru() ? `<a href="#/guru" class="akaun-pautan akaun-guru"><span lang="ms">Halaman pensyarah</span> · หน้าอาจารย์</a>` : ""}
       <button type="button" class="btn btn-line" id="akaun-keluar"><span lang="ms">Log keluar</span> · ออกจากระบบ</button>
@@ -241,9 +244,53 @@ async function simpanSekarang() {
   catch (e) { console.error(e); }
 }
 
+/* ---------- Buku kata · สมุดคำศัพท์ส่วนตัว ----------
+   pelajar/{uid}/kata/{slug}  { kata, makna, nota, ayat, bab, hafal, ulang, masa, kemaskini } */
+let cacheKata = null; // Map slug → rekod
+const slugKata = k => String(k).toLowerCase().normalize("NFKC").trim().replace(/[\s/]+/g, "-").replace(/[^\p{L}\p{N}\-']/gu, "").slice(0, 60) || "kata";
+const kataData = d => { const x = d.data(); return { id: d.id, ...x, masa: keMs(x.masa), kemaskini: keMs(x.kemaskini) }; };
+const potong = (v, n) => String(v || "").slice(0, n);
+const kata = {
+  slug: slugKata,
+  async senarai(paksa) {
+    if (!pengguna) return [];
+    if (!cacheKata || paksa) {
+      const s = await getDocs(collection(db, "pelajar", pengguna.uid, "kata"));
+      cacheKata = new Map(s.docs.map(d => [d.id, kataData(d)]));
+    }
+    return [...cacheKata.values()].sort((a, b) => (b.masa || 0) - (a.masa || 0));
+  },
+  ada: k => !!(cacheKata && cacheKata.has(slugKata(k))),
+  sedia: () => !!cacheKata,
+  async simpan({ kata: k, makna, ayat, bab }) {
+    if (!pengguna) throw new Error("belum log masuk");
+    const id = slugKata(k), lama = cacheKata && cacheKata.get(id);
+    if (lama) return lama;
+    const rek = { kata: potong(k, 60).trim(), makna: potong(makna, 300), nota: "", ayat: potong(ayat, 300), bab: Number.isInteger(bab) ? bab : null, hafal: false, ulang: 0 };
+    await setDoc(doc(db, "pelajar", pengguna.uid, "kata", id), { ...rek, masa: serverTimestamp(), kemaskini: serverTimestamp() });
+    const baru = { id, ...rek, masa: Date.now(), kemaskini: Date.now() };
+    if (cacheKata) cacheKata.set(id, baru);
+    return baru;
+  },
+  async kemaskini(id, o) {
+    const v = {};
+    if ("makna" in o) v.makna = potong(o.makna, 300);
+    if ("nota" in o) v.nota = potong(o.nota, 500);
+    if ("hafal" in o) v.hafal = !!o.hafal;
+    if ("ulang" in o) v.ulang = Math.max(0, Math.min(9999, Number(o.ulang) || 0));
+    await setDoc(doc(db, "pelajar", pengguna.uid, "kata", id), { ...v, kemaskini: serverTimestamp() }, { merge: true });
+    if (cacheKata && cacheKata.has(id)) Object.assign(cacheKata.get(id), v, { kemaskini: Date.now() });
+  },
+  async padam(id) {
+    await deleteDoc(doc(db, "pelajar", pengguna.uid, "kata", id));
+    if (cacheKata) cacheKata.delete(id);
+  }
+};
+
 /* Dipanggil oleh app.js setiap kali kemajuan disimpan · app.js เรียกทุกครั้งที่บันทึกความก้าวหน้า */
 window.TBAkaun = {
   pengguna: () => pengguna,
+  kata,
   memuat: () => memuat,
   profil: () => profil,
   kemaskiniProfil: () => kemaskiniProfil(true),
@@ -270,7 +317,7 @@ document.addEventListener("visibilitychange", () => { if (document.visibilitySta
 
 getRedirectResult(auth).catch(e => console.error(e));
 onAuthStateChanged(auth, u => {
-  pengguna = null; sedia = false; cacheJawapan = null; profil = null; cacheKelas = null; memuat = !!u; butang();
+  pengguna = null; sedia = false; cacheJawapan = null; cacheKata = null; profil = null; cacheKelas = null; memuat = !!u; butang();
   if (u) selepasMasuk(u).finally(() => { if (memuat) { memuat = false; segar(); } });
   else segar();
 });

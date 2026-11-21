@@ -68,7 +68,7 @@
   const sayBtn = (text, label) => `<button class="say" type="button" data-say="${esc(strip(text))}" aria-label="Dengar · ฟังเสียง ${esc(label || strip(text))}">${SPK}</button>`;
   document.addEventListener("click", e => {
     const b = e.target.closest("[data-say]"); if (b) { speak(b.dataset.say); return; }
-    const m = e.target.closest(".ms-say"); if (m) { $$(".ms-say.speaking").forEach(x => x.classList.remove("speaking")); m.classList.add("speaking"); speak(m.textContent, () => m.classList.remove("speaking")); }
+    const m = e.target.closest(".ms-say"); if (m) { $$(".ms-say.speaking").forEach(x => x.classList.remove("speaking")); m.classList.add("speaking"); speak(m.textContent, () => m.classList.remove("speaking")); if (window.TBKataPop) window.TBKataPop(m.textContent, m.getBoundingClientRect(), m); }
   });
   document.addEventListener("keydown", e => { const m = e.target.closest && e.target.closest(".ms-say"); if (m && (e.key === "Enter" || e.key === " ")) { e.preventDefault(); m.click(); } });
 
@@ -665,6 +665,7 @@
         ${h ? `<a class="btn btn-solid btn-dw" href="${h}">${B("Sambung Belajar", "เรียนต่อจากครั้งล่าสุด")}</a><p>${B(`Terakhir: Bab ${ca.no} · ${ca.ms} · ${tarikh(st.akhir.t)}`, `ล่าสุด: บทที่ ${ca.no} ${ca.th}`)}</p>`
           : `<a class="btn btn-solid btn-dw" href="${babLink(1)}">${B("Mula Bab 1", "เริ่มบทที่ 1")}</a>`}
         <a class="btn btn-line" href="#/skor">${B("Skor Saya", "คะแนนของฉัน")}</a>
+        <a class="btn btn-line" href="#/kata">${B("Buku Kata", "สมุดคำศัพท์")}</a>
         <a class="pp-pautan" href="#/kemajuan">${B("Jadual kemajuan dan padam data", "ตารางความก้าวหน้าและล้างข้อมูล")}</a>
       </div>
       <h2 class="kj-h2">${B("Kemajuan mengikut bab", "ความก้าวหน้ารายบท")}</h2>
@@ -831,6 +832,8 @@
         <p class="sk-q" lang="ms">${esc(o.soalan || "—")}</p>
         <p class="sk-meta">${o.bab ? `Bab ${o.bab} · ` : ""}${esc((JENIS_NAMA[o.jenis] || [o.jenis])[0])} · ${B(`${o.pelajarSalah.size}/${o.pelajar.size} pelajar pernah salah · ${o.salah}/${o.n} cubaan salah (${o.kadar}%)`, `นิสิตเคยผิด ${o.pelajarSalah.size}/${o.pelajar.size} คน · ผิด ${o.salah}/${o.n} ครั้ง`)}</p>
         <p class="sk-meta">${B("Jawapan salah lazim:", "คำตอบผิดที่พบบ่อย:")} ${o.lazim.map(([w, n]) => `<b lang="ms">${esc(w)}</b> (${n})`).join(", ")}</p></li>`).join("")}</ol>` : `<p>${B("Belum ada jawapan salah.", "ยังไม่มีคำตอบที่ผิด")}</p>`}
+      ${(() => { const m = new Map(); senarai.forEach(i => (i.p.kata || []).forEach(k => { const key = k.kata.toLowerCase(); const o = m.get(key) || { kata: k.kata, n: 0, bab: k.bab }; o.n++; m.set(key, o); })); const top = [...m.values()].sort((a, b) => b.n - a.n).slice(0, 30);
+        return top.length ? `<h2 class="kj-h2">${B("Perkataan paling banyak disimpan dalam buku kata", "คำที่นิสิตเก็บในสมุดคำศัพท์มากที่สุด")}</h2><p class="kj-cara">${B("Perkataan yang disimpan oleh ramai pelajar mungkin menunjukkan kosa kata atau istilah yang sukar.", "คำที่นิสิตหลายคนเก็บไว้อาจเป็นคำหรือศัพท์ที่ยาก")}</p><ul class="kt-awan">${top.map(o => `<li><span lang="ms">${esc(o.kata)}</span> <b>${o.n}</b>${o.bab ? ` <small>Bab ${o.bab}</small>` : ""}</li>`).join("")}</ul>` : ""; })()}
       <h2 class="kj-h2">${B("Mengikut bab", "รายบท")}</h2>
       <div class="tbl-wrap"><table class="kj-jadual">${th(B("Bab", "บท"), B("Tajuk", "ชื่อบท"), B("Pelajar selesai", "นิสิตเรียนจบ"), B("Pelajar lulus", "นิสิตผ่าน"), B("Jawapan latihan", "คำตอบ"), B("Ketepatan", "ความถูกต้อง"))}<tbody>${babRows}</tbody></table></div>
       ${jenisRows ? `<h2 class="kj-h2">${B("Mengikut jenis soalan", "ตามประเภทคำถาม")}</h2><div class="tbl-wrap"><table class="kj-jadual">${th(B("Jenis", "ประเภท"), B("Jawapan", "คำตอบ"), B("Ketepatan", "ความถูกต้อง"))}<tbody>${jenisRows}</tbody></table></div>` : ""}
@@ -900,6 +903,157 @@
       </tbody></table></div>` : `<p>${B("Belum ada jawapan.", "ยังไม่มีคำตอบ")}</p>`}
     </div></section>`;
     labelJadual(app); window.scrollTo(0, 0);
+  }
+
+
+  /* ================= BUKU KATA · สมุดคำศัพท์ส่วนตัว ================= */
+  const KT = () => window.TBAkaun && window.TBAkaun.kata;
+  const prpm = k => `https://prpm.dbp.gov.my/cari1?keyword=${encodeURIComponent(k)}`;
+  const ISTILAH_PETA = new Map((window.ISTILAH || []).map(([m, t, d]) => [m.replace(/\s*\(.*\)/, "").trim().toLowerCase(), `${t} — ${d}`]));
+  const bersihKata = t => String(t || "").replace(/\s+/g, " ").replace(/^[\s"“”'‘’(\[]+|[\s"“”'‘’)\].,;:!?]+$/g, "").trim();
+  const babSemasa = () => { const m = location.hash.match(/^#\/bab\/(\d+)/); return m ? +m[1] : null; };
+
+  /* Petak kecil apabila perkataan Melayu diklik atau dipilih · กล่องเล็กเมื่อกดหรือเลือกคำภาษามลายู */
+  const pop = document.createElement("div"); pop.className = "kata-pop"; pop.hidden = true; pop.setAttribute("role", "dialog"); pop.setAttribute("aria-label", "Simpan perkataan · เก็บคำศัพท์");
+  document.body.appendChild(pop);
+  const tutupPop = () => { pop.hidden = true; };
+  window.TBKataPop = async (teks, rect, sumber) => {
+    const k = bersihKata(teks);
+    if (!k || k.length > 60 || hasThai(k) || !KT() || !$("#app").contains(sumber)) return;
+    const blok = sumber.closest && sumber.closest("p, li, td, blockquote, .lat-item, .q");
+    const blokBm = blok && (blok.querySelector(".bm") || blok);
+    const ayat = blokBm ? blokBm.textContent.replace(/\s+/g, " ").split(/[\u0E00-\u0E7F]/)[0].replace(/[\s(·]+$/, "").trim().slice(0, 300) : "";
+    const makna = ISTILAH_PETA.get(k.toLowerCase()) || "";
+    const lukis = sudah => {
+      pop.innerHTML = `<p class="kp-kata" lang="ms">${esc(k)}</p>${makna ? `<p class="kp-makna">${esc(makna)}</p>` : ""}
+        <div class="kp-btn">${sudah ? `<a class="btn btn-line kp-ada" href="#/kata">✓ ${B("Dalam buku kata", "อยู่ในสมุดแล้ว")}</a>` : `<button type="button" class="btn btn-solid" data-kp-simpan>☆ ${B("Simpan", "เก็บคำ")}</button>`}
+        <a class="btn btn-line" href="${prpm(k)}" target="_blank" rel="noopener">PRPM DBP ↗</a></div>`;
+      const b = $("[data-kp-simpan]", pop);
+      if (b) b.onclick = async () => {
+        b.disabled = true;
+        try { await KT().simpan({ kata: k, makna, ayat, bab: babSemasa() }); lukis(true); toast(T(`"${k}" disimpan dalam buku kata`, `เก็บ "${k}" ในสมุดคำศัพท์แล้ว`)); }
+        catch (e) { console.error(e); b.disabled = false; toast(T("Tidak dapat menyimpan", "บันทึกไม่ได้")); }
+      };
+    };
+    lukis(KT().ada(k));
+    pop.hidden = false;
+    const w = pop.offsetWidth, h = pop.offsetHeight;
+    let x = rect.left + window.scrollX + rect.width / 2 - w / 2, y = rect.bottom + window.scrollY + 8;
+    x = Math.max(window.scrollX + 8, Math.min(x, window.scrollX + document.documentElement.clientWidth - w - 8));
+    if (rect.bottom + h + 16 > window.innerHeight) y = rect.top + window.scrollY - h - 8;
+    pop.style.left = x + "px"; pop.style.top = y + "px";
+    if (!KT().sedia()) { try { await KT().senarai(); if (!pop.hidden && $(".kp-kata", pop) && $(".kp-kata", pop).textContent === k) lukis(KT().ada(k)); } catch (e) { /* ignore */ } }
+  };
+  document.addEventListener("mousedown", e => { if (!pop.hidden && !pop.contains(e.target) && !e.target.closest(".ms-say")) tutupPop(); });
+  document.addEventListener("keydown", e => { if (e.key === "Escape" && !pop.hidden) tutupPop(); });
+  window.addEventListener("hashchange", tutupPop);
+  /* Pilih (sorot) perkataan dalam pelajaran · ลากเลือกคำในบทเรียน */
+  const pilihTeks = () => {
+    const sel = window.getSelection(); if (!sel || sel.isCollapsed || !sel.rangeCount) return;
+    const t = sel.toString(); if (!t.trim() || t.length > 60) return;
+    const r = sel.getRangeAt(0), el = r.commonAncestorContainer.nodeType === 1 ? r.commonAncestorContainer : r.commonAncestorContainer.parentElement;
+    if (!el || !el.closest(".prose, .lat, .ex") || el.closest("input, textarea, button, .kata-pop")) return;
+    window.TBKataPop(t, r.getBoundingClientRect(), el);
+  };
+  document.addEventListener("mouseup", () => setTimeout(pilihTeks, 10));
+  document.addEventListener("touchend", () => setTimeout(pilihTeks, 350));
+
+  /* Halaman Buku Kata Saya · หน้าสมุดคำศัพท์ของฉัน */
+  const KATA_ST = { cari: "", tapis: "semua", bab: "" };
+  async function bukuKata() {
+    setNav(""); document.title = `Buku Kata Saya · สมุดคำศัพท์ | ${C.code}`;
+    app.innerHTML = `<section class="section"><div class="wrap buku-kata"><p class="pp-muat">${B("Memuatkan…", "กำลังโหลด…")}</p></div></section>`;
+    let ls;
+    try { ls = await KT().senarai(); } catch (e) { console.error(e); app.innerHTML = kadMudah(B("Buku kata tidak dapat dimuatkan.", "โหลดสมุดคำศัพท์ไม่ได้") + `<br><small>${esc(e.code || "")}</small>`); return; }
+    if (!/^#\/kata/.test(location.hash)) return;
+    const hafal = ls.filter(x => x.hafal).length;
+    app.innerHTML = `<section class="section"><div class="wrap buku-kata">
+      <div class="section-head"><h1>${B("Buku Kata Saya", "สมุดคำศัพท์ของฉัน")}</h1><p>${B(`${ls.length} perkataan · ${hafal} sudah hafal`, `${ls.length} คำ · จำได้แล้ว ${hafal} คำ`)}</p></div>
+      <div class="note" role="note"><p>${B("Klik perkataan Melayu bercetak condong dalam pelajaran, atau sorot (pilih) mana-mana perkataan, kemudian tekan <b>☆ Simpan</b>.", "กดคำภาษามลายูตัวเอียงในบทเรียน หรือลากเลือกคำใดก็ได้ แล้วกด <b>☆ เก็บคำ</b>")}</p></div>
+      <div class="kj-sambung">
+        <button type="button" class="btn btn-solid" id="kt-kad"${ls.some(x => !x.hafal) ? "" : " disabled"}>${B("Ulang kaji dengan kad imbas", "ทบทวนด้วยบัตรคำ")}</button>
+        <button type="button" class="btn btn-line" id="kt-csv"${ls.length ? "" : " disabled"}>${B("Muat turun", "ดาวน์โหลด")} (.csv)</button>
+      </div>
+      <details class="kt-tambah"><summary>${B("Tambah perkataan sendiri", "เพิ่มคำเอง")}</summary>
+        <form id="kt-borang" class="hadir-medan"><label>${B("Perkataan", "คำ")}<input name="kata" required maxlength="60" lang="ms"></label>
+          <label>${B("Makna", "ความหมาย")}<input name="makna" maxlength="300"></label><button type="submit" class="btn btn-line">${B("Tambah", "เพิ่ม")}</button></form></details>
+      <div class="guru-alat">
+        <label class="guru-cari"><span class="sr-only">Cari · ค้นหา</span><input type="search" id="kt-cari" value="${esc(KATA_ST.cari)}" placeholder="Cari perkataan · ค้นหาคำ" autocomplete="off"></label>
+        <label class="guru-susun"><span class="sr-only">Tapis · กรอง</span><select id="kt-tapis">${[["semua", "Semua · ทั้งหมด"], ["belum", "Belum hafal · ยังจำไม่ได้"], ["hafal", "Sudah hafal · จำได้แล้ว"]].map(([v, t]) => `<option value="${v}"${KATA_ST.tapis === v ? " selected" : ""}>${t}</option>`).join("")}</select></label>
+        <label class="guru-susun"><span class="sr-only">Bab · บท</span><select id="kt-bab"><option value="">Semua bab · ทุกบท</option>${CH.map(c => `<option value="${c.no}"${KATA_ST.bab == c.no ? " selected" : ""}>Bab ${c.no}</option>`).join("")}</select></label>
+      </div>
+      <p class="gl-count" id="kt-kiraan" aria-live="polite"></p>
+      <ul class="kt-senarai" id="kt-senarai"></ul>
+    </div></section>`;
+    const lukis = () => {
+      const q = KATA_ST.cari.trim().toLowerCase();
+      const r = ls.filter(x => (KATA_ST.tapis === "semua" || (KATA_ST.tapis === "hafal") === !!x.hafal) && (!KATA_ST.bab || x.bab === +KATA_ST.bab)
+        && (!q || `${x.kata} ${x.makna} ${x.nota}`.toLowerCase().includes(q)));
+      $("#kt-kiraan").textContent = ls.length ? `${r.length} / ${ls.length}` : "";
+      $("#kt-senarai").innerHTML = r.length ? r.map(x => `<li class="kt-kad${x.hafal ? " kt-hafal" : ""}" data-id="${esc(x.id)}">
+        <div class="kt-atas"><span class="kt-kata" lang="ms">${esc(x.kata)}</span>${sayBtn(x.kata)}
+          <label class="kt-hafal-cek"><input type="checkbox" data-kt-hafal${x.hafal ? " checked" : ""}> ${B("Sudah hafal", "จำได้แล้ว")}</label></div>
+        <label class="kt-makna"><span class="sr-only">Makna · ความหมาย</span><input data-kt-makna value="${esc(x.makna || "")}" maxlength="300" placeholder="Tulis makna · เขียนความหมาย"></label>
+        ${x.ayat ? `<p class="kt-ayat" lang="ms">${esc(x.ayat)}</p>` : ""}
+        <p class="kt-meta">${x.bab ? `<a href="${babLink(x.bab)}">Bab ${x.bab}</a> · ` : ""}<a href="${prpm(x.kata)}" target="_blank" rel="noopener">PRPM DBP ↗</a> · ${tarikh(x.masa)}
+          <button type="button" class="kt-padam" data-kt-padam aria-label="Padam ${esc(x.kata)} · ลบ">${B("Padam", "ลบ")}</button></p></li>`).join("")
+        : `<li class="kt-kosong">${ls.length ? B("Tiada padanan.", "ไม่พบคำ") : B("Buku kata masih kosong.", "สมุดคำศัพท์ยังว่าง")}</li>`;
+    };
+    lukis();
+    $("#kt-cari").oninput = e => { KATA_ST.cari = e.target.value; lukis(); };
+    $("#kt-tapis").onchange = e => { KATA_ST.tapis = e.target.value; lukis(); };
+    $("#kt-bab").onchange = e => { KATA_ST.bab = e.target.value; lukis(); };
+    const senaraiEl = $("#kt-senarai");
+    senaraiEl.addEventListener("change", async e => {
+      const li = e.target.closest("[data-id]"); if (!li) return; const id = li.dataset.id, x = ls.find(y => y.id === id);
+      try {
+        if (e.target.matches("[data-kt-hafal]")) { await KT().kemaskini(id, { hafal: e.target.checked }); x.hafal = e.target.checked; li.classList.toggle("kt-hafal", x.hafal); }
+        if (e.target.matches("[data-kt-makna]")) { await KT().kemaskini(id, { makna: e.target.value }); x.makna = e.target.value; toast(T("Makna disimpan", "บันทึกความหมายแล้ว")); }
+      } catch (err) { console.error(err); toast(T("Tidak dapat menyimpan", "บันทึกไม่ได้")); }
+    });
+    senaraiEl.addEventListener("click", async e => {
+      const b = e.target.closest("[data-kt-padam]"); if (!b) return;
+      const li = b.closest("[data-id]"), id = li.dataset.id;
+      if (!confirm(T("Padam perkataan ini?", "ลบคำนี้หรือไม่"))) return;
+      try { await KT().padam(id); ls = ls.filter(y => y.id !== id); lukis(); } catch (err) { console.error(err); toast(T("Tidak dapat memadam", "ลบไม่ได้")); }
+    });
+    $("#kt-borang").onsubmit = async e => {
+      e.preventDefault(); const f = e.target, k = bersihKata(f.kata.value); if (!k) return;
+      try { await KT().simpan({ kata: k, makna: f.makna.value.trim() || ISTILAH_PETA.get(k.toLowerCase()) || "", ayat: "", bab: null }); bukuKata(); toast(T(`"${k}" ditambah`, `เพิ่ม "${k}" แล้ว`)); }
+      catch (err) { console.error(err); toast(T("Tidak dapat menyimpan", "บันทึกไม่ได้")); }
+    };
+    $("#kt-csv").onclick = () => muatTurunCSV(`buku-kata-${tarikhCSV(Date.now()).slice(0, 10)}.csv`, [["kata", "makna", "ayat", "bab", "hafal", "ulang_kaji", "disimpan"], ...ls.map(x => [x.kata, x.makna, x.ayat, x.bab || "", x.hafal ? 1 : 0, x.ulang || 0, tarikhCSV(x.masa)])]);
+    $("#kt-kad").onclick = () => kadImbas(ls.filter(x => !x.hafal));
+    window.scrollTo(0, 0);
+  }
+  const kadMudah = html => `<section class="section"><div class="wrap"><div class="hadir-kad">${html}</div></div></section>`;
+  /* Kad imbas · บัตรคำทบทวน */
+  function kadImbas(set) {
+    const kad = set.slice().sort(() => Math.random() - .5);
+    let i = 0, ingat = 0;
+    const lukis = () => {
+      if (i >= kad.length) {
+        app.innerHTML = kadMudah(`<p class="hadir-ikon kt-siap" aria-hidden="true">✓</p><h1>${B("Selesai ulang kaji", "ทบทวนเสร็จแล้ว")}</h1><p>${B(`Ingat ${ingat} daripada ${kad.length} perkataan`, `จำได้ ${ingat} จาก ${kad.length} คำ`)}</p><a class="btn btn-solid" href="#/kata">${B("Kembali ke buku kata", "กลับไปที่สมุดคำศัพท์")}</a>`);
+        return;
+      }
+      const x = kad[i];
+      app.innerHTML = `<section class="section"><div class="wrap kt-imbas">
+        <p class="kt-prog">${i + 1} / ${kad.length}</p>${bar(Math.round(i / kad.length * 100), "Kemajuan ulang kaji · ความคืบหน้า")}
+        <button type="button" class="kt-kad-imbas" id="kt-balik" aria-live="polite">
+          <span class="kt-depan"><span class="kt-kata-besar" lang="ms">${esc(x.kata)}</span><small>${B("Tekan untuk lihat makna", "กดเพื่อดูความหมาย")}</small></span>
+          <span class="kt-belakang" hidden><span class="kt-kata-besar" lang="ms">${esc(x.kata)}</span><span class="kt-makna-besar">${esc(x.makna || "—")}</span>${x.ayat ? `<span class="kt-ayat" lang="ms">${esc(x.ayat)}</span>` : ""}</span>
+        </button>
+        <div class="kt-imbas-btn">${sayBtn(x.kata)}<button type="button" class="btn btn-line" data-jwp="0">${B("Belum ingat", "ยังจำไม่ได้")}</button><button type="button" class="btn btn-solid" data-jwp="1">${B("Sudah ingat", "จำได้แล้ว")}</button></div>
+        <p><a href="#/kata">${B("Berhenti", "หยุดทบทวน")}</a></p></div></section>`;
+      $("#kt-balik").onclick = () => { $(".kt-depan").hidden = !$(".kt-depan").hidden; $(".kt-belakang").hidden = !$(".kt-belakang").hidden; };
+      $$("[data-jwp]").forEach(b => b.onclick = async () => {
+        const ok = b.dataset.jwp === "1"; if (ok) ingat++;
+        KT().kemaskini(x.id, { ulang: (x.ulang || 0) + 1, ...(ok ? { hafal: true } : {}) }).catch(e => console.error(e));
+        x.ulang = (x.ulang || 0) + 1; if (ok) x.hafal = true;
+        i++; lukis();
+      });
+    };
+    lukis(); window.scrollTo(0, 0);
   }
 
   /* ================= QUIZ ================= */
@@ -1057,9 +1211,17 @@
       const s = q.value.trim().toLowerCase(), bb = b.value;
       const rows = all.filter(x => (!bb || x.n === +bb) && (!s || (x.m + " " + x.t + " " + x.d).toLowerCase().includes(s)));
       cnt.textContent = rows.length ? `${rows.length} istilah ditemui · พบ ${rows.length} คำ` : "Tiada padanan. Cuba kata yang lebih pendek atau pilih “Semua bab”. · ไม่พบศัพท์ที่ค้นหา ลองพิมพ์ให้สั้นลงหรือเลือก “ทุกบท”";
-      tb.innerHTML = rows.map(x => `<tr><td class="ms" lang="ms">${esc(x.m)}</td><td>${esc(x.t)}</td><td style="color:var(--muted);font-size:15px">${esc(x.d)}</td><td class="gl-bab"><a href="${babLink(x.n)}">Bab ${x.n}</a></td><td class="say-cell">${sayBtn(x.m.replace(/\s*\(.*\)/, ""))}</td></tr>`).join("");
+      tb.innerHTML = rows.map(x => `<tr><td class="ms" lang="ms">${esc(x.m)}</td><td>${esc(x.t)}</td><td style="color:var(--muted);font-size:15px">${esc(x.d)}</td><td class="gl-bab"><a href="${babLink(x.n)}">Bab ${x.n}</a></td><td class="say-cell">${sayBtn(x.m.replace(/\s*\(.*\)/, ""))}${KT() ? `<button type="button" class="say kt-istilah" data-kt-istilah="${esc(x.m.replace(/\s*\(.*\)/, ""))}" data-makna="${esc(x.t + " — " + x.d)}" data-bab="${x.n}" aria-label="Simpan ke buku kata · เก็บคำ ${esc(x.m)}" title="Simpan ke buku kata · เก็บคำ">${KT().ada(x.m.replace(/\s*\(.*\)/, "")) ? "★" : "☆"}</button>` : ""}</td></tr>`).join("");
     };
     q.addEventListener("input", run); b.addEventListener("change", run); run();
+    if (KT()) {
+      KT().senarai().then(() => { if ($("#gl")) run(); }).catch(() => { /* ignore */ });
+      tb.addEventListener("click", async e => {
+        const s = e.target.closest("[data-kt-istilah]"); if (!s || s.textContent === "★") return;
+        try { await KT().simpan({ kata: s.dataset.ktIstilah, makna: s.dataset.makna, ayat: "", bab: +s.dataset.bab }); s.textContent = "★"; toast(T(`"${s.dataset.ktIstilah}" disimpan dalam buku kata`, `เก็บ "${s.dataset.ktIstilah}" แล้ว`)); }
+        catch (err) { console.error(err); toast(T("Tidak dapat menyimpan", "บันทึกไม่ได้")); }
+      });
+    }
     window.scrollTo(0, 0);
   }
 
@@ -1323,6 +1485,7 @@
     else if (p[0] === "kemajuan") kemajuan();
     else if (p[0] === "papan") papan();
     else if (p[0] === "skor") skorSaya();
+    else if (p[0] === "kata") bukuKata();
     else if (p[0] === "guru") guru(p[1] ? decodeURIComponent(p[1]) : null);
     else notFound();
     /* Fokus dipindahkan ke kandungan hanya selepas navigasi, bukan semasa halaman mula dibuka (supaya pautan langkau kekal pertama)

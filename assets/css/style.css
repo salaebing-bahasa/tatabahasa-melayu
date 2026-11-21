@@ -1164,3 +1164,41 @@ footer .kaki-tajuk { font-weight: 700; font-size: 1.08em; margin-bottom: 2px; }
 .pintu-btn svg { background: #fff; border-radius: 50%; padding: 2px; width: 22px; height: 22px; }
 .pintu-nota { font-size: 13.5px; color: var(--muted); margin-top: 14px; }
 .pintu-btn .tr, .pintu-btn .bm { color: inherit !important; opacity: .9; }
+
+/* ================= Buku kata · สมุดคำศัพท์ ================= */
+.kata-pop { position: absolute; z-index: 40; width: min(320px, calc(100vw - 16px)); background: var(--surface); color: var(--dakwat); border: 1px solid var(--line); border-top: 3px solid var(--emas); border-radius: var(--radius-m); box-shadow: 0 12px 30px rgba(0,0,0,.18); padding: 12px 14px; }
+.kata-pop[hidden] { display: none; }
+.kp-kata { margin: 0; font-size: 20px; font-weight: 700; color: var(--biru); font-family: var(--ms-font); }
+.kp-makna { margin: 4px 0 0; font-size: 14px; color: var(--muted); }
+.kp-btn { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+.kp-btn .btn { min-height: 38px; padding: 0 14px; font-size: 14.5px; }
+.kt-tambah { margin: 0 0 14px; }
+.kt-tambah summary { cursor: pointer; font-weight: 600; color: var(--biru); padding: 6px 0; }
+.kt-tambah form { align-items: end; margin-top: 8px; }
+.kt-senarai { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 12px; }
+.kt-kad { background: var(--surface); border: 1px solid var(--line); border-left: 4px solid var(--emas); border-radius: var(--radius-m); padding: 12px 14px; display: flex; flex-direction: column; gap: 6px; }
+.kt-kad.kt-hafal { border-left-color: var(--ok); }
+.kt-atas { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.kt-kata { font-size: 20px; font-weight: 700; color: var(--biru); font-family: var(--ms-font); }
+.kt-hafal-cek { margin-left: auto; display: inline-flex; gap: 6px; align-items: center; font-size: 13.5px; }
+.kt-makna input { width: 100%; min-height: 40px; padding: 0 10px; border: 1px solid var(--line); border-radius: var(--radius-s); background: var(--kertas); color: var(--dakwat); font: 400 15px var(--th-font); }
+.kt-ayat { margin: 0; font-size: 14px; color: var(--muted); font-style: italic; }
+.kt-meta { margin: 0; font-size: 13.5px; color: var(--muted); display: flex; flex-wrap: wrap; gap: 4px; align-items: center; }
+.kt-padam { margin-left: auto; background: none; border: 0; color: var(--err); cursor: pointer; font: inherit; font-size: 13px; padding: 4px; }
+.kt-kosong { color: var(--muted); padding: 10px 0; }
+.kt-istilah { font-size: 18px; color: var(--emas); }
+.kt-imbas { max-width: 560px; text-align: center; }
+.kt-prog { font-weight: 700; color: var(--muted); margin-bottom: 6px; }
+.kt-kad-imbas { width: 100%; min-height: 260px; margin: 18px 0; background: var(--surface); border: 1px solid var(--line); border-top: 4px solid var(--emas); border-radius: var(--radius-m); box-shadow: 0 10px 26px rgba(0,0,0,.08); cursor: pointer; padding: 24px; color: var(--dakwat); font: inherit; }
+.kt-depan, .kt-belakang { display: flex; flex-direction: column; gap: 12px; align-items: center; justify-content: center; }
+.kt-depan[hidden], .kt-belakang[hidden] { display: none; }
+.kt-kata-besar { font-size: 36px; font-weight: 700; color: var(--biru); font-family: var(--ms-font); }
+.kt-makna-besar { font-size: 19px; }
+.kt-depan small { color: var(--muted); }
+.kt-imbas-btn { display: flex; gap: 10px; justify-content: center; align-items: center; flex-wrap: wrap; }
+.kt-siap { background: var(--ok); }
+.kt-awan { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
+.kt-awan li { background: var(--surface); border: 1px solid var(--line); border-radius: 99px; padding: 5px 12px; }
+.kt-awan li b { color: var(--biru); }
+.kt-awan small { color: var(--muted); }
+.btn-solid .tr, .btn-solid .bm { color: inherit !important; opacity: .88; }

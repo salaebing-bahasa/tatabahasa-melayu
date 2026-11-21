@@ -32,6 +32,18 @@ service cloud.firestore {
         && (!('profil' in request.resource.data) || profilSah(request.resource.data.profil));
       allow delete: if false;
 
+      // สมุดคำศัพท์ส่วนตัว: นิสิตเพิ่ม แก้ ลบของตัวเองได้ อาจารย์อ่านได้
+      match /kata/{id} {
+        allow read: if isOwner(uid) || isGuru();
+        allow create, update: if isOwner(uid)
+          && request.resource.data.keys().hasOnly(['kata', 'makna', 'nota', 'ayat', 'bab', 'hafal', 'ulang', 'masa', 'kemaskini'])
+          && request.resource.data.kata is string && request.resource.data.kata.size() > 0 && request.resource.data.kata.size() <= 60
+          && request.resource.data.makna is string && request.resource.data.makna.size() <= 300
+          && request.resource.data.nota is string && request.resource.data.nota.size() <= 500
+          && request.resource.data.ayat is string && request.resource.data.ayat.size() <= 300;
+        allow delete: if isOwner(uid);
+      }
+
       match /jawapan/{id} {
         allow read: if isOwner(uid) || isGuru();
         allow create: if isOwner(uid)
