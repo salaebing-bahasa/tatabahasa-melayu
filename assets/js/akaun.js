@@ -25,6 +25,8 @@ const firebaseConfig = {
 };
 
 const KEY = "tb0113131";
+/* E-mel pensyarah (mesti sama dengan isGuru() dalam firestore.rules) · อีเมลอาจารย์ ต้องตรงกับใน firestore.rules */
+const GURU = ["salaebing@gmail.com", "smuhammad@tsu.ac.th"];
 const VERSI_SETUJU = 1; // naikkan jika teks persetujuan berubah · เพิ่มเลขเมื่อแก้ข้อความแจ้งเรื่องข้อมูล
 const fb = initializeApp(firebaseConfig);
 const auth = getAuth(fb);
@@ -35,7 +37,31 @@ provider.setCustomParameters({ prompt: "select_account" });
 let pengguna = null;     // pengguna yang sudah bersetuju · ผู้ใช้ที่ยอมรับข้อตกลงแล้ว
 let sedia = false;       // data awan sudah digabung · รวมข้อมูลจากบัญชีแล้ว
 let tSimpan = null;
+let memuat = true;       // sedang memeriksa status log masuk · กำลังตรวจสถานะล็อกอิน
+let cacheKelas = null;   // data kelas untuk halaman pensyarah · ข้อมูลทั้งชั้นสำหรับหน้าอาจารย์
 let cacheJawapan = null; // jawapan pengguna semasa (terbaru dahulu) · คำตอบของผู้ใช้ปัจจุบัน เรียงใหม่สุดก่อน
+
+const keMs = t => t && t.toMillis ? t.toMillis() : (typeof t === "number" ? t : null);
+const adalahGuru = () => !!(pengguna && pengguna.emailVerified && GURU.includes(String(pengguna.email || "").toLowerCase()));
+
+/* Halaman pensyarah: baca semua pelajar dan jawapan mereka (dibenarkan oleh isGuru() dalam firestore.rules)
+   หน้าอาจารย์: อ่านข้อมูลนิสิตทุกคนพร้อมคำตอบ (กฎ isGuru() อนุญาต) */
+async function dataKelas(paksa) {
+  if (!adalahGuru()) return null;
+  if (cacheKelas && !paksa) return cacheKelas;
+  const snap = await getDocs(collection(db, "pelajar"));
+  const pelajar = snap.docs.map(d => ({ uid: d.id, ...d.data() }));
+  for (let i = 0; i < pelajar.length; i += 8) {
+    await Promise.all(pelajar.slice(i, i + 8).map(async p => {
+      const s = await getDocs(query(collection(db, "pelajar", p.uid, "jawapan"), orderBy("masa", "desc"), limit(3000)));
+      p.jawapan = s.docs.map(d => { const x = d.data(); return { ...x, soalan: x.soalan || "", jawapan: x.jawapan || "", masa: keMs(x.masa) || 0 }; });
+      p.kemaskini = keMs(p.kemaskini); p.dicipta = keMs(p.dicipta);
+      p.guru = GURU.includes(String(p.emel || "").toLowerCase());
+    }));
+  }
+  cacheKelas = { pelajar, dimuat: Date.now() };
+  return cacheKelas;
+}
 
 /* Baca sejarah jawapan untuk Papan Pemuka dan Skor Saya · อ่านประวัติคำตอบสำหรับแดชบอร์ดและหน้าคะแนน */
 async function jawapanSaya(paksa) {
@@ -85,6 +111,7 @@ function butang() {
       <p class="akaun-nama">${esc(nama)}</p><p class="akaun-emel">${esc(pengguna.email || "")}</p>
       <a href="#/papan" class="akaun-pautan"><span lang="ms">Papan pemuka</span> · แดชบอร์ด</a>
       <a href="#/skor" class="akaun-pautan"><span lang="ms">Skor saya</span> · คะแนนของฉัน</a>
+      ${adalahGuru() ? `<a href="#/guru" class="akaun-pautan akaun-guru"><span lang="ms">Halaman pensyarah</span> · หน้าอาจารย์</a>` : ""}
       <button type="button" class="btn btn-line" id="akaun-keluar"><span lang="ms">Log keluar</span> · ออกจากระบบ</button>
     </div>`;
   const b = $("#akaun-saya"), m = $("#akaun-menu");
@@ -152,7 +179,7 @@ async function selepasMasuk(u) {
   if ((awan.setuju && awan.setuju.versi) !== VERSI_SETUJU) data.setuju = { versi: VERSI_SETUJU, masa: serverTimestamp() };
   try { await setDoc(ref, data, { merge: true }); }
   catch (e) { console.error(e); toast("Tidak dapat menyimpan ke akaun · บันทึกลงบัญชีไม่ได้"); }
-  pengguna = u; sedia = true;
+  pengguna = u; sedia = true; memuat = false;
   butang(); segar();
   toast(`Selamat datang · ยินดีต้อนรับ ${u.displayName || u.email || ""}`);
 }
@@ -167,6 +194,9 @@ async function simpanSekarang() {
 /* Dipanggil oleh app.js setiap kali kemajuan disimpan · app.js เรียกทุกครั้งที่บันทึกความก้าวหน้า */
 window.TBAkaun = {
   pengguna: () => pengguna,
+  memuat: () => memuat,
+  guru: adalahGuru,
+  dataKelas,
   jawapanSaya,
   simpan: () => { if (!pengguna || !sedia) return; clearTimeout(tSimpan); tSimpan = setTimeout(simpanSekarang, 1500); },
   masuk, keluar
@@ -188,7 +218,8 @@ document.addEventListener("visibilitychange", () => { if (document.visibilitySta
 
 getRedirectResult(auth).catch(e => console.error(e));
 onAuthStateChanged(auth, u => {
-  pengguna = null; sedia = false; cacheJawapan = null; butang();
-  if (u) selepasMasuk(u);
+  pengguna = null; sedia = false; cacheJawapan = null; cacheKelas = null; memuat = !!u; butang();
+  if (u) selepasMasuk(u).finally(() => { if (memuat) { memuat = false; segar(); } });
+  else segar();
 });
 butang();
