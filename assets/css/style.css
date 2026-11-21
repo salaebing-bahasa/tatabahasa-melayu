@@ -1120,3 +1120,17 @@ footer .kaki-tajuk { font-weight: 700; font-size: 1.08em; margin-bottom: 2px; }
 .sk-q { font-weight: 600; }
 .sk-meta { font-size: 14px; color: var(--muted); }
 @media (max-width: 560px) { .pp-senarai li { grid-template-columns: 28px 1fr; } .pp-masa { grid-column: 2; } }
+
+/* ================= Halaman pensyarah · หน้าอาจารย์ ================= */
+.guru-alat { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; margin: 8px 0 14px; }
+.guru-cek { display: inline-flex; gap: 8px; align-items: center; font-size: 15px; }
+.guru-cari input, .guru-susun select { min-height: 42px; padding: 0 12px; border: 1px solid var(--line); border-radius: var(--radius-s); background: var(--surface); color: var(--dakwat); font: inherit; }
+.guru-cari input { width: min(360px, 80vw); }
+.guru-susun { display: inline-flex; gap: 8px; align-items: center; font-size: 15px; }
+.guru-eksport { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 10px; }
+.guru-tag { background: var(--emas); color: #fff; border-radius: 99px; padding: 1px 8px; font-size: 11.5px; }
+.guru-jadual td { vertical-align: middle; }
+.guru-soalan { padding-left: 1.6em; display: flex; flex-direction: column; gap: 10px; }
+.guru-soalan li { background: var(--surface); border: 1px solid var(--line); border-left: 4px solid var(--emas); border-radius: var(--radius-s); padding: 10px 14px; }
+.guru-soalan p { margin: 2px 0; }
+.akaun-guru { font-weight: 600; }
