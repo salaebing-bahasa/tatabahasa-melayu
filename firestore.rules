@@ -27,9 +27,12 @@ service cloud.firestore {
     match /pelajar/{uid} {
       allow read: if isOwner(uid) || isGuru();
       allow create, update: if isOwner(uid)
-        && request.resource.data.keys().hasOnly(['nama', 'emel', 'setuju', 'done', 'skor', 'akhir', 'dicipta', 'kemaskini', 'profil'])
+        && request.resource.data.keys().hasOnly(['nama', 'emel', 'setuju', 'done', 'skor', 'akhir', 'dicipta', 'kemaskini', 'profil', 'sijil'])
         && request.resource.data.emel == request.auth.token.email
-        && (!('profil' in request.resource.data) || profilSah(request.resource.data.profil));
+        && (!('profil' in request.resource.data) || profilSah(request.resource.data.profil))
+        && (!('sijil' in request.resource.data) || (request.resource.data.sijil is map
+            && request.resource.data.sijil.keys().hasOnly(['kod', 'masa'])
+            && request.resource.data.sijil.kod is string && request.resource.data.sijil.kod.size() <= 40));
       allow delete: if false;
 
       // สมุดคำศัพท์ส่วนตัว: นิสิตเพิ่ม แก้ ลบของตัวเองได้ อาจารย์อ่านได้
