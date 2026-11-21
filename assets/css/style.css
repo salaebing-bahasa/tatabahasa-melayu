@@ -1153,3 +1153,14 @@ footer .kaki-tajuk { font-weight: 700; font-size: 1.08em; margin-bottom: 2px; }
 /* Baiki paparan · ปรับการแสดงผล: ตารางหน้าอาจารย์/คะแนนใช้ความกว้างเต็ม และซ่อนชื่อวิชาที่แถบบนเมื่อเมนูแน่น */
 .guru .tbl-wrap, .skor-saya .tbl-wrap { max-width: 100%; }
 @media (min-width: 961px) and (max-width: 1480px) { .brand-text { display: none; } }
+
+/* ================= Pintu log masuk · หน้าล็อกอิน ================= */
+.pintu { min-height: 60vh; display: grid; place-items: center; }
+.pintu-kad { max-width: 520px; margin: 0 auto; text-align: center; background: var(--surface); border: 1px solid var(--line); border-top: 4px solid var(--emas); border-radius: var(--radius-m); padding: 32px 26px; box-shadow: 0 10px 30px rgba(58, 14, 22, .08); }
+.pintu-logo { width: 56px; height: 56px; }
+.pintu-kad h1 { margin: 12px 0 14px; font-size: 26px; display: flex; flex-direction: column; gap: 2px; color: var(--biru); }
+.pintu-kad p { line-height: 1.65; }
+.pintu-btn { margin: 10px auto 4px; gap: 10px; }
+.pintu-btn svg { background: #fff; border-radius: 50%; padding: 2px; width: 22px; height: 22px; }
+.pintu-nota { font-size: 13.5px; color: var(--muted); margin-top: 14px; }
+.pintu-btn .tr, .pintu-btn .bm { color: inherit !important; opacity: .9; }
