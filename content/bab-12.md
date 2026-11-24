@@ -196,11 +196,6 @@ Arahan: Pilih jawapan yang paling tepat; sebab bagi setiap pilihan akan dipapark
 + *Pelajar tahun satu dari Pattani itu sedang menulis karangan.* :: Satu subjek dan satu predikat walaupun panjang.<br>ประธานและภาคแสดงอย่างละหนึ่ง
 - *Kereta yang dinaiki abang itu rosak.* :: Mengandungi ayat kecil relatif.<br>มีประโยคย่อยสัมพันธ์
 - *Jika hujan, kami tidak keluar.* :: Mengandungi ayat kecil keterangan syarat.<br>มีประโยคย่อยบอกเงื่อนไข
-?? *___ dia sakit, dia tetap hadir.*<br>เติมคำเชื่อม
-- *Kerana* :: Sebab tidak sesuai dengan makna "tetap hadir".<br>เหตุไม่เข้ากับ "ยังคงมา"
-+ *Walaupun* :: Pertentangan: sakit tetapi tetap hadir.<br>ขัดแย้ง: ป่วยแต่ยังมา
-- *Supaya* :: Tujuan tidak sesuai.<br>จุดประสงค์ไม่เข้ากัน
-- *Jika* :: Syarat tidak sesuai dengan *tetap*.<br>เงื่อนไขไม่เข้ากับ *tetap*
 ?? Kata hubung manakah tidak sesuai untuk ayat majmuk gabungan?<br>คำเชื่อมใดไม่ใช่แบบเชื่อม
 - *dan* :: Gabungan tambahan.<br>เชื่อมแบบเพิ่ม
 - *tetapi* :: Gabungan pertentangan.<br>เชื่อมแบบขัดแย้ง
@@ -213,8 +208,6 @@ Arahan: Isikan kata hubung yang sesuai. | เติมคำเชื่อม�
 ___ hujan lebat, perlawanan itu diteruskan. (pertentangan) | Walaupun/Meskipun | Menyatakan pertentangan. | แสดงความขัดแย้ง
 Dia belajar bersungguh-sungguh ___ lulus peperiksaan. (tujuan) | supaya/agar/untuk | Menyatakan tujuan. | แสดงจุดประสงค์
 Kami tidak keluar ___ hujan lebat. (sebab) | kerana/sebab | Menyatakan sebab. | แสดงเหตุ
-Saya membeli buku ___ mahal itu. (relatif) | yang | Pancangan relatif. | ฝังอนุประโยคสัมพันธ์
-Dia berkata ___ dia akan datang. (komplemen) | bahawa | Pancangan komplemen. | ฝังส่วนเติมเต็ม
 ```
 
 ```latihan-golong
@@ -222,11 +215,8 @@ Tajuk: Kenal Pasti Golongan Kata | ระบุชนิดของคำ
 Arahan: Tentukan golongan kata bagi perkataan yang diberikan. | ระบุชนิดของคำที่กำหนด
 Kategori: Kata tugas · คำไวยากรณ์ | Kata nama · คำนาม | Kata kerja · คำกริยา | Kata adjektif · คำคุณศัพท์
 *walaupun* | Kata tugas | Kata hubung pancangan keterangan. | คำเชื่อม
-*sambil* | Kata tugas | Kata hubung gabungan. | คำเชื่อม
 *memerhatikan* | Kata kerja | *meN-…-kan* + *perhati*. | กริยา
 *lemah* dalam *Kami sedar bahawa kami lemah.* | Kata adjektif | Inti predikat ayat kecil. | แกนภาคแสดงของประโยคย่อย
-*karangan* | Kata nama | *karang* + *-an*: hasil. | นามบอกผลงาน
-*bahawa* | Kata tugas | Kata hubung komplemen. | คำเชื่อม
 ```
 
 ```latihan-betulkan
@@ -242,7 +232,6 @@ Label: Klausa bebas · อนุประโยคอิสระ | Kata hubung 
 [Ali membaca buku|Klausa bebas] [dan|Kata hubung] [Ahmad menulis surat|Klausa bebas]. | Gabungan: kedua-dua klausa setara. | แบบเชื่อม อนุประโยคเท่ากัน
 [Kami tidak keluar|Klausa bebas] [kerana|Kata hubung] [hujan lebat|Ayat kecil]. | Pancangan keterangan sebab. | แบบฝังบอกเหตุ
 [Laporan itu menyatakan|Klausa bebas] [bahawa|Kata hubung] [kerajaan akan membina jambatan|Ayat kecil]. | Pancangan komplemen. | แบบฝังส่วนเติมเต็ม
-[Dia rajin|Klausa bebas] [tetapi|Kata hubung] [adiknya malas|Klausa bebas]. | Gabungan pertentangan. | แบบเชื่อมขัดแย้ง
 ```
 
 ```latihan-golong
@@ -251,8 +240,6 @@ Kategori: Tunggal · เดี่ยว | Gabungan · เชื่อม | Panca
 *Ali membaca buku dan Ahmad menulis surat.* | Gabungan | Dua klausa setara dengan *dan*. | อนุประโยคเท่าเทียมสองอนุประโยค
 *Kereta yang dinaiki abang itu kemalangan.* | Pancangan | Ayat kecil relatif. | ประโยคย่อยสัมพันธ์
 *Rumah besar di hujung kampung itu milik datuk.* | Tunggal | Satu subjek dan satu predikat. | ประธานและภาคแสดงอย่างละหนึ่ง
-*Kami sedar bahawa kami lemah.* | Pancangan | Ayat kecil komplemen. | ประโยคย่อยส่วนเติมเต็ม
-*Dia rajin tetapi adiknya malas.* | Gabungan | Pertentangan dengan *tetapi*. | ขัดแย้งด้วย *tetapi*
 ```
 
 ```latihan-benar
@@ -260,37 +247,6 @@ Arahan: Tentukan sama ada setiap pernyataan betul atau salah. | ตัดสิ�
 Ayat yang panjang sentiasa ayat majmuk.<br>ประโยคยาวเป็นประโยครวมเสมอ | S | Ayat tunggal boleh panjang kerana penerang. | ประโยคเดี่ยวยาวได้เพราะคำขยาย
 Dalam ayat majmuk pancangan, ayat kecil tidak dapat berdiri sendiri.<br>ในประโยครวมแบบฝัง ประโยคย่อยยืนเองไม่ได้ | B | Ayat kecil bergantung pada ayat induk. | ต้องพึ่งประโยคหลัก
 *Padahal* menyatakan pertentangan.<br>*padahal* แสดงความขัดแย้ง | B | Kata hubung gabungan pertentangan. | คำเชื่อมแบบเชื่อมแสดงความขัดแย้ง
-*Sekiranya* menyatakan sebab.<br>*sekiranya* แสดงเหตุ | S | *Sekiranya* menyatakan syarat. | *sekiranya* แสดงเงื่อนไข
-```
-
-### Kajian Kes<br>กรณีศึกษา
-
-**Laporan berita aktiviti program.** Seorang pelajar menulis berita pendek untuk laman program pengajian, tetapi semua ayatnya pendek:
-**รายงานข่าวกิจกรรมของสาขา** นักศึกษาเขียนข่าวสั้นสำหรับเพจสาขาวิชา แต่เขียนเป็นประโยคสั้นทั้งหมด
-
-> *Program Minggu Bahasa Melayu diadakan. Program itu di Universiti Thaksin. Program itu pada 5 Mac. Pelajar ramai hadir. Mereka bermain teka-teki. Mereka membaca pantun. Cuaca panas. Semua orang gembira.*
-
-**Aspek analisis**
-**ประเด็นวิเคราะห์**
-
-```latihan-terbuka
-Tajuk: Soalan Kajian Kes | คำถามกรณีศึกษา
-Arahan: Tulis jawapan anda, kemudian bandingkan dengan contoh jawapan dan kriteria penilaian. | เขียนคำตอบ แล้วเทียบกับตัวอย่างคำตอบและเกณฑ์การประเมิน
-?? Nyatakan pola setiap ayat (ayat tunggal FN+FK / FN+FSN / FN+FA).<br>ระบุแบบของแต่ละประโยค (ประโยคเดี่ยวแบบ FN+FK / FN+FSN / FN+FA)
-= *Program Minggu Bahasa Melayu diadakan.* FN+FK · *Program itu di Universiti Thaksin.* FN+FSN · *Program itu pada 5 Mac.* FN+FSN · *Pelajar ramai hadir.* FN+FK · *Mereka bermain teka-teki.* FN+FK · *Mereka membaca pantun.* FN+FK · *Cuaca panas.* FN+FA · *Semua orang gembira.* FN+FA
-* Pola semua ayat dinyatakan<br>ระบุแบบครบทุกประโยค
-* Pola yang tepat<br>ระบุถูกต้อง
-* Membezakan FSN dengan FK<br>แยกวลีบุพบทกับวลีกริยาได้
-?? Gabungkan menjadi satu perenggan yang terdiri daripada 3–4 ayat dengan menggunakan ketiga-tiga jenis ayat majmuk, dan tandakan jenis yang digunakan.<br>รวมเป็นย่อหน้าเดียว 3–4 ประโยค ใช้ประโยครวมทั้ง 3 แบบ และทำเครื่องหมายบอกแบบที่ใช้
-= *Program Minggu Bahasa Melayu **yang** diadakan di Universiti Thaksin pada 5 Mac telah dihadiri oleh ramai pelajar. Mereka bermain teka-teki **dan** membaca pantun. **Walaupun** cuaca panas, semua orang tetap gembira.*
-* Tiga jenis ayat majmuk digunakan dan ditanda<br>ใช้และระบุครบสามแบบ
-* Perenggan 3–4 ayat yang gramatis<br>ย่อหน้า 3–4 ประโยคถูกไวยากรณ์
-* Semua maklumat asal dikekalkan<br>คงข้อมูลเดิมครบ
-?? Bincangkan bagaimana pemilihan kata hubung mengubah nada berita (contohnya *walaupun* berbanding *tetapi*).<br>อภิปรายว่าการเลือกคำเชื่อมเปลี่ยนน้ำเสียงของข่าวอย่างไร (เช่น *walaupun* กับ *tetapi*)
-= *walaupun* menonjolkan kegembiraan walaupun ada halangan (nada positif); *tetapi* meletakkan dua maklumat setara dan kurang menekankan pertentangan.
-* Membandingkan sekurang-kurangnya dua kata hubung<br>เปรียบเทียบคำเชื่อมอย่างน้อย 2 คำ
-* Menjelaskan kesan nada<br>อธิบายผลต่อน้ำเสียง
-* Contoh ayat<br>ยกตัวอย่าง
 ```
 
 ## 10. Rumusan<br>สรุปบทเรียน

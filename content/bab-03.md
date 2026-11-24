@@ -218,31 +218,21 @@ Arahan: Pilih jawapan yang paling tepat; sebab bagi setiap pilihan akan dipapark
 + *Saya belajar di Universiti Thaksin.* :: Nama institusi ialah kata nama khas.<br>ชื่อสถาบันเป็นนามเฉพาะ
 - *Saya belajar di Universiti thaksin.* :: Setiap perkataan nama khas berhuruf besar.<br>ทุกคำของชื่อเฉพาะต้องขึ้นต้นตัวใหญ่
 - *Saya belajar di universiti Thaksin.* :: *Universiti* sebahagian daripada nama khas.<br>*Universiti* เป็นส่วนของชื่อเฉพาะ
-?? Ujian manakah yang TIDAK membuktikan sesuatu kata ialah kata nama?<br>การทดสอบใดไม่ได้พิสูจน์ว่าเป็นคำนาม
-- Boleh didahului penjodoh bilangan :: Ini ujian kata nama: *seorang guru*.<br>เป็นการทดสอบคำนาม
-- Boleh diikuti *ini/itu* :: Ini ujian kata nama: *buku itu*.<br>เป็นการทดสอบคำนาม
-+ Boleh didahului *sangat* :: *sangat* menguatkan kata adjektif, bukan kata nama.<br>*sangat* ใช้กับคุณศัพท์
-- Dinafikan dengan *bukan* :: Ini ciri kata nama: *bukan guru*.<br>เป็นลักษณะของคำนาม
 ```
 
 ```latihan-isi
 Arahan: Taipkan kata yang betul. | พิมพ์คำที่ถูกต้อง
 Dia ___ pelajar. (nafi) | bukan | Kata nama dinafikan dengan *bukan*. | คำนามปฏิเสธด้วย *bukan*
 Ahmad, mari ___ makan bersama-sama. (termasuk pendengar) | kita | *kita* merangkumi Ahmad sebagai pendengar. | *kita* รวม Ahmad ผู้ฟัง
-Dekan kami sibuk. ___ akan hadir esok. (hormat) | Beliau | *beliau* untuk orang yang dihormati. | *beliau* ใช้กับผู้ที่ได้รับความเคารพ
 Ayah membeli ___ rumah. (satu + penjodoh bilangan) | sebuah | *buah* untuk benda besar seperti rumah; *se-* = satu. | *buah* ใช้กับสิ่งของใหญ่ *se-* = หนึ่ง
-*ke-…-an* + *merdeka* = ___ | kemerdekaan | Apitan *ke-…-an* membentuk kata nama abstrak. | ปัจจัยคร่อมสร้างนามธรรม
 ```
 
 ```latihan-golong
 Tajuk: Kenal Pasti Golongan Kata | ระบุชนิดของคำ
 Arahan: Tentukan golongan kata bagi perkataan yang diberikan. | ระบุชนิดของคำที่กำหนด
 Kategori: Kata nama · คำนาม | Kata ganti nama · คำสรรพนาม | Kata kerja · คำกริยา | Kata adjektif · คำคุณศัพท์
-*beliau* | Kata ganti nama | Menggantikan nama orang yang dihormati. | ใช้แทนชื่อบุคคล
-*kejujuran* | Kata nama | Kata nama abstrak terbitan. | นามธรรมแปลง
 *kami* | Kata ganti nama | Kata ganti nama diri pertama jamak. | สรรพนามบุรุษที่ 1 พหูพจน์
 *menulis* | Kata kerja | *meN-* + *tulis*. | กริยา
-*penulis* | Kata nama | *peN-* + *tulis*: pelaku. | นามผู้กระทำ
 *jujur* | Kata adjektif | Menyatakan sifat; *sangat jujur*. | บอกลักษณะ
 ```
 
@@ -250,7 +240,6 @@ Kategori: Kata nama · คำนาม | Kata ganti nama · คำสรรพ�
 Arahan: Klik perkataan yang salah. | กดคำที่ผิด
 Dia [tidak→bukan] doktor. | Predikat kata nama dinafikan dengan *bukan*. | ภาคแสดงที่เป็นนามปฏิเสธด้วย *bukan*
 Puan, [aku→saya] ingin bertanya tentang kursus ini. | *aku* tidak sesuai kepada orang yang dihormati. | *aku* ไม่เหมาะกับผู้ที่ได้รับความเคารพ
-Prof. Ali sakit, jadi [dia→beliau] tidak dapat hadir. | Gunakan *beliau* untuk orang yang dihormati. | ใช้ *beliau* กับผู้ที่ได้รับความเคารพ
 Saya belajar di universiti [thaksin→Thaksin]. | Kata nama khas ditulis dengan huruf besar. | นามเฉพาะขึ้นต้นด้วยตัวใหญ่
 ```
 
@@ -259,7 +248,6 @@ Arahan: Pilih fungsi bagi setiap bahagian ayat, kemudian klik Semak. | เลื
 Label: Subjek · ประธาน | Inti predikat · แกนภาคแสดง | Objek · กรรม | Keterangan · ส่วนขยาย
 [Petani itu|Subjek] [menanam|Inti predikat] [padi|Objek] [di sawah|Keterangan]. | Kata nama *petani* (subjek) dan *padi* (objek). | คำนามเป็นประธานและกรรม
 [Ayah Fitri|Subjek] [peguam|Inti predikat]. | Kata nama *peguam* menjadi predikat. | คำนามเป็นภาคแสดง
-[Beliau|Subjek] [menghadiri|Inti predikat] [mesyuarat itu|Objek]. | Kata ganti nama *beliau* menjadi subjek. | สรรพนามเป็นประธาน
 [Kami|Subjek] [menghormati|Inti predikat] [pensyarah kami|Objek]. | Frasa nama *pensyarah kami* objek. | วลีนามเป็นกรรม
 ```
 
@@ -267,11 +255,8 @@ Label: Subjek · ประธาน | Inti predikat · แกนภาคแส�
 Arahan: Golongkan kata nama berikut. | จัดประเภทคำนามต่อไปนี้
 Kategori: Am konkrit · ทั่วไป-รูปธรรม | Am abstrak · ทั่วไป-นามธรรม | Khas · นามเฉพาะ
 *meja* | Am konkrit | Dapat disentuh. | จับต้องได้
-*kejujuran* | Am abstrak | Sifat yang tidak dapat disentuh. | คุณสมบัติที่จับต้องไม่ได้
 *Songkhla* | Khas | Nama tempat. | ชื่อสถานที่
-*angin* | Am konkrit | Dapat dirasa dengan pancaindera. | รับรู้ด้วยประสาทสัมผัสได้
 *ilmu* | Am abstrak | Konsep. | แนวคิด
-*Siti* | Khas | Nama orang. | ชื่อคน
 ```
 
 ```latihan-benar
@@ -279,37 +264,6 @@ Arahan: Tentukan sama ada setiap pernyataan betul atau salah. | ตัดสิ�
 *Kami* termasuk pendengar.<br>*kami* รวมผู้ฟัง | S | *Kami* tidak termasuk pendengar; *kita* termasuk. | *kami* ไม่รวมผู้ฟัง *kita* รวม
 Kata nama boleh didahului penjodoh bilangan.<br>คำนามมีลักษณนามนำหน้าได้ | B | Contohnya *seorang guru*. | เช่น *seorang guru*
 *Beliau* sesuai digunakan untuk orang yang lebih muda.<br>*beliau* ใช้กับผู้ที่อายุน้อยกว่าได้ | S | *Beliau* untuk orang yang dihormati. | *beliau* ใช้กับผู้ที่ได้รับความเคารพ
-*Pengajaran* ialah kata nama terbitan yang menyatakan proses.<br>*pengajaran* เป็นนามแปลงบอกกระบวนการ | B | *peN-…-an* + *ajar*. | *peN-…-an* + *ajar*
-```
-
-### Kajian Kes<br>กรณีศึกษา
-
-**E-mel kepada pensyarah di Malaysia.** Seorang pelajar yang akan mengikuti program pertukaran menulis e-mel kepada penasihatnya di Malaysia seperti yang berikut:
-**อีเมลถึงอาจารย์ในมาเลเซีย** นักศึกษาที่จะไปแลกเปลี่ยนเขียนอีเมลถึงอาจารย์ที่ปรึกษาฝั่งมาเลเซียว่า
-
-> *Salam. Kamu sihat? Aku pelajar dari Thailand. Aku mahu tanya kamu tentang kursus. Dia (pensyarah saya) suruh aku tulis kepada kamu.*
-
-**Aspek analisis**
-**ประเด็นวิเคราะห์**
-
-```latihan-terbuka
-Tajuk: Soalan Kajian Kes | คำถามกรณีศึกษา
-Arahan: Tulis jawapan anda, kemudian bandingkan dengan contoh jawapan dan kriteria penilaian. | เขียนคำตอบ แล้วเทียบกับตัวอย่างคำตอบและเกณฑ์การประเมิน
-?? Kenal pasti semua kata ganti nama yang tidak sesuai dengan konteks dan cadangkan penggantinya.<br>ระบุคำสรรพนามที่ไม่เหมาะกับบริบททุกคำ และเสนอคำแทนที่
-= *Kamu → Dr./Prof./tuan/puan*; *Aku → Saya*; *Dia → Beliau*
-* Mengenal pasti *kamu*, *aku* dan *dia* sebagai tidak sesuai<br>ระบุ *kamu*, *aku*, *dia* ว่าไม่เหมาะ
-* Mencadangkan pengganti yang sesuai bagi setiap satu<br>เสนอคำแทนที่เหมาะสมทุกคำ
-* Menjelaskan sebab berdasarkan kedudukan pendengar<br>อธิบายเหตุผลตามสถานะผู้ฟัง
-?? Jelaskan bagaimana pemilihan kata ganti nama mencerminkan hubungan sosial dan bagaimana keadaan ini berbeza daripada bahasa Thai (ฉัน/ผม/หนู).<br>อธิบายว่าการเลือกสรรพนามสะท้อนความสัมพันธ์ทางสังคมอย่างไร และต่างจากภาษาไทย (ฉัน/ผม/หนู) อย่างไร
-= Bahasa Melayu memilih kata ganti nama mengikut kedudukan dan keakraban (*aku/saya*, *dia/beliau*). Bahasa Thai juga begitu, tetapi lebih banyak pilihan diri pertama (ฉัน/ผม/หนู/ดิฉัน) yang turut menandakan jantina dan usia; padanannya dalam bahasa Melayu biasanya *saya* sahaja dalam situasi rasmi.
-* Menjelaskan hubungan kata ganti nama dengan hubungan sosial<br>อธิบายความสัมพันธ์ของสรรพนามกับสถานะทางสังคม
-* Memberikan contoh Melayu dan Thai<br>ยกตัวอย่างทั้งมลายูและไทย
-* Menyatakan perbezaan yang jelas antara kedua-dua bahasa<br>บอกความแตกต่างชัดเจน
-?? Tulis semula e-mel itu dalam 4–5 ayat.<br>เขียนอีเมลฉบับปรับแก้ 4–5 ประโยค
-= *Assalamualaikum, Dr. Dengan hormatnya, saya pelajar dari Universiti Thaksin. Saya ingin bertanya tentang kursus yang ditawarkan. Pensyarah saya mencadangkan agar saya menghubungi Dr. Terima kasih.*
-* Kata ganti nama sopan digunakan secara konsisten<br>ใช้สรรพนามสุภาพสม่ำเสมอ
-* Terdiri daripada 4–5 ayat yang gramatis<br>มี 4–5 ประโยคที่ถูกไวยากรณ์
-* Struktur e-mel rasmi: salam, tujuan, penutup<br>มีโครงสร้างอีเมลทางการ
 ```
 
 ## 10. Rumusan<br>สรุปบทเรียน

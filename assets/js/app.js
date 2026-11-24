@@ -428,7 +428,7 @@
         <div class="hero-side">
           <h1><span lang="ms">${C.code} ${C.ms}</span><br><span style="font-weight:500;opacity:.85">${C.th}</span></h1>
           <p class="bm" lang="ms">Dokumen pengajaran dalam talian, ${C.termMs}. Tiga belas bab daripada morfem hingga transformasi ayat, lengkap dengan latihan, kuiz dan alat latihan.</p>
-          <p class="tr hero-tr2">เอกสารประกอบการสอนออนไลน์ ${C.term} 13 บท ตั้งแต่หน่วยคำถึงการแปลงประโยค พร้อมกรณีศึกษา แบบทดสอบ และเครื่องมือฝึก</p>
+          <p class="tr hero-tr2">เอกสารประกอบการสอนออนไลน์ ${C.term} 13 บท ตั้งแต่หน่วยคำถึงการแปลงประโยค พร้อมแบบฝึกหัด แบบทดสอบ และเครื่องมือฝึก</p>
           <div class="btn-row">
             ${(() => { const h = sambungHref(), a = load().akhir; return h ? `<a class="btn btn-hero btn-dw" href="${h}">${B("Sambung Belajar · Bab " + a.n, "เรียนต่อ บทที่ " + a.n)}</a>` : `<a class="btn btn-hero btn-dw" href="${babLink(next.no)}">${doneCount ? B("Mula Bab " + next.no, "เริ่มบทที่ " + next.no) : B("Mula Bab 1", "เริ่มบทที่ 1")}</a>`; })()}
             <a class="btn btn-ghost btn-dw" href="#/papan">${B(`Kemajuan ${Math.round(doneCount / CH.length * 100)}%`, `ความก้าวหน้า ${Math.round(doneCount / CH.length * 100)}%`)}</a>

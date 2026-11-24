@@ -204,11 +204,6 @@ Arahan: Pilih jawapan yang paling tepat; sebab bagi setiap pilihan akan dipapark
 + *pengambilalihan* :: Apitan → serangkai.<br>ปัจจัยคร่อมเขียนติด
 - *kerja sama* :: Kata majmuk mantap ditulis serangkai.<br>เขียนติดเสมอ
 - *menanda tangani* :: Apitan → serangkai.<br>ปัจจัยคร่อมเขียนติด
-?? *Buah-buahan* membawa makna<br>*buah-buahan* มีความหมายว่า
-- jamak semata-mata :: Jamak ditandai *buah-buah*.<br>พหูพจน์ใช้ *buah-buah*
-+ pelbagai jenis :: *-an* + penggandaan menyatakan pelbagai jenis buah.<br>บอกความหลากหลาย
-- menyerupai :: Contoh menyerupai ialah *kuda-kuda*.<br>ตัวอย่างคือ *kuda-kuda*
-- penegasan :: Contoh penegasan ialah *cantik-cantik*.<br>ตัวอย่างคือ *cantik-cantik*
 ?? Manakah akronim?<br>ข้อใดเป็นคำย่ออ่านเป็นคำ
 - *UKM* :: Dibaca huruf demi huruf: singkatan.<br>อ่านทีละตัว
 + *tadika* :: Dibaca sebagai satu kata.<br>อ่านเป็นคำเดียว
@@ -221,20 +216,15 @@ Arahan: Taipkan bentuk yang betul. | พิมพ์รูปที่ถูก�
 Dia ___ bas ke Hat Yai. (naik + -i) | menaiki | Objek *bas* ialah tempat yang dinaiki. | *bas* เป็นยานพาหนะที่ขึ้น
 Pengawas ___ bendera. (naik + -kan) | menaikkan | Menyebabkan bendera naik. | ทำให้ธงขึ้น
 *peN-…-an* + *ambil alih* = ___ | pengambilalihan | Apitan → serangkai. | ปัจจัยคร่อมจึงเขียนติด
-*ber-* + *kerjasama* = ___ | bekerjasama | Kata majmuk mantap sentiasa serangkai. | คำประสมเขียนติดเสมอ
-Sisipan *-el-* + *tunjuk* = ___ | telunjuk | Sisipan selepas konsonan pertama. | แทรกหลังพยัญชนะแรก
 ```
 
 ```latihan-golong
 Tajuk: Kenal Pasti Golongan Kata | ระบุชนิดของคำ
 Arahan: Tentukan golongan kata bagi perkataan yang diberikan. | ระบุชนิดของคำที่กำหนด
 Kategori: Kata nama · คำนาม | Kata kerja · คำกริยา | Kata adjektif · คำคุณศัพท์
-*kebersihan* | Kata nama | *ke-…-an* membentuk kata nama keadaan. | นามบอกสภาพ
-*membersihkan* | Kata kerja | *meN-…-kan* membentuk kata kerja transitif. | สกรรมกริยา
 *kemerah-merahan* | Kata adjektif | *ke-…-an* + ganda: agak merah. | คุณศัพท์ ค่อนข้างแดง
 *perjalanan* | Kata nama | *per-…-an*: hasil atau proses. | นาม
 *berguguran* | Kata kerja | *ber-…-an*: banyak dan bertaburan. | กริยา
-*pengakroniman* | Kata nama | *peN-…-an*: proses. | นามบอกกระบวนการ
 ```
 
 ```latihan-betulkan
@@ -242,7 +232,6 @@ Arahan: Klik bahagian yang salah. | กดส่วนที่ผิด
 Hasil [kerja sama→kerjasama] dua universiti. | Kata majmuk mantap ditulis serangkai. | เขียนติดกัน
 [Semua pelajar-pelajar→Semua pelajar] dijemput hadir. | Tidak digandakan selepas penanda jamak. | ไม่ซ้ำคำหลังคำบอกพหูพจน์
 Peserta mesti [menanda tangani→menandatangani] borang. | Apitan → serangkai. | ปัจจัยคร่อมจึงเขียนติด
-Sila [beri tahu→beritahu] jawatankuasa. | *beritahu* kata majmuk mantap. | *beritahu* เขียนติดเสมอ
 ```
 
 ```latihan-analisis
@@ -251,18 +240,14 @@ Label: Subjek · ประธาน | Inti predikat · แกนภาคแส�
 [Ayah|Subjek] [menanami|Inti predikat] [kebun|Objek] [dengan pokok pisang|Keterangan]. | *-i*: objek tempat; *dengan pokok pisang* menyatakan benda yang ditanam. | กรรมเป็นสถานที่
 [Setiausaha kelab|Subjek] [menandatangani|Inti predikat] [surat itu|Objek]. | Kata majmuk + apitan ditulis serangkai. | คำประสม + ปัจจัยคร่อม
 [Daun-daun|Subjek] [berguguran|Inti predikat] [pada musim kemarau|Keterangan]. | *pada musim kemarau* keterangan waktu. | ส่วนขยายบอกเวลา
-[Langit|Subjek] [kemerah-merahan|Inti predikat] [pada waktu senja|Keterangan]. | Predikat frasa adjektif. | ภาคแสดงเป็นวลีคุณศัพท์
 ```
 
 ```latihan-golong
 Arahan: Golongkan jenis kata ganda. | จัดประเภทคำซ้ำ
 Kategori: Penuh · ซ้ำทั้งคำ | Separa · ซ้ำบางส่วน | Berentak · ซ้ำแบบสัมผัส
 *rumah-rumah* | Penuh | Seluruh kata digandakan. | ซ้ำทั้งคำ
-*lelaki* | Separa | Suku kata pertama digandakan. | ซ้ำพยางค์แรก
-*lauk-pauk* | Berentak | Perubahan bunyi berirama. | เปลี่ยนเสียงให้สัมผัส
 *dedaun* | Separa | Suku kata pertama digandakan. | ซ้ำพยางค์แรก
 *gunung-ganang* | Berentak | Perubahan vokal berirama. | เปลี่ยนสระให้สัมผัส
-*bermain-main* | Separa | Kata berimbuhan; hanya kata dasar digandakan. | ซ้ำเฉพาะคำฐานของคำที่เติมปัจจัย
 ```
 
 ```latihan-benar
@@ -270,37 +255,6 @@ Arahan: Tentukan sama ada setiap pernyataan betul atau salah. | ตัดสิ�
 *Pawagam* ialah singkatan.<br>*pawagam* เป็นอักษรย่อ | S | *Pawagam* dibaca sebagai satu kata, maka akronim. | อ่านเป็นคำเดียวจึงเป็นคำย่อ
 Sisipan masih produktif dalam pembentukan kata baharu.<br>อาคมยังใช้สร้างคำใหม่อยู่ | S | Sisipan hanya terdapat dalam kata sedia ada. | อาคมพบเฉพาะในคำที่มีอยู่แล้ว
 *Diambil alih* ditulis terpisah.<br>*diambil alih* เขียนแยก | B | Kata majmuk yang menerima awalan sahaja ditulis terpisah. | รับอุปสรรคอย่างเดียวเขียนแยก
-*-i* dalam *menduduki* membawa makna lokatif.<br>*-i* ใน *menduduki* บอกสถานที่ | B | Objeknya tempat yang diduduki. | กรรมเป็นที่ที่นั่ง
-```
-
-### Kajian Kes<br>กรณีศึกษา
-
-**Hantaran publisiti fakulti.** Jawatankuasa kelab pelajar memuat naik hantaran untuk mempromosikan kem bahasa bersama sebuah universiti di Malaysia:
-**โพสต์ประชาสัมพันธ์คณะ** คณะกรรมการสโมสรนักศึกษาโพสต์ประชาสัมพันธ์ค่ายภาษาร่วมกับมหาวิทยาลัยในมาเลเซีย
-
-> *Hasil kerja sama antara dua universiti, semua pelajar-pelajar dijemput menyertai kem bahasa. Setiap peserta mesti bertanggung jawab dan menanda tangani borang. Sila beri tahu jawatan kuasa sebelum Jumaat.*
-
-**Aspek analisis**
-**ประเด็นวิเคราะห์**
-
-```latihan-terbuka
-Tajuk: Soalan Kajian Kes | คำถามกรณีศึกษา
-Arahan: Tulis jawapan anda, kemudian bandingkan dengan contoh jawapan dan kriteria penilaian. | เขียนคำตอบ แล้วเทียบกับตัวอย่างคำตอบและเกณฑ์การประเมิน
-?? Cari semua kata majmuk dan kata ganda yang salah ejaannya, betulkan, dan nyatakan peraturan yang digunakan.<br>หาคำประสมและคำซ้ำที่เขียนผิดทั้งหมด แก้ไข และอ้างกฎที่ใช้
-= *kerjasama, semua pelajar, bertanggungjawab, menandatangani, beritahu, jawatankuasa*
-* Mengenal pasti semua ejaan yang salah<br>ระบุคำที่สะกดผิดครบ
-* Bentuk betul bagi setiap kata<br>ให้รูปถูกทุกคำ
-* Menyatakan peraturan: mantap, apitan, penanda jamak<br>ระบุกฎที่ใช้
-?? Mengapakah *bertanggungjawab* ditulis serangkai tetapi *diambil alih* ditulis terpisah? Jelaskan perbezaannya.<br>ทำไม *bertanggungjawab* เขียนติด แต่ *diambil alih* เขียนแยก อธิบายความต่าง
-= *tanggungjawab* ialah kata majmuk mantap yang sentiasa ditulis serangkai, jadi *bertanggungjawab* serangkai. *ambil alih* bukan kata majmuk mantap; apabila menerima awalan sahaja, ia kekal terpisah (*diambil alih*).
-* Menjelaskan konsep kata majmuk mantap<br>อธิบายคำประสมที่เขียนติด
-* Menjelaskan peraturan awalan sahaja<br>อธิบายกฎอุปสรรคอย่างเดียว
-* Perbandingan yang jelas<br>เปรียบเทียบชัดเจน
-?? Bincangkan kesan ejaan yang salah dalam dokumen rasmi terhadap imej institusi.<br>อภิปรายผลกระทบต่อภาพลักษณ์สถาบันหากเอกสารทางการสะกดคำผิด
-= Ejaan yang salah menjejaskan kredibiliti dan profesionalisme institusi, boleh menimbulkan salah faham dan memberi contoh buruk kepada pelajar.
-* Sekurang-kurangnya dua kesan yang munasabah<br>ผลกระทบที่สมเหตุสมผลอย่างน้อย 2 ข้อ
-* Contoh daripada situasi sebenar<br>ตัวอย่างจากสถานการณ์จริง
-* Hujah tersusun<br>เรียบเรียงเหตุผลดี
 ```
 
 ## 10. Rumusan<br>สรุปบทเรียน
