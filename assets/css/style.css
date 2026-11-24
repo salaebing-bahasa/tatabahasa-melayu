@@ -1233,7 +1233,8 @@ footer .kaki-tajuk { font-weight: 700; font-size: 1.08em; margin-bottom: 2px; }
 .sj-nombor { font-size: 1.15cqw; color: #6B5A55; margin-top: 1cqw !important; }
 .sj-nota { font-size: 1.05cqw; color: #8A7A75; }
 @media print {
-  @page { size: A4 landscape; margin: 0; }
+   @page sijil { size: A4 landscape; margin: 0; }
+  .sj-halaman { page: sijil; }
   body:has(.sj-halaman) { background: #fff !important; padding: 0 !important; }
   body:has(.sj-halaman) > *:not(main):not(#app), body:has(.sj-halaman) .topbar, body:has(.sj-halaman) footer, body:has(.sj-halaman) .pagenav, body:has(.sj-halaman) .cengkih-band, .sj-alat, .sj-petua, .kata-pop, #toast { display: none !important; }
   .sj-halaman, .sj-halaman .wrap { padding: 0 !important; margin: 0 !important; max-width: none !important; }
