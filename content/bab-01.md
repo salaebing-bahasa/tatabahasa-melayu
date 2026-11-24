@@ -188,11 +188,6 @@ Jawab setiap latihan; jawapan disemak serta-merta beserta penjelasan.
 
 ```latihan-objektif
 Arahan: Pilih jawapan yang paling tepat; sebab bagi setiap pilihan akan dipaparkan. | เลือกคำตอบที่ถูกที่สุด ระบบจะแสดงเหตุผลของทุกตัวเลือก
-?? Ayat manakah yang tidak gramatis?<br>ประโยคใดไม่ถูกไวยากรณ์
-- *Kami tinggal di Pattani.* :: *di* betul kerana menunjukkan tempat tinggal.<br>*di* ถูก เพราะบอกตำแหน่งที่อยู่
-+ *Ayah pergi di masjid.* :: *pergi* menunjukkan arah, maka mesti *ke*.<br>*pergi* บอกทิศทาง ต้องใช้ *ke*
-- *Dia datang dari Yala.* :: *dari* betul untuk tempat asal.<br>*dari* ถูกสำหรับสถานที่ต้นทาง
-- *Adik ke sekolah.* :: Gramatis; frasa sendi nama *ke sekolah* boleh menjadi predikat.<br>ถูก วลีบุพบทเป็นภาคแสดงได้
 ?? Unit manakah yang mempunyai subjek dan predikat?<br>หน่วยใดมีประธานและภาคแสดง
 - *frasa* :: Frasa tiada subjek dan predikat.<br>วลีไม่มีประธานและภาคแสดง
 - *morfem* :: Morfem unit pembentuk kata, bukan unit ayat.<br>หน่วยคำเป็นหน่วยสร้างคำ
@@ -212,8 +207,6 @@ Arahan: Pilih jawapan yang paling tepat; sebab bagi setiap pilihan akan dipapark
 
 ```latihan-isi
 Arahan: Taipkan satu perkataan yang betul. | พิมพ์คำที่ถูกต้องหนึ่งคำ
-Saya pergi ___ pasar. | ke | *Pergi* menunjukkan arah, maka *ke*. | *pergi* บอกทิศทาง จึงใช้ *ke*
-Kata *membaca* dibentuk daripada awalan *meN-* dan kata dasar ___. | baca | Bunyi *b* tidak luluh: *meN-* + *baca* → *membaca*. | เสียง *b* ไม่หลอม: *meN-* + *baca* → *membaca*
 Bentuk baku bagi *dah* ialah ___. | sudah | *Dah* ialah bentuk basahan bagi kata bantu aspek *sudah*. | *dah* เป็นรูปภาษาพูดของคำช่วยบอกกาล *sudah*
 Unit bunyi terkecil yang membezakan makna ialah ___. | fonem | Contohnya /p/ dan /b/ dalam *pagi* dan *bagi*. | เช่น /p/ และ /b/ ใน *pagi* กับ *bagi*
 Bidang yang mengkaji susunan kata menjadi ayat ialah ___. | sintaksis | Morfologi mengkaji kata; sintaksis mengkaji ayat. | วจีวิภาคศึกษาคำ วากยสัมพันธ์ศึกษาประโยค
@@ -223,9 +216,6 @@ Bidang yang mengkaji susunan kata menjadi ayat ialah ___. | sintaksis | Morfolog
 Tajuk: Kenal Pasti Golongan Kata | ระบุชนิดของคำ
 Arahan: Tentukan golongan kata bagi perkataan yang diberikan. | ระบุชนิดของคำที่กำหนด
 Kategori: Kata nama · คำนาม | Kata kerja · คำกริยา | Kata adjektif · คำคุณศัพท์ | Kata tugas · คำไวยากรณ์
-*pasar* dalam *Ibu pergi ke pasar.* | Kata nama | Menamakan tempat; boleh didahului *ke*. | เป็นชื่อสถานที่ มี *ke* นำหน้าได้
-*pergi* dalam *Ibu pergi ke pasar.* | Kata kerja | Menyatakan perbuatan; boleh menerima *sudah*. | บอกการกระทำ
-*ke* dalam *Ibu pergi ke pasar.* | Kata tugas | Kata sendi nama yang menunjukkan arah. | คำบุพบทบอกทิศทาง
 *gembira* dalam *Kami sangat gembira.* | Kata adjektif | Menyatakan perasaan; boleh menerima *sangat*. | บอกความรู้สึก รับ *sangat* ได้
 *sangat* dalam *Kami sangat gembira.* | Kata tugas | Kata penguat. | คำเน้น
 *universiti* dalam *Dia belajar di universiti.* | Kata nama | Boleh didahului penjodoh bilangan *sebuah*. | มีลักษณนามนำหน้าได้
@@ -233,10 +223,8 @@ Kategori: Kata nama · คำนาม | Kata kerja · คำกริยา | K
 
 ```latihan-betulkan
 Arahan: Klik perkataan yang salah dalam setiap ayat. | กดคำที่ผิดในแต่ละประโยค
-Selamat datang [di→ke] Universiti Thaksin. | *Datang* menunjukkan arah tuju, maka *ke*. | *datang* บอกทิศทางที่มาถึง จึงใช้ *ke*
 Sila [tanggal→tanggalkan] kasut sebelum masuk. | Kata kerja ini memerlukan akhiran *-kan* dalam ayat perintah. | กริยานี้ต้องเติม *-kan* ในประโยคคำสั่ง
 Ayah pergi [di→ke] masjid. | *Di* menunjukkan tempat, bukan arah. | *di* บอกตำแหน่ง ไม่ได้บอกทิศทาง
-Dilarang merokok di [sini kawasan→kawasan ini]. | Kata nama *kawasan* hadir dahulu, diikuti penunjuk *ini*. | คำนาม *kawasan* อยู่หน้า ตามด้วยคำชี้ *ini*
 Saya [tak→tidak] dapat hadir ke mesyuarat itu. | Surat rasmi menggunakan bentuk baku *tidak*. | จดหมายทางการใช้รูปมาตรฐาน *tidak*
 ```
 
@@ -246,7 +234,6 @@ Label: Subjek · ประธาน | Inti predikat · แกนภาคแส�
 [Adik saya|Subjek] [belajar|Inti predikat] [di Universiti Thaksin|Keterangan]. | *Adik saya* diterangkan; *belajar* inti predikat; *di Universiti Thaksin* menyatakan tempat. | *Adik saya* เป็นประธาน *belajar* เป็นแกนภาคแสดง ส่วนที่เหลือบอกสถานที่
 [Pelajar itu|Subjek] [membaca|Inti predikat] [buku|Objek]. | *buku* dikenai perbuatan *membaca*. | *buku* ถูกกระทำ
 [Ibu|Subjek] [membeli|Inti predikat] [ikan|Objek] [pagi tadi|Keterangan]. | *pagi tadi* keterangan waktu yang boleh digugurkan. | *pagi tadi* บอกเวลา ตัดได้
-[Kakak|Subjek] [menulis|Inti predikat] [surat|Objek] [di bilik|Keterangan]. | *surat* objek; *di bilik* keterangan tempat. | *surat* เป็นกรรม *di bilik* บอกสถานที่
 ```
 
 ```latihan-golong
@@ -254,46 +241,14 @@ Arahan: Golongkan setiap topik ke dalam bidang yang betul. | จัดแต่�
 Kategori: Morfologi · วจีวิภาค | Sintaksis · วากยสัมพันธ์
 Pembentukan kata *bekerja*<br>การสร้างคำ *bekerja* | Morfologi | Pengimbuhan *ber-* ialah proses pembentukan kata. | การเติม *ber-* เป็นกระบวนการสร้างคำ
 Susunan subjek dan predikat<br>การเรียงประธานกับภาคแสดง | Sintaksis | Subjek dan predikat ialah unsur ayat. | ประธานและภาคแสดงเป็นส่วนประกอบของประโยค
-Golongan kata: kata nama, kata kerja<br>ชนิดคำ: นาม กริยา | Morfologi | *Tatabahasa Dewan* membincangkan golongan kata dalam bahagian morfologi. | *Tatabahasa Dewan* อธิบายชนิดคำไว้ในภาควจีวิภาค
 Ayat aktif dan ayat pasif<br>ประโยคกรรตุวาจกและกรรมวาจก | Sintaksis | Ragam ayat ialah perkara peringkat ayat. | วาจกเป็นเรื่องระดับประโยค
-Penggandaan *rumah-rumah*<br>การซ้ำคำ *rumah-rumah* | Morfologi | Penggandaan ialah proses pembentukan kata. | การซ้ำคำเป็นกระบวนการสร้างคำ
-Frasa nama *rumah besar itu*<br>วลีนาม *rumah besar itu* | Sintaksis | Frasa ialah unit sintaksis. | วลีเป็นหน่วยทางวากยสัมพันธ์
 ```
 
 ```latihan-benar
 Arahan: Tentukan sama ada setiap pernyataan betul atau salah. | ตัดสินว่าข้อความแต่ละข้อถูกหรือผิด
 Klausa sentiasa dapat berdiri sendiri sebagai ayat.<br>อนุประโยคยืนเป็นประโยคเองได้เสมอ | S | Klausa tak bebas seperti *bahawa dia sakit* tidak dapat berdiri sendiri. | อนุประโยคไม่อิสระ เช่น *bahawa dia sakit* ยืนเองไม่ได้
-*Tatabahasa Dewan* membahagikan tatabahasa kepada morfologi dan sintaksis.<br>*Tatabahasa Dewan* แบ่งไวยากรณ์เป็นวจีวิภาคและวากยสัมพันธ์ | B | Kedua-dua bidang ini menjadi dua bahagian utama buku itu. | สองภาคนี้เป็นสองส่วนหลักของตำรา
 Bahasa basahan sesuai digunakan dalam surat rasmi kepada dekan.<br>ภาษาพูดเหมาะกับจดหมายทางการถึงคณบดี | S | Surat rasmi memerlukan bahasa baku dan laras rasmi. | จดหมายทางการต้องใช้ภาษามาตรฐานและระดับภาษาทางการ
-Awalan *ber-* ialah morfem bebas.<br>อุปสรรค *ber-* เป็นหน่วยคำอิสระ | S | *ber-* ialah morfem terikat kerana tidak dapat hadir bersendirian. | *ber-* เป็นหน่วยคำไม่อิสระ เพราะปรากฏเดี่ยว ๆ ไม่ได้
 Ayat yang gramatis masih boleh tidak sesuai dengan konteks.<br>ประโยคที่ถูกไวยากรณ์อาจยังไม่เหมาะกับบริบทได้ | B | Contohnya *Awak boleh datang esok?* gramatis tetapi tidak sesuai kepada dekan. | เช่น *Awak boleh datang esok?* ถูกไวยากรณ์แต่ไม่เหมาะจะใช้กับคณบดี
-```
-
-### Kajian Kes<br>กรณีศึกษา
-
-**Papan tanda menyambut rombongan pelajar Malaysia.** Kelab pelajar Muslim di sebuah universiti di Songkhla menyediakan papan tanda untuk menyambut pelajar pertukaran dari Malaysia seperti yang berikut:
-**ป้ายต้อนรับคณะนักศึกษามาเลเซีย** ชมรมนักศึกษามุสลิมของมหาวิทยาลัยแห่งหนึ่งในสงขลาเตรียมป้ายต้อนรับนักศึกษาจากมาเลเซียที่มาแลกเปลี่ยน ดังนี้
-
-> *Selamat datang di Universiti Thaksin. Sila tanggal kasut sebelum masuk di bilik solat. Dilarang merokok di sini kawasan. Kami sangat gembira awak semua datang.*
-
-```latihan-terbuka
-Tajuk: Soalan Kajian Kes | คำถามกรณีศึกษา
-Arahan: Tulis jawapan anda, kemudian bandingkan dengan contoh jawapan dan kriteria penilaian. | เขียนคำตอบ แล้วเทียบกับตัวอย่างคำตอบและเกณฑ์การประเมิน
-?? Kenal pasti sekurang-kurangnya tiga kesalahan dan nyatakan sama ada kesalahan itu pada peringkat kata atau peringkat ayat.<br>ระบุข้อผิดอย่างน้อย 3 จุด และบอกว่าเป็นปัญหาระดับคำหรือระดับประโยค
-= *datang **ke***; *tanggalkan kasut* (+ **-kan**); *masuk **ke** bilik solat*; *di kawasan ini* — hukum D-M
-* Menyenaraikan sekurang-kurangnya tiga kesalahan yang betul<br>ระบุข้อผิดได้ถูกอย่างน้อย 3 จุด
-* Memberikan bentuk pembetulan bagi setiap kesalahan<br>ให้รูปที่ถูกของแต่ละจุด
-* Menyatakan peringkat kata atau ayat dengan tepat<br>ระบุระดับคำหรือระดับประโยคได้ถูก
-?? Adakah kata ganti nama *awak semua* sesuai untuk papan tanda rasmi? Apakah kata yang patut digunakan?<br>สรรพนาม *awak semua* เหมาะกับป้ายทางการหรือไม่ ควรใช้คำใดแทน
-= *anda semua* / *saudara-saudari*
-* Menyatakan bahawa *awak semua* tidak sesuai kerana terlalu mesra<br>บอกว่า *awak semua* ไม่เหมาะเพราะเป็นกันเองเกินไป
-* Mencadangkan pengganti yang sesuai seperti *anda semua* atau *saudara-saudari*<br>เสนอคำแทนที่เหมาะสม
-* Mengaitkan pilihan dengan laras rasmi papan tanda<br>โยงกับระดับภาษาทางการของป้าย
-?? Kesalahan manakah yang mungkin berpunca daripada pengaruh bahasa Thai? Jelaskan.<br>ข้อผิดใดน่าจะเกิดจากอิทธิพลของภาษาไทย อธิบาย
-= *di/ke* (*datang di*, *masuk di*) berpunca daripada "ที่" dalam bahasa Thai yang digunakan untuk tempat dan arah; *di sini kawasan* mungkin meniru susunan "ที่นี่" dan bukan susunan D-M.
-* Mengenal pasti sekurang-kurangnya satu kesalahan yang berkaitan dengan bahasa Thai<br>ระบุข้อผิดที่เกี่ยวกับภาษาไทยได้อย่างน้อย 1 จุด
-* Menjelaskan struktur bahasa Thai yang menyebabkannya<br>อธิบายโครงสร้างภาษาไทยที่เป็นต้นเหตุ
-* Memberikan bentuk bahasa Melayu yang betul<br>ให้รูปภาษามลายูที่ถูก
 ```
 
 ## 10. Rumusan<br>สรุปบทเรียน

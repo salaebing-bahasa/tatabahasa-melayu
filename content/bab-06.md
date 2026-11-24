@@ -191,21 +191,13 @@ Arahan: Pilih jawapan yang paling tepat; sebab bagi setiap pilihan akan dipapark
 + keadaan :: Menyatakan keadaan pintu tanpa menonjolkan pelaku.<br>บอกสภาพโดยไม่เน้นผู้กระทำ
 - berbalas-balas :: Itu makna *ber-* (*bersalaman*).<br>เป็นความหมายของ *ber-*
 - dapat dilakukan :: Makna ini lazim dalam ayat nafi (*tak terangkat*).<br>มักใช้ในประโยคปฏิเสธ
-?? *peN-* + *kumpul* =<br>เติม *peN-* กับ *kumpul*
-- *pekumpul* :: *k* mesti luluh dengan *peng-*.<br>*k* ต้องหลอมด้วย *peng-*
-- *pengkumpul* :: *k* luluh; tiada gugus konsonan.<br>*k* หลอม ไม่มีพยัญชนะควบ
-+ *pengumpul* :: *peN-* mengikut peraturan *meN-*: *k* luluh → *peng-*.<br>ใช้กฎเดียวกับ *meN-*
-- *penkumpul* :: *pen-* untuk *c, d, j, t*.<br>*pen-* ใช้กับ c d j t
 ```
 
 ```latihan-isi
 Arahan: Taipkan bentuk kata terbitan yang betul. | พิมพ์รูปคำแปลงที่ถูกต้อง
 *meN-* + *pukul* = ___ | memukul | *p* luluh → *mem-*. | เสียง *p* หลอม
 *meN-* + *tarik* = ___ | menarik | *t* luluh → *men-*. | เสียง *t* หลอม
-*meN-* + *kumpul* = ___ | mengumpul | *k* luluh → *meng-*. | เสียง *k* หลอม
 *meN-* + *bom* = ___ | mengebom | Kata dasar satu suku kata. | คำฐานพยางค์เดียว
-*peN-* + *sapu* = ___ | penyapu | *s* luluh → *peny-*. | เสียง *s* หลอม
-*ber-* + *ternak* = ___ | beternak | Suku kata pertama *ter-* berakhir dengan *-er*. | พยางค์แรกลงท้าย *-er*
 ```
 
 ```latihan-golong
@@ -215,16 +207,12 @@ Kategori: Kata kerja · คำกริยา | Kata nama · คำนาม | K
 *menulis* | Kata kerja | *meN-* membentuk kata kerja aktif. | *meN-* สร้างกริยา
 *penulis* | Kata nama | *peN-* membentuk kata nama pelaku. | *peN-* สร้างนามผู้กระทำ
 *terbesar* | Kata adjektif | *ter-* + adjektif = paling. | *ter-* + คุณศัพท์ = ที่สุด
-*setinggi* | Kata adjektif | *se-* + adjektif = sama. | *se-* + คุณศัพท์ = เท่ากัน
-*berbaju* | Kata kerja | *ber-* = memakai. | *ber-* = สวม
-*pelajar* | Kata nama | *pe-* + *ajar* (bentuk *pel-*): orang yang belajar. | ผู้เรียน
 ```
 
 ```latihan-betulkan
 Arahan: Klik perkataan yang salah ejaannya. | กดคำที่สะกดผิด
 Kerajaan akan [mempastikan→memastikan] semua pelajar menerima bantuan. | *p* luluh apabila menerima *meN-*. | เสียง *p* หลอมเมื่อเติม *meN-*
 Kempen ini [mensasarkan→menyasarkan] 10,000 peserta. | *s* luluh → *meny-*. | เสียง *s* หลอมเป็น *meny-*
-Ayah [berkerja→bekerja] di pejabat pos. | *ber-* → *be-* di hadapan *ker-*. | *ber-* เป็น *be-* หน้า *ker-*
 Mereka [mencat→mengecat] pagar sekolah. | *cat* satu suku kata → *menge-*. | *cat* พยางค์เดียวจึงใช้ *menge-*
 ```
 
@@ -234,7 +222,6 @@ Label: Subjek · ประธาน | Inti predikat · แกนภาคแส�
 [Pekerja itu|Subjek] [mengecat|Inti predikat] [dinding|Objek] [semalam|Keterangan]. | *mengecat* = *menge-* + *cat*; *semalam* keterangan waktu. | *semalam* บอกเวลา
 [Kakak|Subjek] [menyapu|Inti predikat] [lantai|Objek]. | *menyapu*: *s* luluh. | *s* หลอม
 [Dompetnya|Subjek] [tertinggal|Inti predikat] [di kedai|Keterangan]. | *ter-* tidak sengaja; tiada objek. | ไม่ตั้งใจ ไม่มีกรรม
-[Mereka|Subjek] [bersalaman|Inti predikat] [selepas solat|Keterangan]. | *ber-* berbalas-balas; *selepas solat* waktu. | ซึ่งกันและกัน
 ```
 
 ```latihan-golong
@@ -243,9 +230,6 @@ Kategori: mem- | men- | meng- | meny- | me-
 *baca* | mem- | *b* → *mem-*. | *b* ใช้ *mem-*
 *cari* | men- | *c* → *men-*. | *c* ใช้ *men-*
 *ambil* | meng- | Vokal → *meng-*. | สระใช้ *meng-*
-*sewa* | meny- | *s* luluh → *meny-*. | *s* หลอมเป็น *meny-*
-*lawat* | me- | *l* → *me-*. | *l* ใช้ *me-*
-*hantar* | meng- | *h* → *meng-*. | *h* ใช้ *meng-*
 ```
 
 ```latihan-benar
@@ -253,40 +237,6 @@ Arahan: Tentukan sama ada setiap pernyataan betul atau salah. | ตัดสิ�
 Bunyi *p* dalam *proses* luluh apabila menerima *meN-*.<br>เสียง *p* ใน *proses* หลอมเมื่อเติม *meN-* | S | Gugus *pr-* tidak luluh: *memproses*. | พยัญชนะควบไม่หลอม
 *peN-* mengikut peraturan perubahan bentuk yang sama dengan *meN-*.<br>*peN-* ใช้กฎเดียวกับ *meN-* | B | *pembaca, penulis, pengira, penyapu*. | ตัวอย่าง
 *ter-* dalam *terbesar* bermaksud tidak sengaja.<br>*ter-* ใน *terbesar* หมายถึงไม่ได้ตั้งใจ | S | Di sini *ter-* bermaksud paling. | ในที่นี้หมายถึงที่สุด
-*be-* digunakan di hadapan kata dasar yang bermula dengan *r*.<br>ใช้ *be-* หน้าคำฐานที่ขึ้นต้นด้วย *r* | B | *ber-* + *rehat* → *berehat*. | ตัวอย่าง
-```
-
-### Kajian Kes<br>กรณีศึกษา
-
-**Papan kenyataan dan tajuk berita.** Pelajar mengumpulkan teks sebenar daripada media dalam talian berbahasa Melayu seperti yang berikut:
-**ป้ายประกาศและพาดหัวข่าว** นักศึกษาเก็บข้อความจริงจากสื่อออนไลน์ภาษามลายูได้ดังนี้
-
-> 1. *Kerajaan akan mempastikan semua pelajar menerima bantuan.*
-> 2. *Kempen ini mensasarkan 10,000 peserta.*
-> 3. *Pihak universiti sedang memproses permohonan anda.*
-> 4. *Polis mengkaji punca kemalangan.*
-
-**Aspek analisis**
-**ประเด็นวิเคราะห์**
-
-```latihan-terbuka
-Tajuk: Soalan Kajian Kes | คำถามกรณีศึกษา
-Arahan: Tulis jawapan anda, kemudian bandingkan dengan contoh jawapan dan kriteria penilaian. | เขียนคำตอบ แล้วเทียบกับตัวอย่างคำตอบและเกณฑ์การประเมิน
-?? Ayat manakah yang menggunakan *meN-* secara salah? Tulis bentuk yang betul dan jelaskan sebabnya berdasarkan peraturan peleburan bunyi.<br>ประโยคใดใช้ *meN-* ผิดกฎ ให้เขียนรูปที่ถูกและอธิบายเหตุผลตามกฎการหลอมเสียง
-= Ayat 1 dan 2 salah: *mempastikan* → *memastikan* (*p* luluh) · *mensasarkan* → *menyasarkan* (*s* luluh → *meny-*).
-* Mengenal pasti kedua-dua ayat yang salah<br>ระบุสองประโยคที่ผิด
-* Bentuk yang betul<br>ให้รูปที่ถูก
-* Menyatakan peraturan peleburan bunyi<br>ระบุกฎการหลอมเสียง
-?? *Memproses* dan *mengkaji* kelihatan menyalahi peraturan (*p* dan *k* tidak luluh). Jelaskan sebab bagi setiap kata (petunjuk: gugus konsonan *pr-* dan pembezaan makna daripada *mengaji* "membaca al-Quran").<br>*memproses* และ *mengkaji* ดูเหมือนขัดกฎ (*p* และ *k* ไม่หลอม) อธิบายเหตุผลของแต่ละคำ (ข้อแนะ: พยัญชนะควบ *pr-* และการแยกความหมายจาก *mengaji* "อ่านอัลกุรอาน")
-= *memproses*: *pr-* gugus konsonan, maka *p* tidak luluh. *mengkaji*: *k* dikekalkan untuk membezakan makna daripada *mengaji* (membaca al-Quran).
-* Sebab gugus konsonan bagi *memproses*<br>เหตุผลพยัญชนะควบ
-* Sebab pembezaan makna bagi *mengkaji*<br>เหตุผลแยกความหมาย
-* Penjelasan yang jelas dan tepat<br>อธิบายชัดเจน
-?? Tulis cadangan ringkas tentang cara guru bahasa Melayu patut mengajarkan kes pengecualian supaya pelajar tidak keliru.<br>เขียนข้อเสนอสั้น ๆ ว่าครูภาษามลายูควรสอนกรณียกเว้นอย่างไรเพื่อไม่ให้ผู้เรียนสับสน
-= Ajar peraturan umum dahulu, kemudian kumpulkan pengecualian dalam satu jadual kecil (gugus konsonan, *mengkaji*, *mempunyai*) dengan latihan kerap dan contoh daripada akhbar.
-* Cadangan yang praktikal<br>ข้อเสนอใช้ได้จริง
-* Menyebut sekurang-kurangnya dua jenis pengecualian<br>กล่าวถึงข้อยกเว้นอย่างน้อย 2 แบบ
-* Disusun dengan jelas<br>เรียบเรียงชัดเจน
 ```
 
 ## 10. Rumusan<br>สรุปบทเรียน

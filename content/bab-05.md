@@ -214,11 +214,6 @@ Arahan: Pilih jawapan yang paling tepat; sebab bagi setiap pilihan akan dipapark
 - *yang* :: Pancangan relatif.<br>แบบสัมพันธ์
 - *bahawa* :: Pancangan komplemen.<br>แบบส่วนเติมเต็ม
 + *kerana* :: Memulakan klausa keterangan sebab.<br>นำอนุประโยคบอกเหตุ
-?? Penjodoh bilangan bagi *rumah* ialah<br>ลักษณนามของ *rumah*
-- *ekor* :: Untuk haiwan.<br>ใช้กับสัตว์
-+ *buah* :: Untuk benda besar dan umum seperti rumah dan kereta.<br>ใช้กับสิ่งของใหญ่ทั่วไป
-- *helai* :: Untuk benda nipis.<br>ใช้กับสิ่งบาง
-- *biji* :: Untuk benda kecil dan bulat.<br>ใช้กับสิ่งเล็กกลม
 ```
 
 ```latihan-isi
@@ -226,20 +221,15 @@ Arahan: Taipkan kata tugas yang betul. | พิมพ์คำไวยากร
 Hadiah ini ___ ayah saya. | daripada | Sumber berupa orang. | แหล่งที่มาเป็นบุคคล
 Kami bertolak ___ Yala pada pukul 8. | dari | Titik mula tempat. | จุดเริ่มต้นที่เป็นสถานที่
 Itu ___ rumah saya. (nafi) | bukan | Menafikan frasa nama. | ปฏิเสธวลีนาม
-Ibu kota Thailand ___ Bangkok. | ialah | *ialah* di hadapan frasa nama. | *ialah* หน้าวลีนาม
-Dia membeli dua ___ kucing. | ekor | Penjodoh bilangan untuk haiwan. | ลักษณนามของสัตว์
 ```
 
 ```latihan-golong
 Tajuk: Kenal Pasti Golongan Kata | ระบุชนิดของคำ
 Arahan: Tentukan golongan kata bagi perkataan yang diberikan. | ระบุชนิดของคำที่กำหนด
 Kategori: Kata tugas · คำไวยากรณ์ | Kata nama · คำนาม | Kata kerja · คำกริยา | Kata adjektif · คำคุณศัพท์
-*daripada* | Kata tugas | Kata sendi nama. | คำบุพบท
 *tidak* | Kata tugas | Kata nafi. | คำปฏิเสธ
-*hendak* | Kata tugas | Kata bantu ragam. | คำช่วยบอกความต้องการ
 *pejabat* | Kata nama | Menamakan tempat. | ชื่อสถานที่
 *menghantar* | Kata kerja | Perbuatan dengan objek. | การกระทำ
-*bahawa* | Kata tugas | Kata hubung komplemen. | คำเชื่อม
 ```
 
 ```latihan-betulkan
@@ -247,8 +237,6 @@ Arahan: Klik perkataan yang salah. | กดคำที่ผิด
 Esok kita pergi [di→ke] perpustakaan. | *ke* untuk arah. | *ke* บอกทิศทาง
 Bawa [buku tiga buah→tiga buah buku]. | Bilangan + penjodoh bilangan di hadapan kata nama. | จำนวน + ลักษณนามอยู่หน้าคำนาม
 Surat [dari→daripada] pensyarah sudah tiba. | Sumber berupa orang. | แหล่งที่มาเป็นบุคคล
-Pengerusi kelab itu [adalah→ialah] Encik Ali. | Frasa nama *Encik Ali* didahului *ialah*, bukan *adalah*. | หน้าวลีนามใช้ *ialah* ไม่ใช่ *adalah*
-Dia [tidak→bukan] pelajar di sini. | Kata nama dinafikan dengan *bukan*. | คำนามปฏิเสธด้วย *bukan*
 ```
 
 ```latihan-analisis
@@ -256,57 +244,22 @@ Arahan: Pilih fungsi bagi setiap bahagian ayat, kemudian klik Semak. | เลื
 Label: Subjek · ประธาน | Kata bantu · คำช่วย | Inti predikat · แกนภาคแสดง | Objek · กรรม | Keterangan · ส่วนขยาย
 [Ayah|Subjek] [sudah|Kata bantu] [pulang|Inti predikat] [dari pejabat|Keterangan]. | *sudah* kata bantu aspek; *dari pejabat* keterangan tempat asal. | *sudah* เป็นคำช่วย
 [Kami|Subjek] [akan|Kata bantu] [menghantar|Inti predikat] [surat itu|Objek] [kepada dekan|Keterangan]. | *kepada dekan* menyatakan penerima. | บอกผู้รับ
-[Dia|Subjek] [sedang|Kata bantu] [membaca|Inti predikat] [novel|Objek] [di perpustakaan|Keterangan]. | *sedang* aspek; *di perpustakaan* tempat. | คำช่วย + สถานที่
 [Adik|Subjek] [belum|Kata bantu] [tidur|Inti predikat]. | *belum* kata bantu aspek. | *belum* เป็นคำช่วย
 ```
 
 ```latihan-golong
 Arahan: Golongkan kata tugas mengikut kumpulannya. | จัดกลุ่มคำไวยากรณ์
 Kategori: Penyambung ayat · คำเชื่อม | Praklausa · หน้าอนุประโยค | Prafrasa · หน้าวลี | Pascakata · ท้ายคำ
-*bahawa* | Penyambung ayat | Kata hubung pancangan komplemen. | คำเชื่อมแบบฝัง
 *wah* | Praklausa | Kata seru. | คำอุทาน
 *sudah* | Prafrasa | Kata bantu aspek. | คำช่วยบอกกาล
 *-kah* | Pascakata | Partikel pertanyaan. | คำเสริมคำถาม
-*jangan* | Praklausa | Kata perintah. | คำสั่ง
-*kepada* | Prafrasa | Kata sendi nama. | คำบุพบท
 ```
 
 ```latihan-benar
 Arahan: Tentukan sama ada setiap pernyataan betul atau salah. | ตัดสินว่าข้อความแต่ละข้อถูกหรือผิด
 Kata tugas mudah menerima kata baharu.<br>คำไวยากรณ์รับคำใหม่ได้ง่าย | S | Kata tugas golongan tertutup. | เป็นกลุ่มคำปิด
-*adalah* hadir di hadapan frasa adjektif.<br>*adalah* ใช้หน้าวลีคุณศัพท์ | B | Contoh *Cadangan itu adalah baik.* | ตัวอย่าง
 *dari* digunakan untuk perbandingan.<br>*dari* ใช้ในการเปรียบเทียบ | S | Perbandingan menggunakan *daripada*. | การเปรียบเทียบใช้ *daripada*
 *yang* ialah kata hubung pancangan relatif.<br>*yang* เป็นคำเชื่อมแบบฝังอนุประโยคสัมพันธ์ | B | *yang* memperkenalkan klausa yang menerangkan kata nama. | *yang* นำอนุประโยคที่ขยายนาม
-```
-
-### Kajian Kes<br>กรณีศึกษา
-
-**Mesej dalam kumpulan LINE kelas.** Ketua kelas menghantar pengumuman kepada rakan sekelas yang berasal dari Malaysia seperti yang berikut:
-**ข้อความในกลุ่มไลน์ของห้อง** หัวหน้าห้องโพสต์ประกาศถึงเพื่อนร่วมชั้นที่มาจากมาเลเซียว่า
-
-> *Esok kita pergi di perpustakaan pukul 9 pagi. Bawa pen dua batang dan buku tiga buah. Surat dari pensyarah sudah saya hantar ke semua orang. Saya adalah ketua kelas, jadi kalau ada masalah tanya kepada saya.*
-
-**Aspek analisis**
-**ประเด็นวิเคราะห์**
-
-```latihan-terbuka
-Tajuk: Soalan Kajian Kes | คำถามกรณีศึกษา
-Arahan: Tulis jawapan anda, kemudian bandingkan dengan contoh jawapan dan kriteria penilaian. | เขียนคำตอบ แล้วเทียบกับตัวอย่างคำตอบและเกณฑ์การประเมิน
-?? Kenal pasti semua kata tugas yang salah digunakan dan nyatakan kumpulannya (*prafrasa / penyambung / praklausa*).<br>ระบุคำไวยากรณ์ที่ใช้ผิดทั้งหมดและจัดว่าอยู่กลุ่มใด (*prafrasa / penyambung / praklausa*)
-= *pergi di* → *pergi ke* (prafrasa: kata sendi nama) · *pen dua batang, buku tiga buah* → *dua batang pen, tiga buah buku* (prafrasa: kata bilangan dan penjodoh bilangan) · *surat dari* → *surat daripada* (prafrasa) · *hantar ke semua orang* → *hantar kepada semua orang* (prafrasa) · *Saya adalah ketua* → *Saya ketua* (prafrasa: kata pemeri)
-* Mengenal pasti sekurang-kurangnya empat kesalahan<br>ระบุข้อผิดอย่างน้อย 4 จุด
-* Pembetulan yang betul<br>แก้ถูกต้อง
-* Kumpulan kata tugas dinyatakan dengan betul<br>ระบุกลุ่มคำไวยากรณ์ถูก
-?? Tulis semula pengumuman itu dengan betul dan sopan; tambahkan partikel *-lah* atau kata perintah sopan *sila* pada tempat yang sesuai.<br>เขียนประกาศใหม่ให้ถูกต้องและสุภาพ เติมคำเสริม *-lah* หรือคำสั่งสุภาพ *sila* ในจุดที่เหมาะ
-= *Esok kita akan pergi ke perpustakaan pada pukul 9 pagi. Sila bawa dua batang pen dan tiga buah buku. Surat daripada pensyarah sudah saya hantar kepada semua orang. Saya ketua kelas; jika ada masalah, tanyalah saya.*
-* Semua kesalahan kata tugas dibetulkan<br>แก้คำไวยากรณ์ผิดครบ
-* Menggunakan *sila* atau *-lah* dengan sesuai<br>ใช้ *sila* หรือ *-lah* อย่างเหมาะสม
-* Nada sopan dan sesuai untuk pengumuman<br>น้ำเสียงสุภาพเหมาะกับประกาศ
-?? Bincangkan sejauh mana kesalahan penggunaan *di/ke/dari/daripada* menjejaskan kefahaman pembaca.<br>อภิปรายว่าการใช้ *di/ke/dari/daripada* ผิดกระทบความเข้าใจของผู้อ่านมากหรือน้อยเพียงใด
-= Kesalahan *di/ke* boleh mengubah makna (berada vs pergi), manakala *dari/daripada* biasanya masih difahami tetapi tidak baku; kesannya lebih kepada imej penulis daripada kefahaman.
-* Membezakan kesalahan yang mengubah makna dengan yang tidak<br>แยกข้อผิดที่เปลี่ยนความหมายกับที่ไม่เปลี่ยน
-* Contoh daripada teks<br>ยกตัวอย่างจากข้อความ
-* Kesimpulan yang seimbang<br>สรุปอย่างสมดุล
 ```
 
 ## 10. Rumusan<br>สรุปบทเรียน

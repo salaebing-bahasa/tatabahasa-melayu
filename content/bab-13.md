@@ -191,11 +191,6 @@ Arahan: Pilih jawapan yang paling tepat; sebab bagi setiap pilihan akan dipapark
 + *Pandai sungguh budak itu.* :: Predikat FA dikedepankan.<br>ภาคแสดงอยู่หน้า
 - *Budak itu dipuji oleh guru.* :: Ayat pasif, susunan biasa.<br>กรรมวาจก เรียงปกติ
 - *Budak itu pandai.* :: Susunan biasa.<br>เรียงปกติ
-?? *Ahmad menaiki bas yang berwarna biru.* menunjukkan proses<br>แสดงกระบวนการ
-- pengguguran :: Tiada unsur yang digugurkan secara utama.<br>ไม่ได้ละส่วนใดเป็นหลัก
-+ peluasan :: Ayat *Bas itu berwarna biru* dipancangkan.<br>ฝังประโยคอื่นเข้ามา
-- penyusunan semula :: Susunan subjek–predikat tidak berubah.<br>ลำดับไม่เปลี่ยน
-- pemasifan :: Ayat masih aktif.<br>ยังเป็นกรรตุวาจก
 ```
 
 ```latihan-isi
@@ -203,19 +198,15 @@ Arahan: Tukarkan kepada ayat pasif dengan melengkapkan tempat kosong. | เต�
 *Saya sudah membaca buku itu.* → *Buku itu sudah saya ___.* | baca | Pelaku diri pertama: kata kerja tanpa *meN-*. | บุรุษที่ 1 กริยาไม่มี *meN-*
 *Polis menangkap pencuri itu.* → *Pencuri itu ___ oleh polis.* | ditangkap | Pelaku kata nama: *di-*. | ผู้กระทำเป็นนามใช้ *di-*
 *Kamu mesti membersihkan bilik ini.* → *Bilik ini mesti kamu ___.* | bersihkan | Akhiran *-kan* dikekalkan. | คงปัจจัย *-kan*
-*Kami akan menghantar surat itu.* → *Surat itu ___ kami hantar.* | akan | Kata bantu di hadapan kata ganti nama. | คำช่วยอยู่หน้าสรรพนาม
 ```
 
 ```latihan-golong
 Tajuk: Kenal Pasti Golongan Kata | ระบุชนิดของคำ
 Arahan: Tentukan golongan kata bagi perkataan yang diberikan. | ระบุชนิดของคำที่กำหนด
 Kategori: Kata kerja · คำกริยา | Kata tugas · คำไวยากรณ์ | Kata nama · คำนาม | Kata ganti nama · คำสรรพนาม
-*dirasmikan* | Kata kerja | Kata kerja pasif *di-…-kan*. | กริยากรรมวาจก
 *oleh* | Kata tugas | Kata sendi nama yang memperkenalkan pelaku. | คำบุพบทนำผู้กระทำ
-*kena* | Kata tugas | Kata bantu pasif. | คำช่วยกรรมวาจก
 *anda* | Kata ganti nama | Diri kedua. | บุรุษที่ 2
 *menteri* | Kata nama | Pelaku kata nama. | นามผู้กระทำ
-*akan* dalam *Surat itu akan saya hantar.* | Kata tugas | Kata bantu aspek. | คำช่วยบอกกาล
 ```
 
 ```latihan-betulkan
@@ -223,7 +214,6 @@ Arahan: Klik bahagian yang salah. | กดส่วนที่ผิด
 Borang permohonan perlu [diisi oleh anda→anda isi] dengan lengkap. | Pelaku diri kedua. | บุรุษที่ 2
 Surat tawaran [kami akan→akan kami] hantar minggu depan. | Kata bantu di hadapan kata ganti nama. | คำช่วยอยู่หน้าสรรพนาม
 Buku itu telah [dibaca oleh saya→saya baca]. | Pelaku diri pertama. | บุรุษที่ 1
-Kerja itu sudah saya [menyiapkan→siapkan]. | *meN-* digugurkan. | ตัด *meN-*
 ```
 
 ```latihan-analisis
@@ -232,7 +222,6 @@ Label: Subjek · ประธาน | Kata bantu · คำช่วย | Pelaku 
 [Bangunan itu|Subjek] [akan|Kata bantu] [dirasmikan|Kata kerja] [oleh menteri|Pelaku]. | Pasif *di-* dengan pelaku kata nama. | กรรมวาจกด้วย *di-*
 [Lelaki itu|Subjek] [masih|Kata bantu] [saya|Pelaku] [hormati|Kata kerja]. | Pasif diri pertama: kata bantu + pelaku + kata kerja. | บุรุษที่ 1
 [Borang ini|Subjek] [perlu|Kata bantu] [anda|Pelaku] [isi|Kata kerja] [dengan lengkap|Keterangan]. | Pasif diri kedua; *dengan lengkap* keterangan cara. | บุรุษที่ 2
-[Surat tawaran|Subjek] [akan|Kata bantu] [kami|Pelaku] [hantar|Kata kerja] [minggu depan|Keterangan]. | *minggu depan* keterangan waktu. | ส่วนขยายบอกเวลา
 ```
 
 ```latihan-golong
@@ -241,46 +230,13 @@ Kategori: di- | ter- | Diri pertama/kedua · บุรุษที่ 1/2 | kena
 *Tikus itu dimakan kucing.* | di- | Awalan *di-*. | อุปสรรค *di-*
 *Wang itu terambil oleh Rusnee.* | ter- | Tidak sengaja. | ไม่ได้ตั้งใจ
 *Laksam itu kami makan.* | Diri pertama/kedua | Kata ganti nama di hadapan kata kerja. | สรรพนามอยู่หน้ากริยา
-*Dia kena marah.* | kena | Kata bantu *kena*. | คำช่วย *kena*
-*Borang itu belum anda isi.* | Diri pertama/kedua | Pelaku diri kedua. | บุรุษที่ 2
 ```
 
 ```latihan-benar
 Arahan: Tentukan sama ada setiap pernyataan betul atau salah. | ตัดสินว่าข้อความแต่ละข้อถูกหรือผิด
 *Oleh* boleh digugurkan jika pelaku hadir terus selepas kata kerja *di-*.<br>ละ *oleh* ได้ถ้าผู้กระทำอยู่หลังกริยา *di-* ทันที | B | *Tikus itu dimakan kucing.* | ตัวอย่าง
-*Di rumah adik saya.* ialah ayat susunan songsang.<br>*Di rumah adik saya.* เป็นประโยคเรียงสลับ | B | Predikat FSN dikedepankan. | ภาคแสดงวลีบุพบทถูกย้ายไปหน้า
 Pasif dengan *kena* lazimnya untuk peristiwa yang menggembirakan.<br>กรรมวาจกด้วย *kena* มักใช้กับเรื่องดี | S | *Kena* lazimnya untuk peristiwa yang tidak diingini. | *kena* มักใช้กับเรื่องไม่พึงประสงค์
 Peluasan berlaku apabila ayat lain dipancangkan atau digabungkan.<br>การขยายเกิดเมื่อฝังหรือรวมประโยคอื่น | B | Contoh pancangan relatif dengan *yang*. | ตัวอย่างการฝังด้วย *yang*
-```
-
-### Kajian Kes<br>กรณีศึกษา
-
-**Pengumuman pejabat pendaftaran.** Pejabat hubungan antarabangsa sebuah universiti menyediakan draf pengumuman bahasa Melayu kepada pelajar pertukaran seperti yang berikut:
-**ประกาศของงานทะเบียน** สำนักงานวิเทศสัมพันธ์ของมหาวิทยาลัยร่างประกาศภาษามลายูถึงนักศึกษาแลกเปลี่ยนดังนี้
-
-> *Kami akan memeriksa semua dokumen. Borang permohonan perlu diisi oleh anda dengan lengkap. Surat tawaran kami akan hantar minggu depan. Pihak universiti tidak menerima permohonan lewat.*
-
-**Aspek analisis**
-**ประเด็นวิเคราะห์**
-
-```latihan-terbuka
-Tajuk: Soalan Kajian Kes | คำถามกรณีศึกษา
-Arahan: Tulis jawapan anda, kemudian bandingkan dengan contoh jawapan dan kriteria penilaian. | เขียนคำตอบ แล้วเทียบกับตัวอย่างคำตอบและเกณฑ์การประเมิน
-?? Kelaskan ragam setiap ayat dan kenal pasti ayat pasif yang menyalahi peraturan.<br>จำแนกวาจกของแต่ละประโยค และระบุประโยคกรรมวาจกที่ผิดกฎ
-= Ayat 1: aktif · ayat 2: pasif yang salah → *Borang permohonan perlu anda isi dengan lengkap.* · ayat 3: pasif yang salah → *Surat tawaran akan kami hantar minggu depan.* · ayat 4: aktif
-* Ragam setiap ayat dikelaskan<br>จำแนกวาจกทุกประโยค
-* Dua ayat pasif yang salah dikenal pasti<br>ระบุกรรมวาจกที่ผิดสองประโยค
-* Pembetulan mengikut peraturan pelaku diri pertama/kedua<br>แก้ตามกฎบุรุษที่ 1/2
-?? Mengapakah pengumuman rasmi lebih kerap menggunakan ayat pasif? Tulis semula pengumuman itu supaya dokumen dan tarikh akhir menjadi tumpuan.<br>ประกาศทางการมักใช้กรรมวาจกมากกว่า เพราะอะไร เขียนประกาศใหม่ให้เน้นเอกสารและกำหนดเวลาเป็นหัวเรื่อง
-= Ayat pasif menumpukan perkara yang penting kepada pembaca (dokumen, borang, tarikh) dan bukan pejabat. Contoh: *Semua dokumen akan diperiksa. Borang permohonan perlu diisi dengan lengkap. Surat tawaran akan dihantar minggu depan. Permohonan lewat tidak akan diterima.*
-* Sebab penggunaan pasif dijelaskan<br>อธิบายเหตุที่ใช้กรรมวาจก
-* Pengumuman ditulis semula dengan pasif yang betul<br>เขียนประกาศใหม่ด้วยกรรมวาจกที่ถูก
-* Dokumen dan tarikh menjadi tumpuan<br>เน้นเอกสารและวันที่
-?? Tambahkan satu ayat susunan songsang untuk menegaskan tarikh akhir dan jelaskan kesannya terhadap pembaca.<br>เพิ่มประโยคเรียงสลับ 1 ประโยคเพื่อเน้นกำหนดส่ง และอธิบายผลที่ได้ต่อผู้อ่าน
-= *Sebelum 30 November, semua borang mesti dihantar.* — keterangan waktu dikedepankan supaya tarikh akhir menjadi perkara pertama yang dibaca.
-* Ayat susunan songsang yang gramatis<br>ประโยคเรียงสลับที่ถูก
-* Tarikh akhir ditegaskan<br>เน้นวันสุดท้าย
-* Kesan terhadap pembaca dijelaskan<br>อธิบายผลต่อผู้อ่าน
 ```
 
 ## 10. Rumusan<br>สรุปบทเรียน

@@ -185,11 +185,6 @@ Arahan: Pilih jawapan yang paling tepat; sebab bagi setiap pilihan akan dipapark
 - *kata terbitan* :: Tiada imbuhan dalam *lelaki*.<br>ไม่มีปัจจัย
 + *kata ganda separa* :: Suku kata pertama *laki* digandakan.<br>ซ้ำพยางค์แรกของ *laki*
 - *kata tunggal* :: Kata tunggal tidak melalui penggandaan.<br>คำเดี่ยวไม่มีการซ้ำ
-?? Bentuk *mem-* dalam *membaca* dan *men-* dalam *menulis* ialah<br>*mem-* และ *men-* เป็น
-- morfem bebas :: Kedua-duanya tidak boleh hadir bersendirian.<br>ปรากฏลำพังไม่ได้
-- kata dasar :: Kata dasarnya *baca* dan *tulis*.<br>คำฐานคือ *baca* และ *tulis*
-+ alomorf bagi *meN-* :: Bentuk berbeza bagi morfem yang sama mengikut bunyi awal.<br>รูปแปรของหน่วยคำเดียวกันตามเสียงต้น
-- partikel :: Partikel ialah *-lah, -kah, -tah, -pun*.<br>คำเสริมคือ *-lah, -kah, -tah, -pun*
 ?? Pola suku kata *em-pat* ialah<br>รูปแบบพยางค์ของ *em-pat* คือ
 + VK + KVK :: *em* = V+K, *pat* = K+V+K.<br>*em* = VK, *pat* = KVK
 - KV + KVK :: Suku kata pertama bermula dengan vokal, bukan konsonan.<br>พยางค์แรกขึ้นต้นด้วยสระ
@@ -199,10 +194,8 @@ Arahan: Pilih jawapan yang paling tepat; sebab bagi setiap pilihan akan dipapark
 
 ```latihan-isi
 Arahan: Taipkan kata dasar atau bilangan yang betul. | พิมพ์คำฐานหรือจำนวนที่ถูกต้อง
-Kata dasar bagi *menyapu* ialah ___. | sapu | Bunyi *s* luluh: *meN-* + *sapu* → *menyapu*. | เสียง *s* หลอมหายไป
 Kata dasar bagi *memperkenalkan* ialah ___. | kenal | *meN-* + *per-* + *kenal* + *-kan*. | *meN-* + *per-* + *kenal* + *-kan*
 Kata *berlari* terdiri daripada ___ morfem. | 2/dua | *ber-* + *lari*. | *ber-* + *lari*
-Kata *kebersihan* terdiri daripada ___ morfem. | 2/dua | *ke-…-an* dikira satu morfem + *bersih*. | ปัจจัยคร่อมนับหนึ่งหน่วย + *bersih*
 Kata dasar bagi *pelajaran* ialah ___. | ajar | *pe-…-an* + *ajar*; bentuk *pel-* berlaku di hadapan *ajar*. | คำฐานคือ *ajar*
 ```
 
@@ -210,19 +203,15 @@ Kata dasar bagi *pelajaran* ialah ___. | ajar | *pe-…-an* + *ajar*; bentuk *pe
 Tajuk: Kenal Pasti Golongan Kata | ระบุชนิดของคำ
 Arahan: Tentukan golongan kata bagi perkataan yang diberikan. | ระบุชนิดของคำที่กำหนด
 Kategori: Kata nama · คำนาม | Kata kerja · คำกริยา | Kata adjektif · คำคุณศัพท์ | Kata tugas · คำไวยากรณ์
-*kebersihan* | Kata nama | *ke-…-an* + *bersih* membentuk kata nama abstrak. | ปัจจัยคร่อมสร้างคำนามนามธรรม
 *berlari* | Kata kerja | *ber-* + *lari* menyatakan perbuatan. | บอกการกระทำ
-*cantik* | Kata adjektif | Menyatakan sifat; boleh menerima *sangat*. | บอกลักษณะ
 *dan* | Kata tugas | Kata hubung gabungan. | คำเชื่อม
 *pelajaran* | Kata nama | Imbuhan *pe-…-an* membentuk kata nama. | ปัจจัยสร้างคำนาม
-*memperkenalkan* | Kata kerja | *memper-…-kan* membentuk kata kerja transitif. | สร้างสกรรมกริยา
 ```
 
 ```latihan-betulkan
 Arahan: Klik bahagian yang salah. | กดส่วนที่ผิด
 Dia mengesat [air-mata→air mata] anaknya. | Kata majmuk tidak ditulis dengan tanda sempang. | คำประสมไม่เขียนด้วยขีด
 Semua [pelajar-pelajar→pelajar] hadir ke kelas. | Kata nama tidak digandakan selepas penanda jamak *semua*. | ไม่ซ้ำคำหลังคำบอกพหูพจน์
-Kami menaiki [kapalterbang→kapal terbang] ke Kuala Lumpur. | *kapal terbang* bukan kata majmuk mantap, maka ditulis terpisah. | ไม่ใช่คำประสมที่เขียนติด
 Ibu membeli [sayur mayur→sayur-mayur] di pasar. | Kata ganda berentak ditulis dengan tanda sempang. | คำซ้ำแบบสัมผัสใช้ขีด
 ```
 
@@ -232,7 +221,6 @@ Label: Subjek · ประธาน | Inti predikat · แกนภาคแส�
 [Kerajaan negeri|Subjek] [memperkenalkan|Inti predikat] [peraturan baharu|Objek]. | *peraturan baharu* dikenai perbuatan. | ถูกกระทำ
 [Adik|Subjek] [berlari|Inti predikat] [ke sekolah|Keterangan]. | *ke sekolah* menyatakan arah dan boleh digugurkan. | บอกทิศทาง ตัดได้
 [Pelajar itu|Subjek] [mencari|Inti predikat] [makna kata|Objek] [dalam kamus|Keterangan]. | *dalam kamus* keterangan tempat. | ส่วนขยายบอกสถานที่
-[Sayur-mayur|Subjek] [segar|Inti predikat]. | Predikat berintikan kata adjektif *segar*. | ภาคแสดงมีคุณศัพท์เป็นแกน
 ```
 
 ```latihan-golong
@@ -241,18 +229,13 @@ Kategori: Morfem bebas · หน่วยคำอิสระ | Morfem terikat 
 *rumah* | Morfem bebas | Boleh hadir sebagai kata. | ปรากฏเป็นคำได้
 *ber-* | Morfem terikat | Awalan mesti melekat pada kata dasar. | อุปสรรคต้องเกาะคำฐาน
 *-nya* | Morfem terikat | Klitik tidak hadir bersendirian. | คำเกาะปรากฏลำพังไม่ได้
-*dan* | Morfem bebas | Kata tugas juga morfem bebas. | คำไวยากรณ์ก็เป็นหน่วยคำอิสระ
-*-lah* | Morfem terikat | Partikel melekat di hujung kata. | คำเสริมเกาะท้ายคำ
-*cantik* | Morfem bebas | Kata adjektif yang boleh berdiri sendiri. | คุณศัพท์ที่ยืนเองได้
 ```
 
 ```latihan-golong
 Arahan: Tentukan bentuk setiap kata. | ระบุรูปของแต่ละคำ
 Kategori: Tunggal · คำเดี่ยว | Terbitan · คำแปลง | Majmuk · คำประสม | Ganda · คำซ้ำ
-*kapal terbang* | Majmuk | Dua kata dasar dengan satu makna. | คำฐานสองคำ ความหมายเดียว
 *pelajaran* | Terbitan | Kata dasar *ajar* + imbuhan. | คำฐาน *ajar* + ปัจจัย
 *ikan* | Tunggal | Tiada imbuhan, gandaan atau majmuk. | ไม่มีการเติม ซ้ำ หรือประสม
-*lelaki* | Ganda | Penggandaan separa suku kata pertama. | ซ้ำพยางค์แรกบางส่วน
 *buah-buahan* | Ganda | Penggandaan kata berimbuhan *buah* + *-an*. | ซ้ำคำที่เติมปัจจัย
 ```
 
@@ -261,40 +244,6 @@ Arahan: Tentukan sama ada setiap pernyataan betul atau salah. | ตัดสิ�
 Setiap kata mesti terdiri daripada sekurang-kurangnya dua morfem.<br>ทุกคำต้องมีอย่างน้อยสองหน่วยคำ | S | Kata seperti *rumah* hanya satu morfem. | คำอย่าง *rumah* มีหน่วยคำเดียว
 *mem-*, *men-* dan *meng-* ialah alomorf bagi *meN-*.<br>*mem-*, *men-*, *meng-* เป็นรูปแปรของ *meN-* | B | Bentuknya berubah mengikut bunyi awal kata dasar. | รูปเปลี่ยนตามเสียงต้นของคำฐาน
 Pola suku kata asli bahasa Melayu termasuk KKV.<br>รูปแบบพยางค์ดั้งเดิมของมลายูมี KKV | S | Pola asli ialah V, VK, KV dan KVK; KKV datang daripada kata pinjaman. | รูปแบบดั้งเดิมคือ V, VK, KV, KVK ส่วน KKV มาจากคำยืม
-Partikel *-lah* ialah morfem terikat.<br>คำเสริม *-lah* เป็นหน่วยคำไม่อิสระ | B | *-lah* mesti melekat pada kata lain. | *-lah* ต้องเกาะคำอื่น
-```
-
-### Kajian Kes<br>กรณีศึกษา
-
-**Tidak menemui kata dalam kamus.** Seorang pelajar tahun satu membaca berita Malaysia dan menemui ayat berikut:
-**ค้นคำในพจนานุกรมไม่เจอ** นักศึกษาปี 1 คนหนึ่งอ่านข่าวมาเลเซียและพบประโยค
-
-> *Kerajaan negeri memperkenalkan peraturan kebersihan baharu di pasar-pasar awam.*
-
-Dia membuka *Kamus Dewan* pada huruf M untuk mencari *memperkenalkan* dan pada huruf K untuk mencari *kebersihan*, tetapi tidak menemui kedua-duanya sebagai kata entri. Lalu dia menyimpulkan bahawa kamus itu "tidak lengkap".
-เขาเปิด *Kamus Dewan* หมวด M หาคำ *memperkenalkan* และหมวด K หา *kebersihan* แต่ไม่พบเป็นคำตั้ง จึงสรุปว่าพจนานุกรม "ไม่ครบ"
-
-**Aspek analisis**
-**ประเด็นวิเคราะห์**
-
-```latihan-terbuka
-Tajuk: Soalan Kajian Kes | คำถามกรณีศึกษา
-Arahan: Tulis jawapan anda, kemudian bandingkan dengan contoh jawapan dan kriteria penilaian. | เขียนคำตอบ แล้วเทียบกับตัวอย่างคำตอบและเกณฑ์การประเมิน
-?? Jelaskan mengapa dia tidak menemui kata-kata itu dan di bawah kata apakah dia sepatutnya mencari.<br>อธิบายว่าทำไมเขาจึงค้นไม่เจอ และควรเปิดที่คำใด
-= Kamus Dewan menyusun entri mengikut kata dasar. *Memperkenalkan* perlu dicari di bawah *kenal* dan *kebersihan* di bawah *bersih*.
-* Menyatakan bahawa kamus menyusun kata mengikut kata dasar<br>บอกว่าพจนานุกรมเรียงตามคำฐาน
-* Memberikan kata dasar yang betul bagi kedua-dua kata<br>ให้คำฐานที่ถูกต้องทั้งสองคำ
-* Menunjukkan cara imbuhan ditanggalkan<br>แสดงวิธีถอดปัจจัย
-?? Cerakinkan morfem bagi *memperkenalkan, peraturan, kebersihan, pasar-pasar* dan nyatakan bentuk kata setiap satu.<br>แยกหน่วยคำของ *memperkenalkan, peraturan, kebersihan, pasar-pasar* และระบุรูปคำของแต่ละคำ
-= *memperkenalkan* = *meN-* + *per-* + *kenal* + *-kan*, kata terbitan · *peraturan* = *per-…-an* + *atur*, kata terbitan · *kebersihan* = *ke-…-an* + *bersih*, kata terbitan · *pasar-pasar* = *pasar* + penggandaan, kata ganda penuh
-* Cerakinan morfem yang betul bagi keempat-empat kata<br>แยกหน่วยคำถูกทั้งสี่คำ
-* Menamakan bentuk kata setiap satu<br>ระบุรูปคำทุกคำ
-* Mengira apitan sebagai satu morfem<br>นับปัจจัยคร่อมเป็นหนึ่งหน่วย
-?? Sediakan carta alir "Cara mencari kata Melayu dalam kamus" untuk pelajar junior.<br>ทำแผนภูมิขั้นตอน "วิธีค้นคำมลายูในพจนานุกรม" สำหรับรุ่นน้อง
-= 1. Tanggalkan partikel dan klitik → 2. tanggalkan imbuhan dari luar ke dalam → 3. dapatkan kata dasar → 4. cari kata dasar dalam kamus → 5. cari bentuk terbitan di bawah entri itu.
-* Langkah disusun mengikut urutan yang logik<br>ขั้นตอนเรียงอย่างมีเหตุผล
-* Merangkumi penanggalan imbuhan dan pencarian kata dasar<br>มีการถอดปัจจัยและการหาคำฐาน
-* Mudah difahami oleh pelajar junior<br>รุ่นน้องเข้าใจง่าย
 ```
 
 ## 10. Rumusan<br>สรุปบทเรียน

@@ -198,16 +198,10 @@ Arahan: Pilih jawapan yang paling tepat; sebab bagi setiap pilihan akan dipapark
 - *Jemputlah duduk.* :: Silaan.<br>เชื้อเชิญ
 + *Tolong tutup tingkap itu.* :: *tolong* menandakan permintaan.<br>*tolong* บอกการขอร้อง
 - *Susun buku itu.* :: Suruhan.<br>สั่ง
-?? Soalan manakah ialah soalan terbuka?<br>ข้อใดเป็นคำถามเปิด
-- *Adakah awak pelajar?* :: Dijawab *ya/tidak*.<br>ตอบใช่/ไม่ใช่
-+ *Mengapakah awak lewat?* :: Boleh dijawab dengan pelbagai jawapan.<br>ตอบได้หลายแบบ
-- *Awak sudah makan?* :: Soalan tertutup dengan intonasi.<br>คำถามปิด
-- *Betulkah dia datang?* :: Soalan tertutup.<br>คำถามปิด
 ```
 
 ```latihan-isi
 Arahan: Lengkapkan ayat. | เติมประโยคให้สมบูรณ์
-___ awak sudah makan? (soalan tertutup) | Adakah | *Adakah* membentuk soalan ya/tidak. | *Adakah* สร้างคำถามปิด
 ___ nama awak? (orang) | Siapakah/Siapa | Kata tanya untuk orang. | คำถามสำหรับคน
 ___ merokok di kawasan ini. (papan tanda larangan) | Dilarang | Larangan rasmi. | การห้ามแบบทางการ
 ___ masuk, tuan. (silaan) | Jemput/Sila/Silakan | Penanda silaan. | คำเชื้อเชิญ
@@ -217,11 +211,8 @@ ___ masuk, tuan. (silaan) | Jemput/Sila/Silakan | Penanda silaan. | คำเช
 Tajuk: Kenal Pasti Golongan Kata | ระบุชนิดของคำ
 Arahan: Tentukan golongan kata bagi perkataan yang diberikan. | ระบุชนิดของคำที่กำหนด
 Kategori: Kata nama · คำนาม | Kata kerja · คำกริยา | Kata adjektif · คำคุณศัพท์ | Kata tugas · คำไวยากรณ์
-*bernama* dalam *Kucing itu bernama Comel.* | Kata kerja | *ber-* + *nama* membentuk kata kerja. | สร้างกริยา
 *pemurah* dalam *Lelaki itu pemurah.* | Kata adjektif | Menerangkan sifat. | บอกลักษณะ
 *sila* | Kata tugas | Kata perintah (silaan). | คำเชื้อเชิญ
-*wah* | Kata tugas | Kata seru. | คำอุทาน
-*jangan* | Kata tugas | Kata perintah (larangan). | คำห้าม
 *peguam* dalam *Ayahnya peguam.* | Kata nama | Predikat kata nama. | ภาคแสดงเป็นนาม
 ```
 
@@ -230,7 +221,6 @@ Arahan: Klik bahagian yang salah. | กดส่วนที่ผิด
 Jangan [sentuh lah→sentuhlah] barang pameran ini. | Partikel *-lah* ditulis serangkai. | *-lah* เขียนติด
 [Siapa kah→Siapakah] nama awak? | Partikel *-kah* ditulis serangkai. | *-kah* เขียนติด
 Selamat pagi, Prof. [Awak→Tuan] sudah menerima e-mel saya? | Kata ganti nama hormat untuk profesor. | สรรพนามสุภาพสำหรับศาสตราจารย์
-[Hantar→Sila hantar] dokumen tuan sebelum Jumaat. | Perintah kepada ibu bapa perlu dilembutkan dengan *sila*. | ใช้ *sila* ให้สุภาพ
 ```
 
 ```latihan-analisis
@@ -239,7 +229,6 @@ Label: Subjek · ประธาน | Predikat FN · ภาคแสดงวล
 [Hamidah|Subjek] [pelajar universiti|Predikat FN]. | Pola FN + FN. | แบบ FN + FN
 [Anif|Subjek] [sedang tidur|Predikat FK]. | Pola FN + FK. | แบบ FN + FK
 [Lelaki itu|Subjek] [sangat pemurah|Predikat FA]. | Pola FN + FA. | แบบ FN + FA
-[Ke Phuket|Predikat FSN] [ayah saya|Subjek]. | Susunan songsang: predikat FSN dikedepankan. | เรียงสลับ ภาคแสดงอยู่หน้า
 ```
 
 ```latihan-golong
@@ -248,8 +237,6 @@ Kategori: FN + FN | FN + FK | FN + FA | FN + FSN
 *Ayahnya doktor.* | FN + FN | Predikat *doktor* kata nama. | ภาคแสดงเป็นนาม
 *Kucing itu bernama Comel.* | FN + FK | *bernama* kata kerja. | *bernama* เป็นกริยา
 *Bilik itu sangat bersih.* | FN + FA | Predikat frasa adjektif. | ภาคแสดงเป็นวลีคุณศัพท์
-*Jam tangan itu untuk emak.* | FN + FSN | Predikat frasa sendi nama. | ภาคแสดงเป็นวลีบุพบท
-*Mereka belajar bersungguh-sungguh.* | FN + FK | *belajar* kata kerja. | *belajar* เป็นกริยา
 ```
 
 ```latihan-golong
@@ -258,8 +245,6 @@ Kategori: Penyata · บอกเล่า | Tanya · คำถาม | Perintah
 *Encik Malik guru bahasa kami.* | Penyata | Memberi maklumat. | ให้ข้อมูล
 *Bilakah kamu tiba?* | Tanya | Kata tanya + *-kah*. | คำถาม + *-kah*
 *Jemputlah masuk.* | Perintah | Ayat silaan. | ประโยคเชื้อเชิญ
-*Syabas atas kejayaan anda!* | Seruan | Kata seru *syabas*. | คำอุทาน *syabas*
-*Dilarang merokok.* | Perintah | Ayat larangan. | ประโยคห้าม
 ```
 
 ```latihan-benar
@@ -267,37 +252,6 @@ Arahan: Tentukan sama ada setiap pernyataan betul atau salah. | ตัดสิ�
 Ayat dasar boleh berbentuk ayat tanya.<br>ประโยคพื้นฐานเป็นประโยคคำถามได้ | S | Ayat dasar ialah ayat penyata. | ประโยคพื้นฐานเป็นประโยคบอกเล่า
 *Ke Phuket ayah saya.* ialah ayat tunggal.<br>*Ke Phuket ayah saya.* เป็นประโยคเดี่ยว | B | Ayat tunggal susunan songsang. | ประโยคเดี่ยวที่เรียงสลับ
 Ayat tanya boleh menggantikan perintah untuk lebih sopan.<br>ใช้ประโยคคำถามแทนคำสั่งให้สุภาพขึ้นได้ | B | *Bolehkah tuan menghantar borang itu?* | ตัวอย่าง
-*Dilarang* sesuai untuk papan tanda rasmi.<br>*Dilarang* เหมาะกับป้ายทางการ | B | Larangan rasmi. | การห้ามแบบทางการ
-```
-
-### Kajian Kes<br>กรณีศึกษา
-
-**Membalas mesej ibu bapa dari Malaysia.** Seorang pelajar latihan industri di pejabat hubungan antarabangsa universiti membalas mesej ibu bapa yang bertanya tentang permohonan anak mereka seperti yang berikut:
-**แชทตอบผู้ปกครองชาวมาเลเซีย** นักศึกษาฝึกงานที่งานวิเทศสัมพันธ์ของมหาวิทยาลัยตอบข้อความผู้ปกครองที่ถามเรื่องการสมัครเรียนของบุตรดังนี้
-
-> *Hantar dokumen sekarang. Awak tahu tarikh tutup? Jangan lambat. Kalau ada soalan, awak tanya saya.*
-
-**Aspek analisis**
-**ประเด็นวิเคราะห์**
-
-```latihan-terbuka
-Tajuk: Soalan Kajian Kes | คำถามกรณีศึกษา
-Arahan: Tulis jawapan anda, kemudian bandingkan dengan contoh jawapan dan kriteria penilaian. | เขียนคำตอบ แล้วเทียบกับตัวอย่างคำตอบและเกณฑ์การประเมิน
-?? Kelaskan jenis setiap ayat (penyata/tanya/perintah jenis apa).<br>จำแนกชนิดของแต่ละประโยค (บอกเล่า/คำถาม/คำสั่งประเภทใด)
-= *Hantar dokumen sekarang.* — perintah suruhan · *Awak tahu tarikh tutup?* — tanya tanpa kata tanya (tertutup) · *Jangan lambat.* — perintah larangan · *Kalau ada soalan, awak tanya saya.* — perintah suruhan.
-* Jenis setiap ayat dikelaskan<br>จำแนกทุกประโยค
-* Subjenis ayat perintah/tanya dinyatakan<br>ระบุชนิดย่อย
-* Pengelasan yang tepat<br>จำแนกถูกต้อง
-?? Nilai tahap kesantunan mesej itu terhadap ibu bapa yang lebih tua, kemudian tulis semula.<br>ประเมินความสุภาพต่อผู้ปกครองที่อาวุโสกว่า และเขียนใหม่
-= *Sila hantar dokumen tersebut secepat mungkin. Adakah tuan/puan sudah maklum tentang tarikh tutup permohonan? Jika ada sebarang pertanyaan, tuan/puan boleh menghubungi saya.*
-* Menilai mesej sebagai kurang sopan dengan sebab<br>ประเมินว่าไม่สุภาพพร้อมเหตุผล
-* Menggunakan *sila*, ayat tanya dan kata ganti nama hormat<br>ใช้ *sila* คำถาม และสรรพนามสุภาพ
-* Semua ayat gramatis<br>ทุกประโยคถูกไวยากรณ์
-?? Bincangkan perbezaan kepentingan ketepatan tatabahasa dengan kesantunan dalam kerja perkhidmatan.<br>อภิปรายว่าในงานบริการ ความถูกต้องทางไวยากรณ์กับความสุภาพสำคัญต่างกันอย่างไร
-= Dalam kerja perkhidmatan, ketepatan tatabahasa membina kredibiliti, tetapi kesantunan menentukan hubungan dengan pelanggan; mesej yang gramatis tetapi kasar tetap boleh menimbulkan rasa tidak puas hati.
-* Membincangkan kedua-dua aspek<br>อภิปรายทั้งสองด้าน
-* Contoh situasi perkhidmatan<br>ยกตัวอย่างงานบริการ
-* Kesimpulan yang seimbang<br>สรุปอย่างสมดุล
 ```
 
 ## 10. Rumusan<br>สรุปบทเรียน

@@ -193,11 +193,6 @@ Arahan: Pilih jawapan yang paling tepat; sebab bagi setiap pilihan akan dipapark
 + *warna* :: *merah* menyatakan warna.<br>บอกสี
 - *pancaindera* :: Pancaindera ialah rasa, bau, bunyi, sentuhan.<br>ประสาทสัมผัสคือรส กลิ่น เสียง สัมผัส
 - *sifatan* :: Sifatan ialah *baik, rajin*.<br>คุณลักษณะคือ *baik, rajin*
-?? Dalam *Ruslee membelikan isterinya sebuah motosikal.*, *isterinya* ialah<br>*isterinya* คือ
-+ objek tepat :: Hadir terus selepas kata kerja dan menerima faedah.<br>อยู่ติดกริยาและเป็นผู้รับประโยชน์
-- objek sipi :: Objek sipi ialah *sebuah motosikal*.<br>กรรมรองคือ *sebuah motosikal*
-- pelengkap :: *membelikan* transitif; unsurnya objek.<br>เป็นกรรม ไม่ใช่ส่วนเติมเต็ม
-- keterangan :: Keterangan boleh digugurkan; *isterinya* tidak.<br>ส่วนขยายตัดได้ แต่ *isterinya* ตัดไม่ได้
 ```
 
 ```latihan-isi
@@ -205,7 +200,6 @@ Arahan: Taipkan kata yang betul. | พิมพ์คำที่ถูกต้
 Hat Yai lebih besar ___ Songkhla. | daripada | Perbandingan menggunakan *daripada*. | การเปรียบเทียบใช้ *daripada*
 Adik ___ abangnya. (sama tinggi) | setinggi | *se-* menyatakan bandingan setara. | *se-* บอกการเปรียบเทียบเท่ากัน
 Gunung itu ___ tinggi di Malaysia. (penghabisan) | paling | *paling* + kata adjektif menyatakan darjah penghabisan. | *paling* + คุณศัพท์ บอกขั้นสูงสุด
-Kata dasar bagi *membaiki* ialah ___. | baik | *meN-…-i* + *baik* (kata adjektif). | คำฐานเป็นคุณศัพท์
 ```
 
 ```latihan-golong
@@ -214,24 +208,19 @@ Arahan: Tentukan golongan kata bagi perkataan yang diberikan. | ระบุช�
 Kategori: Kata kerja · คำกริยา | Kata adjektif · คำคุณศัพท์ | Kata nama · คำนาม | Kata tugas · คำไวยากรณ์
 *menarik* dalam *Buku itu sangat menarik.* | Kata adjektif | Didahului *sangat* dan tiada objek. | มี *sangat* นำหน้าและไม่มีกรรม
 *menarik* dalam *Dia menarik tali itu.* | Kata kerja | Mempunyai objek *tali itu*. | มีกรรม
-*cepat* dalam *Kereta itu cepat.* | Kata adjektif | Menerangkan sifat kereta. | บอกลักษณะ
 *kecepatan* | Kata nama | *ke-…-an* + *cepat*. | ปัจจัยคร่อมสร้างนาม
-*paling* | Kata tugas | Kata penguat. | คำเน้น
-*membaiki* | Kata kerja | *meN-…-i* + *baik* membentuk kata kerja. | สร้างกริยาจากคุณศัพท์
 ```
 
 ```latihan-betulkan
 Arahan: Klik bahagian yang salah. | กดส่วนที่ผิด
 Kain ini [sangat cantik sekali→cantik sekali]. | Kata penguat tidak ditindihkan. | ไม่ใช้คำเน้นซ้อนกัน
 Kedai ini [paling termurah→paling murah] di Hat Yai. | Pilih *paling* atau *ter-*, bukan kedua-duanya. | เลือก *paling* หรือ *ter-* อย่างใดอย่างหนึ่ง
-Warnanya lebih terang [dari→daripada] kain lain. | Perbandingan menggunakan *daripada*. | การเปรียบเทียบใช้ *daripada*
 Rumah saya [lebih paling→paling] dekat dengan masjid. | Satu penanda darjah sahaja. | ใช้เครื่องหมายระดับเดียว
 ```
 
 ```latihan-analisis
 Arahan: Pilih fungsi bagi setiap bahagian ayat, kemudian klik Semak. | เลือกหน้าที่ของแต่ละส่วนในประโยค แล้วกดตรวจ
 Label: Subjek · ประธาน | Inti predikat · แกนภาคแสดง | Objek · กรรม | Pelengkap · ส่วนเติมเต็ม | Keterangan · ส่วนขยาย
-[Dia|Subjek] [menjadi|Inti predikat] [jurutera|Pelengkap]. | *jurutera* wajib selepas *menjadi*. | จำเป็นหลัง *menjadi*
 [Pak Zainal|Subjek] [menggunting|Inti predikat] [rambut anaknya|Objek]. | Kata kerja transitif dengan objek. | สกรรมกริยามีกรรม
 [Keadaan ekonomi negara|Subjek] [beransur|Inti predikat] [pulih|Pelengkap]. | *pulih* pelengkap kepada *beransur*. | *pulih* เป็นส่วนเติมเต็ม
 [Hat Yai|Subjek] [lebih besar|Inti predikat] [daripada Songkhla|Keterangan]. | Predikat frasa adjektif; *daripada Songkhla* keterangan bandingan. | ภาคแสดงเป็นวลีคุณศัพท์
@@ -243,8 +232,6 @@ Kategori: Transitif · สกรรม | Tak transitif tanpa pelengkap · อก
 *Kakak membaca novel.* | Transitif | *novel* objek; boleh dipasifkan. | *novel* เป็นกรรม
 *Bayi itu tidur.* | Tak transitif tanpa pelengkap | Ayat lengkap tanpa unsur lain. | ประโยคสมบูรณ์โดยไม่ต้องมีส่วนอื่น
 *Dia menjadi jurutera.* | Tak transitif berpelengkap | *jurutera* tidak boleh digugurkan. | ตัด *jurutera* ไม่ได้
-*Mereka berasal dari Narathiwat.* | Tak transitif berpelengkap | *berasal* memerlukan *dari Narathiwat*. | *berasal* ต้องมีส่วนเติมเต็ม
-*Pak Zainal menggunting rambut.* | Transitif | *rambut* objek. | *rambut* เป็นกรรม
 ```
 
 ```latihan-benar
@@ -252,37 +239,6 @@ Arahan: Tentukan sama ada setiap pernyataan betul atau salah. | ตัดสิ�
 Kata kerja transitif boleh dipasifkan.<br>สกรรมกริยาแปลงเป็นกรรมวาจกได้ | B | *Ibu memasak nasi* → *Nasi dimasak oleh ibu*. | ตัวอย่างการแปลง
 Pelengkap boleh digugurkan seperti keterangan.<br>ส่วนเติมเต็มตัดทิ้งได้เหมือนส่วนขยาย | S | Pelengkap wajib; keterangan boleh digugurkan. | ส่วนเติมเต็มต้องมี ส่วนขยายตัดได้
 *Harum* ialah kata adjektif pancaindera.<br>*harum* เป็นคุณศัพท์ประสาทสัมผัส | B | Dikesan melalui deria bau. | รับรู้ด้วยจมูก
-*Membaca* ialah kata kerja asal.<br>*membaca* เป็นกริยาเดิม | S | *membaca* menerima *meN-*, maka kata kerja terbitan. | มี *meN-* จึงเป็นกริยาแปลง
-```
-
-### Kajian Kes<br>กรณีศึกษา
-
-**Ulasan produk dalam talian.** Sebuah kedai di Hat Yai menjual kain batik kepada pelanggan Malaysia melalui platform dalam talian dan menulis keterangan produk seperti yang berikut:
-**รีวิวสินค้าออนไลน์** ร้านค้าในหาดใหญ่ขายผ้าบาติกให้ลูกค้ามาเลเซียผ่านแพลตฟอร์มออนไลน์ และเขียนคำบรรยายสินค้าดังนี้
-
-> *Kain batik ini sangat cantik sekali dan paling termurah di Hat Yai. Warnanya lebih terang dari kain lain. Pelanggan kami sangat suka sekali.*
-
-**Aspek analisis**
-**ประเด็นวิเคราะห์**
-
-```latihan-terbuka
-Tajuk: Soalan Kajian Kes | คำถามกรณีศึกษา
-Arahan: Tulis jawapan anda, kemudian bandingkan dengan contoh jawapan dan kriteria penilaian. | เขียนคำตอบ แล้วเทียบกับตัวอย่างคำตอบและเกณฑ์การประเมิน
-?? Kenal pasti semua kesalahan darjah perbandingan dan kata penguat, kemudian tulis semula dengan betul.<br>ระบุข้อผิดเรื่องระดับการเปรียบเทียบและคำเน้นทั้งหมด แล้วเขียนใหม่ให้ถูกต้อง
-= *sangat cantik sekali* → *sangat cantik* · *paling termurah* → *paling murah* atau *termurah* · *lebih terang dari* → *lebih terang daripada* · *sangat suka sekali* → *sangat suka*
-* Mengenal pasti keempat-empat kesalahan<br>ระบุข้อผิดครบสี่จุด
-* Pembetulan yang betul bagi setiap kesalahan<br>แก้ถูกทุกจุด
-* Menyatakan peraturan yang dilanggar<br>ระบุกฎที่ผิด
-?? Jelaskan mengapa penutur bahasa Thai cenderung menindihkan kata penguat (bandingkan dengan "สวยมาก ๆ เลย").<br>อธิบายว่าทำไมผู้พูดภาษาไทยจึงมักซ้อนคำเน้น (เทียบ "สวยมาก ๆ เลย")
-= Bahasa Thai membenarkan penguat bertindih seperti "สวยมาก ๆ เลย" untuk penegasan emosi, jadi pelajar memindahkan pola itu ke dalam bahasa Melayu. Bahasa Melayu baku hanya menggunakan satu penguat.
-* Mengaitkan kesalahan dengan pola bahasa Thai<br>โยงข้อผิดกับรูปแบบภาษาไทย
-* Memberikan contoh perbandingan yang tepat<br>ยกตัวอย่างเปรียบเทียบถูกต้อง
-* Menyatakan peraturan bahasa baku<br>ระบุกฎภาษามาตรฐาน
-?? Bagaimanakah teks yang tidak gramatis menjejaskan kredibiliti kedai apabila pelanggannya rakyat Malaysia?<br>ข้อความที่ผิดไวยากรณ์ส่งผลต่อความน่าเชื่อถือของร้านค้าอย่างไรเมื่อลูกค้าเป็นชาวมาเลเซีย
-= Teks yang tidak gramatis memberi gambaran kurang profesional dan boleh menimbulkan keraguan tentang kualiti produk; pelanggan Malaysia peka terhadap bahasa baku dalam urusan jual beli.
-* Mengaitkan ketepatan bahasa dengan imej perniagaan<br>โยงความถูกต้องของภาษากับภาพลักษณ์ธุรกิจ
-* Memberikan sekurang-kurangnya satu kesan yang konkrit<br>ระบุผลกระทบที่เป็นรูปธรรม
-* Hujah yang jelas dan teratur<br>มีเหตุผลชัดเจน
 ```
 
 ## 10. Rumusan<br>สรุปบทเรียน

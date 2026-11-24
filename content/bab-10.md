@@ -180,18 +180,11 @@ Arahan: Pilih jawapan yang paling tepat; sebab bagi setiap pilihan akan dipapark
 - keterangan :: Tiada kata kerja yang diterangkan.<br>ไม่มีกริยาให้ขยาย
 - pelengkap :: Pelengkap hadir selepas kata kerja tertentu.<br>ส่วนเติมเต็มอยู่หลังกริยาบางคำ
 - subjek :: Subjeknya *Buku itu*.<br>ประธานคือ *Buku itu*
-?? Pembetulan bagi *Universiti di mana saya belajar* ialah<br>แก้ *Universiti di mana saya belajar* เป็น
-- *Universiti di mana-mana saya belajar* :: *di mana-mana* bermaksud di semua tempat.<br>หมายถึงทุกแห่ง
-- *Universiti yang mana saya belajar* :: *yang mana* juga tiruan *which*.<br>เป็นการเลียนแบบ *which*
-+ *Universiti tempat saya belajar* :: *tempat* menggantikan penghubung relatif *where*.<br>ใช้ *tempat* แทน *where*
-- *Universiti di sana saya belajar* :: *di sana* kata ganti nama tunjuk tempat, bukan penghubung.<br>ไม่ใช่คำเชื่อม
 ```
 
 ```latihan-isi
 Arahan: Taipkan kata sendi nama yang betul. | พิมพ์คำบุพบทที่ถูกต้อง
 Dia mahir ___ bahasa Arab. | dalam | Bidang menggunakan *dalam*. | สาขาใช้ *dalam*
-Perlawanan antara Yala ___ Pattani berlangsung malam ini. | dengan | Pasangan *antara … dengan*. | ใช้คู่กับ *dengan*
-Sikapnya ___ pelajaran sangat positif. | terhadap | Sikap menggunakan *terhadap*. | ทัศนคติใช้ *terhadap*
 Kami tinggal di sini ___ tahun 2020. | sejak | Bermula dari waktu. | ตั้งแต่
 Adik takut ___ gelap. | akan | Kata adjektif perasaan + *akan*. | คุณศัพท์บอกความรู้สึก + *akan*
 ```
@@ -202,16 +195,12 @@ Arahan: Tentukan golongan kata bagi perkataan yang diberikan. | ระบุช�
 Kategori: Kata adjektif · คำคุณศัพท์ | Kata tugas · คำไวยากรณ์ | Kata nama · คำนาม | Kata kerja · คำกริยา
 *mahir* dalam *Dia mahir dalam bahasa Arab.* | Kata adjektif | Inti FA; boleh menerima *sangat*. | คำหลักวลีคุณศัพท์
 *dalam* dalam *Dia mahir dalam bahasa Arab.* | Kata tugas | Kata sendi nama. | คำบุพบท
-*atas* dalam *di atas meja* | Kata tugas | Kata arah. | คำบอกทิศ
 *meja* dalam *di atas meja* | Kata nama | Inti frasa nama dalam FSN. | คำนาม
-*legam* dalam *hitam legam* | Kata adjektif | Penerang khusus warna. | คำขยายเฉพาะสี
-*nian* dalam *cantik nian* | Kata tugas | Kata penguat belakang. | คำเน้น
 ```
 
 ```latihan-betulkan
 Arahan: Klik bahagian yang salah. | กดส่วนที่ผิด
 Saya berasal dari Narathiwat, [di mana→tempat] bahasa Melayu digunakan setiap hari. | *di mana* bukan penghubung relatif. | *di mana* ไม่ใช่คำเชื่อมสัมพันธ์
-Universiti itu terletak antara Songkhla [dan→dengan] Phatthalung. | *antara … dengan*. | ใช้คู่กับ *dengan*
 Saya rajin [di→dalam] pelajaran. | Bidang menggunakan *dalam*. | สาขาใช้ *dalam*
 Dia [sangat mahir sekali→sangat mahir] dalam menulis. | Penguat tidak ditindihkan. | ไม่ใช้คำเน้นซ้อน
 ```
@@ -219,7 +208,6 @@ Dia [sangat mahir sekali→sangat mahir] dalam menulis. | Penguat tidak ditindih
 ```latihan-analisis
 Arahan: Pilih fungsi bagi setiap bahagian ayat, kemudian klik Semak. | เลือกหน้าที่ของแต่ละส่วนในประโยค แล้วกดตรวจ
 Label: Subjek · ประธาน | Inti predikat · แกนภาคแสดง | Pelengkap · ส่วนเติมเต็ม | Keterangan · ส่วนขยาย
-[Abang|Subjek] [mahir|Inti predikat] [dalam bahasa Arab|Keterangan]. | *dalam bahasa Arab* keterangan bidang bagi FA. | ส่วนขยายบอกสาขา
 [Hadiah itu|Subjek] [untuk ibu|Inti predikat]. | FSN menjadi predikat. | วลีบุพบทเป็นภาคแสดง
 [Kami|Subjek] [belajar|Inti predikat] [di perpustakaan|Keterangan]. | FSN keterangan tempat. | ส่วนขยายบอกสถานที่
 [Mereka|Subjek] [tinggal|Inti predikat] [di asrama|Pelengkap]. | FSN pelengkap kepada *tinggal*. | ส่วนเติมเต็มของ *tinggal*
@@ -231,8 +219,6 @@ Kategori: Predikat · ภาคแสดง | Keterangan · ส่วนขย�
 *Hadiah itu **untuk ibu**.* | Predikat | FSN menerangkan subjek. | วลีบุพบทกล่าวถึงประธาน
 *Kami makan **di kantin**.* | Keterangan | Boleh digugurkan. | ตัดได้
 *Mereka tinggal **di Yala**.* | Pelengkap | Wajib selepas *tinggal*. | จำเป็นหลัง *tinggal*
-*Adik saya **di rumah**.* | Predikat | FSN menerangkan subjek. | วลีบุพบทกล่าวถึงประธาน
-*Ayah membaca **di beranda**.* | Keterangan | Tempat perbuatan; boleh digugurkan. | สถานที่ ตัดได้
 ```
 
 ```latihan-benar
@@ -240,37 +226,6 @@ Arahan: Tentukan sama ada setiap pernyataan betul atau salah. | ตัดสิ�
 *Nian* ialah kata penguat belakang.<br>*nian* เป็นคำเน้นที่อยู่หลัง | B | *cantik nian*. | ตัวอย่าง
 Dalam *di bawah meja*, *bawah* ialah kata sendi nama.<br>ใน *di bawah meja* — *bawah* เป็นคำบุพบท | S | *bawah* kata arah; *di* kata sendi nama. | *bawah* เป็นคำบอกทิศ
 Frasa sendi nama boleh menjadi predikat.<br>วลีบุพบทเป็นภาคแสดงได้ | B | *Buku itu di atas meja.* | ตัวอย่าง
-*di mana* boleh digunakan sebagai penghubung relatif dalam bahasa baku.<br>*di mana* ใช้เป็นคำเชื่อมสัมพันธ์ในภาษามาตรฐานได้ | S | Gunakan *tempat* atau *yang*. | ใช้ *tempat* หรือ *yang*
-```
-
-### Kajian Kes<br>กรณีศึกษา
-
-**Esei permohonan biasiswa pertukaran.** Seorang pelajar memohon biasiswa pertukaran ke sebuah universiti di Malaysia dan menulis perenggan memperkenalkan diri seperti yang berikut:
-**เรียงความสมัครทุนแลกเปลี่ยน** นักศึกษาสมัครทุนแลกเปลี่ยนไปมหาวิทยาลัยในมาเลเซียและเขียนย่อหน้าแนะนำตัวว่า
-
-> *Saya berasal dari Narathiwat, di mana bahasa Melayu digunakan setiap hari. Saya sangat minat kepada bahasa dan budaya Melayu. Universiti di mana saya belajar sekarang terletak antara Songkhla dan Phatthalung. Saya rajin di pelajaran dan sangat mahir sekali dalam menulis.*
-
-**Aspek analisis**
-**ประเด็นวิเคราะห์**
-
-```latihan-terbuka
-Tajuk: Soalan Kajian Kes | คำถามกรณีศึกษา
-Arahan: Tulis jawapan anda, kemudian bandingkan dengan contoh jawapan dan kriteria penilaian. | เขียนคำตอบ แล้วเทียบกับตัวอย่างคำตอบและเกณฑ์การประเมิน
-?? Kenal pasti semua frasa adjektif dan frasa sendi nama, kemudian tunjukkan kesalahannya.<br>ระบุวลีคุณศัพท์และวลีบุพบททุกวลี และชี้จุดผิด
-= FA: *sangat minat* (salah, → *sangat berminat*), *rajin di pelajaran* (→ *rajin dalam pelajaran*), *sangat mahir sekali* (→ *sangat mahir*). FSN: *di mana* (→ *tempat*), *antara Songkhla dan Phatthalung* (→ *dengan*).
-* Mengenal pasti FA dan FSN dalam teks<br>ระบุวลีคุณศัพท์และวลีบุพบท
-* Menunjukkan kesalahan dalam setiap frasa<br>ชี้ข้อผิดของแต่ละวลี
-* Pembetulan yang betul<br>แก้ถูกต้อง
-?? Tulis semula perenggan itu supaya betul dan meyakinkan jawatankuasa pemilih.<br>เขียนย่อหน้าใหม่ให้ถูกต้องและน่าเชื่อถือสำหรับกรรมการคัดเลือก
-= *…Narathiwat, tempat bahasa Melayu digunakan…; sangat berminat akan/terhadap…; Universiti tempat saya belajar… antara Songkhla dengan Phatthalung; rajin dalam pelajaran; sangat mahir dalam penulisan*
-* Semua kesalahan dibetulkan<br>แก้ข้อผิดครบ
-* Perenggan gramatis dan lancar<br>ย่อหน้าถูกไวยากรณ์และลื่นไหล
-* Nada meyakinkan untuk permohonan biasiswa<br>น้ำเสียงน่าเชื่อถือ
-?? Bincangkan kesalahan mana yang berpunca daripada bahasa Inggeris dan kesalahan mana yang berpunca daripada bahasa Thai.<br>อภิปรายว่าข้อผิดใดมาจากภาษาอังกฤษ ข้อผิดใดมาจากภาษาไทย
-= Bahasa Inggeris: *di mana* (where), *minat kepada* (interested in). Bahasa Thai: *antara … dan* (ระหว่าง…และ), *rajin di* (ขยันใน → *dalam*), *sangat … sekali* (มาก ๆ).
-* Kesalahan dikelaskan mengikut sumber pengaruh<br>จำแนกตามแหล่งอิทธิพล
-* Bukti struktur bahasa sumber<br>มีหลักฐานโครงสร้างภาษาต้นทาง
-* Penjelasan yang jelas<br>อธิบายชัดเจน
 ```
 
 ## 10. Rumusan<br>สรุปบทเรียน

@@ -80,7 +80,6 @@ window.COURSE = {
       CLO3: [
         { ms: "Analisis Struktur Ayat", th: "วิเคราะห์โครงสร้างประโยค", h: "#/bab/9/latihan" },
         { ms: "Rajah pohon (Bab 8, Kuiz B)", th: "แผนภูมิต้นไม้", h: "#/bab/8/kuiz" },
-        { ms: "Kajian Kes (Bab 8–13)", th: "กรณีศึกษา", h: "#/bab/12/latihan" },
         { ms: "Kuiz Sintaksis (Bab 8–13)", th: "แบบทดสอบภาควากยสัมพันธ์", h: "#/kuiz/sintaksis" }
       ],
       CLO4: [
