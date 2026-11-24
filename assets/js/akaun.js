@@ -8,7 +8,7 @@
      pelajar/{uid}/jawapan/{auto}  { bab, laluan, jenis, latihan, item, soalan, jawapan, betul, masa }
    Peraturan keselamatan: lihat fail firestore.rules · กฎความปลอดภัยอยู่ในไฟล์ firestore.rules */
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
-import { getAuth, GoogleAuthProvider, onAuthStateChanged, signInWithPopup, signInWithRedirect, getRedirectResult, signOut }
+import { getAuth, GoogleAuthProvider, onAuthStateChanged, signInWithPopup, signOut }
   from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
 import { getFirestore, doc, getDoc, setDoc, addDoc, getDocs, deleteDoc, collection, query, orderBy, limit, serverTimestamp }
   from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
@@ -131,10 +131,48 @@ document.addEventListener("click", () => { const m = $("#akaun-menu"); if (m && 
 document.addEventListener("keydown", e => { if (e.key === "Escape") { const m = $("#akaun-menu"); if (m && !m.hidden) { m.hidden = true; const b = $("#akaun-saya"); if (b) { b.setAttribute("aria-expanded", "false"); b.focus(); } } } });
 function esc(s) { return String(s).replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c])); }
 
+/* Log masuk guna tetingkap pop-up sahaja. Cara "redirect" tidak berfungsi di Safari/iPhone kerana laman ini
+   (github.io) dan halaman log masuk (firebaseapp.com) berlainan domain → ralat "missing initial state".
+   ใช้ล็อกอินแบบหน้าต่างป๊อปอัปอย่างเดียว แบบ redirect ใช้ไม่ได้บน Safari/iPhone เพราะเว็บ (github.io)
+   กับหน้าล็อกอิน (firebaseapp.com) อยู่คนละโดเมน → ขึ้นข้อความ "missing initial state" */
+const UA = navigator.userAgent || "";
+const DALAM_LINE = /\bLine\//i.test(UA);
+const DALAM_APP = DALAM_LINE || /FBAN|FBAV|FB_IAB|Instagram|Messenger|MicroMessenger|TikTok|wv\)/i.test(UA);
+
+function bukaDiLuarLine() {
+  /* LINE membuka pautan dengan ?openExternalBrowser=1 dalam pelayar luar (Safari/Chrome)
+     LINE จะเปิดลิงก์ที่มี ?openExternalBrowser=1 ในเบราว์เซอร์ภายนอก (Safari/Chrome) ให้อัตโนมัติ */
+  const u = new URL(location.href); u.searchParams.set("openExternalBrowser", "1"); location.href = u.toString();
+}
+
+function panduanPelayar(jenis) {
+  const d = document.createElement("dialog"); d.className = "akaun-dialog"; d.setAttribute("aria-labelledby", "pl-h");
+  const bm = jenis === "app"
+    ? "Log masuk dengan Google tidak dibenarkan dalam aplikasi ini (LINE, Facebook, Messenger dan lain-lain). Sila buka laman ini dalam Safari atau Chrome: tekan menu ⋯ lalu pilih “Buka dalam pelayar”, atau salin pautan dan tampal dalam Safari/Chrome."
+    : "Pelayar anda menyekat tetingkap pop-up log masuk. Sila benarkan pop-up untuk laman ini, kemudian tekan Log masuk sekali lagi. Di iPhone/iPad: Tetapan → Safari → matikan “Sekat Pop-up”.";
+  const th = jenis === "app"
+    ? "Google ไม่อนุญาตให้ล็อกอินในแอปนี้ (LINE, Facebook, Messenger ฯลฯ) กรุณาเปิดเว็บนี้ใน Safari หรือ Chrome: กดเมนู ⋯ แล้วเลือก “เปิดในเบราว์เซอร์” หรือคัดลอกลิงก์ไปวางใน Safari/Chrome"
+    : "เบราว์เซอร์บล็อกหน้าต่างป๊อปอัปสำหรับล็อกอิน กรุณาอนุญาตป๊อปอัปสำหรับเว็บนี้ แล้วกด “เข้าสู่ระบบ” อีกครั้ง บน iPhone/iPad: การตั้งค่า → Safari → ปิด “ปิดกั้นป๊อปอัป”";
+  d.innerHTML = `<h2 id="pl-h"><span class="bm" lang="ms">Tidak dapat log masuk di sini</span><span class="tr">ยังล็อกอินในหน้านี้ไม่ได้</span></h2>
+    <p class="bm" lang="ms">${bm}</p><p class="tr">${th}</p>
+    <div class="akaun-dlg-btn"><button type="button" class="btn btn-line" data-salin><span lang="ms">Salin pautan</span> · คัดลอกลิงก์</button><button type="button" class="btn btn-solid" data-tutup><span lang="ms">Faham</span> · เข้าใจแล้ว</button></div>`;
+  document.body.appendChild(d);
+  const tutup = () => { d.close(); d.remove(); };
+  d.querySelector("[data-tutup]").onclick = tutup;
+  d.querySelector("[data-salin]").onclick = async () => {
+    try { await navigator.clipboard.writeText(location.href); toast("Pautan disalin · คัดลอกลิงก์แล้ว"); }
+    catch (e) { prompt("Salin pautan ini · คัดลอกลิงก์นี้", location.href); }
+  };
+  d.addEventListener("cancel", e => { e.preventDefault(); tutup(); });
+  d.showModal();
+}
+
 async function masuk() {
+  if (DALAM_LINE) { bukaDiLuarLine(); return; }
   try { await signInWithPopup(auth, provider); }
   catch (e) {
-    if (e && (e.code === "auth/popup-blocked" || e.code === "auth/operation-not-supported-in-this-environment")) { await signInWithRedirect(auth, provider); return; }
+    if (e && e.code === "auth/popup-blocked") { panduanPelayar("popup"); return; }
+    if (e && (e.code === "auth/operation-not-supported-in-this-environment" || e.code === "auth/web-storage-unsupported" || DALAM_APP)) { panduanPelayar("app"); return; }
     if (e && (e.code === "auth/popup-closed-by-user" || e.code === "auth/cancelled-popup-request")) return;
     console.error(e); toast("Log masuk gagal · ล็อกอินไม่สำเร็จ — " + (e && e.code ? e.code : ""));
   }
@@ -325,7 +363,6 @@ window.addEventListener("tb:jawab", e => {
 window.addEventListener("pagehide", () => { if (tSimpan) simpanSekarang(); });
 document.addEventListener("visibilitychange", () => { if (document.visibilityState === "hidden" && tSimpan) simpanSekarang(); });
 
-getRedirectResult(auth).catch(e => console.error(e));
 onAuthStateChanged(auth, u => {
   pengguna = null; sedia = false; cacheJawapan = null; sijil = null; cacheKata = null; profil = null; cacheKelas = null; memuat = !!u; butang();
   if (u) selepasMasuk(u).finally(() => { if (memuat) { memuat = false; segar(); } });
