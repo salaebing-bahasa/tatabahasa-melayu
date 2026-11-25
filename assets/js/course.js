@@ -79,14 +79,14 @@ window.COURSE = {
       ],
       CLO3: [
         { ms: "Analisis Struktur Ayat", th: "วิเคราะห์โครงสร้างประโยค", h: "#/bab/9/latihan" },
-        { ms: "Rajah pohon (Bab 8, Kuiz B)", th: "แผนภูมิต้นไม้", h: "#/bab/8/kuiz" },
+        { ms: "Kuiz Penilaian Bab 8", th: "แบบทดสอบท้ายบท บทที่ 8", h: "#/bab/8/kuiz" },
         { ms: "Kuiz Sintaksis (Bab 8–13)", th: "แบบทดสอบภาควากยสัมพันธ์", h: "#/kuiz/sintaksis" }
       ],
       CLO4: [
         { ms: "Betulkan Kesalahan Ayat", th: "แก้ไขประโยคที่ผิด", h: "#/bab/5/latihan" },
         { ms: "Kesalahan Lazim", th: "ข้อผิดพลาดที่พบบ่อย", h: "#/bab/13/kesalahan" },
         { ms: "Alat Latihan: ayat aktif → pasif", th: "เครื่องมือฝึก: กรรตุ → กรรมวาจก", h: "#/alat" },
-        { ms: "Soalan Pemikiran Kritis (Kuiz C) dan projek minggu 15", th: "โจทย์คิดวิเคราะห์ และโครงงานสัปดาห์ 15", h: "#/bab/13/kuiz" }
+        { ms: "Projek pembetulan teks sebenar (minggu 15)", th: "โครงงานแก้ไขข้อความจริง สัปดาห์ 15", h: "#/bab/13/kuiz" }
       ]
     }
   },
