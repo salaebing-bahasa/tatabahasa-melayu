@@ -118,8 +118,7 @@ window.COURSE = {
 
   teachers: [
     { name: "ผศ.มูหำหมัด สาแลบิง", roleMs: "Penyelaras dan pensyarah kursus", role: "อาจารย์ผู้รับผิดชอบรายวิชาและผู้สอน", email: "smuhammad@tsu.ac.th" },
-    { name: "อ.ดร.กูซม ยามิรูเด็ง", roleMs: "Penyelaras dan pensyarah kursus", role: "อาจารย์ผู้รับผิดชอบรายวิชาและผู้สอน", email: "kusom@tsu.ac.th" },
-    { name: "อ.ซัมซียะห์ มะลาเฮง", roleMs: "Penyelaras dan pensyarah kursus", role: "อาจารย์ผู้รับผิดชอบรายวิชาและผู้สอน", email: "" }
+    { name: "อ.ดร.กูซม ยามิรูเด็ง", roleMs: "Penyelaras dan pensyarah kursus", role: "อาจารย์ผู้รับผิดชอบรายวิชาและผู้สอน", email: "kusom@tsu.ac.th" }
   ],
   officeMs: "Rabu 13.00–16.00, bilik pensyarah 1316 (Penolong Profesor Muhammad Salaebing)",
   office: "วันพุธ 13.00–16.00 น. ห้องพักอาจารย์ 1316 (ผศ.มูหำหมัด สาแลบิง)",
