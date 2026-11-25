@@ -194,19 +194,10 @@ Arahan: Pilih jawapan yang paling tepat; sebab bagi setiap pilihan akan dipapark
 ```
 
 ```latihan-isi
-Arahan: Taipkan bentuk kata terbitan yang betul. | พิมพ์รูปคำแปลงที่ถูกต้อง
-*meN-* + *pukul* = ___ | memukul | *p* luluh → *mem-*. | เสียง *p* หลอม
-*meN-* + *tarik* = ___ | menarik | *t* luluh → *men-*. | เสียง *t* หลอม
-*meN-* + *bom* = ___ | mengebom | Kata dasar satu suku kata. | คำฐานพยางค์เดียว
-```
-
-```latihan-golong
-Tajuk: Kenal Pasti Golongan Kata | ระบุชนิดของคำ
-Arahan: Tentukan golongan kata bagi perkataan yang diberikan. | ระบุชนิดของคำที่กำหนด
-Kategori: Kata kerja · คำกริยา | Kata nama · คำนาม | Kata adjektif · คำคุณศัพท์
-*menulis* | Kata kerja | *meN-* membentuk kata kerja aktif. | *meN-* สร้างกริยา
-*penulis* | Kata nama | *peN-* membentuk kata nama pelaku. | *peN-* สร้างนามผู้กระทำ
-*terbesar* | Kata adjektif | *ter-* + adjektif = paling. | *ter-* + คุณศัพท์ = ที่สุด
+Arahan: Pilih kata yang betul untuk mengisi tempat kosong. | เลือกคำที่ถูกต้องเติมในช่องว่าง
+*meN-* + *pukul* = ___ | memukul | *p* luluh → *mem-*. | เสียง *p* หลอม | mempukul / memukul / mepukul / menukul
+*meN-* + *tarik* = ___ | menarik | *t* luluh → *men-*. | เสียง *t* หลอม | mentarik / mengtarik / menarik / mearik
+*meN-* + *bom* = ___ | mengebom | Kata dasar satu suku kata. | คำฐานพยางค์เดียว | membom / mebom / menbom / mengebom
 ```
 
 ```latihan-betulkan
@@ -214,14 +205,6 @@ Arahan: Klik perkataan yang salah ejaannya. | กดคำที่สะกด�
 Kerajaan akan [mempastikan→memastikan] semua pelajar menerima bantuan. | *p* luluh apabila menerima *meN-*. | เสียง *p* หลอมเมื่อเติม *meN-*
 Kempen ini [mensasarkan→menyasarkan] 10,000 peserta. | *s* luluh → *meny-*. | เสียง *s* หลอมเป็น *meny-*
 Mereka [mencat→mengecat] pagar sekolah. | *cat* satu suku kata → *menge-*. | *cat* พยางค์เดียวจึงใช้ *menge-*
-```
-
-```latihan-analisis
-Arahan: Pilih fungsi bagi setiap bahagian ayat, kemudian klik Semak. | เลือกหน้าที่ของแต่ละส่วนในประโยค แล้วกดตรวจ
-Label: Subjek · ประธาน | Inti predikat · แกนภาคแสดง | Objek · กรรม | Keterangan · ส่วนขยาย
-[Pekerja itu|Subjek] [mengecat|Inti predikat] [dinding|Objek] [semalam|Keterangan]. | *mengecat* = *menge-* + *cat*; *semalam* keterangan waktu. | *semalam* บอกเวลา
-[Kakak|Subjek] [menyapu|Inti predikat] [lantai|Objek]. | *menyapu*: *s* luluh. | *s* หลอม
-[Dompetnya|Subjek] [tertinggal|Inti predikat] [di kedai|Keterangan]. | *ter-* tidak sengaja; tiada objek. | ไม่ตั้งใจ ไม่มีกรรม
 ```
 
 ```latihan-golong

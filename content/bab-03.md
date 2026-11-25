@@ -221,19 +221,10 @@ Arahan: Pilih jawapan yang paling tepat; sebab bagi setiap pilihan akan dipapark
 ```
 
 ```latihan-isi
-Arahan: Taipkan kata yang betul. | พิมพ์คำที่ถูกต้อง
-Dia ___ pelajar. (nafi) | bukan | Kata nama dinafikan dengan *bukan*. | คำนามปฏิเสธด้วย *bukan*
-Ahmad, mari ___ makan bersama-sama. (termasuk pendengar) | kita | *kita* merangkumi Ahmad sebagai pendengar. | *kita* รวม Ahmad ผู้ฟัง
-Ayah membeli ___ rumah. (satu + penjodoh bilangan) | sebuah | *buah* untuk benda besar seperti rumah; *se-* = satu. | *buah* ใช้กับสิ่งของใหญ่ *se-* = หนึ่ง
-```
-
-```latihan-golong
-Tajuk: Kenal Pasti Golongan Kata | ระบุชนิดของคำ
-Arahan: Tentukan golongan kata bagi perkataan yang diberikan. | ระบุชนิดของคำที่กำหนด
-Kategori: Kata nama · คำนาม | Kata ganti nama · คำสรรพนาม | Kata kerja · คำกริยา | Kata adjektif · คำคุณศัพท์
-*kami* | Kata ganti nama | Kata ganti nama diri pertama jamak. | สรรพนามบุรุษที่ 1 พหูพจน์
-*menulis* | Kata kerja | *meN-* + *tulis*. | กริยา
-*jujur* | Kata adjektif | Menyatakan sifat; *sangat jujur*. | บอกลักษณะ
+Arahan: Pilih kata yang betul untuk mengisi tempat kosong. | เลือกคำที่ถูกต้องเติมในช่องว่าง
+Dia ___ pelajar. (nafi) | bukan | Kata nama dinafikan dengan *bukan*. | คำนามปฏิเสธด้วย *bukan* | tidak / belum / jangan / bukan
+Ahmad, mari ___ makan bersama-sama. (termasuk pendengar) | kita | *kita* merangkumi Ahmad sebagai pendengar. | *kita* รวม Ahmad ผู้ฟัง | kami / kita / mereka / saya
+Ayah membeli ___ rumah. (satu + penjodoh bilangan) | sebuah | *buah* untuk benda besar seperti rumah; *se-* = satu. | *buah* ใช้กับสิ่งของใหญ่ *se-* = หนึ่ง | seekor / sebatang / sebuah / seorang
 ```
 
 ```latihan-betulkan
@@ -241,14 +232,6 @@ Arahan: Klik perkataan yang salah. | กดคำที่ผิด
 Dia [tidak→bukan] doktor. | Predikat kata nama dinafikan dengan *bukan*. | ภาคแสดงที่เป็นนามปฏิเสธด้วย *bukan*
 Puan, [aku→saya] ingin bertanya tentang kursus ini. | *aku* tidak sesuai kepada orang yang dihormati. | *aku* ไม่เหมาะกับผู้ที่ได้รับความเคารพ
 Saya belajar di universiti [thaksin→Thaksin]. | Kata nama khas ditulis dengan huruf besar. | นามเฉพาะขึ้นต้นด้วยตัวใหญ่
-```
-
-```latihan-analisis
-Arahan: Pilih fungsi bagi setiap bahagian ayat, kemudian klik Semak. | เลือกหน้าที่ของแต่ละส่วนในประโยค แล้วกดตรวจ
-Label: Subjek · ประธาน | Inti predikat · แกนภาคแสดง | Objek · กรรม | Keterangan · ส่วนขยาย
-[Petani itu|Subjek] [menanam|Inti predikat] [padi|Objek] [di sawah|Keterangan]. | Kata nama *petani* (subjek) dan *padi* (objek). | คำนามเป็นประธานและกรรม
-[Ayah Fitri|Subjek] [peguam|Inti predikat]. | Kata nama *peguam* menjadi predikat. | คำนามเป็นภาคแสดง
-[Kami|Subjek] [menghormati|Inti predikat] [pensyarah kami|Objek]. | Frasa nama *pensyarah kami* objek. | วลีนามเป็นกรรม
 ```
 
 ```latihan-golong

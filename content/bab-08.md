@@ -176,11 +176,11 @@ Jawab setiap latihan; jawapan disemak serta-merta beserta penjelasan.
 
 ```latihan-objektif
 Arahan: Pilih jawapan yang paling tepat; sebab bagi setiap pilihan akan dipaparkan. | เลือกคำตอบที่ถูกที่สุด ระบบจะแสดงเหตุผลของทุกตัวเลือก
-?? Dalam *Ibu membeli ikan di pasar pagi tadi.*, unsur manakah keterangan tempat?<br>ส่วนใดเป็นส่วนขยายบอกสถานที่
-- *Ibu* :: Subjek.<br>ประธาน
-- *ikan* :: Objek.<br>กรรม
-+ *di pasar* :: Menyatakan tempat dan boleh digugurkan.<br>บอกสถานที่ ตัดได้
-- *pagi tadi* :: Keterangan waktu, bukan tempat.<br>บอกเวลา
+?? Dalam *Kakak membeli sayur di kedai petang semalam.*, unsur manakah keterangan tempat?<br>ส่วนใดเป็นส่วนขยายบอกสถานที่
+- *Kakak* :: Subjek.<br>ประธาน
+- *sayur* :: Objek.<br>กรรม
++ *di kedai* :: Menyatakan tempat dan boleh digugurkan.<br>บอกสถานที่ ตัดได้
+- *petang semalam* :: Keterangan waktu, bukan tempat.<br>บอกเวลา
 ?? Ujian manakah yang menunjukkan *di perpustakaan* ialah satu unit?<br>การทดสอบใดแสดงว่า *di perpustakaan* เป็นหน่วยเดียว
 + Ujian pemindahan: *Di perpustakaan pelajar itu membaca.* :: Seluruh frasa dapat dipindahkan bersama-sama.<br>ย้ายทั้งวลีได้พร้อมกัน
 - Menukar *di* kepada *ke* :: Mengubah makna, bukan ujian konstituen.<br>เปลี่ยนความหมาย ไม่ใช่การทดสอบ
@@ -194,19 +194,10 @@ Arahan: Pilih jawapan yang paling tepat; sebab bagi setiap pilihan akan dipapark
 ```
 
 ```latihan-isi
-Arahan: Taipkan istilah yang betul. | พิมพ์ศัพท์ที่ถูกต้อง
-Unit yang mempunyai subjek dan predikat ialah ___. | klausa | Frasa tiada subjek–predikat; klausa ada. | วลีไม่มี อนุประโยคมี
-Unsur yang boleh digugurkan tanpa merosakkan ayat ialah ___. | keterangan | Pelengkap dan objek tidak boleh digugurkan. | ส่วนเติมเต็มและกรรมตัดไม่ได้
-Ayat terdiri daripada klausa dan ___. | intonasi | Intonasi menentukan jenis ayat. | ทำนองเสียงกำหนดชนิดประโยค
-```
-
-```latihan-golong
-Tajuk: Kenal Pasti Golongan Kata | ระบุชนิดของคำ
-Arahan: Tentukan golongan kata bagi perkataan yang diberikan. | ระบุชนิดของคำที่กำหนด
-Kategori: Kata nama · คำนาม | Kata kerja · คำกริยา | Kata adjektif · คำคุณศัพท์ | Kata tugas · คำไวยากรณ์
-*Pelajar* dalam *Pelajar itu sangat rajin.* | Kata nama | Inti subjek. | แกนของประธาน
-*sangat* dalam *Pelajar itu sangat rajin.* | Kata tugas | Kata penguat. | คำเน้น
-*rajin* dalam *Pelajar itu sangat rajin.* | Kata adjektif | Inti predikat FA. | แกนภาคแสดงวลีคุณศัพท์
+Arahan: Pilih kata yang betul untuk mengisi tempat kosong. | เลือกคำที่ถูกต้องเติมในช่องว่าง
+Unit yang mempunyai subjek dan predikat ialah ___. | klausa | Frasa tiada subjek–predikat; klausa ada. | วลีไม่มี อนุประโยคมี | frasa / klausa / kata / morfem
+Unsur yang boleh digugurkan tanpa merosakkan ayat ialah ___. | keterangan | Pelengkap dan objek tidak boleh digugurkan. | ส่วนเติมเต็มและกรรมตัดไม่ได้ | objek / pelengkap / subjek / keterangan
+Ayat terdiri daripada klausa dan ___. | intonasi | Intonasi menentukan jenis ayat. | ทำนองเสียงกำหนดชนิดประโยค | intonasi / frasa / objek / imbuhan
 ```
 
 ```latihan-betulkan
@@ -222,14 +213,6 @@ Label: Subjek · ประธาน | Inti predikat · แกนภาคแส�
 [Encik Hassan|Subjek] [menghantar|Inti predikat] [anaknya|Objek] [ke sekolah|Keterangan] [setiap pagi|Keterangan]. | Dua keterangan: arah dan waktu. | ส่วนขยายสองส่วน
 [Mereka|Subjek] [tinggal|Inti predikat] [di Hat Yai|Pelengkap]. | *di Hat Yai* tidak boleh digugurkan. | ตัดไม่ได้
 [Pelajar yang datang dari Pattani itu|Subjek] [sangat cemerlang|Inti predikat] [dalam pelajaran|Keterangan]. | Subjek frasa nama panjang dengan klausa relatif. | ประธานเป็นวลีนามยาว
-```
-
-```latihan-golong
-Arahan: Tentukan fungsi bahagian bercetak tebal. | ระบุหน้าที่ของส่วนที่เป็นตัวหนา
-Kategori: Subjek · ประธาน | Objek · กรรม | Pelengkap · ส่วนเติมเต็ม | Keterangan · ส่วนขยาย
-***Ibu** membeli ikan.* | Subjek | Unsur yang diterangkan. | ส่วนที่ถูกกล่าวถึง
-*Ibu membeli **ikan**.* | Objek | Dikenai perbuatan *membeli*. | ถูกกระทำ
-*Dia menjadi **guru**.* | Pelengkap | Wajib selepas *menjadi*. | จำเป็นหลัง *menjadi*
 ```
 
 ```latihan-golong

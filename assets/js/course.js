@@ -72,7 +72,7 @@ window.COURSE = {
         { ms: "Kuiz Penilaian A–B (Bab 1, 2, 8)", th: "แบบทดสอบท้ายบท ก–ข", h: "#/bab/2/kuiz" }
       ],
       CLO2: [
-        { ms: "Kenal Pasti Golongan Kata", th: "ระบุชนิดของคำ", h: "#/bab/3/latihan" },
+        { ms: "Golongkan Kata Nama", th: "จัดประเภทคำนาม", h: "#/bab/3/latihan" },
         { ms: "Isi Tempat Kosong (imbuhan dan kata tugas)", th: "เติมคำ (ปัจจัยและคำไวยากรณ์)", h: "#/bab/6/latihan" },
         { ms: "Alat Latihan: pengimbuhan kata dasar", th: "เครื่องมือฝึก: เติมปัจจัย", h: "#/alat" },
         { ms: "Kuiz Morfologi (Bab 1–7)", th: "แบบทดสอบภาควจีวิภาค", h: "#/kuiz/morfologi" }

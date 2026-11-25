@@ -212,19 +212,10 @@ Arahan: Pilih jawapan yang paling tepat; sebab bagi setiap pilihan akan dipapark
 ```
 
 ```latihan-isi
-Arahan: Taipkan bentuk yang betul. | พิมพ์รูปที่ถูกต้อง
-Dia ___ bas ke Hat Yai. (naik + -i) | menaiki | Objek *bas* ialah tempat yang dinaiki. | *bas* เป็นยานพาหนะที่ขึ้น
-Pengawas ___ bendera. (naik + -kan) | menaikkan | Menyebabkan bendera naik. | ทำให้ธงขึ้น
-*peN-…-an* + *ambil alih* = ___ | pengambilalihan | Apitan → serangkai. | ปัจจัยคร่อมจึงเขียนติด
-```
-
-```latihan-golong
-Tajuk: Kenal Pasti Golongan Kata | ระบุชนิดของคำ
-Arahan: Tentukan golongan kata bagi perkataan yang diberikan. | ระบุชนิดของคำที่กำหนด
-Kategori: Kata nama · คำนาม | Kata kerja · คำกริยา | Kata adjektif · คำคุณศัพท์
-*kemerah-merahan* | Kata adjektif | *ke-…-an* + ganda: agak merah. | คุณศัพท์ ค่อนข้างแดง
-*perjalanan* | Kata nama | *per-…-an*: hasil atau proses. | นาม
-*berguguran* | Kata kerja | *ber-…-an*: banyak dan bertaburan. | กริยา
+Arahan: Pilih kata yang betul untuk mengisi tempat kosong. | เลือกคำที่ถูกต้องเติมในช่องว่าง
+Dia ___ bas ke Hat Yai. (naik + -i) | menaiki | Objek *bas* ialah tempat yang dinaiki. | *bas* เป็นยานพาหนะที่ขึ้น | menaikkan / menaiki / menaik / dinaiki
+Pengawas ___ bendera. (naik + -kan) | menaikkan | Menyebabkan bendera naik. | ทำให้ธงขึ้น | menaikkan / menaiki / menaikan / naikkan
+*peN-…-an* + *ambil alih* = ___ | pengambilalihan | Apitan → serangkai. | ปัจจัยคร่อมจึงเขียนติด | pengambilan alih / pengambil alihan / pengambilalihan / mengambil alih
 ```
 
 ```latihan-betulkan
@@ -232,14 +223,6 @@ Arahan: Klik bahagian yang salah. | กดส่วนที่ผิด
 Hasil [kerja sama→kerjasama] dua universiti. | Kata majmuk mantap ditulis serangkai. | เขียนติดกัน
 [Semua pelajar-pelajar→Semua pelajar] dijemput hadir. | Tidak digandakan selepas penanda jamak. | ไม่ซ้ำคำหลังคำบอกพหูพจน์
 Peserta mesti [menanda tangani→menandatangani] borang. | Apitan → serangkai. | ปัจจัยคร่อมจึงเขียนติด
-```
-
-```latihan-analisis
-Arahan: Pilih fungsi bagi setiap bahagian ayat, kemudian klik Semak. | เลือกหน้าที่ของแต่ละส่วนในประโยค แล้วกดตรวจ
-Label: Subjek · ประธาน | Inti predikat · แกนภาคแสดง | Objek · กรรม | Keterangan · ส่วนขยาย
-[Ayah|Subjek] [menanami|Inti predikat] [kebun|Objek] [dengan pokok pisang|Keterangan]. | *-i*: objek tempat; *dengan pokok pisang* menyatakan benda yang ditanam. | กรรมเป็นสถานที่
-[Setiausaha kelab|Subjek] [menandatangani|Inti predikat] [surat itu|Objek]. | Kata majmuk + apitan ditulis serangkai. | คำประสม + ปัจจัยคร่อม
-[Daun-daun|Subjek] [berguguran|Inti predikat] [pada musim kemarau|Keterangan]. | *pada musim kemarau* keterangan waktu. | ส่วนขยายบอกเวลา
 ```
 
 ```latihan-golong

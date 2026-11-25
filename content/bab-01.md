@@ -206,19 +206,10 @@ Arahan: Pilih jawapan yang paling tepat; sebab bagi setiap pilihan akan dipapark
 ```
 
 ```latihan-isi
-Arahan: Taipkan satu perkataan yang betul. | พิมพ์คำที่ถูกต้องหนึ่งคำ
-Bentuk baku bagi *dah* ialah ___. | sudah | *Dah* ialah bentuk basahan bagi kata bantu aspek *sudah*. | *dah* เป็นรูปภาษาพูดของคำช่วยบอกกาล *sudah*
-Unit bunyi terkecil yang membezakan makna ialah ___. | fonem | Contohnya /p/ dan /b/ dalam *pagi* dan *bagi*. | เช่น /p/ และ /b/ ใน *pagi* กับ *bagi*
-Bidang yang mengkaji susunan kata menjadi ayat ialah ___. | sintaksis | Morfologi mengkaji kata; sintaksis mengkaji ayat. | วจีวิภาคศึกษาคำ วากยสัมพันธ์ศึกษาประโยค
-```
-
-```latihan-golong
-Tajuk: Kenal Pasti Golongan Kata | ระบุชนิดของคำ
-Arahan: Tentukan golongan kata bagi perkataan yang diberikan. | ระบุชนิดของคำที่กำหนด
-Kategori: Kata nama · คำนาม | Kata kerja · คำกริยา | Kata adjektif · คำคุณศัพท์ | Kata tugas · คำไวยากรณ์
-*gembira* dalam *Kami sangat gembira.* | Kata adjektif | Menyatakan perasaan; boleh menerima *sangat*. | บอกความรู้สึก รับ *sangat* ได้
-*sangat* dalam *Kami sangat gembira.* | Kata tugas | Kata penguat. | คำเน้น
-*universiti* dalam *Dia belajar di universiti.* | Kata nama | Boleh didahului penjodoh bilangan *sebuah*. | มีลักษณนามนำหน้าได้
+Arahan: Pilih kata yang betul untuk mengisi tempat kosong. | เลือกคำที่ถูกต้องเติมในช่องว่าง
+Bentuk baku bagi *dah* ialah ___. | sudah | *Dah* ialah bentuk basahan bagi kata bantu aspek *sudah*. | *dah* เป็นรูปภาษาพูดของคำช่วยบอกกาล *sudah* | masih / sudah / sedang / belum
+Unit bunyi terkecil yang membezakan makna ialah ___. | fonem | Contohnya /p/ dan /b/ dalam *pagi* dan *bagi*. | เช่น /p/ และ /b/ ใน *pagi* กับ *bagi* | morfem / suku kata / fonem / huruf
+Bidang yang mengkaji susunan kata menjadi ayat ialah ___. | sintaksis | Morfologi mengkaji kata; sintaksis mengkaji ayat. | วจีวิภาคศึกษาคำ วากยสัมพันธ์ศึกษาประโยค | morfologi / fonologi / semantik / sintaksis
 ```
 
 ```latihan-betulkan
@@ -226,14 +217,6 @@ Arahan: Klik perkataan yang salah dalam setiap ayat. | กดคำที่ผ�
 Sila [tanggal→tanggalkan] kasut sebelum masuk. | Kata kerja ini memerlukan akhiran *-kan* dalam ayat perintah. | กริยานี้ต้องเติม *-kan* ในประโยคคำสั่ง
 Ayah pergi [di→ke] masjid. | *Di* menunjukkan tempat, bukan arah. | *di* บอกตำแหน่ง ไม่ได้บอกทิศทาง
 Saya [tak→tidak] dapat hadir ke mesyuarat itu. | Surat rasmi menggunakan bentuk baku *tidak*. | จดหมายทางการใช้รูปมาตรฐาน *tidak*
-```
-
-```latihan-analisis
-Arahan: Pilih fungsi bagi setiap bahagian ayat, kemudian klik Semak. | เลือกหน้าที่ของแต่ละส่วนในประโยค แล้วกดตรวจ
-Label: Subjek · ประธาน | Inti predikat · แกนภาคแสดง | Objek · กรรม | Keterangan · ส่วนขยาย
-[Adik saya|Subjek] [belajar|Inti predikat] [di Universiti Thaksin|Keterangan]. | *Adik saya* diterangkan; *belajar* inti predikat; *di Universiti Thaksin* menyatakan tempat. | *Adik saya* เป็นประธาน *belajar* เป็นแกนภาคแสดง ส่วนที่เหลือบอกสถานที่
-[Pelajar itu|Subjek] [membaca|Inti predikat] [buku|Objek]. | *buku* dikenai perbuatan *membaca*. | *buku* ถูกกระทำ
-[Ibu|Subjek] [membeli|Inti predikat] [ikan|Objek] [pagi tadi|Keterangan]. | *pagi tadi* keterangan waktu yang boleh digugurkan. | *pagi tadi* บอกเวลา ตัดได้
 ```
 
 ```latihan-golong

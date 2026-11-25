@@ -163,7 +163,12 @@
         return `<li class="lat-item lat-tb"><span class="lat-q">${bi(f.q)}</span><textarea class="lat-ta" rows="4" lang="ms" aria-label="Jawapan anda · คำตอบของคุณ" placeholder="Tulis jawapan anda di sini · เขียนคำตอบที่นี่"></textarea><button type="button" class="btn btn-line lat-buka">Lihat contoh jawapan dan kriteria · ดูตัวอย่างคำตอบและเกณฑ์</button>${FB}<div class="lat-model" hidden>${f.sample ? `<p class="lat-sample"><b>Contoh jawapan · ตัวอย่างคำตอบ</b><br>${mdi(sm)}${st ? `<br><span class="tr" lang="th">${mdi(st)}</span>` : ""}</p>` : ""}<p class="lat-note">Jawapan anda tidak perlu sama perkataan demi perkataan. Tandakan kriteria yang dipenuhi oleh jawapan anda. · ไม่จำเป็นต้องตรงกับตัวอย่างคำต่อคำ ให้ติ๊กเกณฑ์ที่คำตอบของคุณทำได้</p><ul class="lat-kr">${f.kr.map(k => `<li><label><input type="checkbox" class="lat-kc"> <span>${bi(k)}</span></label></li>`).join("")}</ul><p class="lat-krs" aria-live="polite"></p></div></li>`;
       }
       if (type === "isi") {
-        const [q, ans, em, et] = f; const [a, b] = q.split("___");
+        const [q, ans, em, et, pil] = f; const [a, b] = q.split("___");
+        /* Medan ke-5 "a / b / c" = pilihan jawapan (tanpa menaip) · ช่องที่ 5 = ตัวเลือก ให้กดเลือกแทนการพิมพ์ */
+        if (pil) {
+          const opts = pil.split(/\s+\/\s+/), k = opts.findIndex(o => normJ(o) === normJ(ans || ""));
+          return `<li class="lat-item" data-a="${k}"><span class="lat-q" lang="ms">${mdi(a || "")}<span class="lat-blank">_____</span>${mdi(b || "")}</span><span class="lat-opts">${opts.map((o, j) => `<button type="button" class="opt lat-c" data-j="${j}" lang="ms">${mdi(o)}</button>`).join("")}</span>${FB}${expHTML(em, et)}</li>`;
+        }
         return `<li class="lat-item" data-ans="${esc(ans || "")}"><span class="lat-q" lang="ms">${mdi(a || "")}<input class="lat-in" type="text" autocomplete="off" autocapitalize="off" spellcheck="false" lang="ms" aria-label="Jawapan · คำตอบ">${mdi(b || "")}</span> <button type="button" class="opt lat-semak">Semak · ตรวจ</button>${FB}${expHTML(em, et)}</li>`;
       }
       if (type === "betulkan") {
