@@ -292,46 +292,18 @@ Peluasan berlaku apabila ayat lain dipancangkan atau digabungkan.<br>การ�
 - **9** Keterangan *pada pukul enam*, iaitu sebahagian daripada predikat, dikedepankan sebelum subjek.<br>ส่วนขยาย *pada pukul enam* ซึ่งเป็นส่วนหนึ่งของภาคแสดงถูกย้ายไปไว้หน้าประธาน
 - **10** Ayat *Bas itu berwarna biru* dipancangkan ke dalam ayat induk, maka proses peluasan.<br>ประโยค *Bas itu berwarna biru* ถูกฝังเข้าในประโยคหลัก จึงเป็นกระบวนการขยาย
 
-### B. Soalan Subjektif<br>ข. อัตนัย
+### Tugasan Projek Minggu 15<br>โครงงานสัปดาห์ที่ 15
 
 
 ```latihan-terbuka
-Tajuk: Soalan Subjektif | ข้อสอบอัตนัย
-Arahan: Tulis jawapan anda, kemudian bandingkan dengan contoh jawapan dan kriteria penilaian. | เขียนคำตอบ แล้วเทียบกับตัวอย่างคำตอบและเกณฑ์การประเมิน
-?? Tukarkan kepada ayat pasif: (a) *Emak menyapu sampah.* (b) *Kami sudah menjemput tetamu itu.* (c) *Engkau mesti membersihkan bilik ini.* (d) *Polis sedang menyiasat kes itu.*<br>แปลงเป็นกรรมวาจก ตามข้อ (ก)–(ง)
-= a. *Sampah disapu oleh emak.* · b. *Tetamu itu sudah kami jemput.* · c. *Bilik ini mesti engkau bersihkan.* · d. *Kes itu sedang disiasat oleh polis.*
-* Empat ayat pasif yang betul<br>กรรมวาจกถูกทั้งสี่
-* Jenis pelaku dikenal pasti bagi setiap ayat<br>ระบุชนิดผู้กระทำ
-* Kedudukan kata bantu yang betul<br>ตำแหน่งคำช่วยถูก
-?? Tulis ayat susunan songsang daripada keempat-empat pola ayat dasar dan jelaskan unsur yang ditegaskan.<br>เขียนประโยคเรียงสลับจากประโยคพื้นฐานทั้ง 4 แบบ และอธิบายส่วนที่ถูกเน้น
-= Kedepankan predikat atau sebahagiannya, sering dengan *-lah* atau *-nya*: FA *Pandai sungguh budak itu.* · FSN *Ke Phuket ayah saya.* · keterangan *Pada pukul enam mereka bertolak.* Unsur yang dikedepankan ialah unsur yang ditegaskan.
-* Ayat songsang bagi pola yang diminta<br>ประโยคเรียงสลับตามแบบ
-* Unsur yang dikedepankan dinyatakan<br>ระบุส่วนที่ย้าย
-* Ayat gramatis dan bermakna<br>ถูกไวยากรณ์และมีความหมาย
-?? Jelaskan dengan contoh bagaimana tiga proses transformasi menghubungkan ayat dasar dengan ayat yang digunakan dalam kehidupan sebenar.<br>อธิบายด้วยตัวอย่างว่าการแปลงประโยค 3 กระบวนการเชื่อมโยงประโยคพื้นฐานกับประโยคที่ใช้จริงอย่างไร
-= Pengguguran: *Hantar barang ini.* — subjek *kamu* digugurkan · peluasan: *Ahmad menaiki bas yang berwarna biru.* · penyusunan semula: *Borang ini perlu anda isi.* — aktif menjadi pasif. Ketiga-tiganya bermula daripada ayat dasar.
-* Contoh ketiga-tiga proses<br>ตัวอย่างครบสามกระบวนการ
-* Ayat dasar asal ditunjukkan bagi setiap contoh<br>แสดงประโยคพื้นฐานเดิม
-* Dikaitkan dengan ayat kehidupan sebenar<br>โยงกับประโยคในชีวิตจริง
-```
-
-### C. Soalan Pemikiran Kritis (Integrasi Minggu 15)<br>ค. โจทย์คิดวิเคราะห์ (บูรณาการสัปดาห์ที่ 15)
-
-
-```latihan-terbuka
-Tajuk: Soalan Pemikiran Kritis | โจทย์คิดวิเคราะห์
-Arahan: Tulis jawapan anda, kemudian bandingkan dengan contoh jawapan dan kriteria penilaian. | เขียนคำตอบ แล้วเทียบกับตัวอย่างคำตอบและเกณฑ์การประเมิน
+Tajuk: Tugasan Projek Minggu 15 | โครงงานสัปดาห์ที่ 15
+Arahan: Laksanakan projek ini dan bentangkan dalam kelas pada minggu 15. | ทำโครงงานนี้และนำเสนอในชั้นเรียนสัปดาห์ที่ 15
 ?? **Projek pembetulan teks sebenar:** Kumpulkan satu teks bahasa Melayu sebenar (papan tanda, pengumuman, menu, hantaran) sepanjang kira-kira 100 patah perkataan. Analisis kesalahan pada semua peringkat (kata, frasa, ayat, kesesuaian) dengan merujuk bab yang berkaitan, kemukakan versi yang dibetulkan, dan bentangkan dalam kelas (dinilai dengan rubrik: ketepatan analisis · rujukan kepada prinsip tatabahasa · kualiti versi pembetulan · pembentangan).<br>**โครงงานแก้ไขข้อความจริง** เก็บข้อความภาษามลายูจริง 1 ชิ้น (ป้าย ประกาศ เมนู โพสต์) ความยาวประมาณ 100 คำ วิเคราะห์ข้อผิดทุกระดับ (คำ วลี ประโยค ความเหมาะสม) โดยอ้างอิงบทที่เกี่ยวข้อง เสนอฉบับแก้ และนำเสนอในชั้น (ประเมินด้วยรูบริก: ความถูกต้องของการวิเคราะห์ · การอ้างหลักไวยากรณ์ · คุณภาพฉบับแก้ · การนำเสนอ)
 = Contoh struktur laporan: teks asal → senarai kesalahan (kata, frasa, ayat, kesesuaian) dengan rujukan bab → versi dibetulkan → refleksi tentang punca kesalahan.
 * Kesalahan pada semua peringkat dikenal pasti<br>ระบุข้อผิดครบทุกระดับ
 * Setiap kesalahan dirujuk kepada prinsip tatabahasa dan bab<br>อ้างหลักไวยากรณ์และบท
 * Versi pembetulan yang gramatis dan sesuai<br>ฉบับแก้ถูกและเหมาะสม
 * Pembentangan yang jelas<br>นำเสนอชัดเจน
-?? Bahasa Thai menggunakan pasif "ถูก…" lazimnya untuk makna yang tidak diingini, manakala bahasa Melayu boleh menggunakan *di-* secara umum. Analisis kesannya terhadap penterjemahan Thai↔Melayu dan bandingkan dengan *kena* dalam bahasa Melayu.<br>ภาษาไทยใช้กรรมวาจก "ถูก…" มักในความหมายไม่พึงประสงค์ ขณะที่ภาษามลายูใช้ *di-* ได้ทั่วไป จงวิเคราะห์ผลต่อการแปลไทย↔มลายู และเทียบกับ *kena* ในภาษามลายู
-= "ถูก…" dalam bahasa Thai lazimnya bermakna negatif, jadi penterjemah Thai mungkin mengelak pasif Melayu bagi makna neutral dan menggunakan ayat aktif. Sebaliknya, *di-* yang neutral (*Bangunan itu dirasmikan*) tidak wajar diterjemahkan sebagai "ถูกเปิด". *kena* lebih dekat dengan "ถูก" kerana membawa makna tidak diingini.
-* Membandingkan makna pasif Thai dan Melayu<br>เปรียบเทียบความหมายกรรมวาจกไทย–มลายู
-* Contoh terjemahan dua hala<br>ตัวอย่างการแปลสองทาง
-* Membincangkan *kena* sebagai padanan<br>อภิปราย *kena* ในฐานะคำเทียบ
 ```
 
 ## 12. Rujukan<br>เอกสารอ้างอิง
