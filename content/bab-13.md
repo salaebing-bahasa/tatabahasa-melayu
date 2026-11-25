@@ -194,19 +194,10 @@ Arahan: Pilih jawapan yang paling tepat; sebab bagi setiap pilihan akan dipapark
 ```
 
 ```latihan-isi
-Arahan: Tukarkan kepada ayat pasif dengan melengkapkan tempat kosong. | เติมช่องว่างเพื่อเปลี่ยนเป็นกรรมวาจก
-*Saya sudah membaca buku itu.* → *Buku itu sudah saya ___.* | baca | Pelaku diri pertama: kata kerja tanpa *meN-*. | บุรุษที่ 1 กริยาไม่มี *meN-*
-*Polis menangkap pencuri itu.* → *Pencuri itu ___ oleh polis.* | ditangkap | Pelaku kata nama: *di-*. | ผู้กระทำเป็นนามใช้ *di-*
-*Kamu mesti membersihkan bilik ini.* → *Bilik ini mesti kamu ___.* | bersihkan | Akhiran *-kan* dikekalkan. | คงปัจจัย *-kan*
-```
-
-```latihan-golong
-Tajuk: Kenal Pasti Golongan Kata | ระบุชนิดของคำ
-Arahan: Tentukan golongan kata bagi perkataan yang diberikan. | ระบุชนิดของคำที่กำหนด
-Kategori: Kata kerja · คำกริยา | Kata tugas · คำไวยากรณ์ | Kata nama · คำนาม | Kata ganti nama · คำสรรพนาม
-*oleh* | Kata tugas | Kata sendi nama yang memperkenalkan pelaku. | คำบุพบทนำผู้กระทำ
-*anda* | Kata ganti nama | Diri kedua. | บุรุษที่ 2
-*menteri* | Kata nama | Pelaku kata nama. | นามผู้กระทำ
+Arahan: Pilih kata yang betul untuk mengisi tempat kosong. | เลือกคำที่ถูกต้องเติมในช่องว่าง
+*Saya sudah membaca buku itu.* → *Buku itu sudah saya ___.* | baca | Pelaku diri pertama: kata kerja tanpa *meN-*. | บุรุษที่ 1 กริยาไม่มี *meN-* | membaca / dibaca / baca / terbaca
+*Polis menangkap pencuri itu.* → *Pencuri itu ___ oleh polis.* | ditangkap | Pelaku kata nama: *di-*. | ผู้กระทำเป็นนามใช้ *di-* | ditangkap / menangkap / tangkap / ditangkapkan
+*Kamu mesti membersihkan bilik ini.* → *Bilik ini mesti kamu ___.* | bersihkan | Akhiran *-kan* dikekalkan. | คงปัจจัย *-kan* | membersihkan / dibersihkan / bersih / bersihkan
 ```
 
 ```latihan-betulkan

@@ -217,19 +217,10 @@ Arahan: Pilih jawapan yang paling tepat; sebab bagi setiap pilihan akan dipapark
 ```
 
 ```latihan-isi
-Arahan: Taipkan kata tugas yang betul. | พิมพ์คำไวยากรณ์ที่ถูกต้อง
-Hadiah ini ___ ayah saya. | daripada | Sumber berupa orang. | แหล่งที่มาเป็นบุคคล
-Kami bertolak ___ Yala pada pukul 8. | dari | Titik mula tempat. | จุดเริ่มต้นที่เป็นสถานที่
-Itu ___ rumah saya. (nafi) | bukan | Menafikan frasa nama. | ปฏิเสธวลีนาม
-```
-
-```latihan-golong
-Tajuk: Kenal Pasti Golongan Kata | ระบุชนิดของคำ
-Arahan: Tentukan golongan kata bagi perkataan yang diberikan. | ระบุชนิดของคำที่กำหนด
-Kategori: Kata tugas · คำไวยากรณ์ | Kata nama · คำนาม | Kata kerja · คำกริยา | Kata adjektif · คำคุณศัพท์
-*tidak* | Kata tugas | Kata nafi. | คำปฏิเสธ
-*pejabat* | Kata nama | Menamakan tempat. | ชื่อสถานที่
-*menghantar* | Kata kerja | Perbuatan dengan objek. | การกระทำ
+Arahan: Pilih kata yang betul untuk mengisi tempat kosong. | เลือกคำที่ถูกต้องเติมในช่องว่าง
+Hadiah ini ___ ayah saya. (sumber) | daripada | Sumber berupa orang. | แหล่งที่มาเป็นบุคคล | dari / kepada / daripada / oleh
+Kami bertolak ___ Yala pada pukul 8. (titik mula) | dari | Titik mula tempat. | จุดเริ่มต้นที่เป็นสถานที่ | dari / daripada / kepada / oleh
+Itu ___ rumah saya. (nafi) | bukan | Menafikan frasa nama. | ปฏิเสธวลีนาม | tidak / bukan / belum / jangan
 ```
 
 ```latihan-betulkan
@@ -237,14 +228,6 @@ Arahan: Klik perkataan yang salah. | กดคำที่ผิด
 Esok kita pergi [di→ke] perpustakaan. | *ke* untuk arah. | *ke* บอกทิศทาง
 Bawa [buku tiga buah→tiga buah buku]. | Bilangan + penjodoh bilangan di hadapan kata nama. | จำนวน + ลักษณนามอยู่หน้าคำนาม
 Surat [dari→daripada] pensyarah sudah tiba. | Sumber berupa orang. | แหล่งที่มาเป็นบุคคล
-```
-
-```latihan-analisis
-Arahan: Pilih fungsi bagi setiap bahagian ayat, kemudian klik Semak. | เลือกหน้าที่ของแต่ละส่วนในประโยค แล้วกดตรวจ
-Label: Subjek · ประธาน | Kata bantu · คำช่วย | Inti predikat · แกนภาคแสดง | Objek · กรรม | Keterangan · ส่วนขยาย
-[Ayah|Subjek] [sudah|Kata bantu] [pulang|Inti predikat] [dari pejabat|Keterangan]. | *sudah* kata bantu aspek; *dari pejabat* keterangan tempat asal. | *sudah* เป็นคำช่วย
-[Kami|Subjek] [akan|Kata bantu] [menghantar|Inti predikat] [surat itu|Objek] [kepada dekan|Keterangan]. | *kepada dekan* menyatakan penerima. | บอกผู้รับ
-[Adik|Subjek] [belum|Kata bantu] [tidur|Inti predikat]. | *belum* kata bantu aspek. | *belum* เป็นคำช่วย
 ```
 
 ```latihan-golong

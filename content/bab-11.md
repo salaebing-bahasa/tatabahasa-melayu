@@ -201,19 +201,10 @@ Arahan: Pilih jawapan yang paling tepat; sebab bagi setiap pilihan akan dipapark
 ```
 
 ```latihan-isi
-Arahan: Lengkapkan ayat. | เติมประโยคให้สมบูรณ์
-___ nama awak? (orang) | Siapakah/Siapa | Kata tanya untuk orang. | คำถามสำหรับคน
-___ merokok di kawasan ini. (papan tanda larangan) | Dilarang | Larangan rasmi. | การห้ามแบบทางการ
-___ masuk, tuan. (silaan) | Jemput/Sila/Silakan | Penanda silaan. | คำเชื้อเชิญ
-```
-
-```latihan-golong
-Tajuk: Kenal Pasti Golongan Kata | ระบุชนิดของคำ
-Arahan: Tentukan golongan kata bagi perkataan yang diberikan. | ระบุชนิดของคำที่กำหนด
-Kategori: Kata nama · คำนาม | Kata kerja · คำกริยา | Kata adjektif · คำคุณศัพท์ | Kata tugas · คำไวยากรณ์
-*pemurah* dalam *Lelaki itu pemurah.* | Kata adjektif | Menerangkan sifat. | บอกลักษณะ
-*sila* | Kata tugas | Kata perintah (silaan). | คำเชื้อเชิญ
-*peguam* dalam *Ayahnya peguam.* | Kata nama | Predikat kata nama. | ภาคแสดงเป็นนาม
+Arahan: Pilih kata yang betul untuk mengisi tempat kosong. | เลือกคำที่ถูกต้องเติมในช่องว่าง
+___ nama awak? (orang) | Siapakah | Kata tanya untuk orang. | คำถามสำหรับคน | Bilakah / Siapakah / Di manakah / Mengapakah
+___ merokok di kawasan ini. (papan tanda larangan) | Dilarang | Larangan rasmi. | การห้ามแบบทางการ | Dilarang / Melarang / Dilarangkan / Terlarang
+___ masuk, tuan. (silaan) | Sila | Penanda silaan. | คำเชื้อเชิญ | Jangan / Usah / Sila / Dilarang
 ```
 
 ```latihan-betulkan
@@ -239,18 +230,10 @@ Kategori: FN + FN | FN + FK | FN + FA | FN + FSN
 *Bilik itu sangat bersih.* | FN + FA | Predikat frasa adjektif. | ภาคแสดงเป็นวลีคุณศัพท์
 ```
 
-```latihan-golong
-Arahan: Tentukan jenis ayat. | ระบุชนิดประโยค
-Kategori: Penyata · บอกเล่า | Tanya · คำถาม | Perintah · คำสั่ง | Seruan · อุทาน
-*Encik Malik guru bahasa kami.* | Penyata | Memberi maklumat. | ให้ข้อมูล
-*Bilakah kamu tiba?* | Tanya | Kata tanya + *-kah*. | คำถาม + *-kah*
-*Jemputlah masuk.* | Perintah | Ayat silaan. | ประโยคเชื้อเชิญ
-```
-
 ```latihan-benar
 Arahan: Tentukan sama ada setiap pernyataan betul atau salah. | ตัดสินว่าข้อความแต่ละข้อถูกหรือผิด
 Ayat dasar boleh berbentuk ayat tanya.<br>ประโยคพื้นฐานเป็นประโยคคำถามได้ | S | Ayat dasar ialah ayat penyata. | ประโยคพื้นฐานเป็นประโยคบอกเล่า
-*Ke Phuket ayah saya.* ialah ayat tunggal.<br>*Ke Phuket ayah saya.* เป็นประโยคเดี่ยว | B | Ayat tunggal susunan songsang. | ประโยคเดี่ยวที่เรียงสลับ
+*Ke Pattani abang saya.* ialah ayat tunggal.<br>*Ke Pattani abang saya.* เป็นประโยคเดี่ยว | B | Ayat tunggal susunan songsang. | ประโยคเดี่ยวที่เรียงสลับ
 Ayat tanya boleh menggantikan perintah untuk lebih sopan.<br>ใช้ประโยคคำถามแทนคำสั่งให้สุภาพขึ้นได้ | B | *Bolehkah tuan menghantar borang itu?* | ตัวอย่าง
 ```
 

@@ -183,19 +183,10 @@ Arahan: Pilih jawapan yang paling tepat; sebab bagi setiap pilihan akan dipapark
 ```
 
 ```latihan-isi
-Arahan: Taipkan kata sendi nama yang betul. | พิมพ์คำบุพบทที่ถูกต้อง
-Dia mahir ___ bahasa Arab. | dalam | Bidang menggunakan *dalam*. | สาขาใช้ *dalam*
-Kami tinggal di sini ___ tahun 2020. | sejak | Bermula dari waktu. | ตั้งแต่
-Adik takut ___ gelap. | akan | Kata adjektif perasaan + *akan*. | คุณศัพท์บอกความรู้สึก + *akan*
-```
-
-```latihan-golong
-Tajuk: Kenal Pasti Golongan Kata | ระบุชนิดของคำ
-Arahan: Tentukan golongan kata bagi perkataan yang diberikan. | ระบุชนิดของคำที่กำหนด
-Kategori: Kata adjektif · คำคุณศัพท์ | Kata tugas · คำไวยากรณ์ | Kata nama · คำนาม | Kata kerja · คำกริยา
-*mahir* dalam *Dia mahir dalam bahasa Arab.* | Kata adjektif | Inti FA; boleh menerima *sangat*. | คำหลักวลีคุณศัพท์
-*dalam* dalam *Dia mahir dalam bahasa Arab.* | Kata tugas | Kata sendi nama. | คำบุพบท
-*meja* dalam *di atas meja* | Kata nama | Inti frasa nama dalam FSN. | คำนาม
+Arahan: Pilih kata yang betul untuk mengisi tempat kosong. | เลือกคำที่ถูกต้องเติมในช่องว่าง
+Dia mahir ___ bahasa Arab. | dalam | Bidang menggunakan *dalam*. | สาขาใช้ *dalam* | di / dalam / kepada / akan
+Kami tinggal di sini ___ tahun 2020. | sejak | Bermula dari waktu. | ตั้งแต่ | pada / hingga / sejak / ke
+Adik takut ___ gelap. | akan | Kata adjektif perasaan + *akan*. | คุณศัพท์บอกความรู้สึก + *akan* | di / oleh / ke / akan
 ```
 
 ```latihan-betulkan

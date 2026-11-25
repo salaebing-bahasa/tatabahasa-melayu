@@ -196,19 +196,10 @@ Arahan: Pilih jawapan yang paling tepat; sebab bagi setiap pilihan akan dipapark
 ```
 
 ```latihan-isi
-Arahan: Taipkan kata yang betul. | พิมพ์คำที่ถูกต้อง
-Hat Yai lebih besar ___ Songkhla. | daripada | Perbandingan menggunakan *daripada*. | การเปรียบเทียบใช้ *daripada*
-Adik ___ abangnya. (sama tinggi) | setinggi | *se-* menyatakan bandingan setara. | *se-* บอกการเปรียบเทียบเท่ากัน
-Gunung itu ___ tinggi di Malaysia. (penghabisan) | paling | *paling* + kata adjektif menyatakan darjah penghabisan. | *paling* + คุณศัพท์ บอกขั้นสูงสุด
-```
-
-```latihan-golong
-Tajuk: Kenal Pasti Golongan Kata | ระบุชนิดของคำ
-Arahan: Tentukan golongan kata bagi perkataan yang diberikan. | ระบุชนิดของคำที่กำหนด
-Kategori: Kata kerja · คำกริยา | Kata adjektif · คำคุณศัพท์ | Kata nama · คำนาม | Kata tugas · คำไวยากรณ์
-*menarik* dalam *Buku itu sangat menarik.* | Kata adjektif | Didahului *sangat* dan tiada objek. | มี *sangat* นำหน้าและไม่มีกรรม
-*menarik* dalam *Dia menarik tali itu.* | Kata kerja | Mempunyai objek *tali itu*. | มีกรรม
-*kecepatan* | Kata nama | *ke-…-an* + *cepat*. | ปัจจัยคร่อมสร้างนาม
+Arahan: Pilih kata yang betul untuk mengisi tempat kosong. | เลือกคำที่ถูกต้องเติมในช่องว่าง
+Hat Yai lebih besar ___ Songkhla. | daripada | Perbandingan menggunakan *daripada*. | การเปรียบเทียบใช้ *daripada* | dari / daripada / kepada / pada
+Adik ___ abangnya. (sama tinggi) | setinggi | *se-* menyatakan bandingan setara. | *se-* บอกการเปรียบเทียบเท่ากัน | tertinggi / lebih tinggi / paling tinggi / setinggi
+Gunung itu ___ tinggi di Malaysia. (penghabisan) | paling | *paling* + kata adjektif menyatakan darjah penghabisan. | *paling* + คุณศัพท์ บอกขั้นสูงสุด | paling / lebih / sangat / kurang
 ```
 
 ```latihan-betulkan
@@ -216,14 +207,6 @@ Arahan: Klik bahagian yang salah. | กดส่วนที่ผิด
 Kain ini [sangat cantik sekali→cantik sekali]. | Kata penguat tidak ditindihkan. | ไม่ใช้คำเน้นซ้อนกัน
 Kedai ini [paling termurah→paling murah] di Hat Yai. | Pilih *paling* atau *ter-*, bukan kedua-duanya. | เลือก *paling* หรือ *ter-* อย่างใดอย่างหนึ่ง
 Rumah saya [lebih paling→paling] dekat dengan masjid. | Satu penanda darjah sahaja. | ใช้เครื่องหมายระดับเดียว
-```
-
-```latihan-analisis
-Arahan: Pilih fungsi bagi setiap bahagian ayat, kemudian klik Semak. | เลือกหน้าที่ของแต่ละส่วนในประโยค แล้วกดตรวจ
-Label: Subjek · ประธาน | Inti predikat · แกนภาคแสดง | Objek · กรรม | Pelengkap · ส่วนเติมเต็ม | Keterangan · ส่วนขยาย
-[Pak Zainal|Subjek] [menggunting|Inti predikat] [rambut anaknya|Objek]. | Kata kerja transitif dengan objek. | สกรรมกริยามีกรรม
-[Keadaan ekonomi negara|Subjek] [beransur|Inti predikat] [pulih|Pelengkap]. | *pulih* pelengkap kepada *beransur*. | *pulih* เป็นส่วนเติมเต็ม
-[Hat Yai|Subjek] [lebih besar|Inti predikat] [daripada Songkhla|Keterangan]. | Predikat frasa adjektif; *daripada Songkhla* keterangan bandingan. | ภาคแสดงเป็นวลีคุณศัพท์
 ```
 
 ```latihan-golong
@@ -238,7 +221,7 @@ Kategori: Transitif · สกรรม | Tak transitif tanpa pelengkap · อก
 Arahan: Tentukan sama ada setiap pernyataan betul atau salah. | ตัดสินว่าข้อความแต่ละข้อถูกหรือผิด
 Kata kerja transitif boleh dipasifkan.<br>สกรรมกริยาแปลงเป็นกรรมวาจกได้ | B | *Ibu memasak nasi* → *Nasi dimasak oleh ibu*. | ตัวอย่างการแปลง
 Pelengkap boleh digugurkan seperti keterangan.<br>ส่วนเติมเต็มตัดทิ้งได้เหมือนส่วนขยาย | S | Pelengkap wajib; keterangan boleh digugurkan. | ส่วนเติมเต็มต้องมี ส่วนขยายตัดได้
-*Harum* ialah kata adjektif pancaindera.<br>*harum* เป็นคุณศัพท์ประสาทสัมผัส | B | Dikesan melalui deria bau. | รับรู้ด้วยจมูก
+*Masin* ialah kata adjektif pancaindera.<br>*masin* เป็นคุณศัพท์ประสาทสัมผัส | B | Dikesan melalui deria rasa. | รับรู้ด้วยลิ้น
 ```
 
 ## 10. Rumusan<br>สรุปบทเรียน

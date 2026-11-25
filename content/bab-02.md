@@ -193,19 +193,10 @@ Arahan: Pilih jawapan yang paling tepat; sebab bagi setiap pilihan akan dipapark
 ```
 
 ```latihan-isi
-Arahan: Taipkan kata dasar atau bilangan yang betul. | พิมพ์คำฐานหรือจำนวนที่ถูกต้อง
-Kata dasar bagi *memperkenalkan* ialah ___. | kenal | *meN-* + *per-* + *kenal* + *-kan*. | *meN-* + *per-* + *kenal* + *-kan*
-Kata *berlari* terdiri daripada ___ morfem. | 2/dua | *ber-* + *lari*. | *ber-* + *lari*
-Kata dasar bagi *pelajaran* ialah ___. | ajar | *pe-…-an* + *ajar*; bentuk *pel-* berlaku di hadapan *ajar*. | คำฐานคือ *ajar*
-```
-
-```latihan-golong
-Tajuk: Kenal Pasti Golongan Kata | ระบุชนิดของคำ
-Arahan: Tentukan golongan kata bagi perkataan yang diberikan. | ระบุชนิดของคำที่กำหนด
-Kategori: Kata nama · คำนาม | Kata kerja · คำกริยา | Kata adjektif · คำคุณศัพท์ | Kata tugas · คำไวยากรณ์
-*berlari* | Kata kerja | *ber-* + *lari* menyatakan perbuatan. | บอกการกระทำ
-*dan* | Kata tugas | Kata hubung gabungan. | คำเชื่อม
-*pelajaran* | Kata nama | Imbuhan *pe-…-an* membentuk kata nama. | ปัจจัยสร้างคำนาม
+Arahan: Pilih kata yang betul untuk mengisi tempat kosong. | เลือกคำที่ถูกต้องเติมในช่องว่าง
+Kata dasar bagi *memperkenalkan* ialah ___. | kenal | *meN-* + *per-* + *kenal* + *-kan*. | *meN-* + *per-* + *kenal* + *-kan* | perkenal / kenal / kenalkan / memperkenal
+Kata *berlari* terdiri daripada ___ morfem. | dua | *ber-* + *lari*. | *ber-* + *lari* | satu / tiga / dua / empat
+Kata dasar bagi *pelajaran* ialah ___. | ajar | *pe-…-an* + *ajar*; bentuk *pel-* berlaku di hadapan *ajar*. | คำฐานคือ *ajar* | ajar / pelajar / belajar / ajaran
 ```
 
 ```latihan-betulkan
@@ -215,28 +206,12 @@ Semua [pelajar-pelajar→pelajar] hadir ke kelas. | Kata nama tidak digandakan s
 Ibu membeli [sayur mayur→sayur-mayur] di pasar. | Kata ganda berentak ditulis dengan tanda sempang. | คำซ้ำแบบสัมผัสใช้ขีด
 ```
 
-```latihan-analisis
-Arahan: Pilih fungsi bagi setiap bahagian ayat, kemudian klik Semak. | เลือกหน้าที่ของแต่ละส่วนในประโยค แล้วกดตรวจ
-Label: Subjek · ประธาน | Inti predikat · แกนภาคแสดง | Objek · กรรม | Keterangan · ส่วนขยาย
-[Kerajaan negeri|Subjek] [memperkenalkan|Inti predikat] [peraturan baharu|Objek]. | *peraturan baharu* dikenai perbuatan. | ถูกกระทำ
-[Adik|Subjek] [berlari|Inti predikat] [ke sekolah|Keterangan]. | *ke sekolah* menyatakan arah dan boleh digugurkan. | บอกทิศทาง ตัดได้
-[Pelajar itu|Subjek] [mencari|Inti predikat] [makna kata|Objek] [dalam kamus|Keterangan]. | *dalam kamus* keterangan tempat. | ส่วนขยายบอกสถานที่
-```
-
 ```latihan-golong
 Arahan: Golongkan setiap morfem. | จัดประเภทหน่วยคำแต่ละหน่วย
 Kategori: Morfem bebas · หน่วยคำอิสระ | Morfem terikat · หน่วยคำไม่อิสระ
 *rumah* | Morfem bebas | Boleh hadir sebagai kata. | ปรากฏเป็นคำได้
 *ber-* | Morfem terikat | Awalan mesti melekat pada kata dasar. | อุปสรรคต้องเกาะคำฐาน
 *-nya* | Morfem terikat | Klitik tidak hadir bersendirian. | คำเกาะปรากฏลำพังไม่ได้
-```
-
-```latihan-golong
-Arahan: Tentukan bentuk setiap kata. | ระบุรูปของแต่ละคำ
-Kategori: Tunggal · คำเดี่ยว | Terbitan · คำแปลง | Majmuk · คำประสม | Ganda · คำซ้ำ
-*pelajaran* | Terbitan | Kata dasar *ajar* + imbuhan. | คำฐาน *ajar* + ปัจจัย
-*ikan* | Tunggal | Tiada imbuhan, gandaan atau majmuk. | ไม่มีการเติม ซ้ำ หรือประสม
-*buah-buahan* | Ganda | Penggandaan kata berimbuhan *buah* + *-an*. | ซ้ำคำที่เติมปัจจัย
 ```
 
 ```latihan-benar

@@ -206,24 +206,15 @@ Arahan: Pilih jawapan yang paling tepat; sebab bagi setiap pilihan akan dipapark
 ```
 
 ```latihan-isi
-Arahan: Susun semula mengikut Hukum D-M. | เรียงใหม่ตามกฎ ดี-เอ็ม
-*Thai masakan* → ___ | masakan Thai | Inti *masakan* di hadapan. | คำหลักอยู่หน้า
-*merah baju* → ___ | baju merah | Inti *baju* di hadapan. | คำหลักอยู่หน้า
-*Murah Hotel* → ___ | Hotel Murah | Inti *Hotel* di hadapan. | คำหลักอยู่หน้า
-```
-
-```latihan-golong
-Tajuk: Kenal Pasti Golongan Kata | ระบุชนิดของคำ
-Arahan: Tentukan golongan kata bagi perkataan yang diberikan. | ระบุชนิดของคำที่กำหนด
-Kategori: Kata nama · คำนาม | Kata kerja · คำกริยา | Kata adjektif · คำคุณศัพท์ | Kata tugas · คำไวยากรณ์
-*dengan* dalam *dengan pisau* | Kata tugas | Kata sendi nama. | คำบุพบท
-*peserta* dalam *para peserta* | Kata nama | Inti frasa nama. | คำหลักของวลีนาม
-*merah* dalam *baju merah* | Kata adjektif | Penerang adjektif. | คุณศัพท์ขยาย
+Arahan: Pilih kata yang betul untuk mengisi tempat kosong. | เลือกคำที่ถูกต้องเติมในช่องว่าง
+*Melayu makanan* → ___ | makanan Melayu | Inti *makanan* di hadapan. | คำหลักอยู่หน้า | Melayu makanan / makanan Melayu
+*biru kereta* → ___ | kereta biru | Inti *kereta* di hadapan. | คำหลักอยู่หน้า | kereta biru / biru kereta
+*Murah Hotel* → ___ | Hotel Murah | Inti *Hotel* di hadapan. | คำหลักอยู่หน้า | Murah Hotel / Hotel Murah
 ```
 
 ```latihan-betulkan
 Arahan: Klik bahagian yang melanggar Hukum D-M. | กดส่วนที่ผิดกฎ ดี-เอ็ม
-Dia memakai [merah baju→baju merah] hari ini. | Penerang *merah* hadir selepas inti. | คำขยายอยู่หลัง
+Dia memakai [hitam kasut→kasut hitam] hari ini. | Penerang *hitam* hadir selepas inti. | คำขยายอยู่หลัง
 Kami menginap di [Murah Hotel→Hotel Murah] dekat stesen. | Susunan M-D meniru bahasa Inggeris. | เลียนแบบภาษาอังกฤษ
 [Itu tiga orang pelajar→Tiga orang pelajar itu] berasal dari Malaysia. | *itu* penentu belakang di hujung frasa nama. | *itu* อยู่ท้ายวลีนาม
 ```
@@ -242,14 +233,6 @@ Kategori: Penentu hadapan · ชี้เฉพาะหน้า | Inti · ค�
 *semua* | Penentu hadapan | Hadir sebelum inti. | อยู่หน้าคำหลัก
 *pelajar* | Inti | Kata nama utama. | คำนามหลัก
 *ini* | Penentu belakang | Di hujung frasa nama. | อยู่ท้ายวลีนาม
-```
-
-```latihan-golong
-Arahan: Tentukan jenis keterangan. | ระบุชนิดของส่วนขยาย
-Kategori: Waktu · เวลา | Tempat · สถานที่ | Alat · เครื่องมือ | Sebab · เหตุ
-*Dia pulang **kerana hujan**.* | Sebab | *kerana* menyatakan sebab. | *kerana* บอกเหตุ
-*Kami belajar **di perpustakaan**.* | Tempat | *di* + tempat. | *di* + สถานที่
-*Ayah memotong kayu **dengan kapak**.* | Alat | Alat yang digunakan. | เครื่องมือที่ใช้
 ```
 
 ```latihan-benar

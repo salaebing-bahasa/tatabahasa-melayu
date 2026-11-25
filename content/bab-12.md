@@ -204,19 +204,10 @@ Arahan: Pilih jawapan yang paling tepat; sebab bagi setiap pilihan akan dipapark
 ```
 
 ```latihan-isi
-Arahan: Isikan kata hubung yang sesuai. | เติมคำเชื่อมที่เหมาะสม
-___ hujan lebat, perlawanan itu diteruskan. (pertentangan) | Walaupun/Meskipun | Menyatakan pertentangan. | แสดงความขัดแย้ง
-Dia belajar bersungguh-sungguh ___ lulus peperiksaan. (tujuan) | supaya/agar/untuk | Menyatakan tujuan. | แสดงจุดประสงค์
-Kami tidak keluar ___ hujan lebat. (sebab) | kerana/sebab | Menyatakan sebab. | แสดงเหตุ
-```
-
-```latihan-golong
-Tajuk: Kenal Pasti Golongan Kata | ระบุชนิดของคำ
-Arahan: Tentukan golongan kata bagi perkataan yang diberikan. | ระบุชนิดของคำที่กำหนด
-Kategori: Kata tugas · คำไวยากรณ์ | Kata nama · คำนาม | Kata kerja · คำกริยา | Kata adjektif · คำคุณศัพท์
-*walaupun* | Kata tugas | Kata hubung pancangan keterangan. | คำเชื่อม
-*memerhatikan* | Kata kerja | *meN-…-kan* + *perhati*. | กริยา
-*lemah* dalam *Kami sedar bahawa kami lemah.* | Kata adjektif | Inti predikat ayat kecil. | แกนภาคแสดงของประโยคย่อย
+Arahan: Pilih kata yang betul untuk mengisi tempat kosong. | เลือกคำที่ถูกต้องเติมในช่องว่าง
+___ hujan lebat, perlawanan itu diteruskan. (pertentangan) | Walaupun | Menyatakan pertentangan. | แสดงความขัดแย้ง | Kerana / Walaupun / Supaya / Jika
+Dia belajar bersungguh-sungguh ___ lulus peperiksaan. (tujuan) | supaya | Menyatakan tujuan. | แสดงจุดประสงค์ | kerana / walaupun / tetapi / supaya
+Kami tidak keluar ___ hujan lebat. (sebab) | kerana | Menyatakan sebab. | แสดงเหตุ | supaya / kerana / walaupun / jika
 ```
 
 ```latihan-betulkan
@@ -237,8 +228,8 @@ Label: Klausa bebas · อนุประโยคอิสระ | Kata hubung 
 ```latihan-golong
 Arahan: Tentukan jenis ayat. | ระบุชนิดประโยค
 Kategori: Tunggal · เดี่ยว | Gabungan · เชื่อม | Pancangan · ฝัง
-*Ali membaca buku dan Ahmad menulis surat.* | Gabungan | Dua klausa setara dengan *dan*. | อนุประโยคเท่าเทียมสองอนุประโยค
-*Kereta yang dinaiki abang itu kemalangan.* | Pancangan | Ayat kecil relatif. | ประโยคย่อยสัมพันธ์
+*Siti menyanyi dan Aminah menari.* | Gabungan | Dua klausa setara dengan *dan*. | อนุประโยคเท่าเทียมสองอนุประโยค
+*Buku yang dibeli ayah itu mahal.* | Pancangan | Ayat kecil relatif. | ประโยคย่อยสัมพันธ์
 *Rumah besar di hujung kampung itu milik datuk.* | Tunggal | Satu subjek dan satu predikat. | ประธานและภาคแสดงอย่างละหนึ่ง
 ```
 
