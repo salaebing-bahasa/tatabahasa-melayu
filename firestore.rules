@@ -23,9 +23,16 @@ service cloud.firestore {
         && request.auth.token.email_verified == true
         && request.auth.token.email in ['salaebing@gmail.com', 'smuhammad@tsu.ac.th'];
     }
+    // อาจารย์ร่วมสอนวิชา 0113131: อ่านข้อมูลนิสิตวิชานี้ (/pelajar) ได้อย่างเดียว ไม่มีสิทธิ์ในเว็บ Kursus BM Online
+    function isGuruTatabahasa() {
+      return isGuru()
+        || (signedIn()
+          && request.auth.token.email_verified == true
+          && request.auth.token.email in ['kusom@tsu.ac.th']);
+    }
 
     match /pelajar/{uid} {
-      allow read: if isOwner(uid) || isGuru();
+      allow read: if isOwner(uid) || isGuruTatabahasa();
       allow create, update: if isOwner(uid)
         && request.resource.data.keys().hasOnly(['nama', 'emel', 'setuju', 'done', 'skor', 'akhir', 'dicipta', 'kemaskini', 'profil', 'sijil'])
         && request.resource.data.emel == request.auth.token.email
@@ -37,7 +44,7 @@ service cloud.firestore {
 
       // สมุดคำศัพท์ส่วนตัว: นิสิตเพิ่ม แก้ ลบของตัวเองได้ อาจารย์อ่านได้
       match /kata/{id} {
-        allow read: if isOwner(uid) || isGuru();
+        allow read: if isOwner(uid) || isGuruTatabahasa();
         allow create, update: if isOwner(uid)
           && request.resource.data.keys().hasOnly(['kata', 'makna', 'nota', 'ayat', 'bab', 'hafal', 'ulang', 'masa', 'kemaskini'])
           && request.resource.data.kata is string && request.resource.data.kata.size() > 0 && request.resource.data.kata.size() <= 60
@@ -48,7 +55,7 @@ service cloud.firestore {
       }
 
       match /jawapan/{id} {
-        allow read: if isOwner(uid) || isGuru();
+        allow read: if isOwner(uid) || isGuruTatabahasa();
         allow create: if isOwner(uid)
           && request.resource.data.keys().hasOnly(['bab', 'laluan', 'jenis', 'latihan', 'item', 'soalan', 'jawapan', 'betul', 'masa'])
           && request.resource.data.soalan is string && request.resource.data.soalan.size() <= 300

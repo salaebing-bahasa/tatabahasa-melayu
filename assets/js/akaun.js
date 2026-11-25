@@ -25,8 +25,8 @@ const firebaseConfig = {
 };
 
 const KEY = "tb0113131";
-/* E-mel pensyarah (mesti sama dengan isGuru() dalam firestore.rules) · อีเมลอาจารย์ ต้องตรงกับใน firestore.rules */
-const GURU = ["salaebing@gmail.com", "smuhammad@tsu.ac.th"];
+/* E-mel pensyarah (mesti sama dengan isGuruTatabahasa() dalam firestore.rules) · อีเมลอาจารย์ ต้องตรงกับใน firestore.rules */
+const GURU = ["salaebing@gmail.com", "smuhammad@tsu.ac.th", "kusom@tsu.ac.th"];
 const VERSI_SETUJU = 2; // v2: laman wajib log masuk · เว็บต้องล็อกอินก่อนใช้ // naikkan jika teks persetujuan berubah · เพิ่มเลขเมื่อแก้ข้อความแจ้งเรื่องข้อมูล
 const fb = initializeApp(firebaseConfig);
 const auth = getAuth(fb);
